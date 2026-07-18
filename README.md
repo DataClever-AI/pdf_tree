@@ -2,7 +2,7 @@
   <img src="./images/logo.png" alt="DataClever AI" width="920">
 </p>
 
-# project-name
+# pdf-tree
 
 TODO: short project description.
 
@@ -23,7 +23,7 @@ TODO: short project description.
 
 ## Before using this repo for real
 
-1. Replace `project-name` in pyproject.toml, package.json, and
+1. Replace `pdf-tree` in pyproject.toml, package.json, and
    release-please-config.json with the actual name.
 2. Add this project's real logo at images/logo.png.
 3. Branch protection on `main` is inherited automatically from the

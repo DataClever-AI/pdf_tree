@@ -1,0 +1,536 @@
+"""
+Pipeline orchestrator — pdf_tree_0.1v.
+
+Steps:
+  1. fitz_toc      → bookmarks + page count
+  2. bookmark_sanity → pre-check bookmark quality
+  3. docling_extract → DoclingDocument (optional)
+  4. synthetic_toc  → fallback bookmarks from Docling headers (if no embedded TOC)
+  5. toc_classification → drop front-matter noise (Abstract, List of Figures, ...)
+                       and set aside back-matter (Bibliography, Appendix, ...)
+                       before either pollutes the hierarchy or the offset
+                       calibration sample in the next step
+  6. toc_resolution → detect numbering scheme (arabic/roman/alphanumeric),
+                       calibrate offset(s) (global, falling back to
+                       per-chapter/per-cluster), and verify each bookmark's
+                       title actually appears near its resolved page before
+                       it's trusted as a structural boundary
+  7. section_matcher → MatchedSection list (failed verifications flagged, not dropped)
+  8. tree_export    → tree.json sections (flat list of dicts)
+  9. tree_validator → ValidationReport (coverage, precision, structure)
+
+Returns PipelineResult — clean interface for Streamlit UI.
+Merge path: pipeline.py is the only file that needs to integrate into mvp_v2/src/app.py.
+"""
+from __future__ import annotations
+
+import logging
+import time
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any
+
+from src.models.extraction import DoclingDocument
+from src.tree_builder.bookmark_sanity import BookmarkSanityReport, check_bookmark_sanity
+from src.tree_builder.fitz_toc import get_embedded_toc, page_count
+from src.tree_builder.section_matcher import MatchedSection, match_content_to_sections
+from src.tree_builder.synthetic_toc import synthesize_toc
+from src.tree_builder.toc_classification import ExcludedTocEntry, filter_toc_entries
+from src.tree_builder.toc_resolution import NumberingReport, resolve_toc_pages
+from src.tree_builder.tree_export import build_tree_json
+from src.validation.tree_validator import ValidationReport, validate_tree
+
+
+@dataclass
+class EmbeddedImage:
+    """Embedded raster image extracted from a PDF page."""
+
+    image_bytes: bytes
+    page_no: int
+    width_px: int
+    height_px: int
+    section_id: str | None = None  # assigned after pipeline via page_no → section map
+
+
+@dataclass
+class PipelineResult:
+    """Full pipeline output — drives all Streamlit pages."""
+
+    # Core outputs
+    sections: list[dict[str, Any]]              # tree.json flat list
+    bookmarks: list[tuple[int, str, int]]       # (level, title, page_no) from fitz
+    structural_source: str                       # "toc" | "inferred"
+    sanity_report: BookmarkSanityReport
+
+    # Extraction metadata
+    total_pages: int
+    fitz_authoritative: bool                    # True = embedded TOC used
+    docling_doc: DoclingDocument | None         # None if docling not run
+
+    # Validation
+    validation: ValidationReport | None
+
+    # Timing
+    elapsed_s: float
+    stage_times: dict[str, float] = field(default_factory=dict)
+
+    # Page-numbering traceability (see toc_resolution.py) — None only if
+    # bookmarks were empty (nothing to resolve).
+    numbering_report: NumberingReport | None = None
+
+    # Raw TOC entries excluded from the hierarchy (see toc_classification.py)
+    # — front matter noise (Abstract, List of Figures, ...) and back matter
+    # (Bibliography, Appendix, ...) unless include_back_matter=True. Never
+    # silently dropped — inspectable here.
+    excluded_toc_entries: list[ExcludedTocEntry] = field(default_factory=list)
+
+    # Images (embedded per section)
+    images: list[EmbeddedImage] = field(default_factory=list)
+
+    # Error
+    error: str | None = None
+
+    # ---- convenience properties ----
+
+    @property
+    def section_count(self) -> int:
+        return len(self.sections)
+
+    @property
+    def root_sections(self) -> list[dict[str, Any]]:
+        return [s for s in self.sections if s.get("parent_section_id") is None]
+
+    @property
+    def valid(self) -> bool:
+        if self.validation is None:
+            return False
+        return self.validation.status == "PASS"
+
+    @property
+    def docling_text_blocks(self) -> int:
+        return len(self.docling_doc.text_blocks) if self.docling_doc else 0
+
+    @property
+    def docling_tables(self) -> int:
+        return len(self.docling_doc.tables) if self.docling_doc else 0
+
+    @property
+    def docling_elapsed_s(self) -> float:
+        return self.docling_doc.extraction_elapsed_s if self.docling_doc else 0.0
+
+    def sections_by_id(self) -> dict[str, dict[str, Any]]:
+        return {s["section_id"]: s for s in self.sections}
+
+
+def _map_images_to_sections(
+    images: list[EmbeddedImage],
+    sections: list[dict[str, Any]],
+) -> list[EmbeddedImage]:
+    """
+    Assign section_id to each image by matching image.page_no to section page ranges.
+    Assigns the deepest (highest hierarchy_level) section that contains the page.
+    """
+    if not images or not sections:
+        return images
+
+    # Build page → sections map (sorted by level descending so deepest wins)
+    page_sections: dict[int, list[dict[str, Any]]] = {}
+    for sec in sections:
+        for pg in range(sec.get("page_start", 0), sec.get("page_end", 0) + 1):
+            page_sections.setdefault(pg, []).append(sec)
+    for pg in page_sections:
+        page_sections[pg].sort(key=lambda s: s.get("hierarchy_level", 0), reverse=True)
+
+    result: list[EmbeddedImage] = []
+    for img in images:
+        candidates = page_sections.get(img.page_no, [])
+        section_id = candidates[0]["section_id"] if candidates else None
+        result.append(EmbeddedImage(
+            image_bytes=img.image_bytes,
+            page_no=img.page_no,
+            width_px=img.width_px,
+            height_px=img.height_px,
+            section_id=section_id,
+        ))
+    return result
+
+
+def run_pipeline(
+    pdf_path: Path,
+    work_dir: Path,
+    *,
+    run_docling: bool = True,
+    window_size: int = 60,
+    window_overlap: int = 6,
+    extract_images: bool = True,
+    min_image_px: int = 48,
+    include_back_matter: bool = False,
+    logger: logging.Logger | None = None,
+    on_window_complete: Any | None = None,
+) -> PipelineResult:
+    """
+    Full tree-building pipeline for a PDF.
+
+    Args:
+        pdf_path: Path to PDF file.
+        work_dir: Temp directory for artifacts (tree.json written here).
+        run_docling: Whether to run Docling content extraction.
+        window_size: Docling batch size in pages.
+        window_overlap: Docling page overlap between batches.
+        extract_images: Whether to extract embedded images from PDF pages.
+        min_image_px: Minimum image dimension to keep (filters decorative icons).
+        include_back_matter: Whether Bibliography/References/Appendix/Index
+            entries are kept in the main hierarchy (see toc_classification.py).
+            Default False — they're set aside in excluded_toc_entries instead.
+        logger: Optional logger. Defaults to module logger.
+        on_window_complete: Callback(window_idx, total, elapsed_s) per Docling window.
+
+    Returns:
+        PipelineResult with all outputs for UI inspection.
+    """
+    if logger is None:
+        logger = logging.getLogger("pdf_tree.pipeline")
+
+    t0 = time.perf_counter()
+    stage_times: dict[str, float] = {}
+
+    def _lap(name: str, ts: float) -> float:
+        elapsed = time.perf_counter() - ts
+        stage_times[name] = round(elapsed, 4)
+        logger.info("%-25s %.3fs", name, elapsed)
+        return time.perf_counter()
+
+    try:
+        # ── Step 1: fitz ──────────────────────────────────────────────────────
+        ts = time.perf_counter()
+        bookmarks = get_embedded_toc(pdf_path)
+        n_pages = page_count(pdf_path)
+        logger.info("fitz: %d bookmarks, %d pages", len(bookmarks), n_pages)
+        ts = _lap("fitz", ts)
+
+        # ── Step 2: bookmark sanity ───────────────────────────────────────────
+        sanity = check_bookmark_sanity(bookmarks, n_pages)
+        if sanity.has_hard_failures:
+            logger.error(
+                "bookmark_sanity: %d hard failures — aborting",
+                sum(1 for i in sanity.issues if i.kind == "out_of_order"),
+            )
+            return PipelineResult(
+                sections=[],
+                bookmarks=bookmarks,
+                structural_source="toc",
+                sanity_report=sanity,
+                total_pages=n_pages,
+                fitz_authoritative=bool(bookmarks),
+                docling_doc=None,
+                validation=None,
+                elapsed_s=time.perf_counter() - t0,
+                stage_times=stage_times,
+                error="Bookmark sanity check failed: out-of-order bookmarks detected",
+            )
+        ts = _lap("bookmark_sanity", ts)
+
+        # ── Step 3: Docling extraction (optional) ─────────────────────────────
+        doc: DoclingDocument | None = None
+        if run_docling:
+            try:
+                from src.tree_builder.docling_extract import DoclingExtractionEngine
+                engine = DoclingExtractionEngine()
+                if engine.is_available:
+                    doc = engine.extract(
+                        pdf_path,
+                        logger,
+                        window_size=window_size,
+                        window_overlap=window_overlap,
+                        on_window_complete=on_window_complete,
+                    )
+                    logger.info(
+                        "docling: %d blocks, %d tables, %d pages",
+                        len(doc.text_blocks),
+                        len(doc.tables),
+                        len(doc.pages),
+                    )
+                else:
+                    logger.warning("docling: not installed — skipping")
+            except Exception as exc:
+                logger.warning("docling: extraction failed — %s", exc)
+        ts = _lap("docling_extract", ts)
+
+        if doc is None:
+            doc = DoclingDocument(
+                document_id="empty",
+                source_path=str(pdf_path),
+                total_pages=n_pages,
+            )
+
+        # ── Step 4: TOC path ──────────────────────────────────────────────────
+        fitz_authoritative = bool(bookmarks)
+        structural_source = "toc"
+
+        if not bookmarks:
+            # Synthetic TOC fallback from Docling section_headers
+            bookmarks = synthesize_toc(doc)
+            structural_source = "inferred"
+            logger.info("synthetic_toc: %d headers", len(bookmarks))
+            if not bookmarks:
+                return PipelineResult(
+                    sections=[],
+                    bookmarks=[],
+                    structural_source=structural_source,
+                    sanity_report=sanity,
+                    total_pages=n_pages,
+                    fitz_authoritative=False,
+                    docling_doc=doc if doc.total_pages > 0 else None,
+                    validation=None,
+                    elapsed_s=time.perf_counter() - t0,
+                    stage_times=stage_times,
+                    error=(
+                        "No embedded bookmarks and Docling found no section headers. "
+                        "Cannot build tree structure."
+                    ),
+                )
+        ts = _lap("toc_path", ts)
+
+        # ── Step 5: TOC classification ────────────────────────────────────────
+        # Drop front-matter noise (Abstract, List of Figures, ...) and set
+        # aside back-matter (Bibliography, Appendix, ...) BEFORE toc_resolution
+        # runs its offset calibration — noise entries are often among the
+        # first few bookmarks, exactly where calibration samples from.
+        content_bookmarks, excluded_toc_entries = filter_toc_entries(
+            bookmarks, include_back_matter=include_back_matter
+        )
+        if excluded_toc_entries:
+            logger.info(
+                "toc_classification: %d/%d bookmarks excluded (%s)",
+                len(excluded_toc_entries), len(bookmarks),
+                ", ".join(sorted({e.reason for e in excluded_toc_entries})),
+            )
+        # fitz/synthetic_toc bookmarks are always int-paged at this point in
+        # the pipeline — filter_toc_entries's int|str page type exists for
+        # future non-fitz TOC sources (VLM/LLM), not this call site.
+        bookmarks = content_bookmarks  # type: ignore[assignment]
+        if not bookmarks:
+            return PipelineResult(
+                sections=[],
+                bookmarks=[],
+                structural_source=structural_source,
+                sanity_report=sanity,
+                total_pages=n_pages,
+                fitz_authoritative=fitz_authoritative,
+                docling_doc=doc if doc.total_pages > 0 else None,
+                validation=None,
+                elapsed_s=time.perf_counter() - t0,
+                stage_times=stage_times,
+                excluded_toc_entries=excluded_toc_entries,
+                error=(
+                    "All TOC entries were classified as front/back matter noise. "
+                    "Cannot build tree structure."
+                ),
+            )
+        ts = _lap("toc_classification", ts)
+
+        # ── Step 6: TOC resolution ────────────────────────────────────────────
+        # Resolve claimed TOC pages (arabic/roman/alphanumeric) to physical
+        # pages via offset calibration, then replace `bookmarks` with the
+        # resolved pages — every downstream step (section ranges, validation,
+        # image mapping) must build against the corrected pages, not the
+        # claimed ones, or a "recovered" bookmark would still build a
+        # misplaced section.
+        resolved, numbering_report = resolve_toc_pages(bookmarks, doc)
+        bookmarks = [(r.level, r.title, r.resolved_page) for r in resolved]
+        verifications = [r.verification for r in resolved]
+        numbering_schemes = [r.numbering_scheme for r in resolved]
+        offsets_applied = [r.offset_applied for r in resolved]
+
+        n_flagged = sum(1 for v in verifications if not v.passed)
+        logger.info(
+            "toc_resolution: scheme=%s global_offset=%d (match_rate=%.2f, accepted=%s) "
+            "%d/%d bookmarks flagged_for_review",
+            numbering_report.numbering_scheme, numbering_report.global_offset,
+            numbering_report.global_match_rate, numbering_report.global_accepted,
+            n_flagged, len(verifications),
+        )
+        if numbering_report.flagged_for_manual_review:
+            logger.warning(
+                "toc_resolution: no offset (global or per-cluster) cleared the match-rate "
+                "threshold — document flagged for manual review"
+            )
+        ts = _lap("toc_resolution", ts)
+
+        # ── Step 7: section matcher ───────────────────────────────────────────
+        matched: list[MatchedSection] = match_content_to_sections(
+            bookmarks, doc, n_pages,
+            verifications=verifications,
+            numbering_schemes=numbering_schemes,
+            offsets_applied=offsets_applied,
+        )
+        logger.info("section_matcher: %d sections", len(matched))
+        ts = _lap("section_matcher", ts)
+
+        # ── Step 8: tree export ───────────────────────────────────────────────
+        sections = build_tree_json(matched, structural_source=structural_source)
+        logger.info("tree_export: %d sections", len(sections))
+        ts = _lap("tree_export", ts)
+
+        # ── Step 9: validation ────────────────────────────────────────────────
+        # Write tree.json temporarily for validator
+        tree_json_path = work_dir / "tree.json"
+        tree_json_path.parent.mkdir(parents=True, exist_ok=True)
+        import json
+        with open(tree_json_path, "w") as f:
+            json.dump(sections, f, indent=2, ensure_ascii=False)
+
+        first_bm_page = bookmarks[0][2] if bookmarks else 1
+        expected_front_matter = (
+            sum(1 for b in doc.text_blocks if b.page_no < first_bm_page)
+            + sum(1 for t in doc.tables if t.page_no < first_bm_page)
+        ) if doc else 0
+        total_blocks = len(doc.text_blocks) + len(doc.tables) if doc else 0
+        validation = validate_tree(
+            tree_json_path=tree_json_path,
+            bookmarks=bookmarks,
+            total_docling_blocks=total_blocks,
+            pdf_name=pdf_path.name,
+            page_tolerance=1,
+            expected_front_matter=expected_front_matter,
+        )
+        logger.info("validation: %s", validation.status)
+        _lap("validation", ts)
+
+        # ── Step 10: image extraction (optional) ───────────────────────────────
+        images: list[EmbeddedImage] = []
+        if extract_images:
+            try:
+                images = _extract_embedded_images(pdf_path, n_pages, min_image_px, logger)
+                images = _map_images_to_sections(images, sections)
+                logger.info("images: %d extracted", len(images))
+            except Exception as exc:
+                logger.warning("image extraction failed — %s", exc)
+        _lap("image_extraction", time.perf_counter())
+
+        return PipelineResult(
+            sections=sections,
+            bookmarks=bookmarks,
+            structural_source=structural_source,
+            sanity_report=sanity,
+            total_pages=n_pages,
+            fitz_authoritative=fitz_authoritative,
+            docling_doc=doc,
+            validation=validation,
+            elapsed_s=time.perf_counter() - t0,
+            stage_times=stage_times,
+            numbering_report=numbering_report,
+            excluded_toc_entries=excluded_toc_entries,
+            images=images,
+        )
+
+    except Exception as exc:
+        logger.error("Pipeline failed: %s", exc, exc_info=True)
+        return PipelineResult(
+            sections=[],
+            bookmarks=[],
+            structural_source="toc",
+            sanity_report=BookmarkSanityReport(),
+            total_pages=0,
+            fitz_authoritative=False,
+            docling_doc=None,
+            validation=None,
+            elapsed_s=time.perf_counter() - t0,
+            stage_times=stage_times,
+            error=str(exc),
+        )
+
+
+def _extract_embedded_images(
+    pdf_path: Path,
+    n_pages: int,
+    min_image_px: int,
+    logger: logging.Logger,
+) -> list[EmbeddedImage]:
+    import io
+    try:
+        import pymupdf as fitz
+    except ImportError:
+        import fitz  # type: ignore[no-reattr]
+    try:
+        from PIL import Image
+        _pil_available = True
+    except ImportError:
+        _pil_available = False
+
+    _MIN_PX        = max(min_image_px, 80)  # enforce floor
+    _MIN_AREA_FRAC = 0.02                   # bbox must cover ≥2% of page area
+    _HEADER_FRAC   = 0.05                   # skip images fully in top 5%
+    _FOOTER_FRAC   = 0.95                   # skip images fully in bottom 5%
+    _MAX_ASPECT    = 15.0                   # skip ultra-wide/tall strips
+
+    result: list[EmbeddedImage] = []
+    doc = fitz.open(str(pdf_path))
+
+    for page_no in range(1, n_pages + 1):
+        page = doc[page_no - 1]
+        page_h    = page.rect.height
+        page_area = page.rect.width * page_h
+        header_cut = page_h * _HEADER_FRAC
+        footer_cut = page_h * _FOOTER_FRAC
+
+        for img_info in page.get_images(full=True):
+            xref = img_info[0]
+            try:
+                base_image = doc.extract_image(xref)
+            except Exception:
+                continue
+
+            w = base_image.get("width", 0)
+            h = base_image.get("height", 0)
+
+            # filter 1: pixel dimensions
+            if w < _MIN_PX or h < _MIN_PX:
+                continue
+
+            # filter 5: aspect ratio (thin decorative rules, nav bars)
+            if max(w, h) / max(min(w, h), 1) > _MAX_ASPECT:
+                continue
+
+            # filters 2-4: page-coordinate bbox checks
+            try:
+                rects = page.get_image_rects(xref)
+            except Exception:
+                rects = []
+            if rects:
+                bbox = rects[0]
+                # filter 2: area fraction
+                if page_area > 0 and (bbox.width * bbox.height) / page_area < _MIN_AREA_FRAC:
+                    continue
+                # filters 3-4: header / footer zone
+                if bbox.y1 <= header_cut or bbox.y0 >= footer_cut:
+                    continue
+
+            raw_bytes = base_image.get("image")
+            img_ext   = base_image.get("ext", "")
+            if not raw_bytes:
+                continue
+
+            if img_ext.lower() == "png":
+                png_bytes = raw_bytes
+            elif _pil_available:
+                try:
+                    pil_img   = Image.open(io.BytesIO(raw_bytes)).convert("RGB")
+                    buf       = io.BytesIO()
+                    pil_img.save(buf, format="PNG")
+                    png_bytes = buf.getvalue()
+                except Exception:
+                    continue
+            else:
+                continue
+
+            result.append(EmbeddedImage(
+                image_bytes=png_bytes,
+                page_no=page_no,
+                width_px=w,
+                height_px=h,
+            ))
+
+    doc.close()
+    logger.debug("_extract_embedded_images: %d after heuristic filtering", len(result))
+    return result
