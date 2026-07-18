@@ -28,3 +28,7 @@ TODO: short project description.
 2. Add this project's real logo at images/logo.png.
 3. Branch protection on `main` is inherited automatically from the
    organization-wide ruleset — no extra setup needed.
+
+
+## Nota de prueba
+Esta línea confirma que el flujo de changelog automático funciona.
