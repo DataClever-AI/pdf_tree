@@ -4,6 +4,7 @@ Validation table — renders ValidationReport (coverage, precision, structure).
 Adapted from 0.1v_pdf_tree. Uses mvp_v2 ValidationReport from tree_validator.py.
 """
 from __future__ import annotations
+from typing import Any
 
 import sys
 from pathlib import Path

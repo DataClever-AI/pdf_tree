@@ -9,7 +9,6 @@ import logging
 import sys
 from collections.abc import Callable
 from pathlib import Path
-from typing import Any
 
 # Ensure src/ is importable from the project root
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
