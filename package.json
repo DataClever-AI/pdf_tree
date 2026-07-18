@@ -1,0 +1,14 @@
+{
+  "name": "project-name-tooling",
+  "private": true,
+  "type": "module",
+  "description": "Only contains commit/release tooling, not part of the Python runtime",
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "husky": "^9.0.0"
+  },
+  "scripts": {
+    "prepare": "husky"
+  }
+}
