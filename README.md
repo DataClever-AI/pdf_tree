@@ -4,31 +4,36 @@
 
 # pdf-tree
 
-TODO: short project description.
+PDF tree builder using docling. Architecture designed by Jonathan Potes, CTO.
 
 ## Setup
 
-    uv sync --all-extras --dev
-    npm install
-    npm run prepare   # activates the husky hook (commitlint)
+```bash
+uv sync --all-extras --dev
+npm install
+npm run prepare   # activates the husky hook (commitlint)
+```
 
-## What this template includes
+## Running the app
+
+```bash
+uv run streamlit run streamlit_app/app.py
+```
+
+## Project structure
+
+- `src/models/` — data models (extraction results, etc.)
+- `src/pipeline/` — main processing pipeline
+- `src/tree_builder/` — TOC/bookmark extraction, section matching, tree export
+- `src/validation/` — tree validation and coverage checks
+- `streamlit_app/` — UI (pages, components, services)
+- `tests/unit/` — unit tests
+
+## CI/CD
 
 - **Lint + tests in CI** (ruff + pytest via uv) on every PR and push to `main`.
 - **Conventional Commits enforced** — validated locally (husky) and in CI.
   Use `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`, etc.
 - **Automatic changelog and releases** via release-please, following
   Keep a Changelog sections (Added/Changed/Fixed).
-- **Proprietary license** — see LICENSE.md.
-
-## Before using this repo for real
-
-1. Replace `pdf-tree` in pyproject.toml, package.json, and
-   release-please-config.json with the actual name.
-2. Add this project's real logo at images/logo.png.
-3. Branch protection on `main` is inherited automatically from the
-   organization-wide ruleset — no extra setup needed.
-
-
-## Nota de prueba
-Esta línea confirma que el flujo de changelog automático funciona.
+- **Proprietary license** — see `LICENSE.md`.
