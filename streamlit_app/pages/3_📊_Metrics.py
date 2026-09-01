@@ -3,6 +3,7 @@ Metrics page — stage timing, tree stats, validation results.
 """
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -25,6 +26,7 @@ st.markdown("## 📊 Metrics")
 st.divider()
 
 _pipe = st.session_state.get("pipeline_result")
+_pdf_name = st.session_state.get("pdf_name", "document")
 
 if _pipe is None:
     st.info("No pipeline result yet. Run the pipeline on the **📄 Extraction** page.")
@@ -42,6 +44,33 @@ _c3.metric("Valid", "✓" if _pipe.valid else "✗")
 _c4.metric("Docling blocks", _pipe.docling_text_blocks)
 _c5.metric("Pipeline time", f"{_pipe.elapsed_s:.1f}s")
 _c6.metric("Fitz TOC", "✓" if _pipe.fitz_authoritative else "Synthetic")
+
+_stem = Path(_pdf_name).stem.replace(" ", "_")[:40]
+_metrics_payload = {
+    "pdf_name": _pdf_name,
+    "summary": {
+        "section_count": _pipe.section_count,
+        "root_sections": len(_pipe.root_sections),
+        "valid": _pipe.valid,
+        "docling_text_blocks": _pipe.docling_text_blocks,
+        "docling_tables": _pipe.docling_tables,
+        "total_pages": _pipe.total_pages,
+        "elapsed_s": _pipe.elapsed_s,
+        "docling_elapsed_s": _pipe.docling_elapsed_s,
+        "fitz_authoritative": _pipe.fitz_authoritative,
+        "structural_source": _pipe.structural_source,
+    },
+    "stage_times": _pipe.stage_times,
+    "validation": _pipe.validation.to_dict() if _pipe.validation is not None else None,
+}
+_metrics_bytes = json.dumps(_metrics_payload, ensure_ascii=False, indent=2).encode()
+st.download_button(
+    label="⬇ Download metrics.json",
+    data=_metrics_bytes,
+    file_name=f"{_stem}_metrics.json",
+    mime="application/json",
+    help="Summary + stage_times + validation report — for QA evidence (EVALUATION_GUIDE.md §5.2).",
+)
 
 st.divider()
 
