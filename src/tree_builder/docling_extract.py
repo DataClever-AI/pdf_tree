@@ -129,8 +129,8 @@ def _build_pipeline_options() -> Any:
     opts.generate_picture_images = False
     opts.images_scale = 1.0
     opts.accelerator_options = AcceleratorOptions(
-        num_threads=4,
-        device=AcceleratorDevice.CPU,
+        num_threads=8,
+        device=AcceleratorDevice.AUTO,
     )
     # Numbering-based heading levels — used only by the synthetic-TOC fallback
     # (see synthetic_toc.py); no effect on the normal embedded-bookmark path,
