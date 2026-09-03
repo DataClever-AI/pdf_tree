@@ -10,10 +10,11 @@ artifacts. Working branch: `test/docling-accelerator-validation`.
 qa/
 ├── README.md                        ← this file
 ├── <manual_id>/                     ← one folder per manual (Story 1: 1, Story 2: 6)
-│   ├── exports/
-│   │   ├── tree.json                ← Task 1.2 — export from the Export page
-│   │   ├── images_v1.json           ← Task 1.2
-│   │   └── bookmarks.json           ← Task 1.2
+│   ├── exports/                     ← Task 1.2 — NOT committed, see note below
+│   │   ├── tree.json
+│   │   ├── images_v1.json
+│   │   └── bookmarks.json
+│   ├── exports_manifest.txt         ← Task 1.2 — committed: file name + byte size per export (traceability without the weight)
 │   ├── logs/
 │   │   └── run.log                  ← Task 1.1 — console capture (uv run ... | tee run.log)
 │   ├── sampling/
@@ -27,22 +28,54 @@ qa/
     └── consolidated_bugs.csv        ← Task 2.3 — bug list deduplicated by root cause
 ```
 
+**`exports/` is gitignored, not a missing deliverable.** `tree.json` +
+`images_v1.json` together run into the hundreds of MB per manual (up to
+~150MB for a single `images_v1.json`) — too heavy to version. They stay on
+disk locally as evidence and are regenerable at any time by re-running the
+pipeline on the source PDF (Task 1.2). `exports_manifest.txt` (file name +
+byte size) *is* committed so the export's existence and size are traceable
+from git history even without the file itself.
+
 ## Manuals in progress
 
 Source PDFs live in `../../Manuales técnicos TEST/` (outside the repo, not committed).
 
-| `manual_id` | Source PDF | Total pages | Status |
-|---|---|---|---|
-| `DOC-0136477A` | `DOC-0136477A.pdf` | 240 | Story 1 — pilot, in progress |
-| `2002_Service_Manual_TI` | `2002 Service Manual - TI.pdf` | TBD | Story 2 — not started |
-| `AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION` | `AUTOMATIC TRANSMISSION MECHANISM AND FUNCTION SECTION.pdf` | TBD | Story 2 — not started |
-| `LOGIQ_e_R9_General_Service_Manual` | `LOGIQ e R9 General Service Manual_SM_5937432-1EN_5.pdf` | TBD | Story 2 — not started |
-| `LOGIQ_S8` | `LOGIQ_S8.pdf` | TBD | Story 2 — not started |
-| `Philips-MP20-MP90-Manual` | `Philips-MP20-MP90-Manual.pdf` | TBD | Story 2 — not started |
-| `SOMATOM_Force_IFU_VB30` | `SOMATOM_Force_IFU_VB30_SAPEDM_C2-058-C.621.01.01.02_Online.pdf` | TBD | Story 2 — not started |
+| `manual_id` | Source PDF | Total pages | Sample quota (15%) | Status |
+|---|---|---|---|---|
+| `DOC-0136477A` | `DOC-0136477A.pdf` | 240 | 36 (+2 mandatory) | Story 1 — Task 1.6 complete, **pending lead review/approval** (blocks Story 2 per Task 2.1) |
+| `AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION` | `AUTOMATIC TRANSMISSION MECHANISM AND FUNCTION SECTION.pdf` | 166 | 25 (+23 mandatory) | Story 2 — Task 1.6 complete |
+| `LOGIQ_e_R9_General_Service_Manual` | `LOGIQ e R9 General Service Manual_SM_5937432-1EN_5.pdf` | 567 | 86 (+2 mandatory) | Story 2 — Task 1.6 complete |
+| `LOGIQ_S8` | `LOGIQ_S8.pdf` | 916 | 138 (+2 mandatory) | Story 2 — Task 1.6 complete |
+| `SOMATOM_Force_IFU_VB30` | `SOMATOM_Force_IFU_VB30_SAPEDM_C2-058-C.621.01.01.02_Online.pdf` | 467 | 71 (+3 mandatory) | Story 2 — Task 1.6 complete |
+| `Philips-MP20-MP90-Manual` | `Philips-MP20-MP90-Manual.pdf` | 496 | 75 | Story 2 — **pipeline run blocked**: `bookmark_sanity: 2 hard failures — aborting` (fitz stage, before Docling ever runs — see `logs/run.log`). Needs a pipeline fix, not just a re-run, before sampling/findings/summary can happen |
+| `2002_Service_Manual_TI` | `2002 Service Manual - TI.pdf` | 642 | 97 | Story 2 — not started, no attempt on record (no `run.log` at all — can't say yet whether it hits the same bookmark issue) |
 
-Per Task 2.1, Story 2 does not start until Story 1 is completed and approved
-for `DOC-0136477A`.
+Per Task 2.1, Story 2 execution work is happening in parallel across manuals,
+but **Historia 2 cannot be marked done** until Story 1 (`DOC-0136477A`) has
+been reviewed and approved by the lead — see the Definition of Done in
+`docs/SPRINT_TASKS_QA.md`.
+
+## Índice de Confianza / Confidence Index (Task 2.2)
+
+`Índice = 100 × (1 − Σ(peso_severidad × conteo_FAIL) / total_items_evaluados)`,
+capped to `[0, 100]`, and capped at **60** if the automated report shows
+`Coverage: FAIL` or `Structure: FAIL` (§Task 2.2 override rule). Weights:
+Crítica=8, Alta=4, Media=2, Baja=1.
+
+| Manual | Total Páginas | Ítems evaluados | Veredicto Automático | Índice de Confianza | Crítica | Alta | Media | Baja |
+|---|---|---|---|---|---|---|---|---|
+| `DOC-0136477A` | 240 | 456 | PASS | **57** | 19 | 0 | 5 | 34 |
+| `AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION` | 166 | 265 | PASS | **92** | 2 | 0 | 2 | 0 |
+| `LOGIQ_e_R9_General_Service_Manual` | 567 | 539 | PASS | **85** | 6 | 4 | 8 | 1 |
+| `LOGIQ_S8` | 916 | 955 | **FAIL** (Coverage) | **60** (capped — raw 88) | 10 | 1 | 7 | 13 |
+| `SOMATOM_Force_IFU_VB30` | 467 | 757 | **FAIL** (Coverage + Precision) | **0** (floor — raw weighted fails exceed items evaluated) | 118 | 5 | 18 | 1 |
+| `Philips-MP20-MP90-Manual` | TBD | — | — | pending | — | — | — | — |
+| `2002_Service_Manual_TI` | TBD | — | — | pending | — | — | — | — |
+
+These 5 numbers are the per-manual inputs to Task 2.2 — `confidence_index/confidence_index_report.md`
+(Task 2.4) still needs to be written once all 6 manuals are done, with the
+consolidated/deduplicated bug list (Task 2.3) and the stability interpretation
+across document types.
 
 ## Naming convention
 
