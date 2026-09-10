@@ -20,14 +20,22 @@ npm run prepare   # activates the husky hook (commitlint)
 uv run streamlit run streamlit_app/app.py
 ```
 
+For durable QA reviews, set `PDF_TREE_SOURCE_DIR` to the local PDF folder and
+`PDF_TREE_QA_DIR` to the versioned evidence folder. Both can also be changed in
+the Streamlit sidebar. Qwen3-VL uses `QWEN3_VL_URL`, `QWEN3_VL_MODEL`, and
+`QWEN3_VL_TOKEN` from `.env` or `st.secrets`; the URL must end in
+`/v1/chat/completions`.
+
 ## Project structure
 
 - `src/models/` — data models (extraction results, etc.)
 - `src/pipeline/` — main processing pipeline
 - `src/tree_builder/` — TOC/bookmark extraction, section matching, tree export
 - `src/validation/` — tree validation and coverage checks
+- `src/qa_workflow/` — versioning, sampling, AI drafts, human review, confidence reports
 - `streamlit_app/` — UI (pages, components, services)
 - `tests/unit/` — unit tests
+- `tests/qa_workflow/` — QA workflow unit and integration tests
 
 ## CI/CD
 

@@ -21,6 +21,8 @@ for _p in [str(_APP_DIR), str(_PROJECT_ROOT)]:
 
 import streamlit as st
 
+from services.qa_ui import init_session_state, qa_settings_sidebar
+
 st.set_page_config(
     page_title="PDF Tree Inspector",
     page_icon="🌳",
@@ -31,16 +33,8 @@ st.set_page_config(
 _CSS = (_APP_DIR / "styles" / "theme.css").read_text()
 st.markdown(f"<style>{_CSS}</style>", unsafe_allow_html=True)
 
-for _k, _v in {
-    "pdf_path": None,
-    "pdf_name": None,
-    "work_dir": None,
-    "fitz_toc": [],
-    "fitz_page_count": 0,
-    "pipeline_result": None,
-}.items():
-    if _k not in st.session_state:
-        st.session_state[_k] = _v
+init_session_state()
+qa_settings_sidebar()
 
 # ---------------------------------------------------------------------------
 # Header
