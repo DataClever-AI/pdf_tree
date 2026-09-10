@@ -1,0 +1,147 @@
+{
+  "model": "mlx-community/Qwen3-VL-8B-Instruct-4bit",
+  "section_id": "sec_0279",
+  "load_seconds": 2.211776500000269,
+  "max_tokens": 900,
+  "max_rss_bytes": 7264501760,
+  "total_seconds": 187.65121845799513,
+  "windows": [
+    {
+      "name": "boundary_and_glossary",
+      "pages": [
+        231,
+        232,
+        233
+      ],
+      "elapsed_seconds": 77.61430029199983,
+      "prompt_tokens": 7560,
+      "generation_tokens": 279,
+      "peak_memory_gb": 7.918514802,
+      "model_section_id": "sec_0279",
+      "parsed": {
+        "section_id": "sec_0279",
+        "overall_status": "FAIL",
+        "checks": [
+          {
+            "checklist_ref": "5.4-page_start_end",
+            "result": "FAIL",
+            "severity": "Critical",
+            "evidence": "La sección G.3.6 comienza en la página 231 y se extiende hasta la página 240, pero el contenido visible en las páginas 231 y 232 corresponde a la sección G.3.6. Sin embargo, la página 233 contiene el encabezado 'Appendix H Glossary', que no forma parte del contenido de la sección G.3.6. Por lo tanto, el contenido de la página 233 no pertenece a la sección G.3.6, lo que viola la regla de que todo el contenido asignado a la sección debe pertenecer a ella.",
+            "notes": "El contenido de la página 233, que es el encabezado de un apéndice, no debe estar asignado a la sección G.3.6, ya que es una sección distinta. Esto es un error de asignación de contenido."
+          }
+        ]
+      }
+    },
+    {
+      "name": "index_tables",
+      "pages": [
+        236,
+        237,
+        238
+      ],
+      "elapsed_seconds": 75.20009274999757,
+      "prompt_tokens": 7559,
+      "generation_tokens": 217,
+      "peak_memory_gb": 7.918514802,
+      "model_section_id": "sec_0279",
+      "parsed": {
+        "section_id": "sec_0279",
+        "overall_status": "FAIL",
+        "checks": [
+          {
+            "checklist_ref": "5.4-gaps_duplicates",
+            "result": "FAIL",
+            "severity": "Critical",
+            "evidence": "La página 236 muestra una sección de índice, que no se corresponde con la sección G.3.6 del documento. El índice es una sección de contenido visible, no una sección de regulaciones europeas. La sección G.3.6 debería contener texto regulatorio, no una lista de índices.",
+            "notes": "El índice visible en la página 236 es un contenido que no se corresponde con la sección G.3.6, lo que indica una duplicación o una omisión en la estructura del documento. La sección G.3.6 no puede contener un índice, por lo que se considera una falla crítica."
+          }
+        ]
+      }
+    },
+    {
+      "name": "declared_end",
+      "pages": [
+        240
+      ],
+      "elapsed_seconds": 34.83682541599774,
+      "prompt_tokens": 2926,
+      "generation_tokens": 297,
+      "peak_memory_gb": 7.918514802,
+      "model_section_id": "sec_0279",
+      "parsed": {
+        "section_id": "sec_0279",
+        "overall_status": "FAIL",
+        "checks": [
+          {
+            "checklist_ref": "5.4-page_start_end",
+            "result": "FAIL",
+            "severity": "Critical",
+            "evidence": "La página 240, que es la última página asignada a la sección G.3.6, contiene texto de advertencia y marca de copyright, no contenido de la sección G.3.6 sobre tecnología inalámbrica o regulaciones de la UE. El contenido visible no corresponde a la sección especificada.",
+            "notes": "El contenido de la página 240 no es parte del rango de la sección G.3.6, lo que viola la regla de asignación de contenido a la sección."
+          },
+          {
+            "checklist_ref": "5.4-gaps_duplicates",
+            "result": "REVIEW",
+            "severity": "",
+            "evidence": "No se puede verificar la presencia de secciones duplicadas o ausentes en la página 240, ya que no se proporciona información sobre las secciones vecinas.",
+            "notes": "La evidencia es insuficiente para determinar si hay secciones duplicadas o ausentes en el contexto de la página 240."
+          }
+        ]
+      }
+    }
+  ],
+  "combined": [
+    {
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "observations": [
+        {
+          "checklist_ref": "5.4-page_start_end",
+          "result": "FAIL",
+          "severity": "Critical",
+          "evidence": "La sección G.3.6 comienza en la página 231 y se extiende hasta la página 240, pero el contenido visible en las páginas 231 y 232 corresponde a la sección G.3.6. Sin embargo, la página 233 contiene el encabezado 'Appendix H Glossary', que no forma parte del contenido de la sección G.3.6. Por lo tanto, el contenido de la página 233 no pertenece a la sección G.3.6, lo que viola la regla de que todo el contenido asignado a la sección debe pertenecer a ella.",
+          "notes": "El contenido de la página 233, que es el encabezado de un apéndice, no debe estar asignado a la sección G.3.6, ya que es una sección distinta. Esto es un error de asignación de contenido.",
+          "window": "boundary_and_glossary"
+        },
+        {
+          "checklist_ref": "5.4-page_start_end",
+          "result": "FAIL",
+          "severity": "Critical",
+          "evidence": "La página 240, que es la última página asignada a la sección G.3.6, contiene texto de advertencia y marca de copyright, no contenido de la sección G.3.6 sobre tecnología inalámbrica o regulaciones de la UE. El contenido visible no corresponde a la sección especificada.",
+          "notes": "El contenido de la página 240 no es parte del rango de la sección G.3.6, lo que viola la regla de asignación de contenido a la sección.",
+          "window": "declared_end"
+        }
+      ]
+    },
+    {
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "observations": [
+        {
+          "checklist_ref": "5.4-gaps_duplicates",
+          "result": "FAIL",
+          "severity": "Critical",
+          "evidence": "La página 236 muestra una sección de índice, que no se corresponde con la sección G.3.6 del documento. El índice es una sección de contenido visible, no una sección de regulaciones europeas. La sección G.3.6 debería contener texto regulatorio, no una lista de índices.",
+          "notes": "El índice visible en la página 236 es un contenido que no se corresponde con la sección G.3.6, lo que indica una duplicación o una omisión en la estructura del documento. La sección G.3.6 no puede contener un índice, por lo que se considera una falla crítica.",
+          "window": "index_tables"
+        },
+        {
+          "checklist_ref": "5.4-gaps_duplicates",
+          "result": "REVIEW",
+          "severity": "",
+          "evidence": "No se puede verificar la presencia de secciones duplicadas o ausentes en la página 240, ya que no se proporciona información sobre las secciones vecinas.",
+          "notes": "La evidencia es insuficiente para determinar si hay secciones duplicadas o ausentes en el contexto de la página 240.",
+          "window": "declared_end"
+        }
+      ]
+    },
+    {
+      "checklist_ref": "5.6-table_content",
+      "result": "REVIEW",
+      "severity": "",
+      "observations": []
+    }
+  ]
+}

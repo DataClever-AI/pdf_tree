@@ -1,8 +1,36 @@
-# Working structure — QA Sprint (`docs/SPRINT_TASKS_QA.md`)
+# Versioned semi-automated QA workspace
 
-Local working folder for Story 1 and Story 2 deliverables from the QA backlog.
-Not part of the pipeline itself — it's manual-validation evidence and
-artifacts. Working branch: `test/docling-accelerator-validation`.
+This directory stores deterministic pipeline evidence, AI drafts, and
+human-approved findings. AI does not alter the extraction pipeline and cannot
+write the official findings CSV directly.
+
+New and migrated manuals use this contract:
+
+```text
+qa/<manual_id>/
+├── source_manifest.json             # absolute PDF path + SHA-256; PDF is not copied
+└── v1/                              # v2, v3, ... are separate reviews
+    ├── version_manifest.json
+    ├── artifact_manifest.json
+    ├── exports/{tree.json,images_v1.json,bookmarks.json}
+    ├── sampling/sample_selection.md
+    ├── findings/{findings_log.csv,review_state.json}
+    ├── logs/{run.log,ai_review.jsonl}
+    ├── agent_exchange/<batch_id>/
+    ├── validation_report.json
+    └── summary.md
+```
+
+`findings_log.csv` always has exactly these columns:
+`manual_id,section_id,page_sampled,checklist_ref,result,severity,evidence,notes`.
+Provider proposals, confidence, reviewer identity, approvals, and change
+history live only in `review_state.json`.
+
+Configure `PDF_TREE_SOURCE_DIR` and `PDF_TREE_QA_DIR` in `.env` or the
+Streamlit sidebar. Use `uv run python qa/_scripts/migrate_legacy_layout.py`
+for a dry run and add `--apply` only after reviewing conflicts and checksums.
+
+## Historical sprint notes
 
 ## Structure
 

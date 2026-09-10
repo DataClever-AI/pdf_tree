@@ -1,0 +1,20 @@
+{
+  "model": "EigenLabs/Qwen3-VL-30B-A3B-Instruct-MLX-4bit",
+  "max_tokens": 900,
+  "load_seconds": 6.529089625000779,
+  "max_rss_bytes": 10492362752,
+  "cases": [
+    {
+      "section_id": "sec_0004",
+      "kind": "known_defect",
+      "image_count": 1,
+      "elapsed_seconds": 29.63082879200374,
+      "prompt_tokens": 2940,
+      "generation_tokens": 429,
+      "generation_tps": 36.79694357209525,
+      "peak_memory_gb": 19.360217558,
+      "finish_reason": "stop",
+      "raw_output": "```json\n{\n  \"section_id\": \"sec_0004\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El encabezado '1.2.1 HemoSphere Advanced Monitor with HemoSphere Swan-Ganz Module' es un subtítulo de nivel 3, como se indica en el path de jerarquía.\",\n      \"notes\": \"El nivel numérico del encabezado es 3, lo cual es correcto para una sección secundaria dentro de una sección principal.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El contenido de la sección 1.2.1, incluyendo su título y el párrafo de descripción, se encuentra en la página 17. No hay contenido visible en esta página que pertenezca a otra sección.\",\n      \"notes\": \"El contenido de la sección 1.2.1 es el único contenido en la página 17 que pertenece a esta sección. El contenido de la tabla de contenidos y el encabezado '1.1 Intended Purpose of this Manual' pertenece a secciones anteriores.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla de contenidos es una estructura de datos real con texto legible. Contiene entradas como 'Intended Purpose of this Manual' y sus respectivas páginas. El texto es estructurado y no es un marcador de posición.\",\n      \"notes\": \"La tabla es una entidad visual real en la página y contiene información estructurada. No es un marcador de posición.\"\n    }\n  ]\n}\n```"
+    }
+  ]
+}
