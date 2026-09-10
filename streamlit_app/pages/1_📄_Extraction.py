@@ -19,10 +19,13 @@ for _p in [str(_APP_DIR), str(_PROJECT_ROOT)]:
 import streamlit as st
 
 from services.pipeline_service import build_pipeline, setup_logger
+from services.qa_ui import init_session_state, qa_settings_sidebar
 
 st.set_page_config(page_title="Extraction · PDF Tree", page_icon="📄", layout="wide")
 _CSS = (_APP_DIR / "styles" / "theme.css").read_text()
 st.markdown(f"<style>{_CSS}</style>", unsafe_allow_html=True)
+init_session_state()
+_qa_settings = qa_settings_sidebar()
 
 # ---------------------------------------------------------------------------
 # Check docling availability — cached: import pulls in torch/transformers,
@@ -46,14 +49,46 @@ _DOCLING_AVAILABLE: bool = _docling_engine is not None
 # ---------------------------------------------------------------------------
 st.markdown("## 📄 Extraction")
 st.divider()
-st.markdown("### 1 · Upload PDF")
+st.markdown("### 1 · Select PDF")
 
-uploaded = st.file_uploader(
-    "Drop a PDF",
-    type=["pdf"],
-    accept_multiple_files=False,
-    key="pdf_uploader",
+_source_mode = st.radio(
+    "Source",
+    ["Configured source directory", "Temporary upload"],
+    horizontal=True,
+    help="Only source-directory PDFs can be registered for durable QA review.",
 )
+uploaded = None
+_selected_source: Path | None = None
+if _source_mode == "Configured source directory":
+    _source_pdfs = sorted(_qa_settings.source_dir.glob("*.pdf")) if _qa_settings.source_dir.is_dir() else []
+    if not _source_pdfs:
+        st.warning(f"No PDFs found in `{_qa_settings.source_dir}`.")
+    else:
+        _selected_name = st.selectbox("Source PDF", [path.name for path in _source_pdfs])
+        _selected_source = next(path for path in _source_pdfs if path.name == _selected_name)
+else:
+    uploaded = st.file_uploader(
+        "Drop a PDF",
+        type=["pdf"],
+        accept_multiple_files=False,
+        key="pdf_uploader",
+    )
+
+if _selected_source and str(_selected_source.resolve()) != st.session_state.get("pdf_path"):
+    _work_dir = Path(tempfile.mkdtemp(prefix="pdftree_"))
+    import pymupdf as fitz
+
+    _doc = fitz.open(str(_selected_source))
+    _n = _doc.page_count
+    _toc = _doc.get_toc()
+    _doc.close()
+    st.session_state.pdf_path = str(_selected_source.resolve())
+    st.session_state.pdf_name = _selected_source.name
+    st.session_state.work_dir = str(_work_dir)
+    st.session_state.fitz_toc = _toc
+    st.session_state.fitz_page_count = _n
+    st.session_state.pipeline_result = None
+    st.session_state.pipeline_log = ""
 
 if uploaded and uploaded.name != st.session_state.get("pdf_name"):
     _work_dir = Path(tempfile.mkdtemp(prefix="pdftree_"))
@@ -72,6 +107,7 @@ if uploaded and uploaded.name != st.session_state.get("pdf_name"):
     st.session_state.fitz_toc = _toc
     st.session_state.fitz_page_count = _n
     st.session_state.pipeline_result = None
+    st.session_state.pipeline_log = ""
 
 if not st.session_state.get("pdf_path"):
     st.info("Upload a PDF to continue.")
@@ -189,6 +225,7 @@ if _btn_pipe:
     _prog_bar.progress(1.0, text="Pipeline complete")
     _prog_status.empty()
     st.session_state.pipeline_result = _result
+    st.session_state.pipeline_log = "\n".join(_pipe_log) + ("\n" if _pipe_log else "")
 
     if _result.error:
         st.error(f"❌ Pipeline failed: {_result.error}")

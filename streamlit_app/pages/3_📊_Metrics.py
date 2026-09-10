@@ -65,9 +65,9 @@ _metrics_payload = {
 }
 _metrics_bytes = json.dumps(_metrics_payload, ensure_ascii=False, indent=2).encode()
 st.download_button(
-    label="⬇ Download metrics.json",
+    label="⬇ Download validation_report.json",
     data=_metrics_bytes,
-    file_name=f"{_stem}_metrics.json",
+    file_name="validation_report.json",
     mime="application/json",
     help="Summary + stage_times + validation report — for QA evidence (EVALUATION_GUIDE.md §5.2).",
 )
