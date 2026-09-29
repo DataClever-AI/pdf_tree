@@ -19,6 +19,19 @@ Verify the workflow without silently changing official QA evidence. Treat PDFs, 
 
 The project documents are authoritative. If this skill conflicts with them, follow the documents and report the mismatch.
 
+Grade every FAIL with the Sprint severity scale in the contract (`Critical`/`High`/`Medium`/`Low` by defect type), never by perceived impact. Reading the three documents in step 2 is mandatory before the first judgment, not optional background.
+
+## Roles and models
+
+A review is run by a **lead** that prepares batches and checks results, and by
+**reviewers** that each review one batch. See [references/roles.md](references/roles.md):
+
+- Claude Code: lead = Opus (`.claude/agents/pdf-tree-qa-lead.md`), reviewers = Sonnet
+  (`.claude/agents/pdf-tree-qa-reviewer.md`).
+- OpenAI (Codex): lead = Sol or Terra, reviewers = Luna with high reasoning effort.
+
+Neither role approves findings; the human reviewer does.
+
 ## Choose one operating mode
 
 ### Audit an existing QA version
@@ -62,7 +75,15 @@ Use this mode for `agent_exchange/<batch_id>/`.
      --batch-root qa/DOC-0000000/v1/agent_exchange/batch-id
    ```
 
-6. Correct only the draft output until the validator passes. The result remains a proposal for human approval.
+6. Check the claims and the severity against the deterministic signals:
+
+   ```bash
+   python3 pdf-tree-qa-verifier/scripts/verify_claims.py \
+     --qa-root qa --manual-id DOC-0000000 --version v1 [--batch batch-id]
+   ```
+
+   Every `CONTRADICTED` row and every `SEVERITY` mismatch must be fixed or justified in `notes`.
+7. Correct only the draft output until both tools pass. The result remains a proposal for human approval.
 
 ## Visual judgment rules
 
