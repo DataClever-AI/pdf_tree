@@ -102,10 +102,11 @@ _delta_index = (
     else round(_cmp.candidate_score.final_index - _cmp.base_score.final_index, 1)
 )
 _m3.metric(
-    f"Confidence index ({_candidate})",
+    f"Confidence index, paired rows ({_candidate})",
     _index(_cmp.candidate_score),
     delta=_delta_index,
-    help=f"{_base}: {_index(_cmp.base_score)}. Provisional while rows are pending or drafts.",
+    help=f"{_base}: {_index(_cmp.base_score)}. Both use paired rows only. "
+    "Provisional while rows are pending or drafts.",
 )
 _regressions = sum(1 for change in _cmp.row_changes if change.kind == "regression")
 _m4.metric("Regressions", _regressions, delta=-_regressions or None, delta_color="inverse")
