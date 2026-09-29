@@ -12,9 +12,13 @@ from src.qa_workflow.confidence import (
 )
 from src.qa_workflow.findings import FindingRow, stable_finding_key, write_findings_template
 from src.qa_workflow.review import (
+    bulk_approve_all,
     bulk_approve_eligible,
+    finalize_review,
     load_findings,
+    load_review_state,
     merge_drafts_into_state,
+    pending_approvals,
     prioritize_findings,
     save_review_decision,
 )
@@ -62,6 +66,26 @@ def test_bulk_approval_excludes_priority_sample(qa_version) -> None:
     merge_drafts_into_state(qa_version, [_draft(row) for row in rows])
     count = bulk_approve_eligible(qa_version, reviewer="Alice")
     assert count == 0  # minimum-three PASS audit covers this two-row fixture
+
+
+def test_bulk_approve_all_includes_fail_rows_and_respects_keys(qa_version) -> None:
+    rows = load_findings(qa_version.findings_csv)
+    keys = [stable_finding_key(row) for row in rows]
+    state = merge_drafts_into_state(
+        qa_version, [_draft(rows[0], result="FAIL", confidence=0.5), _draft(rows[1])]
+    )
+    assert pending_approvals(state) == {"PASS": [keys[1]], "FAIL": [keys[0]], "invalid": []}
+
+    assert bulk_approve_all(qa_version, reviewer="Alice", keys=[keys[0]]) == 1
+    state = load_review_state(qa_version)
+    assert state["decisions"][keys[0]]["approval_mode"] == "bulk-all"
+    assert not state["decisions"][keys[1]]["approved"]
+    assert load_findings(qa_version.findings_csv)[0]["result"] == "FAIL"
+
+    assert bulk_approve_all(qa_version, reviewer="Alice") == 1
+    assert bulk_approve_all(qa_version, reviewer="Alice") == 0
+    assert list((qa_version.root / "findings" / "backups").iterdir())
+    finalize_review(qa_version)
 
 
 def test_priority_order_fail_low_confidence_flag_and_pass_audit(qa_version) -> None:
