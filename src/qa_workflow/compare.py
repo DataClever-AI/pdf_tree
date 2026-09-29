@@ -134,7 +134,8 @@ def compare_versions(
     *,
     include_drafts: bool = True,
 ) -> VersionComparison:
-    """Paired counts use only rows reviewed in both versions (same section, page, check)."""
+    """Paired counts and both scores use only rows reviewed in both versions (same section,
+    page, check), so a partial re-review is compared with the same rows of the base."""
     base = open_qa_version(qa_root, manual_id, base_version)
     candidate = open_qa_version(qa_root, manual_id, candidate_version)
     mitigation = candidate.version_manifest.get("mitigation") or {}
@@ -215,8 +216,8 @@ def compare_versions(
         len(candidate_reviewed),
         len(candidate_rows),
         len(paired),
-        score(base_version, base_reviewed),
-        score(candidate_version, candidate_reviewed),
+        score(base_version, {key: base_reviewed[key] for key in paired}),
+        score(candidate_version, {key: candidate_reviewed[key] for key in paired}),
         bugs,
         tuple(changes),
         tree_changes(base_tree, candidate_tree)
