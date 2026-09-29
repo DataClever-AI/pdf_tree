@@ -18,6 +18,7 @@ from src.qa_workflow.confidence import (
     build_confidence_report,
     latest_versions,
     list_manual_versions,
+    version_display_name,
     write_confidence_outputs,
 )
 
@@ -52,6 +53,9 @@ with st.expander("Manual and version selection", expanded=True):
             _manual_id,
             _versions,
             index=_versions.index(_defaults[_manual_id]),
+            format_func=lambda version, manual=_manual_id: version_display_name(
+                _settings.qa_dir, manual, version
+            ),
             key=f"confidence_version_{_manual_id}",
         )
         if _include:
