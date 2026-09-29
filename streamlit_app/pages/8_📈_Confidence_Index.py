@@ -97,6 +97,11 @@ _c3.metric(
 )
 
 st.markdown("### Consolidated bugs")
+st.caption(
+    "Grouped by root cause using the curated catalogue `confidence_index/root_causes.json` "
+    "(edited by the QA reviewer, never by the app). TRIAGE rows are FAILs the catalogue "
+    "does not classify yet."
+)
 st.dataframe(list(_report.bugs), hide_index=True, width="stretch")
 
 if st.button("Save report and reproducibility manifest", type="primary"):

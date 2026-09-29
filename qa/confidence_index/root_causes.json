@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "description": "Curated root-cause catalogue for Task 2.3. Edited by the QA reviewer only; the app and scripts read it and never write it. A FAIL row is classified by overrides first, then by the first matching rule (in order) against its notes and evidence; unmatched rows become TRIAGE entries.",
+  "bugs": [
+    {
+      "bug_id": "BUG-001",
+      "title": "Chapter/appendix-opening Contents-box misplacement",
+      "suspected_module": "section_matcher.py (reading_order)"
+    },
+    {
+      "bug_id": "BUG-002",
+      "title": "Back-matter silently absorbed past last bookmark",
+      "suspected_module": "section_matcher.py (page_end defaulting to total_pages)"
+    },
+    {
+      "bug_id": "BUG-003",
+      "title": "Sibling image/table mismapping on shared pages",
+      "suspected_module": "section_matcher.py / image-to-section mapping"
+    },
+    {
+      "bug_id": "BUG-004",
+      "title": "Decorative footer divider passes image aspect-ratio filter",
+      "suspected_module": "pipeline.py::_extract_embedded_images (§5.5 filter #5)"
+    },
+    {
+      "bug_id": "BUG-005",
+      "title": "Content-stream desync — body text lost/misattributed around a chapter boundary (sec_0035 root cause family, SOMATOM)",
+      "suspected_module": "docling_extract.py or section_matcher.py (reading_order/window merge — unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-006",
+      "title": "Body content extraction gap — section body text lost entirely, only heading (or nothing) survives as a stray node",
+      "suspected_module": "docling_extract.py (unconfirmed — total content loss per section)"
+    },
+    {
+      "bug_id": "BUG-007",
+      "title": "Native table extractor captures only the header row for symbol/glyph-marked grids, losing all data rows",
+      "suspected_module": "docling table structure model (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-008",
+      "title": "Table header cells merge/reorder during extraction, breaking column-to-value attribution",
+      "suspected_module": "docling table structure model (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-009",
+      "title": "Table mistyped as paragraph/heading node instead of a table node (single instance)",
+      "suspected_module": "docling table structure model (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-010",
+      "title": "Vector-drawn diagrams not captured as images — extractor only handles raster XObjects",
+      "suspected_module": "pipeline.py::_extract_embedded_images"
+    },
+    {
+      "bug_id": "BUG-011",
+      "title": "Simple line-art/pictogram diagrams missing from image extraction — mechanism unconfirmed (possibly size-filtered)",
+      "suspected_module": "pipeline.py::_extract_embedded_images (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-012",
+      "title": "Sporadic single/partial image omissions from the image index — mechanism unconfirmed",
+      "suspected_module": "pipeline.py::_extract_embedded_images (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-013",
+      "title": "Extracted image asset incorrectly rotated 180°",
+      "suspected_module": "pipeline.py::_extract_embedded_images (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-014",
+      "title": "Section page_end declared one page short of the true content boundary — trailing content (text or images) bleeds into or is misattributed from the neighboring section",
+      "suspected_module": "section_matcher.py::_compute_page_ranges (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-015",
+      "title": "Step-illustration photos silently dropped on pages that also carry multiple table-embedded images",
+      "suspected_module": "pipeline.py::_extract_embedded_images (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-016",
+      "title": "Near-duplicate/overlapping embedded image xrefs cause under-extraction on pages with several similar photos",
+      "suspected_module": "pipeline.py::_extract_embedded_images (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-017",
+      "title": "UI reference-icon screenshots discarded by an over-aggressive minimum-pixel-dimension image filter",
+      "suspected_module": "pipeline.py::_extract_embedded_images (min_image_px)"
+    },
+    {
+      "bug_id": "BUG-018",
+      "title": "Cross-chapter node swap — content misattributed across non-adjacent chapter boundaries (new pattern, single instance so far)",
+      "suspected_module": "section_matcher.py (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-019",
+      "title": "Heading anchor accepts a contained or empty normalized heading: a short or glyph-only section_header (e.g. '!' or 'Trends') anchors the wrong section, shifting its content to the parent or a sibling",
+      "suspected_module": "section_matcher.py::_find_heading_anchor (confirmed in code: `norm_title in norm_text or norm_text in norm_title`)"
+    },
+    {
+      "bug_id": "BUG-020",
+      "title": "Minimum-area image filter (2% of the page) drops small but meaningful rasters: icons, symbols and small step photos",
+      "suspected_module": "pipeline.py::_extract_embedded_images (_MIN_AREA_FRAC = 0.02, confirmed in code)"
+    },
+    {
+      "bug_id": "BUG-021",
+      "title": "Empty '[Table 0x0]' placeholder or a running header misdetected as a table",
+      "suspected_module": "docling table structure model (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-022",
+      "title": "Boilerplate boundary noise: running headers, large chapter numbers and invisible print-job slugs of the next page are appended to the preceding section",
+      "suspected_module": "section_matcher.py (no header/footer or invisible-text filter; unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-023",
+      "title": "Reading-order misattribution around a same-page heading transition: content printed before or after a heading on the same page is assigned to the neighbouring section",
+      "suspected_module": "section_matcher.py (reading_order around same-page heading transitions; unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-024",
+      "title": "A single bookmark with a corrupt destination (child before its parent) aborts the whole pipeline",
+      "suspected_module": "src/tree_builder/bookmark_sanity.py (out_of_order hard failure)"
+    },
+    {
+      "bug_id": "BUG-025",
+      "title": "An orphan destination-less cover bookmark appended at the end of the outline aborts the whole pipeline",
+      "suspected_module": "src/tree_builder/bookmark_sanity.py (out_of_order hard failure)"
+    },
+    {
+      "bug_id": "BUG-026",
+      "title": "QA run.log captured from a shared Streamlit console mixes the run of another manual",
+      "suspected_module": "QA process (log capture), not pipeline code"
+    },
+    {
+      "bug_id": "BUG-027",
+      "title": "Streamlit page 8 regenerates consolidated_bugs.csv by note text, overwriting the curated root-cause list",
+      "suspected_module": "src/qa_workflow/confidence.py::consolidate_failures (_bug_fingerprint)"
+    },
+    {
+      "bug_id": "BUG-028",
+      "title": "normalize_page_sequence updates prev_scheme with alphanumeric tokens and restarts the numbering base",
+      "suspected_module": "src/tree_builder/page_numbering.py::normalize_page_sequence"
+    }
+  ],
+  "rules": [
+    {
+      "bug_id": "BUG-019",
+      "regex": "_find_heading_anchor|Root cause 2002-A\\b",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-020",
+      "regex": "Root cause SMALL\\b|less than 2% of the page area|_MIN_AREA_FRAC",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-021",
+      "regex": "\\[Table 0x0\\]|misdetected as a table",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-010",
+      "regex": "Root cause VEC\\b|figures drawn with PDF vector paths",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-008",
+      "regex": "Root cause TBL\\b|header/column merge|^Column merge",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-003",
+      "regex": "Root cause (PH-B|TBLMAP)\\b|table mismapping|Table ownership across a same-page heading",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-014",
+      "regex": "Root cause PH-A\\b",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-022",
+      "regex": "Root cause (2002-[BC]|PH-[CD])\\b|running-header bleed|print-job slug",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-001",
+      "regex": "contents-?box|contents table.*swept|chapter.*opening.*contents",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-002",
+      "regex": "back-?matter|silently absorbed|absorbido",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-003",
+      "regex": "sibling.*mismap|mismapping on shared pages",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-004",
+      "regex": "footer divider|footer-band|aspect-ratio threshold",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-005",
+      "regex": "content-stream desync",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-006",
+      "regex": "body[- ]content[- ]extraction gap|body-content-extraction-gap",
+      "ignore_case": true
+    }
+  ],
+  "overrides": {
+    "2002_Service_Manual_TI|sec_0184|5.4-page_start_end": "BUG-023",
+    "2002_Service_Manual_TI|sec_0185|5.4-page_start_end": "BUG-023",
+    "2002_Service_Manual_TI|sec_0251|5.5-filters_discarding": "BUG-020",
+    "AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION|sec_0017|5.6-table_content": "BUG-007",
+    "AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION|sec_0018|5.6-table_content": "BUG-007",
+    "AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION|sec_0019|5.5-filters_discarding": "BUG-010",
+    "AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION|sec_0020|5.5-filters_discarding": "BUG-010",
+    "DOC-0136477A|sec_0004|5.4-page_start_end": "BUG-001",
+    "DOC-0136477A|sec_0015|5.4-page_start_end": "BUG-001",
+    "DOC-0136477A|sec_0025|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0046|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0047|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0059|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0066|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0076|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0085|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0095|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0098|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0109|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0111|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0123|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0126|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0137|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0148|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0159|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0162|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0176|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0178|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0189|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0198|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0207|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0209|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0231|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0233|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0243|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0245|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0254|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0271|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0275|5.5-filters_passing_noise": "BUG-004",
+    "DOC-0136477A|sec_0279|5.4-gaps_duplicates": "BUG-002",
+    "LOGIQ_S8|sec_0072|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0074|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0075|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0076|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0079|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0080|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0083|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0084|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0085|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0103|5.5-filters_discarding": "BUG-015",
+    "LOGIQ_S8|sec_0110|5.5-filters_discarding": "BUG-015",
+    "LOGIQ_S8|sec_0111|5.5-filters_discarding": "BUG-015",
+    "LOGIQ_S8|sec_0130|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0135|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0135|5.5-filters_discarding": "BUG-011",
+    "LOGIQ_S8|sec_0137|5.4-page_start_end": "BUG-014",
+    "LOGIQ_S8|sec_0137|5.5-filters_discarding": "BUG-011",
+    "LOGIQ_S8|sec_0138|5.4-gaps_duplicates": "BUG-002",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0020|5.5-filters_discarding": "BUG-012",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0023|5.5-filters_discarding": "BUG-012",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0028|5.5-image_section_mapping": "BUG-013",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0045|5.5-filters_discarding": "BUG-012",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0051|5.5-filters_discarding": "BUG-010",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0056|5.5-filters_discarding": "BUG-012",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0063|5.5-filters_discarding": "BUG-012",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0069|5.6-table_content": "BUG-008",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0072|5.6-table_content": "BUG-008",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0078|5.6-table_content": "BUG-009",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0083|5.4-flagged_for_review": "BUG-002",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0083|5.4-gaps_duplicates": "BUG-002",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0083|5.5-filters_passing_noise": "BUG-002",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0083|5.5-image_section_mapping": "BUG-002",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0083|5.6-numbering_scheme": "BUG-002",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0083|5.6-offset_applied": "BUG-002",
+    "Philips-MP20-MP90-Manual|sec_0013|5.4-page_start_end": "BUG-023",
+    "Philips-MP20-MP90-Manual|sec_0036|5.4-page_start_end": "BUG-023",
+    "Philips-MP20-MP90-Manual|sec_0254|5.4-page_start_end": "BUG-023",
+    "Philips-MP20-MP90-Manual|sec_0652|5.4-page_start_end": "BUG-023",
+    "Philips-MP20-MP90-Manual|sec_0798|5.4-gaps_duplicates": "BUG-003",
+    "Philips-MP20-MP90-Manual|sec_0807|5.4-page_start_end": "BUG-023",
+    "Philips-MP20-MP90-Manual|sec_0816|5.4-page_start_end": "BUG-023",
+    "Philips-MP20-MP90-Manual|sec_0817|5.4-page_start_end": "BUG-023",
+    "Philips-MP20-MP90-Manual|sec_0820|5.4-page_start_end": "BUG-023",
+    "SOMATOM_Force_IFU_VB30|sec_0005|5.5-filters_discarding": "BUG-016",
+    "SOMATOM_Force_IFU_VB30|sec_0058|5.4-flagged_for_review": "BUG-005",
+    "SOMATOM_Force_IFU_VB30|sec_0058|5.5-image_section_mapping": "BUG-014",
+    "SOMATOM_Force_IFU_VB30|sec_0149|5.4-flagged_for_review": "BUG-005",
+    "SOMATOM_Force_IFU_VB30|sec_0555|5.4-page_start_end": "BUG-014",
+    "SOMATOM_Force_IFU_VB30|sec_0695|5.5-filters_discarding": "BUG-017",
+    "SOMATOM_Force_IFU_VB30|sec_0746|5.4-page_start_end": "BUG-001",
+    "SOMATOM_Force_IFU_VB30|sec_0746|5.5-image_section_mapping": "BUG-001",
+    "SOMATOM_Force_IFU_VB30|sec_0807|5.5-image_section_mapping": "BUG-003",
+    "SOMATOM_Force_IFU_VB30|sec_0874|5.4-flagged_for_review": "BUG-018",
+    "SOMATOM_Force_IFU_VB30|sec_0927|5.5-image_section_mapping": "BUG-001"
+  },
+  "exclusions": {
+    "SOMATOM_Force_IFU_VB30|sec_0906|5.4-flagged_for_review": "Positive/control finding: the verification mechanism correctly flagged a low title match; informational, not a defect."
+  }
+}

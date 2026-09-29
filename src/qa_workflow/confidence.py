@@ -12,6 +12,13 @@ from pathlib import Path
 from typing import Any
 
 from .review import load_findings
+from .root_causes import (
+    CATALOGUE_FILENAME,
+    EMPTY_CATALOGUE,
+    RootCauseCatalogue,
+    consolidate,
+    load_catalogue,
+)
 from .storage import atomic_write_json, atomic_write_text, open_qa_version, sha256_file, utc_now
 
 SEVERITY_WEIGHTS = {"Critical": 8, "High": 4, "Medium": 2, "Low": 1}
@@ -138,7 +145,7 @@ def list_manual_versions(qa_root: Path) -> dict[str, list[str]]:
         if (
             not manual_root.is_dir()
             or manual_root.name.startswith((".", "_"))
-            or manual_root.name == "confidence_index"
+            or manual_root.name in {"bugs", "confidence_index"}
         ):
             continue
         versions = [
@@ -155,50 +162,16 @@ def latest_versions(qa_root: Path) -> dict[str, str]:
     return {manual: versions[-1] for manual, versions in list_manual_versions(qa_root).items()}
 
 
-def _bug_fingerprint(row: dict[str, str]) -> str:
-    narrative = row.get("notes", "").strip() or row.get("evidence", "").strip()
-    narrative = re.sub(r"\bsec[_ -]?\d+\b|\bpage\s+\d+\b|\bp\.?\s*\d+\b", "", narrative.lower())
-    narrative = re.sub(r"[^a-z0-9]+", " ", narrative).strip()
-    return f"{row.get('checklist_ref', '')}|{' '.join(narrative.split()[:24])}"
-
-
-def consolidate_failures(selected_rows: dict[str, list[dict[str, str]]]) -> list[dict[str, str]]:
-    groups: dict[str, dict[str, Any]] = {}
-    rank = {"Critical": 0, "High": 1, "Medium": 2, "Low": 3}
-    for manual_id, rows in selected_rows.items():
-        for row in rows:
-            if row.get("result", "").upper() != "FAIL":
-                continue
-            fingerprint = _bug_fingerprint(row)
-            group = groups.setdefault(
-                fingerprint,
-                {
-                    "title": row.get("notes", "").strip() or row.get("evidence", "").strip(),
-                    "severities": [],
-                    "manuals": set(),
-                    "sections": set(),
-                    "checklist_ref": row.get("checklist_ref", ""),
-                },
-            )
-            group["severities"].append(normalize_severity(row.get("severity", "")))
-            group["manuals"].add(manual_id)
-            group["sections"].add(f"{manual_id}:{row.get('section_id', '')}")
-    output = []
-    for index, (_fingerprint, group) in enumerate(sorted(groups.items()), 1):
-        severity = sorted(group["severities"], key=lambda value: rank.get(value, 99))[0]
-        title = group["title"] or f"{group['checklist_ref']} failure"
-        output.append(
-            {
-                "bug_id": f"BUG-{index:03d}",
-                "title": title[:240],
-                "severity": severity,
-                "manuals_affected": "; ".join(sorted(group["manuals"])),
-                "sections_affected": "; ".join(sorted(group["sections"])),
-                "suspected_module": "",
-                "escalate": "Yes" if severity in {"Critical", "High"} else "No",
-            }
-        )
-    return output
+def consolidate_failures(
+    selected_rows: dict[str, list[dict[str, str]]],
+    catalogue: RootCauseCatalogue = EMPTY_CATALOGUE,
+) -> list[dict[str, str]]:
+    """Task 2.3 list: one entry per curated root cause; unclassified rows go to TRIAGE."""
+    fails = {
+        manual_id: [row for row in rows if row.get("result", "").upper() == "FAIL"]
+        for manual_id, rows in selected_rows.items()
+    }
+    return list(consolidate(catalogue, fails, normalize_severity).bugs)
 
 
 def _bugs_csv(rows: list[dict[str, str]]) -> str:
@@ -246,7 +219,8 @@ def build_confidence_report(qa_root: Path, selected_versions: dict[str, str]) ->
         )
         scores.append(calculate_confidence(manual_id, version, rows, validation))
         selected_rows[manual_id] = rows
-    bugs = consolidate_failures(selected_rows)
+    catalogue = load_catalogue(qa_root.resolve() / "confidence_index" / CATALOGUE_FILENAME)
+    bugs = consolidate_failures(selected_rows, catalogue)
     return ConfidenceReport(
         selected,
         tuple(scores),

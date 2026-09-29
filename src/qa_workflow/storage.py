@@ -29,7 +29,7 @@ from .models import (
 _SAFE_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
 _VERSION = re.compile(r"^v[1-9][0-9]*$")
 _VERSION_DIRS = ("exports", "sampling", "findings", "logs", "agent_exchange")
-_RESERVED_QA_DIRS = {"_scripts", "confidence_index", "__pycache__"}
+_RESERVED_QA_DIRS = {"_scripts", "bugs", "confidence_index", "__pycache__"}
 
 
 def utc_now() -> str:
