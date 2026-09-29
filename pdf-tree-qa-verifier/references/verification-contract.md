@@ -79,14 +79,42 @@ Avoid evidence such as “looks correct,” “the JSON says so,” or a restate
 
 For `5.4-page_start_end`, explain both the numeric boundary and semantic ownership. A node on a valid page may still violate the boundary if it belongs to an ancestor, sibling, header/footer, or following section.
 
-## Severity guidance
+## Severity scale (authoritative: `doc/SPRINT_TASKS_QA_pdf_tree.md`)
 
-- `Critical`: systemic corruption that makes retrieval, citations, safety-critical meaning, or broad document structure unreliable.
-- `High`: major content or structural loss/misassignment with substantial downstream impact.
-- `Medium`: localized but meaningful ownership, hierarchy, OCR, table, or image error.
-- `Low`: limited noise or presentation defect with little semantic impact.
+Use the Sprint's definitional scale. It drives the Confidence Index weights
+(Critical 8, High 4, Medium 2, Low 1), so every manual must be graded the same way.
+Do not grade by perceived impact; grade by defect type.
 
-Severity follows impact and scope, not how many times the same symptom appears. Consolidate repeated manifestations under a root cause and retain representative examples.
+| Severity | Definition (Sprint) | Sprint example |
+|---|---|---|
+| `Critical` | Content is placed in the wrong section, is lost completely, or the hierarchy is broken (cycle, missing parent, wrong nesting) | A subsection's content assigned to its sibling; `parent_section_id` pointing to the wrong chapter |
+| `High` | A `flagged_for_review` section is confirmed wrong, or `page_start`/`page_end` is off by more than 1 page | Section boundary two pages off because of offset miscalibration |
+| `Medium` | Content is correctly placed but a supporting field is wrong or degraded | Image assigned to the wrong sibling on a shared page; inconsistent `offset_applied` |
+| `Low` | Cosmetic or non-blocking defect that does not affect retrieving the correct content | Empty table placeholder whose information survives in surrounding text |
+
+### Mapping of known patterns
+
+| Pattern | Checklist row | Severity |
+|---|---|---|
+| Section heading or body nodes assigned to another section (parent, sibling or child) | `5.4-page_start_end`, `5.4-gaps_duplicates` | Critical |
+| Section left empty (only its heading) because its body went to a neighbour | `5.4-page_start_end`, `5.4-gaps_duplicates` | Critical |
+| Table printed under one heading assigned to another section | `5.4-page_start_end` | Critical |
+| Unbookmarked back-matter (index, glossary, covers) absorbed into the last section | `5.4-page_start_end`, `5.4-gaps_duplicates` | Critical |
+| Meaningful figure missing from the image output (vector-only drawing, or raster dropped by a filter) whose information is not in the text | `5.5-filters_discarding` | Critical |
+| Boundary off by more than 1 page | `5.4-page_start_end` | High |
+| `page_end` one page short while all nodes are correctly owned | `5.4-page_start_end` | Medium |
+| Image mapped to the wrong sibling on a shared page | `5.5-image_section_mapping` | Medium |
+| Table text present but cells merged/shifted so that values change meaning or can no longer be attributed to their column | `5.6-table_content` | Medium |
+| Printed numbering scheme not represented (e.g. roman index folios inside an arabic section) | `5.6-numbering_scheme` | Medium |
+| Only boilerplate crosses a boundary (running headers, chapter numbers, folios, invisible print slugs) | `5.4-page_start_end` | Low |
+| Small icon dropped whose meaning is fully stated in the text | `5.5-filters_discarding` | Low |
+| Table cells merged but reading order and values preserved; empty `[Table 0x0]` placeholder; header rows misdetected as tables | `5.6-table_content` | Low |
+| Decorative element (rule, footer divider, logo) kept as an image | `5.5-filters_passing_noise` | Low |
+
+If a case fits two rows, use the more severe one and say why in `notes`. Consolidate
+repeated manifestations under one root cause in Task 2.3, but still grade every row.
+Run `scripts/verify_claims.py` on every draft: it recomputes the deterministic
+signals behind these patterns and flags severity that does not match this table.
 
 ## Source and artifact blockers
 
