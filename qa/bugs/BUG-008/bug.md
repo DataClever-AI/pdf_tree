@@ -33,6 +33,11 @@ Proposed: evaluate TableFormer in accurate mode, or validate each table against 
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

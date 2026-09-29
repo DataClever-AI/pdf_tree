@@ -33,6 +33,11 @@ Proposed: ignore headings whose normalized text is empty or shorter than 3 chara
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

@@ -72,6 +72,21 @@ reviewed and are marked `draft:<batch>` (`--official-only` ignores them). The re
 "Verification" sections by hand. To register a new bug, add it (and its matching rule or
 override) to `root_causes.json` and re-run the script; it creates `bug.md` from a template.
 
+**Mitigation versions (`v2.1`, `v2.2`, ...).** After a bug fix, a manual is re-run into a new
+minor version of its base; the base is never modified. The version manifest records the
+target bugs and the pipeline commit, and the app shows it as `v2.1 · BUG-019`.
+
+1. `uv run python qa/_scripts/create_mitigation_version.py --manual <id> --base v2 --version v2.1 --bugs BUG-019`
+   (needs the fix committed; the sample is the official 15 % sample plus `base-pair`,
+   `bug-occurrence` and `random-check` rows, which `verify_version.py` accepts).
+2. Review it on the QA Review page, then compare it with its base on the **Version Compare**
+   page (paired FAIL rows per bug before → after, index, regressions, tree changes).
+3. `uv run python qa/_scripts/record_attempt.py --bug BUG-019 --manual <id> --candidate v2.1 --change "..." --decision "..." [--status mitigated]`
+   appends a row to the bug's Attempts table (date, commit, before → after, regressions).
+
+An unfinalized mitigation version does not replace its base as the reference version; once
+finalized, it does.
+
 **`exports/` is gitignored, not a missing deliverable.** `tree.json` +
 `images_v1.json` together run into the hundreds of MB per manual (up to
 ~150MB for a single `images_v1.json`) — too heavy to version. They stay on

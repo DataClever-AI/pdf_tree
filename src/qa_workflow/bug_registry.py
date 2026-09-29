@@ -14,6 +14,7 @@ Each ``qa/bugs/<bug_id>/`` holds:
 from __future__ import annotations
 
 import csv
+import re
 from dataclasses import dataclass
 from io import StringIO
 from pathlib import Path
@@ -30,7 +31,21 @@ from .storage import atomic_write_text
 
 GENERATED_START = "<!-- generated:occurrences:start -->"
 GENERATED_END = "<!-- generated:occurrences:end -->"
-STATUSES = ("open", "fix-proposed", "in-progress", "fixed-pending-merge", "fixed", "wont-fix")
+STATUSES = (
+    "open",
+    "fix-proposed",
+    "in-progress",
+    "mitigated",
+    "fixed-pending-merge",
+    "fixed",
+    "accepted",
+    "wont-fix",
+)
+ATTEMPTS_HEADING = "## Attempts"
+ATTEMPTS_HEADER = (
+    "| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |\n"
+    "|---|---|---|---|---|---|---|---|"
+)
 OCCURRENCE_COLUMNS = (
     "source",
     "manual_id",
@@ -144,6 +159,10 @@ Proposed or applied change (branch, commit, tests).
 
 How the fix was checked (tests, re-run QA version, rows that no longer FAIL).
 
+{ATTEMPTS_HEADING}
+
+{ATTEMPTS_HEADER}
+
 {GENERATED_START}
 {GENERATED_END}
 """
@@ -204,6 +223,60 @@ def occurrence_block(occurrences: list[Occurrence]) -> str:
     return "\n".join(lines)
 
 
+@dataclass(frozen=True)
+class Attempt:
+    date: str
+    manual_id: str
+    version: str
+    commit: str
+    change: str
+    before: int
+    after: int
+    regressions: int
+    decision: str
+
+    def markdown_row(self) -> str:
+        def cell(value: str) -> str:
+            return " ".join(value.replace("|", "/").split())
+
+        return (
+            f"| {self.date} | `{self.manual_id}` | {self.version} | {cell(self.commit)} "
+            f"| {cell(self.change)} | {self.before} → {self.after} | {self.regressions} "
+            f"| {cell(self.decision)} |"
+        )
+
+
+def ensure_attempts_section(text: str) -> str:
+    """Insert an empty Attempts table before the generated block when it is missing."""
+    if ATTEMPTS_HEADING in text:
+        return text
+    section = f"{ATTEMPTS_HEADING}\n\n{ATTEMPTS_HEADER}\n\n"
+    start = text.find(GENERATED_START)
+    if start == -1:
+        return text.rstrip("\n") + "\n\n" + section
+    return text[:start] + section + text[start:]
+
+
+def append_attempt(text: str, attempt: Attempt) -> str:
+    """Add one row at the end of the Attempts table and refresh ``updated``."""
+    text = ensure_attempts_section(text)
+    start = text.index(ATTEMPTS_HEADING)
+    header_end = text.index(ATTEMPTS_HEADER, start) + len(ATTEMPTS_HEADER)
+    position = header_end
+    while True:
+        next_line_end = text.find("\n", position + 1)
+        line = text[position + 1 : next_line_end if next_line_end != -1 else len(text)]
+        if not line.startswith("|"):
+            break
+        position = next_line_end
+    text = text[:position] + "\n" + attempt.markdown_row() + text[position:]
+    return re.sub(r"^updated:.*$", f"updated: {attempt.date}", text, count=1, flags=re.MULTILINE)
+
+
+def set_front_matter_field(text: str, key: str, value: str) -> str:
+    return re.sub(rf"^{key}:.*$", f"{key}: {value}", text, count=1, flags=re.MULTILINE)
+
+
 def refresh_generated_block(text: str, block: str) -> str:
     start = text.find(GENERATED_START)
     end = text.find(GENERATED_END)
@@ -225,8 +298,23 @@ def occurrences_csv(occurrences: list[Occurrence]) -> str:
     return output.getvalue()
 
 
+def last_attempt(text: str) -> str:
+    """``v2.1: 13 → 2`` from the last row of the Attempts table, or an empty string."""
+    if ATTEMPTS_HEADING not in text:
+        return ""
+    section = text[text.index(ATTEMPTS_HEADING) :].split(GENERATED_START)[0]
+    rows = [line for line in section.splitlines() if line.startswith("| 2")]
+    if not rows:
+        return ""
+    cells = [cell.strip() for cell in rows[-1].strip("|").split("|")]
+    return f"{cells[2]}: {cells[5]}" if len(cells) >= 6 else ""
+
+
 def index_markdown(
-    catalogue: RootCauseCatalogue, collected: Collected, front_matter: dict[str, dict[str, str]]
+    catalogue: RootCauseCatalogue,
+    collected: Collected,
+    front_matter: dict[str, dict[str, str]],
+    attempts: dict[str, str] | None = None,
 ) -> str:
     lines = [
         "# PDF Tree bug registry",
@@ -240,8 +328,9 @@ def index_markdown(
         "",
         f"Statuses: {', '.join(f'`{status}`' for status in STATUSES)}.",
         "",
-        "| Bug | Title | Top severity | Status | Finding | Manuals | Official FAIL | Draft FAIL |",
-        "|---|---|---|---|---|---|---:|---:|",
+        "| Bug | Title | Top severity | Status | Finding | Manuals | Official FAIL | Draft FAIL "
+        "| Last attempt |",
+        "|---|---|---|---|---|---|---:|---:|---|",
     ]
     for bug_id, cause in sorted(catalogue.bugs.items()):
         items = collected.by_bug.get(bug_id, [])
@@ -252,7 +341,8 @@ def index_markdown(
         lines.append(
             f"| [{bug_id}]({bug_id}/bug.md) | {cause.title} | {severity} "
             f"| {meta.get('status', 'open')} | {meta.get('finding') or '—'} | {manuals} "
-            f"| {official} | {len(items) - official} |"
+            f"| {official} | {len(items) - official} "
+            f"| {(attempts or {}).get(bug_id) or '—'} |"
         )
     if collected.triage:
         lines += [
@@ -268,22 +358,26 @@ def write_registry(
 ) -> list[Path]:
     written: list[Path] = []
     front_matter: dict[str, dict[str, str]] = {}
+    attempts: dict[str, str] = {}
     for bug_id, cause in sorted(catalogue.bugs.items()):
         bug_dir = registry_root / bug_id
         bug_dir.mkdir(parents=True, exist_ok=True)
         record = bug_dir / "bug.md"
         text = record.read_text(encoding="utf-8") if record.exists() else bug_template(cause, today)
         occurrences = collected.by_bug.get(bug_id, [])
-        refreshed = refresh_generated_block(text, occurrence_block(occurrences))
+        refreshed = refresh_generated_block(
+            ensure_attempts_section(text), occurrence_block(occurrences)
+        )
         if refreshed != text or not record.exists():
             atomic_write_text(record, refreshed)
             written.append(record)
         front_matter[bug_id] = parse_front_matter(refreshed)
+        attempts[bug_id] = last_attempt(refreshed)
         csv_path = bug_dir / "occurrences.csv"
         atomic_write_text(csv_path, occurrences_csv(occurrences))
         written.append(csv_path)
     triage_path = registry_root / "triage.csv"
     atomic_write_text(triage_path, occurrences_csv(collected.triage))
     index = registry_root / "README.md"
-    atomic_write_text(index, index_markdown(catalogue, collected, front_matter))
+    atomic_write_text(index, index_markdown(catalogue, collected, front_matter, attempts))
     return [*written, triage_path, index]

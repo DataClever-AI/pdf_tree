@@ -32,6 +32,11 @@ Proposed: drop tables with zero rows or columns and tables inside the repeated h
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 
