@@ -1,0 +1,1224 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4, same numbered subsection style as its siblings in the second Fuel Injection chapter (w/o OBD).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0013 (second 'FUEL INJECTION (FUEL SYSTEM)' chapter, p59-92) is correct for p64-73.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Range p64-73 is correct and p68 (fuel tank text and figure) is fully owned, but the heading '3. Fuel Line' and sub-heading 'A: GENERAL' on p64 were assigned to the previous section sec_0015; this section begins at the '!' bullet glyph.",
+      "notes": "Root cause 2002-A (6/251 sections, all in the FU chapters): when the first body element after a section heading is a bullet glyph that Docling labels as a section_header ('!'), the matcher anchors the section at that glyph and the real heading line stays with the preceding section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)/3. Fuel Line' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No page overlap with sec_0015 (p61-63) or sec_0017 (p74-82).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '3. Fuel Line' is found at page_start p64, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '3. Fuel Line' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p68 is 'FU-10', a chapter-prefixed arabic page number, with no roman/arabic transition inside p64-73.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '3. Fuel Line' is rendered on physical p64, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p68 has 1 raster figure(s) (the fuel tank and hold-down band drawing B2H2913C) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p68 is the technical figure (the fuel tank and hold-down band drawing B2H2913C), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 68,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p68 (the fuel tank and hold-down band drawing B2H2913C) sits in the body of '3. Fuel Line' and is mapped to sec_0016.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '4. Sensors and Switches' on p74 sits above its lettered topic 'A: OXYGEN SENSOR (WITH CATALYTIC CONVERTER)'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0013 is correct; siblings '3. Fuel Line' and '5. Control System' are adjacent.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Starts with its own heading on p74 and owns all p74 content, but its last node is p83's invisible print slug 'W2290GE_03_FU-.fm 25 ページ', which is from the next section's first page.",
+      "notes": "Root cause 2002-B: invisible print-job slug text ('W2290GE_xx_FU.fm N ページ' plus a Japanese timestamp) exists in the PDF text layer on every page, is not visible in the rendering, and is extracted as paragraph nodes (144 nodes document-wide).",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)/4. Sensors and Switches' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0016 (ends p73) or sec_0018 (starts p83).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '4. Sensors and Switches' is found at page_start p74, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '4. Sensors and Switches' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p74 is 'FU-16', a chapter-prefixed arabic page number, with no roman/arabic transition inside p74-82.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '4. Sensors and Switches' is rendered on physical p74, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p74 has 1 raster figure(s) (the oxygen sensor cutaway H2H1224D) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p74 is the technical figure (the oxygen sensor cutaway H2H1224D), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0017",
+      "page_sampled": 74,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p74 (the oxygen sensor cutaway H2H1224D) sits in the body of '4. Sensors and Switches' and is mapped to sec_0017.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4 for '5. Control System'; p88 shows its lettered topic 'D: IGNITION SYSTEM CONTROL' as content.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0013 is correct; next sibling '6. On-board Diagnosis System' (p91-92).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "p88 content is owned correctly, but the section holds 5 nodes from p91 including the next section's first sub-heading 'A: GENERAL' and its title line, so sec_0019 '6. On-board Diagnosis System' starts without its heading.",
+      "notes": "Root cause 2002-A (6/251 sections, all in the FU chapters): when the first body element after a section heading is a bullet glyph that Docling labels as a section_header ('!'), the matcher anchors the section at that glyph and the real heading line stays with the preceding section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)/5. Control System' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Page ranges p83-90 and p91-92 do not overlap; the boundary defect is node ownership, reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '5. Control System' is found at page_start p83, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '5. Control System' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p88 is 'FU-30', a chapter-prefixed arabic page number, with no roman/arabic transition inside p83-90.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '5. Control System' is rendered on physical p83, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No table is rendered on sampled p88 (it has bullet text and a block diagram); the section's tables are on p84 and p90.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p88 has 1 raster figure(s) (the ignition control block diagram B2H3827B) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p88 is the technical figure (the ignition control block diagram B2H3827B), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0018",
+      "page_sampled": 88,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p88 (the ignition control block diagram B2H3827B) sits in the body of '5. Control System' and is mapped to sec_0018.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '1. System Overview' on p94 is the first numbered subsection of the Emission Control chapter.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0020 'EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)' (p93-108) is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Starts with its own heading on p94 and owns the list and table, but its last node is p96's running header 'Emission Control (Aux. Emission Control Devices) SCHEMATIC DIAGRAMS' from the next section's page.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/1. System Overview' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0022 '2. Schematic Diagrams' (p96-97).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '1. System Overview' is found at page_start p94, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. System Overview' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p94 is 'EC-2', a chapter-prefixed arabic page number, with no roman/arabic transition inside p94-95.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '1. System Overview' is rendered on physical p94, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "The p94 overview table has three columns (Item / Main components / Function), but the extraction merges 'Main components' and 'Function' into one cell (e.g. 'Positive crankcase ventilation (PCV) valve Draws blow-by gas into intake manifold...'), splits 'Intake air temperature and pressure sensor' across two rows and drops the word 'sensor' from 'Engine coolant temperature sensor'. Text is mostly present but component-to-function attribution is lost.",
+      "notes": "Same family as the known table header/column merge bug (BUG-008).",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p94 has no raster image XObjects; its visual elements are a bullet list and a bordered overview table, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p94; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0021",
+      "page_sampled": 94,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p94 contains no figure (a bullet list and a bordered overview table), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '5. A/F Control System' on p101 matches the numbered style of its siblings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0020 is correct; siblings '4. Three-way Catalyst' (p100) and '6. Ignition Control System' (p102).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading and both bullet paragraphs on p101, but ends with p102's running header 'IGNITION CONTROL SYSTEM' and 'Emission Control (Aux. Emission Control Devices)'. Its own p101 running header 'A/F CONTROL SYSTEM' was likewise assigned to the previous section.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/5. A/F Control System' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "One-page ranges p100, p101, p102 do not overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '5. A/F Control System' is found at page_start p101, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '5. A/F Control System' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p101 is 'EC-9', a chapter-prefixed arabic page number, with no roman/arabic transition inside p101-101.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '5. A/F Control System' is rendered on physical p101, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p101 has no raster image XObjects; its visual elements are only two bullet paragraphs, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p101; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 101,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p101 contains no figure (only two bullet paragraphs), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '8. Vacuum Connections' (p107) is the last numbered subsection of the first Emission Control chapter.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0020 is correct; the next section is the second Emission Control chapter (w/o OBD) at p109.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p108 is the chapter's closing 'MEMO' page with running header 'VACUUM CONNECTIONS' and folio EC-16; its 3 nodes are correctly owned by this last subsection, and nothing from p109 is absorbed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/8. Vacuum Connections' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Range p107-108 ends before the next chapter at p109; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '8. Vacuum Connections' is found at page_start p107, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '8. Vacuum Connections' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p108 is 'EC-16', a chapter-prefixed arabic page number, with no roman/arabic transition inside p107-108.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '8. Vacuum Connections' is rendered on physical p107, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p108 has no raster image XObjects; its visual elements are only the word 'MEMO' on an otherwise blank page, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p108; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0028",
+      "page_sampled": 108,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p108 contains no figure (only the word 'MEMO' on an otherwise blank page), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4 for this numbered subsection of the second Emission Control chapter.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0029 (second Emission Control chapter, p109-124) is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "p115 figure and legend are owned correctly, but the last node is p116's running header 'Emission Control (Aux. Emission Control Devices) THREE-WAY CATALYST (WITH CATALYST MODEL)' from the next section.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/3. Crankcase Emission Control System' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0031 (p112-113) or sec_0033 (p116).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '3. Crankcase Emission Control System' is found at page_start p114, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '3. Crankcase Emission Control System' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p115 is 'EC-7', a chapter-prefixed arabic page number, with no roman/arabic transition inside p114-115.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '3. Crankcase Emission Control System' is rendered on physical p114, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p115 has 1 raster figure(s) (the PCV flow diagrams (A)/(B) and PCV valve section B2H3534D, one raster image) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p115 is the technical figure (the PCV flow diagrams (A)/(B) and PCV valve section B2H3534D, one raster image), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0032",
+      "page_sampled": 115,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p115 (the PCV flow diagrams (A)/(B) and PCV valve section B2H3534D, one raster image) sits in the body of '3. Crankcase Emission Control System' and is mapped to sec_0032.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4; p121 shows its lettered topics 'D: CANISTER' and 'E: PURGE CONTROL SOLENOID VALVE' as content.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0029 is correct; next sibling '8. Vacuum Connections' (p123-124).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns p119-122 content, but ends with p123's running header 'VACUUM CONNECTIONS' and 'Emission Control (Aux. Emission Control Devices)' from the next section.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/7. Evaporative Emission Control System' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0035 (p118) or sec_0037 (p123-124).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '7. Evaporative Emission Control System' is found at page_start p119, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '7. Evaporative Emission Control System' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p121 is 'EC-13', a chapter-prefixed arabic page number, with no roman/arabic transition inside p119-122.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '7. Evaporative Emission Control System' is rendered on physical p119, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "p121 shows two figures: the canister cross-section B2H3825B (upper) and the purge control solenoid valve B2H0426B (lower). Only one raster XObject exists, placed at the lower figure's position (y 475-603); the canister figure is drawn with vector paths and is missing from images_v1.json. Its legend text is kept.",
+      "notes": "Root cause VEC (known BUG-010 family): the image extractor only captures raster XObjects; figures drawn with PDF vector paths are not extracted.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p121 is the technical figure (the purge control solenoid valve drawing B2H0426B), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 121,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The one extracted figure from p121 (solenoid valve B2H0426B) is mapped to sec_0036, which owns p121; the missing vector figure is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '1. General' on p128 is the first numbered subsection of 'MECHANICAL'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0040 'MECHANICAL' (p127-140) is correct; next sibling '2. Timing Belt' (p129).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading, bullets and figure on p128, but ends with p129's running header 'TIMING BELT' and 'Mechanical'. Its own p128 running header ('Mechanical', 'GENERAL') was assigned to the parent chapter.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/MECHANICAL/1. General' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "One-page ranges p128 and p129 do not overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '1. General' is found at page_start p128, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. General' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p128 is 'ME-2', a chapter-prefixed arabic page number, with no roman/arabic transition inside p128-128.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '1. General' is rendered on physical p128, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p128 has 1 raster figure(s) (the engine cross-section NF0039) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p128 is the technical figure (the engine cross-section NF0039), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0041",
+      "page_sampled": 128,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p128 (the engine cross-section NF0039) sits in the body of '1. General' and is mapped to sec_0041.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '7. Cylinder Head' on p135 matches its numbered siblings under 'MECHANICAL'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0040 is correct; siblings '6. Camshaft' (p134) and '8. Cylinder Block' (p136).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading, bullets and figure on p135, but ends with p136's running header 'Mechanical' and 'CYLINDER BLOCK' from the next section.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/MECHANICAL/7. Cylinder Head' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "One-page ranges p134, p135 and p136 do not overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '7. Cylinder Head' is found at page_start p135, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '7. Cylinder Head' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p135 is 'ME-9', a chapter-prefixed arabic page number, with no roman/arabic transition inside p135-135.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '7. Cylinder Head' is rendered on physical p135, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p135 has 1 raster figure(s) (the cylinder head section and port view B2H3341A, one raster image) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p135 is the technical figure (the cylinder head section and port view B2H3341A, one raster image), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 135,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p135 (the cylinder head section and port view B2H3341A, one raster image) sits in the body of '7. Cylinder Head' and is mapped to sec_0047.",
+      "notes": "",
+      "confidence": 0.85
+    }
+  ]
+}
