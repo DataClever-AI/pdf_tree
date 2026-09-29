@@ -33,6 +33,11 @@ Proposed: rasterize the drawing region from `page.get_drawings()` when a figure 
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

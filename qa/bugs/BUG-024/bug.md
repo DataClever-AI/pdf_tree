@@ -33,6 +33,11 @@ Defect in the PDF (one corrupt named destination). The pipeline treated any out-
 
 Unit test with the exact case (`tests/unit/test_bookmark_sanity.py`). Full v2 run: `1. General` relocated p3 -> p22 (similarity 100), 251 sections, Coverage and Structure PASS, `verify_version.py` PASS.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

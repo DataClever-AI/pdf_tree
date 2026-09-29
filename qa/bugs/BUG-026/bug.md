@@ -32,6 +32,11 @@ The v2 run stores the log captured by the run itself. v1 is kept unchanged (QA v
 
 `qa/Philips-MP20-MP90-Manual/v2/logs/run.log` only contains the Philips run.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 
