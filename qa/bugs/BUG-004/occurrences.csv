@@ -1,0 +1,35 @@
+source,manual_id,version,section_id,page_sampled,checklist_ref,severity,evidence,notes
+official,DOC-0136477A,v1,sec_0004,17,5.5-filters_passing_noise,Low,"One image extracted at p17: 2800x200px, aspect ratio 14:1 - almost certainly the decorative red divider rule above the page footer, not real content. Passed the >15:1 rejection filter by a narrow margin.","Suggest tightening the aspect-ratio threshold (EVALUATION_GUIDE.md SS5.5 filter #5, currently >15:1) or adding a footer-band exclusion check similar to the existing header/footer zone filters in pipeline.py::_extract_embedded_images."
+official,DOC-0136477A,v1,sec_0015,27,5.5-filters_passing_noise,Low,"Image at p27: 2800x200px, same 14:1 aspect ratio as the sec_0004 finding - the decorative footer divider line again passing the >15:1 rejection filter. 2nd occurrence (also present at p26, mapped to sec_0014) - systemic, not isolated to this section.",Same fix recommendation as sec_0004: tighten the aspect-ratio threshold or add a footer-band exclusion in pipeline.py::_extract_embedded_images.
+official,DOC-0136477A,v1,sec_0018,28,5.5-filters_passing_noise,Low,"Image at p28: 2800x200px, same 14:1 aspect-ratio decorative footer divider as sec_0004/sec_0015. 3rd occurrence - confirms this is a per-page recurring pattern, not isolated.",Same fix recommendation as prior occurrences: tighten aspect-ratio threshold or add footer-band exclusion in pipeline.py::_extract_embedded_images.
+official,DOC-0136477A,v1,sec_0025,41,5.5-filters_passing_noise,Low,"Image at p41: 2800x200px, same 14:1 aspect ratio divider line as prior 3 occurrences. 4th occurrence of the same systemic filter near-miss.",Same fix recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0029,42,5.5-filters_passing_noise,Low,"Image at p42: 2800x200px, same 14:1 aspect-ratio decorative footer divider as all prior sampled sections. 5th occurrence overall (4th of 5 sections inspected so far, 100% hit rate).",Same fix recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0046,52,5.5-filters_passing_noise,Low,2800x200 divider image again present at p52. 6th occurrence.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0047,53,5.5-filters_passing_noise,Low,2800x200 divider image again present at p53. 7th occurrence.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0059,62,5.5-filters_passing_noise,Low,2800x200 divider present on both p62 and p63. 8th/9th occurrence (two instances this section).,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0066,69,5.5-filters_passing_noise,Low,2800x200 divider present at p69. Continuing pattern.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0076,76,5.5-filters_passing_noise,Low,2800x200 divider present at p76. Continuing pattern.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0085,82,5.5-filters_passing_noise,Low,2800x200 divider present at p82. Continuing pattern.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0095,89,5.5-filters_passing_noise,Low,2800x200 divider present on both p88 and p89. Continuing pattern.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0098,90,5.5-filters_passing_noise,Low,2800x200 divider present on both p90 and p91.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0109,101,5.5-filters_passing_noise,Low,2800x200 divider present at p101.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0111,102,5.5-filters_passing_noise,Low,2800x200 divider present at p102.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0123,111,5.5-filters_passing_noise,Low,2800x200 divider present at p111.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0126,112,5.5-filters_passing_noise,Low,2800x200 divider present at p112.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0137,118,5.5-filters_passing_noise,Low,2800x200 divider present at p118/119.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0148,126,5.5-filters_passing_noise,Low,2800x200 divider present at p126.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0159,133,5.5-filters_passing_noise,Low,2800x200 divider present at p133.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0162,134,5.5-filters_passing_noise,Low,2800x200 divider present at p134/135.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0176,144,5.5-filters_passing_noise,Low,2800x200 divider present at p144.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0178,145,5.5-filters_passing_noise,Low,2800x200 divider present at p145.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0189,153,5.5-filters_passing_noise,Low,2800x200 divider present at p153.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0198,162,5.5-filters_passing_noise,Low,2800x200 divider present at p162.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0207,170,5.5-filters_passing_noise,Low,2800x200 divider present at p170.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0209,171,5.5-filters_passing_noise,Low,2800x200 divider present at p171.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0231,190,5.5-filters_passing_noise,Low,2800x200 divider present at p190.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0233,191,5.5-filters_passing_noise,Low,2800x200 divider present at p191.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0243,200,5.5-filters_passing_noise,Low,2800x200 divider present at p200.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0245,206,5.5-filters_passing_noise,Low,2800x200 divider present at p206.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0254,214,5.5-filters_passing_noise,Low,2800x200 divider present at p214.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0271,221,5.5-filters_passing_noise,Low,2800x200 divider present at p221.,Same recommendation as prior occurrences.
+official,DOC-0136477A,v1,sec_0275,230,5.5-filters_passing_noise,Low,2800x200 divider present at p230.,Same recommendation as prior occurrences.

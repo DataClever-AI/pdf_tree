@@ -51,10 +51,26 @@ qa/
 │   │   └── findings_log.csv         ← Task 1.5 — one row per (section × checklist item)
 │   ├── validation_report.json       ← Task 1.2/1.6 — copy of the automated report (Metrics page)
 │   └── summary.md                   ← Task 1.6 — ≤10-line summary (pass rate, FAIL by severity, etc.)
-└── confidence_index/                ← Story 2, once all 6 manuals are done
-    ├── confidence_index_report.md   ← Task 2.4 — summary table + interpretation
-    └── consolidated_bugs.csv        ← Task 2.3 — bug list deduplicated by root cause
+├── confidence_index/                ← Story 2, once all 6 manuals are done
+│   ├── confidence_index_report.md   ← Task 2.4 — summary table + interpretation
+│   ├── root_causes.json             ← curated root-cause catalogue (edited by the reviewer only)
+│   └── consolidated_bugs.csv        ← Task 2.3 — bug list deduplicated by root cause
+└── bugs/                            ← bug registry: one folder per bug
+    ├── README.md                    ← generated index (status, severity, manuals, FAIL counts)
+    ├── triage.csv                   ← FAIL rows not yet classified to a root cause
+    └── BUG-NNN/
+        ├── bug.md                   ← human record: description, root cause, what was done, fix, verification
+        └── occurrences.csv          ← generated: every FAIL row where the bug was seen
 ```
+
+**Bug registry (`qa/bugs/`).** `uv run python qa/_scripts/build_bug_registry.py`
+classifies every FAIL row of each manual's latest version with
+`confidence_index/root_causes.json` and refreshes `occurrences.csv`, the "Where it was
+seen" block of each `bug.md` and the index. Validated agent drafts fill rows not yet
+reviewed and are marked `draft:<batch>` (`--official-only` ignores them). The rest of
+`bug.md` is never overwritten: update its `status` and its "What was done", "Fix" and
+"Verification" sections by hand. To register a new bug, add it (and its matching rule or
+override) to `root_causes.json` and re-run the script; it creates `bug.md` from a template.
 
 **`exports/` is gitignored, not a missing deliverable.** `tree.json` +
 `images_v1.json` together run into the hundreds of MB per manual (up to
