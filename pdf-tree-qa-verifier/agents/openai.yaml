@@ -2,3 +2,12 @@ interface:
   display_name: "PDF Tree QA Verifier"
   short_description: "Verify PDF Tree QA evidence and drafts"
   default_prompt: "Use $pdf-tree-qa-verifier to validate a PDF Tree QA version and produce evidence-backed draft findings."
+
+# Confirmed GPT-6 Codex model ids for this installation (see references/roles.md):
+# lead = gpt-6.1-sol or gpt-6-sol; reviewer = gpt-6-luna.
+# No gpt-6-terra entry appears in `codex debug models`.
+# Set reviewer reasoning with the CLI/config key:
+#   -c model_reasoning_effort=high
+# The openai.yaml agent schema accepts only `interface` here; it has no valid model,
+# role, or reasoning fields. Use `codex exec --model ...` or the documented profiles
+# to select the lead/reviewer at launch time.
