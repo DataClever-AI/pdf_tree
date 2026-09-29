@@ -1,9 +1,9 @@
 ---
 bug_id: BUG-019
-status: fix-proposed
+status: in-progress
 finding: H-08, H-14
-fix_branch: 
-fix_commit: 
+fix_branch: fix/BUG-019-heading-anchor
+fix_commit: 3497934, d19c4ab
 updated: 2026-09-29
 ---
 
@@ -24,10 +24,15 @@ Confirmed in code: `src/tree_builder/section_matcher.py:139` accepts `norm_title
 - 2026-09-28: identified in the agent review drafts of the v2 runs (2002 p21, p22, p28, p54, p61, p68, p88; Philips p283, p294, p295, p303); pending approval by the human reviewer (Oscar Munoz).
 - 2026-09-29: root cause confirmed by reading `_find_heading_anchor`.
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-09-29: fix committed in `3497934` on `fix/BUG-019-heading-anchor`. Tests: `tests/unit/test_section_matcher.py` (6 of 7 fail on the old code).
+- 2026-09-29: attempt 1 (`v2.1`, commit `3497934`) was rejected before review. In 2002, sec_0184 anchored on a figure label and sec_0185 lost its heading.
+- 2026-09-29: attempt 2 in `d19c4ab`: a merged heading like '1. Tilt Steering Column A: TILT MECHANISM' now anchors before a later figure label. Versions `v2.2` created for 2002 and Philips.
 
 ## Fix
 
-Proposed: ignore headings whose normalized text is empty or shorter than 3 characters; prefer an exact match among all `section_header` blocks of the page; accept a partial match only when it covers most of the title (length ratio >= 0.8 or rapidfuzz ratio >= 90). Add unit tests for '!', 'Trends'/'Viewing Trends' and exact-over-partial.
+Done in `3497934` and `d19c4ab`. A section heading must match in this order: 1) exact `section_header`; 2) the first `section_header` in reading order that matches without leading numbers, starts with the title, or covers 80% of it; 3) exact text on any block. Headers shorter than 3 characters (like '!') never match. Blocks before the previous section's heading are skipped.
+
+First proposal: ignore headings whose normalized text is empty or shorter than 3 characters; prefer an exact match among all `section_header` blocks of the page; accept a partial match only when it covers most of the title (length ratio >= 0.8 or rapidfuzz ratio >= 90). Add unit tests for '!', 'Trends'/'Viewing Trends' and exact-over-partial.
 
 ## Verification
 
@@ -37,6 +42,8 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-09-29 | `2002_Service_Manual_TI` | v2.1 | `3497934` fix(section_matcher): require exact or near-full heading match for section anchors (BUG-019) | Exact heading match first; ignore '!' and short contained headers. | not reviewed | — | Rejected before review. Tree check: 5 more sections start at their heading, but sec_0184 anchors on a figure label and sec_0185 loses its heading. Replaced by v2.2. |
+| 2026-09-29 | `Philips-MP20-MP90-Manual` | v2.1 | `3497934` fix(section_matcher): require exact or near-full heading match for section anchors (BUG-019) | Exact heading match first; ignore '!' and short contained headers. | not reviewed | — | Not reviewed. Tree check: 12 more sections start at their heading, none lost. Same commit as the 2002 attempt, so replaced by v2.2. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
