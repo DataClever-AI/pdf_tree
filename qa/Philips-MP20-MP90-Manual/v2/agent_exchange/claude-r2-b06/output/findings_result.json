@@ -1,0 +1,1244 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: the title on p359 is the chapter title under the large chapter number '29'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children (Connecting an External Device, Changing Waves and Numerics Displayed, ...) are its main headings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns the chapter title, introduction, legend a-e and the documentation note on p359, but ends with p360's running header ('29 IntelliBridge EC10 Module', 'Connecting an External Device').",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/IntelliBridge EC10 Module' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p359-362 is followed by the VueLink chapter at p363; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'IntelliBridge EC10 Module' is found at page_start p359, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'IntelliBridge EC10 Module' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p359 carries the printed arabic folio '347' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'IntelliBridge EC10 Module' is rendered on physical p359, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The bordered legend table (a module name, b setup indicator LED, c setup/data viewing key, d connection status LED, e external device cable connector) is extracted as one cell with a stray leading 'a' ('a a module name b setup indicator LED ...') instead of five rows.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "p359 shows the IntelliBridge EC10 module front drawing with callouts a-e. It is drawn with vector paths (no raster image on the page), so it is missing from images_v1.json and the lettered legend refers to a figure that is not in the output.",
+      "notes": "Root cause VEC (known BUG-010 family): the image extractor only captures raster XObjects; figures drawn with PDF vector paths are not extracted. Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is kept from p359, so no decorative element was retained.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p359 is mapped to any section; the missing vector drawing is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: 'VueLink Modules' on p363 is the chapter title under the large chapter number '30'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children (Connecting an External Device, ..., Alarms/INOPs From External Devices) are its main headings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns the chapter title, introduction, both tables and the device-label explanation on p363, but ends with p364's running header ('Connecting an External Device').",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/VueLink Modules' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p363-366 is followed by the next chapter; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'VueLink Modules' is found at page_start p363, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'VueLink Modules' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p363 carries the printed arabic folio '351' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'VueLink Modules' is rendered on physical p363, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "In the module-type table the 'Max Wave' and 'Max numeric' columns are merged into one cell, producing false numbers: 'Auxiliary A | 12' instead of Max Wave 1 and Max numeric 2, and 'Ventilator B | 26' instead of 2 and 6. The legend table a-g is kept as text rows.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "p363 shows the VueLink module front drawing with callouts a-g (150 vector drawing operations). It is drawn with vector paths (no raster image on the page), so it is missing from images_v1.json and the lettered legend refers to a figure that is not in the output.",
+      "notes": "Root cause VEC (known BUG-010 family): the image extractor only captures raster XObjects; figures drawn with PDF vector paths are not extracted. Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is kept from p363, so no decorative element was retained.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p363 is mapped to any section; the missing vector drawing is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: 'Timer Types' on p367 uses the medium heading style under the level-2 'Viewing Timers'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0699 'Viewing Timers' is correct; the next section is the level-2 'Timer Setup Pop-up Keys' (p367).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Owns exactly its heading and two paragraphs (the four timer types and where the type is set) on p367.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Using Timers/Viewing Timers/Timer Types' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "It shares p367 with its parent and siblings without duplicated nodes.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Timer Types' is found at page_start p367, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Timer Types' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p367 carries the printed arabic folio '355' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Timer Types' is rendered on physical p367, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The small icon beside the 'Timer Types' text (about 35x23 pt) is dropped by the 2%-of-page area filter; the timer types are fully described in text.",
+      "notes": "Root cause SMALL (known BUG-017 family): _extract_embedded_images drops raster images covering less than 2% of the page area, which removes small but meaningful key/icon images referenced in the text.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p367 is the technical figure (a small 'E' (Enhanced timer) icon), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p367 is mapped to any section (the only raster was filtered), so nothing was mis-assigned.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'Viewing Loops' on p371 uses the large section heading style below the chapter title.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0711 'Respiratory Loops' is correct; next sibling 'Capturing and Deleting Loops' (p372).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Nodes are owned correctly (p371 heading, loop colours and the permanent-Screen instruction; then the Loops window instructions and window labels at the top of p372 before 'Capturing and Deleting Loops'), but page_end=371 although the section continues onto p372. Deterministic check (verify_claims.py): content continues past page_end: [\"p372 'To open the Loops window, and its associated pop-u'\", \"p372 '♦ select Main Setup -> Loops, or select the Loops '\", \"p372 'In the Loops window, in addition to the stored loo'\"].",
+      "notes": "Root cause PH-A: when the next section starts part-way down a page, this section's page_end is set to the page before, although its content continues onto that shared page. The nodes themselves are assigned correctly; only the page range understates the section (citations would miss the last page). Regraded FAIL Low -> FAIL Medium with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Respiratory Loops/Viewing Loops' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No duplicated nodes with its parent or next sibling.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Viewing Loops' is found at page_start p371, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Viewing Loops' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p371 carries the printed arabic folio '359' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Viewing Loops' is rendered on physical p371, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p371 has no raster image XObjects; its visual elements are only text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p371; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p371 contains no figure (only text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'General Points' on p377 uses the large section heading style below the chapter title.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0722 'Care and Cleaning' is correct; next sibling 'Cleaning the Monitor' (p378).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading and all precautions on p377, but ends with p378's running header ('34 Care and Cleaning', 'Cleaning the Monitor'), because the next section starts at the top of p378.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Care and Cleaning/General Points' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No duplicated nodes with its parent or next sibling.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'General Points' is found at page_start p377, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'General Points' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p377 carries the printed arabic folio '365' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'General Points' is rendered on physical p377, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p377 has no raster image XObjects; its visual elements are only text, bullets and a WARNING, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p377; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p377 contains no figure (only text, bullets and a WARNING), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: 'Using Batteries' on p381 is the chapter title under the large chapter number '35'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children (Battery Power Indicators, Checking Battery Charge, Replacing a Battery, ...) are its main headings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Owns the chapter title, the MP20/MP30 and MP40/MP50 battery text and photo label on p381, and the X2/recharge notes at the top of p382 before 'Battery Power Indicators'. Its margin note 'IntelliVue MP20/MP30/MP40/MP50' went to the previous section.",
+      "notes": "",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Using Batteries' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p381-388 is followed by the next chapter; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Using Batteries' is found at page_start p381, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Using Batteries' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p381 carries the printed arabic folio '369' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Using Batteries' is rendered on physical p381, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p381 has 1 raster figure(s) (the battery compartment photo) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p381 is the technical figure (the battery compartment photo), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The battery compartment photo on p381 is mapped to sec_0731, which owns the text around it.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: the heading on p389 uses the large section heading style below the chapter title.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0748 'Maintenance and Troubleshooting' is correct; next sibling 'Inspecting the Cables and Cords' (p389).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Owns exactly its heading, intro and steps 1-4 on p389; the chapter WARNING above stays with sec_0748 and the next heading starts its own section.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Maintenance and Troubleshooting/Inspecting the Equipment and Accessories' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "It shares p389 with its neighbours without duplicated nodes.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Inspecting the Equipment and Accessories' is found at page_start p389, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Inspecting the Equipment and Accessories' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p389 carries the printed arabic folio '377' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Inspecting the Equipment and Accessories' is rendered on physical p389, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p389 has no raster image XObjects; its visual elements are only text and a WARNING, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p389; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0749",
+      "page_sampled": 389,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p389 contains no figure (only text and a WARNING), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: 'Trunk Cables' uses the small bold style under the level-3 'Recommended Cables'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0757 'Recommended Cables' is correct; next sibling '3-Electrode Cable Sets' (p394).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading and the trunk cable table on p393, but ends with p394's running header ('37 Accessories', 'ECG/Resp Accessories').",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Accessories/ECG/Resp Accessories/Recommended Cables/Trunk Cables' lists the ancestors in order. A title in the path contains '/', so splitting on '/' would create false levels.",
+      "notes": "",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No duplicated nodes with its parent or next sibling.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Trunk Cables' is found at page_start p393, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Trunk Cables' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p393 carries the printed arabic folio '381' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Trunk Cables' is rendered on physical p393, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "The trunk cable table's header lists five cable sets, but the Part No. and Length rows are packed into mismatched cells ('Part No. M1669A | | M1668A M1667A | | M1663A M1665A'), so part numbers can no longer be matched to their cable set by column.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p393 has no raster image XObjects; its visual elements are a small defibrillator-proof symbol and a bordered table, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p393; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": 393,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p393 contains no figure (a small defibrillator-proof symbol and a bordered table), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'SpO2 Accessories' (p399) uses the large section heading style of the Accessories chapter.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0755 'Accessories' is correct; siblings 'Invasive Pressure Accessories' (p398) and 'Temperature Accessories' (p405).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Besides its own content, the section's first table node is the 'Transducer, accessories, sensor kits' table (M1634A, PiCCO kits, PMK 206) printed at the top of p399 above the 'SpO2 Accessories' heading, which belongs to the previous section 'Invasive Pressure Accessories'. The section also ends with p405's running header.",
+      "notes": "Root cause TBLMAP (hypothesis): table nodes on a page shared by several sections are not placed by their position relative to the headings, so a table printed under one heading can be assigned to a neighbouring section (same family as the known sibling image/table mismapping, BUG-003). Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Accessories/SpO2 Accessories' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Page ranges do not overlap; the table ownership error is reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'SpO2 Accessories' is found at page_start p399, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'SpO2 Accessories' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p402 carries the printed arabic folio '390' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'SpO2 Accessories' is rendered on physical p399, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "In the p402 sensor table, the Opt. A01/Opt. A02 compatibility values are merged into the description ('Forehead sensor no yes'), the product number 'MAX-FAST' moves into the Description column, and the shared comment 'Must use M1943NL adapter cable' is split across cells. For a clinical accessory list, which option each sensor works with can no longer be read reliably by column.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p402 has no raster image XObjects; its visual elements are a large bordered sensor table, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p402; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0781",
+      "page_sampled": 402,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p402 contains no figure (a large bordered sensor table), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'Battery Accessories' on p411 uses the large section heading style, like 'Recorder Accessories' above it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0755 'Accessories' is correct; it is the chapter's last section (next is the level-1 'Installation and Specifications' at p413).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The section holds only its heading, folios and running headers. Its only content, the table under its heading on p411 (Battery Charger and Conditioner M8043A; Size adapter 4512 610 17451), is assigned to the previous section sec_0797 'Recorder Accessories', together with the SO2 table from the section before. The section also ends with the chapter number '38' from p413. Deterministic check (verify_claims.py): section has no body of its own.",
+      "notes": "Root cause TBLMAP (hypothesis): table nodes on a page shared by several sections are not placed by their position relative to the headings, so a table printed under one heading can be assigned to a neighbouring section (same family as the known sibling image/table mismapping, BUG-003). Root cause PH-C: the large chapter number printed at the top of the next chapter's first page (e.g. '2', '3') is extracted as a paragraph and appended to the last section of the previous chapter. Regraded FAIL High -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Accessories/Battery Accessories' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "No page overlap, but the section is empty of content (reported under page_start_end). Deterministic check (verify_claims.py): section has no body of its own.",
+      "notes": "Regraded PASS -> FAIL Critical with the Sprint severity scale (verification-contract.md). New defect from deterministic signals; not re-checked visually.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Battery Accessories' is found at page_start p411, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Battery Accessories' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p412 carries the printed arabic folio '400' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Battery Accessories' is rendered on physical p411, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p412 has no raster image XObjects; its visual elements are nothing but the running header and folio (blank page), which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p412; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0798",
+      "page_sampled": 412,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p412 contains no figure (nothing but the running header and folio (blank page)), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    }
+  ]
+}
