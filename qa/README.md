@@ -75,33 +75,26 @@ Source PDFs live in `../../Manuales técnicos TEST/` (outside the repo, not comm
 | `LOGIQ_e_R9_General_Service_Manual` | `LOGIQ e R9 General Service Manual_SM_5937432-1EN_5.pdf` | 567 | 86 (+2 mandatory) | Story 2 — Task 1.6 complete |
 | `LOGIQ_S8` | `LOGIQ_S8.pdf` | 916 | 138 (+2 mandatory) | Story 2 — Task 1.6 complete |
 | `SOMATOM_Force_IFU_VB30` | `SOMATOM_Force_IFU_VB30_SAPEDM_C2-058-C.621.01.01.02_Online.pdf` | 467 | 71 (+3 mandatory) | Story 2 — Task 1.6 complete |
-| `Philips-MP20-MP90-Manual` | `Philips-MP20-MP90-Manual.pdf` | 496 | 75 | Story 2 — **pipeline run blocked**: `bookmark_sanity: 2 hard failures — aborting` (fitz stage, before Docling ever runs — see `logs/run.log`). Needs a pipeline fix, not just a re-run, before sampling/findings/summary can happen |
-| `2002_Service_Manual_TI` | `2002 Service Manual - TI.pdf` | 642 | 97 | Story 2 — **pipeline run blocked**: `bookmark_sanity: 1 hard failure — aborting` (fitz stage, before Docling — see `logs/run.log`). Different root cause than Philips (see below), same hard-fail gate. Needs a pipeline decision, not just a re-run |
+| `Philips-MP20-MP90-Manual` | `Philips-MP20-MP90-Manual.pdf` | 496 | 75 | Story 2 — **unblocked in `v2`** (`fix/bookmark-sanity-recovery`): pipeline completes, 865 sections, automated verdict FAIL (Coverage: 2 orphaned blocks). `v1` kept as the record of the aborted run. Sampling + findings template ready; manual review pending |
+| `2002_Service_Manual_TI` | `2002 Service Manual - TI.pdf` | 642 | 97 | Story 2 — **unblocked in `v2`** (`fix/bookmark-sanity-recovery`): pipeline completes, 251 sections, automated verdict FAIL (Precision: 1 misplaced block, p442). `v1` kept as the record of the aborted run. Sampling + findings template ready; manual review pending |
 
-**Two of the six Story 2 manuals are now blocked by the same `bookmark_sanity`
-hard-fail gate, but for two different underlying causes** — a single
-document-specific patch won't unblock both:
-- `Philips-MP20-MP90-Manual`: 2 `out_of_order` issues around bookmark index
-  866/867 — the PDF appears to be two merged documents (a cover-file bookmark
-  `page_no=-1`, i.e. an unresolvable link target, immediately followed by a
-  page-number reset to 1 for what looks like an appended second manual,
-  "IntelliVue Patient Monitor"). Root cause: malformed/merged source PDF.
-- `2002_Service_Manual_TI`: 1 `out_of_order` issue — bookmark `'1. General'`
-  (level 4) has `page_no=3`, nested under `'FUEL INJECTION (FUEL SYSTEM)'`
-  which itself starts at `page_no=21` — i.e. the child's page precedes its
-  own parent's page. Looks like a single mistyped/corrupted page target in
-  the source PDF's embedded TOC (its sibling `'2. Air Line'` is page 23, so
-  `3` was very likely meant to be `~22`). Root cause: bad single TOC entry,
-  not a structural merge like Philips.
+**Both `bookmark_sanity` blockers are localized PDF defects, now repaired
+deterministically** by `repair_bookmarks()` in
+`src/tree_builder/bookmark_sanity.py` (runs only on hard failures; every change
+is logged and recorded in the sanity report):
+- `Philips-MP20-MP90-Manual`: **not** two merged documents (earlier diagnosis
+  was wrong). Pages 1–2 are the cover of the same manual, inserted after the
+  outline was built: the editor appended a destination-less bookmark
+  `'M8000-9001K_cover_22sep08.pdf'` (`page_no=-1`) at the end of the outline,
+  with a child pointing at page 1. Repair: the orphan front-matter subtree is
+  dropped. Note: `v1/logs/run.log` also contains a later `LOGIQ_S8` run from
+  the same Streamlit session (lines 15+) — use `v2/logs/run.log`.
+- `2002_Service_Manual_TI`: bookmark `'1. General'` uses the named destination
+  `G436071`, which resolves to page 3 (Quick Reference Index); the heading is
+  on page 22. Repair: relocated to the page in its parent's range where the
+  title appears as a text line; the resulting section is `flagged_for_review`.
 
-Both hit `_HARD_FAILURE_KINDS = {"out_of_order"}` in
-`src/tree_builder/bookmark_sanity.py`, which aborts the *entire* pipeline
-run rather than excluding/flagging just the offending bookmark(s) — worth a
-product decision: keep the hard-abort (safe but blocks 2/6 manuals outright)
-vs. degrade gracefully (drop/flag only the bad bookmark(s) and continue with
-the rest of the TOC, at the cost of the safety guarantee the comment in that
-file documents). See `docs/SPRINT_TASKS_QA.md` — this is now a pattern
-across 2 of 6 reference manuals, not a one-off.
+Structured write-up: `../doc/HALLAZGOS_ESTRUCTURADOS_pdf_tree.md` (H-01..H-03).
 
 Per Task 2.1, Story 2 execution work is happening in parallel across manuals,
 but **Historia 2 cannot be marked done** until Story 1 (`DOC-0136477A`) has
@@ -122,8 +115,8 @@ Critical=8, High=4, Medium=2, Low=1.
 | `LOGIQ_e_R9_General_Service_Manual` | 567 | 539 | PASS | **85** | 6 | 4 | 8 | 1 |
 | `LOGIQ_S8` | 916 | 955 | **FAIL** (Coverage) | **60** (capped — raw 88) | 10 | 1 | 7 | 13 |
 | `SOMATOM_Force_IFU_VB30` | 467 | 757 | **FAIL** (Coverage + Precision) | **0** (floor — raw weighted fails exceed items evaluated) | 118 | 5 | 18 | 1 |
-| `Philips-MP20-MP90-Manual` | TBD | — | — | pending | — | — | — | — |
-| `2002_Service_Manual_TI` | TBD | — | — | pending | — | — | — | — |
+| `Philips-MP20-MP90-Manual` | 496 | — | FAIL (Coverage) | pending review (`v2`) | — | — | — | — |
+| `2002_Service_Manual_TI` | 642 | — | FAIL (Precision) | pending review (`v2`) | — | — | — | — |
 
 These 5 numbers are the per-manual inputs to Task 2.2 — `confidence_index/confidence_index_report.md`
 (Task 2.4) still needs to be written once all 6 manuals are done, with the
@@ -150,8 +143,8 @@ normalizes both to the sprint's English scale before counting. Notable:
 `SOMATOM_Force_IFU_VB30`**, and `BUG-004` (footer-divider filter miss)
 covers **34 of `DOC-0136477A`'s 34 Low findings** — almost all of two
 manuals' raw FAIL counts trace to just those 2 bugs. Excludes
-`Philips-MP20-MP90-Manual` and `2002_Service_Manual_TI` (no findings yet,
-pipeline blocked — see above) — re-run the script once those land.
+`Philips-MP20-MP90-Manual` and `2002_Service_Manual_TI` (no reviewed findings yet;
+`v2` awaiting manual review — see above) — re-run the script once those land.
 
 ## Naming convention
 
