@@ -18,7 +18,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.qa_workflow.findings import generate_findings_template  # noqa: E402
+from src.qa_workflow.findings import (  # noqa: E402
+    generate_findings_template,
+    section_checklist_rows,
+)
+from src.qa_workflow.mitigation import MITIGATION_REASONS  # noqa: E402
 from src.qa_workflow.models import QA_COLUMNS  # noqa: E402
 from src.qa_workflow.sampling import generate_sample  # noqa: E402
 
@@ -225,24 +229,28 @@ def check_sample(
     tree: Any,
     validation: Any,
     audit: Audit,
-) -> Any | None:
+    *,
+    mitigation: bool = False,
+) -> tuple[Any | None, set[tuple[int, str]]]:
+    """Check the deterministic sample; mitigation versions may add declared check rows."""
+    check_rows: set[tuple[int, str]] = set()
     if not isinstance(tree, list) or not isinstance(validation, dict):
-        return None
+        return None, check_rows
     total_pages = validation.get("summary", {}).get("total_pages")
     if not isinstance(total_pages, int) or total_pages <= 0:
         audit.error("sample-pages", "validation report lacks a positive summary.total_pages")
-        return None
+        return None, check_rows
     try:
         expected = generate_sample(tree, total_pages)
     except ValueError as exc:
         audit.error("sample-generation", str(exc))
-        return None
+        return None, check_rows
     sample_path = version_root / "sampling" / "sample_selection.md"
     try:
         actual_rows = parse_sample_rows(sample_path.read_text(encoding="utf-8"))
     except OSError as exc:
         audit.error("sample-file", str(exc))
-        return expected
+        return expected, check_rows
 
     expected_rows = {(row.page, row.section_id): set(row.reasons) for row in expected.rows}
     for row_key in sorted(expected_rows.keys() - actual_rows.keys()):
@@ -250,7 +258,12 @@ def check_sample(
             "sample-missing",
             f"deterministic sample row is missing: page {row_key[0]}, {row_key[1]}",
         )
+    section_ids = {section.get("section_id") for section in tree if isinstance(section, dict)}
     for row_key in sorted(actual_rows.keys() - expected_rows.keys()):
+        reasons = actual_rows[row_key]
+        if mitigation and reasons and reasons <= MITIGATION_REASONS and row_key[1] in section_ids:
+            check_rows.add(row_key)
+            continue
         audit.error(
             "sample-extra",
             f"sample has non-deterministic row: page {row_key[0]}, {row_key[1]}",
@@ -270,7 +283,7 @@ def check_sample(
         audit.error("sample-pages", "sample total_pages does not match validation report")
     if expected.quota != min(total_pages, math.ceil(total_pages * 0.15)):
         audit.error("sample-quota", "generated sample does not use the required 15% quota")
-    return expected
+    return expected, check_rows
 
 
 def check_exports(tree: Any, images: Any, bookmarks: Any, validation: Any, audit: Audit) -> None:
@@ -297,6 +310,7 @@ def check_findings(
     sample: Any,
     version_manifest: Any,
     audit: Audit,
+    check_rows: set[tuple[int, str]] | None = None,
 ) -> None:
     try:
         with path.open(newline="", encoding="utf-8-sig") as handle:
@@ -341,6 +355,9 @@ def check_findings(
 
     if isinstance(tree, list) and sample is not None:
         expected_rows = generate_findings_template(manual_id, tree, sample)
+        by_id = {section.get("section_id"): section for section in tree}
+        for page, section_id in sorted(check_rows or set()):
+            expected_rows.extend(section_checklist_rows(manual_id, by_id[section_id], page))
         expected = {row.stable_key for row in expected_rows}
         actual = {finding_key(row) for row in rows}
         for missing in sorted(expected - actual):
@@ -379,7 +396,10 @@ def run_audit(qa_root: Path, manual_id: str, version: str) -> tuple[Audit, Path]
     check_artifacts(version_root, artifact_manifest, audit)
     check_tree(tree, audit)
     check_exports(tree, images, bookmarks, validation, audit)
-    sample = check_sample(version_root, manual_id, tree, validation, audit)
+    mitigation = isinstance(version_manifest, dict) and "mitigation" in version_manifest
+    sample, check_rows = check_sample(
+        version_root, manual_id, tree, validation, audit, mitigation=mitigation
+    )
     check_findings(
         version_root / "findings" / "findings_log.csv",
         manual_id,
@@ -387,6 +407,7 @@ def run_audit(qa_root: Path, manual_id: str, version: str) -> tuple[Audit, Path]
         sample,
         version_manifest,
         audit,
+        check_rows,
     )
     return audit, version_root
 

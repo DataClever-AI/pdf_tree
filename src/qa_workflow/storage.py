@@ -27,7 +27,7 @@ from .models import (
 )
 
 _SAFE_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
-_VERSION = re.compile(r"^v[1-9][0-9]*$")
+_VERSION = re.compile(r"^v[1-9][0-9]*(?:\.[1-9][0-9]*)?$")
 _VERSION_DIRS = ("exports", "sampling", "findings", "logs", "agent_exchange")
 _RESERVED_QA_DIRS = {"_scripts", "bugs", "confidence_index", "__pycache__"}
 
@@ -39,9 +39,25 @@ def utc_now() -> str:
 def _validate_segment(value: str, *, version: bool = False) -> str:
     pattern = _VERSION if version else _SAFE_ID
     if not pattern.fullmatch(value):
-        kind = "version (expected v1, v2, ...)" if version else "manual_id"
+        kind = "version (expected v1, v2, v2.1, ...)" if version else "manual_id"
         raise ValueError(f"Invalid {kind}: {value!r}")
     return value
+
+
+def is_version_name(value: str) -> bool:
+    return bool(_VERSION.fullmatch(value))
+
+
+def version_sort_key(version: str) -> tuple[int, int]:
+    """``v2`` -> (2, 0), ``v2.1`` -> (2, 1); mitigation versions sort after their base."""
+    major, _, minor = version[1:].partition(".")
+    return int(major), int(minor or 0)
+
+
+def version_label(version: str, manifest: dict[str, Any] | None) -> str:
+    """Display name for a version, e.g. ``v2.1 · BUG-019`` for a mitigation version."""
+    targets = (manifest or {}).get("mitigation", {}).get("targets") or []
+    return f"{version} · {', '.join(targets)}" if targets else version
 
 
 def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
@@ -98,8 +114,14 @@ def create_qa_version(
     version: str,
     source_pdf: Path,
     reviewer: str,
+    *,
+    mitigation: dict[str, Any] | None = None,
 ) -> QAVersion:
-    """Create a new version exclusively; an existing directory is an error."""
+    """Create a new version exclusively; an existing directory is an error.
+
+    ``mitigation`` (base version, target bug ids, pipeline commit) is stored in the version
+    manifest of a mitigation version such as ``v2.1``.
+    """
     manual_root, root = _version_paths(qa_root, manual_id, version)
     source_pdf = source_pdf.expanduser().resolve()
     if not source_pdf.is_file():
@@ -147,6 +169,8 @@ def create_qa_version(
         "updated_at": now,
         "finalized_at": None,
     }
+    if mitigation is not None:
+        version_manifest["mitigation"] = mitigation
     atomic_write_json(root / "version_manifest.json", version_manifest)
     return QAVersion(qa_root.resolve(), manual_id, version, root, source_manifest, version_manifest)
 

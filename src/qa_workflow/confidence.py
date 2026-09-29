@@ -5,7 +5,6 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
-import re
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
@@ -19,7 +18,16 @@ from .root_causes import (
     consolidate,
     load_catalogue,
 )
-from .storage import atomic_write_json, atomic_write_text, open_qa_version, sha256_file, utc_now
+from .storage import (
+    atomic_write_json,
+    atomic_write_text,
+    is_version_name,
+    open_qa_version,
+    sha256_file,
+    utc_now,
+    version_label,
+    version_sort_key,
+)
 
 SEVERITY_WEIGHTS = {"Critical": 8, "High": 4, "Medium": 2, "Low": 1}
 BUG_COLUMNS = (
@@ -138,7 +146,7 @@ def calculate_confidence(
 
 
 def list_manual_versions(qa_root: Path) -> dict[str, list[str]]:
-    result = {}
+    result: dict[str, list[str]] = {}
     if not qa_root.is_dir():
         return result
     for manual_root in sorted(qa_root.iterdir()):
@@ -151,15 +159,43 @@ def list_manual_versions(qa_root: Path) -> dict[str, list[str]]:
         versions = [
             path.name
             for path in manual_root.iterdir()
-            if path.is_dir() and re.fullmatch(r"v[1-9][0-9]*", path.name)
+            if path.is_dir() and is_version_name(path.name)
         ]
         if versions:
-            result[manual_root.name] = sorted(versions, key=lambda value: int(value[1:]))
+            result[manual_root.name] = sorted(versions, key=version_sort_key)
     return result
 
 
+def read_version_manifest(qa_root: Path, manual_id: str, version: str) -> dict[str, Any]:
+    path = qa_root / manual_id / version / "version_manifest.json"
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def version_display_name(qa_root: Path, manual_id: str, version: str) -> str:
+    """Selector label, e.g. ``v2.1 · BUG-019`` for a mitigation version."""
+    return version_label(version, read_version_manifest(qa_root, manual_id, version))
+
+
 def latest_versions(qa_root: Path) -> dict[str, str]:
-    return {manual: versions[-1] for manual, versions in list_manual_versions(qa_root).items()}
+    """Latest reference version per manual.
+
+    A mitigation version (e.g. ``v2.1``) becomes the reference only once it is finalized;
+    before that it is compared against its base on the Version Compare page.
+    """
+    latest = {}
+    for manual, versions in list_manual_versions(qa_root).items():
+        eligible = [
+            version
+            for version in versions
+            if "mitigation" not in (manifest := read_version_manifest(qa_root, manual, version))
+            or manifest.get("status") == "finalized"
+        ]
+        latest[manual] = (eligible or versions)[-1]
+    return latest
 
 
 def consolidate_failures(
