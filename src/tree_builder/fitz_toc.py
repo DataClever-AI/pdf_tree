@@ -5,6 +5,7 @@ Thin wrapper — no business rules.
 """
 from __future__ import annotations
 
+from collections.abc import Callable
 from pathlib import Path
 
 import pymupdf as fitz
@@ -79,3 +80,24 @@ def render_pages(
 
     doc.close()
     return result
+
+
+def page_text_reader(pdf_path: Path) -> Callable[[int], str]:
+    """
+    Return a cached `page_no -> text` reader (1-indexed) over the PDF's text
+    layer. Opens the PDF on each call so no file handle outlives the reader;
+    intended for the handful of lookups bookmark repair needs.
+    """
+    cache: dict[int, str] = {}
+
+    def read(page_no: int) -> str:
+        if page_no not in cache:
+            doc = _open_pdf(pdf_path)
+            try:
+                in_range = 1 <= page_no <= doc.page_count
+                cache[page_no] = doc[page_no - 1].get_text() if in_range else ""
+            finally:
+                doc.close()
+        return cache[page_no]
+
+    return read
