@@ -49,6 +49,15 @@ def test_classify_prefers_override_then_rule_order():
     assert classify(catalogue, "m1", _fail("sec_0001", notes="something new")) is None
 
 
+def test_classify_uses_bug_id_cited_in_notes():
+    catalogue = parse_catalogue(CATALOGUE)
+    row = _fail("sec_0010", notes="The heading is in sec_0008. Cause: BUG-002.")
+    assert classify(catalogue, "m1", row) == "BUG-002"
+    ruled = _fail("sec_0010", notes="Cause: BUG-002. Running header bleed.")
+    assert classify(catalogue, "m1", ruled) == "BUG-001"  # curated rules win
+    assert classify(catalogue, "m1", _fail("sec_0010", notes="Cause: BUG-999.")) is None
+
+
 def test_consolidate_groups_by_root_cause_and_traces_every_row():
     catalogue = parse_catalogue(CATALOGUE)
     rows = {
