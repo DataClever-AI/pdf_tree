@@ -1,0 +1,1204 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: the heading (p224) uses the large section heading style of chapter 13.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0367 'Monitoring Cardiac Output' is correct; it is the chapter's last section (next is the level-1 'Monitoring Carbon Dioxide' at p227).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its WARNING list on p224-225 and the blank p226 (header and folio 214), but its last two nodes are the chapter number '14' printed at the top of p227.",
+      "notes": "Root cause PH-C: the large chapter number printed at the top of the next chapter's first page (e.g. '2', '3') is extracted as a paragraph and appended to the last section of the previous chapter.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Monitoring Cardiac Output/C.O./CCO Safety Information' lists the ancestors in order, but the title itself contains '/', so splitting the path on '/' would create false levels.",
+      "notes": "Path separator collides with a title that contains '/'.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0394 or chapter 14.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'C.O./CCO Safety Information' is found at page_start p224, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'C.O./CCO Safety Information' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p226 carries the printed arabic folio '214' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'C.O./CCO Safety Information' is rendered on physical p224, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p226 has no raster image XObjects; its visual elements are nothing but the running header and folio (blank page), which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p226; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 226,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p226 contains no figure (nothing but the running header and folio (blank page)), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: 'Monitoring Carbon Dioxide' on p227 is the chapter title under the large chapter number '14'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children are the four CO2 measurement sections (M3014A/X2, M3016A, M3015A, all CO2 measurements).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Owns the chapter title and the WARNING list on p227 and its continuation at the top of p228 before the first child heading; nothing from the previous chapter is included (its chapter number '14' was assigned to the previous section).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Monitoring Carbon Dioxide' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p227-236 is followed by the next chapter; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Monitoring Carbon Dioxide' is found at page_start p227, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Monitoring Carbon Dioxide' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p227 carries the printed arabic folio '215' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Monitoring Carbon Dioxide' is rendered on physical p227, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p227 has no raster image XObjects; its visual elements are only the chapter number, title rule and text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p227; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 227,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p227 contains no figure (only the chapter number, title rule and text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: 'Monitoring Airway Flow, Volume and Pressure' on p237 is the chapter title under the large chapter number '15'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children (Attaching the Flow Sensor, Zero Calibration, Automatic/Manual Purging, Gas Compensation, Setting up Spirometry) are the chapter's main headings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns the chapter title and introduction on p237, but ends with p238's running header ('15 Monitoring Airway Flow, Volume and Pressure', 'Attaching the Flow Sensor'), because the first child starts at the top of p238.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Monitoring Airway Flow, Volume and Pressure' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p237-244 is followed by the next chapter; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Monitoring Airway Flow, Volume and Pressure' is found at page_start p237, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Monitoring Airway Flow, Volume and Pressure' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p237 carries the printed arabic folio '225' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Monitoring Airway Flow, Volume and Pressure' is rendered on physical p237, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p237 has no raster image XObjects; its visual elements are only the chapter number, title rule and text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p237; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0421",
+      "page_sampled": 237,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p237 contains no figure (only the chapter number, title rule and text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: the heading on p245 uses the large section heading style below the chapter title.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0440 'Monitoring tcGas' is correct; next sibling 'Setting the tcGas Sensor Temperature' (p246).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading and the component legend 1-4 on p245 (the chapter introduction above stays with sec_0440), but ends with p246's running header ('16 Monitoring tcGas', 'Setting the tcGas Sensor Temperature').",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Monitoring tcGas/Identifying tcGas Module Components' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No duplicated nodes with its parent or next sibling.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Identifying tcGas Module Components' is found at page_start p245, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Identifying tcGas Module Components' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p245 carries the printed arabic folio '233' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Identifying tcGas Module Components' is rendered on physical p245, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "The section's key visual, the tcGas module (M1018A) front drawing that the legend '1 press to enter Setup tcGas menu ... 4 transducer connector' refers to, is drawn with vector paths (55 drawing operations, no raster image) and is missing from images_v1.json.",
+      "notes": "Root cause VEC (known BUG-010 family): the image extractor only captures raster XObjects; figures drawn with PDF vector paths are not extracted.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is kept from p245, so no decorative element was retained.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0441",
+      "page_sampled": 245,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p245 is mapped to any section; the missing vector drawing is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: the title on p253 is the chapter title under the large chapter number '17'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children (Selecting a Measurement Label, the two module preparation sections, Further Information for Both Modules) are its main headings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Owns the chapter title, the 'MP60/70/80/90 monitors only' note, the module description and the WARNING list on p253 and its continuation on p254 before the first child heading. The chapter number '17' went to the previous section (reported there).",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Monitoring Intravascular Oxygen Saturation' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p253-260 is followed by the EEG chapter at p261; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Monitoring Intravascular Oxygen Saturation' is found at page_start p253, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Monitoring Intravascular Oxygen Saturation' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p253 carries the printed arabic folio '241' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Monitoring Intravascular Oxygen Saturation' is rendered on physical p253, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "p253 shows two module photos used to tell the modules apart: M1011A (narrow, about 56x119 pt) and M1021A (wide). Only the M1021A photo is kept; the M1011A photo is dropped by the 2%-of-page area filter, so the comparison the text describes ('The two modules can be differentiated by their size...') loses one of its two images.",
+      "notes": "Root cause SMALL (known BUG-017 family): _extract_embedded_images drops raster images covering less than 2% of the page area, which removes small but meaningful key/icon images referenced in the text.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p253 is the technical figure (two module photos labelled M1011A and M1021A), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0461",
+      "page_sampled": 253,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The kept M1021A photo on p253 is mapped to sec_0461, which owns the chapter introduction around it.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: 'Monitoring EEG' on p261 is the chapter title under the large chapter number '18'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children (EEG Monitoring Setup, Using the EEG Impedance/Montage Window, CSA, Changing EEG Settings, ...) are the chapter's main headings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns the chapter title and the numeric definitions on p261, but ends with p262's running header ('18 Monitoring EEG', 'EEG Monitoring Setup'), because the first child starts at the top of p262.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Monitoring EEG' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p261-268 is followed by the next chapter; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Monitoring EEG' is found at page_start p261, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Monitoring EEG' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p261 carries the printed arabic folio '249' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Monitoring EEG' is rendered on physical p261, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p261 has no raster image XObjects; its visual elements are only the chapter number, title rule and text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p261; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0480",
+      "page_sampled": 261,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p261 contains no figure (only the chapter number, title rule and text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: 'Monitoring BIS' on p269 is the chapter title under the large chapter number '19'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root chapter; its children (BIS Monitoring Setup, impedance checks, BIS Window, ...) are the chapter's main headings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns the chapter title and the BIS numeric definitions on p269, but ends with p270's running header ('19 Monitoring BIS', 'BIS Monitoring Setup'), because the first child starts at the top of p270.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Monitoring BIS' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p269-276 is followed by the next chapter; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Monitoring BIS' is found at page_start p269, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Monitoring BIS' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p269 carries the printed arabic folio '257' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Monitoring BIS' is rendered on physical p269, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p269 has no raster image XObjects; its visual elements are only the chapter number, title rule and text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p269; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p269 contains no figure (only the chapter number, title rule and text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: the heading on p277 uses the medium heading style under the level-2 'How Can You Combine Devices?'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0514 is correct; its child 'Telemetry Data Window' (p278) is a small bold sub-heading.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Nodes are owned correctly (p277 text and steps 1-3, then the WARNING at the top of p278 before 'Telemetry Data Window'), but page_end=277 although the section continues onto p278.",
+      "notes": "Root cause PH-A: when the next section starts part-way down a page, this section's page_end is set to the page before, although its content continues onto that shared page. The nodes themselves are assigned correctly; only the page range understates the section (citations would miss the last page).",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Assigning Two Devices to One Patient/How Can You Combine Devices?/Indirect Connection - Manual Pairing' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No duplicated nodes with its parent or child.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Indirect Connection - Manual Pairing' is found at page_start p277, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Indirect Connection - Manual Pairing' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p277 carries the printed arabic folio '265' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Indirect Connection - Manual Pairing' is rendered on physical p277, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p277 has no raster image XObjects; its visual elements are only text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p277; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p277 contains no figure (only text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: 'Trends Pop-Up Keys' at the bottom of p283 uses the medium heading style under the level-2 'Viewing Trends'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0530 'Viewing Trends' and grandparent 'Trends' are correct as structure; the node ownership problem is reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "High",
+      "evidence": "This section's nodes start with the heading 'Viewing Trends' and contain that section's whole body (embedded trends, the Vitals/Graph/Histogram SmartKey instructions, the timescale and question-mark notes). Its own heading 'Trends Pop-Up Keys' and its sentence about the pop-up keys, printed at the bottom of p283, are not its first nodes. The parent 'Viewing Trends' is left with only the chapter introduction. It also ends with p284's running header.",
+      "notes": "Root cause PH-E (hypothesis, needs code confirmation in section_matcher): when one section title is contained in a neighbouring title on the same page ('Trends' / 'Viewing Trends'; 'Setting the Horizon' / 'Setting the Horizon Trend Scale'), the fuzzy heading anchor of one section lands on the other section's heading, so the content is shifted by one section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Trends/Viewing Trends/Trends Pop-Up Keys' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Node ownership is shifted by one section on p283: sec_0529 'Trends' holds only its heading, sec_0530 'Viewing Trends' holds the chapter introduction ('Trends are patient data collected over time...'), and this section holds the 'Viewing Trends' heading and body. The structure has no page gaps, but the chapter intro and 'Viewing Trends' body are each attached to the wrong section.",
+      "notes": "Root cause PH-E (hypothesis, needs code confirmation in section_matcher): when one section title is contained in a neighbouring title on the same page ('Trends' / 'Viewing Trends'; 'Setting the Horizon' / 'Setting the Horizon Trend Scale'), the fuzzy heading anchor of one section lands on the other section's heading, so the content is shifted by one section.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Trends Pop-Up Keys' is found at page_start p283, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Trends Pop-Up Keys' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p283 carries the printed arabic folio '271' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Trends Pop-Up Keys' is rendered on physical p283, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The three SmartKey images on p283 (Vitals Trend, Graph Trend, Histogram; about 65x46 pt each) are dropped by the 2%-of-page area filter. The key names are also given in the text.",
+      "notes": "Root cause SMALL (known BUG-017 family): _extract_embedded_images drops raster images covering less than 2% of the page area, which removes small but meaningful key/icon images referenced in the text.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p283 is the technical figure (three SmartKey images (Vitals Trend, Graph Trend, Histogram)), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p283 is mapped to any section (all three key images were filtered), so nothing was mis-assigned; the filtering is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: 'Setting the Horizon' on p294 uses the small bold style, like its siblings 'Setting the Horizon Trend Scale' and 'Setting the Time Period for the Trend Indicator Arrow'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0556 'Changing the Screen Trend View' is correct; siblings 'Horizon View' (p293) and 'Setting the Horizon Trend Scale' (p294).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "High",
+      "evidence": "The section contains only its heading. Its entire body on p294 (the horizon definition, step 1, step 2 and the five options Set High Horizon / Set Low Horizon / Auto Horizon / Auto All / Set Horizon) is assigned to the next sibling sec_0561 'Setting the Horizon Trend Scale', which lists these nodes before its own heading.",
+      "notes": "Root cause PH-E (hypothesis, needs code confirmation in section_matcher): when one section title is contained in a neighbouring title on the same page ('Trends' / 'Viewing Trends'; 'Setting the Horizon' / 'Setting the Horizon Trend Scale'), the fuzzy heading anchor of one section lands on the other section's heading, so the content is shifted by one section.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Trends/Screen Trends/Changing the Screen Trend View/Setting the Horizon' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "The section has only 1 node (its heading); its body appears in the next sibling sec_0561. The page ranges do not overlap, but the section is empty in the tree.",
+      "notes": "Root cause PH-E (hypothesis, needs code confirmation in section_matcher): when one section title is contained in a neighbouring title on the same page ('Trends' / 'Viewing Trends'; 'Setting the Horizon' / 'Setting the Horizon Trend Scale'), the fuzzy heading anchor of one section lands on the other section's heading, so the content is shifted by one section.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Setting the Horizon' is found at page_start p294, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Setting the Horizon' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p294 carries the printed arabic folio '282' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Setting the Horizon' is rendered on physical p294, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p294 has no raster image XObjects; its visual elements are only text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p294; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p294 contains no figure (only text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    }
+  ]
+}
