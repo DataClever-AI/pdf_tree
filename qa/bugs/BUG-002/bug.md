@@ -33,6 +33,11 @@ Proposed: detect un-bookmarked back matter (numbering-scheme change, index layou
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

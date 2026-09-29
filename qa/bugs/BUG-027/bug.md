@@ -33,6 +33,11 @@ The curated catalogue `qa/confidence_index/root_causes.json` (edited by the revi
 
 `tests/qa_workflow/test_root_causes.py`; the 254 official v1 FAIL rows are classified exactly as by the curated 2026-09-04 script.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

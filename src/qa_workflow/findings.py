@@ -75,6 +75,17 @@ def _has_table(section: dict[str, Any]) -> bool:
     return any(node.get("node_type") == "table" for node in section.get("semantic_nodes", []))
 
 
+def section_checklist_rows(
+    manual_id: str, section: dict[str, Any], page: int
+) -> list[FindingRow]:
+    """Checklist rows for one sampled (section, page) pair."""
+    refs = list(SECTION_ALWAYS)
+    if _has_table(section):
+        refs.append("5.6-table_content")
+    refs.extend(VISUAL_ALWAYS)
+    return [FindingRow(manual_id, section["section_id"], str(page), ref) for ref in refs]
+
+
 def generate_findings_template(
     manual_id: str,
     sections: list[dict[str, Any]],
@@ -83,13 +94,9 @@ def generate_findings_template(
     by_id = {section["section_id"]: section for section in sections}
     rows = []
     for section_id in sample.distinct_sections:
-        section = by_id[section_id]
-        refs = list(SECTION_ALWAYS)
-        if _has_table(section):
-            refs.append("5.6-table_content")
-        refs.extend(VISUAL_ALWAYS)
-        page = str(sample.section_pages[section_id])
-        rows.extend(FindingRow(manual_id, section_id, page, ref) for ref in refs)
+        rows.extend(
+            section_checklist_rows(manual_id, by_id[section_id], sample.section_pages[section_id])
+        )
     rows.append(FindingRow(manual_id, "DOCUMENT-LEVEL", "", "5.6-sanity_report"))
     return rows
 

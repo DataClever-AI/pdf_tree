@@ -32,6 +32,11 @@ Proposed: same position-based assignment as BUG-001/BUG-003.
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

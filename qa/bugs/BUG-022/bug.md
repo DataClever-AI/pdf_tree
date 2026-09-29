@@ -32,6 +32,11 @@ Proposed: mark as furniture (not deleted) the text in top/bottom bands repeated 
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

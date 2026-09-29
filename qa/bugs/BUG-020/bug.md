@@ -32,6 +32,11 @@ Proposed: lower the threshold to about 0.3% and rely on the pixel-size, aspect-r
 
 Pending.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 

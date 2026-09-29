@@ -33,6 +33,11 @@ Same `repair_bookmarks()`: a destination-less bookmark whose subtree only points
 
 Unit tests for both shapes. Full v2 run: cover subtree dropped (2 bookmarks), 865 sections, Structure and Precision PASS, Coverage FAIL (2 orphan blocks, left to review), `verify_version.py` PASS.
 
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
+
 <!-- generated:occurrences:start -->
 ## Where it was seen
 
