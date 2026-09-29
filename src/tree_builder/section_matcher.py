@@ -116,33 +116,64 @@ def _normalize_heading(text: str) -> str:
     return " ".join(text.split())
 
 
+def _strip_numbering(norm: str) -> str:
+    """Drop leading numbering tokens ('12 engine' -> 'engine') from a normalized heading."""
+    tokens = norm.split()
+    while len(tokens) > 1 and any(char.isdigit() for char in tokens[0]):
+        tokens.pop(0)
+    return " ".join(tokens)
+
+
+# A partial match is accepted only when the heading text covers most of the
+# title (or the reverse). Short or glyph-only headings never anchor a section:
+# '!' normalizes to '' and 'Trends' is contained in 'Viewing Trends' (BUG-019).
+_MIN_PARTIAL_CHARS = 3
+_MIN_PARTIAL_RATIO = 0.8
+
+
+def _is_partial_match(norm_title: str, norm_text: str) -> bool:
+    shorter, longer = sorted((norm_title, norm_text), key=len)
+    if len(shorter) < _MIN_PARTIAL_CHARS or shorter not in longer:
+        return False
+    return len(shorter) / len(longer) >= _MIN_PARTIAL_RATIO
+
+
 def _find_heading_anchor(
     title: str,
     page_no: int,
     blocks_by_page: dict[int, list[DoclingTextBlock]],
+    after: int = -1,
 ) -> int | None:
     """
     Find the reading_order of the text block that IS this bookmark's own
     heading, by matching normalized text among blocks on the bookmark's page.
-    Prefers blocks Docling classified as "section_header"; falls back to any
-    block with matching text (headings are sometimes mislabeled as body text).
+
+    Only blocks after ``after`` (the previous section's anchor) are candidates,
+    so two bookmarks never anchor on the same heading. Match tiers, first hit
+    wins: exact text on a "section_header" block, exact text ignoring leading
+    numbering, exact text on any block (headings are sometimes mislabeled as
+    body text), then a "section_header" whose text covers most of the title.
     """
     norm_title = _normalize_heading(title)
     if not norm_title:
         return None
-    candidates = blocks_by_page.get(page_no, [])
-
-    for block in candidates:
-        if block.label != "section_header":
-            continue
-        norm_text = _normalize_heading(block.text)
-        if norm_text == norm_title or norm_title in norm_text or norm_text in norm_title:
-            return block.reading_order
-
-    for block in candidates:
-        if _normalize_heading(block.text) == norm_title:
-            return block.reading_order
-
+    core_title = _strip_numbering(norm_title)
+    candidates = [
+        (block, _normalize_heading(block.text))
+        for block in blocks_by_page.get(page_no, [])
+        if block.reading_order > after
+    ]
+    headers = [(block, text) for block, text in candidates if block.label == "section_header"]
+    tiers = (
+        (headers, lambda text: text == norm_title),
+        (headers, lambda text: bool(text) and _strip_numbering(text) == core_title),
+        (candidates, lambda text: text == norm_title),
+        (headers, lambda text: _is_partial_match(norm_title, text)),
+    )
+    for blocks, matches in tiers:
+        for block, text in blocks:
+            if matches(text):
+                return block.reading_order
     return None
 
 
@@ -169,7 +200,7 @@ def _compute_reading_order_ranges(
     anchors: list[int] = []
     prev_anchor = -1
     for _section_id, title, _level, page_start, _page_end in page_ranges:
-        anchor = _find_heading_anchor(title, page_start, blocks_by_page)
+        anchor = _find_heading_anchor(title, page_start, blocks_by_page, after=prev_anchor)
         if anchor is None:
             page_blocks = blocks_by_page.get(page_start, [])
             anchor = page_blocks[0].reading_order if page_blocks else prev_anchor + 1
