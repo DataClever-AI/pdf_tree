@@ -234,14 +234,17 @@ class Attempt:
     after: int
     regressions: int
     decision: str
+    reviewed: bool = True
 
     def markdown_row(self) -> str:
         def cell(value: str) -> str:
             return " ".join(value.replace("|", "/").split())
 
+        counts = f"{self.before} → {self.after}" if self.reviewed else "not reviewed"
+        regressions = str(self.regressions) if self.reviewed else "—"
         return (
             f"| {self.date} | `{self.manual_id}` | {self.version} | {cell(self.commit)} "
-            f"| {cell(self.change)} | {self.before} → {self.after} | {self.regressions} "
+            f"| {cell(self.change)} | {counts} | {regressions} "
             f"| {cell(self.decision)} |"
         )
 

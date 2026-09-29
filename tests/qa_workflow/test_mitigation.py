@@ -262,5 +262,7 @@ def test_attempts_table_append_and_last_attempt():
     assert second.index("2026-10-01 |") < second.index("2026-10-02 |")
     assert "updated: 2026-10-02" in second
     assert last_attempt(second) == "v1.1: 5 → 1"
+    pending = Attempt("2026-10-03", "m", "v2.2", "—", "x", 0, 0, 0, "Wait", reviewed=False)
+    assert last_attempt(append_attempt(second, pending)) == "v2.2: not reviewed"
     legacy = "# BUG\n\n<!-- generated:occurrences:start -->\n<!-- generated:occurrences:end -->\n"
     assert ensure_attempts_section(legacy).index("## Attempts") < legacy.find("<!--") + 20

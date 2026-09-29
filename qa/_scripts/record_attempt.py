@@ -79,6 +79,7 @@ def main() -> None:
         after,
         regressions,
         args.decision,
+        reviewed=comparison.candidate_reviewed > 0,
     )
     record = qa_dir / "bugs" / args.bug / "bug.md"
     text = append_attempt(record.read_text(encoding="utf-8"), attempt)
