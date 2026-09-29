@@ -16,6 +16,8 @@ from typing import Any
 
 CATALOGUE_FILENAME = "root_causes.json"
 SEVERITY_RANK = {"Critical": 0, "High": 1, "Medium": 2, "Low": 3}
+# Notes written with the A2-B1 rule cite the cause as "Cause: BUG-019".
+_BUG_ID = re.compile(r"\bBUG-\d{3}\b")
 
 
 @dataclass(frozen=True)
@@ -84,6 +86,7 @@ def load_catalogue(path: Path) -> RootCauseCatalogue:
 
 
 def classify(catalogue: RootCauseCatalogue, manual_id: str, row: dict[str, str]) -> str | None:
+    """Override, then the ordered rules, then the first catalogued BUG-NNN cited in notes."""
     key = (manual_id, row.get("section_id", ""), row.get("checklist_ref", ""))
     if key in catalogue.overrides:
         return catalogue.overrides[key]
@@ -91,6 +94,9 @@ def classify(catalogue: RootCauseCatalogue, manual_id: str, row: dict[str, str])
     for rule in catalogue.rules:
         if rule.pattern.search(text):
             return rule.bug_id
+    for bug_id in _BUG_ID.findall(row.get("notes", "")):
+        if bug_id in catalogue.bugs:
+            return bug_id
     return None
 
 
