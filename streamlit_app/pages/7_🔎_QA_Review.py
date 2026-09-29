@@ -23,7 +23,7 @@ from src.qa_workflow.ai_review import (
     render_pdf_page,
     run_qwen_batch,
 )
-from src.qa_workflow.confidence import list_manual_versions
+from src.qa_workflow.confidence import list_manual_versions, version_display_name
 from src.qa_workflow.findings import CHECKLIST
 from src.qa_workflow.review import (
     bulk_approve_eligible,
@@ -76,7 +76,12 @@ _versions = _catalog[_manual_id]
 _default_version = (
     _versions.index(_settings.version) if _settings.version in _versions else len(_versions) - 1
 )
-_version_name = st.selectbox("Version", _versions, index=_default_version)
+_version_name = st.selectbox(
+    "Version",
+    _versions,
+    index=_default_version,
+    format_func=lambda version: version_display_name(_settings.qa_dir, _manual_id, version),
+)
 _qa_version = open_qa_version(_settings.qa_dir, _manual_id, _version_name)
 _integrity = verify_source_pdf(_qa_version)
 
