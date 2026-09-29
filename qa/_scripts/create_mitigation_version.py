@@ -45,8 +45,10 @@ def _git(*args: str) -> str:
 
 
 def pipeline_info() -> PipelineInfo:
+    """Last commit that changed src/ (the pipeline code this run uses), not HEAD."""
     dirty = bool(_git("status", "--porcelain", "--", "src"))
-    return PipelineInfo(_git("rev-parse", "HEAD"), _git("log", "-1", "--format=%s"), dirty)
+    commit, subject = _git("log", "-1", "--format=%H%n%s", "--", "src").split("\n", 1)
+    return PipelineInfo(commit, subject, dirty)
 
 
 def main() -> None:
