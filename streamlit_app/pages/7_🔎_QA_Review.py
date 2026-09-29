@@ -26,11 +26,13 @@ from src.qa_workflow.ai_review import (
 from src.qa_workflow.confidence import list_manual_versions, version_display_name
 from src.qa_workflow.findings import CHECKLIST
 from src.qa_workflow.review import (
+    bulk_approve_all,
     bulk_approve_eligible,
     bulk_eligible,
     finalize_review,
     load_findings,
     merge_drafts_into_state,
+    pending_approvals,
     prioritize_findings,
     restore_original_proposal,
     save_review_decision,
@@ -228,6 +230,40 @@ with _tab_review:
             st.rerun()
         except Exception as exc:
             st.error(str(exc))
+    _pending = pending_approvals(_state, [item["stable_key"] for item in _visible])
+    _pending_total = len(_pending["PASS"]) + len(_pending["FAIL"])
+    with st.expander(
+        f"Approve all pending in the current filter ({_pending_total}: "
+        f"{len(_pending['PASS'])} PASS, {len(_pending['FAIL'])} FAIL)"
+    ):
+        st.caption(
+            "Approves every pending AI proposal shown by the Priority filter, FAIL rows "
+            "included, without opening them one by one. Use it for quick tests. A backup is "
+            "written first and each row is saved with approval_mode = bulk-all."
+        )
+        if _pending["invalid"]:
+            st.caption(
+                f"{len(_pending['invalid'])} pending row(s) have an invalid proposal and "
+                "are skipped; review them one by one."
+            )
+        _confirm = st.checkbox(
+            f"I approve these {_pending_total} rows as reviewer {_settings.reviewer or '—'}"
+        )
+        if st.button(
+            "Approve all pending",
+            type="primary",
+            disabled=not (_confirm and _pending_total),
+        ):
+            try:
+                _count = bulk_approve_all(
+                    _qa_version,
+                    reviewer=_settings.reviewer,
+                    keys=[item["stable_key"] for item in _visible],
+                )
+                st.success(f"Approved {_count} findings; backup created before the bulk write.")
+                st.rerun()
+            except Exception as exc:
+                st.error(str(exc))
     if _finish_col.button("Finalize version"):
         try:
             finalize_review(_qa_version)

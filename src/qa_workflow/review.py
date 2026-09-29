@@ -264,37 +264,61 @@ def bulk_eligible(
     )
 
 
-def bulk_approve_eligible(qa_version: QAVersion, *, reviewer: str) -> int:
+def _approved_values(decision: dict[str, Any]) -> dict[str, str] | None:
+    """Values to approve: a human edit still pending approval wins over the AI proposal."""
+    fields = ("result", "severity", "evidence", "notes")
+    source = decision.get("current") or decision.get("original_proposal")
+    if not source:
+        return None
+    values = {field: str(source.get(field, "") or "") for field in fields}
+    try:
+        values["result"], values["severity"] = _validate_decision(
+            values["result"], values["severity"], values["evidence"]
+        )
+    except ValueError:
+        return None
+    return values
+
+
+def pending_approvals(
+    state: dict[str, Any], keys: list[str] | None = None
+) -> dict[str, list[str]]:
+    """Pending AI-backed decisions by the result that would be approved (PASS/FAIL/invalid)."""
+    groups: dict[str, list[str]] = {"PASS": [], "FAIL": [], "invalid": []}
+    decisions = state.get("decisions", {})
+    for key in keys if keys is not None else list(decisions):
+        decision = decisions.get(key)
+        if not decision or decision.get("approved"):
+            continue
+        values = _approved_values(decision)
+        groups[values["result"] if values else "invalid"].append(key)
+    return groups
+
+
+def _approve_keys(
+    qa_version: QAVersion, keys: set[str], *, reviewer: str, mode: str
+) -> int:
     if not reviewer.strip():
         raise ValueError("reviewer is required")
     rows = load_findings(qa_version.findings_csv)
-    sections = json.loads(qa_version.tree_path.read_text(encoding="utf-8"))
-    sections_by_id = {section["section_id"]: section for section in sections}
     state = merge_drafts_into_state(qa_version)
-    prioritized = prioritize_findings(rows, state, sections_by_id)
-    items_by_key = {item["stable_key"]: item for item in prioritized}
     count = 0
     for row in rows:
         key = stable_finding_key(row)
-        if key not in items_by_key or not bulk_eligible(items_by_key[key], state, sections_by_id):
+        decision = state["decisions"].get(key)
+        if key not in keys or decision is None or decision.get("approved"):
             continue
-        decision = state["decisions"][key]
-        proposal = decision["original_proposal"]
-        row.update(
-            {
-                field: str(proposal.get(field, ""))
-                for field in ("result", "severity", "evidence", "notes")
-            }
-        )
+        values = _approved_values(decision)
+        if values is None:
+            continue
+        row.update(values)
         decision.update(
             {
                 "approved": True,
                 "reviewer": reviewer.strip(),
                 "reviewed_at": utc_now(),
-                "current": {
-                    field: row[field] for field in ("result", "severity", "evidence", "notes")
-                },
-                "approval_mode": "bulk",
+                "current": dict(values),
+                "approval_mode": mode,
             }
         )
         count += 1
@@ -305,6 +329,36 @@ def bulk_approve_eligible(qa_version: QAVersion, *, reviewer: str) -> int:
         if qa_version.version_manifest.get("status") == "finalized":
             mark_version_edited(qa_version)
     return count
+
+
+def bulk_approve_eligible(qa_version: QAVersion, *, reviewer: str) -> int:
+    if not reviewer.strip():
+        raise ValueError("reviewer is required")
+    rows = load_findings(qa_version.findings_csv)
+    sections = json.loads(qa_version.tree_path.read_text(encoding="utf-8"))
+    sections_by_id = {section["section_id"]: section for section in sections}
+    state = merge_drafts_into_state(qa_version)
+    eligible = {
+        item["stable_key"]
+        for item in prioritize_findings(rows, state, sections_by_id)
+        if bulk_eligible(item, state, sections_by_id)
+    }
+    return _approve_keys(qa_version, eligible, reviewer=reviewer, mode="bulk")
+
+
+def bulk_approve_all(
+    qa_version: QAVersion, *, reviewer: str, keys: list[str] | None = None
+) -> int:
+    """Approve every pending AI-backed row (PASS and FAIL) in ``keys``, or in the whole version.
+
+    Recorded as ``approval_mode: bulk-all`` so reports can tell these rows were not
+    reviewed one by one. A backup of the findings and state is written first.
+    """
+    state = merge_drafts_into_state(qa_version)
+    groups = pending_approvals(state, keys)
+    return _approve_keys(
+        qa_version, set(groups["PASS"] + groups["FAIL"]), reviewer=reviewer, mode="bulk-all"
+    )
 
 
 def finalize_review(qa_version: QAVersion) -> QAVersion:
