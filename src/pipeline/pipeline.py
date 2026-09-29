@@ -31,8 +31,12 @@ from pathlib import Path
 from typing import Any
 
 from src.models.extraction import DoclingDocument
-from src.tree_builder.bookmark_sanity import BookmarkSanityReport, check_bookmark_sanity
-from src.tree_builder.fitz_toc import get_embedded_toc, page_count
+from src.tree_builder.bookmark_sanity import (
+    BookmarkSanityReport,
+    check_bookmark_sanity,
+    repair_bookmarks,
+)
+from src.tree_builder.fitz_toc import get_embedded_toc, page_count, page_text_reader
 from src.tree_builder.section_matcher import MatchedSection, match_content_to_sections
 from src.tree_builder.synthetic_toc import synthesize_toc
 from src.tree_builder.toc_classification import ExcludedTocEntry, filter_toc_entries
@@ -155,6 +159,17 @@ def _map_images_to_sections(
     return result
 
 
+def _flag_relocated_sections(sections: list[dict[str, Any]], sanity: BookmarkSanityReport) -> None:
+    """Force flagged_for_review on sections built from a relocated bookmark."""
+    for repair in sanity.repairs:
+        if repair.kind != "relocated":
+            continue
+        for section in sections:
+            same_title = section.get("title") == repair.title
+            if same_title and section.get("page_start") == repair.new_page:
+                section["flagged_for_review"] = True
+
+
 def run_pipeline(
     pdf_path: Path,
     work_dir: Path,
@@ -210,6 +225,18 @@ def run_pipeline(
 
         # ── Step 2: bookmark sanity ───────────────────────────────────────────
         sanity = check_bookmark_sanity(bookmarks, n_pages)
+        if sanity.has_hard_failures:
+            repaired, repairs = repair_bookmarks(
+                bookmarks, n_pages, page_text_reader(pdf_path)
+            )
+            if repairs:
+                original_issues = sanity.issues
+                sanity = check_bookmark_sanity(repaired, n_pages)
+                sanity.repairs = repairs
+                sanity.original_issues = original_issues
+                bookmarks = repaired
+                for repair in repairs:
+                    logger.warning("bookmark_sanity repair [%s]: %s", repair.kind, repair.detail)
         if sanity.has_hard_failures:
             logger.error(
                 "bookmark_sanity: %d hard failures — aborting",
@@ -369,6 +396,7 @@ def run_pipeline(
 
         # ── Step 8: tree export ───────────────────────────────────────────────
         sections = build_tree_json(matched, structural_source=structural_source)
+        _flag_relocated_sections(sections, sanity)
         logger.info("tree_export: %d sections", len(sections))
         ts = _lap("tree_export", ts)
 
