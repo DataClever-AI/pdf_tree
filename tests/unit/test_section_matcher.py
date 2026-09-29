@@ -46,8 +46,16 @@ def test_contained_short_header_does_not_anchor_longer_title():
     }
     assert _find_heading_anchor("Viewing Trends", 283, blocks) == 12
     assert _find_heading_anchor("Trends Pop-Up Keys", 283, blocks) is None
-    horizon = {294: [_block(20, "Setting the Horizon Trend Scale", 294, "section_header")]}
-    assert _find_heading_anchor("Setting the Horizon", 294, horizon) is None
+    # Philips p294: each sibling has its own header; the shorter one must not take the longer.
+    horizon = {
+        294: [
+            _block(20, "Setting the Horizon", 294, "section_header"),
+            _block(21, "The horizon is the reference value.", 294),
+            _block(22, "Setting the Horizon Trend Scale", 294, "section_header"),
+        ]
+    }
+    assert _find_heading_anchor("Setting the Horizon", 294, horizon) == 20
+    assert _find_heading_anchor("Setting the Horizon Trend Scale", 294, horizon, after=20) == 22
 
 
 def test_exact_match_wins_over_earlier_partial_match():
@@ -102,3 +110,17 @@ def test_2002_bullet_glyph_does_not_steal_the_heading():
     chapter, general = match_content_to_sections(bookmarks, _doc(blocks, 2), 2)
     assert _texts(chapter) == ["FUEL INJECTION (FUEL SYSTEMS)", "Contents"]
     assert _texts(general) == ["1. General", "!", "Fuel is pumped from the tank."]
+
+
+def test_merged_heading_wins_over_later_figure_label():
+    # 2002 p442: heading merged with its sub-heading; a figure label repeats the title later.
+    blocks = {
+        442: [
+            _block(0, "1. Tilt Steering Column A: TILT MECHANISM", 442, "section_header"),
+            _block(1, "The steering wheel vertical position can be adjusted.", 442),
+            _block(90, "Tilt steering column", 442, "section_header"),
+        ]
+    }
+    assert _find_heading_anchor("1. Tilt Steering Column", 442, blocks) == 0
+    assert _find_heading_anchor("1. Tilt Steering", 442, blocks) == 0
+    assert _find_heading_anchor("Tilt Steering Column Removal and Setup", 442, blocks) is None

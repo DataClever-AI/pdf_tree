@@ -150,9 +150,12 @@ def _find_heading_anchor(
 
     Only blocks after ``after`` (the previous section's anchor) are candidates,
     so two bookmarks never anchor on the same heading. Match tiers, first hit
-    wins: exact text on a "section_header" block, exact text ignoring leading
-    numbering, exact text on any block (headings are sometimes mislabeled as
-    body text), then a "section_header" whose text covers most of the title.
+    wins: exact text on a "section_header" block; then the first
+    "section_header" in reading order that matches without leading numbering,
+    starts with the title (Docling merges a heading with its sub-heading) or
+    covers most of it; then exact text on any block (headings are sometimes
+    mislabeled as body text). Figure labels can repeat a title later in
+    reading order, so the near-match tier keeps reading order, not match type.
     """
     norm_title = _normalize_heading(title)
     if not norm_title:
@@ -164,11 +167,19 @@ def _find_heading_anchor(
         if block.reading_order > after
     ]
     headers = [(block, text) for block, text in candidates if block.label == "section_header"]
+    def near_match(text: str) -> bool:
+        if not text:
+            return False
+        return (
+            _strip_numbering(text) == core_title
+            or text.startswith(norm_title + " ")
+            or _is_partial_match(norm_title, text)
+        )
+
     tiers = (
         (headers, lambda text: text == norm_title),
-        (headers, lambda text: bool(text) and _strip_numbering(text) == core_title),
+        (headers, near_match),
         (candidates, lambda text: text == norm_title),
-        (headers, lambda text: _is_partial_match(norm_title, text)),
     )
     for blocks, matches in tiers:
         for block, text in blocks:
