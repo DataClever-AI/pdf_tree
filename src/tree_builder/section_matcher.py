@@ -22,6 +22,7 @@ Algorithm:
 """
 from __future__ import annotations
 
+import math
 import re
 from dataclasses import dataclass, field
 
@@ -242,6 +243,9 @@ def _compute_reading_order_ranges(
 # A block counts as "above" a table or image when its bottom is at most this many
 # points below the table's top edge (bboxes of adjacent items can touch or overlap).
 _ABOVE_TOLERANCE = 2.0
+# A heading counts as "above" when its top is at most this many points below the item's
+# top edge: side headings in the left margin start level with their content (SOMATOM).
+_SIDE_HEADING_TOLERANCE = 12.0
 
 
 def vertical_span(bbox: BoundingBox) -> tuple[float, float]:
@@ -255,20 +259,28 @@ def vertical_span(bbox: BoundingBox) -> tuple[float, float]:
     return -min(bbox.y0, bbox.y1), -max(bbox.y0, bbox.y1)
 
 
-def nearest_above[T](target: BoundingBox, items: list[tuple[BoundingBox, T]]) -> T | None:
+def nearest_above[T](
+    target: BoundingBox, items: list[tuple[BoundingBox, bool, T]]
+) -> T | None:
     """
     Payload of the item printed closest above ``target`` on the same page.
 
-    Items that overlap the target horizontally win over items in another column;
-    None when nothing is above the target.
+    Items are ``(bbox, is_heading, payload)``. Items that overlap the target horizontally
+    win over items in another column. A heading reaches to the right edge of the page
+    and also counts when it starts level with the target: content under a left-aligned
+    or margin heading is often indented or in a column to its right (LOGIQ_S8 part
+    photos, SOMATOM side headings); otherwise a full-width running header above the
+    heading counts as "same column" and wins. None when nothing is above the target.
     """
     top, _bottom = vertical_span(target)
     above: list[tuple[bool, float, T]] = []
-    for bbox, payload in items:
-        _item_top, item_bottom = vertical_span(bbox)
-        if item_bottom < top - _ABOVE_TOLERANCE:
+    for bbox, is_heading, payload in items:
+        item_top, item_bottom = vertical_span(bbox)
+        beside = is_heading and item_top >= top - _SIDE_HEADING_TOLERANCE
+        if item_bottom < top - _ABOVE_TOLERANCE and not beside:
             continue
-        overlaps = min(bbox.x1, target.x1) > max(bbox.x0, target.x0)
+        right = math.inf if is_heading else bbox.x1
+        overlaps = min(right, target.x1) > max(bbox.x0, target.x0)
         above.append((overlaps, item_bottom - top, payload))
     if not above:
         return None
@@ -288,7 +300,11 @@ def _table_position(
     page_blocks = blocks_by_page.get(table.page_no, [])
     if table.bbox is None or not page_blocks:
         return None
-    placed = [(block.bbox, block) for block in page_blocks if block.bbox is not None]
+    placed = [
+        (block.bbox, block.label == "section_header", block)
+        for block in page_blocks
+        if block.bbox is not None
+    ]
     block = nearest_above(table.bbox, placed)
     if block is not None:
         return block.reading_order

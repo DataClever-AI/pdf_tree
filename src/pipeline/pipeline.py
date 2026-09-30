@@ -172,7 +172,7 @@ def _map_images_to_sections(
     by_id = {sec["section_id"]: sec for sec in sections}
     # Text nodes in document order, and the placed ones per page.
     ordered: list[tuple[int, str]] = []
-    page_nodes: dict[int, list[tuple[BoundingBox, tuple[int, str]]]] = {}
+    page_nodes: dict[int, list[tuple[BoundingBox, bool, tuple[int, str]]]] = {}
     for sec in sections:
         for node in sec.get("semantic_nodes", []):
             if node.get("node_type") == "table":
@@ -181,7 +181,8 @@ def _map_images_to_sections(
             ordered.append(key)
             bbox = _node_bbox(node)
             if bbox is not None:
-                page_nodes.setdefault(node.get("page_no", 0), []).append((bbox, key))
+                heading = node.get("node_type") == "heading"
+                page_nodes.setdefault(node.get("page_no", 0), []).append((bbox, heading, key))
     ordered.sort()
     position = {key: index for index, key in enumerate(ordered)}
 
@@ -192,7 +193,7 @@ def _map_images_to_sections(
         key = nearest_above(img.bbox, nodes)
         if key is not None:
             return key[1]
-        first = position[min(key for _bbox, key in nodes)]
+        first = position[min(key for _bbox, _heading, key in nodes)]
         return ordered[first - 1][1] if first > 0 else None
 
     result: list[EmbeddedImage] = []
