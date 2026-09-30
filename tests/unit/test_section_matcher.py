@@ -1,8 +1,14 @@
-"""Heading anchor tests for section_matcher (BUG-019)."""
+"""section_matcher tests: heading anchors (BUG-019) and table placement (BUG-001, BUG-003)."""
 
 from __future__ import annotations
 
-from src.models.extraction import DoclingDocument, DoclingTextBlock, ExtractionProvenance
+from src.models.extraction import (
+    BoundingBox,
+    DoclingDocument,
+    DoclingTable,
+    DoclingTextBlock,
+    ExtractionProvenance,
+)
 from src.tree_builder.section_matcher import (
     _find_heading_anchor,
     _is_partial_match,
@@ -10,7 +16,13 @@ from src.tree_builder.section_matcher import (
 )
 
 
-def _block(order: int, text: str, page: int, label: str = "text") -> DoclingTextBlock:
+def _box(page: int, top: float, bottom: float, x0: float = 50, x1: float = 550) -> BoundingBox:
+    return BoundingBox(x0, top, x1, bottom, page, coordinate_origin="bottomleft")
+
+
+def _block(
+    order: int, text: str, page: int, label: str = "text", top: float | None = None
+) -> DoclingTextBlock:
     return DoclingTextBlock(
         block_id=f"b{order}",
         text=text,
@@ -19,11 +31,27 @@ def _block(order: int, text: str, page: int, label: str = "text") -> DoclingText
         reading_order=order,
         depth=0,
         provenance=ExtractionProvenance(source="docling", page_no=page),
+        bbox=None if top is None else _box(page, top, top - 10),
     )
 
 
-def _doc(blocks: list[DoclingTextBlock], pages: int) -> DoclingDocument:
-    return DoclingDocument("doc", "doc.pdf", pages, text_blocks=blocks)
+def _table(table_id: str, page: int, top: float | None, bottom: float = 0) -> DoclingTable:
+    return DoclingTable(
+        table_id=table_id,
+        page_no=page,
+        provenance=ExtractionProvenance(source="docling", page_no=page),
+        bbox=None if top is None else _box(page, top, bottom),
+    )
+
+
+def _doc(
+    blocks: list[DoclingTextBlock], pages: int, tables: list[DoclingTable] | None = None
+) -> DoclingDocument:
+    return DoclingDocument("doc", "doc.pdf", pages, text_blocks=blocks, tables=tables or [])
+
+
+def _table_ids(section) -> list[str]:  # type: ignore[no-untyped-def]
+    return [table.table_id for table in section.tables]
 
 
 def _texts(section) -> list[str]:  # type: ignore[no-untyped-def]
@@ -124,3 +152,92 @@ def test_merged_heading_wins_over_later_figure_label():
     assert _find_heading_anchor("1. Tilt Steering Column", 442, blocks) == 0
     assert _find_heading_anchor("1. Tilt Steering", 442, blocks) == 0
     assert _find_heading_anchor("Tilt Steering Column Removal and Setup", 442, blocks) is None
+
+
+def test_chapter_contents_table_stays_with_the_chapter():
+    # DOC-0136477A p17: the 'Contents' box is printed above '1.1', the deepest section
+    # on the page is 1.2.1; page-based placement gave the box to 1.2.1 (BUG-001).
+    blocks = [
+        _block(0, "Introduction", 17, "section_header", top=665),
+        _block(1, "Contents", 17, "section_header", top=608),
+        _block(2, "1.1 Intended Purpose of this Manual", 17, "section_header", top=435),
+        _block(3, "This manual describes the monitor.", 17, top=407),
+        _block(4, "1.2 Indications For Use", 17, "section_header", top=289),
+        _block(5, "1.2.1 Swan-Ganz Module", 17, "section_header", top=257),
+        _block(6, "The monitor is used with the module.", 17, top=235),
+    ]
+    bookmarks = [
+        (1, "Introduction", 17),
+        (2, "1.1 Intended Purpose of this Manual", 17),
+        (2, "1.2 Indications For Use", 17),
+        (3, "1.2.1 Swan-Ganz Module", 17),
+    ]
+    tables = [_table("#/tables/15", 17, top=596, bottom=456)]
+    chapter, purpose, _uses, module = match_content_to_sections(
+        bookmarks, _doc(blocks, 17, tables), 17
+    )
+    assert _table_ids(chapter) == ["#/tables/15"]
+    assert _table_ids(purpose) == _table_ids(module) == []
+
+
+def test_tables_follow_the_heading_printed_above_them():
+    # Philips p411: the charger table is under 'Battery Accessories' (was left empty),
+    # and the table at the top of the page continues the previous section (BUG-003).
+    blocks = [
+        _block(0, "Cable Accessories", 1, "section_header", top=700),
+        _block(1, "Use these cables.", 1, top=680),
+        _block(2, "Patient Monitor", 2, top=790),  # running header
+        _block(3, "Battery Accessories", 2, "section_header", top=400),
+    ]
+    bookmarks = [(2, "Cable Accessories", 1), (2, "Battery Accessories", 2)]
+    tables = [
+        _table("top_of_p2", 2, top=770, bottom=500),
+        _table("charger", 2, top=380, bottom=300),
+        _table("no_bbox", 2, top=None),
+    ]
+    cables, battery = match_content_to_sections(bookmarks, _doc(blocks, 2, tables), 2)
+    assert _table_ids(cables) == ["top_of_p2"]
+    assert _table_ids(battery) == ["charger", "no_bbox"]
+
+
+def test_table_prefers_the_block_in_its_own_column():
+    blocks = [
+        _block(0, "Left Topic", 1, "section_header", top=700),
+        _block(1, "Right Topic", 1, "section_header", top=500),
+    ]
+    blocks[1] = DoclingTextBlock(
+        "b1", "Right Topic", "section_header", 1, 1, 0,
+        ExtractionProvenance(source="docling", page_no=1),
+        bbox=_box(1, 500, 490, x0=320, x1=550),
+    )
+    bookmarks = [(2, "Left Topic", 1), (2, "Right Topic", 1)]
+    tables = [DoclingTable(
+        "left", 1, ExtractionProvenance(source="docling", page_no=1),
+        bbox=_box(1, 480, 300, x0=50, x1=280),
+    )]
+    left, right = match_content_to_sections(bookmarks, _doc(blocks, 1, tables), 1)
+    assert _table_ids(left) == ["left"]
+    assert _table_ids(right) == []
+
+
+def test_table_keeps_page_placement_when_reading_order_is_out_of_sync():
+    # SOMATOM (BUG-005): the text printed above the table on p5 was read right after the
+    # p1 heading, so it belongs to a section whose pages end long before p5.
+    blocks = [
+        _block(0, "Operating elements", 1, "section_header", top=700),
+        _block(1, "Text read out of order.", 5, top=650),
+        _block(2, "Cushions", 2, "section_header", top=700),
+        _block(3, "Quality of bonding", 5, "section_header", top=750),
+    ]
+    bookmarks = [
+        (2, "Operating elements", 1),
+        (2, "Cushions", 2),
+        (2, "Quality of bonding", 5),
+    ]
+    tables = [_table("t", 5, top=600, bottom=500)]
+    elements, _cushions, bonding = match_content_to_sections(
+        bookmarks, _doc(blocks, 5, tables), 5
+    )
+    assert _texts(elements) == ["Operating elements", "Text read out of order."]
+    assert _table_ids(elements) == []
+    assert _table_ids(bonding) == ["t"]
