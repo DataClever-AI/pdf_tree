@@ -307,8 +307,22 @@ def detect_agent_batch(batch: AgentBatch, *, provider: str = "external-agent") -
     validation = validate_findings_result(payload, template, provider=provider)
     if not validation.is_valid:
         return BatchProgress("Output detected", 2, validation=validation)
+    draft_path = batch.root / "validated_draft.json"
+    if draft_path.exists():
+        # Opening the batch again must not rewrite the draft: keep its provider and time.
+        existing = json.loads(draft_path.read_text(encoding="utf-8"))
+        findings = [
+            {key: value for key, value in finding.items() if key != "provider"}
+            for finding in existing.get("findings", [])
+        ]
+        new = [
+            {key: value for key, value in asdict(draft).items() if key != "provider"}
+            for draft in validation.valid
+        ]
+        if findings == new:
+            return BatchProgress("Draft ready", 5, validation=validation)
     atomic_write_json(
-        batch.root / "validated_draft.json",
+        draft_path,
         {
             "schema_version": 1,
             "provider": provider,
