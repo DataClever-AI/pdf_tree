@@ -345,3 +345,20 @@ def test_page_end_ignores_a_split_heading_of_the_next_section():
     returning, _emc = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
     assert "Section 1-9" in _texts(returning)
     assert returning.page_end == 1
+
+
+def test_page_end_ignores_chapter_numbers_and_margin_labels_on_the_next_page():
+    # Philips p321: the last section of chapter 24 owns only the chapter-tab number '25'
+    # and a margin label of the next chapter; its page_end must stay on p320.
+    blocks = [
+        _block(0, "Care and Cleaning", 1, "section_header", top=700),
+        _block(1, "Clean the monitor with a soft cloth.", 1, top=650),
+        _block(2, "25", 2, top=680),
+        _block(3, "MP40/MP50/ MP60/MP70/ MP90", 2, top=600),
+        _block(4, "Maintenance", 2, "section_header", top=560),
+        _block(5, "Check the monitor every year.", 2, top=520),
+    ]
+    bookmarks = [(2, "Care and Cleaning", 1), (2, "Maintenance", 2)]
+    care, _maintenance = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert _texts(care)[-2:] == ["25", "MP40/MP50/ MP60/MP70/ MP90"]
+    assert care.page_end == 1

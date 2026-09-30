@@ -377,15 +377,24 @@ def _assign_content(
 # headers, footers, folios and chapter tabs sit when Docling labels them as body text.
 _FURNITURE_LABELS = frozenset({"page_header", "page_footer"})
 _FURNITURE_BAND = 0.08
+# Body text needs at least this many alphabetic words: chapter-tab numbers ('25'),
+# margin labels ('MP40/MP50/ MP60') and lone 'WARNING' labels on the next chapter's
+# opening page are not content that continues there (Philips v2.4).
+_MIN_BODY_WORDS = 3
+_WORD = re.compile(r"^[^\W\d_][^\W\d_'\u2019-]*[.,:;!?)]?$")
 
 
 def _is_body_on_page(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
     """
-    True unless the block is page furniture (label, or fully inside the top/bottom band)
-    or a heading. A heading alone on the next page is usually the first part of the next
-    section's split title ('Section 1-9' + 'Electromagnetic Compatibility', LOGIQ_S8).
+    True unless the block is page furniture (label, or fully inside the top/bottom band),
+    a heading, or shorter than three words. A heading alone on the next page is usually
+    the first part of the next section's split title ('Section 1-9' +
+    'Electromagnetic Compatibility', LOGIQ_S8).
     """
     if block.label in _FURNITURE_LABELS or block.label == "section_header":
+        return False
+    words = sum(1 for token in block.text.split() if _WORD.match(token.strip("(\"'")))
+    if words < _MIN_BODY_WORDS:
         return False
     page = doc.pages.get(block.page_no)
     if block.bbox is None or page is None or page.height <= 0:
