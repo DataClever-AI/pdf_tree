@@ -19,6 +19,8 @@ Algorithm:
      of sync, BUG-005), fall back to page_no (deepest section on the page).
      Chapter 'Contents' boxes and tables on pages shared by sibling sections
      depend on this (BUG-001, BUG-003).
+  5. Extend page_end by one page when the section owns body content (not page
+     furniture) on the page where the next section starts (BUG-014).
 """
 from __future__ import annotations
 
@@ -371,6 +373,52 @@ def _assign_content(
             owner.tables.append(table)
 
 
+# Docling labels for page furniture, and the top/bottom band of a page where running
+# headers, footers, folios and chapter tabs sit when Docling labels them as body text.
+_FURNITURE_LABELS = frozenset({"page_header", "page_footer"})
+_FURNITURE_BAND = 0.08
+
+
+def _is_body_on_page(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
+    """True unless the block is page furniture (label, or fully inside the top/bottom band)."""
+    if block.label in _FURNITURE_LABELS:
+        return False
+    page = doc.pages.get(block.page_no)
+    if block.bbox is None or page is None or page.height <= 0:
+        return True
+    top, bottom = vertical_span(block.bbox)
+    if block.bbox.coordinate_origin != "bottomleft":
+        top, bottom = page.height + top, page.height + bottom
+    band = page.height * _FURNITURE_BAND
+    return not (bottom >= page.height - band or top <= band)
+
+
+def _extend_page_ends(sections: list[MatchedSection], doc: DoclingDocument) -> None:
+    """
+    Extend page_end by one page when the section owns body content on that page.
+
+    page_end comes from the next bookmark's page, so a section whose content runs onto
+    the page where the next section starts mid-page ended one page short (BUG-014,
+    H-15). Positional table placement (BUG-001/003) makes this more common: a table
+    continued at the top of the next page stays with its section. Only one page is
+    added, so content far away (reading order out of sync, BUG-005) never stretches a
+    range. Parents are then widened to contain their children.
+    """
+    for section in sections:
+        next_page = section.page_end + 1
+        owns_body = any(table.page_no == next_page for table in section.tables) or any(
+            block.page_no == next_page and _is_body_on_page(block, doc)
+            for block in section.text_blocks
+        )
+        if owns_body:
+            section.page_end = next_page
+    by_id = {section.section_id: section for section in sections}
+    for section in reversed(sections):
+        parent = by_id.get(section.parent_id) if section.parent_id else None
+        if parent is not None and parent.page_end < section.page_end:
+            parent.page_end = section.page_end
+
+
 def match_content_to_sections(
     bookmarks: list[tuple[int, str, int]],
     doc: DoclingDocument,
@@ -438,5 +486,6 @@ def match_content_to_sections(
         )
 
     _assign_content(sections, reading_order_ranges, doc)
+    _extend_page_ends(sections, doc)
 
     return sections

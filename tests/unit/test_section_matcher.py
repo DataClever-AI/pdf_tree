@@ -5,6 +5,7 @@ from __future__ import annotations
 from src.models.extraction import (
     BoundingBox,
     DoclingDocument,
+    DoclingPage,
     DoclingTable,
     DoclingTextBlock,
     ExtractionProvenance,
@@ -261,3 +262,67 @@ def test_table_right_of_a_left_aligned_heading_follows_the_heading():
     previous, power_cord = match_content_to_sections(bookmarks, _doc(blocks, 2, tables), 2)
     assert _table_ids(previous) == []
     assert _table_ids(power_cord) == ["cords"]
+
+
+def _paged_doc(
+    blocks: list[DoclingTextBlock], pages: int, tables: list[DoclingTable] | None = None
+) -> DoclingDocument:
+    return DoclingDocument(
+        "doc",
+        "doc.pdf",
+        pages,
+        pages={n: DoclingPage(n, 612, 792) for n in range(1, pages + 1)},
+        text_blocks=blocks,
+        tables=tables or [],
+    )
+
+
+def test_page_end_includes_the_page_where_owned_content_continues():
+    # DOC p180: 'Table 13-9 (continued)' at the top of the next section's page stays
+    # with its section; page_end must include that page (BUG-014).
+    blocks = [
+        _block(0, "13.5.3 Faults", 1, "section_header", top=700),
+        _block(1, "Faults text.", 1, top=650),
+        _block(2, "HemoSphere Advanced Monitor", 2, top=770),  # running header band
+        _block(3, "13.5.4 SVR Faults", 2, "section_header", top=400),
+    ]
+    bookmarks = [(1, "Chapter", 1), (2, "13.5.3 Faults", 1), (2, "13.5.4 SVR Faults", 2)]
+    blocks = [_block(0, "Chapter", 1, "section_header", top=750)] + [
+        DoclingTextBlock(b.block_id, b.text, b.label, b.page_no, i + 1, 0, b.provenance,
+                         bbox=b.bbox)
+        for i, b in enumerate(blocks)
+    ]
+    tables = [_table("continued", 2, top=740, bottom=500)]
+    chapter, faults, svr = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 2, tables), 2
+    )
+    assert _table_ids(faults) == ["continued"]
+    assert (faults.page_start, faults.page_end) == (1, 2)
+    assert (svr.page_start, svr.page_end) == (2, 2)
+    assert chapter.page_end == 2
+
+
+def test_page_end_ignores_running_headers_on_the_next_page():
+    blocks = [
+        _block(0, "Faults", 1, "section_header", top=700),
+        _block(1, "Faults text.", 1, top=650),
+        _block(2, "HemoSphere Advanced Monitor", 2, top=770),
+        _block(3, "Chapter 2", 2, "page_header", top=500),
+        _block(4, "SVR Faults", 2, "section_header", top=400),
+    ]
+    bookmarks = [(2, "Faults", 1), (2, "SVR Faults", 2)]
+    faults, _svr = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert _texts(faults)[-2:] == ["HemoSphere Advanced Monitor", "Chapter 2"]
+    assert faults.page_end == 1
+
+
+def test_page_end_grows_by_one_page_at_most():
+    # BUG-005: text read out of order far away never stretches the range.
+    blocks = [
+        _block(0, "Operating elements", 1, "section_header", top=700),
+        _block(1, "Text from page 5.", 5, top=500),
+        _block(2, "Cushions", 2, "section_header", top=700),
+    ]
+    bookmarks = [(2, "Operating elements", 1), (2, "Cushions", 2)]
+    elements, _cushions = match_content_to_sections(bookmarks, _paged_doc(blocks, 5), 5)
+    assert elements.page_end == 1
