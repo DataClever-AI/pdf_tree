@@ -30,14 +30,18 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from src.models.extraction import DoclingDocument
+from src.models.extraction import BoundingBox, DoclingDocument
 from src.tree_builder.bookmark_sanity import (
     BookmarkSanityReport,
     check_bookmark_sanity,
     repair_bookmarks,
 )
 from src.tree_builder.fitz_toc import get_embedded_toc, page_count, page_text_reader
-from src.tree_builder.section_matcher import MatchedSection, match_content_to_sections
+from src.tree_builder.section_matcher import (
+    MatchedSection,
+    match_content_to_sections,
+    nearest_above,
+)
 from src.tree_builder.synthetic_toc import synthesize_toc
 from src.tree_builder.toc_classification import ExcludedTocEntry, filter_toc_entries
 from src.tree_builder.toc_resolution import NumberingReport, resolve_toc_pages
@@ -53,7 +57,8 @@ class EmbeddedImage:
     page_no: int
     width_px: int
     height_px: int
-    section_id: str | None = None  # assigned after pipeline via page_no → section map
+    section_id: str | None = None  # assigned after pipeline by position on the page
+    bbox: BoundingBox | None = None  # bottom-left origin, same frame as Docling bboxes
 
 
 @dataclass
@@ -126,13 +131,32 @@ class PipelineResult:
         return {s["section_id"]: s for s in self.sections}
 
 
+def _node_bbox(node: dict[str, Any]) -> BoundingBox | None:
+    raw = node.get("bbox")
+    if not raw:
+        return None
+    return BoundingBox(
+        x0=raw["x0"],
+        y0=raw["y0"],
+        x1=raw["x1"],
+        y1=raw["y1"],
+        page_no=node.get("page_no", 0),
+        coordinate_origin="bottomleft",
+    )
+
+
 def _map_images_to_sections(
     images: list[EmbeddedImage],
     sections: list[dict[str, Any]],
 ) -> list[EmbeddedImage]:
     """
-    Assign section_id to each image by matching image.page_no to section page ranges.
-    Assigns the deepest (highest hierarchy_level) section that contains the page.
+    Assign section_id to each image by its position on the page.
+
+    The image goes to the section of the nearest text node printed above it; an image
+    above every text node of its page continues the previous page's content (BUG-003).
+    Images without a bbox, on pages without placed text, or placed in a section more
+    than one page away from its page range (reading order out of sync, BUG-005), fall
+    back to the deepest section on the page.
     """
     if not images or not sections:
         return images
@@ -145,16 +169,51 @@ def _map_images_to_sections(
     for pg in page_sections:
         page_sections[pg].sort(key=lambda s: s.get("hierarchy_level", 0), reverse=True)
 
+    by_id = {sec["section_id"]: sec for sec in sections}
+    # Text nodes in document order, and the placed ones per page.
+    ordered: list[tuple[int, str]] = []
+    page_nodes: dict[int, list[tuple[BoundingBox, tuple[int, str]]]] = {}
+    for sec in sections:
+        for node in sec.get("semantic_nodes", []):
+            if node.get("node_type") == "table":
+                continue
+            key = (node.get("semantic_order", 0), sec["section_id"])
+            ordered.append(key)
+            bbox = _node_bbox(node)
+            if bbox is not None:
+                page_nodes.setdefault(node.get("page_no", 0), []).append((bbox, key))
+    ordered.sort()
+    position = {key: index for index, key in enumerate(ordered)}
+
+    def _by_position(img: EmbeddedImage) -> str | None:
+        nodes = page_nodes.get(img.page_no)
+        if img.bbox is None or not nodes:
+            return None
+        key = nearest_above(img.bbox, nodes)
+        if key is not None:
+            return key[1]
+        first = position[min(key for _bbox, key in nodes)]
+        return ordered[first - 1][1] if first > 0 else None
+
     result: list[EmbeddedImage] = []
     for img in images:
-        candidates = page_sections.get(img.page_no, [])
-        section_id = candidates[0]["section_id"] if candidates else None
+        section_id = _by_position(img)
+        # Reading order can be out of sync with the pages (BUG-005): only trust a
+        # section whose page range contains the image or ends on the page before it.
+        if section_id is None or not (
+            by_id[section_id].get("page_start", 0)
+            <= img.page_no
+            <= by_id[section_id].get("page_end", 0) + 1
+        ):
+            candidates = page_sections.get(img.page_no, [])
+            section_id = candidates[0]["section_id"] if candidates else None
         result.append(EmbeddedImage(
             image_bytes=img.image_bytes,
             page_no=img.page_no,
             width_px=img.width_px,
             height_px=img.height_px,
             section_id=section_id,
+            bbox=img.bbox,
         ))
     return result
 
@@ -525,6 +584,7 @@ def _extract_embedded_images(
                 rects = page.get_image_rects(xref)
             except Exception:
                 rects = []
+            bbox = None
             if rects:
                 bbox = rects[0]
                 # filter 2: area fraction
@@ -557,6 +617,14 @@ def _extract_embedded_images(
                 page_no=page_no,
                 width_px=w,
                 height_px=h,
+                bbox=None if bbox is None else BoundingBox(
+                    x0=bbox.x0,
+                    y0=page_h - bbox.y0,
+                    x1=bbox.x1,
+                    y1=page_h - bbox.y1,
+                    page_no=page_no,
+                    coordinate_origin="bottomleft",
+                ),
             ))
 
     doc.close()

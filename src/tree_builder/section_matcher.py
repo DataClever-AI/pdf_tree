@@ -11,16 +11,21 @@ Algorithm:
      block on that page to whichever section sorts first, starving the rest
      (node_count=0). Reading order — Docling's global sequential block index —
      pins each section's true start regardless of page-sharing.
-  4. Assign tables by page_no (Docling doesn't give tables a reading_order,
-     so this is a known coarser fallback — acceptable since tables are a
-     small fraction of content and rarely collide within a shared page).
+  4. Assign tables by their position on the page: a table gets the reading
+     order of the nearest text block printed above it (Docling doesn't give
+     tables a reading_order). A table at the top of a page continues the
+     previous content. Tables without a bbox, or whose position points to a
+     section more than one page away from its page range (reading order out
+     of sync, BUG-005), fall back to page_no (deepest section on the page).
+     Chapter 'Contents' boxes and tables on pages shared by sibling sections
+     depend on this (BUG-001, BUG-003).
 """
 from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
 
-from src.models.extraction import DoclingDocument, DoclingTable, DoclingTextBlock
+from src.models.extraction import BoundingBox, DoclingDocument, DoclingTable, DoclingTextBlock
 from src.tree_builder.title_verification import TitleVerification
 
 
@@ -234,6 +239,63 @@ def _compute_reading_order_ranges(
     return ranges
 
 
+# A block counts as "above" a table or image when its bottom is at most this many
+# points below the table's top edge (bboxes of adjacent items can touch or overlap).
+_ABOVE_TOLERANCE = 2.0
+
+
+def vertical_span(bbox: BoundingBox) -> tuple[float, float]:
+    """
+    (top, bottom) of a bbox, with larger values higher on the page for either origin.
+
+    Only bboxes in the same coordinate frame can be compared.
+    """
+    if bbox.coordinate_origin == "bottomleft":
+        return max(bbox.y0, bbox.y1), min(bbox.y0, bbox.y1)
+    return -min(bbox.y0, bbox.y1), -max(bbox.y0, bbox.y1)
+
+
+def nearest_above[T](target: BoundingBox, items: list[tuple[BoundingBox, T]]) -> T | None:
+    """
+    Payload of the item printed closest above ``target`` on the same page.
+
+    Items that overlap the target horizontally win over items in another column;
+    None when nothing is above the target.
+    """
+    top, _bottom = vertical_span(target)
+    above: list[tuple[bool, float, T]] = []
+    for bbox, payload in items:
+        _item_top, item_bottom = vertical_span(bbox)
+        if item_bottom < top - _ABOVE_TOLERANCE:
+            continue
+        overlaps = min(bbox.x1, target.x1) > max(bbox.x0, target.x0)
+        above.append((overlaps, item_bottom - top, payload))
+    if not above:
+        return None
+    same_column = [item for item in above if item[0]] or above
+    return min(same_column, key=lambda item: item[1])[2]
+
+
+def _table_position(
+    table: DoclingTable, blocks_by_page: dict[int, list[DoclingTextBlock]]
+) -> int | None:
+    """
+    Reading order of the text block the table follows, or None when it can't be placed.
+
+    That is the nearest block above the table; for a table above every block of its
+    page, the block just before the page (the table continues the previous content).
+    """
+    page_blocks = blocks_by_page.get(table.page_no, [])
+    if table.bbox is None or not page_blocks:
+        return None
+    placed = [(block.bbox, block) for block in page_blocks if block.bbox is not None]
+    block = nearest_above(table.bbox, placed)
+    if block is not None:
+        return block.reading_order
+    previous = page_blocks[0].reading_order - 1
+    return previous if previous >= 0 else None
+
+
 def _assign_content(
     sections: list[MatchedSection],
     reading_order_ranges: dict[str, tuple[int, int]],
@@ -244,7 +306,8 @@ def _assign_content(
     with the tightest/most specific containing interval wins — equivalent
     to "deepest" without relying on level matching exactly).
 
-    Assign tables by page_no (see module docstring — known coarser fallback).
+    Assign tables by their position on the page (see module docstring); tables
+    without a bbox fall back to the deepest section on their page.
     """
     def _tightest(containing: list[MatchedSection]) -> MatchedSection:
         return min(
@@ -253,16 +316,24 @@ def _assign_content(
             - reading_order_ranges[s.section_id][0],
         )
 
-    for block in doc.text_blocks:
+    def _owner(position: int) -> MatchedSection | None:
         containing = [
             s
             for s in sections
             if reading_order_ranges[s.section_id][0]
-            <= block.reading_order
+            <= position
             <= reading_order_ranges[s.section_id][1]
         ]
-        if containing:
-            _tightest(containing).text_blocks.append(block)
+        return _tightest(containing) if containing else None
+
+    blocks_by_page: dict[int, list[DoclingTextBlock]] = {}
+    for block in doc.text_blocks:
+        blocks_by_page.setdefault(block.page_no, []).append(block)
+        owner = _owner(block.reading_order)
+        if owner is not None:
+            owner.text_blocks.append(block)
+    for page_blocks in blocks_by_page.values():
+        page_blocks.sort(key=lambda b: b.reading_order)
 
     page_sections: dict[int, list[MatchedSection]] = {}
     for sec in sections:
@@ -272,9 +343,16 @@ def _assign_content(
         page_sections[p].sort(key=lambda s: s.level, reverse=True)
 
     for table in doc.tables:
-        candidates = page_sections.get(table.page_no, [])
-        if candidates:
-            candidates[0].tables.append(table)
+        position = _table_position(table, blocks_by_page)
+        owner = _owner(position) if position is not None else None
+        # Reading order can be out of sync with the pages (BUG-005): only trust an
+        # owner whose page range contains the table or ends on the page before it
+        # (a table continued at the top of the next page).
+        if owner is None or not owner.page_start <= table.page_no <= owner.page_end + 1:
+            candidates = page_sections.get(table.page_no, [])
+            owner = candidates[0] if candidates else None
+        if owner is not None:
+            owner.tables.append(table)
 
 
 def match_content_to_sections(
