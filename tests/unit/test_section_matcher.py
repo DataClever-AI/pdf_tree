@@ -241,3 +241,23 @@ def test_table_keeps_page_placement_when_reading_order_is_out_of_sync():
     assert _texts(elements) == ["Operating elements", "Text read out of order."]
     assert _table_ids(elements) == []
     assert _table_ids(bonding) == ["t"]
+
+
+def test_table_right_of_a_left_aligned_heading_follows_the_heading():
+    blocks = [
+        _block(0, "Previous", 1, "section_header", top=700),
+        _block(1, "Running header", 2, top=780),
+        DoclingTextBlock(
+            "b2", "Power Cord", "section_header", 2, 2, 0,
+            ExtractionProvenance(source="docling", page_no=2),
+            bbox=_box(2, 720, 700, x0=36, x1=118),
+        ),
+    ]
+    bookmarks = [(2, "Previous", 1), (2, "Power Cord", 2)]
+    tables = [DoclingTable(
+        "cords", 2, ExtractionProvenance(source="docling", page_no=2),
+        bbox=_box(2, 680, 300, x0=300, x1=550),
+    )]
+    previous, power_cord = match_content_to_sections(bookmarks, _doc(blocks, 2, tables), 2)
+    assert _table_ids(previous) == []
+    assert _table_ids(power_cord) == ["cords"]
