@@ -1,0 +1,124 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p61 the heading '2. Air Line' is a sub-level of the chapter 'FUEL INJECTION (FUEL SYSTEM)'. The tree has sec_0015 at hierarchy_level 4 under sec_0013 at level 3. The sibling sections sec_0014 and sec_0016 are also level 4.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0015 has parent_section_id sec_0013. sec_0013 lists sec_0015 in child_sections next to sec_0014 and sec_0016. sec_0015 has no children. The sub-headings A: GENERAL to E: IDLE AIR CONTROL SOLENOID VALVE on p61 to p63 are printed sub-parts, not bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Node #/texts/817 '2. Air Line' is on p61 and starts the section after sec_0014 (p60). The last body nodes are on p63 (#/texts/861 to #/texts/866, end of E: IDLE AIR CONTROL SOLENOID VALVE with its figure legend). The next section sec_0016 starts on p64. All 51 nodes belong to Air Line.",
+   "notes": "Only running headers and folios of its own pages are in the range. They do not cross into sec_0014 or sec_0016. verify_claims flags 'AIR LINE' on p61, but that is the running header of p61 itself. p62 was not rendered, so p62 ownership is checked from node text only.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)/2. Air Line. The order is correct. The page header on p61 says 'Fuel Injection (Fuel System)' and the title '2. Air Line' is under it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p61 the sub-heading 'B: INTAKE MANIFOLD PRESSURE AND AIR TEMPERATURE SENSORS' is not missing. It is the last part of the text of node #/texts/821 (semantic_order 857). No other node repeats it. The other sub-headings are present once: A: GENERAL is #/texts/818, C: THROTTLE BODY is #/texts/827, D: THROTTLE POSITION SENSOR is #/texts/837 (p62) and E: IDLE AIR CONTROL SOLENOID VALVE is #/texts/852 (p63). All body text seen on p61 and p63 is in sec_0015 once.",
+   "notes": "Minor label issue: heading B is merged into the paragraph node #/texts/821. The next body paragraph #/texts/822 is typed 'heading'. The same happens for #/texts/828, #/texts/840 and #/texts/853. No text is lost and retrieval still works, so I did not mark FAIL. The cause is probably Docling node typing.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title '2. Air Line' is visible on p61 at the declared page_start. So the not-flagged state is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '2. Air Line' is on p61, the same page as the bookmark. The parent sec_0013 and the siblings sec_0014 and sec_0016 also use 'toc'. There is no sign of an inferred title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The section titles use arabic numbers ('2. Air Line') and the bookmark pages are arabic. The printed folios on p61 and p63 are chapter-prefixed ('FU-3', 'FU-5').",
+   "notes": "Low confidence. The folio 'FU-n' is alphanumeric, but the tree uses the bookmark page numbers, which are arabic and match the physical pages. I saw no wrong result from it.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page 61 is the physical page 61, and '2. Air Line' is printed there. The folio 'FU-3' is a chapter-local number and is not used for page mapping. Section end p63 (FU-5) and next start p64 agree.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p61 has the sensor drawing (labels (1) Pressure sensor, (2) Intake air temperature sensor, code H2H2825B). p63 has the idle air control solenoid valve drawing (labels (1) to (5)). images_v1.json has images for sec_0015 on p61, p62 and p63. No meaningful figure looks dropped on the rendered pages. p62 was not rendered.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images_v1.json has 3 images for sec_0015: one each on p61, p62 and p63. On p61 the image is the sensor drawing H2H2825B. On p63 it is the solenoid valve drawing B2H2005B. I saw no logo, rule or footer divider extracted as an image on p61 or p63. The header rule and the 'FU-3' and 'FU-5' folios are text, not images.",
+   "notes": "Header and folio text nodes are not judged here. This row checks image extraction only. p62 was not rendered, so I judge its image only by size (1820x1038 px), which fits a figure.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p61 sensor drawing and the p63 solenoid valve drawing are both printed under '2. Air Line'. images_v1.json maps images on p61, p62 and p63 to sec_0015. sec_0014 ends on p60 and sec_0016 starts on p64, so no sibling shares these pages. p62 was not rendered.",
+   "notes": "",
+   "confidence": 0.87
+  }
+ ]
+}

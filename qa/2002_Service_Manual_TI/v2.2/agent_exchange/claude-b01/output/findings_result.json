@@ -1,0 +1,874 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p21 the title 'FUEL INJECTION (FUEL SYSTEM)' is a main heading and the section has hierarchy_level 3. Its parent sec_0002 ('NEW CAR INFORMATION SECTION') is one level higher.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0006 is listed under sec_0002 ('NEW CAR INFORMATION SECTION'), which matches the chapter it belongs to on the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p21 the chapter title and the Contents box (1. General to 6. On-board Diagnosis System) belong to this section. The page numbers 22 to 58 are the range of its child sections. The nodes are all on p21.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'FUEL INJECTION (FUEL SYSTEM)' under 'NEW CAR INFORMATION SECTION'. The order matches the document structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All p21 content is in sec_0006 once: title, 'FU', 'Page' and the six Contents lines. The children sec_0007 to sec_0012 follow in order with no gap.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. The title is visible at the top of p21, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'FUEL INJECTION (FUEL SYSTEM)' appears on p21 where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages show chapter-prefixed folios (FU-n), not roman numbers.",
+   "notes": "The FU- prefix is not modelled as a separate scheme. Probably acceptable because bookmarks use physical pages.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical p21, the page in page_start. Printed folios use a chapter prefix (FU-n), and the PDF bookmarks point to physical pages, so offset 0 is consistent.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p21 the Contents box has six lines. Line '1. General ... 2' is in paragraph #/texts/126. Only lines 2 to 6 are in table #/tables/31.",
+   "notes": "The table lost its first row, but all lines and page numbers still exist in this section in order, so every value stays tied to its title. Graded Low, not Medium, for that reason. Probably a Docling table split.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 shows only text, a black title rule and a round tab at the page edge. I see no meaningful picture that was dropped.",
+   "notes": "The image list is not in the input, so this is judged from the rendering.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The rule under the title and the round edge tab on p21 are decorative. The nodes list no image for them.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 has no photo or diagram, so there is nothing to map to a section.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p22 the title '1. General' is a main heading and the section has hierarchy_level 4. Its parent sec_0006 ('FUEL INJECTION (FUEL SYSTEM)') is one level higher.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0007 is listed under sec_0006 ('FUEL INJECTION (FUEL SYSTEM)'), which matches the chapter it belongs to on the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p22 the section starts at '1. General' and the body text ends at 'Superior startability...'. But page_end is 22 and nodes #/texts/143 and #/texts/144 are on p23. They are only the p23 page-top slug ('W2290GE_02_FU.fm 3 ページ') and a Japanese date line.",
+   "notes": "Only boilerplate crosses the boundary. Cause: BUG-022. No body text is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '1. General' under 'FUEL INJECTION (FUEL SYSTEM)'. The order matches the document structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All p22 text is in sec_0007: the intro, the paragraphs and five bullet items. Nothing is duplicated. The next section sec_0008 starts on p23.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is true but verification_score is 100 and verification_reason is empty. The title '1. General' is at the top of p22, so the placement is right.",
+   "notes": "The flag has no reason and is probably a false alarm. It is not a defect by itself.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '1. General' appears on p22 where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages show chapter-prefixed folios (FU-n), not roman numbers.",
+   "notes": "The FU- prefix is not modelled as a separate scheme. Probably acceptable because bookmarks use physical pages.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical p22, the page in page_start. Printed folios use a chapter prefix (FU-n), and the PDF bookmarks point to physical pages, so offset 0 is consistent.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p22 has text only. I see no picture or diagram that was dropped.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p22 has no decorative element. The nodes list no image.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p22 has no image, so there is nothing to map.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p28 the title '3. Fuel Line' is a main heading and the section has hierarchy_level 4. Its parent sec_0006 ('FUEL INJECTION (FUEL SYSTEM)') is one level higher.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0009 is listed under sec_0006 ('FUEL INJECTION (FUEL SYSTEM)'), which matches the chapter it belongs to on the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p28 the section starts at '3. Fuel Line' and 'A: GENERAL'. The last content is on p38 ('F: SUB-COMPARTMENT FUEL LEVEL SENSOR'). But page_end is 38 and #/texts/444 to #/texts/446 are on p39. They are the p39 running header: the slug, a date line and 'SENSORS AND SWITCHES'.",
+   "notes": "Only running-header boilerplate crosses the boundary, so Low. verify_claims suggests Medium because the header shows the next title, but page_end 38 is the true content end. Cause: BUG-022.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '3. Fuel Line' under 'FUEL INJECTION (FUEL SYSTEM)'. The order matches the document structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Headings A to F and the numbered sub-headings 1 to 3 are present once in order on p28 to p38. I found no gap or duplicate.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. '3. Fuel Line' is at the top of p28, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '3. Fuel Line' appears on p28 where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages show chapter-prefixed folios (FU-n), not roman numbers.",
+   "notes": "The FU- prefix is not modelled as a separate scheme. Probably acceptable because bookmarks use physical pages.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical p28, the page in page_start. Printed folios use a chapter prefix (FU-n), and the PDF bookmarks point to physical pages, so offset 0 is consistent.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p28 has the Fuel Line diagram (code B2H2907B) with an 18-item legend. The nodes contain the legend text, and verify_claims found no missing figure.",
+   "notes": "The image list is not in the input, so I could not see the extracted file. Confidence is lower.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p28 I see no logo, rule or decorative image that would count as noise. Only the diagram is a real figure.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p28 has one diagram (B2H2907B) and the whole page belongs to '3. Fuel Line', so sec_0009 is the right owner.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p54 the title '5. Control System' is a main heading and the section has hierarchy_level 4. Its parent sec_0006 ('FUEL INJECTION (FUEL SYSTEM)') is one level higher.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0011 is listed under sec_0006 ('FUEL INJECTION (FUEL SYSTEM)'), which matches the chapter it belongs to on the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p54 the section continues with '3. AIR-FUEL RATIO FEEDBACK FACTOR' and '4. LEARNING FEATURE'. It starts on p50 and its content ends on p57. But page_end is 57 and #/texts/775 to #/texts/778 are on p58. They are the p58 slug, a date line, 'ON-BOARD DIAGNOSIS SYSTEM' and the running header.",
+   "notes": "Only running-header boilerplate crosses the boundary, so Low. verify_claims suggests Medium because the header shows the next title, but page_end 57 is the true content end. Cause: BUG-022.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '5. Control System' under 'FUEL INJECTION (FUEL SYSTEM)'. The order matches the document structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p54 text is in sec_0011 once, in order. The sub-heading number '4.' is missing in #/texts/702 ('LEARNING FEATURE') but the heading text is kept. No gap or duplicate.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. The heading '5. Control System' is at the top of p50, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '5. Control System' appears on p54 where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages show chapter-prefixed folios (FU-n), not roman numbers.",
+   "notes": "The FU- prefix is not modelled as a separate scheme. Probably acceptable because bookmarks use physical pages.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical p54, the page in page_start. Printed folios use a chapter prefix (FU-n), and the PDF bookmarks point to physical pages, so offset 0 is consistent.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p57 the Fuel Pump Control table has a header row and four data rows. Table #/tables/33 has only three rows (no header, no first row). The header is in #/texts/768 and the first row is in #/texts/769. On p51 the same pattern appears: #/texts/645 'Signal Unit Function' is typed as heading, and #/tables/32 starts in mid-sentence.",
+   "notes": "The table node alone has no column names, so its values cannot be tied to columns without the nearby paragraph. Values are still in reading order in nearby nodes. Probably a Docling table split. p51 was not rendered in the input; that part is from node text only.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p54 has the feedback-loop diagram (B2H0989B) with a legend of six items and A to F keys. The nodes contain the legend text. verify_claims found no missing figure.",
+   "notes": "The image list is not in the input. Confidence is lower.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p54 has no logo or decorative image. Only the technical diagram is a figure.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The diagram on p54 sits under '3. AIR-FUEL RATIO FEEDBACK FACTOR' inside sec_0011, and no other section starts on p54.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p61 the title '2. Air Line' is a main heading and the section has hierarchy_level 4. Its parent sec_0013 ('FUEL INJECTION (FUEL SYSTEM)') is one level higher.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0015 is listed under sec_0013 ('FUEL INJECTION (FUEL SYSTEM)'), which matches the chapter it belongs to on the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p61 the section starts at '2. Air Line'. The last content is on p63 (E: IDLE AIR CONTROL SOLENOID VALVE), which matches page_end 63. The next section '3. Fuel Line' starts on p64. All nodes are on p61 to p63.",
+   "notes": "verify_claims flags 'AIR LINE' on p61, but it is the running header of the section's own page, not another section's content.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '2. Air Line' under 'FUEL INJECTION (FUEL SYSTEM)'. The order matches the document structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p61 the sub-heading 'B: INTAKE MANIFOLD PRESSURE AND AIR TEMPERATURE SENSORS' is printed above the sensor paragraph. It is not in any node of sec_0015. Node #/texts/822 starts with the body text 'The intake manifold pressure sensor...' and is typed as heading.",
+   "notes": "The body text is kept in the right section, but the heading text is lost. Probably a Docling heading miss. Impact: users cannot find part B by title.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. '2. Air Line' is at the top of p61, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '2. Air Line' appears on p61 where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages show chapter-prefixed folios (FU-n), not roman numbers.",
+   "notes": "The FU- prefix is not modelled as a separate scheme. Probably acceptable because bookmarks use physical pages.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical p61, the page in page_start. Printed folios use a chapter prefix (FU-n), and the PDF bookmarks point to physical pages, so offset 0 is consistent.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p61 has the sensor drawing (H2H2825B) with a two-item legend. The legend text is in nodes #/texts/825 and #/texts/826. verify_claims found no missing figure.",
+   "notes": "The image list is not in the input. Confidence is lower.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p61 has no logo or decorative image. Only the sensor drawing is a figure.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 61,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The sensor drawing on p61 is under part B of '2. Air Line'. sec_0015 covers the whole page, so it is the right owner.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p68 the title '3. Fuel Line' is a main heading and the section has hierarchy_level 4. Its parent sec_0013 ('FUEL INJECTION (FUEL SYSTEM)') is one level higher.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0016 is listed under sec_0013 ('FUEL INJECTION (FUEL SYSTEM)'), which matches the chapter it belongs to on the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p64 at '3. Fuel Line'. The last content is on p73 (F: SUB-COMPARTMENT FUEL LEVEL SENSOR), matching page_end 73. The sampled p68 has only the fuel tank sentence, one drawing and its legend, all inside sec_0016. No node is on p74.",
+   "notes": "verify_claims flags 'FUEL LINE' on p64, but it is the running header of the section's own page, not another section's content.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '3. Fuel Line' under 'FUEL INJECTION (FUEL SYSTEM)'. The order matches the document structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p68 the intro sentence, the legend (1) Band, (2) Cushion, (3) Steel and the code B2H2913C are in sec_0016 once. Headings A to F are present on p64 to p73.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. '3. Fuel Line' is at the top of p64, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '3. Fuel Line' appears on p68 where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages show chapter-prefixed folios (FU-n), not roman numbers.",
+   "notes": "The FU- prefix is not modelled as a separate scheme. Probably acceptable because bookmarks use physical pages.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical p68, the page in page_start. Printed folios use a chapter prefix (FU-n), and the PDF bookmarks point to physical pages, so offset 0 is consistent.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 has a 3D drawing of the fuel tank with hold-down bands (B2H2913C) and a detail of the cushion. The legend text is in nodes #/texts/960 to #/texts/965. verify_claims found no missing figure.",
+   "notes": "The image list is not in the input. Confidence is lower.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 has no logo or decorative image. Only the tank drawing is a figure.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0016",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The tank drawing on p68 sits inside '3. Fuel Line'. sec_0016 covers all of p68, so it is the right owner.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p88 the title '5. Control System' is a main heading and the section has hierarchy_level 4. Its parent sec_0013 ('FUEL INJECTION (FUEL SYSTEM)') is one level higher.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 is listed under sec_0013 ('FUEL INJECTION (FUEL SYSTEM)'), which matches the chapter it belongs to on the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p88 the section continues with 'D: IGNITION SYSTEM CONTROL'. It starts on p83 and its content ends on p90. But page_end is 90 and #/texts/1390 to #/texts/1392 are on p91. They are the p91 slug, a date line and 'ON-BOARD DIAGNOSIS SYSTEM'.",
+   "notes": "Only running-header boilerplate crosses the boundary, so Low. verify_claims suggests Medium because the header shows the next title, but page_end 90 is the true content end. Cause: BUG-022.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '5. Control System' under 'FUEL INJECTION (FUEL SYSTEM)'. The order matches the document structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p88 text is in sec_0018 once. The sentence about 10 degrees BTDC is split across nodes #/texts/1343 to #/texts/1351, but all words are in this section. No gap or duplicate.",
+   "notes": "The split text is probably a reading-order effect around the degree symbols.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. '5. Control System' is at the top of p83, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '5. Control System' appears on p88 where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages show chapter-prefixed folios (FU-n), not roman numbers.",
+   "notes": "The FU- prefix is not modelled as a separate scheme. Probably acceptable because bookmarks use physical pages.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical p88, the page in page_start. Printed folios use a chapter prefix (FU-n), and the PDF bookmarks point to physical pages, so offset 0 is consistent.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p90 the Fuel Pump Control table has a header row and four data rows. Table #/tables/36 has only three rows. The header is in #/texts/1386 and the first row is in #/texts/1387. On p84, #/texts/1261 'Signal Unit Function' is typed as heading and #/tables/35 has an empty first column.",
+   "notes": "The table node alone has no column names, so its values cannot be tied to columns without the nearby paragraph. Values are still in reading order in nearby nodes. Probably a Docling table split. p84 was not rendered in the input; that part is from node text only.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p88 has the ignition block diagram (B2H3827B) with sensor boxes, ECM and spark plugs. Only 'Ignition coil and ignitor assembly' appears as text in the nodes. verify_claims found no missing figure.",
+   "notes": "The image list is not in the input, so I could not see the extracted file. Confidence is lower.",
+   "confidence": 0.55
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p88 has no logo or decorative image. Only the ignition diagram is a figure.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The ignition diagram on p88 sits under 'D: IGNITION SYSTEM CONTROL'. sec_0018 covers all of p88, so it is the right owner.",
+   "notes": "The image list is not in the input.",
+   "confidence": 0.65
+  }
+ ]
+}
