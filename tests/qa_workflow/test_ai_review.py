@@ -50,6 +50,11 @@ def test_shared_folder_progress_and_draft(qa_version) -> None:
     progress = detect_agent_batch(batch, provider="codex")
     assert progress.stage == "Draft ready"
     assert not qa_version.findings_csv.read_text().count("PASS")
+    draft = batch.root / "validated_draft.json"
+    before = draft.read_bytes()
+    assert detect_agent_batch(batch).stage == "Draft ready"  # page 7 opens the batch again
+    assert draft.read_bytes() == before
+    assert json.loads(before)["provider"] == "codex"
 
 
 def test_qwen_resume_skips_completed_sections(qa_version) -> None:
