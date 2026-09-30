@@ -326,3 +326,22 @@ def test_page_end_grows_by_one_page_at_most():
     bookmarks = [(2, "Operating elements", 1), (2, "Cushions", 2)]
     elements, _cushions = match_content_to_sections(bookmarks, _paged_doc(blocks, 5), 5)
     assert elements.page_end == 1
+
+
+def test_page_end_ignores_a_split_heading_of_the_next_section():
+    # LOGIQ_S8 p73: 'Section 1-9' is read before the rest of the title, so the previous
+    # section owns it; that alone must not extend its page_end.
+    blocks = [
+        _block(0, "Section 1-8 Returning", 1, "section_header", top=700),
+        _block(1, "Shipping text.", 1, top=650),
+        _block(2, "Section 1-9", 2, "section_header", top=726),
+        _block(3, "Electromagnetic Compatibility", 2, "section_header", top=712),
+        _block(4, "EMC text.", 2, top=680),
+    ]
+    bookmarks = [
+        (2, "Section 1-8 Returning", 1),
+        (2, "Electromagnetic Compatibility", 2),
+    ]
+    returning, _emc = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert "Section 1-9" in _texts(returning)
+    assert returning.page_end == 1
