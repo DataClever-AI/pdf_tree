@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import json
 import urllib.error
 
@@ -38,6 +39,27 @@ def test_schema_rejects_invalid_and_duplicate_rows(qa_version) -> None:
     assert not checked.is_valid
     assert any("FAIL requires" in error for error in checked.errors)
     assert any("duplicate" in error for error in checked.errors)
+
+
+def test_batch_lists_the_images_of_its_sections(qa_version) -> None:
+    tree = json.loads(qa_version.tree_path.read_text())
+    section = next(row["section_id"] for row in load_findings(qa_version.findings_csv))
+    page = next(s["page_start"] for s in tree if s["section_id"] == section)
+    png = base64.b64encode(b"png-bytes").decode()
+    qa_version.images_path.write_text(json.dumps({"images": [
+        {"section_id": section, "page_no": 999, "width_px": 10, "height_px": 20, "image_b64": png},
+        {"section_id": "sec_other", "page_no": page, "width_px": 30, "height_px": 40,
+         "image_b64": png},
+        {"section_id": "sec_other", "page_no": 998, "width_px": 1, "height_px": 1,
+         "image_b64": png},
+    ]}))
+    batch = prepare_agent_batch(qa_version, "images", section_ids=[section])
+    listed = json.loads((batch.input_dir / "images.json").read_text())["images"]
+    assert [(image["image_id"], image["section_id"]) for image in listed] == [
+        ("img_0000", section),
+        ("img_0001", "sec_other"),
+    ]
+    assert (batch.input_dir / "images" / "img_0001.png").read_bytes() == b"png-bytes"
 
 
 def test_shared_folder_progress_and_draft(qa_version) -> None:

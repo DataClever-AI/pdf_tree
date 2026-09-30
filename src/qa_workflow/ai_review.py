@@ -263,8 +263,13 @@ with a `findings` array. Every row must contain section_id, page_sampled,
 checklist_ref, result (PASS/FAIL), severity (required for FAIL, empty for PASS),
 specific English evidence, notes, and confidence (0..1). Do not omit uncertain rows;
 use a low confidence and explain the uncertainty.
+
+`images.json` lists the extracted images of these sections and of the pages in `pages/`,
+with the section each one is mapped to; the PNG files are in `images/`. Use it for the
+image checks (`5.5-*`).
 """
     atomic_write_text(input_dir / "INSTRUCTIONS.md", instructions)
+    rendered: set[int] = set()
     for job in jobs:
         section = job["section"]
         pages = {
@@ -276,9 +281,11 @@ use a low confidence and explain the uncertainty.
                 if question["page_sampled"]
             ),
         }
+        rendered |= pages
         for page in sorted(pages):
             target = pages_dir / f"{section['section_id']}_p{page}.png"
             atomic_write_bytes(target, render_pdf_page(integrity.source_path, page))
+    _write_batch_images(qa_version, input_dir, selected, rendered)
     atomic_write_json(
         root / "batch_manifest.json",
         {
@@ -293,6 +300,34 @@ use a low confidence and explain the uncertainty.
         },
     )
     return AgentBatch(batch_id, root, input_dir, output_dir, tuple(sorted(selected)))
+
+
+def _write_batch_images(
+    qa_version: QAVersion, input_dir: Path, sections: set[str], pages: set[int]
+) -> None:
+    """Images mapped to the batch sections or printed on its rendered pages, with their PNGs."""
+    records = []
+    if qa_version.images_path.exists():
+        images = json.loads(qa_version.images_path.read_text(encoding="utf-8"))
+        for index, image in enumerate(images.get("images", [])):
+            if image.get("section_id") not in sections and image.get("page_no") not in pages:
+                continue
+            image_id = f"img_{index:04d}"
+            records.append(
+                {
+                    "image_id": image_id,
+                    "section_id": image.get("section_id"),
+                    "page_no": image.get("page_no"),
+                    "width_px": image.get("width_px"),
+                    "height_px": image.get("height_px"),
+                    "file": f"images/{image_id}.png",
+                }
+            )
+            atomic_write_bytes(
+                input_dir / "images" / f"{image_id}.png",
+                base64.b64decode(image.get("image_b64", "")),
+            )
+    atomic_write_json(input_dir / "images.json", {"schema_version": 1, "images": records})
 
 
 def detect_agent_batch(batch: AgentBatch, *, provider: str = "external-agent") -> BatchProgress:
