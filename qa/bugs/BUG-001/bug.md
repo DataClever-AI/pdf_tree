@@ -1,9 +1,9 @@
 ---
 bug_id: BUG-001
-status: open
+status: in-progress
 finding: H-05
-fix_branch: 
-fix_commit: 
+fix_branch: fix/BUG-001-positional-placement
+fix_commit: fa0bc0b, 4bff4c2
 updated: 2026-09-29
 ---
 
@@ -23,10 +23,12 @@ Hypothesis: `section_matcher` assigns content by reading order only; the content
 
 - 2026-09-04: identified in the v1 QA review of DOC-0136477A, LOGIQ_S8 and SOMATOM_Force_IFU_VB30 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-09-29: cause confirmed. Tables and images were placed by page only: the deepest section on the page got them. Fixed in `fa0bc0b` (same change for BUG-001 and BUG-003). Mitigation versions: `DOC-0136477A` v1.1, `Philips-MP20-MP90-Manual` v2.3, `SOMATOM_Force_IFU_VB30` v1.1, `LOGIQ_S8` v1.1.
+- 2026-09-29: agent review (drafts, not approved) of the paired rows. DOC-0136477A v1.1 and Philips v2.3: most target rows pass or drop to Low. LOGIQ_S8 v1.1: the Contents box is printed under its own numbered heading in Section N-1, so it probably stays there by design. SOMATOM v1.1: most rows are not fixed, because the text on those pages is in the wrong section (BUG-005). New image regressions came from full-width running headers and margin headings. Fixed in `4bff4c2`; it needs new mitigation versions (v1.2, v2.4).
 
 ## Fix
 
-Proposed: assign blocks on pages shared by several sections by their vertical position relative to the headings on that page (same change as BUG-003, BUG-014, BUG-023).
+`section_matcher` places a table after the nearest text block printed above it on the same page (a block in the same column first). `pipeline._map_images_to_sections` does the same for images, with the text nodes of the tree. A table or image above every block of its page continues the previous content. A heading reaches to the right edge of the page and counts when it starts level with the item (margin headings), so a full-width running header does not win (`4bff4c2`). If the chosen section is more than one page away from the item's page (reading order out of sync, BUG-005), or there is no bbox, the old page-based placement is kept.
 
 ## Verification
 

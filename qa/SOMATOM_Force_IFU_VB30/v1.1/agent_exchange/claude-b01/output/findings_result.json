@@ -1,0 +1,1084 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p11 the heading \"2.1 General safety information\" is a sub-heading under the chapter title \"2 Safety information\". Level 2 under the level-1 parent sec_0004 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0004 \"Safety information\" starts on p11 and 2.1 is its first subsection. The 18 children (sec_0006 to sec_0051) are the level-3 topics under 2.1, from \"Residual risk\" (p12) to \"Disposal of the system\" (p28).",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Page start p11 is correct: heading \"2.1 General safety information\" is visible near the bottom of p11. But nodes #/texts/81 (\":$51,1*\") and #/texts/82 (\"&$87,21\") are garbled WARNING and CAUTION labels. On p11 they are in the chapter-intro legend table above the 2.1 heading, so they belong to sec_0004. Nodes #/texts/83 to #/texts/85 are footer text, and #/texts/86 is the p12 running header \"2 Safety information\". Also page_end is 27 but child sec_0051 is on p28.",
+      "notes": "Probably a reading-order problem at the chapter opening (same pattern as the known contents-box misplacement). Impact is small: two garbled labels sit in the wrong section. The page_end of 27 is one page short. Confidence lowered because p12 and p28 were not rendered. No deterministic signal exists for this row; it rests on the visible p11 legend table.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path \"/Safety information/General safety information\" matches p11, where 2.1 sits under the chapter \"2 Safety information\".",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The legend labels \":$51,1*\" and \"&$87,21\" (nodes #/texts/81, #/texts/82) are printed above the 2.1 heading on p11 in the chapter-intro table. They are assigned to sec_0005 instead of sec_0004. The section appears once and has no duplicate heading.",
+      "notes": "Same root cause as the page_start_end row. Graded by defect type: content in the wrong section. Confidence lowered because the labels are tiny and garbled.",
+      "confidence": 0.65
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with verification_score 100. The heading \"2.1 General safety information\" is visible on p11, the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading on p11 matches the bookmark title, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio on p11 is \"11\", an arabic number. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 11 is on physical page 11, so offset_applied 0 is correct. Footers on p11 and p27 also match their page numbers.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p11 page has only small icons: the black \"i\" info box icon and the WARNING and CAUTION tags. None is a diagram or screenshot, so nothing meaningful looks discarded.",
+      "notes": "No image data was provided in input/, so this is a visual judgment only.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Nothing in the section input shows a decorative logo or rule kept as an image. Page p11 has only a footer rule and small icons.",
+      "notes": "Extracted image list not available in input/; judged visually only.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 11,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Pages p11 and p27 show no figure that needs a section mapping. Only icons and text boxes are visible.",
+      "notes": "No image data in input/.",
+      "confidence": 0.65
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p25 \"Equipment of other manufacturers\" is a margin side heading, styled like its sibling \"Software manipulation\". Level 5 under sec_0044 is consistent with a bookmark-based nesting, but the deeper levels cannot be seen on the page.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0044 \"Equipment modifications\" (p24) has this section as a child, and the neighbour sec_0048 \"Software manipulation\" is the next sibling on p25. Both side headings are on p25 and fit that structure.",
+      "notes": "",
+      "confidence": 0.65
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p25 the side heading \"Equipment of other manufacturers\" is followed by body text (\"If you are planning to install equipment...\", two bullets, \"Accessory equipment connected...\", \"Any person who connects...\") and an info box. The section has one node only, #/texts/393, which is the heading text. The whole body is missing from sec_0047.",
+      "notes": "Body probably went to a neighbouring section by reading-order desynchronisation (see BUG-019 style). Retrieval of this topic returns only a title.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path ends with \"Equipment modifications/Equipment of other manufacturers\", which matches the parent sec_0044 and the title seen on p25.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "sec_0047 has only the heading node #/texts/393 (node_count 1). The p25 body text and the two info boxes are not in this section. The content is lost from this section or given to another one.",
+      "notes": "Same root cause as page_start_end: section left empty (only its heading).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The title is on p25, the declared page, so the flag state is consistent. The content defect is separate.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\" and the title is found on the declared page p25.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio on p25 is \"25\", arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 25 equals physical page 25, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p25 shows only \"i\" info icons and CAUTION tags, no diagram or screenshot. Nothing meaningful looks discarded.",
+      "notes": "No image data in input/.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is listed for this section and p25 shows only small icons. Nothing decorative looks kept.",
+      "notes": "Extracted image list not in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 25,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p25 has no figure. There is nothing to map.",
+      "notes": "No image data in input/.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p46 \"Monitor ceiling system\" is a margin side heading, like the other topic headings in this chapter. Level 5 under sec_0082 \"Furniture\" is plausible; deeper levels are not visible on the page.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0082 \"Furniture\" (p45-47) has neighbours sec_0083 \"Monitor cart\" (p45) and sec_0085 \"Accessory cart\" (p47). Monitor ceiling system is a sibling of the carts, which fits.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p46 the top half shows two \"Total weight label\" figures (60 kg and 68 kg) with \"Mono cart\" and \"Dual cart\" text. This text describes the monitor carts. The side heading \"Monitor ceiling system\" appears only after them. Nodes #/texts/883 to #/texts/887 (the heading at the top of the section and the two weight labels with cart text) are placed in sec_0084. They belong to sec_0083 \"Monitor cart\", which ends on p45. Node #/texts/904 is the p47 running header.",
+      "notes": "Reading-order or sibling-boundary error on a shared page. Also sec_0083 page_end 45 is probably one page short. The section heading is placed first while the real heading is lower on the page.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path ends with \"Furniture/Monitor ceiling system\". The title matches the side heading on p46.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Sibling content overlaps. The weight-label text about Mono cart (60 kg) and Dual cart (68 kg) on top of p46 is in sec_0084 while it describes the monitor carts (sec_0083).",
+      "notes": "Same root cause as page_start_end.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The title is on p46, so the flag is consistent. The wrong content is a separate defect.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\" and the title is on the declared page p46.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio \"46\" on p46 is arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 46 equals physical page 46, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p46 shows two 60 kg and 68 kg \"total weight\" pictograms. The same values are in the text (60 kg / 68 kg), so any drop would lose no information.",
+      "notes": "No image data in input/. Cannot confirm whether the pictograms were extracted.",
+      "confidence": 0.55
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The two pictograms on p46 are meaningful labels, not logos or rules. No decorative image is visible in the section.",
+      "notes": "No image data in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0084",
+      "page_sampled": 46,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The two weight-label pictograms on top of p46 belong to Monitor cart (sec_0083), but page-based mapping would place them in the deepest section on p46. Cannot confirm the actual mapping.",
+      "notes": "No image data in input/. If they map to sec_0084, this is a Medium sibling mismapping. Needs human check.",
+      "confidence": 0.4
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p109 \"Line On/Off reset button\" is a margin side heading, like the other side headings under Connectors. Level 4 under sec_0183 is plausible.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0183 \"Connectors\" (p108) with sibling sec_0184 \"Connector elements\" before it. The picture and list (1) to (4) at the top of p109 describe connector elements, so the sibling relation fits.",
+      "notes": "",
+      "confidence": 0.65
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p109 the side heading \"Line On/Off reset button\" is followed by two body paragraphs (\"With the Line On/Off reset button, you can disconnect the entire system...\", \"The system does not automatically check...\"). The section has only heading node #/texts/2566. Both paragraphs are missing from sec_0185.",
+      "notes": "Body probably assigned to another section by reading order. Also the connector photo and list (1) to (4) at the top of p109 belong to sec_0184 (page_end 108).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path \"/System description/Scan unit (gantry)/Connectors/Line On/Off reset button\" matches the chapter 3 context and the title seen on p109.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "sec_0185 holds only its heading (node_count 1). The two paragraphs that follow the heading on p109 are not in this section.",
+      "notes": "Same root cause as page_start_end: section left empty because its body went to a neighbour.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The title is on p109, so the flag state is consistent.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\" and the title is on the declared page p109.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio \"109\" is arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 109 equals physical page 109, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p109 shows a large gantry connector photo with numbered callouts (1) to (4). The section input lists no image. Cannot confirm the photo was extracted.",
+      "notes": "No image data in input/. If the photo is not in images_v1.json this could be a meaningful figure dropped. Needs human check.",
+      "confidence": 0.4
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo or rule is visible on p109 apart from the footer line. No image noise is evident.",
+      "notes": "No image data in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0185",
+      "page_sampled": 109,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The connector photo at the top of p109 describes \"Connector elements\" (sec_0184, p108), not \"Line On/Off reset button\". Cannot confirm to which section the image was mapped.",
+      "notes": "No image data in input/. Page-based mapping could put it in the wrong section. Needs human check.",
+      "confidence": 0.4
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p124 the heading \"3.5.4 Control box\" is a numbered level-3 heading in chapter 3. Level 3 is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0209 \"syngo Acquisition Workplace\" (p121-127) is section 3.5. The children sec_0214, sec_0215 and sec_0216 (pp125-127) are its sub-topics: operating elements, keys and On/Off keys. This fits.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p124 the section starts at the heading \"3.5.4 Control box\" and its intro, bullets and info box are in the section. The top info box about Computer On/Off correctly stays out. Only boilerplate crosses the boundary: #/texts/2630 to #/texts/2632 (footer) and #/texts/2633 (p125 running header \"3 System description\").",
+      "notes": "Only boilerplate crosses the boundary. Known pattern of running headers and footers kept as paragraph nodes.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path \"/System description/syngo Acquisition Workplace/Control box\" is correct for 3.5.4 under 3.5.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section appears once. Its intro text, four bullets, info box and radiation lamp text on p124 are all present. The page range 124 to 127 also covers the three children.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The heading \"3.5.4 Control box\" is on p124, the declared page.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The numbered heading on p124 matches the bookmark.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folios \"124\" and \"127\" are arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 124 equals physical page 124, and 127 equals 127. offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p124 has no diagram, only \"i\" icons. p127 has two LED photos (\"Computer On\" and \"System Off\"); they belong to child sec_0216. Cannot confirm the photos were extracted.",
+      "notes": "No image data in input/.",
+      "confidence": 0.5
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is visible on p124 or p127 except the footer rule and \"i\" icons.",
+      "notes": "No image data in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0213",
+      "page_sampled": 124,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The two LED photos on p127 belong to the child \"On/Off keys\" (sec_0216, pp126-127), not to the parent. Mapping to the deepest section would be correct. Cannot confirm.",
+      "notes": "No image data in input/.",
+      "confidence": 0.5
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p131 \"Equipotential bonding connector pin\" is a margin side heading like its siblings \"Mattress with flat surface\" and \"Mattress for flat table top\". Level 5 under sec_0224 is plausible because the pin is shown on the spill-protection mattress.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0224 \"Mattress with spill protection\" (p130) is the mattress in the top photo on p131, and the pin is item 2 on that photo. The parent link is plausible.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The only node, #/texts/4942, is \"2 Equipotential bonding connector pin\". On p131 this is item 2 in the figure legend, not the heading. The real side heading is lower on the page, with the paragraph \"The connector pin is used for potential equalization...\". That paragraph is not in sec_0225. The legend line belongs to the previous section.",
+      "notes": "Probably the figure legend was taken as the heading by title matching, and the body went to a neighbour. Also sec_0224 page_end 130 is probably short because its figure is on p131.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path ends with \"Mattress with spill protection/Equipotential bonding connector pin\", which matches the mattress photo on p131 and the title.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "sec_0225 holds only the legend line \"2 Equipotential bonding connector pin\". The body paragraph under the real heading on p131 is missing, and the legend line is content of the figure in the previous section.",
+      "notes": "Same root cause as page_start_end.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The title text is on p131 (in the legend and as side heading), so the score is consistent. The content is wrong, but the flag is not the defect.",
+      "notes": "Title matching probably scored the legend line as a match.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\" and the title appears on the declared page p131.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio \"131\" is arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 131 equals physical page 131, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "p131 has a small photo of the flat mattress (about 2% of the page) next to the side heading \"Mattress with flat surface\". A deterministic check found a raster of 528x326 px on p131 that is not in images_v1.json. The large mattress photo at the top of p131 is the main figure.",
+      "notes": "The small photo belongs to sec_0226, not to this section. It looks dropped by the 2% area filter. Graded Low because it is a small product illustration already named and described in the text; the deterministic check expected Critical for any dropped raster. Human should confirm.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo or rule is visible on p131 besides the footer line and the \"i\" icon.",
+      "notes": "No image data in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0225",
+      "page_sampled": 131,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The large photo at the top of p131 shows the spill-protection mattress with the pin, so it belongs to sec_0224 or sec_0225. The small photo next to \"Mattress with flat surface\" belongs to sec_0226. Cannot confirm how the images were mapped.",
+      "notes": "No image data in input/. Needs human check.",
+      "confidence": 0.4
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p152 \"Scan ranges\" is a margin side heading, like other topics in 3.7. Level 4 under \"Distance enlargements\" (sec_0268) fits.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0268 \"Distance enlargements\" (p151) is followed by children sec_0270 and this section. The text on p152 speaks about 20 cm and 40 cm distance enlargements, so the parent fits.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "sec_0271 has one node, #/texts/4988, \"6 Examination\". Its page_no is 237, far away from page_start and page_end 152. On p152 the side heading \"Scan ranges\" is followed by the intro sentence and two bullets (1800 mm and 1600 mm). None of that text is in the section. The node is a running header from chapter 6.",
+      "notes": "The body is missing and a foreign header node was assigned. Probably a reading-order error in Docling output.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path \"/System description/Accessories/Distance enlargements/Scan ranges\" matches the topic on p152.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The p152 paragraph \"The different distance enlargements decrease the scan ranges...\" and the two bullets are not in sec_0271. Its only node is a p237 running header \"6 Examination\".",
+      "notes": "Same root cause as page_start_end: section has no real content.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The title \"Scan ranges\" is visible on p152, the declared page, so the flag is consistent.",
+      "notes": "",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\" and the title is on the declared page p152.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio \"152\" is arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 152 equals physical page 152, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The infusion bottle holder drawing on p152 belongs to the next section (3.7.5). The Scan ranges text has no figure. Nothing meaningful looks discarded for this section.",
+      "notes": "No image data in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is visible on p152 apart from the footer rule.",
+      "notes": "No image data in input/.",
+      "confidence": 0.65
+    },
+    {
+      "section_id": "sec_0271",
+      "page_sampled": 152,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The only figure on p152 is the infusion bottle holder drawing. It belongs to sec_0272 \"Infusion bottle holder\", not to Scan ranges. Cannot confirm the mapping.",
+      "notes": "No image data in input/.",
+      "confidence": 0.5
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p196 \"5.1.8 Neuro BestContrast\" is a numbered heading under 5.1 in chapter 5. Level 3 under sec_0384 \"Dose optimization features\" is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0384 \"Dose optimization features\" (pp189-201) is 5.1, and 5.1.8 belongs there. Previous sibling sec_0395 (p195) and next sibling sec_0397 (p197) fit.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The only node, #/texts/5113, is \"2 Click the Set Emergency Protocol icon.\" with page_no 242, far from p196. On p196 the heading \"5.1.8 Neuro BestContrast\" is followed by intro text, a bullet list on low and high spatial frequencies and a closing sentence. None of it is in sec_0396. The heading is also missing from the nodes.",
+      "notes": "Graded Critical (section left empty of its own body and given foreign content) although the deterministic check only sees content past page_end (Medium). Body and heading are missing, and a step from another chapter was assigned. Probably a reading-order error. The figure and legend at the top of p196 belong to sec_0395 (page_end 195).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path \"/Dose management and optimization/Dose optimization features/Neuro BestContrast\" matches 5.1.8 on p196 and the chapter 5 header.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "sec_0396 has only a foreign step from p242. The heading and the whole p196 text of 5.1.8 are missing from this section.",
+      "notes": "Same root cause as page_start_end.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The heading \"5.1.8 Neuro BestContrast\" is on p196, so the flag is consistent.",
+      "notes": "",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\" and the numbered heading matches the bookmark title on p196.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio \"196\" is arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 196 equals physical page 196, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p196 has a reconstruction cycle diagram (labels 1 to 3 with a CT image). The section input lists no image. Cannot confirm the diagram was extracted; the legend text is in the page text.",
+      "notes": "No image data in input/. If the diagram is a vector drawing it could be missing from image output. Needs human check.",
+      "confidence": 0.4
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p196 diagram is meaningful, not decoration. No logo or rule is visible except the footer line.",
+      "notes": "No image data in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0396",
+      "page_sampled": 196,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The diagram at the top of p196 belongs to the previous topic SAFIRE / ADMIRE (sec_0395, page_end 195), not to Neuro BestContrast. Cannot confirm the mapping.",
+      "notes": "No image data in input/. Page-based mapping could put it in sec_0396.",
+      "confidence": 0.4
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p282 \"Positioning the arm supports\" is a margin side heading, like other topics in chapter 6. Level 5 under sec_0586 is plausible.",
+      "notes": "",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0586 \"Positioning the mattress\" (pp280-282) with previous sibling sec_0590 \"Storing the mattress with flat surface\" (p281) and next sibling sec_0592 (p283). This fits the page content.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p282 the top bullet \"Place the mattress with flat surface in the storage holder vertically...\" with its photo and the info box \"Please observe the manufacturer's notes...\" are above the side heading \"Positioning the arm supports\". They belong to the previous topic \"Storing the mattress\" (sec_0590). Nodes #/texts/6136 and #/texts/6137 are in sec_0591, and the heading node #/texts/6135 is listed first. Node #/texts/6155 is the p283 running header.",
+      "notes": "Sibling boundary error on a shared page: nodes 6136 and 6137 are absorbed from sec_0590. sec_0590 page_end 281 is probably one page short.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path ends with \"Positioning the mattress/Positioning the arm supports\" and matches the heading on p282.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The storing step and the manufacturer note at the top of p282 are printed before the heading \"Positioning the arm supports\", but they are in sec_0591 (#/texts/6136, #/texts/6137). They should be in sec_0590.",
+      "notes": "Same root cause as page_start_end.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with score 100. The title is on p282, so the flag is consistent.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\" and the title is on the declared page p282.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio \"282\" is arabic. numbering_scheme \"arabic\" is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 282 equals physical page 282, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p282 has three photos: the mattress on the wall and two patient-positioning pictures. The section input lists no image. Cannot confirm whether they were extracted; the steps are also in the text.",
+      "notes": "No image data in input/. Needs human check.",
+      "confidence": 0.4
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo or rule is visible on p282 except the footer line.",
+      "notes": "No image data in input/.",
+      "confidence": 0.6
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": 282,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "On p282 the first patient photo (528x425 px, beside steps 1 to 3 under the heading \"Positioning the arm supports\") is below the section heading, but a deterministic check maps it to sec_0590 \"Storing the mattress with flat surface\". The photo shows the patient with an arm support, so it belongs to sec_0591.",
+      "notes": "Image is assigned to the wrong sibling on a shared page, probably because the section boundary on p282 is wrong (same cause as page_start_end). Confidence lowered because image data was not in input/.",
+      "confidence": 0.75
+    }
+  ]
+}

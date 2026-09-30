@@ -1,0 +1,1044 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p639 Section 8-29 On-Board UVC is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0068 (Chapter 8), which lists sec_0097 in child_sections. The section has no children, and the 8-29-1 Manpower, 8-29-2 Tools and 8-29-3 Removal Procedure headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p639 with heading node #/texts/7911 (Section 8-29 On-Board UVC) and content ends on p656, which is correct. The last two nodes, #/texts/8115 and #/texts/8116, are the running header (GE Healthcare, Direction 5394227) of p657, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 8-29 On-Board UVC'. The printed heading on p639 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0097 appears once. The previous section ends on p638 and the next section starts on p657, so pages 639 to 656 have no gap. No content is repeated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 8-29 On-Board UVC' is visible on p639, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 8-29 On-Board UVC' matches the section heading printed on p639, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p639 the printed folio is '8 - 263' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p639 shows folio 8 - 263 and the section title is on physical p639, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p639 the table #/tables/262 has header Step | Instruction | Illustration and row \"1. Remove HDMI CABLE from console.\" This matches the render. The photo cell is empty in the text, as expected for a picture.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p639 there is one raster photo (rear panel with circled connector) inside the Illustration cell. The input has no image records to compare, so I cannot confirm it was extracted.",
+   "notes": "",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p639 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Visible pictures on p639 sit inside #/tables/262 under the Section 8-29 On-Board UVC heading. No neighbour section shares the page, so ownership would be sec_0097 if extracted. No image records are in the input to confirm.",
+   "notes": "No image data in the input, so mapping is judged from page layout only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p767 Section 9-1 Overview is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0112 (Chapter 9), which lists sec_0113 in child_sections. The section has no children, and the 9-1-1 Purpose of this chapter and 9-1-2 Contents in this chapter headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p767 with heading node #/texts/9141 (Section 9-1 Overview) and content ends on p767, which is correct. The last two nodes, #/texts/9146 and #/texts/9147, are the running header (GE Healthcare, Direction 5394227) of p768, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 9-1 Overview'. The printed heading on p767 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0113 appears once. Chapter 9 heading node sits in sec_0112 and sec_0114 starts on p768, so there is no gap. Only the p768 running header overlaps (see page_start_end).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 9-1 Overview' is visible on p767, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 9-1 Overview' matches the section heading printed on p767, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p767 the printed folio is '9 - 1' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p767 shows folio 9 - 1 and the section title is on physical p767, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p767 the table #/tables/326 lists the chapter contents (9-1 Overview ... 9-15 Power Cord, 9-16 ...) with dot leaders and page numbers. It matches the rendered contents list and sits under 9-1-2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p767 has no picture or diagram, only text and the contents list. No image is expected, so nothing was discarded or mapped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p767 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 767,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p767 has no picture, so there is nothing to map. The section sec_0113 is the only owner of the page content after the Chapter title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p781 Section 9-7 Plastics Covers (Front/Sides/Rear) is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0112 (Chapter 9), which lists sec_0119 in child_sections. The section has no children, and the none (single heading) headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p778 with heading node #/texts/9204 (Section 9-7 Plastics Covers (Front/Sides/Rear)) and content ends on p783, which is correct. The last two nodes, #/texts/9227 and #/texts/9228, are the running header (GE Healthcare, Direction 5394227) of p784, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 9-7 Plastics Covers (Front/Sides/Rear)'. The printed heading on p778 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0119 appears once. The previous section ends on p777 and the next section starts on p784, so pages 778 to 783 have no gap. No content is repeated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 9-7 Plastics Covers (Front/Sides/Rear)' is visible on p778, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 9-7 Plastics Covers (Front/Sides/Rear)' matches the section heading printed on p778, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p781 the printed folio is '9 - 15' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p781 shows folio 9 - 15 and the section title is on physical p778, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p781 table #/tables/342 row 21 (HIGH CABINET ASSY R3, 5724753) has \"1\" in the Description column and an empty Qty. In the render the 1 is under Qty. Row 22 is correct.",
+   "notes": "The Qty value is shifted to the wrong column for row 21. Probably a table-structure error in the extractor. Medium because Qty cannot be attributed to its column for this row. verify_claims suggests Low for merged cells, but here the value moved to another column.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p781 has four raster part photos (rows 17, 20, 21, 22) in the Description column. The input has no image records to compare, so I cannot confirm they were extracted.",
+   "notes": "",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p781 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0119",
+   "page_sampled": 781,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Visible pictures on p781 sit inside #/tables/342 under the Section 9-7 Plastics Covers (Front/Sides/Rear) heading. No neighbour section shares the page, so ownership would be sec_0119 if extracted. No image records are in the input to confirm.",
+   "notes": "No image data in the input, so mapping is judged from page layout only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p788 Section 9-9 Operator panel is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0112 (Chapter 9), which lists sec_0121 in child_sections. The section has no children, and the 9-9-1 OPIO, OPIO2 and OPIO3 and 9-9-2 OPIO4 headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p787 with heading node #/texts/9242 (Section 9-9 Operator panel) and content ends on p796, which is correct. The last two nodes, #/texts/9332 and #/texts/9333, are the running header (GE Healthcare, Direction 5394227) of p797, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 9-9 Operator panel'. The printed heading on p787 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0121 appears once. Previous section sec_0120 ends on p786 and sec_0122 starts on p797, so p787 to p796 have no gap and no repeated content.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 9-9 Operator panel' is visible on p787, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 9-9 Operator panel' matches the section heading printed on p787, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p788 the printed folio is '9 - 22' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p788 shows folio 9 - 22 and the section title is on physical p787, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p788 there is no table, only two callout figures. Node text on p788 has the callout numbers and labels. The parts tables begin on p789 (#/tables/348), so there is nothing to compare on this page.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p788 shows two large raster photos of the operator panel with red arrows. The nodes keep only the callout numbers and labels. The input has no image records, so I cannot confirm the photos were extracted.",
+   "notes": "",
+   "confidence": 0.55
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p788 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 788,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Visible pictures on p788 sit inside the figure area under the Section 9-9 Operator panel heading. No neighbour section shares the page, so ownership would be sec_0121 if extracted. No image records are in the input to confirm.",
+   "notes": "No image data in the input, so mapping is judged from page layout only.",
+   "confidence": 0.55
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p802 Section 9-10 Nest Box Parts is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0112 (Chapter 9), which lists sec_0122 in child_sections. The section has no children, and the none (single heading) headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p797 with heading node #/texts/9334 (Section 9-10 Nest Box Parts) and content ends on p808, which is correct. The last two nodes, #/texts/9378 and #/texts/9379, are the running header (GE Healthcare, Direction 5394227) of p809, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 9-10 Nest Box Parts'. The printed heading on p797 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0122 appears once. The previous section ends on p796 and the next section starts on p809, so pages 797 to 808 have no gap. No content is repeated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 9-10 Nest Box Parts' is visible on p797, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 9-10 Nest Box Parts' matches the section heading printed on p797, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p802 the printed folio is '9 - 36' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p802 shows folio 9 - 36 and the section title is on physical p797, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p802 table #/tables/358 rows 22 and 23 have an empty No. cell and the number is merged into Part Name (\"22. Polaris-Maru Battery Pack\", \"23. CBP Assy\"). Part numbers, Qty and the \"Backplane\" note are kept.",
+   "notes": "The row number is in the wrong cell. All values are still readable and attributable, so this is cosmetic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p802 one small raster part photo (about 118x110 px) is not in images_v1.json. The p802 table shows five photos, in rows 20 to 23. Rows 21 and 22 show the same battery picture, so a duplicate filter probably dropped one. Each part is fully named in the text.",
+   "notes": "Small part photo dropped. Part name and number are in the table text, so retrieval is not affected. Graded Low, not Critical, for this reason. verify_claims expects Critical, so the human should decide.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p802 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Visible pictures on p802 sit inside #/tables/358 under the Section 9-10 Nest Box Parts heading. No neighbour section shares the page, so ownership would be sec_0122 if extracted. No image records are in the input to confirm.",
+   "notes": "No image data in the input, so mapping is judged from page layout only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p809 Section 9-11 Mechanical Parts is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0112 (Chapter 9), which lists sec_0123 in child_sections. The section has no children, and the none (single heading) headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p809 with heading node #/texts/9380 (Section 9-11 Mechanical Parts) and content ends on p814, which is correct. The last two nodes, #/texts/9403 and #/texts/9404, are the running header (GE Healthcare, Direction 5394227) of p815, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 9-11 Mechanical Parts'. The printed heading on p809 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0123 appears once. The previous section ends on p808 and the next section starts on p815, so pages 809 to 814 have no gap. No content is repeated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 9-11 Mechanical Parts' is visible on p809, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 9-11 Mechanical Parts' matches the section heading printed on p809, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p809 the printed folio is '9 - 43' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p809 shows folio 9 - 43 and the section title is on physical p809, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p809 table #/tables/365 rows 1 to 4 (Total Lock Caster 5400391-2 qty 3, Swivel Lock Caster 5400392-2, Caster Cap Set 5408087, Caster Total Lock N9 5746120) match the render, including descriptions.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p809 one small raster photo (about 180x180 px, 1.5% of the page) is not in images_v1.json. Rows 1 to 4 show caster photos. The dropped photo is one of these. Every part is fully named in the table text.",
+   "notes": "Small part photo dropped. Name, number and description are in the table text, so the content is still found. Graded Low, not Critical, for this reason. verify_claims expects Critical, so the human should decide.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p809 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Visible pictures on p809 sit inside #/tables/365 under the Section 9-11 Mechanical Parts heading. No neighbour section shares the page, so ownership would be sec_0123 if extracted. No image records are in the input to confirm.",
+   "notes": "No image data in the input, so mapping is judged from page layout only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p816 Section 9-12 Options is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0112 (Chapter 9), which lists sec_0124 in child_sections. The section has no children, and the none (single heading) headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p815 with heading node #/texts/9405 (Section 9-12 Options) and content ends on p822, which is correct. The last two nodes, #/texts/9436 and #/texts/9437, are the running header (GE Healthcare, Direction 5394227) of p823, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 9-12 Options'. The printed heading on p815 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0124 appears once. The previous section ends on p814 and the next section starts on p823, so pages 815 to 822 have no gap. No content is repeated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 9-12 Options' is visible on p815, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 9-12 Options' matches the section heading printed on p815, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p816 the printed folio is '9 - 50' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p816 shows folio 9 - 50 and the section title is on physical p815, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p816 table #/tables/372 rows 5 to 12 (Gel Warmer Pyxis 6020740 ... ECG Cable (IEC) 5341188) match the render, including the descriptions and Qty values.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p816 one small raster photo (about 118x140 px, 1.8% of the page) is not in images_v1.json. Rows 5 to 10 show gel warmer photos. The dropped photo is one of these. Every part is fully named in the table text.",
+   "notes": "Small part photo dropped. Name, number and description are in the table text, so the content is still found. Graded Low, not Critical, for this reason. verify_claims expects Critical, so the human should decide.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p816 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Visible pictures on p816 sit inside #/tables/372 under the Section 9-12 Options heading. No neighbour section shares the page, so ownership would be sec_0124 if extracted. No image records are in the input to confirm.",
+   "notes": "No image data in the input, so mapping is judged from page layout only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p830 Section 9-15 Power Cord is a section-level heading (bookmark level 2) under the Chapter heading. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0112 (Chapter 9), which lists sec_0127 in child_sections. The section has no children, and the none (single heading) headings are nodes inside it, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section starts at p830 with heading node #/texts/9471 (Section 9-15 Power Cord) and content ends on p832, which is correct. The last two nodes, #/texts/9482 and #/texts/9483, are the running header (GE Healthcare, Direction 5394227) of p833, the next section's first page.",
+   "notes": "Only the running header of the next page crosses the boundary. No body content is absorbed or lost. Low per the Sprint boilerplate rule.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path shows Chapter then 'Section 9-15 Power Cord'. The printed heading on p830 agrees with this order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0127 appears once. The previous section ends on p829 and the next section starts on p833, so pages 830 to 832 have no gap. No content is repeated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100.0 and verification_reason is empty. The title 'Section 9-15 Power Cord' is visible on p830, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Section 9-15 Power Cord' matches the section heading printed on p830, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p830 the printed folio is '9 - 64' (chapter-page style). numbering_scheme is 'arabic', which fits the digits used.",
+   "notes": "The chapter-page folio style is stored as arabic. It is probably not a separate scheme in this tool.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p830 shows folio 9 - 64 and the section title is on physical p830, the page_start. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p830 table #/tables/386 has 3 columns instead of 5. The header is \"Part Name | Part Number  Description  Qty\" and rows read \"1. Power Cord for India | 5182611 1\". Part number and Qty are joined in one cell.",
+   "notes": "Cells are merged but every value is kept in order, so retrieval is not affected.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p830 has five raster power cord photos in the Description column. The input has no image records to compare, so I cannot confirm they were extracted.",
+   "notes": "",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p830 no logo, rule or footer divider appears as an image node. The page text nodes have only text, tables and the running header or footer.",
+   "notes": "The input has no image records, so this is judged from node types only.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Visible pictures on p830 sit inside #/tables/386 under the Section 9-15 Power Cord heading. No neighbour section shares the page, so ownership would be sec_0127 if extracted. No image records are in the input to confirm.",
+   "notes": "No image data in the input, so mapping is judged from page layout only.",
+   "confidence": 0.6
+  }
+ ]
+}
