@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "provider": "claude-code/sonnet (lead: opus)",
+  "validated_at": "2026-09-30T23:17:11.065267+00:00",
+  "findings": [
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On page 350 the heading '7.2.1 Activating the coupled mode' (#/texts/7570) is a third-level heading below the chapter '7 Enhanced examination' and below 'CARE Contrast CT'. hierarchy_level 3 matches.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0709 (CARE Contrast CT) is correct for 7.2.1. Children sec_0711 (Start/Stop behavior) and sec_0712 (Setting the coupled mode) are real subsections of 7.2.1. The parent and child links are coherent.",
+      "notes": "The wrong content placement is judged under 5.4-page_start_end and 5.4-gaps_duplicates, not here.",
+      "confidence": 0.9,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The section starts correctly at the 7.2.1 heading (#/texts/7570) on page 350. Lead evidence (lead rendered physical page 351, which is not in input/pages): p351 prints the first Icon | Meaning table (#/tables/32, owned by sec_0710, correct), then an info note and the sentence 'Scan ranges are marked within the chronicle...', then a second Icon | Meaning table (#/tables/33, coupled/uncoupled scan range icons). All of this is printed under 7.2.1. The margin heading 'Start/Stop behavior in coupled/uncoupled mode' (sec_0711) only comes after these items, lower on the page. In input/sections.json the nodes of sec_0710 end at #/tables/32 (semantic_order 7598). #/tables/33 and texts #/texts/7578 and #/texts/7579 are not in sec_0710. The lead's tree lookup says sec_0711 owns all three. So table #/tables/33 and its two texts are in the wrong section.",
+      "notes": "BUG-001: table printed under one heading assigned to a child section. Probably caused by BUG-005: the text 7578/7579 desync pulls the table after it into sec_0711. Page 351 text is lead evidence; I could not see it in input/pages. Page 353 (in input/pages) shows 7.2.2 content that belongs to the descendants, so page_end 353 is reached only through children sec_0711 (ends 352) and sec_0712 (ends 353). This is acceptable for a parent, but the sec_0710 own nodes end on page 351. Critical follows the Sprint table (content in wrong section). verify_claims says UNSUPPORTED (no boundary signal) because the ownership error is semantic and the nodes are on p351, outside input/pages; the lead's render of p351 and tree lookup support FAIL.",
+      "confidence": 0.88,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Enhanced examination/CARE Contrast CT/Activating the coupled mode' matches the printed chapter header '7 Enhanced examination' and the nesting 7 > 7.2 > 7.2.1 seen on page 350.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Body nodes are assigned to the wrong section. Lead evidence (lead rendered physical page 351, which is not in input/pages): the second Icon | Meaning table (#/tables/33), the info note about 'Save Scan Protocol ... Injector coupled as predefined scan start' and the sentence 'Scan ranges are marked within the chronicle...' (#/texts/7578 and #/texts/7579) are printed under 7.2.1, before the sec_0711 margin heading. sections.json lists none of them in sec_0710 (its nodes stop at #/tables/32). The lead's tree lookup says sec_0711 owns them. The content of 7.2.1 is therefore split between sec_0710 and its child.",
+      "notes": "BUG-001 with probable cause BUG-005 (text 7578/7579 desync). The content is not lost, it is in the wrong section, so the same Critical grade as 5.4-page_start_end applies. Page 351 is lead evidence.",
+      "confidence": 0.85,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100.0, so there is no uncertainty claim to check. The boundary problem on page 351 is not hidden by this flag; it is reported under 5.4-page_start_end.",
+      "notes": "The flag is wrong to be false in a sense: verification_score 100 missed the desync. The flag state alone is not a failure.",
+      "confidence": 0.8,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc', not inferred. The heading '7.2.1 Activating the coupled mode' is visible on page 350 and matches the title.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. Page 350 shows the printed folio '350' in the footer and the section number '7.2.1'. Both use arabic numerals.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on page 350 is 350 and on page 353 is 353, equal to the physical pages. The neighbors sec_0709, sec_0711 and sec_0712 also use offset 0.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Table #/tables/32 has canonical_text 'Icon | Meaning' followed by four rows with an empty Icon cell: 'Bolus injector coupling rejected', 'Bolus injector available', 'Bolus injector ready', 'Local procedure on bolus injector active'. Lead evidence (lead rendered physical page 351, which is not in input/pages): p351 shows the same four meaning texts in this order, each next to a small status icon. The icon images are missing from the Icon column, but all Meaning text and its order are kept.",
+      "notes": "Low, not Medium: the icons are lost but the Meaning text is kept in row order, so values stay attributable. verify_claims may expect Medium; I keep Low as in earlier drafts. Table #/tables/33 (also icons) is not in this section. Page 351 is lead evidence.",
+      "confidence": 0.8,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "input/images.json has no images for sec_0710. Lead evidence (lead rendered physical page 351, which is not in input/pages): p351 has small status icons in the Icon column of table #/tables/32 (coupling rejected, available, ready, local procedure). None was extracted. On page 350 there are only the small 'i' info symbols, which are decorative. The meaning of the dropped icons is fully written in the Meaning column.",
+      "notes": "Low per Sprint table: small icon dropped whose meaning is fully stated in the text. Related to the 5.6-table_content row. Page 351 is lead evidence.",
+      "confidence": 0.8,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json is empty for this section, so no logo, rule or decorative element was kept as an image. On page 350 the 'i' note symbols and the horizontal rules are not extracted.",
+      "notes": "Boilerplate text nodes #/texts/7574, 7575 (footer) and 7576 (running header '7 Enhanced examination') are inside the section as text. This is noise text, but it is not an image issue and is low impact.",
+      "confidence": 0.85,
+      "provider": "claude-code/sonnet (lead: opus)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json lists no images for sec_0710, and pages 350 and 353 show no photo or diagram, only text, info notes with small 'i' symbols and a CAUTION box. There is nothing to map to a wrong section.",
+      "notes": "The status icons on p351 (lead evidence) were not extracted at all; this is reported under 5.5-filters_discarding.",
+      "confidence": 0.85,
+      "provider": "claude-code/sonnet (lead: opus)"
+    }
+  ]
+}

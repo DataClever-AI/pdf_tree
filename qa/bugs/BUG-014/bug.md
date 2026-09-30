@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-014
-status: open
+status: in-progress
 finding: H-15
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-001-positional-placement
+fix_commit: 04e1345, 36df68a, 0b448dd
+updated: 2026-09-30
 ---
 
 # BUG-014 · Section page_end declared one page short of the true content boundary — trailing content (text or images) bleeds into or is misattributed from the neighboring section
@@ -17,17 +17,18 @@ A section's `page_end` stops one page short when the next section starts part-wa
 
 ## Root cause
 
-Unconfirmed: `section_matcher._compute_page_ranges`.
+Confirmed: `section_matcher._compute_page_ranges` sets `page_end` to the page before the next bookmark. It does not look at the content the section owns, so text or a table that continues onto the next section's first page is outside the range.
 
 ## What was done
 
 - 2026-09-04: identified in the v1 QA review of LOGIQ_S8 and SOMATOM and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-28: seen again in the agent review drafts of the v2 runs (Philips); pending approval by the human reviewer (Oscar Munoz).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-09-30: fixed in `04e1345`. Mitigation versions DOC-0136477A v1.2, SOMATOM v1.2, LOGIQ_S8 v1.2 and Philips v2.4 (agent drafts, not approved): all 15 target `page_end` rows are fixed (DOC 5, Philips 9, LOGIQ_S8 1). The review found ranges one page too long when a section owned only a split heading (LOGIQ_S8, fixed in `36df68a`) or a chapter-tab number or margin label (Philips, fixed in `0b448dd`). These two commits are not in a reviewed version yet.
 
 ## Fix
 
-Proposed: set `page_end` to the page where the next section starts when that section does not start at the top of the page.
+After content assignment, `page_end` grows by one page when the section owns a table or a body text block on that page. Page headers and footers, blocks in the top or bottom 8% of the page, `section_header` blocks and text with fewer than three words do not count. Parents grow to contain their children. The range grows by one page at most, so text read out of order (BUG-005) never stretches it.
 
 ## Verification
 

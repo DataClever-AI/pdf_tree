@@ -1,0 +1,874 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 17 the heading 1.2.1 (level 3 heading) is rendered at the matching visual level (chapter title > N.N section heading > N.N.N subsection heading where applicable), consistent with hierarchy_level in sec_0004.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0004 has parent 1.2 Indications For Use (sec_0003), which is the enclosing chapter or section visible in the page renderings; its children list and the neighbouring previous/next sections are consistent with the printed heading order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section pages are 17 to 17. The page_end stays 17. On p17 the heading 1.2.1 and the two indication paragraphs are owned by sec_0004. The export also holds the nodes #/texts/63-66: folios '1' and '17', the running header 'HemoSphere Advanced Monitor' and '1 Introduction'. The last two are the p18 running header. p18 has no body text of this section. Only boilerplate crosses the page_end.",
+   "notes": "Boilerplate only (running header and folio), so Low. BUG-014 does not apply here, because the page_end is correctly 17.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0004 ends with 1.2.1 and is preceded by 1.2 Indications For Use (sec_0003), matching the heading ancestry visible on the rendered pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p17, #/texts/60-62 are the heading and the two indication paragraphs. They belong only to sec_0004. The next heading 1.2.2 is not repeated inside this section. No body text on p17 is left without an owner.",
+   "notes": "The four boilerplate nodes are reported in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0004 has flagged_for_review false, confidence 1.0 and verification_score 100; the rendering shows no ambiguity that would require a flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the heading 1.2.1 appears in the printed chapter Contents and as a heading on page 17, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numerals (footer on page 17 reads the same number), matching numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of physical page 17 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful visual on the sampled pages of sec_0004 was dropped: the figures/diagrams visible in the section (if any) appear in images.json and the rest is text or tables.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0014 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 17; it is decorative and was retained as an image of sec_0004.",
+   "notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only extracted image for this section is the footer strip; page 17 shows no figure under 1.2.1, so there is no missing or misassigned visual.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 90 the heading 6.1.1 New Patient (level 3) is rendered at the matching visual level (chapter title > N.N section heading > N.N.N subsection heading where applicable), consistent with hierarchy_level in sec_0098.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0098 has parent 6.1 Patient Data (sec_0097), which is the enclosing chapter or section visible in the page renderings; its children list and the neighbouring previous/next sections are consistent with the printed heading order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section pages are 90 to 92. The new page_end 92 is correct. On p92, steps 13 to 16 (enter icon, NOTE, review demographics, select monitoring mode, home icon) print above the 6.1.2 Continue Monitoring Patient heading. These steps belong to 6.1.1. So p92 is owned by this section. The section starts at the 6.1.1 heading on p90.",
+   "notes": "The v1.1 problem 'page_end one page short' is fixed by BUG-014.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0098 ends with 6.1.1 New Patient and is preceded by 6.1 Patient Data (sec_0097), matching the heading ancestry visible on the rendered pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes #/texts/1221-1257 (heading, WARNING, steps 1 to 16) are in one block. They belong only to sec_0098. On p92, the 6.1.2 heading is not inside this section. Steps 13 to 16 and the NOTE are inside it. No text is lost or repeated.",
+   "notes": "Fixed in v1.2 by BUG-014 (page_end 92).",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0098 has flagged_for_review false, confidence 1.0 and verification_score 100; the rendering shows no ambiguity that would require a flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the heading 6.1.1 New Patient appears in the printed chapter Contents and as a heading on page 90, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numerals (footer on page 90 reads the same number), matching numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of physical page 90 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Small icons are in the render but not in the extracted images. On p91 there is the settings icon. On p92 there are the enter icon (step 13) and the home icon (step 16). The text next to each icon names it, for example 'Touch the enter icon'.",
+   "notes": "Small icon dropped, meaning stated in text = Low. The images are the same as in v1.1, where this row was PASS. So this is a grading difference, not a pipeline regression.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0123 and img_0125 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 90; it is decorative and was retained as an image of sec_0098.",
+   "notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0098",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0124 (New Patient Data screen, Figure 6-2) is on page 91 under 6.1.1 and is mapped to sec_0098; Figure 6-1 on page 90 precedes the 6.1.1 heading and is correctly mapped to sec_0097.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 112 the heading 8.1.1 Data Download (level 3) is rendered at the matching visual level (chapter title > N.N section heading > N.N.N subsection heading where applicable), consistent with hierarchy_level in sec_0126.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0126 has parent 8.1 Export Data (sec_0125), which is the enclosing chapter or section visible in the page renderings; its children list and the neighbouring previous/next sections are consistent with the printed heading order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section pages are 112 to 113. The new page_end 113 is correct. On p113, these items print above the 8.2 Clear Data and Settings heading: the Interval steps, the Case Report steps, the GDT Report steps, the NOTE about the USB device, and the 'Clear All' sentence. The 'Clear All' sentence belongs to 8.1.1. The section starts at the 8.1.1 heading on p112.",
+   "notes": "The v1.1 problem 'page_end one page short' is fixed by BUG-014.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0126 ends with 8.1.1 Data Download and is preceded by 8.1 Export Data (sec_0125), matching the heading ancestry visible on the rendered pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes #/texts/1616-1652 are in one block. They belong only to sec_0126. On p113, the 8.2 heading and its 8.2.1 text are not inside this section. The 'Clear All' sentence is inside it. No text is lost or repeated.",
+   "notes": "Fixed in v1.2 by BUG-014 (page_end 113).",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0126 has flagged_for_review false, confidence 1.0 and verification_score 100; the rendering shows no ambiguity that would require a flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the heading 8.1.1 Data Download appears in the printed chapter Contents and as a heading on page 112, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numerals (footer on page 112 reads the same number), matching numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of physical page 112 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Small icons are in the render but not in the extracted images. On p112 there is the settings icon. On p113 there are the De-Identify check icon (steps 3 of Case Report and GDT Report) and the enter icon (step 4 of both). The text next to each icon names it, for example 'Touch the enter icon'.",
+   "notes": "Small icon dropped, meaning stated in text = Low. No large figure is extracted for this section.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0154 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 112; it is decorative and was retained as an image of sec_0126.",
+   "notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 112 and 113 show only small inline icons and no figure. Only the footer strip is mapped to sec_0126. No relevant visual is misassigned.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 118 the heading 9.1 Connecting the HemoSphere Swan-Ganz Module (level 2) is rendered at the matching visual level (chapter title > N.N section heading > N.N.N subsection heading where applicable), consistent with hierarchy_level in sec_0137.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0137 has parent HemoSphere Swan-Ganz Module Monitoring (sec_0136), which is the enclosing chapter or section visible in the page renderings; its children list and the neighbouring previous/next sections are consistent with the printed heading order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section pages are 118 to 121. The page_end 121 comes from the child sec_0138 (9.1.1). On p121, Figure 9-2 and steps 1 to 5 of 9.1.1 print above the 9.2 Continuous Cardiac Output heading. The own nodes of 9.1 end on p120, with Table 9-1. The section starts at the 9.1 heading on p118.",
+   "notes": "The v1.1 problem 'page_end one page short' is fixed by BUG-014. The extra page comes from the child 9.1.1, not from own nodes of 9.1.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0137 ends with 9.1 Connecting the HemoSphere Swan-Ganz Module and is preceded by HemoSphere Swan-Ganz Module Monitoring (sec_0136), matching the heading ancestry visible on the rendered pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes #/texts/1722-1753 and #/tables/63 are in one block. They belong only to sec_0137. On p121, the 9.2 heading is not inside this section. Figure 9-2 and steps 1 to 5 of 9.1.1 are under the child sec_0138, so they are not repeated. No text is lost.",
+   "notes": "Fixed in v1.2 by BUG-014 (page_end 121).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0137 has flagged_for_review false, confidence 1.0 and verification_score 100; the rendering shows no ambiguity that would require a flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the heading 9.1 Connecting the HemoSphere Swan-Ganz Module appears in the printed chapter Contents and as a heading on page 118, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numerals (footer on page 118 reads the same number), matching numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of physical page 118 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 9-1 (#/tables/63) is on p120. The lead checked the render. The printed table has 4 rows. The export puts the labels CO, iCO and SVR at the start of the column 2 text. The first cell is empty. The values and the reading order are kept.",
+   "notes": "Contract Low pattern: cells merged but reading order and values preserved. The table text is the same as in v1.1, where it was graded Low. The p120 page is not in input/pages, so this uses the lead's render check.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful visual on the sampled pages of sec_0137 was dropped: the figures/diagrams visible in the section (if any) appear in images.json and the rest is text or tables.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0162 and img_0164 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 118; it is decorative and was retained as an image of sec_0137.",
+   "notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0163 (Figure 9-1 connection overview, page 119) is mapped to sec_0137 and sits under 9.1; img_0166 (Figure 9-2, page 121) belongs to 9.1.1 and is mapped to sec_0138.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 134 the heading 10.1 Pressure Cable Overview (level 2) is rendered at the matching visual level (chapter title > N.N section heading > N.N.N subsection heading where applicable), consistent with hierarchy_level in sec_0162.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0162 has parent Monitoring with the HemoSphere Pressure Cable (sec_0161), which is the enclosing chapter or section visible in the page renderings; its children list and the neighbouring previous/next sections are consistent with the printed heading order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section pages are 134 to 136. The new page_end 136 is correct. On p136, the *NOTE (the footnote of Table 10-1), the WARNING and the CAUTION print above the 10.2 Monitoring Mode Selection heading. They belong to 10.1. The section starts at the 10.1 heading on p134.",
+   "notes": "The v1.1 problem 'page_end one page short' is fixed by BUG-014.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0162 ends with 10.1 Pressure Cable Overview and is preceded by Monitoring with the HemoSphere Pressure Cable (sec_0161), matching the heading ancestry visible on the rendered pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes #/texts/2004-2042 and #/tables/66 are in one block. They belong only to sec_0162. On p136, the 10.2 and 10.3 headings are not inside this section. The *NOTE, WARNING and CAUTION are inside it. No text is lost or repeated.",
+   "notes": "Fixed in v1.2 by BUG-014 (page_end 136).",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0162 has flagged_for_review false, confidence 1.0 and verification_score 100; the rendering shows no ambiguity that would require a flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the heading 10.1 Pressure Cable Overview appears in the printed chapter Contents and as a heading on page 134, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numerals (footer on page 134 reads the same number), matching numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of physical page 134 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table 10-1 (#/tables/66) is on p135. The lead confirmed the p135 render. The printed table has one bullet per cell. For example, DIA and MAP have bullets in columns 1 to 4. The export puts '••••' in column 2 only. So the bullets cannot be attributed to their columns.",
+   "notes": "The p135 page is not in input/pages. This uses the lead's render check. Medium because the column meaning of the bullets is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful visual on the sampled pages of sec_0162 was dropped: the figures/diagrams visible in the section (if any) appear in images.json and the rest is text or tables.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0185 and img_0186 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 134; it is decorative and was retained as an image of sec_0162.",
+   "notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0187 (Figure 10-1 pressure cable, page 135) belongs to 10.1 and is mapped to sec_0162; no figure from 10.2/10.3 on page 136 is assigned to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 191 the heading A.1 Essential Performance Characteristics (level 2) is rendered at the matching visual level (chapter title > N.N section heading > N.N.N subsection heading where applicable), consistent with hierarchy_level in sec_0233.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0233 has parent Specifications (sec_0232), which is the enclosing chapter or section visible in the page renderings; its children list and the neighbouring previous/next sections are consistent with the printed heading order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section pages are 191 to 192. The new page_end 192 is correct. On p192, the 'Table A-1 (continued)' caption and the table (#/tables/114) print above the A.2 heading. They belong to A.1. There is a start problem on p191. The nodes #/texts/2770 'A' and #/texts/2771 'Appendix' are the chapter tab printed above the title. Folio #/texts/2772 '191' is also inside. These are boilerplate.",
+   "notes": "Boilerplate (the Appendix tab and the folio), so Low. verify_claims expects Critical for a node above the heading, but the node is boilerplate, so the Sprint pattern Low applies. The v1.1 problem 'page_end one page short' is fixed by BUG-014.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0233 ends with A.1 Essential Performance Characteristics and is preceded by Specifications (sec_0232), matching the heading ancestry visible on the rendered pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes #/texts/2766-2775, #/tables/113 and #/tables/114 are in one block. They belong only to sec_0233. On p192, the A.2 heading and Table A-2 are not inside this section. The continued Table A-1 is inside it. No text is lost or repeated.",
+   "notes": "Fixed in v1.2 by BUG-014 (page_end 192). The Appendix tab is reported in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0233 has flagged_for_review false, confidence 1.0 and verification_score 100; the rendering shows no ambiguity that would require a flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the heading A.1 Essential Performance Characteristics appears in the printed chapter Contents and as a heading on page 191, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numerals (footer on page 191 reads the same number), matching numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of physical page 191 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table A-1 on p191 is #/tables/113. The label 'General: all monitoring modes and parameters' is in the third column (Essential Performance). Columns 1 and 2 are empty. On p191 the printed label spans the first two columns. The continued table on p192 (#/tables/114) matches the render. The values (45 °C, ±0.3 °C, 57 seconds, ±4% or ±4mmHg, ±2%) and the reading order are kept.",
+   "notes": "Contract Low pattern: cells merged but reading order and values preserved. The earlier draft said the label sits in the Parameter column. That was wrong.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful visual on the sampled pages of sec_0233 was dropped: the figures/diagrams visible in the section (if any) appear in images.json and the rest is text or tables.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0256 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 191; it is decorative and was retained as an image of sec_0233.",
+   "notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 191-192 contain only tables and text for A.1; only the footer strip is mapped, and no relevant visual is misassigned.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 214 the heading F.1 General Maintenance (level 2) is rendered at the matching visual level (chapter title > N.N section heading > N.N.N subsection heading where applicable), consistent with hierarchy_level in sec_0254.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 has parent System Care, Service and Support (sec_0253), which is the enclosing chapter or section visible in the page renderings; its children list and the neighbouring previous/next sections are consistent with the printed heading order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section pages are 214 to 215. The new page_end 215 is correct. On p215, the ESD CAUTION prints above the F.2 Cleaning the Monitor and Modules heading. It belongs to F.1. The section starts at the F.1 heading on p214.",
+   "notes": "The v1.1 problem 'page_end one page short' is fixed by BUG-014.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0254 ends with F.1 General Maintenance and is preceded by System Care, Service and Support (sec_0253), matching the heading ancestry visible on the rendered pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes #/texts/2942-2952 are in one block. They belong only to sec_0254. On p215, the F.2 heading, its WARNING and the cleaning list are not inside this section. The ESD CAUTION is inside it. No text is lost or repeated.",
+   "notes": "Fixed in v1.2 by BUG-014 (page_end 215).",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 has flagged_for_review false, confidence 1.0 and verification_score 100; the rendering shows no ambiguity that would require a flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the heading F.1 General Maintenance appears in the printed chapter Contents and as a heading on page 214, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numerals (footer on page 214 reads the same number), matching numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of physical page 214 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful visual on the sampled pages of sec_0254 was dropped: the figures/diagrams visible in the section (if any) appear in images.json and the rest is text or tables.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0279 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 214; it is decorative and was retained as an image of sec_0254.",
+   "notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 214-215 contain no figures for F.1; the page 215 footer strip img_0280 is mapped to sec_0256 (noise only), so no relevant visual is misassigned.",
+   "notes": "",
+   "confidence": 0.85
+  }
+ ]
+}

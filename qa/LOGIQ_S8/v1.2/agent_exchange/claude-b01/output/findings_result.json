@@ -1,0 +1,1044 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 95 the heading \"Section 3-3 Receiving and unpacking the equipment\" is a large section title. Sub-headings such as 3-3-1 and 3-3-3 (page 98) are smaller, so level 2 under Chapter 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0018 (Chapter 3, pages 91-188), which lists sec_0021 as a child. The sub-headings 3-3-1 to 3-3-4 are heading nodes inside the section and there are no child sections, which matches the page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts with its heading on page 95 and the last node on page 100 is the Table 3-5 step 7 and its Note (#/texts/1071, #/texts/1072, #/tables/56). The heading \"Section 3-4 Packing materials\" is on the same page 100 and belongs to sec_0022, and it is not in sec_0021 (last node is #/texts/1072). Sampled page 98 (3-3-3 Transportation Box Label) is fully inside the range.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 3/Section 3-3 Receiving and unpacking the equipment. The printed heading \"Section 3-3 Receiving and unpacking the equipment\" sits under Chapter 3 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 (pages 95-100) follows sec_0020 (92-94) with no gap. The range shares page 100 with sec_0022 (100-100), which is correct because Section 3-4 starts in the middle of that page. No node repeats in both sections.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0021 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The page 98 footer prints \"3 - 8\", a chapter-page folio. Neighbour sections use the same arabic scheme.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 for sec_0021 and for its neighbours sec_0020 and sec_0022. Physical page 98 shows printed folio 3 - 8, so the chapter-page numbering is consistent and the zero offset is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 100 render shows Table 3-5 step 7 with the text \"Unlock the casters ... slowly move the system from the box\", and #/tables/56 has the same text. Table 3-5 is split across pages 99 and 100 in tables 55 and 56, which follows the page break. Tables 53 and 54 are on page 96, which is not in the rendered pages for this batch, so they were only read as text.",
+   "notes": "Page 96 was not rendered in the batch. Tables 53 and 54 need a human look.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On page 95 the three yellow warning triangles next to WARNING and CAUTION are not in images.json (first image is img_0018 on page 96). The text labels WARNING and CAUTION and the full message are kept as text (#/texts/1027-1030). The icon meaning is stated in the text. On page 98 all three label figures are extracted (img_0020, img_0021, img_0022).",
+   "notes": "Small-icon pattern from the contract (Low). Probably filtered by the 2% area rule (BUG-017 family).",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The eight images img_0018 to img_0025 are all content: tilt indicator photos, three box labels (page 98), and unpacking drawings (pages 99-100). None is a logo, rule or footer divider.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 98 the three box label figures (img_0020, img_0021, img_0022) are under heading 3-3-3 and are mapped to sec_0021. Image img_0025 on page 100 is the step 7 drawing above the Section 3-4 heading and is also correctly in sec_0021. Section 3-4 has no image of its own on that page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 477 shows \"Section 8-11 Side Cover Replacement\" as the big section title with 8-11-1 to 8-11-3-1 as smaller sub-headings, so level 2 under Chapter 8 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8, 377-766). The subsections 8-11-1 to 8-11-6 are heading nodes inside the section and there are no child sections, which fits the layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section content is on the correct pages 477-482. Only the two running-header nodes #/texts/6239 and #/texts/6240 are assigned to page 483, after page_end 482. They are boilerplate (GE Healthcare / Direction 5394227, 13 LOGIQ S8/E8/S7 XDclear2.0 Service Manual) from the next section page.",
+   "notes": "Boilerplate-only crossing, Low per the contract. Probably the running-header noise family (BUG-022).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 8/Section 8-11 Side Cover Replacement. The printed heading \"Section 8-11 Side Cover Replacement\" sits under Chapter 8 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0079 (477-482) follows sec_0078 (475-476) and is followed by sec_0080 (483-484) with no gap and no overlap. Each step and heading appears once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0079 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0079 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The footer on page 478 prints \"8 - 102\" and page 477 prints \"8 - 101\", a chapter-page folio used the same way by neighbour sections.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbours sec_0078 and sec_0080. Physical page 478 shows folio 8 - 102, consistent with chapter-page numbering.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On page 478 step 4 \"Pull out Side Cover (L). There is mechanical hook on bottom of the part.\" is the only step and is shown in a table with Step and Illustration headers. It is not a table node: it survives as loose nodes (#/texts/6198 and #/texts/6200 typed as headings, #/texts/6199 as a paragraph). The same happens on pages 481 and 482. The table #/tables/198 on page 477 has steps 1-3 and puts step 2 text in the second column with an empty step cell.",
+   "notes": "Text is preserved and readable, so Low (header/row misdetection).",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 478 has one large photo with two inset close-ups; img_0445 (453x361) contains that figure. All other pages 477-482 have their photos extracted (img_0443 to img_0453). No meaningful photo was missed in the render.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All eleven images img_0443 to img_0453 are step photos of the side cover. None is a logo, rule or footer divider.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Photo img_0445 on page 478 shows the hook detail for step 4 of Side Cover (L) and is mapped to sec_0079. No other section starts on this page, so there is no sibling that could own it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 483 shows \"Section 8-12 Rear Cover Replacement\" as the large section title and 8-12-1 to 8-12-5 as smaller sub-headings, so level 2 is right. Page 484 repeats it as \"Section 8-12 Rear Cover Replacement (cont'd)\".",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8). The 8-12-x subsections are heading nodes inside the section and there are no child sections, which matches the layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section content is on the correct pages 483-484. Only the two running-header nodes #/texts/6258 and #/texts/6259 are assigned to page 485, after page_end 484. They are boilerplate from the next section page.",
+   "notes": "Boilerplate-only crossing, Low per the contract. Probably BUG-022 family.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 8/Section 8-12 Rear Cover Replacement. The printed heading \"Section 8-12 Rear Cover Replacement\" sits under Chapter 8 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0080 (483-484) follows sec_0079 (477-482) and precedes sec_0081 (485-486) with no gap and no overlap. On page 484 the repeated title \"Section 8-12 / Rear Cover Replacement (cont'd)\" (#/texts/6254, #/texts/6255) is a continuation header inside the same section, not a duplicate section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0080 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0080 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Page 484 footer prints \"8 - 108\" and page 483 prints \"8 - 107\", chapter-page folios like the neighbours.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like neighbours sec_0079 and sec_0081. Physical page 484 shows folio 8 - 108, consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/200 on page 483 has \"1. Remove 5 screws and rear cover.\" with the Step and Illustration headers, which matches the render. Page 484 has no table, only the NOTE and a picture.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 484 has one picture (rear view with the enlarged Russian caution label) and img_0455 (360x299) contains it. Page 483 rear view is img_0454. No meaningful visual is missing.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The two images img_0454 and img_0455 are content figures (rear view with screw circles, and the caution label). Neither is a logo or divider.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0455 on page 484 belongs to the NOTE about the Russian Multi Caution Label in the continuation of Section 8-12 and is mapped to sec_0080. No other section owns content on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 552 shows \"Section 8-18 Replacement around ACQ Box\" as the large section title. Sub-headings 8-18-1 to 8-18-9 are smaller, so level 2 under Chapter 8 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8). The 8-18-x and 8-18-x-y subsections are heading nodes inside the section and there are no child sections, which matches the layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section content is on the correct pages (last content: 8-18-9 Installation Procedure on page 571). The only crossing is running-header boilerplate (GE Healthcare / Direction 5394227, 13 LOGIQ S8/E8/S7 XDclear2.0 Service Manual) from page 572, the first page of sec_0087, which is included after page_end.",
+   "notes": "Boilerplate-only crossing, Low per the contract. Probably the running-header noise family (BUG-022).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 8/Section 8-18 Replacement around ACQ Box. The printed heading \"Section 8-18 Replacement around ACQ Box\" sits under Chapter 8 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 (552-571) follows sec_0085 (532-551) and precedes sec_0087 (572-574) with no gap and no overlap. Headings 8-18-4-3 and its \"(cont'd)\" on page 560 are one heading continued, not a duplicate section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0086 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The footer on page 558 prints \"8 - 182\", a chapter-page folio like the neighbours.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like neighbours sec_0085 and sec_0087. Physical page 558 shows folio 8 - 182, consistent with chapter-page numbering.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Page 558 shows a Step/Illustration table with step 4 \"Separate BF192 and PID.\" and a NOTE below it. The extractor has no table node for it: it is loose text (#/texts/7104 \"4.\", #/texts/7105, #/texts/7106 \"Step\", #/texts/7107 \"Illustration\"). Only tables #/tables/215 to 221 exist, so pages 553, 556-558 and 560-562 lose their table structure. The text survives.",
+   "notes": "Text is preserved, so Low (table detection miss).",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 558 has one photo (two boards being separated) and img_0593 (496x377) is that photo. No meaningful visual is missing on this page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_0576 to img_0613 in this section are board photos and step photos. The page 558 photo img_0593 is a content photo, not a logo, rule or divider.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Photo img_0593 on page 558 shows the two separated boards for step 4 of 8-18-4-2 and is mapped to sec_0086. No other section starts on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 572 shows \"Section 8-19 Replacement of CSI and Fan\" as the large section title with 8-19-1 to 8-19-3 as smaller sub-headings, so level 2 under Chapter 8 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8). The 8-19-x subsections are heading nodes inside the section and there are no child sections, which matches the layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section content is on the correct pages (last content: 8-19-5 Functional Check on page 574). The only crossing is running-header boilerplate (GE Healthcare / Direction 5394227, 13 LOGIQ S8/E8/S7 XDclear2.0 Service Manual) from page 575, the first page of sec_0088, which is included after page_end.",
+   "notes": "Boilerplate-only crossing, Low per the contract. Probably the running-header noise family (BUG-022).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 8/Section 8-19 Replacement of CSI and Fan. The printed heading \"Section 8-19 Replacement of CSI and Fan\" sits under Chapter 8 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0087 (572-574) follows sec_0086 (552-571) and precedes sec_0088 (575-580) with no gap and no overlap. Each heading appears once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0087 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0087 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The footer on page 572 prints \"8 - 196\" and page 574 prints \"8 - 198\", a chapter-page folio like the neighbours.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like neighbours sec_0086 and sec_0088. Physical page 572 shows folio 8 - 196, consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/222 on page 572 has steps 1-3 with the right text (\"Remove the front cover\", \"Unscrew 4 screws and remove the Indicator Bracket\", \"Unscrew 4 screws and remove the Fan Bracket\"). On page 573, step 4 \"Unplug the LED connector and FAN connector\" is not a table node. It is loose text (#/texts/7242 \"4.\", #/texts/7243 \"Step\", #/texts/7244-7246, #/texts/7247 \"Illustration\"). Page 573 was not rendered in the batch, so this is probably a missed table.",
+   "notes": "Low confidence: page 573 was not rendered and the row page is 572. Text is preserved, so Low.",
+   "confidence": 0.62
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 572 shows four step photos. img_0614, img_0615 and img_0616 are extracted and cover them (img_0615 is a wide 400x130 crop, probably two photos of step 3). Page 574 Figure 8-109 is img_0622. No meaningful visual is missing.",
+   "notes": "Exact count of photos per image file was not checked pixel by pixel.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The ten images img_0614 to img_0622 are step photos and the air-flow figure. None is a logo, rule or divider.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The photos on page 572 (img_0614 to img_0616) belong to steps 2 and 3 of 8-19-3 and are mapped to sec_0087. No other section starts on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 639 shows \"Section 8-29 On-Board UVC\" as the large section title with 8-29-1 to 8-29-3 smaller, so level 2 under Chapter 8 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8). The 8-29-x subsections are heading nodes inside the section and there are no child sections, which matches the layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section content is on the correct pages (last content: 8-29-7 Functional Check on page 656). The only crossing is running-header boilerplate (GE Healthcare / Direction 5394227, 13 LOGIQ S8/E8/S7 XDclear2.0 Service Manual) from page 657, the first page of sec_0098, which is included after page_end.",
+   "notes": "Boilerplate-only crossing, Low per the contract. Probably the running-header noise family (BUG-022).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 8/Section 8-29 On-Board UVC. The printed heading \"Section 8-29 On-Board UVC\" sits under Chapter 8 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0097 (639-656) follows sec_0096 (633-638) and precedes sec_0098 (657-658) with no gap and no overlap. Headings 8-29-3 to 8-29-7 each appear once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0097 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0097 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The footer on page 639 prints \"8 - 263\" and page 656 prints \"8 - 280\", chapter-page folios like the neighbours.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like neighbours sec_0096 and sec_0098. Physical page 639 shows folio 8 - 263, consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On page 639 table #/tables/262 matches the render (step 1 \"Remove HDMI CABLE from console.\"). But the section has Step/Instruction/Illustration tables on pages 640, 644, 646-655 that are not table nodes. Only tables 262-267 exist (pages 639, 641, 642, 643, 645). Steps on those pages are loose text (for example #/texts/7920-7925 on page 640, with \"Step\", \"Instruction\", \"Illustration\" as separate nodes). The text survives.",
+   "notes": "Text is preserved and readable, so Low. Reported on the sampled page 639 as a section-wide defect.",
+   "confidence": 0.68
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 639 shows one photo (HDMI cable at the rear panel) and img_0766 (197x145) is that photo. Pages 640-655 have 48 extracted step photos. No meaningful visual is missing on the sampled page and none is visible as missing on the last page 656 (text only).",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images img_0766 to img_0814 are step photos of UVC removal and installation. None is a logo, rule or divider.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The photo img_0766 on page 639 is next to step 1 of 8-29-3 and is mapped to sec_0097. No other section starts on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 552 shows \"Section 8-18 Replacement around ACQ Box\" as the large section title. Sub-headings 8-18-1 to 8-18-9 are smaller, so level 2 under Chapter 8 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8). The 8-18-x and 8-18-x-y subsections are heading nodes inside the section and there are no child sections, which matches the layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section content is on the correct pages (last content: 8-18-9 Installation Procedure on page 571). The only crossing is running-header boilerplate (GE Healthcare / Direction 5394227, 13 LOGIQ S8/E8/S7 XDclear2.0 Service Manual) from page 572, the first page of sec_0087, which is included after page_end.",
+   "notes": "Boilerplate-only crossing, Low per the contract. Probably the running-header noise family (BUG-022).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 8/Section 8-18 Replacement around ACQ Box. The printed heading \"Section 8-18 Replacement around ACQ Box\" sits under Chapter 8 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 (552-571) follows sec_0085 (532-551) and precedes sec_0087 (572-574) with no gap and no overlap. Headings 8-18-4-3 and its \"(cont'd)\" on page 560 are one heading continued, not a duplicate section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0086 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The footer on page 563 prints \"8 - 187\", a chapter-page folio like the neighbours.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like neighbours sec_0085 and sec_0087. Physical page 563 shows folio 8 - 187, consistent with chapter-page numbering.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 563 (8-18-4-7 Handling EEPROM on GFS Board) has no table, only text and two figures. No table node is expected there. The table-structure loss on other pages of this section is reported on page 558.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On page 563 the drawing for Figure 8-101 \"EEPROM must move\" (chip callout, two GFS boards, blue arrow) is not extracted. Only img_0602 (Figure 8-102 photo) exists for the page. The checker also finds one raster figure of 250x153 px (1.8% of the page area) that is not in images_v1.json, just under the 2% area filter. The labels \"EEPROM must move\", \"GFS Board being replaced\", \"New GFS Board\" survive as text (#/texts/7151-7154) and the body text already says the EEPROM must be moved to the new board.",
+   "notes": "The checker expects Critical (dropped raster figure, BUG-017/BUG-010 family). I chose Low because the same instruction is fully stated in the text (#/texts/7147-7150), so no information is lost. A human should confirm: if the figure is judged essential, raise to Critical.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page 563 image img_0602 is a close-up photo of the EEPROM on the GFS board (Figure 8-102). It is content, not a logo or divider.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Photo img_0602 on page 563 is Figure 8-102 \"Location of EEPROM (GFS example)\" under 8-18-4-7 and is mapped to sec_0086. No other section starts on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 612 shows \"Section 8-25 / Replacement of the Probe Holder (Kit), Cable Hook, and Extended probe holder\" as the large title with 8-25-1 to 8-25-3 smaller, so level 2 under Chapter 8 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8). The 8-25-x subsections are nodes inside the section and there are no child sections. Note: 8-25-1, 8-25-2 are typed paragraph, not heading (#/texts/7672, #/texts/7674), but this does not change the section nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section content is on the correct pages (last content: 8-25-7 Functional Check on page 614). The only crossing is running-header boilerplate (GE Healthcare / Direction 5394227, 13 LOGIQ S8/E8/S7 XDclear2.0 Service Manual) from page 615, the first page of sec_0094, which is included after page_end.",
+   "notes": "Boilerplate-only crossing, Low per the contract. Probably the running-header noise family (BUG-022).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Chapter 8/Section 8-25 Replacement of the Probe Holder (Kit), Cable Hook, and Extended probe holder. The printed heading \"Section 8-25 Replacement of the Probe Holder (Kit), Cable Hook, and Extended probe holder\" sits under Chapter 8 in the running footer and TOC-style numbering, so the path is correct and ordered.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0093 (612-614) follows sec_0092 (596-612) and precedes sec_0094 (615-616). The shared page 612 means sec_0092 ends on a page where 8-25 starts at the top, so the numeric ranges overlap by one page. The 612 nodes here (heading, Table 8-49) are 8-25 content. The sec_0092 nodes were not in this batch, so this is probably only a numeric overlap.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0093 has flagged_for_review=false and verification_score 100. The rendering shows no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed heading on the first page of sec_0093 matches the TOC title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The footer on page 612 prints \"8 - 236\" and page 614 prints \"8 - 238\", chapter-page folios like the neighbours.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like neighbours sec_0092 and sec_0094. Physical page 612 shows folio 8 - 236, consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/243 on page 612 has \"1. | Simply pull out Probe Holder from its location.\" with the captions \"Probe Holder\" and \"Small Probe Cup\" in the Illustration cell. This matches the render of Table 8-49. Tables 244 (page 613) and 245 (page 614, \"Remove two screws from Cable Hook\") follow Tables 8-50 and 8-51.",
+   "notes": "Page 613 was not rendered, so table 244 was read as text only.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 612 shows two photos (probe holder pulled up, and holder with small probe cup). img_0702 and img_0703 (315x202 each) are these two. Page 614 shows two photos and img_0708 and img_0709 are extracted. No meaningful visual is missing.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The eight images img_0702 to img_0709 are photos of probe holders and cable hooks. None is a logo, rule or footer divider.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The two photos on page 612 (img_0702, img_0703) are inside Table 8-49 of 8-25-3 and are mapped to sec_0093. Section 8-24 also ends on page 612 by number, but these photos show the probe holder and belong to 8-25.",
+   "notes": "",
+   "confidence": 0.85
+  }
+ ]
+}
