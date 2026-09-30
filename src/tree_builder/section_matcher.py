@@ -380,8 +380,12 @@ _FURNITURE_BAND = 0.08
 
 
 def _is_body_on_page(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
-    """True unless the block is page furniture (label, or fully inside the top/bottom band)."""
-    if block.label in _FURNITURE_LABELS:
+    """
+    True unless the block is page furniture (label, or fully inside the top/bottom band)
+    or a heading. A heading alone on the next page is usually the first part of the next
+    section's split title ('Section 1-9' + 'Electromagnetic Compatibility', LOGIQ_S8).
+    """
+    if block.label in _FURNITURE_LABELS or block.label == "section_header":
         return False
     page = doc.pages.get(block.page_no)
     if block.bbox is None or page is None or page.height <= 0:
