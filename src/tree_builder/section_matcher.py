@@ -57,6 +57,10 @@ class MatchedSection:
     offset_applied: int = 0
 
 
+def _section_id(index: int) -> str:
+    return f"sec_{index + 1:04d}"
+
+
 def _compute_page_ranges(
     bookmarks: list[tuple[int, str, int]],
     total_pages: int,
@@ -83,8 +87,7 @@ def _compute_page_ranges(
                 page_end = max(page_start, next_page - 1)
                 break
 
-        section_id = f"sec_{i + 1:04d}"
-        result.append((section_id, title, level, page_start, page_end))
+        result.append((_section_id(i), title, level, page_start, page_end))
 
     return result
 
@@ -200,6 +203,7 @@ def _compute_reading_order_ranges(
     bookmarks: list[tuple[int, str, int]],
     page_ranges: list[tuple[str, str, int, int, int]],
     doc: DoclingDocument,
+    boundaries: list[bool] | None = None,
 ) -> list[tuple[int, int]]:
     """
     Compute (reading_order_start, reading_order_end) per bookmark.
@@ -209,6 +213,9 @@ def _compute_reading_order_ranges(
     page, or — if the page has no content at all — the previous section's
     anchor + 1. The max() clamp keeps anchors monotonic non-decreasing so
     ranges never invert even if a heading match lands out of expected order.
+    A boundary (an excluded Index or Table of contents) starts on a page of its
+    own, so it anchors on the first block of its page: its title can come late
+    in reading order (LOGIQ_e p563, after the index columns).
     """
     blocks_by_page: dict[int, list[DoclingTextBlock]] = {}
     for b in doc.text_blocks:
@@ -218,8 +225,12 @@ def _compute_reading_order_ranges(
 
     anchors: list[int] = []
     prev_anchor = -1
-    for _section_id, title, _level, page_start, _page_end in page_ranges:
-        anchor = _find_heading_anchor(title, page_start, blocks_by_page, after=prev_anchor)
+    for i, (_section_id, title, _level, page_start, _page_end) in enumerate(page_ranges):
+        anchor = (
+            None
+            if boundaries and boundaries[i]
+            else _find_heading_anchor(title, page_start, blocks_by_page, after=prev_anchor)
+        )
         if anchor is None:
             page_blocks = blocks_by_page.get(page_start, [])
             anchor = page_blocks[0].reading_order if page_blocks else prev_anchor + 1
@@ -439,6 +450,7 @@ def match_content_to_sections(
     verifications: list[TitleVerification] | None = None,
     numbering_schemes: list[str] | None = None,
     offsets_applied: list[int] | None = None,
+    boundaries: list[bool] | None = None,
 ) -> list[MatchedSection]:
     """
     Match docling content blocks to bookmark sections.
@@ -458,22 +470,27 @@ def match_content_to_sections(
             bookmarks — see toc_resolution.ResolvedBookmark.numbering_scheme.
         offsets_applied: optional per-bookmark offset (global or per-cluster)
             that was applied to resolve this bookmark's page.
+        boundaries: optional flags, same order as bookmarks. A flagged entry (an
+            excluded Index or Table of contents bookmark) ends the sections before
+            it but builds no section, so its pages stay outside the tree (BUG-002).
+            verifications, numbering_schemes and offsets_applied list only the
+            entries that are not flagged.
 
     Returns:
-        list of MatchedSection, one per bookmark, with content assigned.
+        list of MatchedSection, one per bookmark that is not a boundary, with
+        content assigned.
     """
     if not bookmarks:
         return []
 
-    ranges = _compute_page_ranges(bookmarks, total_pages)
+    all_ranges = _compute_page_ranges(bookmarks, total_pages)
+    all_reading_order = _compute_reading_order_ranges(bookmarks, all_ranges, doc, boundaries)
+    kept = [i for i in range(len(bookmarks)) if not (boundaries and boundaries[i])]
+    ranges = [(_section_id(n), *all_ranges[i][1:]) for n, i in enumerate(kept)]
     hierarchy = _build_hierarchy(ranges)
-    reading_order_ranges = dict(
-        zip(
-            (section_id for section_id, *_ in ranges),
-            _compute_reading_order_ranges(bookmarks, ranges, doc),
-            strict=True,
-        )
-    )
+    reading_order_ranges = {
+        ranges[n][0]: all_reading_order[i] for n, i in enumerate(kept)
+    }
 
     sections: list[MatchedSection] = []
     for i, (section_id, title, level, page_start, page_end) in enumerate(ranges):

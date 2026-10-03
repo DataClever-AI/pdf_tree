@@ -362,3 +362,35 @@ def test_page_end_ignores_chapter_numbers_and_margin_labels_on_the_next_page():
     care, _maintenance = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
     assert _texts(care)[-2:] == ["25", "MP40/MP50/ MP60/MP70/ MP90"]
     assert care.page_end == 1
+
+
+def test_excluded_index_bookmark_ends_the_last_section():
+    # LOGIQ_e p563: the 'Index' bookmark is excluded from the tree; its pages must not
+    # be absorbed by the last section (BUG-002).
+    blocks = [
+        _block(0, "Care & Maintenance", 1, "section_header"),
+        _block(1, "Inspection paper work.", 1),
+        _block(2, "probe, cleaning 11-52", 2),
+        _block(3, "Index", 2, "section_header"),  # the title comes after the columns
+    ]
+    bookmarks = [(1, "Care & Maintenance", 1), (1, "Index", 2)]
+    (care,) = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 3), 3, boundaries=[False, True]
+    )
+    assert care.section_id == "sec_0001"
+    assert care.page_end == 1
+    assert _texts(care) == ["Care & Maintenance", "Inspection paper work."]
+
+
+def test_section_ids_skip_the_boundary_entries():
+    blocks = [
+        _block(0, "Legend", 1, "section_header"),
+        _block(1, "Table of contents", 2, "section_header"),
+        _block(2, "Introduction", 3, "section_header"),
+    ]
+    bookmarks = [(1, "Legend", 1), (1, "Table of contents", 2), (1, "Introduction", 3)]
+    legend, intro = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 3), 3, boundaries=[False, True, False]
+    )
+    assert (legend.section_id, legend.page_end) == ("sec_0001", 1)
+    assert (intro.section_id, intro.page_start) == ("sec_0002", 3)

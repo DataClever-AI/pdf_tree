@@ -150,6 +150,7 @@ class ExcludedTocEntry:
     page: int | str
     category: TocCategory  # "front_matter_noise" | "back_matter"
     reason: str
+    position: int = -1  # index of the entry in the raw TOC
 
 
 def filter_toc_entries(
@@ -168,18 +169,22 @@ def filter_toc_entries(
     kept: list[tuple[int, str, int | str]] = []
     excluded: list[ExcludedTocEntry] = []
 
-    for level, title, page in bookmarks:
+    for position, (level, title, page) in enumerate(bookmarks):
         classification = classify_toc_title(title)
 
         if classification.category == "front_matter_noise":
             excluded.append(
-                ExcludedTocEntry(level, title, page, "front_matter_noise", classification.reason)
+                ExcludedTocEntry(
+                    level, title, page, "front_matter_noise", classification.reason, position
+                )
             )
             continue
 
         if classification.category == "back_matter" and not include_back_matter:
             excluded.append(
-                ExcludedTocEntry(level, title, page, "back_matter", classification.reason)
+                ExcludedTocEntry(
+                    level, title, page, "back_matter", classification.reason, position
+                )
             )
             continue
 
