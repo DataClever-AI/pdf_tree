@@ -169,6 +169,50 @@ def _generate_windows(
     return windows
 
 
+def _in_reading_order(doc_dict: dict[str, Any]) -> dict[str, Any]:
+    """
+    Return a copy of one window's export with ``texts`` sorted into reading order.
+
+    reading_order is the position in the merged ``texts`` list (see
+    _build_typed_document), but Docling appends some texts at the end of that list:
+    headings inside list groups land after the last page of the window (SOMATOM
+    p131 'Equipotential bonding connector pin' at index 303 of 313). The real reading
+    order is the depth-first walk of ``body``. Texts the walk does not reach (e.g.
+    furniture) keep their place after the text that precedes them in the list.
+    $refs to texts are not rewritten; nothing reads them after the merge.
+    """
+    texts = doc_dict.get("texts") or []
+    rank: dict[int, int] = {}
+    stack: list[Any] = [{"$ref": "#/body"}]
+    while stack:
+        parts = str((stack.pop() or {}).get("$ref", "")).split("/")
+        if len(parts) == 2:
+            node = doc_dict.get(parts[1]) or {}
+        elif len(parts) == 3 and parts[2].isdigit():
+            collection, index = parts[1], int(parts[2])
+            items = doc_dict.get(collection) or []
+            if index >= len(items):
+                continue
+            node = items[index]
+            if collection == "texts":
+                rank.setdefault(index, len(rank))
+        else:
+            continue
+        stack.extend(reversed(node.get("children") or []))
+
+    keys: list[tuple[int, int, int]] = []
+    previous = -1
+    for index in range(len(texts)):
+        if index in rank:
+            previous = rank[index]
+            keys.append((previous, 0, index))
+        else:
+            keys.append((previous, 1, index))
+    ordered = dict(doc_dict)
+    ordered["texts"] = [texts[key[2]] for key in sorted(keys)]
+    return ordered
+
+
 def _trim_overlap_pages(doc_dict: dict[str, Any], min_page: int) -> dict[str, Any]:
     """
     Drop text/table entries whose page falls in a window's leading overlap
@@ -386,7 +430,7 @@ class DoclingExtractionEngine:
             logger.info("window %d/%d pages %d-%d", w_idx, len(windows), start, end)
             try:
                 result = converter.convert(str(pdf_path), page_range=(start, end))
-                doc_dict = result.document.export_to_dict()
+                doc_dict = _in_reading_order(result.document.export_to_dict())
                 if w_idx > 1:
                     prev_end = windows[w_idx - 2][1]
                     doc_dict = _trim_overlap_pages(doc_dict, min_page=prev_end + 1)
