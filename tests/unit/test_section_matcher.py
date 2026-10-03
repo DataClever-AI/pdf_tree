@@ -455,3 +455,50 @@ def test_short_text_that_continues_a_list_is_not_furniture():
     joysticks, scrolling = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
     assert _texts(joysticks)[-2:] == ["SOMATOM header", "Table joystick"]
     assert _texts(scrolling) == ["Scrolling"]
+
+
+def _side(order: int, text: str, page: int, label: str, top: float, x0: float, x1: float):  # type: ignore[no-untyped-def]
+    return DoclingTextBlock(
+        block_id=f"b{order}", text=text, label=label, page_no=page, reading_order=order,
+        depth=0, provenance=ExtractionProvenance(source="docling", page_no=page),
+        bbox=_box(page, top, top - 10, x0, x1),
+    )
+
+
+def test_margin_headings_get_the_text_beside_and_below_them():
+    # SOMATOM p393: Docling reads every margin heading first, then the whole body
+    # (BUG-029). Each heading must get the text level with it and below it.
+    blocks = [
+        _side(0, "Previous step text.", 1, "text", 700, 199, 538),
+        _side(1, "Scrolling", 2, "section_header", 536, 96, 184),
+        _side(2, "Toggling", 2, "section_header", 308, 109, 184),
+        _side(3, "Box text printed above the first heading.", 2, "text", 572, 199, 400),
+        _side(4, "Image segment is selected.", 2, "text", 536, 199, 400),
+        _side(5, "Move the joystick up or down.", 2, "text", 452, 199, 500),
+        _side(6, "Toggle between the image segments.", 2, "text", 278, 199, 500),
+    ]
+    bookmarks = [(2, "Previous", 1), (2, "Scrolling", 2), (2, "Toggling", 2)]
+    previous, scrolling, toggling = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 2), 2
+    )
+    assert _texts(previous)[-1] == "Box text printed above the first heading."
+    assert _texts(scrolling) == [
+        "Scrolling", "Image segment is selected.", "Move the joystick up or down."
+    ]
+    assert _texts(toggling) == ["Toggling", "Toggle between the image segments."]
+
+
+def test_margin_heading_merged_with_its_note_is_an_anchor():
+    # SOMATOM p295: the heading and the margin note below it are one 'text' block.
+    blocks = [
+        _side(0, "Previous", 1, "section_header", 700, 199, 538),
+        _side(1, "Step two of the previous task.", 2, "text", 627, 199, 517),
+        _side(2, "Planning the scan ranges The body landmarks", 2, "text", 567, 80, 184),
+        _side(3, "You can modify the scan ranges.", 2, "text", 567, 198, 495),
+    ]
+    bookmarks = [(2, "Previous", 1), (2, "Planning the scan ranges", 2)]
+    previous, planning = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert _texts(previous)[-1] == "Step two of the previous task."
+    assert _texts(planning) == [
+        "Planning the scan ranges The body landmarks", "You can modify the scan ranges."
+    ]
