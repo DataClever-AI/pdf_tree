@@ -219,6 +219,36 @@ def _map_images_to_sections(
     return result
 
 
+def _with_excluded_boundaries(
+    bookmarks: list[tuple[int, str, int]],
+    excluded: list[ExcludedTocEntry],
+    raw_toc_size: int,
+) -> tuple[list[tuple[int, str, int]], list[bool]]:
+    """
+    Put the excluded top-level TOC entries (Index, Table of contents, Glossary) back
+    in TOC order as boundaries, so the section before them ends where they start
+    instead of absorbing their pages (BUG-002). Deeper excluded entries (Philips
+    'Symbols' inside a chapter) are left out as before. fitz bookmark pages are
+    physical pages, so an excluded entry's page needs no resolution.
+    """
+    top_level = min(
+        [level for level, _, _ in bookmarks] + [e.level for e in excluded], default=1
+    )
+    by_position = {e.position: e for e in excluded}
+    kept = iter(bookmarks)
+    entries: list[tuple[int, str, int]] = []
+    boundaries: list[bool] = []
+    for position in range(raw_toc_size):
+        entry = by_position.get(position)
+        if entry is None:
+            entries.append(next(kept))
+            boundaries.append(False)
+        elif entry.level == top_level and isinstance(entry.page, int):
+            entries.append((entry.level, entry.title, entry.page))
+            boundaries.append(True)
+    return entries, boundaries
+
+
 def _flag_relocated_sections(sections: list[dict[str, Any]], sanity: BookmarkSanityReport) -> None:
     """Force flagged_for_review on sections built from a relocated bookmark."""
     for repair in sanity.repairs:
@@ -383,6 +413,7 @@ def run_pipeline(
         # aside back-matter (Bibliography, Appendix, ...) BEFORE toc_resolution
         # runs its offset calibration — noise entries are often among the
         # first few bookmarks, exactly where calibration samples from.
+        raw_toc_size = len(bookmarks)
         content_bookmarks, excluded_toc_entries = filter_toc_entries(
             bookmarks, include_back_matter=include_back_matter
         )
@@ -445,11 +476,15 @@ def run_pipeline(
         ts = _lap("toc_resolution", ts)
 
         # ── Step 7: section matcher ───────────────────────────────────────────
+        entries, boundaries = _with_excluded_boundaries(
+            bookmarks, excluded_toc_entries, raw_toc_size
+        )
         matched: list[MatchedSection] = match_content_to_sections(
-            bookmarks, doc, n_pages,
+            entries, doc, n_pages,
             verifications=verifications,
             numbering_schemes=numbering_schemes,
             offsets_applied=offsets_applied,
+            boundaries=boundaries,
         )
         logger.info("section_matcher: %d sections", len(matched))
         ts = _lap("section_matcher", ts)
@@ -468,10 +503,12 @@ def run_pipeline(
         with open(tree_json_path, "w") as f:
             json.dump(sections, f, indent=2, ensure_ascii=False)
 
-        first_bm_page = bookmarks[0][2] if bookmarks else 1
+        # Blocks on pages no section covers (cover, the manual's own TOC, an excluded
+        # Index) are correctly outside the tree, not coverage gaps.
+        covered = {p for s in matched for p in range(s.page_start, s.page_end + 1)}
         expected_front_matter = (
-            sum(1 for b in doc.text_blocks if b.page_no < first_bm_page)
-            + sum(1 for t in doc.tables if t.page_no < first_bm_page)
+            sum(1 for b in doc.text_blocks if b.page_no not in covered)
+            + sum(1 for t in doc.tables if t.page_no not in covered)
         ) if doc else 0
         total_blocks = len(doc.text_blocks) + len(doc.tables) if doc else 0
         validation = validate_tree(
