@@ -312,8 +312,10 @@ def test_page_end_ignores_running_headers_on_the_next_page():
         _block(4, "SVR Faults", 2, "section_header", top=400),
     ]
     bookmarks = [(2, "Faults", 1), (2, "SVR Faults", 2)]
-    faults, _svr = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
-    assert _texts(faults)[-2:] == ["HemoSphere Advanced Monitor", "Chapter 2"]
+    faults, svr = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    # The running headers of p2 go with the section that starts there (BUG-022).
+    assert _texts(faults) == ["Faults", "Faults text."]
+    assert _texts(svr)[:2] == ["HemoSphere Advanced Monitor", "Chapter 2"]
     assert faults.page_end == 1
 
 
@@ -360,8 +362,10 @@ def test_page_end_ignores_chapter_numbers_and_margin_labels_on_the_next_page():
         _block(5, "Check the monitor every year.", 2, top=520),
     ]
     bookmarks = [(2, "Care and Cleaning", 1), (2, "Maintenance", 2)]
-    care, _maintenance = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
-    assert _texts(care)[-2:] == ["25", "MP40/MP50/ MP60/MP70/ MP90"]
+    care, maintenance = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    # The chapter number and margin label go with the next chapter (BUG-022).
+    assert _texts(care) == ["Care and Cleaning", "Clean the monitor with a soft cloth."]
+    assert _texts(maintenance)[:2] == ["25", "MP40/MP50/ MP60/MP70/ MP90"]
     assert care.page_end == 1
 
 
@@ -420,3 +424,18 @@ def test_no_index_without_a_marker_or_before_the_last_bookmark():
     assert find_unbookmarked_index(_paged_doc(contents, 2), after_page=0) is None
     marked = [_block(0, "#", 2, "section_header"), _block(1, _INDEX_LINES, 2)]
     assert find_unbookmarked_index(_paged_doc(marked, 2), after_page=2) is None
+
+
+def test_running_header_stays_with_the_section_that_continues_on_the_page():
+    # 2002 p8: the page continues the previous section, so its running header stays there.
+    blocks = [
+        _block(0, "Specifications", 1, "section_header", top=700),
+        _block(1, "Steering ratio is given in the table.", 1, top=650),
+        _block(2, "Specifications", 2, "page_header", top=770),
+        _block(3, "Capacity of the fuel tank is given here.", 2, top=650),
+        _block(4, "Outback", 2, "section_header", top=400),
+    ]
+    bookmarks = [(2, "Specifications", 1), (2, "Outback", 2)]
+    specs, outback = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert "Specifications" == _texts(specs)[2]
+    assert _texts(outback) == ["Outback"]

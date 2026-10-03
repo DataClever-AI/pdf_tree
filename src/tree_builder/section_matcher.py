@@ -358,11 +358,26 @@ def _assign_content(
     blocks_by_page: dict[int, list[DoclingTextBlock]] = {}
     for block in doc.text_blocks:
         blocks_by_page.setdefault(block.page_no, []).append(block)
-        owner = _owner(block.reading_order)
-        if owner is not None:
-            owner.text_blocks.append(block)
+    owners: dict[str, MatchedSection | None] = {}
     for page_blocks in blocks_by_page.values():
         page_blocks.sort(key=lambda b: b.reading_order)
+        # Running headers, print slugs and chapter numbers at the top of a page belong
+        # to the section that owns the page's first heading or body text (BUG-022).
+        leading: list[DoclingTextBlock] | None = []
+        for block in page_blocks:
+            owners[block.block_id] = _owner(block.reading_order)
+            if leading is None:
+                continue
+            if block.label == "section_header" or _is_body_on_page(block, doc):
+                for furniture in leading:
+                    owners[furniture.block_id] = owners[block.block_id]
+                leading = None
+            else:
+                leading.append(block)
+    for block in doc.text_blocks:
+        owner = owners[block.block_id]
+        if owner is not None:
+            owner.text_blocks.append(block)
 
     page_sections: dict[int, list[MatchedSection]] = {}
     for sec in sections:
