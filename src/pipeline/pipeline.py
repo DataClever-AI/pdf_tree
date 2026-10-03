@@ -39,6 +39,7 @@ from src.tree_builder.bookmark_sanity import (
 from src.tree_builder.fitz_toc import get_embedded_toc, page_count, page_text_reader
 from src.tree_builder.section_matcher import (
     MatchedSection,
+    find_unbookmarked_index,
     match_content_to_sections,
     nearest_above,
 )
@@ -479,6 +480,11 @@ def run_pipeline(
         entries, boundaries = _with_excluded_boundaries(
             bookmarks, excluded_toc_entries, raw_toc_size
         )
+        index_page = find_unbookmarked_index(doc, after_page=max(p for _, _, p in entries))
+        if index_page is not None:
+            logger.info("section_matcher: unbookmarked index from page %d", index_page)
+            entries.append((min(level for level, _, _ in entries), "Index", index_page))
+            boundaries.append(True)
         matched: list[MatchedSection] = match_content_to_sections(
             entries, doc, n_pages,
             verifications=verifications,
