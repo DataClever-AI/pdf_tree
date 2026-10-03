@@ -443,6 +443,56 @@ def _extend_page_ends(sections: list[MatchedSection], doc: DoclingDocument) -> N
             parent.page_end = section.page_end
 
 
+# An index page has an index marker (an 'Index' or '#' heading, letter headings, or an
+# 'Index - 2' running header or footer) and many page references among its words.
+_INDEX_HEADINGS = frozenset({"index", "#"})
+_INDEX_FURNITURE = re.compile(r"^index\b", re.IGNORECASE)
+_PAGE_REF = re.compile(r"^\(?(?:[ivxlc]+[-\u2013])?\d{1,4}(?:[-\u2013]\d{1,4})?[,;.)]?$", re.I)
+_LETTERS = re.compile(r"[A-Za-z]{2,}")
+_INDEX_MIN_WORDS = 30
+_INDEX_MIN_REF_SHARE = 0.25
+
+
+def find_unbookmarked_index(doc: DoclingDocument, after_page: int) -> int | None:
+    """
+    First page of an alphabetical index at the end of the document that has no
+    bookmark (Philips p485, LOGIQ_S8 p911), or None (BUG-002).
+
+    Walks back from the last page while pages are index pages or have almost no
+    text (blank pages, the back cover), and stops at the first page of real text.
+    The index starts at the earliest index page of that run with an index marker,
+    and must start after ``after_page`` (the last bookmark's page).
+    """
+    words: dict[int, list[str]] = {}
+    marked: set[int] = set()
+    for block in doc.text_blocks:
+        text = block.text.strip()
+        if block.label in _FURNITURE_LABELS:
+            if _INDEX_FURNITURE.match(text):
+                marked.add(block.page_no)
+            continue
+        if block.label in {"section_header", "title"} and (
+            text.lower() in _INDEX_HEADINGS or (len(text) == 1 and text.isalpha())
+        ):
+            marked.add(block.page_no)
+        words.setdefault(block.page_no, []).extend(text.split())
+
+    start = None
+    for page in sorted(words, reverse=True):
+        if page <= after_page:
+            break
+        tokens = words[page]
+        word_count = sum(1 for token in tokens if _LETTERS.search(token))
+        if word_count < _INDEX_MIN_WORDS:
+            continue
+        refs = sum(1 for token in tokens if _PAGE_REF.match(token))
+        if refs / word_count < _INDEX_MIN_REF_SHARE:
+            break
+        if page in marked:
+            start = page
+    return start
+
+
 def match_content_to_sections(
     bookmarks: list[tuple[int, str, int]],
     doc: DoclingDocument,

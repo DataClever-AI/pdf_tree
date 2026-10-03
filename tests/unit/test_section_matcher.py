@@ -13,6 +13,7 @@ from src.models.extraction import (
 from src.tree_builder.section_matcher import (
     _find_heading_anchor,
     _is_partial_match,
+    find_unbookmarked_index,
     match_content_to_sections,
 )
 
@@ -394,3 +395,28 @@ def test_section_ids_skip_the_boundary_entries():
     )
     assert (legend.section_id, legend.page_end) == ("sec_0001", 1)
     assert (intro.section_id, intro.page_start) == ("sec_0002", 3)
+
+
+_INDEX_LINES = " ".join(f"probe term{n} {n}, {n + 3}" for n in range(1, 21))  # 40 words, 40 refs
+
+
+def test_unbookmarked_index_starts_at_the_marked_page():
+    # LOGIQ_S8 p911: 'INDEX' and letter headings, entries with page references.
+    blocks = [
+        _block(0, "Real text " * 20, 1),
+        _block(1, "INDEX", 2, "section_header"),
+        _block(2, "A", 2, "section_header"),
+        _block(3, _INDEX_LINES, 2),
+        _block(4, _INDEX_LINES, 3),
+        _block(5, "Index - 2", 3, "page_footer"),
+        _block(6, "(c) 2012 General Electric", 4),  # back cover: almost no text
+    ]
+    assert find_unbookmarked_index(_paged_doc(blocks, 4), after_page=1) == 2
+
+
+def test_no_index_without_a_marker_or_before_the_last_bookmark():
+    # A table of contents is also dense with page numbers but has no index marker.
+    contents = [_block(0, _INDEX_LINES, 1), _block(1, _INDEX_LINES, 2)]
+    assert find_unbookmarked_index(_paged_doc(contents, 2), after_page=0) is None
+    marked = [_block(0, "#", 2, "section_header"), _block(1, _INDEX_LINES, 2)]
+    assert find_unbookmarked_index(_paged_doc(marked, 2), after_page=2) is None
