@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import math
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 from src.models.extraction import BoundingBox, DoclingDocument, DoclingTable, DoclingTextBlock
 from src.tree_builder.title_verification import TitleVerification
@@ -165,8 +165,9 @@ def _find_heading_anchor(
     "section_header" in reading order that matches without leading numbering,
     starts with the title (Docling merges a heading with its sub-heading) or
     covers most of it; then exact text on any block (headings are sometimes
-    mislabeled as body text). Figure labels can repeat a title later in
-    reading order, so the near-match tier keeps reading order, not match type.
+    mislabeled as body text); then any non-furniture block that starts with the title. Figure
+    labels can repeat a title later in reading order, so the near-match tier keeps
+    reading order, not match type.
     """
     norm_title = _normalize_heading(title)
     if not norm_title:
@@ -178,6 +179,7 @@ def _find_heading_anchor(
         if block.reading_order > after
     ]
     headers = [(block, text) for block, text in candidates if block.label == "section_header"]
+    content = [(block, text) for block, text in candidates if block.label not in _FURNITURE_LABELS]
     def near_match(text: str) -> bool:
         if not text:
             return False
@@ -191,6 +193,9 @@ def _find_heading_anchor(
         (headers, lambda text: text == norm_title),
         (headers, near_match),
         (candidates, lambda text: text == norm_title),
+        # A margin heading merged with the note below it (SOMATOM p295) (BUG-029);
+        # running headers and footers repeat titles too (LOGIQ_S8 p379).
+        (content, lambda text: text.startswith(norm_title + " ")),
     )
     for blocks, matches in tiers:
         for block, text in blocks:
@@ -479,6 +484,121 @@ def _extend_page_ends(sections: list[MatchedSection], doc: DoclingDocument) -> N
             parent.page_end = section.page_end
 
 
+# A margin heading sits in a narrow left column (SOMATOM: x1 = 184 of 595 pt) with the
+# body to its right. A two-column body has a left column of about half the page.
+_MARGIN_COLUMN_SHARE = 0.35
+
+
+def _is_margin_heading(
+    block: DoclingTextBlock,
+    page_blocks: list[DoclingTextBlock],
+    width: float,
+    titles: set[str],
+    body_x0: float,
+) -> bool:
+    if block.bbox is None or block.bbox.x1 > width * _MARGIN_COLUMN_SHARE:
+        return False
+    # The main column (blocks reaching past the margin column) starts right of it;
+    # margin notes inside the column do not count.
+    if body_x0 < block.bbox.x1 - _ABOVE_TOLERANCE:
+        return False
+    text = _normalize_heading(block.text)
+    if block.label != "section_header" and not any(
+        text == title or text.startswith(title + " ") for title in titles
+    ):
+        return False
+    top, bottom = vertical_span(block.bbox)
+    for other in page_blocks:
+        if other.bbox is None or other.bbox.x0 < block.bbox.x1:
+            continue
+        other_top, other_bottom = vertical_span(other.bbox)
+        if other_top >= bottom and other_bottom <= top:
+            return True
+    return False
+
+
+def _read_before_text_above(page_blocks: list[DoclingTextBlock], margin: set[str]) -> bool:
+    """The signature of BUG-029: Docling read a margin heading before body text
+    printed above it. Pages read in order (most layouts) are left alone."""
+    lowest_heading = math.inf
+    for block in sorted(page_blocks, key=lambda b: b.reading_order):
+        assert block.bbox is not None
+        top = vertical_span(block.bbox)[0]
+        if block.block_id in margin:
+            lowest_heading = min(lowest_heading, top)
+        elif block.label not in _FURNITURE_LABELS and (
+            top > lowest_heading + _SIDE_HEADING_TOLERANCE
+        ):
+            return True
+    return False
+
+
+def _top_down_key(block: DoclingTextBlock, margin: set[str]) -> tuple[float, int, float]:
+    assert block.bbox is not None
+    top = vertical_span(block.bbox)[0]
+    if block.block_id in margin:
+        return (-(top + _ABOVE_TOLERANCE), 0, block.bbox.x0)
+    return (-top, 1, block.bbox.x0)
+
+
+def _place_margin_headings(
+    doc: DoclingDocument, page_ranges: list[tuple[str, str, int, int, int]]
+) -> DoclingDocument:
+    """
+    Docling reads the left margin column of a page first: every side heading of the
+    page, then the whole body (SOMATOM p393). On a page with margin headings, put the
+    blocks in top-to-bottom order so each heading comes right before the text beside
+    and below it; a heading goes first among blocks level with it (BUG-029). Other
+    pages keep Docling's order. The page keeps its own set of reading_order values.
+    """
+    titles: dict[int, set[str]] = {}
+    for _section_id, title, _level, page_start, _page_end in page_ranges:
+        titles.setdefault(page_start, set()).add(_normalize_heading(title))
+    by_page: dict[int, list[DoclingTextBlock]] = {}
+    for block in doc.text_blocks:
+        by_page.setdefault(block.page_no, []).append(block)
+
+    new_order: dict[str, int] = {}
+    for page_no, page_blocks in by_page.items():
+        page = doc.pages.get(page_no)
+        if page is None or page.width <= 0:
+            continue
+        body_x0 = min(
+            (
+                block.bbox.x0
+                for block in page_blocks
+                if block.bbox is not None
+                and block.bbox.x1 > page.width * _MARGIN_COLUMN_SHARE
+                and _is_body_on_page(block, doc)
+            ),
+            default=0.0,
+        )
+        margin = {
+            block.block_id
+            for block in page_blocks
+            if _is_margin_heading(
+                block, page_blocks, page.width, titles.get(page_no, set()), body_x0
+            )
+        }
+        if not margin or any(block.bbox is None for block in page_blocks):
+            continue
+        if not _read_before_text_above(page_blocks, margin):
+            continue
+        orders = sorted(block.reading_order for block in page_blocks)
+        top_down = sorted(page_blocks, key=lambda block: _top_down_key(block, margin))
+        for order, block in zip(orders, top_down, strict=True):
+            new_order[block.block_id] = order
+    if not new_order:
+        return doc
+    blocks = [
+        replace(block, reading_order=new_order[block.block_id])
+        if block.block_id in new_order
+        else block
+        for block in doc.text_blocks
+    ]
+    return replace(doc, text_blocks=blocks)
+
+
 # An index page has an index marker (an 'Index' or '#' heading, letter headings, or an
 # 'Index - 2' running header or footer) and many page references among its words.
 _INDEX_HEADINGS = frozenset({"index", "#"})
@@ -570,6 +690,7 @@ def match_content_to_sections(
         return []
 
     all_ranges = _compute_page_ranges(bookmarks, total_pages)
+    doc = _place_margin_headings(doc, all_ranges)
     all_reading_order = _compute_reading_order_ranges(bookmarks, all_ranges, doc, boundaries)
     kept = [i for i in range(len(bookmarks)) if not (boundaries and boundaries[i])]
     ranges = [(_section_id(n), *all_ranges[i][1:]) for n, i in enumerate(kept)]
