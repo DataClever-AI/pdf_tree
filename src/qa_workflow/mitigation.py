@@ -106,7 +106,9 @@ def plan_mitigation_sample(
     """
     sample = generate_sample(sections, total_pages)
     by_id = {section["section_id"]: section for section in sections}
-    official = {(section_id, page) for section_id, page in sample.section_pages.items()}
+    # Every official row, not one page per section: a quota page that is not the
+    # section's first page must not come back as a random check (2002 v2.3 p388).
+    official = {(row.section_id, row.page) for row in sample.rows}
     reasons: dict[tuple[str, int], set[str]] = {}
     for pairs, reason in ((base_pairs, "base-pair"), (occurrence_pairs, "bug-occurrence")):
         for section_id, page in pairs:
