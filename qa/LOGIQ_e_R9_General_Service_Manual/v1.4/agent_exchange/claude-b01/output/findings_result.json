@@ -1,0 +1,994 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p94 the title \"Receiving and unpacking the equipment\" is printed as a large section title under the running head \"System Setup\" (chapter). This matches level 2 under parent sec_0017 System Setup (level 1).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0017 System Setup (pp89-162) contains this section (pp94-99). The page head on p96 reads \"System Setup\". The section has no child sections, and the sub-headings such as \"Unpacking the LOGIQ e (continued)\" on p96 are only topics inside it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p94 starts with the section title and the \"Contents in this Section\" list. p99 ends with \"Packing the Equipment\" and \"Unpacking LOGIQ e Cart\" and the rest of the page is blank. The previous section ends on p93 and the next starts on p100. Only running head and footer nodes (#/texts/857, #/texts/868) are boilerplate and they are inside the range.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/System Setup/Receiving and unpacking the equipment\" matches the printed chapter head \"System Setup\" and the section title on p94.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section sec_0019 ends on p93, this one covers p94-p99, the next sec_0021 starts on p100. There is no gap or overlap. The repeated heading \"Unpacking the LOGIQ e (continued)\" on pp96-97 is a printed continuation title, not a duplicate section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section has flagged_for_review=false, verification_score 100 and an empty reason. The renderings of p94, p96 and p99 show no sign of uncertainty, so the unflagged state is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The section title and start page p94 match the printed title page, so the TOC source is supported by the rendering.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios are arabic chapter-page numbers (3-6 on p94, 3-8 on p96, 3-11 on p99). The scheme \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p94 shows folio 3-6 and starts the section, p96 shows 3-8 and p99 shows 3-11, so the bookmark pages are the physical pages and no shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Figure 3-1 on p95 (carton with \"Adhesive tape\" and \"Plastic Bands\" callouts) and Figure 3-2 on p96 (exploded drawing of paper pad, console, console package, accessories package) are vector drawings. They are in the page rendering but there is no extracted image for p95 or p96. Only the callout words survive as text (#/texts/875-878 and #/texts/888-891); the drawings themselves, which show how to open and unpack the box, are lost. Kept images are only p97 (img_0079) and p98 (img_0080, img_0081). The CAUTION triangle on p96 is also not kept, but its meaning is in the text node \"CAUTION\" (Low by itself).",
+   "notes": "Same root cause as BUG-012: vector-only figures are not extracted, and the new v1.4 pixel filter does not change that. Target p95 and p96 are still missing. Severity Critical because the contract maps a meaningful vector figure missing from the image output to Critical; the labels in the text do not show the drawing.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The three kept images are content: img_0079 (p97, 895x580) is Figure 3-3 interleavers and console, img_0080 (p98, 1816x365) and img_0081 (p98, 1769x333) are rows of packaging handling symbols (up arrows, fragile glass, rain, humidity, pressure, temperature, stack limit) that the text describes. No logo, divider or bullet was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All kept images (p97, p98) are printed inside this section range p94-p99 and no other section covers those pages, so they are mapped to the right section. p96 and p95 have no extracted image, which is reported in the discarding row.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section title \"System Configuration\" is printed as a large level-2 title on p111 under the chapter head \"System Setup\". This matches hierarchy_level 2 with parent sec_0017. Sampled page: p116 (Pin Assignment).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0017 System Setup (pp89-162) contains this section (pp111-124). The p111 contents list shows topics such as Pin Assignment and Available probes, which are sub-headings inside this section and not separate nodes. No child sections are listed, which is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p111 begins with the title and \"Contents in this Section\". p124 ends with \"RSVP Agent Configuration\" and Figure 3-17 and the page is complete. The previous section ends on p110 and the next starts on p125. The sampled page p116 (Pin Assignment) holds only content of this section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/System Setup/System Configuration\" matches the chapter head \"System Setup\" and the printed title on p111.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section ends on p110, this section covers pp111-124 and the next starts on p125. There is no gap or overlap. Printed folios run 3-23 (p111) to 3-36 (p124) without a jump.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. The renderings of p111, 116 and p124 show nothing uncertain, so the unflagged state is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The title page p111 matches the section title and start page, so the TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic chapter-page numbers (3-23 on p111, 3-28 on p116, 3-36 on p124). The scheme \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p111 shows 3-23 and starts the section, and p116 (Pin Assignment) is in sequence, so no page shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p116 there are four small tables (Tables 3-5 to 3-8, pin number and signal pairs). The extracted table nodes 38-41 keep every value (for example \"1 +20V 3 GND\", \"2 DATA- 4 GND\"), but the header is flattened to \"Pin No. Signal Pin No. | Signal\" and each data row is only two cells instead of four columns. Reading order and values are kept, only the column structure is merged.",
+   "notes": "Merged cells, values preserved, so Low per the contract.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "p116 has no figure. For the section as a whole, the vector Connectivity Installation Worksheet on p123 (Figure 3-16: Site System Information, TCP/IP Settings, Services table, boxes) has no extracted image. Its field labels are kept as text nodes (#/texts/1141-1182, for example \"Site:\", \"IP Address:\", \"Remote Archive Name:\") but the form layout, which labels belong to which box and column, is lost. The WARNING triangle on p114 is also not kept but the word WARNING is in the text. The new image img_0090 on p114 (491x58) is the USB cable drawing in Table 3-4 and is kept.",
+   "notes": "BUG-012 target p123 is still missing as an image (vector form, no raster). The field labels survive as text, but the figure itself (form layout) is lost, so I grade Critical as the contract says for a meaningful vector figure missing; a human may lower it to Low because the labels are in the text. The new img_0090 on p114 is content, not noise.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 11 kept images are content. img_0090 (p114, 491x58) is the USB cable drawing shown in the Figure column of Table 3-4 and is not noise. The others are product photos (img_0089 p112, img_0091 p115, img_0092-0098 pp118-119) and the agent configuration screenshot img_0099 (p124, 1920x1080). No logo, divider or bullet was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All kept images (pp112-124) are printed inside this section range pp111-124. img_0090 sits in Table 3-4 on p114 and img_0099 on p124 is Figure 3-17 of RSVP Agent Configuration. Neither sampled page 116 has an extracted image and the rendering shows none, so there is nothing to mis-map.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p271 \"USB Quick Save\" is a large section title under the running head \"USB Quick Save\". It is level 2 under parent sec_0042 Diagnostics/Troubleshooting, whose head appears on p272 and p274. The level is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0042 Diagnostics/Troubleshooting (pp265-396) contains this section (pp271-274). The page head on p272 reads \"Diagnostics/Troubleshooting\". No child sections, and the page shows only \"(continued)\" titles.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p271 starts the section with \"Overview\". p274 ends with Figure 7-5 and the rest of the page is blank. Previous section ends on p270 and next (\"Screen Capture\") starts on p275. Page 272 content (Figure 7-2) belongs to this section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/Diagnostics/Troubleshooting/USB Quick Save\" matches the chapter head \"Diagnostics/Troubleshooting\" (the slash is part of the chapter name) and the section title.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section ends on p270, this section covers pp271-274, next starts on p275. Folios 7-7 to 7-10 run without a jump. No gap or overlap. Repeated heading \"USB Quick Save (continued)\" on pp273-274 is a printed continuation.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. Renderings of p271-p274 show clean boundaries, so the unflagged state is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" and the title page p271 matches the section title and start page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic chapter-page numbers (7-7 on p271, 7-8 on p272, 7-9 on p273, 7-10 on p274). \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p271 shows folio 7-7 and starts the section, and the next pages follow in order, so no shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Figure 7-5 on p274 (directory path bar \"KINGSTON (F:) > test-123____ADM > 30032023_160003\", about 673x35 px) has no extracted image; only its caption #/texts/2810 is kept. The text says the path uses \"test-123\", so the main point is in the text, but the full path is lost. Figure 7-4 (patient ID strip, img_0203, 1654x148) is kept and Figures 7-2 and 7-3 (img_0201 p272, img_0202 p273) are kept.",
+   "notes": "Target p274 second figure (673x35) is still not kept (under the 48 px height floor). Low because the key value test-123 is in the paragraph; I am not fully sure the lead wants this as content.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The three kept images are content: img_0201 (p272, 1202x630) and img_0202 (p273, 1188x818) are Connectivity screens for Figures 7-2 and 7-3, and img_0203 (p274, 1654x148) is the patient ID strip of Figure 7-4. Their size is large enough and they are cited in captions, so no noise was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 272,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All three kept images are on pp272-274 and are printed inside this section range pp271-274. The image on page 272 is Figure 7-2 of USB Quick Save, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p402 \"Loading the software\" is a large section title under the chapter head \"Replacement Procedures\". Level 2 under parent sec_0052 (level 1) is correct. On p404 \"Recording important settings and parameters\" is only a sub-heading.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0052 Replacement Procedures (pp397-426) contains this section (pp402-417). The p402 contents list names topics (Recording important settings and parameters, Probe Recognition Check, etc.) that are headings inside it. No child sections listed, which is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p402 starts with the section title and contents. p417 ends with \"Reinstall DICOM Devices\" and the rest of the page is blank. Previous section ends on p401 and next starts on p418. p404 (Recording important settings and parameters) belongs to this section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/Replacement Procedures/Loading the software\" matches the chapter head \"Replacement Procedures\" on p402 and p404 and the printed title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section ends on p401, this covers pp402-417, next starts on p418. Folios 8-6 (p402) to 8-21 (p417) follow without a jump. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. The p402, p404 and p417 renderings show nothing uncertain.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" and p402 shows the title page for the start page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic chapter-page numbers (8-6 on p402, 8-8 on p404, 8-21 on p417). \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p402 shows folio 8-6 and starts the section, p404 shows 8-8, p417 shows 8-21. No shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Figure 8-14 \"Probe identification\" on p417 is a thin screenshot strip of the status bar (GE Healthcare, 03/30/23 02:13:27PM, ADM, 003, MI 1.2, TIs 0.3, L4-20t, Shoulder, battery icon), raw 808x39 px. It is not in the image output; only its caption #/texts/4521 is kept. The paragraph before it says the probe information shows at the right top, but the example values are only in the figure. The CAUTION triangle on p404 is not kept either, but the word CAUTION is in the text. The 13 other screenshots on pp406-416 are kept.",
+   "notes": "Target p417 (808x39, height under 48 px) is still not kept. Low because it is an example status line and the instruction text explains what to check; I am not fully sure and the lead may judge it more severe.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 13 kept images (img_0299-0311, pp406-416) are content: BIOS and boot screens, upgrade dialogs, licence dialog, version tables and software screens with yellow highlights, each cited by the loading steps. img_0301 (p407, 800x97) is a one-line BIOS boot text strip and is content. No icon, logo or divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0056",
+   "page_sampled": 404,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All kept images are printed on pp406-416, inside this section range pp402-417 and not in a neighbour. The sampled p404 has no image and the rendering shows only text and a caution icon, so there is nothing to mis-map.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p430 \"Renewal Parts Lists\" is a large section title under the chapter head \"Renewal Parts\". Level 2 under parent sec_0060 Renewal Parts (level 1) is correct. \"Accessories and Kits\" on p436 is only a sub-heading.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0060 Renewal Parts (pp427-444) contains this section (pp430-444). The p430 contents list (Power Cable, Operator Console Assy, LOGIQ e Cart, Accessories and Kits, Probe, Manuals) are headings inside it. No child sections, which is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p430 starts with the title and contents. p444 ends with Table 9-6 (items 60-73) and the rest is blank. Previous section ends on p429 and next starts on p445. Page 436 holds Table 9-4 of this section only.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/Renewal Parts/Renewal Parts Lists\" matches the chapter head \"Renewal Parts\" on p430 and p436 and the title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section ends on p429, this covers pp430-444, next starts on p445. Folios 9-4 (p430) to 9-18 (p444) follow without a jump. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. Renderings of p430, p436 and p444 show clean boundaries.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" and p430 shows the title page at the start page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic chapter-page numbers (9-4 on p430, 9-10 on p436, 9-18 on p444). \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p430 shows folio 9-4 and starts the section, and p436 shows 9-10, so no shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 9-4 on p436 (table node 117) keeps all item numbers, part numbers and part names. But the header is flattened to \"Item Part Number Part Name Corresponding graphic | Replaced By | Qty\", and in rows 1 and 6 the Qty \"1\" is attached to the end of the first cell (\"1 5144997-S LOGIQ e R9 Cable kits 1\") while in rows 4, 5 and 7 it is in the last cell. Values and reading order are kept but the column structure is inconsistent.",
+   "notes": "Merged and shifted cells but values can still be read; Low per contract.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p436 all four graphics of Table 9-4 are kept: img_0335 (cable kit 208x203), img_0336 (battery 152x259), img_0337 (AC/DC adapter 181x246) and img_0338 (LOGO kit 195x111, new in v1.4). Row 7 (KBD film kit) shows an empty graphic cell in the rendering, so nothing is lost. On p434 the castor, table (171x161), hook kits (219x125) and AC inlet photos are all kept. The 34x6 fragment on p434 is not visible in the page and is not content.",
+   "notes": "Targets p434 171x161 and 219x125 and p436 195x111 are recovered.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 31 kept images (img_0325-0355) are content: part photos in the Corresponding graphic column of Tables 9-3 and 9-4 and probe photos. The smallest ones, img_0331 (p434, 171x161), img_0332 (p434, 219x125) and img_0338 (p436, 195x111), are product photos of listed parts, not decoration. No logo, divider or bullet image was kept. The GE HealthCare label in img_0338 is the picture of the LOGO kit part itself.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Kept images are on pp432-441, inside this section range pp430-444. The photos on p436 sit in the rows of Table 9-4 and those on p434 in Table 9-3, both of this section. No image belongs to a neighbouring section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section title \"System Configuration\" is printed as a large level-2 title on p111 under the chapter head \"System Setup\". This matches hierarchy_level 2 with parent sec_0017. Sampled page: p120 (Available probes).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0017 System Setup (pp89-162) contains this section (pp111-124). The p111 contents list shows topics such as Pin Assignment and Available probes, which are sub-headings inside this section and not separate nodes. No child sections are listed, which is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p111 begins with the title and \"Contents in this Section\". p124 ends with \"RSVP Agent Configuration\" and Figure 3-17 and the page is complete. The previous section ends on p110 and the next starts on p125. The sampled page p120 (Available probes) holds only content of this section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/System Setup/System Configuration\" matches the chapter head \"System Setup\" and the printed title on p111.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section ends on p110, this section covers pp111-124 and the next starts on p125. There is no gap or overlap. Printed folios run 3-23 (p111) to 3-36 (p124) without a jump.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. The renderings of p111, 120 and p124 show nothing uncertain, so the unflagged state is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The title page p111 matches the section title and start page, so the TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic chapter-page numbers (3-23 on p111, 3-32 on p120, 3-36 on p124). The scheme \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p111 shows 3-23 and starts the section, and p120 (Available probes) is in sequence, so no page shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p120 (Available probes) has no table. It has only a heading and two paragraphs (#/texts/1116-1118) and the probe list is plain text, matching the rendering. Nothing to compare.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p120 has only text, no figure and no icon, and nothing is missing on this page. The section-level loss of the p123 worksheet layout is recorded once on the p116 row of the same section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 11 kept images are content. img_0090 (p114, 491x58) is the USB cable drawing shown in the Figure column of Table 3-4 and is not noise. The others are product photos (img_0089 p112, img_0091 p115, img_0092-0098 pp118-119) and the agent configuration screenshot img_0099 (p124, 1920x1080). No logo, divider or bullet was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All kept images (pp112-124) are printed inside this section range pp111-124. img_0090 sits in Table 3-4 on p114 and img_0099 on p124 is Figure 3-17 of RSVP Agent Configuration. Neither sampled page 120 has an extracted image and the rendering shows none, so there is nothing to mis-map.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p271 \"USB Quick Save\" is a large section title under the running head \"USB Quick Save\". It is level 2 under parent sec_0042 Diagnostics/Troubleshooting, whose head appears on p272 and p274. The level is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0042 Diagnostics/Troubleshooting (pp265-396) contains this section (pp271-274). The page head on p272 reads \"Diagnostics/Troubleshooting\". No child sections, and the page shows only \"(continued)\" titles.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p271 starts the section with \"Overview\". p274 ends with Figure 7-5 and the rest of the page is blank. Previous section ends on p270 and next (\"Screen Capture\") starts on p275. Page 273 content (Figure 7-3) belongs to this section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/Diagnostics/Troubleshooting/USB Quick Save\" matches the chapter head \"Diagnostics/Troubleshooting\" (the slash is part of the chapter name) and the section title.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section ends on p270, this section covers pp271-274, next starts on p275. Folios 7-7 to 7-10 run without a jump. No gap or overlap. Repeated heading \"USB Quick Save (continued)\" on pp273-274 is a printed continuation.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. Renderings of p271-p274 show clean boundaries, so the unflagged state is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" and the title page p271 matches the section title and start page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic chapter-page numbers (7-7 on p271, 7-8 on p272, 7-9 on p273, 7-10 on p274). \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p271 shows folio 7-7 and starts the section, and the next pages follow in order, so no shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p273 Figure 7-3 (Defining Print Key Operation) is kept as img_0202 (1188x818) and no other visual is on the page. Nothing is lost on this page. The small Figure 7-5 on p274 is recorded on the p272 row of this section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The three kept images are content: img_0201 (p272, 1202x630) and img_0202 (p273, 1188x818) are Connectivity screens for Figures 7-2 and 7-3, and img_0203 (p274, 1654x148) is the patient ID strip of Figure 7-4. Their size is large enough and they are cited in captions, so no noise was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 273,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All three kept images are on pp272-274 and are printed inside this section range pp271-274. The image on page 273 is Figure 7-3 of USB Quick Save, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p498 \"Overview\" is a large title under the running head \"LOGIQ e Cart Setup\". It is level 2 under parent sec_0076 LOGIQ e Cart Setup (level 1, pp497-562).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0076 LOGIQ e Cart Setup (pp497-562) contains this section (pp498-499). The p498 contents list shows Overview, Set Up LOGIQ e Cart and other siblings. No child sections, which is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p498 starts with the title, the chapter contents and the Introduction. p499 ends with \"Special care should be taken when transporting the LOGIQ e Cart in a vehicle\" and the page is full. The next section \"Set Up LOGIQ e Cart\" starts on p500. A stray word \"Do\" begins node #/texts/5322 on p499; this is a text glitch, not a boundary problem.",
+   "notes": "Minor text glitch in #/texts/5322 noted for information only.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path \"/LOGIQ e Cart Setup/Overview\" matches the running head \"LOGIQ e Cart Setup\" on p498 and the title \"Overview\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section covers pp498-499 and the next starts on p500. Parent starts on p497, so p497 is the chapter page before this section. Folios 11-2 and 11-3 follow in order. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. The p498 and p499 renderings show nothing uncertain.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" and p498 shows the title at the start page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic chapter-page numbers (11-2 on p498, 11-3 on p499). \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p498 shows folio 11-2 and starts the section, p499 shows 11-3, so no shift is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p498 has no figure. On p499 there are five yellow CAUTION or WARNING triangle icons (about 137x118 px each, 0.26% of the page) and none is in the image output (the section has no images at all). The meaning is fully kept in the text: nodes #/texts/5319-5321 and 5323-5324 say CAUTION or WARNING and the matching safety text follows. No other figure is on the pages.",
+   "notes": "Targets p499 five 137x118 icons are not kept, as expected. Low per contract: small icon dropped whose meaning is stated in the text.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for this section (images.json lists none), so no noise passes. The rendering of p498 and p499 shows no logo or divider that was extracted.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section, and the renderings of p498 and p499 show only text and warning icons, so nothing is mapped to a wrong section. The icons are only discussed in the discarding row.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}
