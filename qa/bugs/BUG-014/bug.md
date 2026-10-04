@@ -4,7 +4,7 @@ status: in-progress
 finding: H-15
 fix_branch: fix/BUG-001-positional-placement
 fix_commit: 04e1345, 36df68a, 0b448dd
-updated: 2026-09-30
+updated: 2026-10-03
 ---
 
 # BUG-014 · Section page_end declared one page short of the true content boundary — trailing content (text or images) bleeds into or is misattributed from the neighboring section
@@ -38,6 +38,8 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-03 | `Philips-MP20-MP90-Manual` | v2.4 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 3 → 4 | 8 | Approved rows; the extra FAIL is page_end grown by chapter numbers or margin labels, fixed later in 0b448dd |
+| 2026-10-03 | `SOMATOM_Force_IFU_VB30` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 0 → 0 | 16 | Approved rows; no target rows in the approved sample |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
