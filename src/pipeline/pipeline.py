@@ -284,7 +284,7 @@ def run_pipeline(
         window_size: Docling batch size in pages.
         window_overlap: Docling page overlap between batches.
         extract_images: Whether to extract embedded images from PDF pages.
-        min_image_px: Minimum image dimension to keep (filters decorative icons).
+        min_image_px: Minimum image width and height in pixels (filters tiny decoration).
         include_back_matter: Whether Bibliography/References/Appendix/Index
             entries are kept in the main hierarchy (see toc_classification.py).
             Default False — they're set aside in excluded_toc_entries instead.
@@ -589,11 +589,14 @@ def _extract_embedded_images(
     except ImportError:
         _pil_available = False
 
-    _MIN_PX        = max(min_image_px, 80)  # enforce floor
-    _MIN_AREA_FRAC = 0.005                  # bbox must cover ≥0.5% of page area (BUG-020)
+    _MIN_PX        = min_image_px           # UI icons of 48-80 px are content (BUG-017)
+    _MIN_AREA_FRAC = 0.003                  # bbox must cover ≥0.3% of page area (BUG-020)
     _HEADER_FRAC   = 0.05                   # skip images fully in top 5%
     _FOOTER_FRAC   = 0.95                   # skip images fully in bottom 5%
-    _MAX_ASPECT    = 15.0                   # skip ultra-wide/tall strips
+    # Ultra-wide/tall strips are rules and nav bars when repeated or tiny; a unique strip
+    # covering 1%+ of the page is a thin screenshot (LOGIQ_S8 p679, 231x79 px).
+    _MAX_ASPECT    = 15.0
+    _STRIP_MIN_AREA_FRAC = 0.01
     # An image shown on many pages is page decoration (BUG-004: DOC's footer divider on
     # 210 pages) when it sits in the top/bottom 10% band, or a repeated small icon.
     _REPEAT_PAGES  = 5
@@ -628,9 +631,7 @@ def _extract_embedded_images(
             if w < _MIN_PX or h < _MIN_PX:
                 continue
 
-            # filter 5: aspect ratio (thin decorative rules, nav bars)
-            if max(w, h) / max(min(w, h), 1) > _MAX_ASPECT:
-                continue
+            strip = max(w, h) / max(min(w, h), 1) > _MAX_ASPECT
 
             # filters 2-4: page-coordinate bbox checks
             try:
@@ -638,8 +639,14 @@ def _extract_embedded_images(
             except Exception:
                 rects = []
             bbox = None
+            if strip and (not rects or len(pages_of.get(xref, ())) > 1):
+                continue  # filter 5: aspect ratio (thin decorative rules, nav bars)
             if rects:
                 bbox = rects[0]
+                if strip and page_area > 0 and (
+                    (bbox.width * bbox.height) / page_area < _STRIP_MIN_AREA_FRAC
+                ):
+                    continue
                 # filter 2: area fraction
                 if page_area > 0 and (bbox.width * bbox.height) / page_area < _MIN_AREA_FRAC:
                     continue
