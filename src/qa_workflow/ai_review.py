@@ -265,8 +265,9 @@ specific English evidence, notes, and confidence (0..1). Do not omit uncertain r
 use a low confidence and explain the uncertainty.
 
 `images.json` lists the extracted images of these sections and of the pages in `pages/`,
-with the section each one is mapped to; the PNG files are in `images/`. Use it for the
-image checks (`5.5-*`).
+with the section each one is mapped to; the PNG files are in `images/`. An image with
+`"origin": "vector"` is a figure drawn with vector paths that the pipeline rendered from
+the page region. Use it for the image checks (`5.5-*`).
 """
     atomic_write_text(input_dir / "INSTRUCTIONS.md", instructions)
     rendered: set[int] = set()
@@ -321,6 +322,7 @@ def _write_batch_images(
                     "width_px": image.get("width_px"),
                     "height_px": image.get("height_px"),
                     "file": f"images/{image_id}.png",
+                    **({"origin": image["origin"]} if image.get("origin") else {}),
                 }
             )
             atomic_write_bytes(

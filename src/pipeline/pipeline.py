@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import logging
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -60,6 +60,7 @@ class EmbeddedImage:
     height_px: int
     section_id: str | None = None  # assigned after pipeline by position on the page
     bbox: BoundingBox | None = None  # bottom-left origin, same frame as Docling bboxes
+    origin: str = "raster"  # "vector": a figure drawn with paths, rendered (BUG-010)
 
 
 @dataclass
@@ -209,14 +210,7 @@ def _map_images_to_sections(
         ):
             candidates = page_sections.get(img.page_no, [])
             section_id = candidates[0]["section_id"] if candidates else None
-        result.append(EmbeddedImage(
-            image_bytes=img.image_bytes,
-            page_no=img.page_no,
-            width_px=img.width_px,
-            height_px=img.height_px,
-            section_id=section_id,
-            bbox=img.bbox,
-        ))
+        result.append(replace(img, section_id=section_id))
     return result
 
 
@@ -248,6 +242,123 @@ def _with_excluded_boundaries(
             entries.append((entry.level, entry.title, entry.page))
             boundaries.append(True)
     return entries, boundaries
+
+
+# Vector figures (BUG-010): drawing paths are grouped when they lie within _VECTOR_GAP
+# points of each other; a group with enough path segments and area is a figure.
+_VECTOR_GAP = 12.0
+_VECTOR_MIN_SEGMENTS = 40
+_VECTOR_MIN_AREA_FRAC = 0.01
+_VECTOR_BAND = 0.08            # running header/footer rules
+_VECTOR_DPI = 150
+
+
+def _extract_vector_figures(
+    pdf_path: Path, n_pages: int, doc: DoclingDocument, logger: logging.Logger
+) -> list[EmbeddedImage]:
+    """
+    Render figures drawn with vector paths (2002 schematics, LOGIQ_e flowcharts, Philips
+    module drawings) that the raster extraction cannot see. Skipped: paths in the
+    header/footer band, page frames, Docling table grids, thin caution/warning bars,
+    groups mostly covered by raster images (annotations on a photo that is already
+    kept) and straight-line grids around raster photos (step tables).
+    """
+    try:
+        import pymupdf as fitz
+    except ImportError:
+        import fitz  # type: ignore[no-redef]
+
+    tables_by_page: dict[int, list[Any]] = {}
+    for table in doc.tables:
+        if table.bbox is not None:
+            tables_by_page.setdefault(table.page_no, []).append(table.bbox)
+
+    result: list[EmbeddedImage] = []
+    pdf = fitz.open(str(pdf_path))
+    for page_no in range(1, n_pages + 1):
+        page = pdf[page_no - 1]
+        width, height = page.rect.width, page.rect.height
+        tables = [
+            fitz.Rect(b.x0, height - b.y0, b.x1, height - b.y1)
+            for b in tables_by_page.get(page_no, [])
+        ]
+        paths = []
+        for drawing in page.get_drawings():
+            rect = fitz.Rect(drawing["rect"])
+            if rect.y1 < height * _VECTOR_BAND or rect.y0 > height * (1 - _VECTOR_BAND):
+                continue
+            if rect.width > width * 0.85 and rect.height > height * 0.85:
+                continue  # page frame or background
+            if any(
+                (table & rect).get_area() >= 0.8 * max(rect.get_area(), 1.0)
+                or table.contains(rect)
+                for table in tables
+            ):
+                continue
+            items = drawing["items"]
+            straight = sum(
+                1
+                for item in items
+                if item[0] == "re"
+                or (
+                    item[0] == "l"
+                    and (abs(item[1].x - item[2].x) < 0.5 or abs(item[1].y - item[2].y) < 0.5)
+                )
+            )
+            paths.append((rect, len(items), straight))
+        if not paths:
+            continue
+
+        groups: list[list[Any]] = []  # [rect, segments, straight segments]
+        for rect, segments, straight in sorted(paths, key=lambda p: (p[0].y0, p[0].x0)):
+            reach = fitz.Rect(rect.x0 - _VECTOR_GAP, rect.y0 - _VECTOR_GAP,
+                              rect.x1 + _VECTOR_GAP, rect.y1 + _VECTOR_GAP)
+            hits = [group for group in groups if group[0].intersects(reach)]
+            if not hits:
+                groups.append([fitz.Rect(rect), segments, straight])
+                continue
+            first = hits[0]
+            first[0] |= rect
+            first[1] += segments
+            first[2] += straight
+            for group in hits[1:]:
+                first[0] |= group[0]
+                first[1] += group[1]
+                first[2] += group[2]
+                groups.remove(group)
+
+        rasters = [
+            rects[0]
+            for info in page.get_images(full=True)
+            if (rects := page.get_image_rects(info[0]))
+        ]
+        for box, segments, straight in groups:
+            box = box & page.rect
+            if segments < _VECTOR_MIN_SEGMENTS:
+                continue
+            if box.get_area() < _VECTOR_MIN_AREA_FRAC * width * height:
+                continue
+            if box.height < 25 and box.width > 8 * box.height:
+                continue  # caution/warning bar (SOMATOM)
+            if sum((box & raster).get_area() for raster in rasters) >= 0.3 * box.get_area():
+                continue  # annotations on a raster photo that is already kept
+            if straight >= 0.8 * segments and any(box.contains(r) for r in rasters):
+                continue  # step-table grid around photos (LOGIQ_S8)
+            pixmap = page.get_pixmap(clip=box, dpi=_VECTOR_DPI)
+            result.append(EmbeddedImage(
+                image_bytes=pixmap.tobytes("png"),
+                page_no=page_no,
+                width_px=pixmap.width,
+                height_px=pixmap.height,
+                bbox=BoundingBox(
+                    x0=box.x0, y0=height - box.y0, x1=box.x1, y1=height - box.y1,
+                    page_no=page_no, coordinate_origin="bottomleft",
+                ),
+                origin="vector",
+            ))
+    pdf.close()
+    logger.info("images: %d vector figures rendered", len(result))
+    return result
 
 
 def _flag_relocated_sections(sections: list[dict[str, Any]], sanity: BookmarkSanityReport) -> None:
@@ -533,6 +644,7 @@ def run_pipeline(
         if extract_images:
             try:
                 images = _extract_embedded_images(pdf_path, n_pages, min_image_px, logger)
+                images += _extract_vector_figures(pdf_path, n_pages, doc, logger)
                 images = _map_images_to_sections(images, sections)
                 logger.info("images: %d extracted", len(images))
             except Exception as exc:

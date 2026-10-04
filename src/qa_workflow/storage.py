@@ -242,15 +242,16 @@ def serialize_images(images: Any) -> dict[str, Any]:
     records = []
     for image in images or []:
         raw = image.image_bytes if hasattr(image, "image_bytes") else image.get("image_bytes", b"")
-        records.append(
-            {
-                "section_id": getattr(image, "section_id", None),
-                "page_no": getattr(image, "page_no", 0),
-                "width_px": getattr(image, "width_px", 0),
-                "height_px": getattr(image, "height_px", 0),
-                "image_b64": base64.b64encode(raw).decode("ascii"),
-            }
-        )
+        record = {
+            "section_id": getattr(image, "section_id", None),
+            "page_no": getattr(image, "page_no", 0),
+            "width_px": getattr(image, "width_px", 0),
+            "height_px": getattr(image, "height_px", 0),
+            "image_b64": base64.b64encode(raw).decode("ascii"),
+        }
+        if getattr(image, "origin", "raster") != "raster":
+            record["origin"] = image.origin  # a rendered vector figure (BUG-010)
+        records.append(record)
     return {
         "total": len(records),
         "mapped_count": sum(1 for record in records if record["section_id"] is not None),
