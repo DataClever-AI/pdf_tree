@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-015
-status: open
+status: in-progress
 finding: 
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-020-image-filters
+fix_commit: 8a06c44
+updated: 2026-10-03
 ---
 
 # BUG-015 · Step-illustration photos silently dropped on pages that also carry multiple table-embedded images
@@ -23,6 +23,7 @@ Unconfirmed: `_extract_embedded_images`.
 
 - 2026-09-04: identified in the v1 QA review of LOGIQ_S8 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: verified with the image inventory: the four p739 step photos were dropped by the 2% area filter and are kept at 8a06c44 (BUG-020). The p679 (231x79 px) and p753 (351x77 px) images are dropped by the 80 px pixel floor (BUG-017); the BUG-017 proposal (floor = min_image_px, 48) would keep them.
 
 ## Fix
 

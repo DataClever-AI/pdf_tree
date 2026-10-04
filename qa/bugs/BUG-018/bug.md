@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-018
-status: open
+status: in-progress
 finding: 
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-005-reading-order
+fix_commit: 360cf01
+updated: 2026-10-03
 ---
 
 # BUG-018 · Cross-chapter node swap — content misattributed across non-adjacent chapter boundaries (new pattern, single instance so far)
@@ -23,6 +23,7 @@ Unconfirmed: `section_matcher`.
 
 - 2026-09-04: identified in the v1 QA review of SOMATOM and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: verified on the simulated tree at 0128ad0: sec_0874 (p414) now holds its own page content ('Activating free mode for MPR projections', the Free Mode step). Same root cause as BUG-005; fixed by 360cf01. Not yet in a reviewed batch.
 
 ## Fix
 

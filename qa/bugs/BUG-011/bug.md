@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-011
-status: open
+status: in-progress
 finding: 
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-020-image-filters
+fix_commit: 8a06c44
+updated: 2026-10-03
 ---
 
 # BUG-011 · Simple line-art/pictogram diagrams missing from image extraction — mechanism unconfirmed (possibly size-filtered)
@@ -23,6 +23,7 @@ Unconfirmed; possibly the size filters (see BUG-020).
 
 - 2026-09-04: identified in the v1 QA review of LOGIQ_S8 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: verified with the image inventory: the p893 'Ground Continuity Test' diagram (193x192 px) was dropped by the 2% area filter and is kept at 8a06c44 (BUG-020). The p886 probe-handling pictograms are 88 tiny raster fragments, in practice a vector drawing (BUG-010 family); not recoverable by the raster filters.
 
 ## Fix
 
