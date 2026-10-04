@@ -212,7 +212,18 @@ def section_signals(v: Version, sid: str) -> Signals:
             and top(n) > own_top + 5
         ):
             words = n["canonical_text"].split()
-            if len(words) <= 4 and n["canonical_text"].upper() == n["canonical_text"]:
+            # A short caps label that is the first content of the page is the page's
+            # running header: the pipeline gives it to the section that owns the
+            # page's first content (BUG-022), so it is not bleed.
+            leads_page = not any(
+                sec != sid and other.get("bbox") and top(other) > top(n)
+                and not v.is_boilerplate_node(other)
+                for sec, other in v.nodes_by_page.get(n["page_no"], [])
+            )
+            caps_label = len(words) <= 4 and n["canonical_text"].upper() == n["canonical_text"]
+            if caps_label and leads_page:
+                pass
+            elif caps_label:
                 sig.boilerplate_bleed.append(
                     f"p{n['page_no']} '{text}' (short caps label above its heading)"
                 )
