@@ -61,3 +61,26 @@ def test_ui_icons_and_unique_thin_screenshots_are_kept(tmp_path: Path) -> None:
     assert sorted((image.width_px, image.height_px) for image in images) == [
         (58, 58), (1600, 100)
     ]
+
+
+def test_repeated_key_picture_in_the_body_and_a_thin_unique_figure_are_kept(tmp_path: Path) -> None:
+    # SOMATOM: the Move key picture is shown on 8 pages inside the body (content);
+    # LOGIQ_e p274: a unique 1600x35 px figure strip is under the 48 px floor.
+    pdf = fitz.open()
+    key_xref = 0
+    for _ in range(6):
+        page = pdf.new_page(width=612, height=792)
+        key = fitz.Rect(300, 400, 350, 450)  # 0.5% of the page
+        if key_xref:
+            page.insert_image(key, xref=key_xref)
+        else:
+            key_xref = page.insert_image(key, stream=_png(177, 177))
+    pdf[0].insert_image(fitz.Rect(60, 200, 560, 240), stream=_png(1600, 35))
+    path = tmp_path / "repeat.pdf"
+    pdf.save(path)
+
+    images = _extract_embedded_images(path, 6, 48, logging.getLogger("test"))
+
+    sizes = [(image.width_px, image.height_px) for image in images]
+    assert sizes.count((177, 177)) == 6
+    assert (1600, 35) in sizes
