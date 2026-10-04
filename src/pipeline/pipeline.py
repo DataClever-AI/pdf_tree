@@ -590,13 +590,22 @@ def _extract_embedded_images(
         _pil_available = False
 
     _MIN_PX        = max(min_image_px, 80)  # enforce floor
-    _MIN_AREA_FRAC = 0.02                   # bbox must cover ≥2% of page area
+    _MIN_AREA_FRAC = 0.005                  # bbox must cover ≥0.5% of page area (BUG-020)
     _HEADER_FRAC   = 0.05                   # skip images fully in top 5%
     _FOOTER_FRAC   = 0.95                   # skip images fully in bottom 5%
     _MAX_ASPECT    = 15.0                   # skip ultra-wide/tall strips
+    # An image shown on many pages is page decoration (BUG-004: DOC's footer divider on
+    # 210 pages) when it sits in the top/bottom 10% band, or a repeated small icon.
+    _REPEAT_PAGES  = 5
+    _REPEAT_BAND   = 0.10
+    _REPEAT_MAX_AREA_FRAC = 0.02
 
     result: list[EmbeddedImage] = []
     doc = fitz.open(str(pdf_path))
+    pages_of: dict[int, set[int]] = {}
+    for page_no in range(1, n_pages + 1):
+        for img_info in doc[page_no - 1].get_images(full=True):
+            pages_of.setdefault(img_info[0], set()).add(page_no)
 
     for page_no in range(1, n_pages + 1):
         page = doc[page_no - 1]
@@ -636,6 +645,13 @@ def _extract_embedded_images(
                     continue
                 # filters 3-4: header / footer zone
                 if bbox.y1 <= header_cut or bbox.y0 >= footer_cut:
+                    continue
+                # filter 6: repeated decoration or icon
+                if len(pages_of.get(xref, ())) >= _REPEAT_PAGES and (
+                    bbox.y1 <= page_h * _REPEAT_BAND
+                    or bbox.y0 >= page_h * (1 - _REPEAT_BAND)
+                    or (bbox.width * bbox.height) / page_area < _REPEAT_MAX_AREA_FRAC
+                ):
                     continue
 
             raw_bytes = base_image.get("image")
