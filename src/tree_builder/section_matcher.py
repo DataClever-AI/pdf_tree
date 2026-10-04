@@ -364,25 +364,30 @@ def _assign_content(
     for block in doc.text_blocks:
         blocks_by_page.setdefault(block.page_no, []).append(block)
     owners: dict[str, MatchedSection | None] = {}
-    for page_blocks in blocks_by_page.values():
+    # Running headers, print slugs and chapter numbers at the top of a page belong to
+    # the section that owns the page's first content (BUG-022): its first other text
+    # block, or a table printed above that block (assigned below).
+    # Per page: the leading furniture, and the top of the content that owns it.
+    leading_by_page: dict[int, tuple[list[DoclingTextBlock], float | None]] = {}
+    for page_no, page_blocks in blocks_by_page.items():
         page_blocks.sort(key=lambda b: b.reading_order)
-        # Running headers, print slugs and chapter numbers at the top of a page belong
-        # to the section that owns the page's first other block (BUG-022).
-        leading: list[DoclingTextBlock] | None = []
+        leading: list[DoclingTextBlock] = []
+        first: DoclingTextBlock | None = None
         for block in page_blocks:
             owners[block.block_id] = _owner(block.reading_order)
-            if leading is None:
+            if first is not None:
                 continue
             if _is_page_furniture(block, doc):
                 leading.append(block)
             else:
+                first = block
                 for furniture in leading:
                     owners[furniture.block_id] = owners[block.block_id]
-                leading = None
-    for block in doc.text_blocks:
-        owner = owners[block.block_id]
-        if owner is not None:
-            owner.text_blocks.append(block)
+        if leading:
+            first_top = (
+                vertical_span(first.bbox)[0] if first is not None and first.bbox else None
+            )
+            leading_by_page[page_no] = (leading, first_top)
 
     page_sections: dict[int, list[MatchedSection]] = {}
     for sec in sections:
@@ -402,6 +407,32 @@ def _assign_content(
             owner = candidates[0] if candidates else None
         if owner is not None:
             owner.tables.append(table)
+            _give_furniture_to_table_above(table, owner, leading_by_page, owners)
+
+    for block in doc.text_blocks:
+        text_owner = owners[block.block_id]
+        if text_owner is not None:
+            text_owner.text_blocks.append(block)
+
+
+def _give_furniture_to_table_above(
+    table: DoclingTable,
+    owner: MatchedSection,
+    leading_by_page: dict[int, tuple[list[DoclingTextBlock], float | None]],
+    owners: dict[str, MatchedSection | None],
+) -> None:
+    """A table printed above a page's first text block is the page's first content
+    (Philips p428: the previous section's weights table), so the page's leading
+    furniture goes with it. The topmost such table wins."""
+    leading, first_top = leading_by_page.get(table.page_no, ([], None))
+    if not leading or table.bbox is None:
+        return
+    top = vertical_span(table.bbox)[0]
+    if first_top is not None and top <= first_top + _ABOVE_TOLERANCE:
+        return
+    for furniture in leading:
+        owners[furniture.block_id] = owner
+    leading_by_page[table.page_no] = (leading, top)
 
 
 # Docling labels for page furniture, and the top/bottom band of a page where running
