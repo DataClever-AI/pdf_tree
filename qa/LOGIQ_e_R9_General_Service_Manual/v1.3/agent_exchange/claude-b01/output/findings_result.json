@@ -1,0 +1,1385 @@
+{
+ "provider": "claude-sonnet (pdf-tree-qa-reviewer)",
+ "findings": [
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 497 shows 'Chapter 11 LOGIQ e Cart Setup' as a full chapter title page. hierarchy_level 1 and no parent match a top-level chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0076 has parent null and lists children sec_0077 to sec_0083. Each child has parent_section_id sec_0076 and a page range inside 497-562. The previous section sec_0075 is another top-level item.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Page 497 holds the chapter title, the intro sentence and the folio (nodes #/texts/5297-5299), so the start is right. But the chapter's own 'Contents in this chapter' list (five links, page 498) is not in sec_0076. It was assigned to child sec_0077 (#/texts/5301-5306), so the chapter root lost its Contents content.",
+   "notes": "Known pattern: chapter Contents box swept into the first subsection when both start on the same physical page (page 498). Same root cause as the pilot Contents-box misplacement. Chapter root range 497-562 is numerically right; the defect is ownership. verify_claims has no automatic signal for this pattern (UNSUPPORTED); the evidence is visual only: page 498 render shows the Contents list under the 'Overview' title, and the node ids above show it is inside sec_0077.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup' matches the page 497 title and is a single top-level element.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nothing is repeated: page 497 nodes appear only in sec_0076, and sec_0077 starts on page 498 with no overlap. The Contents list ownership defect is reported on 5.4-page_start_end.",
+   "notes": "Graded once under page_start_end to avoid double counting the same root cause.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. Page 497 is a clean title page, so no uncertainty needs flagging.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. Page 497 is the real start of Chapter 11, which agrees with a bookmark-driven source.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on page 497 is '11-1' (chapter-page style with arabic digits). Recorded numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefixed folios are not a separate scheme value; unsure if the project wants it noted.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. page_start 497 is the physical page that shows the Chapter 11 title, so physical page numbers and sections agree.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 497 shows only text: a blue rule, chapter title and intro sentence. No picture or diagram was dropped; images.json has no entry for sec_0076.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0076, so no decorative element passed the filter. The thin blue rule on the page is not in images.json.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 497 has no visual content and images.json lists none for sec_0076. Absence is confirmed on the rendered page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 504 continues Table 11-3 (steps 2-6) in the middle of the section; its content belongs to 'Unpacking LOGIQ e Cart'. This page sits inside the level-2 bookmark 'Set Up LOGIQ e Cart' (title on page 500), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0078 has parent sec_0076, no children, and appears in the parent's child list between Overview and Cart Using. The many sub-headings on pages 500-527 are not bookmarks, so no child is expected.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on page 500 with the 'Set Up LOGIQ e Cart' title and ends on page 527 with the 'User Manual' text; page 528 starts sec_0079. Rendered page 504 has content that belongs here and nothing from a neighbour. The page-500 start has no Contents box, so the opening pattern did not occur here.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Set Up LOGIQ e Cart' matches the chapter and section titles seen in the page 500 and running header text.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes for pages 500-527 appear once in sec_0078 (335 nodes) and ranges join with sec_0077 (ends 499) and sec_0079 (starts 528). Page 504 has no repeated or missing block that I could see.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0, verification_score 100. The sampled page shows no sign that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. The 'Set Up LOGIQ e Cart' title at the top of page 500 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-8 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. Section page numbers are physical pages and the page 500 title confirms page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 11-3 'Procedure to take out LOGIQ e Cart' (steps 2-6, page 504) has no table node on this page. Its text is split into paragraphs #/texts/5398-5413. Step numbers stay with their text ('2. Slightly lift up'), but the header cells 'No.', 'Steps', 'Corresponding Graphic' appear after step 6 instead of before step 2.",
+   "notes": "Values and reading order survive, only the grid is not kept. Low per Sprint (structure degraded, information kept). Header cells are out of order but step numbers stay attached to their text.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 504 shows six photos in three rows (steps 2, 3, 4). images.json has img_0353, img_0354, img_0355, each a side-by-side pair of two photos. All three are mapped to sec_0078. No photo on the page is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The three images on page 504 are step photos (carton lift, bag cutting, strap cutting). No rule, logo or other decoration was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 504,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0353, img_0354, img_0355 map to sec_0078 on page 504, and the page lies fully inside sec_0078 (500-527). No sibling shares this page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 536 is the first page of the section: overview text with no tables. sec_0082 'Diagnostics/Troubleshooting' is a level-2 section under chapter 11 (title shown on page 536), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0082 has parent sec_0076 and no children. sec_0076 lists it between sec_0081 and sec_0083. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 536 with the 'Diagnostics/Troubleshooting' title and ends on page 545 with Figure 11-19; page 546 shows the 'Care & Maintenance' title that starts sec_0083. Page 536 content belongs to sec_0082. The page-536 start has no chapter Contents box, so the opening pattern did not occur.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Diagnostics/Troubleshooting' matches the chapter and section titles on page 536.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 536-545 are owned once by sec_0082 and join sec_0081 (ends 535) and sec_0083 (starts 546). I saw no repeated or missing block on page 536.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0. The sampled page does not show a structural problem that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. The title on page 536 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-40 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. The title on physical page 536 confirms page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 536 has only text (Overview, Troubleshooting, Gathering Trouble Data, two bullets) and no figure. Nothing dropped on this page. The dropped flowcharts of pages 538-541 are reported on pages 539 and 540.",
+   "notes": "Section-level defect graded on the pages where the drawings are.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on page 536 and none mapped to it, so no noise was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 536 has no picture and images.json has none for it. The images of sec_0082 (img_0388, 0389-0392) are on pages 537 and 542-545.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 549 shows 'Why do Maintenance' with 'Keeping Records' and 'Quality Assurance'. sec_0083 'Care & Maintenance' is a level-2 section under chapter 11 (title on page 546), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0083 has parent sec_0076 and no children; it is the last child listed by sec_0076 and has no next section. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 546 with the 'Care & Maintenance' title (after sec_0082 ends on 545). It ends on page 562 with the last rows of the inspection form and 'Accepted by'; the rest of page 562 is blank and no index or back matter follows. Page 549 content belongs here. The page-546 start has no Contents box.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Care & Maintenance' matches the page 546 title and chapter name.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 546-562 are owned once by sec_0083 and join sec_0082 (ends 545). I saw no repeated or missing block on page 549.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0. Page 549 shows no problem that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. Title on page 546 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-53 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. The title on physical page 546 confirms page_start, and page 562 shows folio 11-66 as the last page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 549 has no table in the render, and the section's tables are on other pages (550-557, 559-561). No table node is expected here.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 549 shows only headings and paragraphs (Why do Maintenance, Keeping Records, Quality Assurance). No picture was dropped and images.json has none for it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on page 549 is mapped to sec_0083, so no noise was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 549 has no picture and images.json lists none. Absence confirmed on the render.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 498 shows 'Overview' as a large section title under chapter 11. hierarchy_level 2 with parent sec_0076 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0077 has parent_section_id sec_0076 and no children. sec_0076 lists sec_0077 as its first child. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Page 498 starts with the title 'Overview' (#/texts/5314) but sec_0077 also owns the heading 'Contents in this chapter' and five link lines (#/texts/5301-5306: Overview 11-2, Set Up 11-4, Cart Using 11-32, Theory 11-38, Diagnostics 11-40). This is the chapter-level contents list, so it belongs to chapter root sec_0076, not to the Overview subsection. Page numbers 498-499 are correct.",
+   "notes": "Known pattern: chapter Contents box swept into the first subsection when both start on the same physical page (page 498). Same root cause as the pilot Contents-box misplacement. Introduction (#/texts/5313, 5307-5312) sits under Overview in the page layout and was left in sec_0077. verify_claims has no automatic signal for this pattern (UNSUPPORTED); the evidence is visual only: page 498 render shows the Contents list under the 'Overview' title, and the node ids above show it is inside sec_0077.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Overview' lists chapter then section in order and matches the page 498 title and running header 'LOGIQ e Cart Setup'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 498 and 499 content appears once in sec_0077; sec_0078 starts at page 500 with the 'Set Up LOGIQ e Cart' title. No overlap or gap with neighbours. The Contents ownership problem is graded on page_start_end.",
+   "notes": "Graded once under page_start_end to avoid double counting.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false and confidence 1.0. The only structural problem on page 498 (Contents list) is a known extraction pattern, not an uncertainty the flag should show.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. Title 'Overview' on page 498 and next title on page 500 match TOC-based page ranges.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios on pages 498 and 499 are '11-2' and '11-3'; arabic digits with a chapter prefix. numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. Physical page 498 shows printed 11-2, and page_start 498 is where the Overview title really is.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Page 498 has no pictures. But in the same section page 499 shows five CAUTION or WARNING triangle icons next to the safety text, and images.json has no image for sec_0077. The icons were dropped; the words CAUTION and WARNING survive as text nodes (#/texts/5319-5324).",
+   "notes": "Small icons whose meaning is stated in text (Sprint Low). Evidence comes from page 499 because it is in the same section.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images are mapped to sec_0077, so no decorative element was kept. Page 498 has no image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0077",
+   "page_sampled": 498,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0077. Page 498 has only text and bullet lists, so no image is missing here. The icons on page 499 are reported in filters_discarding.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 509 shows 'Peripheral Installation' and 'On-Board Optional Peripherals' with Table 11-6. This page sits inside the level-2 bookmark 'Set Up LOGIQ e Cart' (title on page 500), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0078 has parent sec_0076, no children, and appears in the parent's child list between Overview and Cart Using. The many sub-headings on pages 500-527 are not bookmarks, so no child is expected.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on page 500 with the 'Set Up LOGIQ e Cart' title and ends on page 527 with the 'User Manual' text; page 528 starts sec_0079. Rendered page 509 has content that belongs here and nothing from a neighbour. The page-500 start has no Contents box, so the opening pattern did not occur here.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Set Up LOGIQ e Cart' matches the chapter and section titles seen in the page 500 and running header text.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes for pages 500-527 appear once in sec_0078 (335 nodes) and ranges join with sec_0077 (ends 499) and sec_0079 (starts 528). Page 509 has no repeated or missing block that I could see.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0, verification_score 100. The sampled page shows no sign that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. The 'Set Up LOGIQ e Cart' title at the top of page 500 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-13 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. Section page numbers are physical pages and the page 500 title confirms page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 11-6 on page 509 has five columns (Device, Manufacturer, Model, Interface, Video Signal). Node #/tables/157 renders them as two columns: 'Device  Manufacturer  Model | Interface  Video Signal', and the cell 'N/A (* USB Interface)' is cut by a bar. All values (SONY UP-D898MD, UP-D25MD, Transcend TS8XDVDS-K, NORAV GE ECGUSB1D-EX) are present in the right row order.",
+   "notes": "Columns merged but values and order kept. Low per Sprint. A reviewer might grade it Medium if Manufacturer and Model must be split by the reader.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 509 shows one table and a short note, with no photo or drawing. images.json has no image on page 509, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on page 509 is mapped to sec_0078, so no decorative item was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 509,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 509 has no picture and images.json lists none for it. Absence is confirmed on the rendered page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 514 shows 'Install DVD-RW to LOGIQ e Cart (continued)', 'Mounting Procedure' and Table 11-9. This page sits inside the level-2 bookmark 'Set Up LOGIQ e Cart' (title on page 500), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0078 has parent sec_0076, no children, and appears in the parent's child list between Overview and Cart Using. The many sub-headings on pages 500-527 are not bookmarks, so no child is expected.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on page 500 with the 'Set Up LOGIQ e Cart' title and ends on page 527 with the 'User Manual' text; page 528 starts sec_0079. Rendered page 514 has content that belongs here and nothing from a neighbour. The page-500 start has no Contents box, so the opening pattern did not occur here.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Set Up LOGIQ e Cart' matches the chapter and section titles seen in the page 500 and running header text.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes for pages 500-527 appear once in sec_0078 (335 nodes) and ranges join with sec_0077 (ends 499) and sec_0079 (starts 528). Page 514 has no repeated or missing block that I could see.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0, verification_score 100. The sampled page shows no sign that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. The 'Set Up LOGIQ e Cart' title at the top of page 500 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-18 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. Section page numbers are physical pages and the page 500 title confirms page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 11-9 on page 514 has three columns (No., Step, Corresponding Graphic). Node #/tables/160 renders two: 'No.  Step | Corresponding Graphic', with the number joined to the step text ('1. Take the cable ...'). All three steps and their text match the page; the graphic cells are empty because the pictures are separate images.",
+   "notes": "Number and step merged into one cell; order and values kept. Low per Sprint.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 514 shows three photos (steps 1, 2, 3). images.json has img_0364 (561x573), img_0365, img_0366 for page 514. I viewed img_0364: it is the DVD-RW cable photo of step 1. Nothing is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The three images on page 514 are procedure photos with yellow marks. No divider line or logo was kept as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0078",
+   "page_sampled": 514,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0364, img_0365, img_0366 are mapped to sec_0078 and match steps 1, 2, 3 of Table 11-9 in the right order. Page 514 is wholly inside sec_0078.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 539 shows the heading 'Can Not Power on the Peripherals' with Figure 11-13. sec_0082 'Diagnostics/Troubleshooting' is a level-2 section under chapter 11 (title shown on page 536), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0082 has parent sec_0076 and no children. sec_0076 lists it between sec_0081 and sec_0083. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 536 with the 'Diagnostics/Troubleshooting' title and ends on page 545 with Figure 11-19; page 546 shows the 'Care & Maintenance' title that starts sec_0083. Page 539 content belongs to sec_0082. The page-536 start has no chapter Contents box, so the opening pattern did not occur.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Diagnostics/Troubleshooting' matches the chapter and section titles on page 536.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 536-545 are owned once by sec_0082 and join sec_0081 (ends 535) and sec_0083 (starts 546). I saw no repeated or missing block on page 539.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0. The sampled page does not show a structural problem that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. The title on page 536 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-43 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. The title on physical page 536 confirms page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Page 539 shows Figure 11-13 'Can Not Power on the Peripherals', a vector flowchart with decision diamonds, boxes and arrows. images.json has no image for this page (flowcharts on pages 537 and 542-545 were extracted, these were not). Only text fragments exist as separate paragraphs, and the Yes/No labels are detached from their branches, so the diagnostic logic is lost.",
+   "notes": "Same flowchart type was extracted as an image on pages 542-545, so this is inconsistent. Pages 538 and 541 show the same text-only pattern in the node list. Matches Sprint pattern: vector-only drawing missing from image output.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on page 539 is mapped to sec_0082, so no decorative item was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 539 has no extracted image, so none is mapped. The missing flowchart is graded on 5.5-filters_discarding.",
+   "notes": "Not repeated here to avoid double counting.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 540 shows the heading 'External Speaker Does Not Work' with Figure 11-14. sec_0082 'Diagnostics/Troubleshooting' is a level-2 section under chapter 11 (title shown on page 536), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0082 has parent sec_0076 and no children. sec_0076 lists it between sec_0081 and sec_0083. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 536 with the 'Diagnostics/Troubleshooting' title and ends on page 545 with Figure 11-19; page 546 shows the 'Care & Maintenance' title that starts sec_0083. Page 540 content belongs to sec_0082. The page-536 start has no chapter Contents box, so the opening pattern did not occur.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Diagnostics/Troubleshooting' matches the chapter and section titles on page 536.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 536-545 are owned once by sec_0082 and join sec_0081 (ends 535) and sec_0083 (starts 546). I saw no repeated or missing block on page 540.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0. The sampled page does not show a structural problem that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. The title on page 536 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-44 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. The title on physical page 536 confirms page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Page 540 shows Figure 11-14 'External Speaker Does Not Work', a vector flowchart with decision diamonds, boxes and arrows. images.json has no image for this page (flowcharts on pages 537 and 542-545 were extracted, these were not). Only text fragments exist as separate paragraphs, and the Yes/No labels are detached from their branches, so the diagnostic logic is lost.",
+   "notes": "Same flowchart type was extracted as an image on pages 542-545, so this is inconsistent. Pages 538 and 541 show the same text-only pattern in the node list. Matches Sprint pattern: vector-only drawing missing from image output.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on page 540 is mapped to sec_0082, so no decorative item was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 540 has no extracted image, so none is mapped. The missing flowchart is graded on 5.5-filters_discarding.",
+   "notes": "Not repeated here to avoid double counting.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 546 is the first page of the section. sec_0083 'Care & Maintenance' is a level-2 section under chapter 11 (title on page 546), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0083 has parent sec_0076 and no children; it is the last child listed by sec_0076 and has no next section. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 546 with the 'Care & Maintenance' title (after sec_0082 ends on 545). It ends on page 562 with the last rows of the inspection form and 'Accepted by'; the rest of page 562 is blank and no index or back matter follows. Page 546 content belongs here. The page-546 start has no Contents box.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Care & Maintenance' matches the page 546 title and chapter name.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 546-562 are owned once by sec_0083 and join sec_0082 (ends 545). I saw no repeated or missing block on page 546.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0. Page 546 shows no problem that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. Title on page 546 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-50 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. The title on physical page 546 confirms page_start, and page 562 shows folio 11-66 as the last page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 546 has no table in the render, and the section's tables are on other pages (550-557, 559-561). No table node is expected here.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 546 has text only (Overview, Purpose, one paragraph). images.json has none for it. Nothing dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on page 546 is mapped to sec_0083, so no noise was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 546 has no picture and images.json lists none. Absence confirmed on the render.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 554 shows 'Safety Test (continued)', 'Physical Inspection' with Table 11-22, and 'Outlet Test'. sec_0083 'Care & Maintenance' is a level-2 section under chapter 11 (title on page 546), so hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0083 has parent sec_0076 and no children; it is the last child listed by sec_0076 and has no next section. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 546 with the 'Care & Maintenance' title (after sec_0082 ends on 545). It ends on page 562 with the last rows of the inspection form and 'Accepted by'; the rest of page 562 is blank and no index or back matter follows. Page 554 content belongs here. The page-546 start has no Contents box.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/LOGIQ e Cart Setup/Care & Maintenance' matches the page 546 title and chapter name.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 546-562 are owned once by sec_0083 and join sec_0082 (ends 545). I saw no repeated or missing block on page 554.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, confidence 1.0. Page 554 shows no problem that needs a flag.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source toc. Title on page 546 matches page_start.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on this page is 11-58 (arabic digits, chapter prefix). numbering_scheme 'arabic' is acceptable.",
+   "notes": "Chapter-prefix folios not modelled; low doubt.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0. The title on physical page 546 confirms page_start, and page 562 shows folio 11-66 as the last page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 11-22 'Physical Checks' on page 554 has three columns (Step, Item, Description) and nine rows. Node #/tables/171 shifts some cells: row 1 has an empty first cell and '1 Labeling Verify ...' in one cell, and rows 6, 7, 8 ('6 External I/O Check all connectors...') merge step, item and description. The text of all nine steps matches the page and stays in order.",
+   "notes": "Cells merged, but values and order preserved. Low per Sprint.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 554 has a heading, one table and a short refer-to note, with no picture. images.json has no image for page 554, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on page 554 is mapped to sec_0083, so no decorative item was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 554 has no picture and images.json lists none. The only image of sec_0083 (img_0393) is on page 555, inside the section range.",
+   "notes": "",
+   "confidence": 0.92
+  }
+ ]
+}
