@@ -570,6 +570,30 @@ def _top_down_key(block: DoclingTextBlock, margin: set[str]) -> tuple[float, int
     return (-top, 1, block.bbox.x0)
 
 
+def _title_first(
+    page_blocks: list[DoclingTextBlock], titles: set[str]
+) -> list[DoclingTextBlock] | None:
+    """
+    The page's title read last (LOGIQ_e p100, p111, p500): the topmost block of the page
+    (furniture aside) is the heading of a section that starts on this page, but Docling
+    read it after blocks printed below it. Return the page in reading order with that
+    heading moved before the page's other content, or None when the page is fine.
+    """
+    content = [block for block in page_blocks if block.label not in _FURNITURE_LABELS]
+    if not content:
+        return None
+    title = max(content, key=lambda block: vertical_span(block.bbox)[0])  # type: ignore[arg-type]
+    if title.label != "section_header" or _normalize_heading(title.text) not in titles:
+        return None
+    in_order = sorted(page_blocks, key=lambda block: block.reading_order)
+    first_content = next(block for block in in_order if block.label not in _FURNITURE_LABELS)
+    if first_content is title:
+        return None
+    in_order.remove(title)
+    in_order.insert(in_order.index(first_content), title)
+    return in_order
+
+
 def _place_margin_headings(
     doc: DoclingDocument, page_ranges: list[tuple[str, str, int, int, int]]
 ) -> DoclingDocument:
@@ -577,8 +601,9 @@ def _place_margin_headings(
     Docling reads the left margin column of a page first: every side heading of the
     page, then the whole body (SOMATOM p393). On a page with margin headings, put the
     blocks in top-to-bottom order so each heading comes right before the text beside
-    and below it; a heading goes first among blocks level with it (BUG-029). Other
-    pages keep Docling's order. The page keeps its own set of reading_order values.
+    and below it; a heading goes first among blocks level with it (BUG-029). A page
+    whose title is read last gets the title first (see _title_first). Other pages
+    keep Docling's order. The page keeps its own set of reading_order values.
     """
     titles: dict[int, set[str]] = {}
     for _section_id, title, _level, page_start, _page_end in page_ranges:
@@ -602,18 +627,22 @@ def _place_margin_headings(
             ),
             default=0.0,
         )
+        if any(block.bbox is None for block in page_blocks):
+            continue
         margin = {
             block.block_id
             for block in page_blocks
             if _is_margin_heading(block, page.width, titles.get(page_no, set()), body_x0)
         }
-        if not margin or any(block.bbox is None for block in page_blocks):
-            continue
-        if not _read_out_of_place(page_blocks, margin):
-            continue
         orders = sorted(block.reading_order for block in page_blocks)
-        top_down = sorted(page_blocks, key=lambda block: _top_down_key(block, margin))
-        for order, block in zip(orders, top_down, strict=True):
+        in_order: list[DoclingTextBlock] | None
+        if margin and _read_out_of_place(page_blocks, margin):
+            in_order = sorted(page_blocks, key=lambda block: _top_down_key(block, margin))
+        else:
+            in_order = _title_first(page_blocks, titles.get(page_no, set()))
+        if in_order is None:
+            continue
+        for order, block in zip(orders, in_order, strict=True):
             new_order[block.block_id] = order
     if not new_order:
         return doc

@@ -537,3 +537,22 @@ def test_running_header_goes_with_a_table_printed_first_on_the_page():
     assert _table_ids(weights) == ["weights"]
     assert "38 Installation" in _texts(weights)
     assert _texts(environment) == ["Environment"]
+
+
+def test_page_title_read_last_comes_first():
+    # LOGIQ_e p111: the right-aligned title at the top is read after the Contents box
+    # printed below it; the box belongs to the new section.
+    blocks = [
+        _block(0, "Setup", 1, "section_header", top=700),
+        _block(1, "Setup text on the first page.", 1, top=650),
+        _block(2, "Contents in this Section", 2, "section_header", top=554),
+        _block(3, "'LOGIQ e configuration' on page 3-24", 2, "list_item", top=530),
+        _block(4, "System Configuration", 2, "section_header", top=656),
+    ]
+    setup, config = match_content_to_sections(
+        [(1, "Setup", 1), (1, "System Configuration", 2)], _paged_doc(blocks, 2), 2
+    )
+    assert _texts(setup) == ["Setup", "Setup text on the first page."]
+    assert sorted(_texts(config)) == sorted(
+        ["System Configuration", "Contents in this Section", "'LOGIQ e configuration' on page 3-24"]
+    )
