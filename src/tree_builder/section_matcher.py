@@ -490,12 +490,10 @@ _MARGIN_COLUMN_SHARE = 0.35
 
 
 def _is_margin_heading(
-    block: DoclingTextBlock,
-    page_blocks: list[DoclingTextBlock],
-    width: float,
-    titles: set[str],
-    body_x0: float,
+    block: DoclingTextBlock, width: float, titles: set[str], body_x0: float
 ) -> bool:
+    """A heading (or a text block that starts with a bookmark title of the page) in a
+    narrow left column, with the page's main column starting right of it."""
     if block.bbox is None or block.bbox.x1 > width * _MARGIN_COLUMN_SHARE:
         return False
     # The main column (blocks reaching past the margin column) starts right of it;
@@ -503,33 +501,33 @@ def _is_margin_heading(
     if body_x0 < block.bbox.x1 - _ABOVE_TOLERANCE:
         return False
     text = _normalize_heading(block.text)
-    if block.label != "section_header" and not any(
+    return block.label == "section_header" or any(
         text == title or text.startswith(title + " ") for title in titles
-    ):
-        return False
-    top, bottom = vertical_span(block.bbox)
-    for other in page_blocks:
-        if other.bbox is None or other.bbox.x0 < block.bbox.x1:
+    )
+
+
+def _read_out_of_place(page_blocks: list[DoclingTextBlock], margin: set[str]) -> bool:
+    """The signature of BUG-029: Docling read a margin heading before body text printed
+    above it (SOMATOM p393), or after body text printed below it (p308, p315). Pages read
+    in order (most layouts) are left alone."""
+    body = [
+        block
+        for block in page_blocks
+        if block.block_id not in margin and block.label not in _FURNITURE_LABELS
+    ]
+    for heading in page_blocks:
+        if heading.block_id not in margin:
             continue
-        other_top, other_bottom = vertical_span(other.bbox)
-        if other_top >= bottom and other_bottom <= top:
-            return True
-    return False
-
-
-def _read_before_text_above(page_blocks: list[DoclingTextBlock], margin: set[str]) -> bool:
-    """The signature of BUG-029: Docling read a margin heading before body text
-    printed above it. Pages read in order (most layouts) are left alone."""
-    lowest_heading = math.inf
-    for block in sorted(page_blocks, key=lambda b: b.reading_order):
-        assert block.bbox is not None
-        top = vertical_span(block.bbox)[0]
-        if block.block_id in margin:
-            lowest_heading = min(lowest_heading, top)
-        elif block.label not in _FURNITURE_LABELS and (
-            top > lowest_heading + _SIDE_HEADING_TOLERANCE
-        ):
-            return True
+        assert heading.bbox is not None
+        top = vertical_span(heading.bbox)[0]
+        for block in body:
+            assert block.bbox is not None
+            block_top = vertical_span(block.bbox)[0]
+            above = block_top > top + _SIDE_HEADING_TOLERANCE
+            below = block_top < top - _SIDE_HEADING_TOLERANCE
+            read_after = block.reading_order > heading.reading_order
+            if (above and read_after) or (below and not read_after):
+                return True
     return False
 
 
@@ -576,13 +574,11 @@ def _place_margin_headings(
         margin = {
             block.block_id
             for block in page_blocks
-            if _is_margin_heading(
-                block, page_blocks, page.width, titles.get(page_no, set()), body_x0
-            )
+            if _is_margin_heading(block, page.width, titles.get(page_no, set()), body_x0)
         }
         if not margin or any(block.bbox is None for block in page_blocks):
             continue
-        if not _read_before_text_above(page_blocks, margin):
+        if not _read_out_of_place(page_blocks, margin):
             continue
         orders = sorted(block.reading_order for block in page_blocks)
         top_down = sorted(page_blocks, key=lambda block: _top_down_key(block, margin))
