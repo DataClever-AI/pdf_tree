@@ -1,0 +1,854 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 81 shows 'Alarm Recordings' as a large bold heading, the same size as 'Testing Alarms' and 'Alarm Behavior at On/Off' (node #/texts/1607 area, sec_0137 level 2). Chapter 3 Alarms is level 1. Level 2 is correct. Page 82 itself is blank except for the running header.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0137 has parent sec_0102 'Alarms' (level 1, pages 67-82), and sec_0102 lists sec_0137 as its last child. The section has no children and the page shows no sub-headings under 'Alarm Recordings'. Previous sibling is sec_0136, next is sec_0138 (chapter 4).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading 'Alarm Recordings' and all body text (steps 1-5, Red Only, Red&Yell, Off, and the 'Refer to the chapter Recording' line) are on page 81, matching page_start 81. Page 82 is a blank page with only the running header '3 Alarms / Alarm Recordings' and folio 70 (nodes 1611-1613, boilerplate). No content from sec_0138 is absorbed: chapter 4 starts on page 83.",
+   "notes": "Page 82 holds only boilerplate and belongs to the end of chapter 3; the running header names this section, so ownership is correct. Not a boundary defect.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Alarms/Alarm Recordings matches the chapter 3 'Alarms' running header on page 81 and the heading 'Alarm Recordings'. Order root to leaf is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sibling sec_0136 ends on page 81 and sec_0137 starts on page 81 after its text; sec_0138 starts on page 83. Page 82 is blank, so no content is lost or duplicated. The heading text appears once as a heading (node 1600) and once only as a running header (node 1612).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. Page 81 confirms the boundaries, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc', not inferred. The heading 'Alarm Recordings' is visible on page 81 where the TOC entry points, so the TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic numbers (69 on page 81, 70 on page 82, 71 on page 83), continuous with no roman or prefixed numbers. numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 81 shows folio 69, page 82 shows 70, page 83 shows 71: a steady 12-page gap. offset_applied is 0 for this section and for neighbors sec_0136, sec_0102 and sec_0138, and page_start/page_end are physical pages. This is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 81 and 82 contain only text and a blank area; there is no diagram, screenshot or figure. images.json lists no images. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no logo, rule or icon was kept as an image. The blue header bar on page 82 is not extracted as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 82,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is visible on pages 81-82 and none is mapped to sec_0137. Absence of images is confirmed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 171 'Switching QT Monitoring On and Off' is a large bold heading, bigger than the smaller sub-headings 'Switching Individual QTc Alarms On and Off' and 'Changing QTc Alarm Limits' above it. That matches level 2 under the level 1 chapter 6. Page 172 is blank except for the header.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0170 'ECG, Arrhythmia, ST and QT Monitoring' (level 1, pages 129-172), which lists children. sec_0274 has no children and no sub-headings are visible. Previous section sec_0273 is a level 3 child of sec_0271 and ends on page 171, so the small headings above belong to it and not to sec_0274.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 171 the heading and its single bullet ('To switch all QT monitoring on or off ...') are the section body and match nodes 3120-3121. Page 172 has only the running header '6 ECG, Arrhythmia, ST and QT Monitoring / Switching QT Monitoring On and Off' and folio 160 (nodes 3123-3125). The Changing QTc content above the heading stays in sec_0273. Boundaries are semantically correct.",
+   "notes": "Page 172 is a blank page that holds boilerplate only, and its header names this section. Not a defect.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /ECG, Arrhythmia, ST and QT Monitoring/Switching QT Monitoring On and Off agrees with the running header '6 ECG, Arrhythmia, ST and QT Monitoring' and the heading on page 171.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0273 ends on page 171 and sec_0274 starts on page 171 below it; next sec_0275 starts on page 173. Page 172 is blank, so no content is missing or repeated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Not flagged (score 100, confidence 1.0). Page 171 shows the boundary with sec_0273 is correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading appears on page 171, which matches page_start 171, so TOC provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios are arabic: 159 on page 171 and 160 on page 172. numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 171 shows folio 159 and page 172 shows 160 (gap 12). offset_applied is 0 for sec_0274, sec_0273 and sec_0275, and sections use physical pages, so it is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 171 and 172 show only text and white space. No figure or screenshot is visible and images.json is empty, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for these pages, so no logo, rule or icon was kept. The blue header bar is not an extracted image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No visible image on pages 171-172 and none mapped to sec_0274. Absence is confirmed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 237 shows the large number 15 and the big title 'Monitoring Airway Flow, Volume and Pressure' at chapter-opener size. That is level 1 and matches hierarchy_level 1.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0421 is top level (parent none). Its children sec_0422, 0423, 0424, 0427, 0428, 0429 start on pages 238-242 and sit in order after the page 237 intro. Sections 0425 and 0426 are not in this child list; they are most likely deeper children of sec_0424 and I could not check this from the pages given. Page 244 shows 'Changing the Temperature of the Inspired Gas' under the running header 'Setting up Spirometry' (sec_0429).",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The chapter title, intro text, both bullet lists, the loops paragraph, the CO2/Flow paragraph and the WARNING box are all on page 237 (nodes 4303-4326), the real start. The range end 244 equals the end of the last child sec_0429, and page 244 is under its header 'Setting up Spirometry', so the end is correct. The chapter number '15' nodes (4302, 4304) are boilerplate at the chapter start.",
+   "notes": "verify_claims may mark the chapter number or running title; the chapter number sits at the top of this chapter's first page, so ownership is correct.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Monitoring Airway Flow, Volume and Pressure is a single root element and matches the chapter title on page 237.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section sec_0420 ends on page 236 and sec_0421 starts on page 237; first child sec_0422 starts on page 238, so the intro on page 237 belongs only to sec_0421. The chapter number '15' appears twice as a node (4302 and 4304) but only once visibly; this is minor duplication of a number, not of content.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Not flagged (score 100). Page 237 shows a clean chapter start, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The chapter opener is visible on page 237 where page_start points, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 237 shows folio 225 (arabic) and page 244 shows 232. numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 237 shows folio 225 and page 244 shows 232 (gap 12). offset_applied is 0 for this section and neighbors, so it is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 237 has only text, bullets and a WARNING box; page 244 has only text and a NOTE. No figure or screenshot is visible and images.json is empty, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images were extracted, so no logo, rule or icon was kept. The blue bar and the orange WARNING rules on page 237 were not saved as images.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is visible on pages 237 or 244 and none is mapped to sec_0421 or its children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 363 shows the large number 30 and the title 'VueLink Modules' at chapter-opener size, so level 1 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0690 is top level and lists children sec_0691-0697 (pages 364-366). Page 366 shows the header '30 VueLink Modules / Language Conflict with External Device Drivers', so that last page belongs to child sec_0697. Parent and children match the chapter structure.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Title, two intro paragraphs, the module table, the legend table, the module drawing text and the two closing paragraphs are all on page 363 (nodes 7005-7030), the real start. Range end 366 equals the end of the last child sec_0697, whose bullet 'alarm and INOP texts ...' is on page 366. Previous section sec_0689 ends on page 362. Boundaries are correct.",
+   "notes": "Chapter number '30' nodes (7003, 7004) are boilerplate at the chapter start; ownership is correct.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /VueLink Modules is a root path and matches the chapter title on page 363 and the running header '30 VueLink Modules' on page 366.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0689 ends on page 362, sec_0690 starts on page 363 and child sec_0691 starts on page 364. No gap or overlap is visible. The number '30' appears as two nodes (7003, 7004) but only one visible number; minor.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Not flagged (score 100). Page 363 shows a correct chapter start.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The chapter opener is visible on page 363 where page_start points.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 363 shows folio 351 and page 366 shows 354, both arabic. numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 363 shows folio 351 and page 366 shows 354 (gap 12). offset_applied is 0 for this section and neighbors, so it is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "The rendered module table on page 363 has five columns: Module, Type, Max Wave, Max numeric, External Devices. Node #/tables/122 has only three cells per row. 'Ventilator B | 26' merges Module and Type, and '12' / '26' merge Max Wave (1, 2) and Max numeric (2, 6). The values 1 and 2 read as the number twelve, so cell values cannot be tied to their columns. The legend table (#/tables/123, a-g) is correct.",
+   "notes": "Cells are merged and values change meaning ('12' for wave 1 and numeric 2), so Medium per the contract. The text is not lost, but the column attribution is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Page 363 shows a drawing of the VueLink module (labels a to g with arrows to the module name, device label, LED, setup key, cable connector). images.json is empty, so the figure was not extracted. Only fragments survive as stray text nodes 7008-7025 (VENTILATOR, SIEMENS, 60x145, single letters a-g). The legend table has the names, but the picture that links them to parts of the module is lost.",
+   "notes": "Contract pattern: meaningful figure missing from image output. I use Critical because the picture shows where each part is and this is not in the text. A reviewer may argue Medium because the legend text survives; I am less sure of this grading.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted, so no logo, rule or icon was kept as an image. The stray OCR text of the drawing in nodes 7008-7025 is text noise, which is a result of the missing figure and is reported in 5.5-filters_discarding.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only visual on page 363 (module drawing) sits between the intro text and the closing paragraphs of sec_0690 and before child sec_0691 (page 364), so sec_0690 is the correct owner. No image is mapped to a wrong section. The missing extraction is reported in 5.5-filters_discarding.",
+   "notes": "Not counted a second time; same root cause as 5.5-filters_discarding.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 377 'General Points' is a medium bold heading below the large chapter title 'Care and Cleaning' (34). It matches level 2 under level 1 chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0722 'Care and Cleaning' (level 1, pages 377-380), which lists sec_0723 as the first child. sec_0723 has no children and no sub-headings are visible. Next sibling sec_0724 'Cleaning the Monitor' starts on page 378.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'General Points' (node 7312) and all following text, bullets, the WARNING box and the Aspect Medical paragraph are on page 377 and end before folio 365 (nodes 7312-7324). The chapter title and the two intro paragraphs above the heading are chapter intro and are not in sec_0723. Start and end are correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Care and Cleaning/General Points matches the chapter title and the heading on page 377.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The chapter intro belongs to sec_0722 (nodes 7307-7311), the heading and body to sec_0723 and the next section starts on page 378. No gap or duplicate is visible on page 377.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Not flagged (score 100). Page 377 confirms the heading and boundary.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'General Points' is visible on page 377 where page_start points.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 377 shows folio 365 in arabic style. numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 377 shows folio 365 (gap 12, same as other sampled pages). offset_applied 0 equals neighbors sec_0722 and sec_0724, so it is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 377 contains text, bullets and a WARNING box only. No figure or screenshot is visible and images.json is empty, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images were extracted; the blue bar and the orange WARNING rules were not kept as images.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0723",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is visible on page 377 and none is mapped to sec_0723.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 463 'Restart time' is a small bold heading, the same size as its sibling 'Fast Transients/Bursts' (sec_0843, level 4). That agrees with level 4. I could not see the heading of the parent on the given pages, so the nesting depth is taken from the TOC.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0841 (level 3, pages 462-464), which lists sec_0842, 0843 and 0844. Sibling sec_0843 'Fast Transients/Bursts' is just above on page 463. sec_0844 has no children and none is visible.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'Restart time' and its single sentence ('After power interruption, an ECG wave will be shown ... 30 seconds maximum') are on page 463, matching page_start 463. Page 464 is blank with only the running header '38 Installation and Specifications / Safety and Performance Tests' and folio 452 (nodes 8383-8385). The separation table at the top of page 463 is not in sec_0844 nodes. Next sec_0845 starts on page 465.",
+   "notes": "Page 464 holds boilerplate only and is the last blank page before the next chapter; its header names the parent topic. Not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The long path /Installation and Specifications/Safety and Performance Tests/Recommended separation distances.../Restart time is in the right order and matches the running headers on pages 463-464 for the first two parts.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0843 ends on page 463 and sec_0844 starts on page 463 after it; sec_0845 starts on page 465. Page 464 is blank, so no content is lost or duplicated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Not flagged (score 100). Page 463 shows 'Restart time' as a clear heading with its sentence.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading is visible on page 463 where page_start points.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio 451 on page 463 and 452 on page 464, both arabic. numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 463 shows folio 451 and page 464 shows 452 (gap 12). offset_applied 0 equals the neighbors sec_0843 and sec_0845.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 464 is blank apart from header and folio. Page 463 has a table with square-root formulas and text, but no picture. images.json is empty, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images were extracted. The blue header bar on page 464 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0844",
+   "page_sampled": 464,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is visible on pages 463-464 and none is mapped to sec_0844.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 83 is the chapter 4 opener 'Patient Alarms and INOPs' with a large number 4 and title; this is sec_0138 (level 1), not sec_0137. sec_0137 is still correctly level 2 under chapter 3. Page 83 has no heading that belongs to sec_0137.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 83 starts sec_0138 (level 1, parent none, children sec_0139, sec_0140). sec_0137 is not a parent of it and its nodes do not appear here. sec_0137 stays a leaf child of sec_0102.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0137 ends on page 82 (last node 1613, folio 70). Page 83 starts a new chapter ('4 Patient Alarms and INOPs', 'Patient Alarm Messages', alarm table). None of this content is in sec_0137 nodes, so the end boundary is correct and nothing is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 83 content belongs to /Patient Alarms and INOPs, not to /Alarms/Alarm Recordings. The path of sec_0137 does not claim any page 83 content.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0137 stops at page 82 and sec_0138 starts at page 83, so the ranges touch without overlap or gap. The alarm table and text on page 83 are not duplicated in sec_0137.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0137 is not flagged (score 100). Page 83 shows a clean chapter start right after sec_0137's end, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both sec_0137 and sec_0138 use structural_source 'toc'. The chapter heading on page 83 matches the start of sec_0138 (page_start 83), which supports the TOC boundary after sec_0137.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 83 shows folio 71 in arabic style, continuing 69 and 70 from the previous pages. The arabic scheme is correct at this boundary.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 83 shows folio 71, the same 12-page gap as pages 81 (69) and 82 (70). offset_applied 0 is the same on sec_0137 and sec_0138, so there is no jump at the boundary.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 83 has a chapter number, a title, text and a table of alarm messages, but no picture or screenshot. images.json is empty, so no figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images were extracted; the blue bar under the chapter number on page 83 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 83,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images exist on page 83 and none are mapped to sec_0137, which ends on page 82.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}

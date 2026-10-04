@@ -1,0 +1,1134 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 34 \"Permanent Keys\" (#/texts/524) is a small bold heading, smaller than the level-3 heading \"Using Keys\" just above it. This matches hierarchy_level 4.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0035 \"Using Keys\" (level 3, pages 34-37) lists sec_0036 as the first of four children (0036-0039). sec_0036 has no children and the page shows no sub-heading under it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 34 the heading \"Permanent Keys\" (#/texts/524) has only one intro paragraph (\"A permanent key is a graphical key ... fast access to functions.\") at the very bottom of the page, and the section is cut at page_end 34. The key descriptions that belong under this heading continue on page 35 before the next heading \"SmartKeys\". verify_claims shows 4 nodes there (starting \"Pause Alarms - pauses alarm indicators...\") owned by sec_0037. That body text is in the wrong section.",
+   "notes": "Page 35 is not in my input images, so the page 35 part is based on the verify_claims node list plus the page 34 layout (intro sentence ends the page). Same root cause as gaps_duplicates. Folio \"22\" (#/texts/526) is boilerplate.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Basic Operation/Operating and Navigating/Using Keys/Permanent Keys equals the parent path plus the title. The page header reads \"1 Basic Operation | Operating and Navigating\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Page 34 ends with the Permanent Keys heading and one intro sentence. The permanent key descriptions that follow on page 35, before the heading \"SmartKeys\", are not in sec_0036 (3 nodes only) but in sec_0037 (page_start 35). The section is left almost empty and its body went to the next sibling.",
+   "notes": "Same root cause as 5.4-page_start_end. Sprint scale: body nodes in another section is Critical. Page 35 was not rendered for me.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The page matches the tree, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is visible on page 34 where page_start is 34, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on page 34 is \"22\", arabic. numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical page 34. The printed folio is 22, a constant gap of 12 like the other sections. Page mapping is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 34 has one picture, the Navigation Point panel (img_0036, 180x399), and it was extracted. The Permanent Keys block has no picture, and no icon was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0036 is a real product picture with the five buttons. No rule, bar or logo was kept as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0036 is mapped to sec_0032. It sits at the top of page 34 beside the \"Using the Navigation Point\" legend, far above the Permanent Keys heading, so it should not map to sec_0036. The sec_0032 title is not in this job, so I rely on the page layout.",
+   "notes": "sec_0032 is not given in the job data; the page layout confirms the image belongs to the Navigation Point block.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 165 \"Switching Between ST Map Views\" is a small bold heading, smaller than the level-3 heading \"Working in the ST Map Task Window\" above it. This matches hierarchy_level 4.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0253 \"Working in the ST Map Task Window\" (level 3, pages 165-166) lists sec_0254 as first of six children. The heading is directly below the parent heading on the page. sec_0254 has no children.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 165 the heading and its three lines (nodes #/texts/2971-2974) are at the bottom. But nodes #/texts/2975 \"current ST values\" and #/texts/2976 \"In this diagram, V4 was either temporarily switched off ...\" are also in sec_0254. On the page they are the label and caption of the two ST map diagrams at the TOP of the page, above the \"Viewing an ST Map\" heading. That body text belongs to the earlier section that owns the diagrams, not to this section.",
+   "notes": "Root cause: Docling reading order put the figure label and caption after the last paragraph, so they were appended to the last heading. The two diagrams (img_0074, img_0075) are in sec_0251 while their caption is in sec_0254. Same defect as the gaps_duplicates row.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /ECG, Arrhythmia, ST and QT Monitoring/Viewing ST Maps/Working in the ST Map Task Window/Switching Between ST Map Views equals the parent path plus the title. The page header reads \"Viewing ST Maps | 6 ECG, Arrhythmia, ST and QT Monitoring\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Nodes #/texts/2975 and #/texts/2976 (caption of the diagrams at the top of page 165, y 520 and 469) sit in sec_0254 after the Switching heading text (y 199-147). Their diagrams img_0074 and img_0075 are mapped to sec_0251. The caption is separated from its figure, so content is in the wrong section.",
+   "notes": "Same root cause as 5.4-page_start_end. Sprint scale: body nodes in another section is Critical.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false. The tree error found in the page_start_end row is a hidden misplacement, but the flag state alone is not a failure.",
+   "notes": "The flag was not raised for this misplaced caption; that is a pipeline note, not a separate FAIL.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is visible on physical page 165, which equals page_start, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on page 165 is \"153\", arabic. numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical page 165. The printed folio is 153, a constant gap of 12 like the other sections. Page mapping is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 165 has two diagrams, the ST Map (Trend) window and the small V1-V6 map. Both were extracted (img_0074 306x173 and img_0075 214x215). No other picture is on the page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0074 and img_0075 are real ST map screenshots. No rule, bar or logo was kept as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0074 and img_0075 are above the \"Viewing an ST Map\" heading, so they cannot belong to sec_0254 at the bottom. They are mapped to sec_0251, which is the earlier section, so the image mapping is right. The text label and caption of these diagrams are the part that is wrongly in sec_0254.",
+   "notes": "See the page_start_end FAIL. I could not read the sec_0251 title in this job.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 343 \"Starting Report Printouts\" (#/texts/6487) is a mid-size bold heading below the large chapter title \"27 Printing Patient Reports\". This matches hierarchy_level 2 under a level-1 chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0651 \"Printing Patient Reports\" (level 1, pages 343-354) lists sec_0652 as first child. sec_0652 has no children and the page shows no sub-heading. The next sibling sec_0653 is level 2 under the same parent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 343 the heading is directly below the chapter title (owned by sec_0651) and holds the whole page of body text. On page 344 the report types table sits above the \"Stopping Reports Printouts\" heading, so it continues this section. sec_0653 starts at that heading on page 344, so page_end 344 is right.",
+   "notes": "Folio \"331\" (#/texts/6499) is page furniture only.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Printing Patient Reports/Starting Report Printouts equals the parent path plus the title. The chapter title \"Printing Patient Reports\" is on page 343.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Chapter title is in sec_0651, the body starts in sec_0652 and sec_0653 starts on page 344 at its heading. The text and table of sec_0652 appear once. No gap or overlap is visible.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The page matches the tree, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is visible on physical page 343 where page_start is 343, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic (331 on page 343, 332 on page 344). numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical page 343. The printed folio is 331, a constant gap of 12 like the other sections. Page mapping is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On physical page 344 the table has three columns: Report types, Report contents, How to start printing reports. In the extracted table #/tables/115 many cells are shifted one column to the left. For example the row \"Graphic Trends Report\" has the name in column 3 text, and \"Vital Signs Report\" is in the Report contents cell of the first row. Report names such as \"Events Reports\", \"ECG Reports\" and \"Wedge Report\" are inside the Report contents cell. The values can no longer be assigned to the right column.",
+   "notes": "The text is complete and in reading order, but the column attribution is wrong. Contract: shifted cells that change which column a value belongs to is Medium.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 343 and 344 show only text and one table. No photo, diagram or icon is visible, and images.json has none for this section. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image from pages 343 or 344 was kept in images.json, so no decorative bar or rule was retained as content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I checked pages 343 and 344. There is no figure on either page and images.json lists no image for sec_0652. No mapping is needed and none is wrong.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 431 the heading \"Monitor Performance Specifications\" (#/texts/7977) is a large bold title, the same size as the level-2 titles in this manual. This matches hierarchy_level 2. The pages 435 and 436 show only tables with the matching running header.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0799 \"Installation and Specifications\" (level 1, pages 413-464) lists sec_0817 as a child. sec_0817 has no children and its pages show only specification tables. The neighbours sec_0816 (level 3, EMC) and sec_0818 (level 2) are correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at the heading \"Monitor Performance Specifications\" at the bottom of page 431, below three environment tables that belong to sec_0816. Page 440 starts with the Compatible Devices table (#/tables/210) that continues this section, and the heading \"M4605A Battery Specifications\" below it starts sec_0818. On page 435 the five tables are all performance or interface specifications of this section. Range 431-440 is right.",
+   "notes": "Running header nodes #/texts/7975-7976 at the top of page 431 are owned by this section while the first content on that page is sec_0816 tables. This is boilerplate only and the section starts on that page, so I kept PASS. verify_claims marks this CONTRADICTED (boilerplate Low) for the same reason. Pages 432-434 and 437-439 were not rendered.",
+   "confidence": 0.86
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Installation and Specifications/Monitor Performance Specifications equals the parent path plus the title. The page header on page 435 reads \"Monitor Performance Specifications | 38 Installation and Specifications\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0816 ends with three tables on page 431, sec_0817 starts at its heading lower on the same page and continues to page 440. sec_0818 starts at the \"M4605A Battery Specifications\" heading on page 440. Tables 194-210 each appear once. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The pages match the tree, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is visible on page 431 where page_start is 431, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic (423 on page 435, 424 on page 436). numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical page 431 (folio 419). The gap of 12 is the same as in the other sections. Page mapping is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 435 tables #/tables/198-202 were compared with the render: M8023A power (<12 W average, <30 W peak, 1.3 to 0.7 A, green LED), MMS Trends, D80 (<145 W, 1.6 to 0.7 A), Docking Station M8045A (max. 3.5 A) and Monitor Interface Network, Parallel Printer Port, Dual PS/2. All rows and values match, and labels stay in the right column.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 435 and 436 have only tables and text. No photo, diagram or icon is visible and images.json has no image for this section. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image from these pages was kept in images.json, so no bar or rule was kept as content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I checked pages 431, 435, 436 and 440. They have no figure and images.json lists no image for sec_0817. No mapping is needed and none is wrong.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 20 the heading \"Docking Station\" (#/texts/185) is a mid-size bold heading. It is smaller than the level-2 heading \"Devices for Acquiring Measurements\" on page 21. This matches hierarchy_level 3.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0002 \"Introducing the IntelliVue Family\" (level 2, pages 13-21) lists sec_0013 as its last child. sec_0013 has no children and the page shows no sub-heading under Docking Station. The next section sec_0014 is level 2 under sec_0001.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 20 the section starts at the heading \"Docking Station\" (#/texts/185), below the alarm device figure that belongs to sec_0012. Its body, the WARNING box and the docking photo follow. Page 21 starts with the 1-5 legend list (#/texts/204-208) of that photo, so page_end 21 is right.",
+   "notes": "Folio \"8\" (#/texts/200) is page furniture inside the node list. It is boilerplate only and it stays on the page of the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Basic Operation/Introducing the IntelliVue Family/Docking Station equals the parent path plus the title. The page 20 running header reads \"1 Basic Operation\" and \"Introducing the IntelliVue Family\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0012 ends on page 20 above the Docking Station heading, sec_0013 holds semantic order 173-190 and sec_0014 starts on page 21. The nodes are continuous with no gap and no overlap in the siblings.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The page 20 and 21 renderings show no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start is the heading \"Docking Station\" on page 20, which matches the page_start of 20. The toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic digits (8 on page 20, 9 on page 21). numbering_scheme arabic is correct and no roman folios appear.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 20 is the physical page where the heading is drawn. The printed folio is 8, a constant gap of 12 that is the same on the other pages of this batch (22 on p34, 153 on p165). The physical page numbers are consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 20 shows two photos: the alarm device at the top (img_0011, mapped to sec_0012) and the docking station at the bottom (img_0010, 512x321, mapped to sec_0013). Both are extracted. No other picture or icon is visible.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images mapped here (img_0010, img_0011) are real product photos. No rule, divider, logo or header bar was kept as an image.",
+   "notes": "The coloured header bar and the orange WARNING rules are not in images.json.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0010 (docking station photo, below the heading) is mapped to sec_0013 and is correct. img_0011 (alarm device photo, above the heading) is mapped to sec_0012 and is correct. The docking photo shows the 1-5 callouts that the legend on page 21 explains.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On physical page 20 the heading \"Docking Station\" (#/texts/185) is a mid-size bold heading. It is smaller than the level-2 heading \"Devices for Acquiring Measurements\" on page 21. This matches hierarchy_level 3.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0002 \"Introducing the IntelliVue Family\" (level 2, pages 13-21) lists sec_0013 as its last child. sec_0013 has no children and the page shows no sub-heading under Docking Station. The next section sec_0014 is level 2 under sec_0001.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 21 the 1-5 legend list (Open position, Power On LED, Data Connector, Power Connector, Locked Position) continues the docking photo of page 20, so it belongs to sec_0013. The heading \"Devices for Acquiring Measurements\" below it starts sec_0014. Nodes #/texts/201 and #/texts/202 are only the running header text and not body.",
+   "notes": "The running header at the top of page 21 is owned by sec_0013 nodes while sec_0014 starts on the same page. This is boilerplate only. I kept PASS because the ownership of the real content is correct.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Basic Operation/Introducing the IntelliVue Family/Docking Station equals the parent path plus the title. The page 20 running header reads \"1 Basic Operation\" and \"Introducing the IntelliVue Family\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page 21 legend list items 1-5 appear once, in sec_0013 only. The new chapter-level section sec_0014 starts at its own heading below the list. No duplicate text and no gap.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The page 20 and 21 renderings show no sign of uncertainty, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start is the heading \"Docking Station\" on page 20, which matches the page_start of 20. The toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic digits (8 on page 20, 9 on page 21). numbering_scheme arabic is correct and no roman folios appear.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 20 is the physical page where the heading is drawn. The printed folio is 8, a constant gap of 12 that is the same on the other pages of this batch (22 on p34, 153 on p165). The physical page numbers are consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 21 has one photo, the Flexible Module Rack, extracted as img_0012 (sec_0015). The rest is text, so nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images mapped here (img_0010, img_0011) are real product photos. No rule, divider, logo or header bar was kept as an image.",
+   "notes": "The coloured header bar and the orange WARNING rules are not in images.json.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only photo on page 21 is the Flexible Module Rack (img_0012), mapped to sec_0015 under its own heading. No image on page 21 should map to sec_0013, and none does.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 428 the heading \"Environmental Specifications\" (#/texts/7963) has the smaller heading size of a level-3 title, like \"Docking Station\". The level-2 title \"Monitor Performance Specifications\" on page 431 is clearly bigger. This matches hierarchy_level 3.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0814 \"EMC And Radio Regulatory Compliance\" (level 2, pages 425-431) lists sec_0815 and sec_0816 as children. The page headers on pages 428-430 read \"EMC And Radio Regulatory Compliance\". sec_0816 has no children.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 428 the weights table at the top belongs to sec_0815 (Physical Specifications). sec_0816 starts at the heading \"Environmental Specifications\" (#/texts/7963) with two intro paragraphs. The last nodes on page 431 are three tables (M1116B humidity, Remote SpeedPoint, Remote Alarm Device) above the heading \"Monitor Performance Specifications\", which starts sec_0817. page_start 428 and page_end 431 are right.",
+   "notes": "Nodes #/texts/7961-7962 are running header text placed before the heading. This is boilerplate only. Page 430 was not rendered for me, so the heading #/texts/7973 (module table title) is judged by text only. verify_claims marks this CONTRADICTED (boilerplate Low) because running header nodes #/texts/7961-7962 are on page 428, whose top table is sec_0815. I kept PASS: only running header text is involved and the heading and body that start on that page belong to this section.",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Installation and Specifications/EMC And Radio Regulatory Compliance/Environmental Specifications equals the parent path plus the title. The page header reads \"38 Installation and Specifications | EMC And Radio Regulatory Compliance\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The weights table at the top of page 428 is not in sec_0816 (it stays with sec_0815, which ends on page 428). sec_0816 starts at its heading, its tables follow on pages 429-431, and sec_0817 starts at its heading on page 431. No gap, no overlap, no repeated table.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The pages match the tree, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is visible on page 428 where page_start is 428, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic (416 on page 428, 417 on page 429). numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical page 428. The printed folio is 416, a constant gap of 12 like the other sections. Page mapping is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The weights table at the top of page 428 is not part of sec_0816. The section tables start on page 429. I compared tables #/tables/183-186 with page 429. Rows and values such as \"0 to 35 C (32 to 95 F)\", \"20 % to 85 % RH\", \"-500 m to 4600 m\" and \"IP32\" match the rendering. The sampled page itself has no table of this section, so this PASS is on its tables on page 429.",
+   "notes": "Tables 187-190 are on page 430, which was not rendered for me. Confidence is lowered for that.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 428 and 429 show only text and tables. No photo, diagram or icon is visible and images.json has no image for this section. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image from these pages was kept in images.json, so no bar or rule was kept as content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I checked pages 428, 429 and 431. They have no figure and images.json lists no image for sec_0816. No mapping is needed and none is wrong.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 428 the heading \"Environmental Specifications\" (#/texts/7963) has the smaller heading size of a level-3 title, like \"Docking Station\". The level-2 title \"Monitor Performance Specifications\" on page 431 is clearly bigger. This matches hierarchy_level 3.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0814 \"EMC And Radio Regulatory Compliance\" (level 2, pages 425-431) lists sec_0815 and sec_0816 as children. The page headers on pages 428-430 read \"EMC And Radio Regulatory Compliance\". sec_0816 has no children.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 429 holds four environment tables (MP40-MP90, MP20/30, humidity/altitude, X2 and M8023A) with the footnote \"1. Sufficient for flight altitudes up to 12,000 m\", all under Environmental Specifications. No new heading begins on this page, so the section continues inside the declared range 428-431.",
+   "notes": "Page 430 was not rendered for me; its content is judged from the node text only. verify_claims marks this CONTRADICTED (boilerplate Low) because the running header nodes #/texts/7961-7962 are on page 428, whose top table is sec_0815. I kept PASS: only running header text is involved and the heading and body that start on that page belong to this section.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Installation and Specifications/EMC And Radio Regulatory Compliance/Environmental Specifications equals the parent path plus the title. The page header reads \"38 Installation and Specifications | EMC And Radio Regulatory Compliance\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The weights table at the top of page 428 is not in sec_0816 (it stays with sec_0815, which ends on page 428). sec_0816 starts at its heading, its tables follow on pages 429-431, and sec_0817 starts at its heading on page 431. No gap, no overlap, no repeated table.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The pages match the tree, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is visible on page 428 where page_start is 428, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic (416 on page 428, 417 on page 429). numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical page 428. The printed folio is 416, a constant gap of 12 like the other sections. Page mapping is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables #/tables/183, 184, 185 and 186 on page 429 were compared cell by cell. The column headings Item, Condition and Range, the sub-title rows (Monitor MP40..., MP20 MP30, X2 ...) and the values (0 to 35 C, 0 to 40 C, 20 % to 85 % RH, -500 m to 12000 m, IP32 text) match the render. Row labels stay in column 1.",
+   "notes": "Footnote marker appears as \"4600 m 1 (15000 ft)\", a small text difference only. Tables on pages 430-431 not fully rendered; table 191-193 on page 431 also match.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 428 and 429 show only text and tables. No photo, diagram or icon is visible and images.json has no image for this section. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image from these pages was kept in images.json, so no bar or rule was kept as content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I checked pages 428, 429 and 431. They have no figure and images.json lists no image for sec_0816. No mapping is needed and none is wrong.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 431 the heading \"Monitor Performance Specifications\" (#/texts/7977) is a large bold title, the same size as the level-2 titles in this manual. This matches hierarchy_level 2. The pages 435 and 436 show only tables with the matching running header.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0799 \"Installation and Specifications\" (level 1, pages 413-464) lists sec_0817 as a child. sec_0817 has no children and its pages show only specification tables. The neighbours sec_0816 (level 3, EMC) and sec_0818 (level 2) are correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 436 holds only the continued Monitor Interface Specifications table (#/tables/203), with no new heading, so it is inside the range 431-440. The section end is on page 440, where the Compatible Devices table ends above the M4605A heading of sec_0818.",
+   "notes": "Folio \"424\" and the running header nodes are boilerplate inside the section. verify_claims marks this CONTRADICTED (boilerplate Low) only because running header nodes #/texts/7975-7976 are on page 431, where sec_0816 tables come first. The section start is correct there, so I kept PASS.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /Installation and Specifications/Monitor Performance Specifications equals the parent path plus the title. The page header on page 435 reads \"Monitor Performance Specifications | 38 Installation and Specifications\".",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0816 ends with three tables on page 431, sec_0817 starts at its heading lower on the same page and continues to page 440. sec_0818 starts at the \"M4605A Battery Specifications\" heading on page 440. Tables 194-210 each appear once. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The pages match the tree, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is visible on page 431 where page_start is 431, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are arabic (423 on page 435, 424 on page 436). numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading is on physical page 431 (folio 419). The gap of 12 is the same as in the other sections. Page mapping is consistent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/203 on page 436 matches the render row by row: Dual MIB/RS232, USB Interface (4 ports), ECG Output (320 to 3200 in 19 steps, <20 %, 1 to 80 Hz), Marker Input, Basic and Flexible Nurse Call Relay. Values such as \"<=100 mA, <=24 V DC\" and the delay text are the same. One Mode row merges its lines but the meaning is kept.",
+   "notes": "Minor: Dual MIB/RS232 Power shows \"100 mA (max.)\" and the Mode text is joined into one line; no value changed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 435 and 436 have only tables and text. No photo, diagram or icon is visible and images.json has no image for this section. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image from these pages was kept in images.json, so no bar or rule was kept as content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I checked pages 431, 435, 436 and 440. They have no figure and images.json lists no image for sec_0817. No mapping is needed and none is wrong.",
+   "notes": "",
+   "confidence": 0.92
+  }
+ ]
+}
