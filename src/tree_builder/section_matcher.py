@@ -362,18 +362,18 @@ def _assign_content(
     for page_blocks in blocks_by_page.values():
         page_blocks.sort(key=lambda b: b.reading_order)
         # Running headers, print slugs and chapter numbers at the top of a page belong
-        # to the section that owns the page's first heading or body text (BUG-022).
+        # to the section that owns the page's first other block (BUG-022).
         leading: list[DoclingTextBlock] | None = []
         for block in page_blocks:
             owners[block.block_id] = _owner(block.reading_order)
             if leading is None:
                 continue
-            if block.label == "section_header" or _is_body_on_page(block, doc):
+            if _is_page_furniture(block, doc):
+                leading.append(block)
+            else:
                 for furniture in leading:
                     owners[furniture.block_id] = owners[block.block_id]
                 leading = None
-            else:
-                leading.append(block)
     for block in doc.text_blocks:
         owner = owners[block.block_id]
         if owner is not None:
@@ -419,17 +419,38 @@ def _is_body_on_page(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
     """
     if block.label in _FURNITURE_LABELS or block.label == "section_header":
         return False
-    words = sum(1 for token in block.text.split() if _WORD.match(token.strip("(\"'")))
-    if words < _MIN_BODY_WORDS:
+    if _word_count(block) < _MIN_BODY_WORDS:
         return False
+    return not _in_furniture_band(block, doc)
+
+
+def _word_count(block: DoclingTextBlock) -> int:
+    return sum(1 for token in block.text.split() if _WORD.match(token.strip("(\"'")))
+
+
+def _in_furniture_band(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
+    """Fully inside the top or bottom band of the page, or outside the page (2002's
+    invisible print-job slugs)."""
     page = doc.pages.get(block.page_no)
     if block.bbox is None or page is None or page.height <= 0:
-        return True
+        return False
     top, bottom = vertical_span(block.bbox)
     if block.bbox.coordinate_origin != "bottomleft":
         top, bottom = page.height + top, page.height + bottom
     band = page.height * _FURNITURE_BAND
-    return not (bottom >= page.height - band or top <= band)
+    return bottom >= page.height - band or top <= band
+
+
+def _is_page_furniture(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
+    """Running header or footer, a block in the furniture band, or a short label
+    (chapter-tab numbers like '39', 'MP40/MP50', margin 'DANGER' on LOGIQ_e p457).
+    Headings and list items are never furniture: a short list item at the top of a
+    page continues the previous page's list (SOMATOM p393 'Table joystick')."""
+    if block.label in _FURNITURE_LABELS:
+        return True
+    if block.label in {"section_header", "list_item"}:
+        return False
+    return _in_furniture_band(block, doc) or _word_count(block) < _MIN_BODY_WORDS
 
 
 def _extend_page_ends(sections: list[MatchedSection], doc: DoclingDocument) -> None:

@@ -439,3 +439,19 @@ def test_running_header_stays_with_the_section_that_continues_on_the_page():
     specs, outback = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
     assert "Specifications" == _texts(specs)[2]
     assert _texts(outback) == ["Outback"]
+
+
+def test_short_text_that_continues_a_list_is_not_furniture():
+    # SOMATOM p393: 'Table joystick' and 'Mouse joystick' end the previous section's
+    # list at the top of the page; they are not running headers.
+    blocks = [
+        _block(0, "Joysticks", 1, "section_header", top=700),
+        _block(1, "Use one of these joysticks:", 1, top=650),
+        _block(2, "SOMATOM header", 2, "page_header", top=780),
+        _block(3, "Table joystick", 2, "list_item", top=600),
+        _block(4, "Scrolling", 2, "section_header", top=500),
+    ]
+    bookmarks = [(2, "Joysticks", 1), (2, "Scrolling", 2)]
+    joysticks, scrolling = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert _texts(joysticks)[-2:] == ["SOMATOM header", "Table joystick"]
+    assert _texts(scrolling) == ["Scrolling"]
