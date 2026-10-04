@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-006
-status: open
+status: in-progress
 finding: H-05
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-005-reading-order
+fix_commit: 360cf01
+updated: 2026-10-03
 ---
 
 # BUG-006 · Body content extraction gap — section body text lost entirely, only heading (or nothing) survives as a stray node
@@ -23,6 +23,7 @@ Unconfirmed: `docling_extract`.
 
 - 2026-09-04: identified in the v1 QA review of SOMATOM_Force_IFU_VB30 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: verified on the simulated tree at 0128ad0: all 8 sections that were empty or heading-only in v1 now hold their real body (8-51 nodes on their own pages, e.g. sec_0546 'You can activate a password protection...'). Same root cause as BUG-005 (reading order from the texts list); fixed by 360cf01. A reviewed row is still needed (none of the 8 sections is in the v1.3-v1.5 batches except sec_0927, which is PASS in v1.3, v1.4 and v1.5).
 
 ## Fix
 

@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-012
-status: open
+status: in-progress
 finding: 
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-020-image-filters
+fix_commit: 8a06c44
+updated: 2026-10-03
 ---
 
 # BUG-012 · Sporadic single/partial image omissions from the image index — mechanism unconfirmed
@@ -23,6 +23,7 @@ Unconfirmed.
 
 - 2026-09-04: identified in the v1 QA review of LOGIQ_e_R9 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: verified with the image inventory: three p436 part photos are kept at 8a06c44 (BUG-020). Still missing: p95 and p123 (vector figures, BUG-010); p274 and p417 thin screenshots (673x35 and 808x39 px, under the pixel floor and over the 15:1 aspect filter); p434 two photos and p436 one photo under 0.5% of the page (would be kept by the BUG-017 proposal: pixel floor 48 and area 0.3%).
 
 ## Fix
 
