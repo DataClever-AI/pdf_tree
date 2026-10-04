@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-023
-status: open
+status: in-progress
 finding: 
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-029-margin-headings-residual
+fix_commit: 360cf01, beb1698, 175c3d1, bacf325
+updated: 2026-10-03
 ---
 
 # BUG-023 · Reading-order misattribution around a same-page heading transition: content printed before or after a heading on the same page is assigned to the neighbouring section
@@ -17,16 +17,17 @@ Around a heading transition on the same page, content printed before or after th
 
 ## Root cause
 
-Unconfirmed: reading order across same-page heading transitions in `section_matcher`.
+Several causes, now separated: the 2002 p442 legend was a BUG-005 reading-order tail; most Philips rows were the next page's running header (BUG-022); pages with left-margin headings read out of place are the proposed BUG-029; a few remain (Philips sec_0254 p165: diagram labels at the top of a page read after the heading below them).
 
 ## What was done
 
 - 2026-09-28: identified in the agent review drafts of the v2 runs (2002 p442, p448; Philips p20, p34, p165, p343, p420, p428, p435, p442); pending approval by the human reviewer (Oscar Munoz).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: 2002 v2.3: both BUG-023 rows now PASS. Philips v2.6: 4 of 6 rows now PASS; sec_0036 p35 is fixed in the tree by `bacf325` (built after v2.6); sec_0254 p165 remains (agent drafts, not approved).
 
 ## Fix
 
-Proposed: same position-based assignment as BUG-001/BUG-003.
+Covered by the fixes of BUG-005, BUG-022 and BUG-029 (margin headings; `175c3d1`, `bacf325`).
 
 ## Verification
 
