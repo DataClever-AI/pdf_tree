@@ -266,3 +266,12 @@ def test_attempts_table_append_and_last_attempt():
     assert last_attempt(append_attempt(second, pending)) == "v2.2: not reviewed"
     legacy = "# BUG\n\n<!-- generated:occurrences:start -->\n<!-- generated:occurrences:end -->\n"
     assert ensure_attempts_section(legacy).index("## Attempts") < legacy.find("<!--") + 20
+
+
+def test_random_checks_never_repeat_an_official_row():
+    # 2002 v2.3: quota page 388 of sec_0172 (not its first sampled page) came back as a
+    # random check, so the template had the same rows twice.
+    tree = _tree(split=22)
+    plan = plan_mitigation_sample(tree, PAGES, set(), set(), extra_pages=PAGES, seed="m:v2.1")
+    official = {(row.section_id, row.page) for row in plan.sample.rows}
+    assert not {(row.section_id, row.page) for row in plan.check_rows} & official
