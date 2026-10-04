@@ -335,8 +335,8 @@ def table_owner(v: Version, n: dict[str, Any]) -> str | None:
 
 
 def is_repeated_decoration(v: Version, xref: int, rect: Any, page_h: float, frac: float) -> bool:
-    """The pipeline drops an image shown on 5+ pages in the top/bottom 10% band or under
-    2% of the page (BUG-004: DOC's footer divider); its absence is not a lost figure."""
+    """The pipeline drops an image shown on 5+ pages in the top/bottom 10% band (BUG-004:
+    DOC's footer divider); its absence is not a lost figure."""
     if v._xref_pages is None:
         counts: Counter[int] = Counter()
         for page in v.pdf:
@@ -345,7 +345,7 @@ def is_repeated_decoration(v: Version, xref: int, rect: Any, page_h: float, frac
         v._xref_pages = counts
     if v._xref_pages[xref] < 5:
         return False
-    return rect.y1 <= page_h * 0.10 or rect.y0 >= page_h * 0.90 or frac < 0.02
+    return rect.y1 <= page_h * 0.10 or rect.y0 >= page_h * 0.90
 
 
 def page_facts(v: Version, page: int, sid: str) -> PageFacts:

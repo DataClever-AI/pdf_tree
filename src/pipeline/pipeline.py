@@ -597,11 +597,12 @@ def _extract_embedded_images(
     # covering 1%+ of the page is a thin screenshot (LOGIQ_S8 p679, 231x79 px).
     _MAX_ASPECT    = 15.0
     _STRIP_MIN_AREA_FRAC = 0.01
-    # An image shown on many pages is page decoration (BUG-004: DOC's footer divider on
-    # 210 pages) when it sits in the top/bottom 10% band, or a repeated small icon.
+    _STRIP_MIN_PX  = 20                     # a unique strip may be under _MIN_PX (35 px high)
+    # An image shown on many pages in the top/bottom 10% band is page decoration (BUG-004:
+    # DOC's footer divider on 210 pages). A repeated key picture or icon inside the page
+    # body is content (SOMATOM's Move key on 8 pages).
     _REPEAT_PAGES  = 5
     _REPEAT_BAND   = 0.10
-    _REPEAT_MAX_AREA_FRAC = 0.02
 
     result: list[EmbeddedImage] = []
     doc = fitz.open(str(pdf_path))
@@ -627,37 +628,42 @@ def _extract_embedded_images(
             w = base_image.get("width", 0)
             h = base_image.get("height", 0)
 
-            # filter 1: pixel dimensions
-            if w < _MIN_PX or h < _MIN_PX:
-                continue
-
             strip = max(w, h) / max(min(w, h), 1) > _MAX_ASPECT
-
-            # filters 2-4: page-coordinate bbox checks
+            small = w < _MIN_PX or h < _MIN_PX
+            if small and not strip:
+                continue  # filter 1: pixel dimensions (no rect lookup for tiny images)
             try:
                 rects = page.get_image_rects(xref)
             except Exception:
                 rects = []
-            bbox = None
-            if strip and (not rects or len(pages_of.get(xref, ())) > 1):
-                continue  # filter 5: aspect ratio (thin decorative rules, nav bars)
-            if rects:
-                bbox = rects[0]
-                if strip and page_area > 0 and (
-                    (bbox.width * bbox.height) / page_area < _STRIP_MIN_AREA_FRAC
-                ):
-                    continue
+            bbox = rects[0] if rects else None
+            # filter 5: aspect ratio. A strip is a rule or nav bar unless it is shown once
+            # and covers 1%+ of the page: then it is a thin screenshot (LOGIQ_e p274, p417).
+            unique_strip = (
+                strip
+                and bbox is not None
+                and len(pages_of.get(xref, ())) == 1
+                and page_area > 0
+                and (bbox.width * bbox.height) / page_area >= _STRIP_MIN_AREA_FRAC
+                and min(w, h) >= _STRIP_MIN_PX
+            )
+            if strip and not unique_strip:
+                continue
+            if small and not unique_strip:
+                continue  # filter 1: a strip under the pixel floor must be a unique screenshot
+
+            # filters 2-4, 6: page-coordinate bbox checks
+            if bbox is not None:
                 # filter 2: area fraction
                 if page_area > 0 and (bbox.width * bbox.height) / page_area < _MIN_AREA_FRAC:
                     continue
                 # filters 3-4: header / footer zone
                 if bbox.y1 <= header_cut or bbox.y0 >= footer_cut:
                     continue
-                # filter 6: repeated decoration or icon
+                # filter 6: repeated decoration in the top/bottom band
                 if len(pages_of.get(xref, ())) >= _REPEAT_PAGES and (
                     bbox.y1 <= page_h * _REPEAT_BAND
                     or bbox.y0 >= page_h * (1 - _REPEAT_BAND)
-                    or (bbox.width * bbox.height) / page_area < _REPEAT_MAX_AREA_FRAC
                 ):
                     continue
 
