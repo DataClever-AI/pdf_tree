@@ -97,6 +97,7 @@ class Version:
                 self.owner[n["node_id"]] = s["section_id"]
                 self.nodes_by_page[n["page_no"]].append((s["section_id"], n))
         self.boilerplate = self._boilerplate_texts()
+        self._xref_pages: Counter[int] | None = None
         self.header_tops = self._header_tops()
         self.title_nodes = self._title_nodes()
 
@@ -333,6 +334,20 @@ def table_owner(v: Version, n: dict[str, Any]) -> str | None:
     return heading_above(v, n["page_no"], top)
 
 
+def is_repeated_decoration(v: Version, xref: int, rect: Any, page_h: float, frac: float) -> bool:
+    """The pipeline drops an image shown on 5+ pages in the top/bottom 10% band or under
+    2% of the page (BUG-004: DOC's footer divider); its absence is not a lost figure."""
+    if v._xref_pages is None:
+        counts: Counter[int] = Counter()
+        for page in v.pdf:
+            for info in page.get_images(full=True):
+                counts[info[0]] += 1
+        v._xref_pages = counts
+    if v._xref_pages[xref] < 5:
+        return False
+    return rect.y1 <= page_h * 0.10 or rect.y0 >= page_h * 0.90 or frac < 0.02
+
+
 def page_facts(v: Version, page: int, sid: str) -> PageFacts:
     facts = PageFacts()
     kept = [img for img in v.images if img.get("page_no") == page]
@@ -358,6 +373,8 @@ def page_facts(v: Version, page: int, sid: str) -> PageFacts:
         rect = rects[0]
         size = (info[2], info[3])
         frac = rect.width * rect.height / area if area else 0
+        if is_repeated_decoration(v, xref, rect, pg.rect.height, frac):
+            continue
         if kept_sizes.get(size, 0) > 0:
             kept_sizes[size] -= 1
             # pdf y grows downward in PyMuPDF rects; tree bboxes grow upward
