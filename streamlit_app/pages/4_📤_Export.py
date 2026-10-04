@@ -100,6 +100,7 @@ if _pipe.images:
                 "width_px": img.width_px,
                 "height_px": img.height_px,
                 "image_b64": base64.b64encode(img.image_bytes).decode(),
+                **({"origin": img.origin} if img.origin != "raster" else {}),
             }
             for img in _pipe.images
         ],

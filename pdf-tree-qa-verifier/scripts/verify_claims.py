@@ -400,8 +400,12 @@ def page_facts(v: Version, page: int, sid: str) -> PageFacts:
             label
         )
     text = pg.get_text()
+    rendered = any(img.get("origin") == "vector" for img in kept)  # BUG-010 figures
     facts.vector_suspect = (
-        facts.raster == 0 and len(pg.get_drawings()) >= 40 and bool(FIGURE_CODE.search(text))
+        not rendered
+        and facts.raster == 0
+        and len(pg.get_drawings()) >= 40
+        and bool(FIGURE_CODE.search(text))
     )
     return facts
 
