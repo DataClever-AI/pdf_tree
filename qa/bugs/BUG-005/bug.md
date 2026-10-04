@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-005
-status: open
+status: in-progress
 finding: H-05
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-005-reading-order
+fix_commit: 360cf01
+updated: 2026-10-03
 ---
 
 # BUG-005 · Content-stream desync — body text lost/misattributed around a chapter boundary (sec_0035 root cause family, SOMATOM)
@@ -17,16 +17,17 @@ Body text around a chapter boundary is lost or assigned to other sections; alone
 
 ## Root cause
 
-Unconfirmed: `docling_extract` window merge or `section_matcher` reading order.
+Confirmed: `docling_extract._build_typed_document` set `reading_order` to the index in Docling's `texts` list. That list is not in reading order: Docling appends headings inside list groups at the end of each window (SOMATOM p131 'Equipotential bonding connector pin' at index 303 of 313). A heading anchor landed on that tail, the monotonic clamp pushed every later anchor of the window to the end, and one section absorbed the whole window (`sec_0035`, `sec_0224`, `sec_0766`).
 
 ## What was done
 
 - 2026-09-04: identified in the v1 QA review of SOMATOM_Force_IFU_VB30 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: fixed in `360cf01`. Simulation on all 7 manuals: only SOMATOM changes (nodes more than one page outside their section 4274 -> 0, empty sections 43 -> 0) plus one node in 2002 (the BUG-023 'Tilt steering column'). Mitigation version SOMATOM v1.3 (agent drafts, not approved): paired with v1.2 (169 rows) FAIL 40 -> 26, Critical 24 -> 15. Most remaining Critical rows were a different cause hidden by this bug (margin headings, proposed as BUG-029).
 
 ## Fix
 
-Proposed first step: reproduce on a small page window around one affected chapter boundary and compare Docling's output with and without windowing.
+Each window's `texts` are sorted by the depth-first walk of `body` (`_in_reading_order`); texts outside the body keep their place after the preceding text.
 
 ## Verification
 

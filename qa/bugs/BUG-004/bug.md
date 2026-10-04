@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-004
-status: open
+status: in-progress
 finding: H-05
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-020-image-filters
+fix_commit: 8a06c44
+updated: 2026-10-03
 ---
 
 # BUG-004 · Decorative footer divider passes image aspect-ratio filter
@@ -17,16 +17,17 @@ A thin decorative footer divider passes the image filters and is exported as an 
 
 ## Root cause
 
-`pipeline.py::_extract_embedded_images` aspect-ratio filter (> 15:1) does not catch it and there is no footer-band exclusion.
+Confirmed: DOC's footer divider is a 2800x200 px raster drawn at 672x48 pt between 91.7% and 97.5% of the page height on 210 pages. Its 14:1 aspect passes the 15:1 filter and it is not inside the bottom 5% footer band.
 
 ## What was done
 
 - 2026-09-04: identified in the v1 QA review of DOC-0136477A (34 Low rows) and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: fixed in `8a06c44` (with BUG-020). Mitigation version DOC v1.4 (agent drafts, not approved): no 2800x200 image is left; all 6 sampled rows now PASS. `verify_claims.py` learned the same rule in `84a8ab7`.
 
 ## Fix
 
-Proposed: tighten the aspect-ratio threshold or exclude images inside the repeated footer band.
+An image shown on 5 or more pages is dropped when it sits in the top/bottom 10% band of the page or covers less than 2% of it (see BUG-020).
 
 ## Verification
 

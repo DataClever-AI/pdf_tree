@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-002
-status: open
+status: in-progress
 finding: H-05, H-12
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-002-back-matter-boundaries
+fix_commit: 86a3f21, de74fb6
+updated: 2026-10-03
 ---
 
 # BUG-002 · Back-matter silently absorbed past last bookmark
@@ -17,17 +17,18 @@ Back matter without a bookmark (alphabetical index, back cover) is absorbed into
 
 ## Root cause
 
-`section_matcher`: `page_end` of the last bookmark defaults to `total_pages`.
+Confirmed, two causes. (1) In SOMATOM, LOGIQ_e and DOC the Index, Table of contents and Glossary have bookmarks, but `toc_classification` sets them aside and the page and reading-order ranges were computed without them, so the section before absorbed their pages. (2) In Philips (p485-496) and LOGIQ_S8 (p911-916) the alphabetical index has no bookmark and the last section's `page_end` defaults to the last page.
 
 ## What was done
 
 - 2026-09-04: identified in the v1 QA review of DOC-0136477A, LOGIQ_S8, LOGIQ_e_R9 and SOMATOM and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-28: seen again in the agent review drafts of the v2 runs (Philips p485-496, index with roman folios); pending approval by the human reviewer (Oscar Munoz).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: fixed in `86a3f21` and `de74fb6`. Mitigation versions Philips v2.5, LOGIQ_S8 v1.3, DOC v1.3, LOGIQ_e v1.1 and SOMATOM v1.4 (agent drafts, not approved): the last section ends before the index or glossary in all five manuals; the only nodes removed are back matter. Four draft rows (Philips sec_0865 p488, DOC sec_0279 p240) grade the intended exclusion as a defect. Open design question: the DOC glossary (p233) has real definitions and is now outside the tree.
 
 ## Fix
 
-Proposed: detect un-bookmarked back matter (numbering-scheme change, index layout) and close the last section before it; route it to back matter as `toc_classification` already does.
+(1) Excluded top-level TOC entries take part in the range computation as boundaries that build no section (section ids keep their numbering); a boundary anchors on the first block of its page. (2) `find_unbookmarked_index` walks back from the last page over index pages and near-empty pages; the index starts at the earliest page with an index marker ('Index' or '#' heading, letter headings, 'Index - n' header or footer) where page references are at least 25% of the words. The coverage check excuses blocks on pages no section covers.
 
 ## Verification
 

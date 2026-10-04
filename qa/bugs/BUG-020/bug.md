@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-020
-status: fix-proposed
+status: in-progress
 finding: H-11
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-020-image-filters
+fix_commit: 8a06c44
+updated: 2026-10-03
 ---
 
 # BUG-020 · Minimum-area image filter (2% of the page) drops small but meaningful rasters: icons, symbols and small step photos
@@ -17,16 +17,17 @@ Small but meaningful raster images (module photos, connector drawings, the symbo
 
 ## Root cause
 
-Confirmed in code: `src/pipeline/pipeline.py:490` `_MIN_AREA_FRAC = 0.02` drops every image whose bbox covers less than 2% of the page.
+Confirmed in code: `_extract_embedded_images` dropped every image under 2% of the page (`_MIN_AREA_FRAC = 0.02`, now at `pipeline.py:593`). Module photos and connector drawings cover 0.6-1.5% of the page.
 
 ## What was done
 
 - 2026-09-28: identified in the agent review drafts of the v2 runs (Philips p49, p199, p210, p253, p283, p295, p312, p355, p367; 2002 p641); pending approval by the human reviewer (Oscar Munoz).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: fixed in `8a06c44`. Mitigation version Philips v2.6 (agent drafts, not approved): the three Critical rows are fixed (p199, p210, p253) and no new noise image was found; the 2002 p641 drawing is kept in the image inventory (no reviewed version yet). The Low rows of small icons remain (80 px floor).
 
 ## Fix
 
-Proposed: lower the threshold to about 0.3% and rely on the pixel-size, aspect-ratio and footer-band filters for decoration, or keep small images tagged as icons.
+The area filter is 0.5% of the page. An image shown on 5 or more pages is dropped when it covers less than 2% of the page (repeated icons, which the old filter used to drop) or sits in the top/bottom 10% band (BUG-004). Icons under the 80 px floor are still dropped: `max(min_image_px, 80)` ignores the configured 48 px (proposed separately, BUG-017).
 
 ## Verification
 

@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-022
-status: open
+status: in-progress
 finding: H-15
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-022-page-furniture (b0231b9 on fix/BUG-029-margin-headings-residual)
+fix_commit: beb1698, be16ac4, b0231b9
+updated: 2026-10-03
 ---
 
 # BUG-022 · Boilerplate boundary noise: running headers, large chapter numbers and invisible print-job slugs of the next page are appended to the preceding section
@@ -17,16 +17,17 @@ Repeated page furniture is appended to the preceding section: the running header
 
 ## Root cause
 
-Unconfirmed: `section_matcher` has no header/footer or invisible-text filter.
+Confirmed: running headers, invisible print-job slugs and chapter numbers are read before the first heading or body text of a page, so they fell in the reading-order range of the previous section.
 
 ## What was done
 
 - 2026-09-28: identified in the agent review drafts of the v2 runs (2002: 44 rows; Philips: 24 rows); pending approval by the human reviewer (Oscar Munoz).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-03: fixed in `beb1698`, refined in `be16ac4` (list items and headings end the leading run) and `b0231b9` (a table printed first on the page). Mitigation versions 2002 v2.3 and Philips v2.6 (agent drafts, not approved): all sampled BUG-022 rows now PASS (2002: 12 of 12; Philips: 6 of 6).
 
 ## Fix
 
-Proposed: mark as furniture (not deleted) the text in top/bottom bands repeated across pages, text rendered invisible, and a lone large number at the top of a chapter's first page; do not assign furniture to sections.
+Blocks before a page's first other text block (headers, footers, blocks in the furniture band or outside the page, short labels without a list or heading label) go to the section that owns that block; when a table printed above that block is the page's first content, they go with the table's section.
 
 ## Verification
 
