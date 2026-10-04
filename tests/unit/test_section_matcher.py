@@ -519,3 +519,21 @@ def test_margin_heading_read_after_the_body_below_it():
     # The tree export lists a section's blocks in reading order.
     in_order = sorted(checking.text_blocks, key=lambda block: block.reading_order)
     assert [block.text for block in in_order] == ["Checking", "Examination direction and range."]
+
+
+def test_running_header_goes_with_a_table_printed_first_on_the_page():
+    # Philips p428: the page starts with the previous section's weights table, so the
+    # running header goes with that section, not with the heading below the table.
+    blocks = [
+        _block(0, "Weights", 1, "section_header", top=700),
+        _block(1, "The weights of the parts are given here.", 1, top=650),
+        _block(2, "38 Installation", 2, "page_header", top=780),
+        _block(3, "Environment", 2, "section_header", top=400),
+    ]
+    tables = [_table("weights", 2, top=740, bottom=450)]
+    weights, environment = match_content_to_sections(
+        [(2, "Weights", 1), (2, "Environment", 2)], _paged_doc(blocks, 2, tables), 2
+    )
+    assert _table_ids(weights) == ["weights"]
+    assert "38 Installation" in _texts(weights)
+    assert _texts(environment) == ["Environment"]
