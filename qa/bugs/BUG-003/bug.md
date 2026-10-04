@@ -4,7 +4,7 @@ status: in-progress
 finding: H-05, H-09
 fix_branch: fix/BUG-001-positional-placement
 fix_commit: fa0bc0b, 4bff4c2
-updated: 2026-09-30
+updated: 2026-10-03
 ---
 
 # BUG-003 · Sibling image/table mismapping on shared pages
@@ -40,6 +40,8 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-03 | `Philips-MP20-MP90-Manual` | v2.4 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page; page_end extended by one page for owned content (04e1345) | 3 → 0 | 8 | Approved by the reviewer; kept |
+| 2026-10-03 | `SOMATOM_Force_IFU_VB30` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 6 → 6 | 16 | Approved rows; limited by BUG-005 (window desync), fixed later in 360cf01 |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

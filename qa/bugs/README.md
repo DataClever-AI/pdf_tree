@@ -8,9 +8,9 @@ Statuses: `open`, `fix-proposed`, `in-progress`, `mitigated`, `fixed-pending-mer
 
 | Bug | Title | Top severity | Status | Finding | Manuals | Official FAIL | Draft FAIL | Last attempt |
 |---|---|---|---|---|---|---:|---:|---|
-| [BUG-001](BUG-001/bug.md) | Chapter/appendix-opening Contents-box misplacement | Critical | in-progress | H-05 | DOC-0136477A; LOGIQ_S8; SOMATOM_Force_IFU_VB30 | 30 | 0 | — |
+| [BUG-001](BUG-001/bug.md) | Chapter/appendix-opening Contents-box misplacement | Critical | in-progress | H-05 | DOC-0136477A; LOGIQ_S8; SOMATOM_Force_IFU_VB30 | 30 | 0 | v1.2: 4 → 5 |
 | [BUG-002](BUG-002/bug.md) | Back-matter silently absorbed past last bookmark | Critical | open | H-05, H-12 | DOC-0136477A; LOGIQ_S8; LOGIQ_e_R9_General_Service_Manual; Philips-MP20-MP90-Manual; SOMATOM_Force_IFU_VB30 | 23 | 0 | — |
-| [BUG-003](BUG-003/bug.md) | Sibling image/table mismapping on shared pages | Critical | in-progress | H-05, H-09 | DOC-0136477A; Philips-MP20-MP90-Manual; SOMATOM_Force_IFU_VB30 | 21 | 0 | — |
+| [BUG-003](BUG-003/bug.md) | Sibling image/table mismapping on shared pages | Critical | in-progress | H-05, H-09 | DOC-0136477A; Philips-MP20-MP90-Manual; SOMATOM_Force_IFU_VB30 | 21 | 0 | v1.2: 6 → 6 |
 | [BUG-004](BUG-004/bug.md) | Decorative footer divider passes image aspect-ratio filter | Low | open | H-05 | DOC-0136477A | 34 | 0 | — |
 | [BUG-005](BUG-005/bug.md) | Content-stream desync — body text lost/misattributed around a chapter boundary (sec_0035 root cause family, SOMATOM) | Critical | open | H-05 | SOMATOM_Force_IFU_VB30 | 113 | 0 | — |
 | [BUG-006](BUG-006/bug.md) | Body content extraction gap — section body text lost entirely, only heading (or nothing) survives as a stray node | Critical | open | H-05 | SOMATOM_Force_IFU_VB30 | 8 | 0 | — |
@@ -21,7 +21,7 @@ Statuses: `open`, `fix-proposed`, `in-progress`, `mitigated`, `fixed-pending-mer
 | [BUG-011](BUG-011/bug.md) | Simple line-art/pictogram diagrams missing from image extraction — mechanism unconfirmed (possibly size-filtered) | Medium | open | — | LOGIQ_S8 | 2 | 0 | — |
 | [BUG-012](BUG-012/bug.md) | Sporadic single/partial image omissions from the image index — mechanism unconfirmed | Critical | open | — | LOGIQ_e_R9_General_Service_Manual | 5 | 0 | — |
 | [BUG-013](BUG-013/bug.md) | Extracted image asset incorrectly rotated 180° | Medium | open | — | LOGIQ_e_R9_General_Service_Manual | 1 | 0 | — |
-| [BUG-014](BUG-014/bug.md) | Section page_end declared one page short of the true content boundary — trailing content (text or images) bleeds into or is misattributed from the neighboring section | Critical | in-progress | H-15 | LOGIQ_S8; Philips-MP20-MP90-Manual; SOMATOM_Force_IFU_VB30 | 21 | 0 | — |
+| [BUG-014](BUG-014/bug.md) | Section page_end declared one page short of the true content boundary — trailing content (text or images) bleeds into or is misattributed from the neighboring section | Critical | in-progress | H-15 | LOGIQ_S8; Philips-MP20-MP90-Manual; SOMATOM_Force_IFU_VB30 | 21 | 0 | v1.2: 0 → 0 |
 | [BUG-015](BUG-015/bug.md) | Step-illustration photos silently dropped on pages that also carry multiple table-embedded images | Medium | open | — | LOGIQ_S8 | 3 | 0 | — |
 | [BUG-016](BUG-016/bug.md) | Near-duplicate/overlapping embedded image xrefs cause under-extraction on pages with several similar photos | Medium | open | — | SOMATOM_Force_IFU_VB30 | 1 | 0 | — |
 | [BUG-017](BUG-017/bug.md) | UI reference-icon screenshots discarded by an over-aggressive minimum-pixel-dimension image filter | High | open | — | SOMATOM_Force_IFU_VB30 | 1 | 0 | — |
