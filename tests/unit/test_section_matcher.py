@@ -502,3 +502,20 @@ def test_margin_heading_merged_with_its_note_is_an_anchor():
     assert _texts(planning) == [
         "Planning the scan ranges The body landmarks", "You can modify the scan ranges."
     ]
+
+
+def test_margin_heading_read_after_the_body_below_it():
+    # SOMATOM p315: Docling reads the margin heading after the text printed below it,
+    # and there is no body block exactly level with the heading.
+    blocks = [
+        _side(0, "Acquiring", 1, "section_header", 700, 157, 320),
+        _side(1, "Steps of a sequence scan.", 2, "text", 580, 199, 402),
+        _side(2, "Examination direction and range.", 2, "list_item", 344, 199, 301),
+        _side(3, "Checking", 2, "section_header", 518, 64, 184),
+    ]
+    bookmarks = [(2, "Acquiring", 1), (2, "Checking", 2)]
+    acquiring, checking = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert _texts(acquiring)[-1] == "Steps of a sequence scan."
+    # The tree export lists a section's blocks in reading order.
+    in_order = sorted(checking.text_blocks, key=lambda block: block.reading_order)
+    assert [block.text for block in in_order] == ["Checking", "Examination direction and range."]
