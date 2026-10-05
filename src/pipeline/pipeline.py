@@ -252,8 +252,14 @@ _VECTOR_MIN_SEGMENTS = 40
 _VECTOR_MIN_AREA_FRAC = 0.01
 _VECTOR_BAND = 0.08            # running header/footer rules
 _VECTOR_DPI = 150
-_VECTOR_LABEL_GAP = 15.0       # callout letters and numbers just outside the paths
-_VECTOR_LABEL = re.compile(r"^\(?[A-Za-z0-9]{1,3}\)?[.:]?$")
+_VECTOR_LABEL_GAP = 15.0       # callout labels just outside the paths
+# A callout label is a short text block (DOC p88 'backspace', LOGIQ_S8 p106 'Release'); body
+# sentences and figure captions next to the drawing are not labels.
+_VECTOR_LABEL_WORDS = 6
+_VECTOR_LABEL_LINES = 3
+_VECTOR_CAPTION = re.compile(r"^(Figure|Fig\.|Table)\s", re.IGNORECASE)
+_VECTOR_FULL_PAGE = 0.75       # a drawing over most of the page is the page (AUTOMATIC plates)
+_VECTOR_NESTED = 0.9           # a figure mostly inside another figure is a duplicate
 # Text blocks and photo tables are not figures: a region with many words (more than 3
 # letters) that is mostly text (Philips p238 steps, p404 order table), or that holds
 # several photos (LOGIQ_S8 'Step | Illustration' tables), is left to the text and rasters.
@@ -278,7 +284,9 @@ def _extract_vector_figures(
     are mapped with the page's rotation matrix (AUTOMATIC pages have /Rotate 180).
     Skipped: paths in the header/footer band, page frames, Docling table grids, thin
     caution/warning bars, straight-line grids around photos, and text blocks or photo
-    tables (many words with dense text or several photos).
+    tables (many words with dense text or several photos). A figure over most of the page
+    is rendered as the whole page so its title and drawing number are kept, and a figure
+    mostly inside a larger one is dropped.
     """
     try:
         import pymupdf as fitz
@@ -358,6 +366,15 @@ def _extract_vector_figures(
         words = [
             (fitz.Rect(word[:4]), word[4]) for word in page.get_text("words")
         ]
+        labels = [
+            fitz.Rect(block[:4])
+            for block in page.get_text("blocks")
+            if block[6] == 0
+            and len(block[4].split()) <= _VECTOR_LABEL_WORDS
+            and block[4].count("\n") <= _VECTOR_LABEL_LINES
+            and not _VECTOR_CAPTION.match(block[4].strip())
+        ]
+        boxes: list[tuple[Any, list[int]]] = []
         for box, segments, straight in groups:
             box = box & page.rect
             if segments < _VECTOR_MIN_SEGMENTS:
@@ -374,9 +391,9 @@ def _extract_vector_figures(
                 continue  # step-table grid around photos (LOGIQ_S8)
             reach = fitz.Rect(box.x0 - _VECTOR_LABEL_GAP, box.y0 - _VECTOR_LABEL_GAP,
                               box.x1 + _VECTOR_LABEL_GAP, box.y1 + _VECTOR_LABEL_GAP)
-            for rect, text in words:
-                if rect.intersects(reach) and _VECTOR_LABEL.match(text):
-                    box |= rect  # callout letters cut at the edge (Philips p245)
+            for rect in labels:
+                if rect.intersects(reach):
+                    box |= rect  # callout labels cut at the edge (Philips p245, DOC p88)
             for _key, rect in inside:
                 box |= rect
             box &= page.rect
@@ -385,7 +402,17 @@ def _extract_vector_figures(
                 text_area = sum((rect & box).get_area() for rect, _text in words)
                 if text_area >= _VECTOR_TEXT_COVER * box.get_area() or len(inside) >= 2:
                     continue  # a text block or a photo table, not a figure
-            absorbed.update(key for key, _rect in inside)
+            if box.get_area() >= _VECTOR_FULL_PAGE * width * height:
+                box = fitz.Rect(page.rect)
+            boxes.append((box, [key for key, _rect in inside]))
+        for index, (box, keys) in enumerate(boxes):
+            absorbed.update(keys)
+            if any(
+                (other.get_area(), j) > (box.get_area(), index)
+                and (other & box).get_area() >= _VECTOR_NESTED * box.get_area()
+                for j, (other, _keys) in enumerate(boxes)
+            ):
+                continue  # nested duplicate (LOGIQ_S8 p794): the larger figure shows it
             pixmap = page.get_pixmap(clip=box, dpi=_VECTOR_DPI)
             figures.append(EmbeddedImage(
                 image_bytes=pixmap.tobytes("png"),

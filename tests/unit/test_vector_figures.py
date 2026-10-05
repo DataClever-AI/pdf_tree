@@ -92,3 +92,47 @@ def test_only_vector_figures_carry_an_origin_in_images_v1(tmp_path: Path) -> Non
     images = _extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [], _LOG)
 
     assert serialize_images(images)["images"][0]["origin"] == "vector"
+
+
+def test_a_word_label_is_inside_the_crop_and_a_body_sentence_is_not(tmp_path: Path) -> None:
+    # DOC p88: 'backspace' sits right of the keypad; the sentence above is body text.
+    pdf = fitz.open()
+    page = pdf.new_page(width=612, height=792)
+    _drawing(page, 150, 200)
+    page.insert_text((365, 260), "backspace", fontsize=9)
+    sentence = "Touch the keys on the keypad to enter numeric data now."
+    page.insert_text((100, 192), sentence, fontsize=9)
+
+    (image,) = _vectors(_extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [], _LOG))
+
+    assert image.bbox is not None
+    assert image.bbox.x1 > 400  # the label is kept
+    assert image.bbox.y0 < 792 - 195  # the sentence top (y 183) is left out
+
+
+def test_a_drawing_over_most_of_the_page_is_rendered_as_the_whole_page(tmp_path: Path) -> None:
+    # AUTOMATIC plates: the title and drawing number sit outside the paths.
+    pdf = fitz.open()
+    page = pdf.new_page(width=612, height=792)
+    for i in range(60):
+        page.draw_line((25 + i * 9.6, 70), (30 + i * 9.6, 730), width=0.6)
+
+    (image,) = _vectors(_extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [], _LOG))
+
+    assert image.bbox is not None
+    assert (image.bbox.x0, image.bbox.x1, image.bbox.y1, image.bbox.y0) == (0, 612, 0, 792)
+
+
+def test_a_figure_inside_a_larger_figure_is_not_rendered_twice(tmp_path: Path) -> None:
+    # LOGIQ_S8 p794: a photo absorbed by the large figure covers a smaller drawing.
+    pdf = fitz.open()
+    page = pdf.new_page(width=612, height=792)
+    _drawing(page, 150, 200)  # x 150..357, y 200..330; the photo grows it to y 392
+    for i in range(60):  # a second, separate drawing below it, inside the photo
+        page.draw_line((150 + i * 3, 345), (180 + i * 3, 388), width=0.6)
+    bbox = BoundingBox(140, 600, 370, 400, 1, "bottomleft")
+    photo = EmbeddedImage(b"png", 1, 400, 400, bbox=bbox)
+
+    images = _extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [photo], _LOG)
+
+    assert [image.origin for image in images] == ["vector"]
