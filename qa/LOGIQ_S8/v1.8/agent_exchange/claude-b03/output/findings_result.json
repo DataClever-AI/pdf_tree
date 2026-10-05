@@ -1,0 +1,134 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p585 the 'Section 8-23' heading is a section-level title under Chapter 8. sec_0091 has hierarchy_level 2 and parent sec_0068 (level 1). This matches the nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0091 has parent_section_id sec_0068 (Chapter 8), which lists sec_0091 as a child. child_sections is empty. The 8-23-x items are plain headings inside the section, not TOC entries. The structure is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'Section 8-23' starts at the top of p585 (page footer 8-209). Node #/texts/7529 '8-23-6 Functional Check' and its table #/tables/232 end on p595 (footer 8-219). All sampled pages p585, p587, p591 and p595 show only 8-23 content. The next section sec_0092 starts on p596.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Chapter 8/Section 8-23 Replacement of the SOM, HDD and DVR'. This matches the p585 heading and its parent sec_0068 'Chapter 8'. The order is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page range 585-595 follows sec_0090 (p582-584) and precedes sec_0092 (p596), with no gap or overlap. The heading '8-23-5-2 Initializing EEPROM' repeats on p592 and p593 as '(cont'd)'. This is printed repetition, not a duplicated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. The p585 heading matches the title and page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The p585 heading text matches the bookmark title and sits at the declared page_start 585 with offset_applied 0. This supports the TOC source.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed footers are 8-209 on p585, 8-211 on p587, 8-215 on p591 and 8-219 on p595. This is the chapter-page arabic convention.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section heading is on physical page 585 as declared in page_start. The printed folios 8-209 to 8-219 advance one per physical page from p585 to p595. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables #/tables/231 (p591) and #/tables/232 (p595) match the rendered Device Grid/VPD Field Grid and Functional Check tables, with cells in the right columns. Tables #/tables/229 (p588) and #/tables/230 (p589) were not rendered in this batch, so only their text was read. It looks plausible but is not visually proven.",
+   "notes": "",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector figures were kept: img_0725 is the full Figure 8-117 on p585, img_0736 is Figure 8-122 on p587 and img_0743 is Figure 8-127 on p591. Raster photos on p587 (img_0732 to img_0735, Figures 8-121 and 8-123) were kept. No missing figure was seen on the sampled pages.",
+   "notes": "verify_claims reports two raster photos on p585 (290x240 and 500x396 px) missing from images_v1.json as separate files. I checked img_0725 (vector, 903x709): it contains both board photos plus the screw callouts, so the figure is kept as one composite. Not a loss, but the two photos have no separate image entries.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 24 images (img_0725 to img_0748) in sec_0091 are real figures or screenshots, such as the board photos, VPD Editor screens and the question dialog. The sampled pages show no logo, rule or footer divider kept as an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All images are mapped to sec_0091. They sit on p585-p595 and each belongs to the 8-23 procedure, for example Figure 8-117 on p585 and Figure 8-133 as img_0748 on p595. No sibling section shares these pages.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}
