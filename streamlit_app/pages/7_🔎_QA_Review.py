@@ -75,13 +75,11 @@ _default_manual = (
 )
 _manual_id = st.selectbox("Manual", _manual_options, index=_default_manual)
 _versions = _catalog[_manual_id]
-_default_version = (
-    _versions.index(_settings.version) if _settings.version in _versions else len(_versions) - 1
-)
+# Open the latest version of the manual; the sidebar version is the Export target, not this.
 _version_name = st.selectbox(
     "Version",
     _versions,
-    index=_default_version,
+    index=len(_versions) - 1,
     format_func=lambda version: version_display_name(_settings.qa_dir, _manual_id, version),
 )
 _qa_version = open_qa_version(_settings.qa_dir, _manual_id, _version_name)
