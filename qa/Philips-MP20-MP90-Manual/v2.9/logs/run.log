@@ -1,0 +1,28 @@
+INFO     | pdf_tree.pipeline | fitz: 868 bookmarks, 496 pages
+INFO     | pdf_tree.pipeline | fitz                      0.043s
+WARNING  | pdf_tree.pipeline | bookmark_sanity repair [dropped_orphan_subtree]: bookmark[866] 'M8000-9001K_cover_22sep08.pdf' has no destination and its 1 descendant(s) point before the first content page 13 — dropped as orphan front-matter
+INFO     | pdf_tree.pipeline | bookmark_sanity           0.002s
+INFO     | pdf_tree.pipeline | 5 windows for 496 pages
+INFO     | pdf_tree.pipeline | window 1/5 pages 1-120
+INFO     | pdf_tree.pipeline | window 2/5 pages 115-234
+INFO     | pdf_tree.pipeline | window 3/5 pages 229-348
+INFO     | pdf_tree.pipeline | window 4/5 pages 343-462
+INFO     | pdf_tree.pipeline | window 5/5 pages 457-496
+INFO     | pdf_tree.pipeline | merged texts=8287 tables=297 pages=496
+INFO     | pdf_tree.pipeline | docling: 8287 blocks, 297 tables, 496 pages
+INFO     | pdf_tree.pipeline | docling_extract           275.162s
+INFO     | pdf_tree.pipeline | toc_path                  0.000s
+INFO     | pdf_tree.pipeline | toc_classification: 1/866 bookmarks excluded (list_of_symbols)
+INFO     | pdf_tree.pipeline | toc_classification        0.004s
+INFO     | pdf_tree.pipeline | toc_resolution: scheme=arabic global_offset=0 (match_rate=1.00, accepted=True) 0/865 bookmarks flagged_for_review
+INFO     | pdf_tree.pipeline | toc_resolution            0.035s
+INFO     | pdf_tree.pipeline | section_matcher: unbookmarked index from page 485
+INFO     | pdf_tree.pipeline | section_matcher: 865 sections
+INFO     | pdf_tree.pipeline | section_matcher           0.519s
+INFO     | pdf_tree.pipeline | tree_export: 865 sections
+INFO     | pdf_tree.pipeline | tree_export               0.009s
+INFO     | pdf_tree.pipeline | validation: PASS
+INFO     | pdf_tree.pipeline | validation                0.149s
+INFO     | pdf_tree.pipeline | images: 64 vector figures rendered, 45 rasters inside them replaced
+INFO     | pdf_tree.pipeline | images: 261 extracted
+INFO     | pdf_tree.pipeline | image_extraction          0.000s
