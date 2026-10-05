@@ -136,3 +136,17 @@ def test_a_figure_inside_a_larger_figure_is_not_rendered_twice(tmp_path: Path) -
     images = _extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [photo], _LOG)
 
     assert [image.origin for image in images] == ["vector"]
+
+
+def test_a_heading_next_to_a_figure_is_not_a_label(tmp_path: Path) -> None:
+    # Philips p216: the page heading sits 2 pt above the drawing.
+    pdf = fitz.open()
+    page = pdf.new_page(width=612, height=792)
+    _drawing(page, 300, 200)
+    page.insert_text((60, 196), "Setting Up the Measurement", fontsize=14)
+    for i in range(4):
+        page.insert_text((60, 300 + i * 12), f"Body line {i} of the steps.", fontsize=9)
+
+    (image,) = _vectors(_extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [], _LOG))
+
+    assert image.bbox is not None and image.bbox.x0 > 280

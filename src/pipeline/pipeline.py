@@ -267,6 +267,37 @@ _VECTOR_MANY_WORDS = 25
 _VECTOR_TEXT_COVER = 0.2
 
 
+def _label_blocks(blocks: list[dict[str, Any]], fitz: Any) -> list[Any]:
+    """
+    Return the rects of the short text blocks that can be callout labels. A label has at
+    most _VECTOR_LABEL_WORDS words and _VECTOR_LABEL_LINES lines, is not a caption, and its
+    font is not larger than the body text, so a heading next to a figure (Philips p216
+    'Setting Up the PiCCO C.O. Measurement') is not one.
+    """
+    sizes: dict[float, int] = {}
+    texts = []
+    for block in blocks:
+        if block.get("type") != 0:
+            continue
+        spans = [span for line in block["lines"] for span in line["spans"]]
+        for span in spans:
+            size = round(span["size"], 1)
+            sizes[size] = sizes.get(size, 0) + len(span["text"].strip())
+        text = "\n".join("".join(span["text"] for span in line["spans"]) for line in block["lines"])
+        texts.append((block, spans, text))
+    if not sizes:
+        return []
+    body = max(sizes, key=lambda size: sizes[size])
+    return [
+        fitz.Rect(block["bbox"])
+        for block, spans, text in texts
+        if len(text.split()) <= _VECTOR_LABEL_WORDS
+        and len(block["lines"]) <= _VECTOR_LABEL_LINES
+        and not _VECTOR_CAPTION.match(text.strip())
+        and max((span["size"] for span in spans), default=0.0) <= body + 0.5
+    ]
+
+
 def _extract_vector_figures(
     pdf_path: Path,
     n_pages: int,
@@ -366,14 +397,7 @@ def _extract_vector_figures(
         words = [
             (fitz.Rect(word[:4]), word[4]) for word in page.get_text("words")
         ]
-        labels = [
-            fitz.Rect(block[:4])
-            for block in page.get_text("blocks")
-            if block[6] == 0
-            and len(block[4].split()) <= _VECTOR_LABEL_WORDS
-            and block[4].count("\n") <= _VECTOR_LABEL_LINES
-            and not _VECTOR_CAPTION.match(block[4].strip())
-        ]
+        labels = _label_blocks(page.get_text("dict")["blocks"], fitz)
         boxes: list[tuple[Any, list[int]]] = []
         for box, segments, straight in groups:
             box = box & page.rect
