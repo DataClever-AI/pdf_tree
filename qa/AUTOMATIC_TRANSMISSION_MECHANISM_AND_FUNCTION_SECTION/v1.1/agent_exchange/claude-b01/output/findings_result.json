@@ -1,0 +1,484 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 is level 1 and has no parent. The bookmark list is flat: neighbours sec_0018 and sec_0021 are also level 1. On p77 the page shows the title \"10. Schematic Drawing, A: P AND N RANGES, 1. MPT MODELS\" with the hydraulic schematic and its legend.",
+   "notes": "The bookmark titles are part codes (MSA5T0200A301xx), so the real nesting cannot be checked on the page. I judged only that the level is consistent with its neighbours.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 has parent_section_id null and no child_sections. p77 shows one schematic page, with no sub-heading that needs a child section.",
+   "notes": "Both sec_0019 and sec_0020 carry the same title MSA5T0200A30120. Probably the PDF has two bookmarks with that title. I could not confirm this.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 covers p77-108. Every page in this range is a schematic page and the vector images fill the range one per page. The pages before and after are other sections (sec_0018 ends p76, sec_0021 starts p141).",
+   "notes": "On p109 the series \"10. Schematic Drawing, A: P AND N RANGES\" starts again, the same as p77. This repeat is in the PDF page renders, so it is not a pipeline error.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is \"/MSA5T0200A30120\" for sec_0019. This is one level only and agrees with parent_section_id null.",
+   "notes": "Same path string in sec_0019 and sec_0020. Probably duplicate bookmark titles in the PDF.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 covers p77-108 and sec_0020 covers p109-140, with no gap and no overlap between them. p77 is inside sec_0019.",
+   "notes": "The page content of p77-108 repeats on p109-140 in the PDF. The sections are separate and each owns its own pages, so I did not count it as a duplicate defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 has flagged_for_review true with a low title score. The bookmark title is a part code that is not printed on p77, so the title match is low. The flag fits.",
+   "notes": "The flag shows an uncertain title match. The page placement is still right.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 has structural_source \"toc\". The page range matches the schematic pages seen in the render of p77.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The physical page numbers p77-108 are plain numbers. p77 shows no printed page number.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0019 matches the first schematic page of its range. No printed page number is visible on p77 to compare.",
+   "notes": "With no printed folio, I judged offset only by the schematic start page. Confidence is not high.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p77 the schematic is extracted as img_0106 (1250x1485), origin vector. It shows the title \"10. Schematic Drawing, A: P AND N RANGES, 1. MPT MODELS\" with the hydraulic schematic and its legend. Lines, labels and legend are readable and the crop is not cut off. All 32 vector images of sec_0019 (p77-108) are complete for their page. Each page is one half of a foldout schematic, so one drawing is split over two consecutive pages (odd page = right half with legend, even page = left half). No page is missing a figure and no figure is cut by the crop.",
+   "notes": "BUG-010 vector render works for this section. No meaningful figure is missing: all 32 pages of the range have one image each.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0106 (1250x1485) on p77 is real schematic content, not a border, logo, table grid or page frame. All 32 vector images of sec_0019 were compared with their rendered pages and none is noise. None is a duplicate of a raster image.",
+   "notes": "The two halves of one foldout are two images, one per page. This follows the PDF page split. It is probably not a crop fault. A reviewer may decide if this is acceptable.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0106 (1250x1485) is mapped to sec_0019, and p77 is inside p77-108. All 32 vector images of sec_0019 map to sec_0019 by page, with no image on a wrong sibling.",
+   "notes": "There is no shared page with a sibling section here.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 is level 1 and has no parent. The bookmark list is flat: neighbours sec_0018 and sec_0021 are also level 1. On p109 the page shows the title \"10. Schematic Drawing, A: P AND N RANGES, 1. MPT MODELS\" with the hydraulic schematic and its legend.",
+   "notes": "The bookmark titles are part codes (MSA5T0200A301xx), so the real nesting cannot be checked on the page. I judged only that the level is consistent with its neighbours.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has parent_section_id null and no child_sections. p109 shows one schematic page, with no sub-heading that needs a child section.",
+   "notes": "Both sec_0019 and sec_0020 carry the same title MSA5T0200A30120. Probably the PDF has two bookmarks with that title. I could not confirm this.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 covers p109-140. Every page in this range is a schematic page and the vector images fill the range one per page. The pages before and after are other sections (sec_0018 ends p76, sec_0021 starts p141).",
+   "notes": "On p109 the series \"10. Schematic Drawing, A: P AND N RANGES\" starts again, the same as p77. This repeat is in the PDF page renders, so it is not a pipeline error.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is \"/MSA5T0200A30120\" for sec_0020. This is one level only and agrees with parent_section_id null.",
+   "notes": "Same path string in sec_0019 and sec_0020. Probably duplicate bookmark titles in the PDF.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 covers p77-108 and sec_0020 covers p109-140, with no gap and no overlap between them. p109 is inside sec_0020.",
+   "notes": "The page content of p77-108 repeats on p109-140 in the PDF. The sections are separate and each owns its own pages, so I did not count it as a duplicate defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has flagged_for_review true with a low title score. The bookmark title is a part code that is not printed on p109, so the title match is low. The flag fits.",
+   "notes": "The flag shows an uncertain title match. The page placement is still right.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has structural_source \"toc\". The page range matches the schematic pages seen in the render of p109.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The physical page numbers p109-140 are plain numbers. p109 shows no printed page number.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0020 matches the first schematic page of its range. No printed page number is visible on p109 to compare.",
+   "notes": "With no printed folio, I judged offset only by the schematic start page. Confidence is not high.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p109 the schematic is extracted as img_0138 (1250x1485), origin vector. It shows the title \"10. Schematic Drawing, A: P AND N RANGES, 1. MPT MODELS\" with the hydraulic schematic and its legend. Lines, labels and legend are readable and the crop is not cut off. All 32 vector images of sec_0020 (p109-140) are complete for their page. Each page is one half of a foldout schematic, so one drawing is split over two consecutive pages (odd page = right half with legend, even page = left half). No page is missing a figure and no figure is cut by the crop.",
+   "notes": "BUG-010 vector render works for this section. No meaningful figure is missing: all 32 pages of the range have one image each.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0138 (1250x1485) on p109 is real schematic content, not a border, logo, table grid or page frame. All 32 vector images of sec_0020 were compared with their rendered pages and none is noise. None is a duplicate of a raster image.",
+   "notes": "The two halves of one foldout are two images, one per page. This follows the PDF page split. It is probably not a crop fault. A reviewer may decide if this is acceptable.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 109,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0138 (1250x1485) is mapped to sec_0020, and p109 is inside p109-140. All 32 vector images of sec_0020 map to sec_0020 by page, with no image on a wrong sibling.",
+   "notes": "There is no shared page with a sibling section here.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 is level 1 and has no parent. The bookmark list is flat: neighbours sec_0018 and sec_0021 are also level 1. On p121 the page shows the title \"D: 4TH GEAR OF D RANGE (LOCK-UP ON), 1. MPT MODELS\" with the right half of the schematic and its legend.",
+   "notes": "The bookmark titles are part codes (MSA5T0200A301xx), so the real nesting cannot be checked on the page. I judged only that the level is consistent with its neighbours.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has parent_section_id null and no child_sections. p121 shows one schematic page, with no sub-heading that needs a child section.",
+   "notes": "Both sec_0019 and sec_0020 carry the same title MSA5T0200A30120. Probably the PDF has two bookmarks with that title. I could not confirm this.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 covers p109-140. Every page in this range is a schematic page and the vector images fill the range one per page. The pages before and after are other sections (sec_0018 ends p76, sec_0021 starts p141).",
+   "notes": "On p109 the series \"10. Schematic Drawing, A: P AND N RANGES\" starts again, the same as p77. This repeat is in the PDF page renders, so it is not a pipeline error.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is \"/MSA5T0200A30120\" for sec_0020. This is one level only and agrees with parent_section_id null.",
+   "notes": "Same path string in sec_0019 and sec_0020. Probably duplicate bookmark titles in the PDF.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 covers p77-108 and sec_0020 covers p109-140, with no gap and no overlap between them. p121 is inside sec_0020.",
+   "notes": "The page content of p77-108 repeats on p109-140 in the PDF. The sections are separate and each owns its own pages, so I did not count it as a duplicate defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has flagged_for_review true with a low title score. The bookmark title is a part code that is not printed on p121, so the title match is low. The flag fits.",
+   "notes": "The flag shows an uncertain title match. The page placement is still right.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has structural_source \"toc\". The page range matches the schematic pages seen in the render of p121.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The physical page numbers p109-140 are plain numbers. p121 shows no printed page number.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0020 matches the first schematic page of its range. No printed page number is visible on p121 to compare.",
+   "notes": "With no printed folio, I judged offset only by the schematic start page. Confidence is not high.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p121 the schematic is extracted as img_0150 (1275x1484), origin vector. It shows the title \"D: 4TH GEAR OF D RANGE (LOCK-UP ON), 1. MPT MODELS\" with the right half of the schematic and its legend. Lines, labels and legend are readable and the crop is not cut off. This page is one half of a foldout schematic. The drawing continues on the next page. The crop is the full page figure.",
+   "notes": "BUG-010 vector render works for this section. No meaningful figure is missing: all 32 pages of the range have one image each.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0150 (1275x1484) on p121 is real schematic content, not a border, logo, table grid or page frame. All 32 vector images of sec_0020 were compared with their rendered pages and none is noise. None is a duplicate of a raster image.",
+   "notes": "The two halves of one foldout are two images, one per page. This follows the PDF page split. It is probably not a crop fault. A reviewer may decide if this is acceptable.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0150 (1275x1484) is mapped to sec_0020, and p121 is inside p109-140. All 32 vector images of sec_0020 map to sec_0020 by page, with no image on a wrong sibling.",
+   "notes": "There is no shared page with a sibling section here.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 is level 1 and has no parent. The bookmark list is flat: neighbours sec_0018 and sec_0021 are also level 1. On p129 the page shows the title \"F: 2RD GEAR OF D, 3 AND 2 RANGES, 1. MPT MODELS\" with the right half of the schematic and its legend.",
+   "notes": "The bookmark titles are part codes (MSA5T0200A301xx), so the real nesting cannot be checked on the page. I judged only that the level is consistent with its neighbours.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has parent_section_id null and no child_sections. p129 shows one schematic page, with no sub-heading that needs a child section.",
+   "notes": "Both sec_0019 and sec_0020 carry the same title MSA5T0200A30120. Probably the PDF has two bookmarks with that title. I could not confirm this.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 covers p109-140. Every page in this range is a schematic page and the vector images fill the range one per page. The pages before and after are other sections (sec_0018 ends p76, sec_0021 starts p141).",
+   "notes": "On p109 the series \"10. Schematic Drawing, A: P AND N RANGES\" starts again, the same as p77. This repeat is in the PDF page renders, so it is not a pipeline error.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is \"/MSA5T0200A30120\" for sec_0020. This is one level only and agrees with parent_section_id null.",
+   "notes": "Same path string in sec_0019 and sec_0020. Probably duplicate bookmark titles in the PDF.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0019 covers p77-108 and sec_0020 covers p109-140, with no gap and no overlap between them. p129 is inside sec_0020.",
+   "notes": "The page content of p77-108 repeats on p109-140 in the PDF. The sections are separate and each owns its own pages, so I did not count it as a duplicate defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has flagged_for_review true with a low title score. The bookmark title is a part code that is not printed on p129, so the title match is low. The flag fits.",
+   "notes": "The flag shows an uncertain title match. The page placement is still right.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0020 has structural_source \"toc\". The page range matches the schematic pages seen in the render of p129.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The physical page numbers p109-140 are plain numbers. p129 shows no printed page number.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0020 matches the first schematic page of its range. No printed page number is visible on p129 to compare.",
+   "notes": "With no printed folio, I judged offset only by the schematic start page. Confidence is not high.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p129 the schematic is extracted as img_0158 (1274x1485), origin vector. It shows the title \"F: 2RD GEAR OF D, 3 AND 2 RANGES, 1. MPT MODELS\" with the right half of the schematic and its legend. Lines, labels and legend are readable and the crop is not cut off. This page is one half of a foldout schematic. The drawing continues on the next page. The crop is the full page figure.",
+   "notes": "BUG-010 vector render works for this section. No meaningful figure is missing: all 32 pages of the range have one image each.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0158 (1274x1485) on p129 is real schematic content, not a border, logo, table grid or page frame. All 32 vector images of sec_0020 were compared with their rendered pages and none is noise. None is a duplicate of a raster image.",
+   "notes": "The two halves of one foldout are two images, one per page. This follows the PDF page split. It is probably not a crop fault. A reviewer may decide if this is acceptable.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0020",
+   "page_sampled": 129,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0158 (1274x1485) is mapped to sec_0020, and p129 is inside p109-140. All 32 vector images of sec_0020 map to sec_0020 by page, with no image on a wrong sibling.",
+   "notes": "There is no shared page with a sibling section here.",
+   "confidence": 0.9
+  }
+ ]
+}
