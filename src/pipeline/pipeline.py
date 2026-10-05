@@ -25,6 +25,7 @@ Merge path: pipeline.py is the only file that needs to integrate into mvp_v2/src
 from __future__ import annotations
 
 import logging
+import re
 import time
 from dataclasses import dataclass, field, replace
 from pathlib import Path
@@ -251,17 +252,33 @@ _VECTOR_MIN_SEGMENTS = 40
 _VECTOR_MIN_AREA_FRAC = 0.01
 _VECTOR_BAND = 0.08            # running header/footer rules
 _VECTOR_DPI = 150
+_VECTOR_LABEL_GAP = 15.0       # callout letters and numbers just outside the paths
+_VECTOR_LABEL = re.compile(r"^\(?[A-Za-z0-9]{1,3}\)?[.:]?$")
+# Text blocks and photo tables are not figures: a region with many words (more than 3
+# letters) that is mostly text (Philips p238 steps, p404 order table), or that holds
+# several photos (LOGIQ_S8 'Step | Illustration' tables), is left to the text and rasters.
+_VECTOR_MANY_WORDS = 25
+_VECTOR_TEXT_COVER = 0.2
 
 
 def _extract_vector_figures(
-    pdf_path: Path, n_pages: int, doc: DoclingDocument, logger: logging.Logger
+    pdf_path: Path,
+    n_pages: int,
+    doc: DoclingDocument,
+    rasters: list[EmbeddedImage],
+    logger: logging.Logger,
 ) -> list[EmbeddedImage]:
     """
     Render figures drawn with vector paths (2002 schematics, LOGIQ_e flowcharts, Philips
-    module drawings) that the raster extraction cannot see. Skipped: paths in the
-    header/footer band, page frames, Docling table grids, thin caution/warning bars,
-    groups mostly covered by raster images (annotations on a photo that is already
-    kept) and straight-line grids around raster photos (step tables).
+    module drawings) that the raster extraction cannot see, and return them with the
+    raster images. A figure that contains raster images (a photo with drawn arrows, a
+    wiring drawing with an icon) is rendered whole and replaces those rasters.
+
+    Coordinates follow the displayed page: get_drawings() is in unrotated space, so paths
+    are mapped with the page's rotation matrix (AUTOMATIC pages have /Rotate 180).
+    Skipped: paths in the header/footer band, page frames, Docling table grids, thin
+    caution/warning bars, straight-line grids around photos, and text blocks or photo
+    tables (many words with dense text or several photos).
     """
     try:
         import pymupdf as fitz
@@ -272,19 +289,24 @@ def _extract_vector_figures(
     for table in doc.tables:
         if table.bbox is not None:
             tables_by_page.setdefault(table.page_no, []).append(table.bbox)
+    rasters_by_page: dict[int, list[EmbeddedImage]] = {}
+    for image in rasters:
+        rasters_by_page.setdefault(image.page_no, []).append(image)
 
-    result: list[EmbeddedImage] = []
+    figures: list[EmbeddedImage] = []
+    absorbed: set[int] = set()
     pdf = fitz.open(str(pdf_path))
     for page_no in range(1, n_pages + 1):
         page = pdf[page_no - 1]
         width, height = page.rect.width, page.rect.height
+        to_page = page.rotation_matrix
         tables = [
             fitz.Rect(b.x0, height - b.y0, b.x1, height - b.y1)
             for b in tables_by_page.get(page_no, [])
         ]
         paths = []
         for drawing in page.get_drawings():
-            rect = fitz.Rect(drawing["rect"])
+            rect = fitz.Rect(drawing["rect"]) * to_page
             if rect.y1 < height * _VECTOR_BAND or rect.y0 > height * (1 - _VECTOR_BAND):
                 continue
             if rect.width > width * 0.85 and rect.height > height * 0.85:
@@ -327,10 +349,14 @@ def _extract_vector_figures(
                 first[2] += group[2]
                 groups.remove(group)
 
-        rasters = [
-            rects[0]
-            for info in page.get_images(full=True)
-            if (rects := page.get_image_rects(info[0]))
+        page_rasters = [
+            (id(image), fitz.Rect(image.bbox.x0, height - image.bbox.y0,
+                                  image.bbox.x1, height - image.bbox.y1))
+            for image in rasters_by_page.get(page_no, [])
+            if image.bbox is not None
+        ]
+        words = [
+            (fitz.Rect(word[:4]), word[4]) for word in page.get_text("words")
         ]
         for box, segments, straight in groups:
             box = box & page.rect
@@ -340,12 +366,28 @@ def _extract_vector_figures(
                 continue
             if box.height < 25 and box.width > 8 * box.height:
                 continue  # caution/warning bar (SOMATOM)
-            if sum((box & raster).get_area() for raster in rasters) >= 0.3 * box.get_area():
-                continue  # annotations on a raster photo that is already kept
-            if straight >= 0.8 * segments and any(box.contains(r) for r in rasters):
+            inside = [
+                (key, rect) for key, rect in page_rasters
+                if (box & rect).get_area() >= 0.5 * rect.get_area()
+            ]
+            if inside and straight >= 0.8 * segments:
                 continue  # step-table grid around photos (LOGIQ_S8)
+            reach = fitz.Rect(box.x0 - _VECTOR_LABEL_GAP, box.y0 - _VECTOR_LABEL_GAP,
+                              box.x1 + _VECTOR_LABEL_GAP, box.y1 + _VECTOR_LABEL_GAP)
+            for rect, text in words:
+                if rect.intersects(reach) and _VECTOR_LABEL.match(text):
+                    box |= rect  # callout letters cut at the edge (Philips p245)
+            for _key, rect in inside:
+                box |= rect
+            box &= page.rect
+            in_box = [rect for rect, text in words if rect.intersects(box) and len(text) > 3]
+            if len(in_box) >= _VECTOR_MANY_WORDS:
+                text_area = sum((rect & box).get_area() for rect, _text in words)
+                if text_area >= _VECTOR_TEXT_COVER * box.get_area() or len(inside) >= 2:
+                    continue  # a text block or a photo table, not a figure
+            absorbed.update(key for key, _rect in inside)
             pixmap = page.get_pixmap(clip=box, dpi=_VECTOR_DPI)
-            result.append(EmbeddedImage(
+            figures.append(EmbeddedImage(
                 image_bytes=pixmap.tobytes("png"),
                 page_no=page_no,
                 width_px=pixmap.width,
@@ -357,8 +399,12 @@ def _extract_vector_figures(
                 origin="vector",
             ))
     pdf.close()
-    logger.info("images: %d vector figures rendered", len(result))
-    return result
+    logger.info(
+        "images: %d vector figures rendered, %d rasters inside them replaced",
+        len(figures), len(absorbed),
+    )
+    kept = [image for image in rasters if id(image) not in absorbed]
+    return sorted(kept + figures, key=lambda image: image.page_no)
 
 
 def _flag_relocated_sections(sections: list[dict[str, Any]], sanity: BookmarkSanityReport) -> None:
@@ -644,7 +690,7 @@ def run_pipeline(
         if extract_images:
             try:
                 images = _extract_embedded_images(pdf_path, n_pages, min_image_px, logger)
-                images += _extract_vector_figures(pdf_path, n_pages, doc, logger)
+                images = _extract_vector_figures(pdf_path, n_pages, doc, images, logger)
                 images = _map_images_to_sections(images, sections)
                 logger.info("images: %d extracted", len(images))
             except Exception as exc:
