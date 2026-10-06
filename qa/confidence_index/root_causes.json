@@ -141,6 +141,11 @@
       "bug_id": "BUG-028",
       "title": "normalize_page_sequence updates prev_scheme with alphanumeric tokens and restarts the numbering base",
       "suspected_module": "src/tree_builder/page_numbering.py::normalize_page_sequence"
+    },
+    {
+      "bug_id": "BUG-029",
+      "title": "Margin (side) headings read before the body: content above or beside a left-margin heading goes to the wrong section, and on pages with several margin headings all the body goes to the last one",
+      "suspected_module": "src/tree_builder/section_matcher.py (reading order of side-heading pages)"
     }
   ],
   "rules": [
@@ -212,6 +217,26 @@
     {
       "bug_id": "BUG-006",
       "regex": "body[- ]content[- ]extraction gap|body-content-extraction-gap",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-008",
+      "regex": "^(?![\\s\\S]*BUG-\\d{3})[\\s\\S]*(Docling table structure|TableFormer|cells? (are |is )?(merged|shifted)|(is|are) merged|merged (in|into) one cell|cell-merge|Cell merge|shifted cells|one cell each|each row (is|in) one cell|are one cell|merged and split cells|values (are )?attributed to the wrong column)",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-017",
+      "regex": "^(?![\\s\\S]*BUG-\\d{3})[\\s\\S]*(small-image filter|small-icon filter|small icons? whose meaning|Small icons? (only|dropped)|small warning symbol)",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-010",
+      "regex": "^(?![\\s\\S]*BUG-\\d{3})[\\s\\S]*(inside vector images|vector crops?|vector region grouping|crop box|kept inside (a figure image|an image))",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-029",
+      "regex": "^(?![\\s\\S]*BUG-\\d{3})[\\s\\S]*(printed above the side heading|box is split across two sections|boundary error in 5\\.4-page_start_end|Same root cause as 5\\.4-page_start_end)",
       "ignore_case": true
     }
   ],
@@ -309,7 +334,14 @@
     "SOMATOM_Force_IFU_VB30|sec_0746|5.5-image_section_mapping": "BUG-001",
     "SOMATOM_Force_IFU_VB30|sec_0807|5.5-image_section_mapping": "BUG-003",
     "SOMATOM_Force_IFU_VB30|sec_0874|5.4-flagged_for_review": "BUG-018",
-    "SOMATOM_Force_IFU_VB30|sec_0927|5.5-image_section_mapping": "BUG-001"
+    "SOMATOM_Force_IFU_VB30|sec_0927|5.5-image_section_mapping": "BUG-001",
+    "2002_Service_Manual_TI|sec_0089|5.6-table_content": "BUG-008",
+    "LOGIQ_S8|sec_0083|5.6-table_content": "BUG-009",
+    "LOGIQ_S8|sec_0083|5.5-filters_discarding": "BUG-010",
+    "LOGIQ_S8|sec_0001|5.5-filters_passing_noise": "BUG-010",
+    "LOGIQ_S8|sec_0066|5.4-page_start_end": "BUG-022",
+    "LOGIQ_e_R9_General_Service_Manual|sec_0051|5.4-page_start_end": "BUG-022",
+    "LOGIQ_S8|sec_0074|5.5-filters_discarding": "BUG-017"
   },
   "exclusions": {
     "SOMATOM_Force_IFU_VB30|sec_0906|5.4-flagged_for_review": "Positive/control finding: the verification mechanism correctly flagged a low title match; informational, not a defect."
