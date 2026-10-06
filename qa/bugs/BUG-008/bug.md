@@ -1,15 +1,15 @@
 ---
 bug_id: BUG-008
-status: open
+status: in-progress
 finding: H-13
-fix_branch: 
-fix_commit: 
-updated: 2026-09-29
+fix_branch: fix/BUG-008-table-text
+fix_commit: 076dadd
+updated: 2026-10-06
 ---
 
 # BUG-008 · Table header cells merge/reorder during extraction, breaking column-to-value attribution
 
-**Suspected module:** docling table structure model (unconfirmed)
+**Suspected module:** src/tree_builder/docling_extract.py (PyPdfium text runs + TableFormer cell matching; confirmed)
 
 ## Description
 
@@ -17,17 +17,18 @@ Table header cells or adjacent columns are merged or reordered during extraction
 
 ## Root cause
 
-Docling table structure model (TableFormer).
+Confirmed (2026-10-06). TableFormer finds the right rows and columns. The text goes wrong after that. The pipeline reads the PDF with `PyPdfiumDocumentBackend`, which gives text as whole line runs. With cell matching, a run that crosses two columns goes into one cell: Philips p363 '1' + '2' becomes '12', DOC p135 bullets of three columns become '•••' in one cell, LOGIQ_e p116 '1 +20V 3 GND' is one cell. The same pages read with Docling's default backend (docling-parse, word-level text) give correct tables (6 of 6 test pages). TableFormer already runs in accurate mode.
 
 ## What was done
 
 - 2026-09-04: identified in the v1 QA review of LOGIQ_e_R9 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-28: seen again in the agent review drafts of the v2 runs (2002 and Philips); pending approval by the human reviewer (Oscar Munoz).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-06: root cause confirmed and fixed (`076dadd`). DOC full run: 164 of 164 tables re-read; p135 correct.
 
 ## Fix
 
-Proposed: evaluate TableFormer in accurate mode, or validate each table against its header column count.
+`076dadd` (`src/tree_builder/docling_extract.py`): after the windowed PyPdfium conversion, pages with tables are converted again with docling-parse, from an in-memory PDF of those pages only. Each table takes the cell data of the re-read table on the same page and place (IoU >= 0.5); a table without a match keeps its data. The rest of the text is not changed, so the reading-order fixes (BUG-005, 022, 029) are not affected. Cost: about 1.5 s per page with tables. Options not chosen: switching the whole backend (changes all text; an architecture decision) and turning off cell matching with PyPdfium (cuts characters at cell edges).
 
 ## Verification
 
