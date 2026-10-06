@@ -198,6 +198,26 @@ def latest_versions(qa_root: Path) -> dict[str, str]:
     return latest
 
 
+def latest_reviewed_versions(qa_root: Path) -> dict[str, str]:
+    """Newest version per manual with at least one evaluated row, else the reference version.
+
+    The Confidence Index page opens on the latest work the reviewer has approved, including an
+    unfinalized mitigation version; a version with no approved rows has no index to show.
+    """
+    reference = latest_versions(qa_root)
+    latest = {}
+    for manual, versions in list_manual_versions(qa_root).items():
+        latest[manual] = reference[manual]
+        for version in reversed(versions):
+            path = qa_root / manual / version / "findings" / "findings_log.csv"
+            if path.exists() and any(
+                row.get("result", "").upper() in {"PASS", "FAIL"} for row in load_findings(path)
+            ):
+                latest[manual] = version
+                break
+    return latest
+
+
 def consolidate_failures(
     selected_rows: dict[str, list[dict[str, str]]],
     catalogue: RootCauseCatalogue = EMPTY_CATALOGUE,

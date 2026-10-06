@@ -16,7 +16,7 @@ import streamlit as st
 from services.qa_ui import init_session_state, qa_settings_sidebar
 from src.qa_workflow.confidence import (
     build_confidence_report,
-    latest_versions,
+    latest_reviewed_versions,
     list_manual_versions,
     version_display_name,
     write_confidence_outputs,
@@ -31,8 +31,10 @@ _settings = qa_settings_sidebar()
 
 st.markdown("## 📈 Confidence Index")
 st.caption(
-    "Scores and bugs use exactly one selected version per manual. Historical severity labels "
-    "are normalized in memory and source files are not rewritten."
+    "Scores and bugs use exactly one selected version per manual. Each manual opens on its "
+    "newest version with approved rows; a mitigation version that is not finalized counts only "
+    "its approved rows. Historical severity labels are normalized in memory and source files "
+    "are not rewritten."
 )
 st.divider()
 
@@ -41,7 +43,7 @@ if not _catalog:
     st.info("No versioned QA manuals are available.")
     st.stop()
 
-_defaults = latest_versions(_settings.qa_dir)
+_defaults = latest_reviewed_versions(_settings.qa_dir)
 _selected: dict[str, str] = {}
 with st.expander("Manual and version selection", expanded=True):
     for _manual_id, _versions in _catalog.items():

@@ -17,7 +17,11 @@ from src.qa_workflow.bug_registry import (
     last_attempt,
 )
 from src.qa_workflow.compare import compare_versions, tree_changes
-from src.qa_workflow.confidence import latest_versions, list_manual_versions
+from src.qa_workflow.confidence import (
+    latest_reviewed_versions,
+    latest_versions,
+    list_manual_versions,
+)
 from src.qa_workflow.findings import generate_findings_template, write_findings_template
 from src.qa_workflow.mitigation import (
     PipelineInfo,
@@ -216,6 +220,14 @@ def test_latest_version_ignores_unfinalized_mitigation(base):
     assert latest_versions(qa_root)["manual"] == "v2"
     set_version_status(candidate, "finalized")
     assert latest_versions(qa_root)["manual"] == "v2.1"
+
+
+def test_confidence_page_opens_the_newest_version_with_approved_rows(base):
+    candidate, _plan, _rows = _create_candidate(base, _tree())
+    qa_root = base.qa_root
+    assert latest_reviewed_versions(qa_root)["manual"] == "v2"  # v2.1 has no approved rows
+    _fill(candidate.findings_csv, {})
+    assert latest_reviewed_versions(qa_root)["manual"] == "v2.1"
 
 
 def test_compare_counts_paired_rows_and_regressions(base):
