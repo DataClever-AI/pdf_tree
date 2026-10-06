@@ -7,7 +7,12 @@ from pathlib import Path
 
 import pymupdf as fitz
 
-from src.models.extraction import BoundingBox, DoclingDocument
+from src.models.extraction import (
+    BoundingBox,
+    DoclingDocument,
+    DoclingTable,
+    ExtractionProvenance,
+)
 from src.pipeline.pipeline import EmbeddedImage, _extract_vector_figures
 from src.qa_workflow.storage import serialize_images
 
@@ -150,3 +155,37 @@ def test_a_heading_next_to_a_figure_is_not_a_label(tmp_path: Path) -> None:
     (image,) = _vectors(_extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [], _LOG))
 
     assert image.bbox is not None and image.bbox.x0 > 280
+
+
+def _doc_with_table(x0: float, top: float, x1: float, bottom: float) -> DoclingDocument:
+    bbox = BoundingBox(x0, 792 - top, x1, 792 - bottom, 1, "bottomleft")
+    table = DoclingTable("#/tables/0", 1, ExtractionProvenance("docling", 1, bbox), bbox)
+    return DoclingDocument("d", "d.pdf", 1, tables=[table])
+
+
+def test_a_drawing_in_a_table_cell_is_kept_and_the_grid_is_not(tmp_path: Path) -> None:
+    # LOGIQ_S8 p502: the cover drawing sits in the 'Corresponding Graphic' cell.
+    pdf = fitz.open()
+    page = pdf.new_page(width=612, height=792)
+    for x in (40, 300, 570):  # table grid lines, a little longer than the table box
+        page.draw_line((x, 95), (x, 405), width=0.5)
+    _drawing(page, 320, 200)
+
+    doc = _doc_with_table(40, 100, 570, 400)
+    (image,) = _vectors(_extract_vector_figures(_save(pdf, tmp_path), 1, doc, [], _LOG))
+
+    assert image.bbox is not None and image.bbox.x0 > 300  # the drawing, not the grid
+
+
+def test_marks_drawn_on_a_photo_are_rendered_with_the_photo(tmp_path: Path) -> None:
+    # LOGIQ_S8 p608: a circle and arrow drawn on a step photo.
+    pdf = fitz.open()
+    page = pdf.new_page(width=612, height=792)
+    _drawing(page, 200, 250)  # x 200..407, y 250..380
+    photo_bbox = BoundingBox(150, 792 - 200, 500, 792 - 420, 1, "bottomleft")
+    photo = EmbeddedImage(b"png", 1, 700, 440, bbox=photo_bbox)
+
+    images = _extract_vector_figures(_save(pdf, tmp_path), 1, _doc(), [photo], _LOG)
+
+    assert [image.origin for image in images] == ["vector"]  # replaces the photo
+    assert images[0].bbox is not None and images[0].bbox.x0 <= 150 and images[0].bbox.x1 >= 500

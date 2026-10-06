@@ -257,6 +257,7 @@ _VECTOR_LABEL_GAP = 15.0       # callout labels just outside the paths
 # sentences and figure captions next to the drawing are not labels.
 _VECTOR_LABEL_WORDS = 6
 _VECTOR_LABEL_LINES = 3
+_VECTOR_LABEL_WIDTH = 1.5      # a table header row above a photo is not a label (LOGIQ_S8 p608)
 _VECTOR_CAPTION = re.compile(r"^(Figure|Fig\.|Table)\s", re.IGNORECASE)
 _VECTOR_FULL_PAGE = 0.75       # a drawing over most of the page is the page (AUTOMATIC plates)
 _VECTOR_NESTED = 0.9           # a figure mostly inside another figure is a duplicate
@@ -272,7 +273,8 @@ def _label_blocks(blocks: list[dict[str, Any]], fitz: Any) -> list[Any]:
     Return the rects of the short text blocks that can be callout labels. A label has at
     most _VECTOR_LABEL_WORDS words and _VECTOR_LABEL_LINES lines, is not a caption, and its
     font is not larger than the body text, so a heading next to a figure (Philips p216
-    'Setting Up the PiCCO C.O. Measurement') is not one.
+    'Setting Up the PiCCO C.O. Measurement') is not one. A callout of up to 3 characters
+    may use a larger font.
     """
     sizes: dict[float, int] = {}
     texts = []
@@ -294,7 +296,10 @@ def _label_blocks(blocks: list[dict[str, Any]], fitz: Any) -> list[Any]:
         if len(text.split()) <= _VECTOR_LABEL_WORDS
         and len(block["lines"]) <= _VECTOR_LABEL_LINES
         and not _VECTOR_CAPTION.match(text.strip())
-        and max((span["size"] for span in spans), default=0.0) <= body + 0.5
+        and (
+            max((span["size"] for span in spans), default=0.0) <= body + 0.5
+            or len(text.strip()) <= 3  # big callout numbers (LOGIQ_S8 p502 '1'..'6')
+        )
     ]
 
 
@@ -350,12 +355,6 @@ def _extract_vector_figures(
                 continue
             if rect.width > width * 0.85 and rect.height > height * 0.85:
                 continue  # page frame or background
-            if any(
-                (table & rect).get_area() >= 0.8 * max(rect.get_area(), 1.0)
-                or table.contains(rect)
-                for table in tables
-            ):
-                continue
             items = drawing["items"]
             straight = sum(
                 1
@@ -366,6 +365,9 @@ def _extract_vector_figures(
                     and (abs(item[1].x - item[2].x) < 0.5 or abs(item[1].y - item[2].y) < 0.5)
                 )
             )
+            edge = fitz.Rect(rect.x0 - 1, rect.y0 - 1, rect.x1 + 1, rect.y1 + 1)
+            if straight == len(items) and any(table.intersects(edge) for table in tables):
+                continue  # table grid; a drawing in a table cell is kept (LOGIQ_S8 p502)
             paths.append((rect, len(items), straight))
         if not paths:
             continue
@@ -413,10 +415,18 @@ def _extract_vector_figures(
             ]
             if inside and straight >= 0.8 * segments:
                 continue  # step-table grid around photos (LOGIQ_S8)
+            host = max(
+                (item for item in page_rasters if item not in inside),
+                key=lambda item: (box & item[1]).get_area(),
+                default=None,
+            )
+            if host is not None and (box & host[1]).get_area() >= 0.8 * box.get_area():
+                box |= host[1]  # circles and arrows drawn on a photo (LOGIQ_S8 p608)
+                inside.append(host)
             reach = fitz.Rect(box.x0 - _VECTOR_LABEL_GAP, box.y0 - _VECTOR_LABEL_GAP,
                               box.x1 + _VECTOR_LABEL_GAP, box.y1 + _VECTOR_LABEL_GAP)
             for rect in labels:
-                if rect.intersects(reach):
+                if rect.intersects(reach) and rect.width <= _VECTOR_LABEL_WIDTH * box.width:
                     box |= rect  # callout labels cut at the edge (Philips p245, DOC p88)
             for _key, rect in inside:
                 box |= rect
