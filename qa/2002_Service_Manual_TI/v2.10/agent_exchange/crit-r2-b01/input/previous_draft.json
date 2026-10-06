@@ -1,0 +1,134 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0002 'NEW CAR INFORMATION SECTION' is level 2 under the level-1 manual title sec_0001. Its 51 children are level 3. The p1 page shows the title as a section heading under the manual name.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0001 and sec_0001 lists only sec_0002 as child. All 51 child_sections (sec_0003 to sec_0249) exist and point back to sec_0002 as parent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Own nodes are on p1-p4 and the first child sec_0003 starts on p5. Page_end 642 is the end of the last child sec_0249 (p639-642, render shows 'TRAILER LIGHTS CONNECTOR'). No body content of a neighbour is absorbed. But #/texts/0 '2002 LEGACY SERVICE MANUAL' is the sec_0001 title line. On p1 it is the running header above the rule, and sec_0001 has no nodes.",
+   "notes": "verify_claims expects Critical for the sec_0001 heading text. I grade Low because this is only the running header (boilerplate, no body content) and the Sprint table gives Low for that. Human please confirm. Page 4 was not rendered.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION'. This matches the p1 header '2002 LEGACY SERVICE MANUAL' and the heading 'NEW CAR INFORMATION SECTION'.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Children cover p5 to p642 without a gap or overlap, and own nodes cover p1-p4. Semantic order 1 to 19 is continuous. The title appears once. Page 1 content (foreword and index) is in sec_0002 and not in sec_0001, which has no nodes.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title 'NEW CAR INFORMATION SECTION' is visible on p1, so no uncertain boundary or title was seen.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc', not inferred. The p1 heading matches the TOC title, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 1-4 show no printed folio on p1 and p3. The scheme 'arabic' with physical page numbers is consistent here. The manual later uses chapter folios such as 'EI-4' on p642, but that is in a child section.",
+   "notes": "Chapter-style folios (EI-4) are not represented by 'arabic'. This was not judged at this boundary. Please confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start is 1. P1 is the first physical page and the title is on it. The p642 render also matches the child sec_0249 range end.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "#/tables/0 (p1) splits some labels wrongly. 'Fuel Injection (Fuel System) (w/o | FU OBD)' puts '(w/o' in the label cell and 'FU OBD)' in the code cell. The render shows 'FU (w/o OBD)'. The EC row also has an empty code cell, and its '(w/o OBD)' variant is in the next row. Text for p2 (#/tables/1) and p3 (#/tables/2) matches the render. Row order and values can still be read.",
+   "notes": "Cells are shifted, but order and values survive, so Low. The last row ' | W2290GE' is a print code, not an index entry.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The renders of p1, p2 and p3 contain only text, black index tabs and rules. No photo or diagram was dropped. The tab text is kept in #/tables/0 to #/tables/2.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0000, img_0001 and img_0002 (origin vector) are crops of the whole p1, p2 and p3 index areas. They show black navigation tabs. img_0000 also includes the heading 'NEW CAR INFORMATION SECTION', 'FOREWORD' and its paragraphs. This is page layout, not a figure, and it duplicates #/tables/0 to #/tables/2.",
+   "notes": "Probably a vector filter that treats the black tab shapes as a figure. Content is not lost, only duplicated, so Low.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0000 (p1), img_0001 (p2) and img_0002 (p3) are all mapped to sec_0002. The tabs are on pages 1-3, which sec_0002 owns, and no sibling shares those pages.",
+   "notes": "",
+   "confidence": 0.85
+  }
+ ]
+}
