@@ -1,0 +1,1168 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0671|354|5.4-hierarchy_level",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p354 \"ECG Reports\" is printed as a section heading under its chapter. hierarchy_level matches the bookmark nesting: level 3 under sec_0667 \"Sample Report Printouts\".",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p354 'ECG Reports' is a mid-size heading, smaller than a section heading. It sits under the running header 'Sample Report Printouts'. hierarchy_level 3 fits.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.4-parent_child",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0671 lists its parent in parent_section_id and the parent lists sec_0671 in child_sections. sec_0671 has no children and the page shows no sub-headings with their own bookmark.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Parent sec_0667 'Sample Report Printouts' (p350-354) matches the running header on p354. Siblings are sec_0670 before and sec_0672 'Other Reports' after. No children is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.4-page_start_end",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p354 the running header \"27 Printing Patient Reports\" and \"Sample Report Printouts\" (#/texts/6659, #/texts/6660) are kept as paragraph nodes in sec_0671. The heading, report labels, paragraph and table are owned correctly. The next heading \"Other Reports\" (sec_0672) is not absorbed. All of them are on pages that belong to this section, so no boundary is crossed.",
+    "notes": "Page furniture is kept as paragraph nodes. This is not a boundary error, so it is not graded as FAIL. If the lead wants it counted, Low would apply."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'ECG Reports' heading is at the top of p354 and the section ends with the format table. 'Other Reports' heading and its sentence are lower on the page and are not in sec_0671 nodes. Start and end are right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.4-hierarchy_path",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The hierarchy_path ends with \"ECG Reports\" and the earlier names match the parent and chapter headings and running headers seen on p354.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path /Printing Patient Reports/Sample Report Printouts/ECG Reports matches chapter 27, the running header and the heading.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.4-gaps_duplicates",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Rendered p354: the content of sec_0671 follows the previous sibling and ends where the next sibling heading starts. No page content is missing or repeated between the neighbouring sections.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Nodes 6659-6666 and tables/118 are in reading order. No gap, no duplicate. sec_0672 starts at order 6757, after this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.4-flagged_for_review",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0671 has flagged_for_review false, verification_score 100 and an empty verification_reason. The page rendering supports this: the heading is where the bookmark says.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p354, so this is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.4-structural_source",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\" and the heading \"ECG Reports\" is visible on the rendered page, so the bookmark is supported.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title equals the heading on p354.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.6-numbering_scheme",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The page folios are arabic numerals (for example the printed folio on p354), which matches numbering_scheme \"arabic\".",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. Printed folio 342 is an arabic number.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.6-offset_applied",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 and the heading \"ECG Reports\" is found on the physical page given by page_start (p354). The printed folio differs from the physical page number, but the bookmarks already use physical pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The heading is on physical p354, which equals page_start 354.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.6-table_content",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p354 the table \"ECG Report type / Available Formats / Available Paper Sizes\" has 8 data rows. The extracted text has the same rows, formats and paper sizes in the same order. Group labels \"12-Lead ECG\" and \"Multi-lead ECG\" are kept on the first row of each group.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/118 (3 columns, 9 rows) matches p354 cell by cell. 12-Lead ECG has 5 formats and Multi-lead ECG has 3. Each format has the right paper sizes, e.g. '12X1 portrait' is 'A4 and letter only'. The first column is blank on continuation rows, which is how the row-span looks.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    354
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/118",
+     "page": 354,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0671|354|5.5-filters_discarding",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Every meaningful picture on the sampled page(s) is extracted: On p354 the sample ECG printout (img_0213, vector) is mapped to sec_0671. It matches the rendered picture with the labels Patient information, Numeric block and Wave area. No visible figure is missing.",
+    "notes": "verify_claims reports a raster figure not in exports/images_v1.json. I checked images_v1.json: the same page region is there as a vector-origin image of the same section, and its PNG in input/images matches the rendered page. So the figure is not lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The ECG sample report picture is kept as img_0213 (869x456). I compared it with p354. The patient information, numeric block and wave area labels are in the crop. Nothing is lost.",
+    "notes": "verify_claims says a raster figure (909x1400 px, 336x218 pt) is not in images_v1.json. This looks like a false alarm: the same region is saved as img_0213 (origin vector, page 354, sec_0671) in images_v1.json and in the batch images.json. I kept PASS."
+   }
+  },
+  {
+   "key": "sec_0671|354|5.5-filters_passing_noise",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The extracted images for sec_0671 are real figures. No rule, logo, footer divider or other decorative element was kept as an image.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Only img_0213 is kept on p354. It is a real figure, not a logo, rule or footer line.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0671|354|5.5-image_section_mapping",
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p354 the sample ECG printout (img_0213, vector) is mapped to sec_0671. It matches the rendered picture with the labels Patient information, Numeric block and Wave area.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0213 is mapped to sec_0671 and sits under the 'ECG Reports' heading on p354. The 'Other Reports' section has no picture. Mapping is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.4-hierarchy_level",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p359 \"29 IntelliBridge EC10 Module\" is a chapter opener. hierarchy_level 1 is correct.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p359 'IntelliBridge EC10 Module' is the big chapter title with the number 29. hierarchy_level 1 is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.4-parent_child",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is null (top level). Children sec_0683 to sec_0689 are level 2 and cover pp360-362 in order. p362 shows \"Language Conflict with External Device Drivers\", which is the last child sec_0689.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No parent is right for a chapter title. Six children are listed (sec_0683-0687, sec_0689). sec_0688 is not in the list. It is probably a sub-section of sec_0687, but I could only see p359 and p362.",
+    "notes": "I did not see p360-361, so I cannot confirm the missing sec_0688 link."
+   }
+  },
+  {
+   "key": "sec_0682|359|5.4-page_start_end",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0682 starts at the chapter title on p359 and page_end 362 matches the last child, sec_0689, whose text ends the chapter on p362. Its own nodes are the title, intro text, legend table and figure labels from p359 only. sec_0683 starts on p360, so no neighbour content is absorbed.",
+    "notes": "Nodes \"29\" (6818/6819) and folio \"347\" (6830) are boilerplate on its own page."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The chapter starts at the top of p359 with the title, intro text, figure and legend table. The range 359-362 ends on p362, where 'Language Conflict with External Device Drivers' (sec_0689) is the last item. The next chapter starts on p363.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.4-hierarchy_path",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path \"/IntelliBridge EC10 Module\" matches the chapter title on p359.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path /IntelliBridge EC10 Module is a one-level path and matches the chapter title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.4-gaps_duplicates",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p359 content appears once in sec_0682 and the next section starts on p360. The previous section sec_0681 ends on p358. No gap or overlap seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Nodes 6818-6830 and tables/120 cover the p359 content. The number '29' appears twice (6818, 6819), which is a repeated chapter number, not a big duplicate.",
+    "notes": "The repeated '29' is probably a Docling split of the chapter number. It has no impact."
+   }
+  },
+  {
+   "key": "sec_0682|359|5.4-flagged_for_review",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, score 100. The chapter title is clearly visible on p359, so unflagged is right.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is on p359, so this is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.4-structural_source",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source \"toc\" is supported by the p359 chapter title matching the bookmark.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title equals the chapter title on p359.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.6-numbering_scheme",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Printed folio on p359 is \"347\" and on p362 is \"350\", arabic. numbering_scheme \"arabic\" is correct.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The printed folio 347 on p359 is arabic.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.6-offset_applied",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "page_start 359 is the physical page of the chapter opener (printed folio 347). offset_applied 0 is consistent with physical page numbering.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The chapter title is on physical p359, which equals page_start 359.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.6-table_content",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p359 the legend table a to e (module name, setup indicator LED, setup/data viewing key, connection status LED, external device cable connector) matches #/tables/120 row by row. The only change is that the letters repeat in row a (\"a  a module name\"), and values are intact.",
+    "notes": "Duplicated letter in the first cell is cosmetic."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/120 (legend a-e) matches p359: a module name, b setup indicator LED, c setup/data viewing key, d connection status LED, e external device cable connector. Each letter has the right label and the order is the same.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    359
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/120",
+     "page": 359,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "a  a module name\nb setup indicator LED\nc  setup/data viewing key\nd connection status LED\ne   external device cable connector",
+     "round_one_text": "a module name\nb setup indicator LED\nc setup/data viewing key\nd connection status LED\ne external device cable connector"
+    }
+   ]
+  },
+  {
+   "key": "sec_0682|359|5.5-filters_discarding",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p359 has one figure, the IntelliBridge EC10 module drawing with arrows a to e. It is kept as img_0218 (vector, 292x313) with all five arrows. Nothing meaningful was dropped.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The IntelliBridge EC10 module drawing is kept as img_0218 (vector, 292x313). I compared it with p359. The arrows and the letters a-e are in the crop. Nothing is lost.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.5-filters_passing_noise",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Only img_0218 is mapped to sec_0682, and it is the real module drawing. The chapter ribbon is not kept as an image.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Only img_0218 is kept on p359. It is a real figure and not a logo or a line.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0682|359|5.5-image_section_mapping",
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0218 is on the chapter opener p359 under the intro paragraph and is mapped to sec_0682. Mapping is correct. No figure on p362 needs mapping.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0218 is mapped to sec_0682 and the figure sits under the chapter intro on p359. Mapping is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.4-hierarchy_level",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p363 \"30 VueLink Modules\" is a chapter opener. hierarchy_level 1 is correct.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p363 'VueLink Modules' is the big chapter title with the number 30. hierarchy_level 1 is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.4-parent_child",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is null. Children sec_0691 to sec_0697 are level 2 and cover pp364-366 in order. The p366 bullet belongs to the last child sec_0697.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No parent is right for a chapter. Seven children (sec_0691-0697) cover p364-366, which follows the chapter. Previous section sec_0689 is the last part of chapter 29.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.4-page_start_end",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0690 starts at the chapter title on p363. page_end 366 matches the last child sec_0697, which ends on p366 with one bullet. Its own nodes (6910 to 6935, tables 122 and 123) are all from p363, so no neighbour content is absorbed.",
+    "notes": "Nodes \"30\" (6910/6911), folio \"351\" (6935) and \"60x145\" (6918, not visible) are boilerplate."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The chapter starts at the top of p363 with the title, intro text, module table, legend and figure. The range 363-366 ends at p366, which only has one bullet under the heading 'Language Conflict with External Device Drivers'. That bullet is in a child section, not in sec_0690 nodes. Boundaries are right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.4-hierarchy_path",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path \"/VueLink Modules\" matches the chapter title on p363.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path /VueLink Modules is a one-level path and matches the chapter title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.4-gaps_duplicates",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p363 content appears once in sec_0690. The previous chapter ends on p362 and sec_0691 starts on p364. No gap or overlap seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Nodes 6910-6935 and tables/122-123 cover the p363 content. The duplicate '30' (6910, 6911) is the chapter number split in two.",
+    "notes": "Harmless duplicate chapter number."
+   }
+  },
+  {
+   "key": "sec_0690|363|5.4-flagged_for_review",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, score 100. The chapter title is clearly visible on p363, so unflagged is right.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is on p363, so this is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.4-structural_source",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source \"toc\" is supported by the p363 chapter title matching the bookmark.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title equals the chapter title on p363.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.6-numbering_scheme",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Printed folios are 351 (p363) and 354 (p366), arabic. numbering_scheme \"arabic\" is correct.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The printed folio 351 on p363 is arabic.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.6-offset_applied",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "page_start 363 is the physical page of the chapter opener (printed folio 351). offset_applied 0 is consistent with physical page numbering.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The chapter title is on physical p363, which equals page_start 363.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.6-table_content",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p363 the type table has separate columns \"Max Wave\" and \"Max numeric\". In #/tables/122 the two columns are merged. Row \"Auxiliary A | 12\" should be wave 1 and numeric 2. Rows \"Ventilator B | 26\" should be wave 2 and numeric 6. The header is \"Max Wave Max numeric\" in one cell. The values change meaning.",
+    "notes": "Cell merge turns two numbers into one number such as 12 or 26. The legend table 123 is correct apart from the repeated letter \"c  c\"."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/122 has 5 columns and 6 rows. I read each cell on p363. Header: Module:, Type, Max Wave, Max numeric, External Devices. Auxiliary = A, 1, 2; Ventilator, Gas Analyzer, Anesthesia Machine and Auxiliary Plus = B, 2, 6. The device column text also matches. Max Wave and Max numeric values are in the right columns and in the right order. Legend tables/123 (a-g) also matches.",
+    "notes": "Checked the Max Wave / Max numeric columns twice because the lead asked for it."
+   },
+   "pages_to_check": [
+    363
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/122",
+     "page": 363,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/123",
+     "page": 363,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "a  a module name\nb device label\nc  c selection LED\nd setup key\ne   external device cable connector\nf setup indicator LED\ng module type (A or B)",
+     "round_one_text": "a module name\nb device label\nc selection LED\nd setup key\ne external device cable connector\nf setup indicator LED\ng module type (A or B)"
+    }
+   ],
+   "lead_case_checks": [
+    "p363: Round one fixed this page (base was FAIL Medium). Now #/tables/122 keeps the re-read and #/tables/123 is back to the original. Check that the base defect is still fixed and say which table had it."
+   ]
+  },
+  {
+   "key": "sec_0690|363|5.5-filters_discarding",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p363 has one figure, the VueLink module drawing with arrows a to g. It is kept as img_0221 (vector, 428x305) showing all seven arrows. Nothing meaningful was dropped.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The VueLink module drawing is kept as img_0221 (vector, 428x305). I compared it with p363. The module face, labels a-g and arrows are in the crop. Nothing is lost.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.5-filters_passing_noise",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Only img_0221 is mapped to sec_0690, and it is the real module drawing. The chapter ribbon is not kept as an image.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Only img_0221 is kept on p363. It is a real figure and not a logo or a line.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0690|363|5.5-image_section_mapping",
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0221 is on the chapter opener p363 above the text \"The device labels (b)...\" and is mapped to sec_0690. Mapping is correct.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0221 is mapped to sec_0690 and the figure sits under the legend on p363. Mapping is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0733|382|5.6-table_content",
+   "section_id": "sec_0733",
+   "page_sampled": 382,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p382 has no table. The only table of this section (tables/129) is on p383 and is checked in the p383 row.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    382
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0733|383|5.6-table_content",
+   "section_id": "sec_0733",
+   "page_sampled": 383,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/129 (3 columns, 5 rows) matches p383. Green = 'battery power is > 90%' under mains. Yellow = 'batteries charging (battery power < 90%)' under mains. Red, flashing = empty under mains and 'less than 10 minutes power remaining' under battery. Red, flashes intermittently = 'battery malfunction' in both columns. Each text is in the right column. Blank cells are blank in the PDF too.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    383
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/129",
+     "page": 383,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0758|393|5.6-table_content",
+   "section_id": "sec_0758",
+   "page_sampled": 393,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/131 (6 columns, 3 rows) matches p393. The first header cell is blank in the PDF and in the node. Part No. is M1669A, M1668A, M1667A, M1663A, M1665A. Length is 2.7m, 2.7m, 2.7m, 2.0m, 2.7m. Each value is under the right cable-set column.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    393
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/131",
+     "page": 393,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0769|396|5.6-table_content",
+   "section_id": "sec_0769",
+   "page_sampled": 396,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/140 (4 columns, 6 rows) matches p396. Header: Description, Length, AAMI Part No., IEC Part No. OR = 1.0m, M1601A, M1611A. ICU Grabber shielded = 1.0m, M1603A, M1613A. ICU snap shielded = 1.0m, M1605A, M1615A. ICU Clip non-shielded = 0.45m, M1608A, M1618A and 0.7m, M1609A, M1619A. All values are in the right columns.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    396
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/140",
+     "page": 396,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0781|402|5.6-table_content",
+   "section_id": "sec_0781",
+   "page_sampled": 402,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p402 table tables/155 has two cell errors. (1) The row 'Dura-Y D-YS' has the product name 'Dura-Y D-YS' and the description 'Y-sensor'. The node puts both in the Product Number cell and leaves Description empty. So 'Y-sensor' is in the wrong column. (2) For OxiCliq A the Comments text stops at 'Option A02 : Must use adapter cables'. The PDF continues 'M1943NL and OC-3 adapter cable.' and that tail is lost. The other cells and yes/no values match.",
+    "notes": "Wrong column for 'Y-sensor' plus a cut comment: Medium. Also, comment cells that span rows (e.g. 'Adapter cable for Philips/Nellcor' / 'disposable sensors.' on M1943A and M1943AL) are split across rows. That is only Low."
+   },
+   "pages_to_check": [
+    402
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/155",
+     "page": 402,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0781|403|5.6-table_content",
+   "section_id": "sec_0781",
+   "page_sampled": 403,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/156 (M1943NL, OC-3) and tables/157 (Masimo sensors) match p403 for part numbers, descriptions, yes/no and Philips Part Number columns. Examples: LNOP YI = 'n/a', LNCS Neo-L = 989803148271, LNOP NeoPt-L = 989803140301. The group rows (MASIMO LNOP reusable etc.) are kept. One small point: the header cell 'Product Number' is split in two rows ('Product' / 'Number'), but the values are fine.",
+    "notes": "The split header is only cosmetic, so I kept PASS. Please confirm."
+   },
+   "pages_to_check": [
+    403
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/156",
+     "page": 403,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/157",
+     "page": 403,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0798|412|5.6-table_content",
+   "section_id": "sec_0798",
+   "page_sampled": 412,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p412 has no table; it is a blank page. The only table of the section (#/tables/177, p411) matches: two rows 'Battery Charger and Conditioner ... | M8043A' and 'Size adapter ... | 4512 610 17451'.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    412
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0798|413|5.6-table_content",
+   "section_id": "sec_0798",
+   "page_sampled": 413,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p413 has no table and is outside this section. The section table (#/tables/177, p411) matches the page: both Description/Part No. rows are correct.",
+    "notes": "Page 413 is outside the section range 411-412."
+   },
+   "pages_to_check": [
+    413
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0815|428|5.6-table_content",
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p428 table #/tables/182 matches the page cell by cell. But it continues #/tables/181 from p427, where rows are shifted. M3012A has no name and its 1.2 lb sits in the M3014A row. The 225 g of M1012A is under 'Temperature Module' (M1029A). The M8026A name is on the M8025A row.",
+    "notes": "Sampled page 428 is correct. The defect is in the first half of the same table on p427. Probably the row grouping of tall cells (two-line product names) is wrong. The automatic check expects Low because it only sees the p428 half. Medium is kept because on p427 values sit under the wrong product name (for example 225 g under Temperature Module instead of Cardiac Output). The lead may downgrade to PASS if only p428 counts."
+   },
+   "pages_to_check": [
+    428
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/182",
+     "page": 428,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0816|428|5.6-table_content",
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p428 has no table of this section: the page shows the heading and two paragraphs. The table at the top belongs to sec_0815. Its tables start on p429.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    428
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0816|429|5.6-table_content",
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p429 tables #/tables/183-186 match cell by cell: MP40-MP90 temperature 0 to 35 C and -20 to 60 C; MP60/MP70 J35 0 to 30 C; MP20/MP30 three rows; humidity and altitude rows; X2 and M8023A rows including IP32. Each value is in the right Condition and Range column.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    429
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/183",
+     "page": 429,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/184",
+     "page": 429,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/185",
+     "page": 429,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/186",
+     "page": 429,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0816|431|5.6-table_content",
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    431
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/191",
+     "page": 431,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/192",
+     "page": 431,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/193",
+     "page": 431,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0817|435|5.6-table_content",
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p435 tables #/tables/198-202 match: M8023A power rows (<12 W, 100 to 240 V, 1.3 to 0.7 A, 50/60 Hz, green LED), MMS M3001A trend memory, D80 rows, docking station rows and Network/Parallel/PS/2 rows. Values are in the right columns. Empty first-column cells in D80 are blank in the page too.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    435,
+    434
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/198",
+     "page": 435,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/199",
+     "page": 435,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/200",
+     "page": 435,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/201",
+     "page": 435,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/202",
+     "page": 435,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/197",
+     "page": 434,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "X2 (M3002A) Performance Specifications |  | \nPower Specifications | Power consumption | <12 W average <30 W while battery is loading\n | Operating Voltage | 36 to 60 V DC floating\nBattery Specifications | Operating Time (with new, fully  charged battery at  25°C) | Basic monitoring configuration: 2.5 hours (Brightness set to Optimum, ECG/Resp, SpO2 measurements in use, NBP measurement every 15 minutes)\n | Charge Time | When X2 is off: 2 hours When X2 is in use, and connected to MP20/30/40/50,  without extensions: 12 hours approx. When X2 is in use, and connected to the external power  supply (M8023A), without extensions: 12 hours approx.\nIndicators | Alarms Off | red (crossed-out alarm symbol) LED\n | Alarms | red/yellow/light blue (cyan) LED\n | On/Standby / Error | green / red LED\n | AC Power | green LED\n | Battery | yellow (charging)/red blinking (empty) LED\n | External Power | green LED\nSounds | Audible feedback for user input Prompt tone QRS tone, or SpO2 modulation tone | \nTrends | Resolution | 12 or 16 numerics @ 12 sec, 1 minute, 5 minute resolution.\n | Information | Multiple choices of number of numerics, resolution and  duration depending on trend option and application area. For example: For neonatal, you can choose between 12 and 16 numerics.\nAlarm signal | System delay | less than 3 seconds\n | Pause duration | 1,2,3 minutes or infinite, depending on configuration\n | Extended alarm pause | 5 or 10 minutes\nReview Alarms | Information | all alarms / inops, main alarms on/off, alarm silence and time  of occurrence\n | Capacity | 300 items\nReal Time Clock | Range | from: January 1, 1997, 00:00 to: December 31, 2080, 23:59\n | Accuracy | <4 seconds per day (typically)\n | Hold Time | infinite if powered by host monitor or external power supply;  otherwise at least 48 hours\nBuffered Memory | Hold Time | if powered by host monitor or external power supply: infinite without power: at least 48 hours (typical: >72 hours)\n | Contents | Active settings, trends, patient data, realtime reports, review  alarms",
+     "round_one_text": "X2 (M3002A) Performance Specifications |  | \nPower Specifications | Power consumption | <12W average <30W while battery is loading\n | Operating Voltage | 36 to 60 V DC floating\nBattery Specifications | Operating Time (with new, fully charged battery at 25°C) | Basic monitoring configuration: 2.5 hours ( Brightness set to Optimum , ECG/Resp, SpO 2 measurements in use, NBP measurement every 15 minutes)\n | Charge Time | When X2 is off: 2 hours When X2 is in use, and connected to MP20/30/40/50, without extensions: 12 hours approx. When X2 is in use, and connected to the external power supply (M8023A), without extensions: 12 hours approx.\nIndicators | Alarms Off | red (crossed-out alarm symbol) LED\n | Alarms | red/yellow/light blue (cyan) LED\n | On/Standby / Error | green / red LED\n | AC Power | green LED\n | Battery | yellow (charging)/red blinking (empty) LED\n | External Power | green LED\nSounds | Audible feedback for user input Prompt tone QRS tone, or SpO modulation tone | \nTrends | Resolution | 12 or 16 numerics @ 12 sec, 1 minute, 5 minute resolution.\n | Information | Multiple choices of number of numerics, resolution and duration depending on trend option and application area. For example: For neonatal, you can choose between 12 and 16 numerics.\nAlarm signal | System delay | less than 3 seconds\n | Pause duration | 1,2,3 minutes or infinite, depending on configuration\n | Extended alarm pause | 5 or 10 minutes\nReview Alarms | Information | all alarms / inops, main alarms on/off, alarm silence and time of occurrence\n | Capacity | 300 items\nReal Time Clock | Range | from: January 1, 1997, 00:00 to: December 31, 2080, 23:59\n | Accuracy | <4 seconds per day (typically)\n | Hold Time | infinite if powered by host monitor or external power supply; otherwise at least 48 hours\nBuffered Memory | Hold Time | if powered by host monitor or external power supply: infinite without power: at least 48 hours (typical: >72 hours)\n | Contents | Active settings, trends, patient data, realtime reports, review alarms"
+    }
+   ]
+  },
+  {
+   "key": "sec_0817|436|5.6-table_content",
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p436 table #/tables/203 matches: Dual MIB/RS232, USB, ECG Output (signal gain 320 to 3200, bandwidth 1 to 80 Hz, delay <=20 ms and <=30 ms), Marker Input and both Nurse Call Relay blocks. Values are in the right rows and columns.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    436
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/203",
+     "page": 436,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0820|442|5.6-table_content",
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p442 the Bandwidth table (#/tables/213) keeps all values in the right rows. But the label 'when the ECG is transmitted from a telemetry device via short range radio' is cut in two. Half is on the Extended Monitoring row and half on the Monitoring row. Tables #/tables/214-215 match the page.",
+    "notes": "Cell split, but values and order are kept, so Low. Probably a tall merged cell is read as two rows."
+   },
+   "pages_to_check": [
+    442
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/213",
+     "page": 442,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/214",
+     "page": 442,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/215",
+     "page": 442,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0820|443|5.6-table_content",
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p443 table #/tables/216 loses one row. For 'Vent Tachycardia 2 mV pp, 195 bpm' the page shows three rows (Gain 0.5, 1.0, 2.0). The tree has only Gain 0.5 and Gain 1.0. The row 'Gain 2.0, Range 5.3 to 6.1 seconds, Average 5.7 seconds' is missing. Other rows match.",
+    "notes": "A data row is lost, so a reader cannot find the Gain 2.0 value for the 195 bpm test. Probably the last sub-row of a merged cell is dropped."
+   },
+   "pages_to_check": [
+    443
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/216",
+     "page": 443,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "ECG/Arrhythmia/ST Supplemental Information as required by AAMI EC11/13 |  | \nTime to Alarm for  Tachycardia | Vent Tachycardia 1 mVp Vpp ,206 bpm | Gain 0.5, Range 6.5 to 8.4 seconds, Average 7.2 seconds\n |  | Gain 1.0 Range 6.1 to 6.9 seconds, Average 6.5 seconds\n |  | Gain 2.0, Range 5.9 to 6.7 seconds, Average 6.3 seconds\n | Vent Tachycardia 2 mVp Vpp ,195 bpm | Gain 0.5, Range 5.4 to 6.2 seconds, Average 5.8 seconds\n |  | Gain 1.0, Range 5.7 to 6.5 seconds, Average 6.1 seconds\nTall T-Wave Rejection Capability |  | Exceeds ANSI/AAMI EC 13 Sect. 3.1.2.1(c) minimum  recommended 1.2 mV T-Wave amplitude\nHeart Rate Averaging Method |  | Three different methods are used: Normally, heart rate is computed by averaging the 12 most  recent RR intervals. For runs of PVCs, up to 8 RR intervals are averaged to compute  the HR. If each of 3 consecutive RR intervals is greater than 1200 ms  (that is, rate less than 50 bpm), then the 4 most recent RR  intervals are averaged to compute the HR.\nResponse Time of Heart Rate Meter to Change in  Heart Rate |  | HR change from 80 to 120 bpm: Range: [6.4 to 7.2 seconds] Average: 6.8 seconds HR change from 80 to 40 bpm: Range: [5.6 to 6.4 sec] Average: 6.0 seconds\nHeart Rate Meter Accuracy and Response to  Irregular Rhythm |  | Ventricular bigeminy: 80 bpm Slow alternating ventricular bigeminy: 60 bpm Rapid alternating ventricular bigeminy: 120 bpm Bidirectional systoles: 90 bpm\nAccuracy of Input Signal Reproduction |  | Methods A and D were used to establish overall system error  and frequency response.\nPacemaker Pulse Rejection Performance |  | Rejection of pacemaker pulses with amplitudes from ±2 mV to  ±700 mV and widths from 0.1 ms to 2.0 ms (Method A)",
+     "round_one_text": "ECG/Arrhythmia/ST Supplemental Information as required by AAMI EC11/13 |  | \nTime to Alarm for Tachycardia | Vent Tachycardia 1 mV pp ,206 bpm | Gain 0.5, Range 6.5 to 8.4 seconds, Average 7.2 seconds\n |  | Gain 1.0 Range 6.1 to 6.9 seconds, Average 6.5 seconds\n |  | Gain 2.0, Range 5.9 to 6.7 seconds, Average 6.3 seconds\n | Vent Tachycardia 2 mV pp ,195 bpm | Gain 0.5, Range 5.4 to 6.2 seconds, Average 5.8 seconds\n |  | Gain 1.0, Range 5.7 to 6.5 seconds, Average 6.1 seconds\nTall T-Wave Rejection Capability |  | Exceeds ANSI/AAMI EC 13 Sect. 3.1.2.1(c) minimum recommended 1.2 mV T-Wave amplitude\nHeart Rate Averaging Method |  | Three different methods are used: Normally, heart rate is computed by averaging the 12 most recent RR intervals. For runs of PVCs, up to 8 RR intervals are averaged to compute the HR. If each of 3 consecutive RR intervals is greater than 1200 ms (that is, rate less than 50 bpm), then the 4 most recent RR intervals are averaged to compute the HR.\nResponse Time of Heart Rate Meter to Change in Heart Rate |  | HR change from 80 to 120 bpm: Range: [6.4 to 7.2 seconds] Average: 6.8 seconds HR change from 80 to 40 bpm: Range: [5.6 to 6.4 sec] Average: 6.0 seconds\nHeart Rate Meter Accuracy and Response to Irregular Rhythm |  | Ventricular bigeminy: 80 bpm Slow alternating ventricular bigeminy: 60 bpm Rapid alternating ventricular bigeminy: 120 bpm Bidirectional systoles: 90 bpm\nAccuracy of Input Signal Reproduction |  | Methods A and D were used to establish overall system error and frequency response.\nPacemaker Pulse Rejection Performance |  | Rejection of pacemaker pulses with amplitudes from ±2 mV to ±700 mV and widths from 0.1 ms to 2.0 ms (Method A)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0823|449|5.6-table_content",
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p449 tables #/tables/224-225 match: Systolic, Diastolic and Mean each have Adult, Pedi and Neo ranges, and the Adjustment text '10 to 30 mmHg: 2 mmHg (0.5 kPa) >30 mmHg: 5 mmHg (1 kPa)' is on the first row. Overpressure rows Adult, Pedi, Neo are correct; 'not user adjustable' is on Adult.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    449
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/224",
+     "page": 449,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/225",
+     "page": 449,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  }
+ ]
+}

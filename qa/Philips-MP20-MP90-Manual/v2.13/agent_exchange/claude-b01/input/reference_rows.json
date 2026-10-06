@@ -1,0 +1,811 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0012|20|5.4-hierarchy_level",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p20 \"Remote Alarm Device\" is printed as a section heading under its chapter. hierarchy_level matches the bookmark nesting: level 3 under sec_0002 \"Introducing the IntelliVue Family\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.4-parent_child",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0012 lists its parent in parent_section_id and the parent lists sec_0012 in child_sections. sec_0012 has no children and the page shows no sub-headings with their own bookmark.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.4-page_start_end",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p19 the folio \"7\" (#/texts/177) and on p20 the running header \"1 Basic Operation\" and \"Introducing the IntelliVue Family\" (#/texts/178, #/texts/179) are kept as paragraph nodes inside sec_0012. The heading and its sentence are on p19. The legend 1-5 and alarm-lamp photo are on p20. They all belong to this section and sec_0013 \"Docking Station\" starts below them on p20. All of them are on pages that belong to this section, so no boundary is crossed.",
+    "notes": "Page furniture is kept as paragraph nodes. This is not a boundary error, so it is not graded as FAIL. If the lead wants it counted, Low would apply."
+   }
+  },
+  {
+   "key": "sec_0012|20|5.4-hierarchy_path",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The hierarchy_path ends with \"Remote Alarm Device\" and the earlier names match the parent and chapter headings and running headers seen on p20.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.4-gaps_duplicates",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Rendered p19-p20: the content of sec_0012 follows the previous sibling and ends where the next sibling heading starts. No page content is missing or repeated between the neighbouring sections.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.4-flagged_for_review",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0012 has flagged_for_review false, verification_score 100 and an empty verification_reason. The page rendering supports this: the heading is where the bookmark says.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.4-structural_source",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\" and the heading \"Remote Alarm Device\" is visible on the rendered page, so the bookmark is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.6-numbering_scheme",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The page folios are arabic numerals (for example the printed folio on p20), which matches numbering_scheme \"arabic\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.6-offset_applied",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 and the heading \"Remote Alarm Device\" is found on the physical page given by page_start (p19-p20). The printed folio differs from the physical page number, but the bookmarks already use physical pages.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.5-filters_discarding",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Every meaningful picture on the sampled page(s) is extracted: On p20 the alarm-lamp photo (img_0013, vector, mapped to sec_0012) is shown above the legend 1-5 and before the \"Docking Station\" heading. The photo of the docking station (img_0012) is mapped to sec_0013. On p19 the MP80/MP90 photos are mapped to sec_0010. No visible figure is missing.",
+    "notes": "verify_claims reports a raster figure not in exports/images_v1.json. I checked images_v1.json: the same page region is there as a vector-origin image of the same section, and its PNG in input/images matches the rendered page. So the figure is not lost."
+   }
+  },
+  {
+   "key": "sec_0012|20|5.5-filters_passing_noise",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The extracted images for sec_0012 are real figures. No rule, logo, footer divider or other decorative element was kept as an image.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0012|20|5.5-image_section_mapping",
+   "section_id": "sec_0012",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p20 the alarm-lamp photo (img_0013, vector, mapped to sec_0012) is shown above the legend 1-5 and before the \"Docking Station\" heading. The photo of the docking station (img_0012) is mapped to sec_0013. On p19 the MP80/MP90 photos are mapped to sec_0010.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.4-hierarchy_level",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p22 \"Measurement Modules\" is printed as a section heading under its chapter. hierarchy_level matches the bookmark nesting: level 3 under sec_0014 \"Devices for Acquiring Measurements\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.4-parent_child",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0016 lists its parent in parent_section_id and the parent lists sec_0016 in child_sections. sec_0016 has no children and the page shows no sub-headings with their own bookmark.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.4-page_start_end",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p22 the running header (#/texts/226 \"1 Basic Operation\", #/texts/227 \"Devices for Acquiring Measurements\") and the folio \"10\" (#/texts/260) are kept as paragraph nodes in sec_0016. The heading, bullet list, paragraphs and the pressure-module legend all belong to this section. The section is one page and does not take content from sec_0015 or sec_0017. All of them are on pages that belong to this section, so no boundary is crossed.",
+    "notes": "Page furniture is kept as paragraph nodes. This is not a boundary error, so it is not graded as FAIL. If the lead wants it counted, Low would apply."
+   }
+  },
+  {
+   "key": "sec_0016|22|5.4-hierarchy_path",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The hierarchy_path ends with \"Measurement Modules\" and the earlier names match the parent and chapter headings and running headers seen on p22.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.4-gaps_duplicates",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Rendered p22: the content of sec_0016 follows the previous sibling and ends where the next sibling heading starts. No page content is missing or repeated between the neighbouring sections.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.4-flagged_for_review",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0016 has flagged_for_review false, verification_score 100 and an empty verification_reason. The page rendering supports this: the heading is where the bookmark says.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.4-structural_source",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\" and the heading \"Measurement Modules\" is visible on the rendered page, so the bookmark is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.6-numbering_scheme",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The page folios are arabic numerals (for example the printed folio on p22), which matches numbering_scheme \"arabic\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.6-offset_applied",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 and the heading \"Measurement Modules\" is found on the physical page given by page_start (p22). The printed folio differs from the physical page number, but the bookmarks already use physical pages.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.5-filters_discarding",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Every meaningful picture on the sampled page(s) is extracted: On p22 the \"Example Module (Pressure)\" drawing with callouts 1-5 is extracted as img_0015 (vector) and mapped to sec_0016. It matches the rendered drawing. No other picture is on the page. No visible figure is missing.",
+    "notes": "verify_claims reports a raster figure not in exports/images_v1.json. I checked images_v1.json: the same page region is there as a vector-origin image of the same section, and its PNG in input/images matches the rendered page. So the figure is not lost."
+   }
+  },
+  {
+   "key": "sec_0016|22|5.5-filters_passing_noise",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The extracted images for sec_0016 are real figures. No rule, logo, footer divider or other decorative element was kept as an image. The text node \"80x80\" (#/texts/252) is not visible on the page; it is a text node, not an image.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0016|22|5.5-image_section_mapping",
+   "section_id": "sec_0016",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p22 the \"Example Module (Pressure)\" drawing with callouts 1-5 is extracted as img_0015 (vector) and mapped to sec_0016. It matches the rendered drawing. No other picture is on the page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0026|31|5.6-table_content",
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/12 on p31 has 18 numbered items in two groups. I checked all 18. Items 1-9 are under 'Monitor information line' (for example 2 'bed label', 8 'current screen name/enter change screen menu') and items 10-18 under 'Other screen elements' (for example 12 'close all open menus and windows...', 17 'Pause Alarms - ...', 18 'Silence - ...'). Every number stays with its own text. The two header cells that cover 2 columns each show an empty cell next to them.",
+    "notes": "Values and order are right. Bold words lose their bold only. Cell text fix (BUG-008) works here."
+   },
+   "pages_to_check": [
+    31
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/12",
+     "page": 31,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0091|56|5.6-table_content",
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The sampled page p56 has no table. The only table of sec_0091 is #/tables/15 on p55. I checked it cell by cell. Header 'Pop-Up Keys | Selecting this pop-up key lets you....' matches. The 4 rows Minimize, Keyboard, Refresh and Close each keep their own description. No cell is merged or shifted.",
+    "notes": "The node is placed after the p56 paragraph in semantic order, but it is still in the right section. Cell text fix (BUG-008) works here."
+   },
+   "pages_to_check": [
+    56
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0103|68|5.6-table_content",
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/17 on p68 is the INOP lamp table. Values match: Yellow 1.0 seconds / 1.0 seconds and Red 0.25 seconds / 0.25 seconds under On and Off. The 2-row header shows as 'INOP Lamp | Modulation (...) |' and 'Color | On | Off'. The cell 'INOP Lamp Color' is split over two rows and the Modulation span has an empty cell.",
+    "notes": "No value moves to another column. The node is placed after the p69 text in semantic order, though the table is on p68."
+   },
+   "pages_to_check": [
+    68
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/17",
+     "page": 68,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0125|75|5.4-hierarchy_level",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p75 \"Viewing All Alarm Limits\" is printed as a section heading under its chapter. hierarchy_level matches the bookmark nesting: level 3 under sec_0123 \"Alarm Limits\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.4-parent_child",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0125 lists its parent in parent_section_id and the parent lists sec_0125 in child_sections. sec_0125 has no children and the page shows no sub-headings with their own bookmark.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.4-page_start_end",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p74 the folio \"62\" (#/texts/1452) and on p75 the running header \"Alarm Limits\" and \"3 Alarms\" (#/texts/1453, #/texts/1454) are kept as paragraph nodes in sec_0125. The heading and two paragraphs are on p74. The Alarm Limits window and its text are on p75. The next heading \"Changing Alarm Limits\" on p75 is not absorbed; the last node is #/texts/1479. All of them are on pages that belong to this section, so no boundary is crossed.",
+    "notes": "Page furniture is kept as paragraph nodes. This is not a boundary error, so it is not graded as FAIL. If the lead wants it counted, Low would apply."
+   }
+  },
+  {
+   "key": "sec_0125|75|5.4-hierarchy_path",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The hierarchy_path ends with \"Viewing All Alarm Limits\" and the earlier names match the parent and chapter headings and running headers seen on p75.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.4-gaps_duplicates",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Rendered p74-p75: the content of sec_0125 follows the previous sibling and ends where the next sibling heading starts. No page content is missing or repeated between the neighbouring sections.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.4-flagged_for_review",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0125 has flagged_for_review false, verification_score 100 and an empty verification_reason. The page rendering supports this: the heading is where the bookmark says.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.4-structural_source",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\" and the heading \"Viewing All Alarm Limits\" is visible on the rendered page, so the bookmark is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.6-numbering_scheme",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The page folios are arabic numerals (for example the printed folio on p75), which matches numbering_scheme \"arabic\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.6-offset_applied",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 and the heading \"Viewing All Alarm Limits\" is found on the physical page given by page_start (p74-p75). The printed folio differs from the physical page number, but the bookmarks already use physical pages.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.5-filters_discarding",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p74, inside sec_0125, a small grey SmartKey icon (alarm bell symbol) sits next to the \"To open the Alarm Limits window\" text. No image for it is in images.json. The text names the \"Alarm Limits SmartKey\", so the meaning is kept.",
+    "notes": "verify_claims proposes Critical because the p75 window raster is not matched, but img_0048 (vector, sec_0125) covers it, so only the small p74 icon is lost; Low is the contract level for a small icon whose meaning is in the text. Probably the small-icon filter. Also the p74 \"HR 120 85 Alarm limits\" picture is not in images.json; it belongs to sec_0124, so check it when that section is reviewed."
+   }
+  },
+  {
+   "key": "sec_0125|75|5.5-filters_passing_noise",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The extracted images for sec_0125 are real figures. No rule, logo, footer divider or other decorative element was kept as an image.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0125|75|5.5-image_section_mapping",
+   "section_id": "sec_0125",
+   "page_sampled": 75,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p75 the Alarm Limits window is extracted as img_0048 (vector) and mapped to sec_0125. It matches the rendering with callouts 1-3.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0139|83|5.6-table_content",
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/22 on p83 has 5 data rows. I checked all 4 columns of each row: */**AFIB, ***APNEA (3 forms), ***ASYSTOLE, **awRR HIGH, **awRR LOW. Alarm message, From, Condition and Indication match the page. 'CO 2' has an extra space but the value is the same.",
+    "notes": "Cell text fix (BUG-008) works here. No merged cells found."
+   },
+   "pages_to_check": [
+    83
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/22",
+     "page": 83,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0139|87|5.6-table_content",
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/26 on p87 has 16 data rows from **RR LOW to **tcpO2 LOW/**tcpCO2 LOW. I checked the 4 columns of all rows. For example '**ST MULTI at Information Center' keeps 'ECG/ST' and '(on monitor) numeric flashes...' and '***TACHY/P xxx>yyy or ***TACHY xxx>yyy' keeps 'Press, SpO 2'. The repeated word in 'The the measured' is also in the printed page.",
+    "notes": "No cell is merged or moved to another column. Subscripts show as 'SO 2' with a space only."
+   },
+   "pages_to_check": [
+    87
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/26",
+     "page": 87,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0140|90|5.6-table_content",
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Table #/tables/29 on p90 matches the page: 12 rows from 'BATTERIES INCOMP...' to 'BIS ENGINE DISCONN', 3 columns, each value in its right column. But the section also has #/tables/51 on p112. It holds only the running header text '4 Patient Alarms and INOPs | Technical Alarm Messages (INOPs)'. Page 112 has no real table, so this is a header misread as a table.",
+    "notes": "Low: values stay correct, only a false table. Probably the header bar on a blank page is read as a table. The other tables (p89, p91-p111) were not checked visually, only p90 and p94 were given."
+   },
+   "pages_to_check": [
+    90
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/29",
+     "page": 90,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0140|94|5.6-table_content",
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/33 on p94 has 16 rows from 'CENTRAL:TELE ONLY' to 'Check MSL Voltage'. I checked all 3 columns. The message and its 'INOP tone' line stay in column 1, Source (for example 'Monitor/ Multi- Measuremt Module') stays in column 2, and the advice stays in column 3. No cell is merged.",
+    "notes": "The false table on p112 (#/tables/51) is graded in the p90 row of this section, not repeated here."
+   },
+   "pages_to_check": [
+    94
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/33",
+     "page": 94,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0164|125|5.6-table_content",
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/55 on p125 has a header and 4 rows. Header 'Care Group Symbols (used in the Care Group overview bar and the My Care Group window)' matches. The 4 texts match in order: 'This is a telemetry bed', 'This bed is on a wireless network', 'This bed is on a wired network', 'This is a paired bed, with a bedside monitor and a telemetry transmitter assigned.' The first-column cells are empty because they hold icons.",
+    "notes": "Text is right. The missing icons are graded under 5.5-filters_discarding to avoid counting the same cause twice."
+   },
+   "pages_to_check": [
+    125
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/55",
+     "page": 125,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0187|135|5.6-table_content",
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/56 on p135 has a header and 5 rows of 3 columns. I checked all 15 cells. Example: 'a 5-electrode set | I, II, III, aVR, aVL, aVF, V and MCL | RA and LL' and 'an EASI 5-electrode set | I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6 | I and A'. Each lead list and each Resp pair is under the right set.",
+    "notes": "No merged or shifted cell. Cell text fix (BUG-008) works here."
+   },
+   "pages_to_check": [
+    135
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/56",
+     "page": 135,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0221|150|5.6-table_content",
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/61 on p150 has 12 data rows. I checked all 3 columns. Examples: 'RUN PVCs | More than 2 consecutive PVCs within the last minute | E', 'PACER NOT CAPT | ... | B, E', '(No message displayed)' with an empty B or E cell. The long PAUSE explanation keeps its three lines in column 2 and 'E' in column 3.",
+    "notes": "Values stay in the right columns. The empty last cell of the first row is empty on the page too."
+   },
+   "pages_to_check": [
+    150
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/61",
+     "page": 150,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0240|158|5.6-table_content",
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The sampled page p158 has no table. The only table of sec_0240 is #/tables/63 on p157, text 'Add | Delete'. On p157 these are two pop-up key boxes labelled Add and Delete. Both labels are right and in the right order.",
+    "notes": "The key boxes are probably read as a one-row table. Values are kept. The node comes last in semantic order, after the p158 text, but it is in the right section."
+   },
+   "pages_to_check": [
+    158
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0241|158|5.4-hierarchy_level",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p158 \"Understanding the ST Display\" is printed as a section heading under its chapter. hierarchy_level matches the bookmark nesting: level 2 under sec_0170 \"ECG, Arrhythmia, ST and QT Monitoring\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.4-parent_child",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0241 lists its parent in parent_section_id and the parent lists sec_0241 in child_sections. sec_0241 has no children and the page shows no sub-headings with their own bookmark.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.4-page_start_end",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p158 the folio \"146\" (#/texts/2815) and on p159 the running header \"Updating ST Baseline Snippets\" and \"6 ECG, Arrhythmia, ST and QT Monitoring\" (#/texts/2816, #/texts/2817) are kept as paragraph nodes in sec_0241. The heading starts mid-page on p158, after the sec_0240 steps. The p159 text above the real \"Updating ST Baseline Snippets\" heading (ST Snippets, ST Baseline Window, figure legend) is correctly owned by sec_0241, so page_end 159 is right. All of them are on pages that belong to this section, so no boundary is crossed.",
+    "notes": "Page furniture is kept as paragraph nodes. This is not a boundary error, so it is not graded as FAIL. If the lead wants it counted, Low would apply."
+   }
+  },
+  {
+   "key": "sec_0241|158|5.4-hierarchy_path",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The hierarchy_path ends with \"Understanding the ST Display\" and the earlier names match the parent and chapter headings and running headers seen on p158.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.4-gaps_duplicates",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Rendered p158-p159: the content of sec_0241 follows the previous sibling and ends where the next sibling heading starts. No page content is missing or repeated between the neighbouring sections.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.4-flagged_for_review",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0241 has flagged_for_review false, verification_score 100 and an empty verification_reason. The page rendering supports this: the heading is where the bookmark says.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.4-structural_source",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\" and the heading \"Understanding the ST Display\" is visible on the rendered page, so the bookmark is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.6-numbering_scheme",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The page folios are arabic numerals (for example the printed folio on p158), which matches numbering_scheme \"arabic\".",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.6-offset_applied",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 and the heading \"Understanding the ST Display\" is found on the physical page given by page_start (p158-p159). The printed folio differs from the physical page number, but the bookmarks already use physical pages.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.5-filters_discarding",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Every meaningful picture on the sampled page(s) is extracted: On p158 the ST display (img_0075, vector) and on p159 the ST Baseline window (img_0076, vector) are both mapped to sec_0241. Both are above the \"Updating ST Baseline Snippets\" heading, so the mapping is correct. No visible figure is missing.",
+    "notes": "verify_claims reports a raster figure not in exports/images_v1.json. I checked images_v1.json: the same page region is there as a vector-origin image of the same section, and its PNG in input/images matches the rendered page. So the figure is not lost."
+   }
+  },
+  {
+   "key": "sec_0241|158|5.5-filters_passing_noise",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The extracted images for sec_0241 are real figures. No rule, logo, footer divider or other decorative element was kept as an image.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0241|158|5.5-image_section_mapping",
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p158 the ST display (img_0075, vector) and on p159 the ST Baseline window (img_0076, vector) are both mapped to sec_0241. Both are above the \"Updating ST Baseline Snippets\" heading, so the mapping is correct.",
+    "notes": ""
+   }
+  }
+ ]
+}

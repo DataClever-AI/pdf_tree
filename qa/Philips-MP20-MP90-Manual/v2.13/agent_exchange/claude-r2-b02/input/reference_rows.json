@@ -1,0 +1,972 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0392|222|5.6-table_content",
+   "section_id": "sec_0392",
+   "page_sampled": 222,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "In #/tables/81 (p222) the 'Noisy baseline' cell stops at '...Do not rinse the catheter during measurement, to avoid'. The printed cell ends with 'temperature fluctuations.' and these words are missing. The other rows (Tinj off scale to Disturbed injection) match their columns.",
+    "notes": "Words at the end of one cell are lost. The column of each value is right, so this is not a wrong-column case. I used Medium because text is lost and not only merged. Cause is probably the BUG-008 table text fix cutting a long cell. A reviewer can lower it to Low."
+   },
+   "pages_to_check": [
+    222
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/81",
+     "page": 222,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0392|223|5.6-table_content",
+   "section_id": "sec_0392",
+   "page_sampled": 223,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "#/tables/82 (p223) has 8 rows from 'Check Injectate Temperature Probe Type' to 'Delayed injection'. Each message is paired with the right cause text. The header row repeats as on the page.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    223
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/82",
+     "page": 223,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0421|237|5.4-hierarchy_level",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p237 the large \"15 Monitoring Airway Flow, Volume and Pressure\" title is a chapter opener. sec_0421 is hierarchy_level 1, which matches.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.4-parent_child",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0421 has parent_section_id null (top level). Its six children (sec_0422 to sec_0429) are level 2 and cover pp238-244 in order.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.4-page_start_end",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0421 starts at the p237 chapter title. Its own nodes (#/texts/4245 to 4270) are only the title, intro list and WARNING box on p237. The page_end 244 comes from the last child sec_0429, which ends on p244 with \"Changing the Temperature of the Inspired Gas\". No neighbour text is absorbed.",
+    "notes": "Nodes 4245/4247 (\"15\") and 4270 (\"225\") are chapter number and folio boilerplate on its own page, not a boundary problem."
+   }
+  },
+  {
+   "key": "sec_0421|237|5.4-hierarchy_path",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path \"/Monitoring Airway Flow, Volume and Pressure\" is correct for a chapter. The title matches the p237 rendering.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.4-gaps_duplicates",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p237 text (intro, bullet lists, WARNING box) appears once in sec_0421 nodes. The next section sec_0422 starts on p238, so there is no gap or overlap with the previous chapter ending p236.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.4-flagged_for_review",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is clearly visible on p237, so the unflagged state is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.4-structural_source",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\". The chapter title on p237 matches the bookmark, so provenance is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.6-numbering_scheme",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Printed folio on p237 is \"225\", an arabic number. numbering_scheme \"arabic\" is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.6-offset_applied",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The bookmark page 237 is the physical page: the chapter opener is on physical p237 (printed folio 225). offset_applied 0 is consistent because page_start is already physical.",
+    "notes": "Printed folio and physical page differ by 12, but the tree stores physical pages."
+   }
+  },
+  {
+   "key": "sec_0421|237|5.5-filters_discarding",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p237 and p244 have no pictures or diagrams. Only text, bullet lists and a WARNING box are visible, so nothing meaningful was discarded. images.json has no entry for sec_0421.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.5-filters_passing_noise",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No image is mapped to sec_0421, so no decorative item was kept as an image. The blue chapter ribbon on p237 is not in images.json.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0421|237|5.5-image_section_mapping",
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Checked p237 and p244: no figures exist in the sec_0421 range. Having no mapped image is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.4-hierarchy_level",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p245 \"Identifying tcGas Module Components\" is a section heading below the chapter title \"16 Monitoring tcGas\". hierarchy_level 2 matches.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.4-parent_child",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0440 \"Monitoring tcGas\" (level 1), which is the chapter on p245. sec_0441 has no children, and no sub-headings appear below it on p245.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.4-page_start_end",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0441 starts at its heading on p245 and ends on p245. Its nodes #/texts/4402 to 4416 are the heading, the 1-4 legend and the figure labels. The chapter intro paragraphs above the heading are not in this section. The next section starts on p246.",
+    "notes": "Node \"80 x 70\" (4408) is not visible on the page. It is probably a hidden print slug, and it is minor."
+   }
+  },
+  {
+   "key": "sec_0441|245|5.4-hierarchy_path",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path \"/Monitoring tcGas/Identifying tcGas Module Components\" matches the chapter title and the section heading on p245.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.4-gaps_duplicates",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The legend text and heading appear once. The chapter intro paragraphs before the heading are outside sec_0441, and sec_0442 begins on p246. No gap or duplicate seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.4-flagged_for_review",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, score 100. The heading is clearly visible on p245, so this is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.4-structural_source",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source \"toc\" is supported: the heading text on p245 matches the bookmark title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.6-numbering_scheme",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Printed folio on p245 is \"233\", arabic. numbering_scheme \"arabic\" is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.6-offset_applied",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "page_start 245 is the physical page where the heading appears (printed folio 233). offset_applied 0 is consistent with physical page numbering.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.5-filters_discarding",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p245 has one figure, the tcGas module drawing with callouts 1 to 4. It is kept as img_0132 (vector, 351x326) and shows all four callouts. Nothing meaningful was dropped.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.5-filters_passing_noise",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Only img_0132 is mapped to sec_0441, and it is the real module drawing. The blue chapter ribbon is not kept as an image.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0441|245|5.5-image_section_mapping",
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0132 sits below the heading \"Identifying tcGas Module Components\" and is mapped to sec_0441. The legend 1-4 next to it is in the same section. Mapping is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0512|275|5.6-table_content",
+   "section_id": "sec_0512",
+   "page_sampled": 275,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "#/tables/96 (p276) is only the running header 'BIS Safety Information' and '19 Monitoring BIS', text from a blue header bar. It is not a real table. The page itself is blank. This is the p276 part of the section; p275 has no table.",
+    "notes": "A header bar was read as a table. No real content is missing. Low per the contract (header rows misdetected as tables)."
+   },
+   "pages_to_check": [
+    275
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0527|282|5.6-table_content",
+   "section_id": "sec_0527",
+   "page_sampled": 282,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "#/tables/97 (p281) has 6 rows (Heart Rate, ECG, Arrhythmia, ST, QT, SpO2 T) and each row label has the right setting list. Footnote marks show as 'Va Lead 1' and 'QTc Formula 2'. In the last row the two lines of the cell are joined: 'SpO 2 Alarm limits NBP Alarm Suppression On/Off'. Values and order are kept.",
+    "notes": "Two paragraphs of one cell are joined without a separator, and 'SpO 2' has a space. Cosmetic only. Low."
+   },
+   "pages_to_check": [
+    282
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0531|283|5.6-table_content",
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "#/tables/98 (p284) has 10 rows and each key name pairs with its description. Names like 'Print/ Record' and 'Vital Signs' match the page. The four icon rows have an empty first cell because the keys are pictures, not text. Descriptions and order are correct.",
+    "notes": "The icon cells are covered in the 5.5-filters_discarding row."
+   },
+   "pages_to_check": [
+    283
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0583|303|5.6-table_content",
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p304 the printed table has row labels in the first column (Event groups, Measurements per group, ... Event Notification) and 3 option columns. In #/tables/103 the labels moved to the end of each row. Examples: '3 | 3 (plus 1 for episode recording) | Measurements per group 4' and 'no | yes yes | Annotation'. Values sit in the wrong columns: '4' is the Advanced value but appears in the last cell, and '3 (plus 1...)' is the NER value but appears in the middle cell. The header cell also joins 'Event Functionality Basic Event Surveillance Option C06'.",
+    "notes": "Row labels and cells moved so values cannot be assigned to their option. Medium per the contract. The table is on p304, the second page of this section."
+   },
+   "pages_to_check": [
+    303
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0585|305|5.4-hierarchy_level",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p305 \"Event Episodes\" is printed as a section heading under its chapter. hierarchy_level matches the bookmark nesting: level 2 under sec_0582 \"Event Surveillance\".",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Event Episodes' looks like a level 2 heading under 'Event Surveillance'. The heading is also in the p305 running header.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.4-parent_child",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0585 lists its parent in parent_section_id and the parent lists sec_0585 in child_sections. sec_0585 has no children and the page shows no sub-headings with their own bookmark.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Parent 'Event Surveillance' is the correct higher heading and the section has no child headings on p305.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.4-page_start_end",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p305 the running header \"Event Episodes\" and \"24 Event Surveillance\" (#/texts/5564, #/texts/5565) are kept as paragraph nodes in sec_0585. The heading, paragraphs, diagram labels and table are owned correctly. The next heading \"Events Pop-Up Keys\" at the page bottom is not absorbed. All of them are on pages that belong to this section, so no boundary is crossed.",
+    "notes": "Page furniture is kept as paragraph nodes. This is not a boundary error, so it is not graded as FAIL. If the lead wants it counted, Low would apply."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section starts at the p305 heading (#/texts/5566) and ends with the Event Episode Types table (#/tables/104). 'Events Pop-Up Keys' below the table starts sec_0586. page_start and page_end are both 305, which is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.4-hierarchy_path",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The hierarchy_path ends with \"Event Episodes\" and the earlier names match the parent and chapter headings and running headers seen on p305.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path ends with 'Event Episodes' and the earlier names match the parent and the running header.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.4-gaps_duplicates",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Rendered p305: the content of sec_0585 follows the previous sibling and ends where the next sibling heading starts. No page content is missing or repeated between the neighbouring sections.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Intro paragraphs, diagram labels (#/texts/5569 to 5571), the paragraph #/texts/5572 and the table are present once.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.4-flagged_for_review",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0585 has flagged_for_review false, verification_score 100 and an empty verification_reason. The page rendering supports this: the heading is where the bookmark says.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Event Episodes' is visible on the page in the PDF.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.4-structural_source",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\" and the heading \"Event Episodes\" is visible on the rendered page, so the bookmark is supported.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is toc. The title 'Event Episodes' matches the heading seen in the render.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.6-numbering_scheme",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The page folios are arabic numerals (for example the printed folio on p305), which matches numbering_scheme \"arabic\".",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Printed folio on the sampled page is 293, an arabic number. numbering_scheme is arabic.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.6-offset_applied",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 and the heading \"Event Episodes\" is found on the physical page given by page_start (p305). The printed folio differs from the physical page number, but the bookmarks already use physical pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark pages are physical pages; the render of p305 (printed folio 293) is inside the page range.",
+    "notes": "Printed folio and physical page differ, but the tree stores physical pages."
+   }
+  },
+  {
+   "key": "sec_0585|305|5.6-table_content",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p305 the \"Event Episode Types\" table has three columns. The extracted table has Pre-time and Post-time in one cell (\"2 minutes 18 minutes\"; header \"Pre-time  Post-time\"). The row labels are shifted: \"20 minutes, five samples per minute\" is on the 4/16 row, not under \"Average trend\" 2/18. \"Four minutes... HiResTrnd\" is on the 2/2 row, not 1/3. \"15 seconds\" is on the 10/5 row.",
+    "notes": "Probably TableFormer merges the columns and spans. Medium chosen over Low (verify_claims suggests Low for merged cells): not only are the cells merged, the spanning row labels land on the wrong rows, so a duration can be tied to the wrong episode type. Human to confirm the grade."
+   },
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "In #/tables/104 (p305) the Pre-time and Post-time values match the page in order (2/18, 4/16 ... 18/2; 1/3, 2/2, 3/1; 5 s/10 s, 10 s/5 s). The row labels that span rows are split: '20 minutes, five samples per minute' sits on the 4 minutes row, 'HiResTrnd' is repeated on the 3 minutes row, and '15 seconds' sits on the second Realtime Wave Snapshot row. Rows 3 to 9 of Average trend have an empty label.",
+    "notes": "Merged cells that span rows were split into single rows. Values stay in the right columns and in order. Low per the lead's scale."
+   },
+   "pages_to_check": [
+    305
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/104",
+     "page": 305,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p305: Row-spanning labels: check that each label (written once for several rows in the PDF) is kept and the values stay in their rows. Base was FAIL Medium."
+   ]
+  },
+  {
+   "key": "sec_0585|305|5.5-filters_discarding",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Every meaningful picture on the sampled page(s) is extracted: On p305 the event-episode timeline (img_0168, vector) is mapped to sec_0585. It matches the rendered diagram. No visible figure is missing.",
+    "notes": "verify_claims reports a raster figure not in exports/images_v1.json. I checked images_v1.json: the same page region is there as a vector-origin image of the same section, and its PNG in input/images matches the rendered page. So the figure is not lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The event diagram is a vector drawing and was rendered as img_0168 (origin vector). No meaningful figure is missing on p305.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.5-filters_passing_noise",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The extracted images for sec_0585 are real figures. No rule, logo, footer divider or other decorative element was kept as an image.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0168 is the Event trigger / pre-time / post-time diagram. It is meaningful content, not a logo or rule.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0585|305|5.5-image_section_mapping",
+   "section_id": "sec_0585",
+   "page_sampled": 305,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p305 the event-episode timeline (img_0168, vector) is mapped to sec_0585. It matches the rendered diagram.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0168 is the diagram under the 'Event Episodes' heading on p305 and is mapped to sec_0585. The next heading 'Events Pop-Up Keys' has no figure.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.4-hierarchy_level",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p315 \"Event Review Recordings\" is a smaller bold heading under the larger \"Event Recordings\". Level 4 under a level 3 parent matches.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Event Review Recordings' looks like a level 4 heading under 'Event Recordings'. It is a small bold heading below 'Event Recordings' and 'Documenting Events'.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.4-parent_child",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id sec_0606 \"Event Recordings\" (level 3) is correct. sec_0607 has no children and its next sibling sec_0608 \"Event Episode Recordings\" is also under sec_0606.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Parent 'Event Recordings' is the correct higher heading and the section has no child headings on p315.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.4-page_start_end",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0607 starts at its heading on p315 and runs to p316. On p316 its table #/tables/106 and the three paragraphs end just above the heading \"Event Episode Recordings\", which belongs to sec_0608. Boundaries are correct.",
+    "notes": "Running headers (5858, 5859) and folio \"303\" (5857) are kept as paragraph nodes. This is boilerplate noise inside its own range."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section starts at the small bold heading 'Event Review Recordings' on p315 (#/texts/5810), after 'Event Recordings' intro in sec_0606. The p316 tabular example (#/tables/106) is inside it. 'Event Episode Recordings' on p316 starts sec_0608. Nodes #/texts/5858 and 5859 are the p316 running header.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.4-hierarchy_path",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path /Event Surveillance/Documenting Events/Event Recordings/Event Review Recordings agrees with the page headers (\"24 Event Surveillance\", \"Documenting Events\") and the heading sizes on p315.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path ends with 'Event Review Recordings' and the earlier names match the parent and the running header.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.4-gaps_duplicates",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Text before the heading (Event Episode, Event Recordings intro) is outside sec_0607. The p316 text up to the next heading is inside it. No overlap with sec_0608 seen. Text of the sample strip on p315 is present once.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The sample screen text on p315 is split into many short paragraphs (#/texts/5811 to 5856) but all are present once. Words such as 'Standard' and 'Neuro' from the graphic are also kept. Nothing is lost or repeated.",
+    "notes": "The fragments are in the page order of the callout labels. This is only a reading-order oddity."
+   }
+  },
+  {
+   "key": "sec_0607|315|5.4-flagged_for_review",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, score 100. The heading is clearly visible on p315, so unflagged is right.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Event Review Recordings' is visible on the page in the PDF.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.4-structural_source",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source \"toc\" is supported by the visible heading \"Event Review Recordings\" on p315.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is toc. The title 'Event Review Recordings' matches the heading seen in the render.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.6-numbering_scheme",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Printed folios are 303 (p315) and 304 (p316), arabic. numbering_scheme \"arabic\" is correct.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Printed folio on the sampled page is 303, an arabic number. numbering_scheme is arabic.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.6-offset_applied",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "page_start 315 is the physical page of the heading (printed folio 303). offset_applied 0 is consistent with physical page numbering.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark pages are physical pages; the render of p315 (printed folio 303) is inside the page range.",
+    "notes": "Printed folio and physical page differ, but the tree stores physical pages."
+   }
+  },
+  {
+   "key": "sec_0607|315|5.6-table_content",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p316 the tabular recording example has columns #, Time, Group, Parameter 1, Parameter 2, Parmeter 3. In #/tables/106 the cells are shifted. Row 1 puts \"Neuro Resp BIS LOW 51<60\" in one cell, and row 5 puts \"SpO2 LOW\" and \"95<96\" in different columns. The \"Stand ard\" group is split. The header \"Parameter 2\" is split across cells.",
+    "notes": "Values can no longer be attributed to their columns. The table is probably a monospace text box and Docling shifts its cells. Pattern: Medium for shifted cells."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is on p315. The table is on p316 (#/tables/106). Its 6 columns match the printed example cell by cell: header '# Time Group Parameter 1 Parameter 2 Parmeter 3' (the typo is in the print), rows 1 to 5 with times 07:56, 07:59, 08:02, 08:12, 08:32 and groups Neuro/Stand ard. 'BIS LOW 51<60', 'HR(Pulse) TACHY 201>180', 'Resp HIGH 76>60', 'ST-II Manual', 'SpO2 LOW 95<96' are in the right column. The final '...' row is not kept.",
+    "notes": "'Stand ard' is the print wrap of 'Standard' and appears the same on the page. Values are in the correct columns, so PASS."
+   },
+   "pages_to_check": [
+    315,
+    316
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/106",
+     "page": 316,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p316: Round one fixed this table (base FAIL Medium on p315 row). Must still be fixed."
+   ]
+  },
+  {
+   "key": "sec_0607|315|5.5-filters_discarding",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p315 has two figures: the annotated recording strip (text box with callouts) and the graphic strip. The graphic strip is kept as img_0176. The text strip is kept as text nodes (5823 to 5848), so its information survives. The p316 table is a text box, not an image.",
+    "notes": "Text of the annotated strip is in a scrambled order, but nothing is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0176 is the graphic recording strip on p315. The monitor print box above it is text and was kept as paragraphs. No figure was dropped.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.5-filters_passing_noise",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0176 (757x403) is the real graphic recording strip with bars and time stamps, not a decoration. No ribbon, rule or logo is kept as an image.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0176 shows the bar channels of the graphic review recording. It is meaningful, not decoration.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0607|315|5.5-image_section_mapping",
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0176 is the strip under \"In graphic event review recordings\" on p315, inside sec_0607, and it is mapped there. The waveform img_0177 on p316 lies under \"Event Episode Recordings\" and is correctly mapped to sec_0608.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0176 is under 'Event Review Recordings' on p315 and mapped to sec_0607. img_0177 on p316 is under 'Event Episode Recordings' and is mapped to sec_0608, which is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0612|320|5.6-table_content",
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "#/tables/108 (p320) is only the running header bar '24 Event Surveillance | Documenting Events'. It is not a table. The page is blank otherwise.",
+    "notes": "Header bar read as a table. No content is missing. Low per the contract."
+   },
+   "pages_to_check": [
+    320
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/108",
+     "page": 320,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0646|339|5.6-table_content",
+   "section_id": "sec_0646",
+   "page_sampled": 339,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "In #/tables/113 (p339) each category has the right label, but its codes and meanings are joined in one cell each: '90 8A 0B 91' and 'Realtime Delayed Alarm Context (Procedures)'. The page shows one code per line. The header cell above 'Recording type' is empty as in the print. Order of codes and meanings is the same, so each code can still be matched by position.",
+    "notes": "Cells merged but values and order are kept. Low per the lead's scale."
+   },
+   "pages_to_check": [
+    339
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/113",
+     "page": 339,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0650|342|5.6-table_content",
+   "section_id": "sec_0650",
+   "page_sampled": 342,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "tables/114 has 2 columns and 6 rows. I compared each cell with p341. All 5 message names and all explanations match, including the 'Printer' advice in row 2 and the M1116A/M1116B sentence in the last row. Every value is in the right column.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    342
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0652|343|5.6-table_content",
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p344 table tables/115 (3 columns, 15 rows) matches the page. Names, report contents and print instructions are all in the right columns. One cell is merged: the two cells 'Event Episode with up to 5 episodes' and 'Graphic or tabular Event Review' in the Events Reports row are one text. Values and order are kept.",
+    "notes": "Merged cells only, no wrong column. Probably row-span handling. Low by contract."
+   },
+   "pages_to_check": [
+    343
+   ],
+   "tables": []
+  }
+ ]
+}

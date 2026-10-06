@@ -1,0 +1,1861 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0062|290|5.6-table_content",
+   "section_id": "sec_0062",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    290
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0063|304|5.6-table_content",
+   "section_id": "sec_0063",
+   "page_sampled": 304,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    304
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/109",
+     "page": 304,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0064|326|5.6-table_content",
+   "section_id": "sec_0064",
+   "page_sampled": 326,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    326
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0064|324|5.6-table_content",
+   "section_id": "sec_0064",
+   "page_sampled": 324,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    324
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0065|333|5.6-table_content",
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table 7-4 (#/tables/112) has 8 data rows: CRM Number, Agent Registered, Agent Quarantine, Agent CRM Verified, Model Number, Serial Number, System Type, Facility. Each description matches the render. The Yes, No and Not Available values stay in the right cell.",
+    "notes": "The bullets are joined into one line with '•' and the dash is a hyphen. This is cosmetic. Table 7-14 on p349 also matches the render."
+   },
+   "pages_to_check": [
+    333
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/112",
+     "page": 333,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0065|331|5.6-table_content",
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table on p331. It has Figure 7-49 and a list of links.",
+    "notes": "The p328 contents table (#/tables/111, 8 rows) matches the render but has leader dots and a leading dot in the page cells (Low). p328 is not sampled, so not scored here."
+   },
+   "pages_to_check": [
+    331
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0066|355|5.4-hierarchy_level",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Section 7-7 Troubleshooting Trees, Instructions and Tech Tips' is a section-level heading (hierarchy_level 2) printed under Chapter 7. Siblings sec_0065 and sec_0067 are also level 2. On p355 the running footer shows folio 7 - 73 and names this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p355 shows heading 7-7-6 Printer Malfunction and the flowchart Figure 7-65 (#/texts/4739 to #/texts/4780). sec_0066 is a section-level (2) bookmark under Chapter 7; hierarchy_level 2 fits a Section 7-7 title under a chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.4-parent_child",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0059 (Chapter 7, p283-376), which contains p350-p372. child_sections is empty. The numbered sub-headings on p355 are headings inside the section, not separate sections.",
+    "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0066 has parent_section_id sec_0059 (Chapter 7) and no child_sections. The p355 content shows no sub-section bookmark, so a leaf node under the chapter is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.4-page_start_end",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "The section starts on p350, but the page rendering shows 'Section 7-7' and the two running-header lines above the title. The first node in this section is #/texts/4643 (the title only, no 'Section 7-7'). Unlike p355, p356, p360 and p372, p350 has no 'GE Healthcare' header nodes here. The section ends correctly on p372 (#/tables/138), before 7-8 on p373.",
+    "notes": "Only boilerplate (running header and the 'Section 7-7' line) probably sits in the end of sec_0065, which is a Low pattern in the contract. I cannot see sec_0065 nodes in this batch, so the cause is a guess. Impact: none for retrieval. Reported once here, not repeated on the p360 row. verify_claims shows UNSUPPORTED because the page numbers are right; my evidence is the render (header lines and 'Section 7-7' printed on p350) against the first node text, so a human should confirm."
+   },
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p350 the page starts with 'GE Healthcare', 'Direction 5394227, 13' and the title 'Section 7-7'. These lines are not in sec_0066, but the footer line and body nodes are. On p355 heading 7-7-6 and Figure 7-65 are correctly in sec_0066.",
+    "notes": "Only boilerplate (running header lines and chapter title) is at the boundary. Low, as in the approved base. verify_claims sees no boundary signal because it ignores header text. The lead asked to keep FAIL Low, and p350 shows the lines are missing."
+   }
+  },
+  {
+   "key": "sec_0066|355|5.4-hierarchy_path",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 7/Section 7-7 Troubleshooting Trees, Instructions and Tech Tips'. It lists Chapter 7 then the section title, in the right order and matching the printed headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The path of sec_0066 is /Chapter 7/Section 7-7 ...; this matches the printed footer \"Section 7-7\" on p355 (folio 7 - 73).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.4-gaps_duplicates",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section appears once, with 352 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p350 to p372 has nodes. No other section overlaps.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap or overlap seen for sec_0066: the previous section ends before p350 and the next starts after p372. Nodes on p355 appear once, in order (heading 7-7-6 Printer Malfunction and the flowchart Figure 7-65 (#/texts/4739 to #/texts/4780)).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.4-flagged_for_review",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p350, so there is no uncertainty to confirm.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0066 has flagged_for_review false, confidence 1.0 and verification_score 100. The p355 content is placed correctly, so no flag is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.4-structural_source",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p350.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0066 has structural_source toc. The title \"Section 7-7\" is on the page at the bookmarked start p350, so the TOC source is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.6-numbering_scheme",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p355 shows 7 - 73) and numbered headings. The scheme is the same as the neighbouring sections.",
+    "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The printed folio on p355 is \"7 - 73\" (chapter-page style with arabic digits). numbering_scheme arabic is acceptable. No roman folios seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.6-offset_applied",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0, like sec_0065 and sec_0067. The heading is on physical p350 as declared, so physical page equals bookmark page. Folio 7 - 73 on p355 agrees with the order of pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark start p350 shows the Section 7-7 content, and p355 has the footer 7 - 73 in line with its physical position, so no shift is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.6-table_content",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p355 has no table. It shows the flowchart of Figure 7-65, kept as paragraph nodes (#/texts/4863-4901). No table node has page_no 355.",
+    "notes": "Section tables are on p350, p357, p358, p361, p364 and later pages."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table on p355. The flowchart text boxes are paragraphs and no grid is drawn.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    355
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0066|355|5.5-filters_discarding",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p355 has the flowchart of Figure 7-65 (Printer malfunction). img_0337 (805x1267, vector) shows all boxes, diamonds, yes/no labels and loop arrows. Nothing is missing.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p355: Figure 7-65 flowchart; img_0337 (vector) covers it. No meaningful picture on the page is missing from the extracted images.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.5-filters_passing_noise",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "I opened all five vector images of sec_0066: img_0331 (p351), img_0332 (p352), img_0333 (p353), img_0337 (p355) and img_0338 (p356). Each one is a flowchart only, and on all four edges there is no heading, note text, caption, rule or footer. img_0337 holds every box, diamond and yes/no label of Figure 7-65.",
+    "notes": "The raster images on p354, p359 to p363 and p371 are screenshots or photos and were not cropped from page text."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No logo, rule or footer divider is kept as an image for p355. The extracted images are page figures only (Figure 7-65 flowchart; img_0337 (vector) covers it).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|355|5.5-image_section_mapping",
+   "section_id": "sec_0066",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0337 is mapped to sec_0066, under 7-7-6 Printer Malfunction with caption 'Figure 7-65'. Only sec_0066 is on p355.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p355 the figures (Figure 7-65 flowchart; img_0337 (vector) covers it) are mapped to sec_0066. They sit under the sec_0066 headings, and no sibling section shares this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.4-hierarchy_level",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Section 7-7 Troubleshooting Trees, Instructions and Tech Tips' is a section-level heading (hierarchy_level 2) printed under Chapter 7. Siblings sec_0065 and sec_0067 are also level 2. On p360 the running footer shows folio 7 - 78 and names this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p360 shows heading 7-7-15 PC Printer Installation, one photo and two steps (#/texts/4840 to #/texts/4844). sec_0066 is a section-level (2) bookmark under Chapter 7; hierarchy_level 2 fits a Section 7-7 title under a chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.4-parent_child",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0059 (Chapter 7, p283-376), which contains p350-p372. child_sections is empty. The numbered sub-headings on p360 are headings inside the section, not separate sections.",
+    "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0066 has parent_section_id sec_0059 (Chapter 7) and no child_sections. The p360 content shows no sub-section bookmark, so a leaf node under the chapter is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.4-page_start_end",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section ends on p372 with the Group Rights table (#/tables/138) and 7-8 starts on p373. On p360 the heading '7-7-15 PC Printer Installation' (#/texts/4840), Figure 7-67 and steps 1 and 2 all belong to 7-7 and sit between its bookmarks p350-p372.",
+    "notes": "The start-of-section boilerplate issue (p350 header lines and 'Section 7-7') is recorded once on the p355 row, not counted twice."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section 7-7 runs p350 to p372. On p360 the page shows heading 7-7-15 PC Printer Installation, one photo and two steps (#/texts/4840 to #/texts/4844), and these belong to sec_0066. All nodes in sec_0066 are on p350-p372.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.4-hierarchy_path",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 7/Section 7-7 Troubleshooting Trees, Instructions and Tech Tips'. It lists Chapter 7 then the section title, in the right order and matching the printed headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The path of sec_0066 is /Chapter 7/Section 7-7 ...; this matches the printed footer \"Section 7-7\" on p360 (folio 7 - 78).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.4-gaps_duplicates",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section appears once, with 352 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p350 to p372 has nodes. No other section overlaps.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap or overlap seen for sec_0066: the previous section ends before p350 and the next starts after p372. Nodes on p360 appear once, in order (heading 7-7-15 PC Printer Installation, one photo and two steps (#/texts/4840 to #/texts/4844)).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.4-flagged_for_review",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p350, so there is no uncertainty to confirm.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0066 has flagged_for_review false, confidence 1.0 and verification_score 100. The p360 content is placed correctly, so no flag is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.4-structural_source",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p350.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0066 has structural_source toc. The title \"Section 7-7\" is on the page at the bookmarked start p350, so the TOC source is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.6-numbering_scheme",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p360 shows 7 - 78) and numbered headings. The scheme is the same as the neighbouring sections.",
+    "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The printed folio on p360 is \"7 - 78\" (chapter-page style with arabic digits). numbering_scheme arabic is acceptable. No roman folios seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.6-offset_applied",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0, like sec_0065 and sec_0067. The heading is on physical p350 as declared, so physical page equals bookmark page. Folio 7 - 78 on p360 agrees with the order of pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark start p350 shows the Section 7-7 content, and p360 has the footer 7 - 78 in line with its physical position, so no shift is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.6-table_content",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p360 has no table. It shows Figure 7-67 and two numbered steps, all as paragraph nodes. No table node has page_no 360.",
+    "notes": "Section tables are on p350, p357, p358, p361, p364 and later pages."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table on p360, only a photo and two steps.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    360,
+    367
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/134",
+     "page": 367,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Symptom | Cause | Solution\nNoise is coherent -“penlight noise”  pointing down in the picture due to the  fact that the noise is received on all  channels. | The electromagnetic  interference (EMI) from  radio frequencies,  magnetic fields, and  transients in the air. | Test whether the noise is picked up by a probe cable.\nmagnetic fields, and \r\nNoise is a problem on a single probe. Test with another probe. |  | \nNoise is a problem on a single probe  port. |  | Move the LOGIQ™ S8 to another location to see if the noise  persists.",
+     "round_one_text": "Symptom | Cause | Solution\nNoise is coherent -'penlight noise' pointing down in the picture due to the fact that the noise is received on all channels. | The electromagnetic interference (EMI) from radio frequencies, magnetic fields, and transients in the air. | Test whether the noise is picked up by a probe cable.\nNoise is a problem on a single probe. |  | Test with another probe.\nNoise is a problem on a single probe port. |  | Move the LOGIQ™ S8 to another location to see if the noise persists."
+    },
+    {
+     "node_id": "#/tables/135",
+     "page": 367,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0066|360|5.5-filters_discarding",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p360 has one picture: Figure 7-67 (HP 'installation is not complete' screen). img_0340 (640x480) shows the whole screen photo. Nothing is missing.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p360: one HP message photo; img_0340. No meaningful picture on the page is missing from the extracted images.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.5-filters_passing_noise",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The only image on p360 is img_0340, the HP 'installation is not complete' screenshot. The HP logo is part of the screenshot. The five vector flowcharts of sec_0066 on p351 to p356 are clean on all four edges, so no page text is kept as an image.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No logo, rule or footer divider is kept as an image for p360. The extracted images are page figures only (one HP message photo; img_0340).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0066|360|5.5-image_section_mapping",
+   "section_id": "sec_0066",
+   "page_sampled": 360,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0340 is mapped to sec_0066 under 7-7-15 PC Printer Installation. It matches Figure 7-67 above the two steps. Only sec_0066 is on p360.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p360 the figures (one HP message photo; img_0340) are mapped to sec_0066. They sit under the sec_0066 headings, and no sibling section shares this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0067|376|5.6-table_content",
+   "section_id": "sec_0067",
+   "page_sampled": 376,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    376
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0069|377|5.6-table_content",
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    377
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0072|384|5.6-table_content",
+   "section_id": "sec_0072",
+   "page_sampled": 384,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    384
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/143",
+     "page": 384,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0074|390|5.4-hierarchy_level",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Section 8-6 System Software - Installation/Upgrade Procedure' is a section-level heading (hierarchy_level 2) printed under Chapter 8. Siblings sec_0073 and sec_0075 are also level 2. On p390 the running footer shows folio 8 - 14 and names this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p390 shows heading 8-6-6-2 Connectivity, Figure 8-3 screenshot and Tables 8-4 and 8-5 (#/texts/5237 to #/texts/5242, #/tables/145, #/tables/146). sec_0074 is a section-level (2) bookmark under Chapter 8; hierarchy_level 2 fits a Section 8-6 title under a chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.4-parent_child",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0068 (Chapter 8, p377-766), which contains p387-p463. child_sections is empty. The numbered sub-headings on p390 are headings inside the section, not separate sections.",
+    "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has parent_section_id sec_0068 (Chapter 8) and no child_sections. The p390 content shows no sub-section bookmark, so a leaf node under the chapter is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.4-page_start_end",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts on p387 with the heading 'Section 8-6 System Software - Installation/Upgrade Procedure' (#/texts/5159) and 8-6-1 Introduction. It ends on p463 with 8-6-12-13 Power Shut Down and its table (#/tables/193). Section 8-7 starts on p464, so no foreign content is absorbed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section 8-6 runs p387 to p463. On p390 the page shows heading 8-6-6-2 Connectivity, Figure 8-3 screenshot and Tables 8-4 and 8-5 (#/texts/5237 to #/texts/5242, #/tables/145, #/tables/146), and these belong to sec_0074. All nodes in sec_0074 are on p387-p463.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.4-hierarchy_path",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 8/Section 8-6 System Software - Installation/Upgrade Procedure'. It lists Chapter 8 then the section title, in the right order and matching the printed headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The path of sec_0074 is /Chapter 8/Section 8-6 ...; this matches the printed footer \"Section 8-6\" on p390 (folio 8 - 14).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.4-gaps_duplicates",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section appears once, with 878 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p387 to p463 has nodes. No other section overlaps.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap or overlap seen for sec_0074: the previous section ends before p387 and the next starts after p463. Nodes on p390 appear once, in order (heading 8-6-6-2 Connectivity, Figure 8-3 screenshot and Tables 8-4 and 8-5 (#/texts/5237 to #/texts/5242, #/tables/145, #/tables/146)).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.4-flagged_for_review",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p387, so there is no uncertainty to confirm.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has flagged_for_review false, confidence 1.0 and verification_score 100. The p390 content is placed correctly, so no flag is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.4-structural_source",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p387.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has structural_source toc. The title \"Section 8-6\" is on the page at the bookmarked start p387, so the TOC source is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.6-numbering_scheme",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p390 shows 8 - 14) and numbered headings. The scheme is the same as the neighbouring sections.",
+    "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The printed folio on p390 is \"8 - 14\" (chapter-page style with arabic digits). numbering_scheme arabic is acceptable. No roman folios seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.6-offset_applied",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0, like sec_0073 and sec_0075. The heading is on physical p387 as declared, so physical page equals bookmark page. Folio 8 - 14 on p390 agrees with the order of pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark start p387 shows the Section 8-6 content, and p390 has the footer 8 - 14 in line with its physical position, so no shift is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.6-table_content",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p390, Table 8-4 (#/tables/145) has 'PARAMETER | VALUE' and 'COMPUTER NAME' with an empty value. Table 8-5 (#/tables/146) has IP Settings, Enable DHCP 'ON / OFF', IP ADDRESS, SUBNET MASK, DEFAULT GATEWAY and NETWORK SPEED with empty values. Both match the render.",
+    "notes": "Empty value cells are empty in the PDF too (forms to fill in)."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table 8-4 (#/tables/145) and Table 8-5 (#/tables/146) match the page cell by cell. Row labels COMPUTER NAME, Enable DHCP (ON / OFF), IP ADDRESS, SUBNET MASK, DEFAULT GATEWAY and NETWORK SPEED stay in column 1. Blank VALUE cells are blank in the print too.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    390
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/145",
+     "page": 390,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/146",
+     "page": 390,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0074|390|5.5-filters_discarding",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p390 has one picture, Figure 8-3 (TCP/IP settings screen). img_0373 (591x316) shows the whole screen. Nothing is missing.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p390: Figure 8-3 screenshot; img_0373. No meaningful picture on the page is missing from the extracted images.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|390|5.5-filters_passing_noise",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Step text is kept inside vector images of sec_0074. img_0488 (p452, 750x549) has the step line '19.) Press Submit.' at the top edge. img_0497 (p456, 778x549) has the same line '19.) Press Submit.' at the top edge. The image on p390 itself, img_0373, is clean. In both crops the line is also a text node on the page, and the screenshot below it is complete.",
+    "notes": "Graded once for the whole section, on the first sampled page. The crop box probably starts above the screenshot and takes the step line. No bottom edge text: the p452 image ends with the 'Result of ExecutionCompleted' strip and step 20 is not inside it. Impact: cosmetic. Contract: Low."
+   },
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p452 the vector image img_0488 holds the step line '19.) Press Submit.' at its top edge. This is body text, not part of the screenshot. img_0497 on p456 has the same problem. Text stays in the image output as noise.",
+    "notes": "Section-wide finding, graded once on the first sampled row, as in the approved base. Impact is small."
+   }
+  },
+  {
+   "key": "sec_0074|390|5.5-image_section_mapping",
+   "section_id": "sec_0074",
+   "page_sampled": 390,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0373 is mapped to sec_0074 under 8-6-6-2 and above 'Figure 8-3 TCP/IP settings'. Only sec_0074 is on p390.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p390 the figures (Figure 8-3 screenshot; img_0373) are mapped to sec_0074. They sit under the sec_0074 headings, and no sibling section shares this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.4-hierarchy_level",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Section 8-6 System Software - Installation/Upgrade Procedure' is a section-level heading (hierarchy_level 2) printed under Chapter 8. Siblings sec_0073 and sec_0075 are also level 2. On p418 the running footer shows folio 8 - 42 and names this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p418 shows heading 8-6-8-2, a NOTE and a 10-step table (#/texts/5472, #/texts/5473, #/tables/179). sec_0074 is a section-level (2) bookmark under Chapter 8; hierarchy_level 2 fits a Section 8-6 title under a chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.4-parent_child",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0068 (Chapter 8, p377-766), which contains p387-p463. child_sections is empty. The numbered sub-headings on p418 are headings inside the section, not separate sections.",
+    "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has parent_section_id sec_0068 (Chapter 8) and no child_sections. The p418 content shows no sub-section bookmark, so a leaf node under the chapter is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.4-page_start_end",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts on p387 with the heading 'Section 8-6 System Software - Installation/Upgrade Procedure' (#/texts/5159) and 8-6-1 Introduction. It ends on p463 with 8-6-12-13 Power Shut Down and its table (#/tables/193). Section 8-7 starts on p464, so no foreign content is absorbed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section 8-6 runs p387 to p463. On p418 the page shows heading 8-6-8-2, a NOTE and a 10-step table (#/texts/5472, #/texts/5473, #/tables/179), and these belong to sec_0074. All nodes in sec_0074 are on p387-p463.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.4-hierarchy_path",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 8/Section 8-6 System Software - Installation/Upgrade Procedure'. It lists Chapter 8 then the section title, in the right order and matching the printed headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The path of sec_0074 is /Chapter 8/Section 8-6 ...; this matches the printed footer \"Section 8-6\" on p418 (folio 8 - 42).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.4-gaps_duplicates",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section appears once, with 878 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p387 to p463 has nodes. On p418 the 10-step table is present once (#/tables/179) and not repeated.",
+    "notes": "I could not see p419 in this batch. On p419 there is a '13.' node but no '11.' or '12.' nodes, so the step numbers there were probably lost. The step texts are present. Not graded as a defect because the p419 render is not available."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap or overlap seen for sec_0074: the previous section ends before p387 and the next starts after p463. Nodes on p418 appear once, in order (heading 8-6-8-2, a NOTE and a 10-step table (#/texts/5472, #/texts/5473, #/tables/179)).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.4-flagged_for_review",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p387, so there is no uncertainty to confirm.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has flagged_for_review false, confidence 1.0 and verification_score 100. The p418 content is placed correctly, so no flag is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.4-structural_source",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p387.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has structural_source toc. The title \"Section 8-6\" is on the page at the bookmarked start p387, so the TOC source is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.6-numbering_scheme",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p418 shows 8 - 42) and numbered headings. The scheme is the same as the neighbouring sections.",
+    "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The printed folio on p418 is \"8 - 42\" (chapter-page style with arabic digits). numbering_scheme arabic is acceptable. No roman folios seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.6-offset_applied",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0, like sec_0073 and sec_0075. The heading is on physical p387 as declared, so physical page equals bookmark page. Folio 8 - 42 on p418 agrees with the order of pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark start p387 shows the Section 8-6 content, and p418 has the footer 8 - 42 in line with its physical position, so no shift is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.6-table_content",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p418, #/tables/179 holds all 10 steps. I read the full canonical_text. Step 7 is 'Select \"Load the bootable C: and repository Z: partition only\"', step 8 has the R3.x.x notes and 'WARNING!: DO NOT interrupt the software loading', step 9 is 'Approx. 50 minutes later', step 10 is 'type \"exit\"'. This matches the render.",
+    "notes": "Steps 7 to 10 are present in the table text. The third column is empty in the table text because it holds screenshots (img_0402-img_0405). The table node is listed at semantic_order 6162, after the text nodes, but it belongs to 8-6-8-2."
+   },
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Table #/tables/179 starts with a wrong first row. The text \"the system, please remove the key before installing the system software.\" is the end of the NOTE above the table, not a table cell. Steps 1 to 10 after it match the page and keep their order. Step 8 text (R3.x.x note and WARNING) is in the right cell.",
+    "notes": "The NOTE line is also in paragraph #/texts/5473, so it is duplicated and the table has a false header row. Only cosmetic: all values and order are kept, so Low."
+   },
+   "pages_to_check": [
+    418
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/179",
+     "page": 418,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p418: Round one placement regression: text kept but some values in the wrong cell (guard does not catch it). Say clearly if it is still wrong."
+   ]
+  },
+  {
+   "key": "sec_0074|418|5.5-filters_discarding",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The table on p418 has four screenshots, in rows 6, 7, 8 and 10. img_0402, img_0403, img_0404 and img_0405 (all 591 px wide, 304, 232, 83 and 135 px high) match them in order. Nothing is missing.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p418: four screen photos in steps 6, 7, 8 and 10; img_0402 to img_0405. No meaningful picture on the page is missing from the extracted images.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.5-filters_passing_noise",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The four images on p418, img_0402 to img_0405, are the four screenshots in rows 6, 7, 8 and 10 of the table. No table border, step text, logo or rule is inside them.",
+    "notes": "The step line kept in the vector images on p452 and p456 is graded once, on the p390 row."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No logo, rule or footer divider is kept as an image for p418. The extracted images are page figures only (four screen photos in steps 6, 7, 8 and 10; img_0402 to img_0405).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|418|5.5-image_section_mapping",
+   "section_id": "sec_0074",
+   "page_sampled": 418,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0402-img_0405 are mapped to sec_0074. They belong to the 8-6-8-2 table on p418, and the section owns this page. No other section is on p418.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p418 the figures (four screen photos in steps 6, 7, 8 and 10; img_0402 to img_0405) are mapped to sec_0074. They sit under the sec_0074 headings, and no sibling section shares this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.4-hierarchy_level",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Section 8-6 System Software - Installation/Upgrade Procedure' is a section-level heading (hierarchy_level 2) printed under Chapter 8. Siblings sec_0073 and sec_0075 are also level 2. On p428 the running footer shows folio 8 - 52 and names this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p428 shows steps 7 to 10 with two screen photos (#/texts/5606 to #/texts/5609), no heading. sec_0074 is a section-level (2) bookmark under Chapter 8; hierarchy_level 2 fits a Section 8-6 title under a chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.4-parent_child",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0068 (Chapter 8, p377-766), which contains p387-p463. child_sections is empty. The numbered sub-headings on p428 are headings inside the section, not separate sections.",
+    "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has parent_section_id sec_0068 (Chapter 8) and no child_sections. The p428 content shows no sub-section bookmark, so a leaf node under the chapter is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.4-page_start_end",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts on p387 with the heading 'Section 8-6 System Software - Installation/Upgrade Procedure' (#/texts/5159) and 8-6-1 Introduction. It ends on p463 with 8-6-12-13 Power Shut Down and its table (#/tables/193). Section 8-7 starts on p464, so no foreign content is absorbed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section 8-6 runs p387 to p463. On p428 the page shows steps 7 to 10 with two screen photos (#/texts/5606 to #/texts/5609), no heading, and these belong to sec_0074. All nodes in sec_0074 are on p387-p463.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.4-hierarchy_path",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 8/Section 8-6 System Software - Installation/Upgrade Procedure'. It lists Chapter 8 then the section title, in the right order and matching the printed headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The path of sec_0074 is /Chapter 8/Section 8-6 ...; this matches the printed footer \"Section 8-6\" on p428 (folio 8 - 52).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.4-gaps_duplicates",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section appears once, with 878 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p387 to p463 has nodes. No other section overlaps.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap or overlap seen for sec_0074: the previous section ends before p387 and the next starts after p463. Nodes on p428 appear once, in order (steps 7 to 10 with two screen photos (#/texts/5606 to #/texts/5609), no heading).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.4-flagged_for_review",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p387, so there is no uncertainty to confirm.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has flagged_for_review false, confidence 1.0 and verification_score 100. The p428 content is placed correctly, so no flag is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.4-structural_source",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p387.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has structural_source toc. The title \"Section 8-6\" is on the page at the bookmarked start p387, so the TOC source is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.6-numbering_scheme",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p428 shows 8 - 52) and numbered headings. The scheme is the same as the neighbouring sections.",
+    "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The printed folio on p428 is \"8 - 52\" (chapter-page style with arabic digits). numbering_scheme arabic is acceptable. No roman folios seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.6-offset_applied",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0, like sec_0073 and sec_0075. The heading is on physical p387 as declared, so physical page equals bookmark page. Folio 8 - 52 on p428 agrees with the order of pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark start p387 shows the Section 8-6 content, and p428 has the footer 8 - 52 in line with its physical position, so no shift is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.6-table_content",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p428 has no table. It has two screenshots and steps 7 to 10 as paragraph nodes (#/texts/5748-5751). No table node has page_no 428.",
+    "notes": "Nothing to compare on this page."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table on p428, only steps 7 to 10 and two photos.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    428
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0074|428|5.5-filters_discarding",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p428 has two screenshots: the LOGIQ boot screen with a green progress bar, and the blue 'System Imaging Complete' screen. img_0429 (352x211) and img_0430 (404x224) match them. Nothing is missing.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p428: two screen photos; img_0429 and img_0430. No meaningful picture on the page is missing from the extracted images.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.5-filters_passing_noise",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The two images on p428, img_0429 and img_0430, are the boot screen and the 'System Imaging Complete' screen. No heading, step text, logo or rule is inside them.",
+    "notes": "The step line kept in the vector images on p452 and p456 is graded once, on the p390 row."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No logo, rule or footer divider is kept as an image for p428. The extracted images are page figures only (two screen photos; img_0429 and img_0430).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|428|5.5-image_section_mapping",
+   "section_id": "sec_0074",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0429 and img_0430 are mapped to sec_0074. They match the images between steps 6 and 9. Only sec_0074 is on p428.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p428 the figures (two screen photos; img_0429 and img_0430) are mapped to sec_0074. They sit under the sec_0074 headings, and no sibling section shares this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.4-hierarchy_level",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Section 8-6 System Software - Installation/Upgrade Procedure' is a section-level heading (hierarchy_level 2) printed under Chapter 8. Siblings sec_0073 and sec_0075 are also level 2. On p438 the running footer shows folio 8 - 62 and names this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p438 shows heading 8-6-9-6 In case of Display resolution is wrong, steps 1 to 10 (#/texts/5721 to #/texts/5732). sec_0074 is a section-level (2) bookmark under Chapter 8; hierarchy_level 2 fits a Section 8-6 title under a chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.4-parent_child",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0068 (Chapter 8, p377-766), which contains p387-p463. child_sections is empty. The numbered sub-headings on p438 are headings inside the section, not separate sections.",
+    "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has parent_section_id sec_0068 (Chapter 8) and no child_sections. The p438 content shows no sub-section bookmark, so a leaf node under the chapter is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.4-page_start_end",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts on p387 with the heading 'Section 8-6 System Software - Installation/Upgrade Procedure' (#/texts/5159) and 8-6-1 Introduction. It ends on p463 with 8-6-12-13 Power Shut Down and its table (#/tables/193). Section 8-7 starts on p464, so no foreign content is absorbed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section 8-6 runs p387 to p463. On p438 the page shows heading 8-6-9-6 In case of Display resolution is wrong, steps 1 to 10 (#/texts/5721 to #/texts/5732), and these belong to sec_0074. All nodes in sec_0074 are on p387-p463.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.4-hierarchy_path",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 8/Section 8-6 System Software - Installation/Upgrade Procedure'. It lists Chapter 8 then the section title, in the right order and matching the printed headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The path of sec_0074 is /Chapter 8/Section 8-6 ...; this matches the printed footer \"Section 8-6\" on p438 (folio 8 - 62).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.4-gaps_duplicates",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section appears once, with 878 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p387 to p463 has nodes. No other section overlaps.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap or overlap seen for sec_0074: the previous section ends before p387 and the next starts after p463. Nodes on p438 appear once, in order (heading 8-6-9-6 In case of Display resolution is wrong, steps 1 to 10 (#/texts/5721 to #/texts/5732)).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.4-flagged_for_review",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p387, so there is no uncertainty to confirm.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has flagged_for_review false, confidence 1.0 and verification_score 100. The p438 content is placed correctly, so no flag is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.4-structural_source",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p387.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has structural_source toc. The title \"Section 8-6\" is on the page at the bookmarked start p387, so the TOC source is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.6-numbering_scheme",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p438 shows 8 - 62) and numbered headings. The scheme is the same as the neighbouring sections.",
+    "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The printed folio on p438 is \"8 - 62\" (chapter-page style with arabic digits). numbering_scheme arabic is acceptable. No roman folios seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.6-offset_applied",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0, like sec_0073 and sec_0075. The heading is on physical p387 as declared, so physical page equals bookmark page. Folio 8 - 62 on p438 agrees with the order of pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark start p387 shows the Section 8-6 content, and p438 has the footer 8 - 62 in line with its physical position, so no shift is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.6-table_content",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p438 has no table. It has 8-6-9-6 steps 1 to 10 as paragraph nodes (#/texts/5864-5874) and two screenshots. No table node has page_no 438.",
+    "notes": "Nothing to compare on this page."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table on p438, only numbered steps and two screenshots.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    438
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0074|438|5.5-filters_discarding",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p438 has two screenshots: the 'Adjust ClearType text' menu with a red oval, and the ClearType Text Tuner window. img_0453 (163x114) and img_0454 (331x271) match them. Nothing is missing.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p438: two screenshots; img_0453 and img_0454. No meaningful picture on the page is missing from the extracted images.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.5-filters_passing_noise",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The two images on p438, img_0453 and img_0454, are the ClearType menu and the ClearType Text Tuner window. No heading, step text, logo or rule is inside them.",
+    "notes": "The step line kept in the vector images on p452 and p456 is graded once, on the p390 row."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No logo, rule or footer divider is kept as an image for p438. The extracted images are page figures only (two screenshots; img_0453 and img_0454).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|438|5.5-image_section_mapping",
+   "section_id": "sec_0074",
+   "page_sampled": 438,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0453 and img_0454 are mapped to sec_0074, under 8-6-9-6 steps 7 and 9. Only sec_0074 is on p438.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p438 the figures (two screenshots; img_0453 and img_0454) are mapped to sec_0074. They sit under the sec_0074 headings, and no sibling section shares this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.4-hierarchy_level",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "'Section 8-6 System Software - Installation/Upgrade Procedure' is a section-level heading (hierarchy_level 2) printed under Chapter 8. Siblings sec_0073 and sec_0075 are also level 2. On p462 the running footer shows folio 8 - 86 and names this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p462 shows heading 8-6-12-12 Volume Navigation (Option), a NOTE and a 4-column table (#/texts/5978, #/texts/5979, #/tables/192). sec_0074 is a section-level (2) bookmark under Chapter 8; hierarchy_level 2 fits a Section 8-6 title under a chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.4-parent_child",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0068 (Chapter 8, p377-766), which contains p387-p463. child_sections is empty. The numbered sub-headings on p462 are headings inside the section, not separate sections.",
+    "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has parent_section_id sec_0068 (Chapter 8) and no child_sections. The p462 content shows no sub-section bookmark, so a leaf node under the chapter is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.4-page_start_end",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts on p387 with the heading 'Section 8-6 System Software - Installation/Upgrade Procedure' (#/texts/5159) and 8-6-1 Introduction. It ends on p463 with 8-6-12-13 Power Shut Down and its table (#/tables/193). Section 8-7 starts on p464, so no foreign content is absorbed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Section 8-6 runs p387 to p463. On p462 the page shows heading 8-6-12-12 Volume Navigation (Option), a NOTE and a 4-column table (#/texts/5978, #/texts/5979, #/tables/192), and these belong to sec_0074. All nodes in sec_0074 are on p387-p463.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.4-hierarchy_path",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 8/Section 8-6 System Software - Installation/Upgrade Procedure'. It lists Chapter 8 then the section title, in the right order and matching the printed headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The path of sec_0074 is /Chapter 8/Section 8-6 ...; this matches the printed footer \"Section 8-6\" on p462 (folio 8 - 86).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.4-gaps_duplicates",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section appears once, with 878 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p387 to p463 has nodes. No other section overlaps.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap or overlap seen for sec_0074: the previous section ends before p387 and the next starts after p463. Nodes on p462 appear once, in order (heading 8-6-12-12 Volume Navigation (Option), a NOTE and a 4-column table (#/texts/5978, #/texts/5979, #/tables/192)).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.4-flagged_for_review",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p387, so there is no uncertainty to confirm.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has flagged_for_review false, confidence 1.0 and verification_score 100. The p462 content is placed correctly, so no flag is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.4-structural_source",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p387.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0074 has structural_source toc. The title \"Section 8-6\" is on the page at the bookmarked start p387, so the TOC source is supported.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.6-numbering_scheme",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p462 shows 8 - 86) and numbered headings. The scheme is the same as the neighbouring sections.",
+    "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The printed folio on p462 is \"8 - 86\" (chapter-page style with arabic digits). numbering_scheme arabic is acceptable. No roman folios seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.6-offset_applied",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0, like sec_0073 and sec_0075. The heading is on physical p387 as declared, so physical page equals bookmark page. Folio 8 - 86 on p462 agrees with the order of pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The bookmark start p387 shows the Section 8-6 content, and p462 has the footer 8 - 86 in line with its physical position, so no shift is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.6-table_content",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p462, #/tables/192 has the header 'Steps | Expected Outcomes | Results (Pass/Fail/NA) | Comments' and one row. The steps cell keeps all bullets in order, from 'Make sure that Volume Navigation is assigned to the BT key' to 'verify that the environmental indicator ... is responding'. Expected outcome and 'Pass / Fail / NA' match the render.",
+    "notes": "The real table has one big row, so the single row is correct. The photos inside the cell are separate images."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table #/tables/192 has the 4 headers Steps, Expected Outcomes, Results (Pass/Fail/NA), Comments. The bullet steps are in column 1, \"The environmental indicator on the screen is responding.\" is in column 2 and \"Pass / Fail / NA\" is in column 3. Comments is blank like the print.",
+    "notes": "The small green indicator picture in column 2 is not extracted. See 5.5-filters_discarding."
+   },
+   "pages_to_check": [
+    462
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/192",
+     "page": 462,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0074|462|5.5-filters_discarding",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "p462 has five pictures in the table: BT Key screen, receiver cable photo, transmitter photo, 'all cables connected' photo, and a small screenshot of the green environmental indicator (with GE logo) in the Expected Outcomes cell. images.json lists only four for p462: img_0498-img_0501. The indicator screenshot is missing.",
+    "notes": "The cell text says 'The environmental indicator on the screen is responding', so the meaning is in the text. The missing picture is small (about 170x50 pt). Probably dropped by a small-image filter. Low, because it is a small image whose meaning is stated in the text. I am not fully sure it is small enough to count as an icon."
+   },
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p462 five pictures are in the table: BT key screenshot, cable photo, hand photo, ports photo and a small green indicator picture in Expected Outcomes. Only four are extracted (img_0498 to img_0501). The green indicator picture is not extracted.",
+    "notes": "Small icon-like picture. Its meaning is in the text \"The environmental indicator on the screen is responding.\", so Low."
+   }
+  },
+  {
+   "key": "sec_0074|462|5.5-filters_passing_noise",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The four extracted images on p462 are the BT Key screen (img_0501), the receiver cable photo (img_0498), the transmitter photo (img_0499) and the cables-connected photo (img_0500). No logo, rule or step text is inside them.",
+    "notes": "The step line kept in the vector images on p452 and p456 is graded once, on the p390 row."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No logo, rule or footer divider is kept as an image for p462. The extracted images are page figures only (five pictures in the table; only four extracted (img_0498 to img_0501)).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0074|462|5.5-image_section_mapping",
+   "section_id": "sec_0074",
+   "page_sampled": 462,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0498-img_0501 are mapped to sec_0074, under 8-6-12-12 Volume Navigation. They match the pictures in the steps cell. Only sec_0074 is on p462.",
+    "notes": "The indicator screenshot is not extracted; that is graded once, in the discarding row."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p462 the figures (five pictures in the table; only four extracted (img_0498 to img_0501)) are mapped to sec_0074. They sit under the sec_0074 headings, and no sibling section shares this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0075|464|5.6-table_content",
+   "section_id": "sec_0075",
+   "page_sampled": 464,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    464
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0079|478|5.6-table_content",
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    478
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0080|484|5.6-table_content",
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    484
+   ],
+   "tables": []
+  }
+ ]
+}

@@ -1,0 +1,564 @@
+{
+ "findings": [
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 \"ECG Reports\" is printed as a section heading under its chapter. hierarchy_level matches the bookmark nesting: level 3 under sec_0667 \"Sample Report Printouts\".",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-hierarchy_level"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0671 lists its parent in parent_section_id and the parent lists sec_0671 in child_sections. sec_0671 has no children and the page shows no sub-headings with their own bookmark.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-parent_child"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 the running header \"27 Printing Patient Reports\" and \"Sample Report Printouts\" (#/texts/6659, #/texts/6660) are kept as paragraph nodes in sec_0671. The heading, report labels, paragraph and table are owned correctly. The next heading \"Other Reports\" (sec_0672) is not absorbed. All of them are on pages that belong to this section, so no boundary is crossed.",
+   "notes": "Page furniture is kept as paragraph nodes. This is not a boundary error, so it is not graded as FAIL. If the lead wants it counted, Low would apply.",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-page_start_end"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path ends with \"ECG Reports\" and the earlier names match the parent and chapter headings and running headers seen on p354.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-hierarchy_path"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered p354: the content of sec_0671 follows the previous sibling and ends where the next sibling heading starts. No page content is missing or repeated between the neighbouring sections.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-gaps_duplicates"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0671 has flagged_for_review false, verification_score 100 and an empty verification_reason. The page rendering supports this: the heading is where the bookmark says.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-flagged_for_review"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" and the heading \"ECG Reports\" is visible on the rendered page, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-structural_source"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folios are arabic numerals (for example the printed folio on p354), which matches numbering_scheme \"arabic\".",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-numbering_scheme"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading \"ECG Reports\" is found on the physical page given by page_start (p354). The printed folio differs from the physical page number, but the bookmarks already use physical pages.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-offset_applied"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 the table #/tables/118 has 3 columns and 8 data rows. I compared it with the render cell by cell. The 12-Lead ECG group has 5 formats and Multi-lead ECG has 3. Each format has the right paper sizes, for example '12X1 portrait' is 'A4 and letter only'. The group label is on the first row of each group.",
+   "notes": "Same as the approved v2.11 PASS. The re-read table keeps all values.",
+   "confidence": 0.92,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every meaningful picture on the sampled page(s) is extracted: On p354 the sample ECG printout (img_0213, vector) is mapped to sec_0671. It matches the rendered picture with the labels Patient information, Numeric block and Wave area. No visible figure is missing.",
+   "notes": "verify_claims reports a raster figure not in exports/images_v1.json. I checked images_v1.json: the same page region is there as a vector-origin image of the same section, and its PNG in input/images matches the rendered page. So the figure is not lost.",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-filters_discarding"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images for sec_0671 are real figures. No rule, logo, footer divider or other decorative element was kept as an image.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-filters_passing_noise"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 the sample ECG printout (img_0213, vector) is mapped to sec_0671. It matches the rendered picture with the labels Patient information, Numeric block and Wave area.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-image_section_mapping"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p359 \"29 IntelliBridge EC10 Module\" is a chapter opener. hierarchy_level 1 is correct.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_level"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is null (top level). Children sec_0683 to sec_0689 are level 2 and cover pp360-362 in order. p362 shows \"Language Conflict with External Device Drivers\", which is the last child sec_0689.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-parent_child"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0682 starts at the chapter title on p359 and page_end 362 matches the last child, sec_0689, whose text ends the chapter on p362. Its own nodes are the title, intro text, legend table and figure labels from p359 only. sec_0683 starts on p360, so no neighbour content is absorbed.",
+   "notes": "Nodes \"29\" (6818/6819) and folio \"347\" (6830) are boilerplate on its own page.",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-page_start_end"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/IntelliBridge EC10 Module\" matches the chapter title on p359.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_path"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p359 content appears once in sec_0682 and the next section starts on p360. The previous section sec_0681 ends on p358. No gap or overlap seen.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-gaps_duplicates"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. The chapter title is clearly visible on p359, so unflagged is right.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-flagged_for_review"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source \"toc\" is supported by the p359 chapter title matching the bookmark.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-structural_source"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio on p359 is \"347\" and on p362 is \"350\", arabic. numbering_scheme \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-numbering_scheme"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 359 is the physical page of the chapter opener (printed folio 347). offset_applied 0 is consistent with physical page numbering.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-offset_applied"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p359 the legend table #/tables/120 has 5 rows, a to e: module name, setup indicator LED, setup/data viewing key, connection status LED, external device cable connector. Every letter has the right label in the same order as the render. The first row reads 'a a module name', so the letter is repeated.",
+   "notes": "Same as the approved v2.11 PASS. The table is back to the original text, so the repeated letter 'a a' stays. It is cosmetic.",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p359 has one figure, the IntelliBridge EC10 module drawing with arrows a to e. It is kept as img_0218 (vector, 292x313) with all five arrows. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_discarding"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only img_0218 is mapped to sec_0682, and it is the real module drawing. The chapter ribbon is not kept as an image.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_passing_noise"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0218 is on the chapter opener p359 under the intro paragraph and is mapped to sec_0682. Mapping is correct. No figure on p362 needs mapping.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-image_section_mapping"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p363 \"30 VueLink Modules\" is a chapter opener. hierarchy_level 1 is correct.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_level"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is null. Children sec_0691 to sec_0697 are level 2 and cover pp364-366 in order. The p366 bullet belongs to the last child sec_0697.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-parent_child"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0690 starts at the chapter title on p363. page_end 366 matches the last child sec_0697, which ends on p366 with one bullet. Its own nodes (6910 to 6935, tables 122 and 123) are all from p363, so no neighbour content is absorbed.",
+   "notes": "Nodes \"30\" (6910/6911), folio \"351\" (6935) and \"60x145\" (6918, not visible) are boilerplate.",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-page_start_end"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/VueLink Modules\" matches the chapter title on p363.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_path"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p363 content appears once in sec_0690. The previous chapter ends on p362 and sec_0691 starts on p364. No gap or overlap seen.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-gaps_duplicates"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. The chapter title is clearly visible on p363, so unflagged is right.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-flagged_for_review"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source \"toc\" is supported by the p363 chapter title matching the bookmark.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-structural_source"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are 351 (p363) and 354 (p366), arabic. numbering_scheme \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-numbering_scheme"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 363 is the physical page of the chapter opener (printed folio 351). offset_applied 0 is consistent with physical page numbering.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-offset_applied"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p363 #/tables/122 has 5 columns: Module, Type, Max Wave, Max numeric, External Devices. Auxiliary is A, 1, 2. Ventilator, Gas Analyzer, Anesthesia Machine and Auxiliary Plus are B, 2, 6. Max Wave and Max numeric are separate columns and each value is in the right one. Legend #/tables/123 (a to g) has the right labels, but it repeats the letters 'a a' and 'c c'.",
+   "notes": "CASE: still fixed. The base defect (FAIL Medium, Max Wave and Max numeric merged) was in #/tables/122. That table keeps the re-read, so the columns stay separate. #/tables/123 is back to the original text. Its only fault is the repeated letters, which is cosmetic (BUG-008).",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p363 has one figure, the VueLink module drawing with arrows a to g. It is kept as img_0221 (vector, 428x305) showing all seven arrows. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_discarding"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only img_0221 is mapped to sec_0690, and it is the real module drawing. The chapter ribbon is not kept as an image.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_passing_noise"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0221 is on the chapter opener p363 above the text \"The device labels (b)...\" and is mapped to sec_0690. Mapping is correct.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-image_section_mapping"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p393 #/tables/131 has 6 columns and 3 rows. The first header cell is blank in the render and in the node. Part No. is M1669A, M1668A, M1667A, M1663A, M1665A. Length is 2.7m, 2.7m, 2.7m, 2.0m, 2.7m. Each value is under the right cable-set column.",
+   "notes": "",
+   "confidence": 0.93,
+   "section_id": "sec_0758",
+   "page_sampled": 393,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p402 #/tables/155 has two cell errors. First, the last sensor row of the Oxi group has Product Number 'Dura-Y D-YS' and Description 'Y-sensor' in the render. The node puts both in the first cell ('Dura-Y D-YS Y-sensor') and leaves Description blank. Second, the Comments cell of OxiCliq A stops at 'Option A02 : Must use adapter cables'. The render continues 'M1943NL and OC-3 adapter cable.' and that tail is not in the node.",
+   "notes": "Not in the approved base. Same as round one. A value is in the wrong column and a comment tail is lost, so Medium. Row-spanning comments are also split across rows (for example M1943A and M1943AL), which alone would be Low. Probably BUG-008 (cell grouping of tall cells).",
+   "confidence": 0.88,
+   "section_id": "sec_0781",
+   "page_sampled": 402,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p412. The render is a blank page with only the running header and the folio. The only table of this section, #/tables/177, is on p411.",
+   "notes": "",
+   "confidence": 0.95,
+   "section_id": "sec_0798",
+   "page_sampled": 412,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p428 #/tables/182 matches the render cell by cell (M1014A to M1116B, weights and sizes in the right columns). But it continues #/tables/181 from p427 in the same section, and #/tables/181 is shifted. M3012A has no name in the node and its '1.2 lb' sits in the M3014A row. The M3014A and M3015A values are moved down one row. M1012A 'Cardiac Output' has no weight and the 225 g is under 'Temperature Module'. The M8026A name is on the M8025A row.",
+   "notes": "Not in the approved base. The page_sampled table (p428) is correct. The defect is in the first half of the same table on p427, so values sit under the wrong product (probably BUG-008, tall cells grouped wrongly). verify_claims expects Low (SEVERITY) because it only sees the p428 half. I kept Medium because #/tables/181 in the same section really has values under the wrong product. Lead: downgrade to PASS if only p428 counts.",
+   "confidence": 0.65,
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p435 tables #/tables/198 to #/tables/202 match the render (M8023A, MMS M3001A, D80, Docking Station and Network/Parallel/PS/2 rows are right). But on p434 #/tables/197 (X2 specifications) loses a line. The 'Sounds' row ends 'QRS tone, or SpO2 modulation tone'. The render also shows '4 different alarm sounds' and that text is not in the node or elsewhere in the section.",
+   "notes": "Not in the approved base. Round one gave PASS but did not catch this line. The table is back to the original text, so the fix does not change it. Words are lost and not anywhere else, so Medium (probably BUG-008). Lead: please confirm.",
+   "confidence": 0.78,
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p442 #/tables/213 (ECG Bandwidth) keeps all values in the right rows. But the label 'when the ECG is transmitted from a telemetry device via short range radio' is split in two. The first half is on the Extended Monitoring Mode row and the second half on the Monitoring Mode row. #/tables/214 and #/tables/215 look right in the text.",
+   "notes": "Cell split, values and order kept, so Low (probably BUG-008, tall cell read as two rows). The p442 render is not in this batch, so I used the node text and the round-one reading.",
+   "confidence": 0.7,
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p449 #/tables/224 and #/tables/225 look right in the node text. Systolic, Diastolic and Mean each have Adult, Pedi and Neo ranges. The adjustment text '10 to 30 mmHg: 2 mmHg (0.5 kPa) >30 mmHg: 5 mmHg (1 kPa)' is on the first row. Overpressure has Adult, Pedi and Neo rows and 'not user adjustable' is on Adult.",
+   "notes": "The p449 render is not in this batch. I used the node text and the round-one reading, so confidence is lower.",
+   "confidence": 0.68,
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p382. The render shows a battery compartment picture, text and the heading 'Battery Power Indicators'. The only table of this section, #/tables/129, is on p383.",
+   "notes": "",
+   "confidence": 0.93,
+   "section_id": "sec_0733",
+   "page_sampled": 382,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p383 #/tables/129 has 3 columns and 4 data rows. Green is 'battery power is > 90%' under mains. Yellow is 'batteries charging (battery power < 90%)' under mains. Red, flashing is blank under mains and 'less than 10 minutes power remaining' under battery. Red, flashes intermittently is 'battery malfunction' in both columns. The blank cells are blank in the render too.",
+   "notes": "",
+   "confidence": 0.92,
+   "section_id": "sec_0733",
+   "page_sampled": 383,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p396 #/tables/140 (3-Electrode Cable Sets) has 4 columns and 5 rows. OR is 1.0m, M1601A, M1611A. ICU Clip non-shielded appears twice: 0.45m, M1608A, M1618A and 0.7m, M1609A, M1619A. Every value matches the render and is in the right column. The other tables on the page are not nodes of this section.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0769",
+   "page_sampled": 396,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p403 #/tables/156 (M1943NL, OC-3) and #/tables/157 (Masimo sensors) match the render. Examples: LNOP YI is 'n/a', LNCS Neo-L is 989803148271 and LNOP NeoPt-L is 989803140301. The group rows (MASIMO LNOP reusable and so on) are kept. In #/tables/157 the header 'Product Number' is split over two rows, but all values are in the right columns.",
+   "notes": "The split header is only cosmetic. Same as round one.",
+   "confidence": 0.88,
+   "section_id": "sec_0781",
+   "page_sampled": 403,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p413 and the page is outside this section (pages 411 to 412). The render shows the start of chapter 38 with text only. The section table #/tables/177 is on p411 and matches: 'Battery Charger and Conditioner ... | M8043A' and 'Size adapter ... | 4512 610 17451'.",
+   "notes": "",
+   "confidence": 0.93,
+   "section_id": "sec_0798",
+   "page_sampled": 413,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table of this section on p428. The render shows the table of sec_0815 at the top, then the heading 'Environmental Specifications' and two paragraphs. The section tables start on p429.",
+   "notes": "",
+   "confidence": 0.92,
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p429 tables #/tables/183 to #/tables/186 match the render. MP40-MP90 temperature is 0 to 35C and -20 to 60C. MP60/MP70 with J35 is 0 to 30C. MP20/MP30 has three rows. Humidity and altitude rows are right. The X2 and M8023A table has all rows including IP32. Each value is in the right Condition and Range column.",
+   "notes": "",
+   "confidence": 0.92,
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p431 tables #/tables/191, #/tables/192 and #/tables/193 match the render. M1116B has humidity 95% max at 40C and 65C and altitude up to 3048m. M8026A and M8025A have the same temperature, humidity and altitude rows with the right Operating and Storage values. Ranges such as '-500 to 4.600m' are kept. No value is under a wrong column.",
+   "notes": "No round-one draft; graded fresh.",
+   "confidence": 0.9,
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p436 #/tables/203 matches the render. Dual MIB/RS232, USB, ECG Output (signal gain 320 to 3200, bandwidth 1 to 80 Hz, signal delay 20 ms and 30 ms), Marker Input and both Nurse Call Relay blocks are in the right rows and columns. Quote marks and the symbols in 'K Ω ± 20%' are kept.",
+   "notes": "",
+   "confidence": 0.9,
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-table_content"
+  },
+  {
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p443 #/tables/216 has only two rows for 'Vent Tachycardia 2 mV pp, 195 bpm': Gain 0.5 and Gain 1.0. The 206 bpm test has three rows (Gain 0.5, 1.0 and 2.0). So the 'Gain 2.0' row for the 195 bpm test is probably missing. The test name also reads 'mVp Vpp' instead of 'mV pp'.",
+   "notes": "The p443 render is not in this batch. I rely on the node text and the round-one reading of the page. The table is back to the original text. A data row is lost, so Medium (probably BUG-008). Please check the page.",
+   "confidence": 0.6,
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.6-table_content"
+  }
+ ]
+}

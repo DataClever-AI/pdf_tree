@@ -1,0 +1,914 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 419 shows the title as a top heading with the running head of the chapter. hierarchy_level 2 fits a bookmark under the level 1 chapter 'Replacement Procedures'. Neighbours sec_0057 and sec_0059 are also level 2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to the chapter 'Replacement Procedures' (level 1), which is the right chapter for this title. child_sections is empty and no sub-bookmark is visible in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p419 the heading 'CRU Replacement' and the 'Contents in This Section' list start the section (nodes #/texts/4542-4548). The last page p424 ends with 'Remove Procedure' and a blank area. Next section sec_0059 starts on p425, so boundaries are right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Replacement Procedures/CRU Replacement. This matches the chapter running head and the section title seen on the rendered pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section runs p419-p424. The previous section ends on the page before and the next one starts on the page after. No gap, overlap or duplicated heading node was seen in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on the start page, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title and level agree with the embedded bookmark and the printed heading, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p419 is 8-23, which is a chapter-page number built from arabic digits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section title is on physical page 419, the same as page_start. Neighbouring sections also use offset 0.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p419 is a chapter opening page and has no table. Table 8-6 on p424 (#/tables/111) matches the page. Header No. / Steps / Corresponding Graphic is right, and steps 1-3 keep their text and order ('Push down the button...', 'Insert the Battry (1-4 pieces).', 'Lock the Big Battery Box.'). Picture cells are empty, which is right.",
+   "notes": "Tables on p420 and p423 and Table 8-3 and 8-4 on p421-p422 were not rendered in this batch. Table 8-3 and 8-4 show only as paragraph nodes (#/texts/4561-4566, 4572-4576), with no table node. The step text survives. A human should check p421-p422. If confirmed, probably Low.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p419 has only the chapter title and a bulleted list. No diagram or screenshot is visible, and none was extracted for this page. The p424 table pictures were kept (img_0344, img_0345).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for p419. The p424 images img_0344 and img_0345 are the two step photos in Table 8-6, not logos or rules.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 419,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p419, and no extraction for it. The two images on p424 (img_0344, img_0345) are mapped to sec_0058, which owns p424.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 436 shows the title as a top heading with the running head of the chapter. hierarchy_level 2 fits a bookmark under the level 1 chapter 'Renewal Parts'. Neighbours sec_0062 and sec_0064 are also level 2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to the chapter 'Renewal Parts' (level 1), which is the right chapter for this title. child_sections is empty and no sub-bookmark is visible in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p436 shows heading 'Accessories and Kits' and Table 9-4, owned by sec_0063 (nodes #/texts/4646-4649, #/tables/117). The section starts on p430 with 'Renewal Parts Lists' and ends on p444 with the last row of Table 9-6. sec_0064 starts on p445, so boundaries are right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Renewal Parts/Renewal Parts Lists. This matches the chapter running head and the section title seen on the rendered pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section runs p430-p444. The previous section ends on the page before and the next one starts on the page after. No gap, overlap or duplicated heading node was seen in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on the start page, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title and level agree with the embedded bookmark and the printed heading, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p436 is 9-10, which is a chapter-page number built from arabic digits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section title is on physical page 430, the same as page_start. Neighbouring sections also use offset 0.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 9-4 on p436 (#/tables/117) has 6 columns: Item, Part Number, Part Name, Replaced By, Corresponding graphic, Qty. All 5 rows (1, 4, 5, 6, 7) match the page cell by cell, for example '5144997-S | LOGIQ e R9 Cable kits | | | 1'. Values stay in the right columns. The Table 9-6 last page p444 also matches (items 60-73).",
+   "notes": "Table 9-3 on p433 (#/tables/114) has row 2 '5936794-S | LOGIQ e R9 Power Box | | | 1 | ' where the Qty 1 sits in the graphic column. Page 433 was not rendered in this batch. A human should check it. If confirmed it would be Medium.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p436 shows 4 product photos in the graphic column (cable kit, battery pack, adapter, logo). The 4 images img_0357-img_0360 cover them. Row 7 has an empty graphic cell in the PDF too. No relevant picture is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 4 extracted images (208x203, 152x259, 181x246, 195x111 px) are product photos in Table 9-4. They are content, not logos or divider lines.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0063",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 4 photos on p436 are mapped to sec_0063. The page is inside sec_0063 and no sibling section starts on p436, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 452 shows the title as a top heading with the running head of the chapter. hierarchy_level 2 fits a bookmark under the level 1 chapter 'Care and Maintenance'. Neighbours sec_0065 and sec_0067 are also level 2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to the chapter 'Care and Maintenance' (level 1), which is the right chapter for this title. child_sections is empty and no sub-bookmark is visible in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p452 continues 'Software Wiping to Erase Patient Data (continued)' with steps 8 and 9 (nodes #/texts/4746-4754). The section starts on p447 with its title and ends on p456 with 'Logon'. The page headers on odd pages p453 and p455 still say 'Protecting Health Information'. sec_0067 starts on p457.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Care and Maintenance/Protecting Health Information. This matches the chapter running head and the section title seen on the rendered pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section runs p447-p456. The previous section ends on the page before and the next one starts on the page after. No gap, overlap or duplicated heading node was seen in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on the start page, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title and level agree with the embedded bookmark and the printed heading, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p452 is 10-8, which is a chapter-page number built from arabic digits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section title is on physical page 447, the same as page_start. Neighbouring sections also use offset 0.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p452 has no table. Table 10-2 'Logon' on p456 (#/tables/127) matches the page. Header 'Preset Parameter | Description'. Row 'Auto Logon' keeps both bullets (joined with a bullet sign on one line) and row 'Common Network Login' keeps 'User ID' and 'Password' text. Values and order are kept.",
+   "notes": "Table 10-1 on p454 (#/tables/126) was not rendered in this batch. Its last cell ends at 'perform advanced operations' without a full stop, which is probably a small loss. A human may check p454.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p452 shows two screenshots, Figure 10-8 (Confirmation) and Figure 10-9 (Wiping progress). Both are extracted as img_0385 (600x350) and img_0386 (650x345). Nothing relevant is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only two images are kept on p452, and both are the figure screenshots. No logo, rule or other noise was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 452,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0385 and img_0386 are the screenshots for Figures 10-8 and 10-9 on p452. They are mapped to sec_0066, which owns p452 with no sibling on the page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 460 shows the title as a top heading with the running head of the chapter. hierarchy_level 2 fits a bookmark under the level 1 chapter 'Care and Maintenance'. Neighbours sec_0068 and sec_0070 are also level 2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to the chapter 'Care and Maintenance' (level 1), which is the right chapter for this title. child_sections is empty and no sub-bookmark is visible in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p460 starts with the title 'Maintenance task schedule' and 'How often should maintenance tasks be performed?'. p461 shows the table continued and two NOTE lines, then ends. sec_0070 starts on p462, so boundaries are right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Care and Maintenance/Maintenance task schedule. This matches the chapter running head and the section title seen on the rendered pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section runs p460-p461. The previous section ends on the page before and the next one starts on the page after. No gap, overlap or duplicated heading node was seen in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on the start page, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title and level agree with the embedded bookmark and the printed heading, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p460 is 10-16, which is a chapter-page number built from arabic digits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section title is on physical page 460, the same as page_start. Neighbouring sections also use offset 0.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 10-3 on p460 (#/tables/128) has 6 columns and 5 rows. Every cell matches the page: 'Clean Probes | •* | | | | * or before each use', 'Inspect AC Mains Cable' has • in Monthly and the Notes text 'Mobile Ultrasound system: Check Weekly'. The continued table on p461 (#/tables/129) has 7 rows, with 'See Notes' in the QA column and the right Notes text. Dots stay in the right columns.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p460 and p461 have no picture, screenshot or diagram. The pipeline extracted no image for them, which is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for this section, so no logo or rule was kept as content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 460,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no visual on p460 or p461 and images.json lists none for sec_0069. The absence is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 shows the title as a top heading with the running head of the chapter. hierarchy_level 2 fits a bookmark under the level 1 chapter 'Care and Maintenance'. Neighbours sec_0070 and sec_0072 are also level 2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to the chapter 'Care and Maintenance' (level 1), which is the right chapter for this title. child_sections is empty and no sub-bookmark is visible in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p467 holds only the continued Table 10-7 (steps 5-10) under the running head 'System maintenance', and belongs to this section. It starts on p466 with the title and ends on p477 with the Figure 10-14 caption and two NOTE lines. sec_0072 starts on p478.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Care and Maintenance/System maintenance. This matches the chapter running head and the section title seen on the rendered pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section runs p466-p477. The previous section ends on the page before and the next one starts on the page after. No gap, overlap or duplicated heading node was seen in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on the start page, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title and level agree with the embedded bookmark and the printed heading, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p467 is 10-23, which is a chapter-page number built from arabic digits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section title is on physical page 466, the same as page_start. Neighbouring sections also use offset 0.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 10-7 continued on p467 (#/tables/136) has Step | Item | Description and steps 5-10. Each row matches the page: 5 Displays, 6 InSite, 7 Review Error Logs, 8 Diagnostics 'Optional.', 9 Presets, 10 Image Archive. Row 6 keeps its two bullets in the Description cell. No value moved to another column. The p466 part (#/tables/135, steps 1-4) also matches, with the three bullets in step 3.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p467 holds only the table, with no picture. For this section the figure on p476 (flow chart) is kept as vector image img_0391, and the screenshots on p474-p475 as img_0389 and img_0390.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section images are two screenshots (1089x685, 1091x686) and one vector flow chart. None is a logo, rule or footer divider.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 467,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p467 has no visual. The images of this section (img_0389, img_0390 on p474-p475, img_0391 on p476) are all mapped to sec_0071, which owns those pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 481 shows the title as a top heading with the running head of the chapter. hierarchy_level 2 fits a bookmark under the level 1 chapter 'Care and Maintenance'. Neighbours sec_0071 and sec_0073 are also level 2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to the chapter 'Care and Maintenance' (level 1), which is the right chapter for this title. child_sections is empty and no sub-bookmark is visible in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p481 shows 'Leakage current limits' with WARNING and CAUTION boxes and Tables 10-14 and 10-15 (nodes #/texts/5031-5049). It sits inside the range p478-p489. The section starts on p478 with 'Electrical safety tests' and ends on p489 with Table 10-19. sec_0073 starts on p490.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Care and Maintenance/Electrical safety tests. This matches the chapter running head and the section title seen on the rendered pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section runs p478-p489. The previous section ends on the page before and the next one starts on the page after. No gap, overlap or duplicated heading node was seen in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on the start page, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title and level agree with the embedded bookmark and the printed heading, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p481 is 10-37, which is a chapter-page number built from arabic digits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section title is on physical page 478, the same as page_start. Neighbouring sections also use offset 0.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 10-14 on p481 (#/tables/144) matches: header Country | Normal Condition | Open Ground | Reverse Polarity | Open Neutral; row 'All (Except USA & Canada)' 0.1 / 0.5 / 0.5 / 0.5 mA; row 'USA & Canada' 0.1 / 0.3 / 0.3 / 0.3 mA. Table 10-15 (#/tables/145) matches: All, 0.1, 0.5, 0.5, 0.5 and *Mains Applied 5.0 mA. Values are in the right columns. The p489 Table 10-19 (#/tables/149) also matches, including the empty Measurement column.",
+   "notes": "Tables on p482 (#/tables/146, 147) and p486 (#/tables/148) were not rendered. Table 10-16 (#/tables/146) has the same values as Table 10-15, which a human may want to check on p482.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p481 shows a WARNING triangle icon, a CAUTION triangle icon and a lock-out tag picture. Only the tag picture is extracted (img_0393, 157x257). The two small hazard icons are not extracted.",
+   "notes": "The words WARNING and CAUTION are kept as text nodes (#/texts/5033, 5047), so the meaning is not lost. Impact is cosmetic. Grade follows the small-icon pattern. The human may decide this is a PASS.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image kept on p481 is img_0393, the lock-out tag picture beside steps 1-6. It illustrates the procedure and is not a logo or divider.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0072",
+   "page_sampled": 481,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0393 (lock-out tag) is mapped to sec_0072. p481 belongs to sec_0072 and has no sibling section, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 472 shows the title as a top heading with the running head of the chapter. hierarchy_level 2 fits a bookmark under the level 1 chapter 'Care and Maintenance'. Neighbours sec_0070 and sec_0072 are also level 2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to the chapter 'Care and Maintenance' (level 1), which is the right chapter for this title. child_sections is empty and no sub-bookmark is visible in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p472 starts with 'Probe maintenance' / 'Probe related checks' and Table 10-13, then 'Basic probe care'. All of this is inside the range p466-p477 for sec_0071 (nodes #/texts/4909-4919). The next section sec_0072 starts on p478.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Care and Maintenance/System maintenance. This matches the chapter running head and the section title seen on the rendered pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section runs p466-p477. The previous section ends on the page before and the next one starts on the page after. No gap, overlap or duplicated heading node was seen in the pages shown.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on the start page, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title and level agree with the embedded bookmark and the printed heading, so provenance is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p472 is 10-28, which is a chapter-page number built from arabic digits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section title is on physical page 466, the same as page_start. Neighbouring sections also use offset 0.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 10-13 on p472 (#/tables/143) has Step | Item | Description and 3 rows. They match the page cell by cell: '1. | Probe Holder | Clean probe holders. (they may need to be soaked to remove excess gel).', '2. | Probes | Thoroughly check ... missing pins.', '3. | Probes | Verify that the Ultrasound system properly recognizes all probes.'. Step, Item and Description values are in the right columns.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p472 has a table and text only, with no picture. No relevant visual is missing on this page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for p472, so no noise was kept as content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0071",
+   "page_sampled": 472,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no visual on p472 and images.json lists none for this page. The absence is correct.",
+   "notes": "",
+   "confidence": 0.92
+  }
+ ]
+}

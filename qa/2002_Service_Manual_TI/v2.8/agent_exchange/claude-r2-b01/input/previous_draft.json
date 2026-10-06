@@ -1,0 +1,1434 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p1 the title 'NEW CAR INFORMATION SECTION' is a main part title under the manual title. hierarchy_level 2 fits: parent sec_0001 is level 1 and its children (sec_0003, sec_0006) are level 3.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0001 is the manual title (level 1). Children sec_0003 to the last one are listed in page order and all point back to sec_0002. No cycle or missing parent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "page_start 1 matches the p1 heading 'NEW CAR INFORMATION SECTION'. The own nodes (foreword text, Quick Reference Index tables) are on p1-p4. The range to p642 comes from the children. But the first node #/texts/0 is the text '2002 LEGACY SERVICE MANUAL'. On p1 this is the running page title at the top, not body text. It is in sec_0002, and parent sec_0001 has no nodes.",
+   "notes": "Only boilerplate (running title) crosses the boundary, so Low. Probably the verifier saw it as the heading of sec_0001. Range 1-642 is the parent span.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION. It matches the p1 titles and the parent sec_0001.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Own nodes end on p4 and the first child sec_0003 starts on p5. No gap and no overlap with sec_0001 or sec_0003. The repeated FOREWORD and QUICK REFERENCE INDEX headings on p2-p4 are running page headers, not duplicate sections.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. The p1 heading is clearly visible, so the unflagged state looks right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The p1 title matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p1 has no printed folio (cover-style page). numbering_scheme is arabic and the bookmark pages equal the physical pages, so nothing contradicts it.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title 'NEW CAR INFORMATION SECTION' is on physical p1, the same page as page_start. No shift needed.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Checked table #/tables/0 on p1 (Quick Reference Index) against the render. All 18 rows are present and in order. Cells are shifted in some rows. 'Emission Control (Aux. Emission Control Devices) EC' has the code EC inside the label cell and an empty code cell. The code 'FU (w/o OBD)' is split: '(w/o' sits in the label cell and 'FU OBD)' in the code cell. The print slug 'W2290GE' is a row with an empty label. Tables #/tables/1 and #/tables/2 (p2, p3) were not rendered, so they were not checked.",
+   "notes": "Cells are merged or split across columns, but values and order are kept. Low by the lead rule. Probably caused by the black tab shapes of the index. Not checked: p2 and p3.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p1 has no photo or drawing besides the black index tabs. img_0000 and img_0001 cover p1 and p2. No meaningful figure was dropped.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0000 (p1) and img_0001 (p2) are whole-page renders (1079x1376, origin vector) of the Quick Reference Index. They only show black decorative tabs and text that is already in the table #/tables/0. p3 has the same tabs but no image. So the decoration was kept inconsistently as an image.",
+   "notes": "Decorative page layout kept as an image. Low by the contract. Unsure if the pipeline wants these kept as vector figures.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0000 (p1) and img_0001 (p2) are mapped to sec_0002. The index tabs of p1 and p2 are in sec_0002, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p6 shows '1. Legacy' as a numbered subsection of SPECIFICATIONS. hierarchy_level 4 fits: parent sec_0003 is level 3 and sibling '2. OUTBACK' (sec_0005) is level 4.",
+   "notes": "The heading node #/texts/20 also contains 'A: DIMENSIONS' text. This does not change the section level.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0003 SPECIFICATIONS. The section has no children. The sub-headings A to J on p6-p9 are heading nodes, not sections. This matches the page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 6: the heading '1. Legacy' is at the top of p6 (SPC-2). page_end 13: the last page has the weight tables under the NOTE (SPC-9). p14 begins '2. OUTBACK', which is sec_0005. No neighbour content is inside.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SPECIFICATIONS/1. Legacy. It matches the page running header 'Specifications' and the p6 heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0003 ends p20 with its own text only and next sec_0005 starts p14 (after p13). The section covers p6-p13 without a gap. No duplicated nodes seen on p6, p8 and p13.",
+   "notes": "sec_0003 range 5-20 is the parent span.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. The heading is clear on p6, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title '1. Legacy' matches the p6 heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are SPC-2, SPC-4 and SPC-9 (chapter prefix plus number). Bookmark pages equal physical pages, so arabic with offset 0 works.",
+   "notes": "Folios restart per chapter, but this does not change the page mapping.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. '1. Legacy' is on physical p6, equal to page_start. Footer SPC-2 is a chapter folio, not a shift.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Checked p8 (tables #/tables/7 to #/tables/11) cell by cell. Steering, suspension, brake and tire tables match. In the Capacity table (#/tables/11): the 'Engine coolant' row has '7.0 (7.4, 6.2) 6.9 (7.3, 6.1)' in one cell (2.0 L 5MT and 4AT merged). Unit text and values are mixed in rows 'Engine oil Total capacity' ('(US qt, Imp qt) 4.0 (4.2, | 3.5)'), 'Transmission gear oil' and 'Automatic transmission fluid'. In 'AT differential gear oil' the dash and '1.1 - 1.3' are one cell. All values and their order are kept. On p6, table #/tables/3 has 'AWD' under Sedan only, not across Sedan and Wagon. Table #/tables/4 and the p13 tables (#/tables/16, #/tables/17) match. The unit sign for litre is lost. p7, p9-p12 tables were not rendered.",
+   "notes": "Cells merged, values and order kept, so Low by the lead rule. The check tool suggests Medium because the 4AT coolant value 6.9 sits in the 5MT cell. The order still lets a reader assign it. Not checked: p7 and p9-p12.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for this section. p6, p8 and p13 have only tables and text, no drawings or photos. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0004. No decoration (line, logo) was kept as an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0004 and p6, p8 and p13 show none. The check for absence is done.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p14 shows '2. OUTBACK' as a numbered subsection of SPECIFICATIONS. Level 4 fits: parent sec_0003 is level 3 and sibling '1. Legacy' (sec_0004) is level 4.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0003. No children. The A to J sub-headings are heading nodes. This matches p14.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 14: '2. OUTBACK' is at the top of p14 (SPC-10). page_end 20: p20 is a MEMO page (SPC-16). p21 starts FUEL INJECTION (sec_0006). No outside content is inside.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path ends with SPECIFICATIONS/2. OUTBACK. It matches the p14 heading and the 'Specifications' running header.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0004 ends p13 and this section starts p14. Next sec_0006 starts p21 after p20. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. The p14 heading is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the p14 heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios are SPC-10 and SPC-16 (chapter prefix). Physical page equals bookmark page, so arabic fits.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. '2. OUTBACK' is on physical p14, same as page_start.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Checked p14 cell by cell. Table #/tables/18 (Dimensions) has all 14 rows and one OUTBACK value per row, same as the render, including '1,580 (62.2), 1,590 (62.6)*3'. Table #/tables/19 (Engine) matches for both 2.5 L and 3.0 L columns. Tables on p15-p17 were not rendered, so they were not checked.",
+   "notes": "Only p14 verified. The p15 gear table (#/tables/21) looks odd in text (missing 'Final reduction' labels), but there is no render to confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted. p14 and p20 have no drawing or photo (p20 is an empty MEMO page). Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0005, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0005. p14 and p20 show none, so the absence is correct.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 shows the chapter title 'FUEL INJECTION (FUEL SYSTEM)' with tab 'FU'. Level 3 fits: parent sec_0002 is level 2 and children 1. General to 6. On-board are level 4.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002. Children sec_0007 to sec_0012 (pages 22-58) match the six TOC lines on p21. All point back to sec_0006.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 21 is the chapter title page. The own nodes (heading, TOC table) are only on p21. page_end 58 is the p58 page '6. On-board Diagnosis System' (FU-38), which belongs to child sec_0012. The range is the parent span. Next chapter starts later.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is .../NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM). It matches the p21 title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0005 ends p20. This section starts p21 and the first child sec_0007 starts p22. No gap. The same title also appears as sec_0013 (p59), which is a different variant chapter, not a duplicate.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. The p21 title is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title matches p21.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 has no folio. p58 shows FU-38 (chapter prefix). Arabic with bookmark = physical page is consistent.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p21, equal to page_start.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/31 on p21 is the chapter TOC. All six lines and page numbers are present and in order. In rows 4 and 5 the page numbers (19, 30) are inside the title cell ('Sensors and Switches ......19 | ') and the Page cell is empty. In row 6 the dots and '38' are in the Page column but the title cell is split from the dots. Rows 1-3 are correct.",
+   "notes": "Cells merged, values and order kept. Low by the lead rule.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 and p58 have no drawing or photo. The black circle on the p21 edge is a page tab, not content. No image was extracted and none is missing.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0006. The tab circle on p21 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0006 and p21 has none. p58 has no figure either. Absence is correct.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p50 shows '5. Control System' with 'A: GENERAL' below. Level 4 fits: parent sec_0006 is level 3 and sibling sections 1 to 6 are level 4.",
+   "notes": "The title '5. Control System' (#/texts/613) is typed paragraph, and several body lines are typed heading (for example #/texts/645, #/texts/652). This is a node-type issue, not a section level issue.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0006 (FUEL INJECTION). No children. The sub-headings A to F are nodes. Matches p50-p57.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 50: p50 (FU-30) begins '5. Control System'. page_end 57: p57 (FU-37) has E: IDLE AIR CONTROL and F: FUEL PUMP CONTROL, the last parts. Next sec_0012 starts p58 with '6. On-board Diagnosis System'. No neighbour content is inside.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path ends with FUEL INJECTION (FUEL SYSTEM)/5. Control System. It matches the p50 heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0010 ends p49 and this section runs p50-p57, then sec_0012 on p58. No gap. Title '5. Control System' also exists as sec_0018 and sec_0089, but these are other chapter variants on other pages.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. The heading on p50 is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches p50.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios FU-30, FU-37 (chapter prefix). Arabic with bookmark = physical page works.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p50 and FU-30 is the same page, no shift.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Checked table #/tables/33 on p57 against the render: 5 rows by 3 columns, all values and order match. Table #/tables/32 (p51, Unit and Function) has only two columns, 'Unit | Function'. The p209 sibling table in this manual (same layout, rendered) has a third column 'Signal' with the group labels 'Input signals' and 'Output signals'. Table #/tables/32 has no such labels. p51 was not rendered, so this is an inference.",
+   "notes": "Probably the same dropped 'Signal' column as in sec_0089. Unsure because p51 render was not given. Medium: group labels cannot be attributed to rows.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figures on p54 (air-fuel feedback diagram) and p57 (idle air control diagram) are extracted as img_0028 and img_0031. They show all labels. img_0029 (p55) and img_0030 (p56) exist too. Nothing meaningful is missing on the rendered pages.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The four images (img_0028 to img_0031) are real diagrams. No rule, logo or footer line is kept as an image.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0028 (p54), img_0029 (p55), img_0030 (p56) and img_0031 (p57) are mapped to sec_0011. The p54 and p57 diagrams are under this section's headings, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p83 shows '5. Control System' with 'A: GENERAL'. Level 4 fits: parent sec_0013 is level 3 and the sibling sections are level 4.",
+   "notes": "Same node-type issue as sec_0011: some body lines are typed heading.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0013 (FUEL INJECTION variant, p59-92). No children. Sub-headings A to F are nodes.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 83: p83 (FU-25) begins '5. Control System'. page_end 90: p90 (FU-32) ends with F: FUEL PUMP CONTROL and its table. Next sec_0019 starts p91. No neighbour content is inside.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is .../FUEL INJECTION (FUEL SYSTEM)/5. Control System. It matches the p83 heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0017 ends p82 and this section is p83-p90, then sec_0019 on p91. No gap or overlap. The same title in sec_0011 is on p50-p57, a different variant.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. p83 heading is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches p83.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios FU-25, FU-30, FU-32 (chapter prefix). Arabic with bookmark = physical page works.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p83 (FU-25) as page_start says.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Checked table #/tables/36 on p90 against the render: 5 rows by 3 columns, all values match. Table #/tables/35 (p84, Unit and Function) has only two columns. The rendered p209 sibling table has a 'Signal' column with 'Input signals' and 'Output signals'. This table has no such labels. p84 was not rendered, so this is an inference.",
+   "notes": "Probably the same dropped 'Signal' column as in sec_0089. Not confirmed on p84. Medium: group labels cannot be attributed to rows.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p88 ignition block diagram and the p90 idle air diagram are extracted (img_0054, img_0056). img_0053 (p87) and img_0055 (p89) also exist. Nothing meaningful is missing on the rendered pages.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0053 to img_0056 are real diagrams. No rule or logo kept as an image.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0053 (p87), img_0054 (p88), img_0055 (p89) and img_0056 (p90) are mapped to sec_0018. The p88 and p90 diagrams sit under this section's headings. Mapping is correct.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p94 shows '1. System Overview' under the EMISSION CONTROL chapter. Level 4 fits: parent sec_0020 is level 3.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0020 (EMISSION CONTROL, p93-108). No children. Matches p94.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 94: p94 (EC-2) begins '1. System Overview'. page_end 95: p95 (EC-3) is a MEMO page. Next sec_0022 starts p96. The MEMO page is blank and has no content of other sections.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path ends with EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/1. System Overview. It matches the p94 running header and heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0020 starts p93 and this section starts p94. Next sec_0022 starts p96. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. p94 heading is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches p94.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios EC-2 and EC-3 (chapter prefix). Arabic with bookmark = physical page works.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p94 (EC-2), same as page_start.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Checked table #/tables/38 on p94 cell by cell. All rows, columns and function texts match the render, including the front/rear catalyst and the two intake sensor lines. Line-break hyphens are kept inside words with a space: 'emis- sion', 're- ducing', 'air- fuel', 'discrimina- tion', 'dis- charged', 'igni- tion'. The 'Rear' cell next to the catalyst has no component, as in the render.",
+   "notes": "Hyphen artefacts only. Values and columns are right. Cosmetic, Low.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p94 and p95 have no drawing or photo. No image extracted and none missing.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0021, so no noise was kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image mapped to sec_0021. p94 and p95 show none. Absence is correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p141 shows the chapter title 'EXHAUST' with tab 'EX'. Level 3 fits: parent sec_0002 is level 2, children 1. General and 2. Composition are level 4.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002. Children sec_0053 (p142) and sec_0054 (p143-144) match the two TOC lines on p141.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 141 is the chapter title page. Own nodes are only on p141. page_end 144 is the MEMO page EX-4 (COMPOSITION), which belongs to child sec_0054. Range is the parent span. Next chapter sec_0055 starts p145.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is .../NEW CAR INFORMATION SECTION/EXHAUST. It matches p141.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0051 ends p140, this section starts p141, first child starts p142. No gap. 'EXHAUST' also exists as sec_0055 (p145), which is the w/o OBD variant, not a duplicate.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. p141 title is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title matches p141.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p141 has no folio. p144 shows EX-4. Arabic with bookmark = physical page is consistent.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p141, same as page_start.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The p141 TOC has two lines: '1. General ... 2' and '2. Composition ... 3'. Table #/tables/42 has only line 1 and the header is merged into the value cell ('Page 2'). Line 2 is outside the table as paragraph #/texts (semantic_order 2244). The text and page number 3 survive there.",
+   "notes": "The second TOC row left the table, but its information survives in a paragraph. Low per the contract. Probably the table detector cut the last row.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p141 and p144 have no drawing or photo. The black tab circle on p141 is decoration. No image is missing.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0052. The p141 tab circle was not kept as an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0052. p141 and p144 show none. Absence is correct.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p181 shows the chapter title 'FUEL INJECTION (FUEL SYSTEM)' with tab 'FU (H6)'. Level 3 fits: parent sec_0002 is level 2, children are level 4.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002. Children sec_0085 to sec_0090 (p182-216) match the six TOC lines on p181.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 181 is the title page. Own nodes are only on p181. page_end 216 is the p216 page '6. On-board Diagnosis System' (FU-36), which belongs to child sec_0090. The range is the parent span.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is .../NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM). It matches p181.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0083 ends p180, this section starts p181 and the first child starts p182. No gap. The title also exists as sec_0006 and sec_0013, which are other variant chapters (non-H6).",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. p181 title is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title matches p181.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p181 has no folio. p216 shows FU-36. Arabic with bookmark = physical page is consistent.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p181, same as page_start.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/48 on p181 is the TOC with 6 rows. All titles and page numbers (2, 3, 6, 19, 28, 36) are present and in order. In rows 4 and 5 the page numbers 19 and 28 are inside the title cell and the Page cell is empty. In row 6 the dots and 36 are split from the title.",
+   "notes": "Cells merged, values and order kept. Low by the lead rule.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p181 and p216 have no drawing or photo. The tab circle on p181 is decoration. No image missing.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0084, so no noise was kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0084. p181 and p216 show none. Absence is correct.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p208 shows '5. Control System' with 'A: GENERAL'. Level 4 fits: parent sec_0084 is level 3 and the sibling sections are level 4. The headings B to F and the numbered sub-headings are heading nodes.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0084. No children. This matches p208-p215.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 208: p208 (FU-28) begins '5. Control System'. page_end 215: p215 (FU-35) ends with F: FUEL PUMP CONTROL and its table. p216 begins '6. On-board Diagnosis System' (sec_0090). No outside content is inside.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is .../FUEL INJECTION (FUEL SYSTEM)/5. Control System under sec_0084. It matches p208.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0088 ends p207, this section is p208-p215, next sec_0090 is p216. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. p208 heading is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title matches p208.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios FU-28, FU-29, FU-35 (chapter prefix). Arabic with bookmark = physical page works.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p208 (FU-28), same as page_start.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Checked table #/tables/49 on p209 cell by cell. The render has 3 columns: Signal, Unit, Function. The table has only 'Unit | Function'. The Signal labels 'Input signals' (19 rows) and 'Output signals' (11 rows) are gone. All 30 Unit and Function texts match in order. One cell keeps a break hyphen: 'oxygen sen- sor.'. Table #/tables/50 on p215 matches the render (5 rows by 3 columns).",
+   "notes": "Signal column lost, so a reader cannot tell input from output without outside knowledge. Medium: values can no longer be attributed to their column. Same pattern probably in sec_0011 and sec_0018.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Diagrams on p212 to p215 are extracted (img_0140 to img_0143). The p215 idle air diagram matches img_0143. p209 and p208 have no drawing. Nothing meaningful is missing on the rendered pages.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0140 to img_0143 are real figures (including the p214 timing chart img_0142). No rule or logo kept as an image.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0140 (p212), img_0141 (p213), img_0142 (p214) and img_0143 (p215) are mapped to sec_0089. The p215 diagram is under 'E: IDLE AIR CONTROL' in this section. Mapping is correct.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p159 shows the chapter title 'LUBRICATION' with tab 'LU'. Level 3 fits: parent sec_0002 is level 2 and the six children are level 4.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002. Children sec_0066 to sec_0071 (p160-166) match the six TOC lines on p159.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 159 is the title page with the TOC. Own nodes are only on p159. page_end 166 is the p166 page '6. Oil Pressure Switch' (LU-8), which belongs to child sec_0071. The range is the parent span.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is .../NEW CAR INFORMATION SECTION/LUBRICATION. It matches p159.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0064 ends p158, this section starts p159 and the first child starts p160. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. p159 title is clear.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title matches p159.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p159 has no folio. p166 shows LU-8. Arabic with bookmark = physical page is consistent.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title is on physical p159, same as page_start.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/47 on p159 should have 6 TOC rows with page numbers 2, 4, 5, 6, 7, 8. Rows 1-5 are right. Row 6 is '6. | Oil Pressure Switch ......... | ' and the page number 8 is missing. No other node of sec_0065 holds the '8'. The 'Page' header is a separate paragraph.",
+   "notes": "One TOC page number is lost. Low: this is a navigation number, and the target page is known from child sec_0071 and bookmarks, so content retrieval is not affected. The check tool suggests Medium; the value is lost, not shifted. Probably the last cell was dropped.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p159 has no drawing. The p166 figure of the oil pressure switch is extracted as img_0107, so it was not discarded. The tab circle on p159 is decoration.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0107 is a real part drawing, not noise. No noise image for sec_0065.",
+   "notes": "",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 159,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0107 (p166) is mapped to sec_0071 '6. Oil Pressure Switch', the child that owns p166. No image on p159 belongs to sec_0065. Mapping is correct.",
+   "notes": "",
+   "confidence": 0.87
+  }
+ ]
+}

@@ -1,0 +1,1045 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0122|802|5.6-table_content",
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p802 #/tables/358 matches the page. Two defects are elsewhere in the section. On p798 (Table 9-7) the Qty column shows 1 for items 4, 5, 6 and 7. In #/tables/354 rows 4, 6 and 7 have '1' in Description and Qty is empty. Row 5 reads 'SOM, without HDD 1' with an empty Qty. On p806 the Description of item 35 reads 'Kit including DVD SATA signal cable and power cable, as well as Printer USB cable, dual printer power cable'. In #/tables/362 it reads 'SATA signal cable and power cable, as well as dual printer power cable'. The words 'Kit including DVD' and 'Printer USB cable,' are lost. They are not in #/tables/362 and are only in #/tables/363, which is item 31 on p807.",
+    "notes": "Medium by rule 2: Qty values sit under the wrong column on p798, and words of a cell are lost on p806. Cause is probably a Docling cell split. Caption rows 'Table 9-7' inside #/tables/356, 360 and 364 are extra, but Low."
+   },
+   "pages_to_check": [
+    802,
+    798,
+    806
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/358",
+     "page": 802,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/354",
+     "page": 798,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/362",
+     "page": 806,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "No. | Part Name | Part Number | Description | Qty\n | 35. Peripheral Cable Assy | 5408182 | Kit including DVD SATA signal cable and power cable, as well as  Printer USB cable, dual printer power cable 1 | ",
+     "round_one_text": "No. | Part Name | Part Number | Description | Qty\n35. | Peripheral Cable Assy | 5408182 | SATA signal cable and power cable, as well as dual printer power cable | 1"
+    }
+   ],
+   "lead_case_checks": [
+    "p798: Round one placement regression: text kept but some values in the wrong cell (guard does not catch it). Say clearly if it is still wrong.",
+    "p806: Round one lost text here. Expected now: back to the original table. Confirm all words."
+   ]
+  },
+  {
+   "key": "sec_0123|809|5.6-table_content",
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    809
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/365",
+     "page": 809,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0124|816|5.6-table_content",
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p816 compared with #/tables/372 row by row. Items 5-12 match: names (Gel Warmer Pyxis ... ECG Cable (IEC)), part numbers (6020740, 5488347/ 5488347-2, 6020741, 5491354, 5692044, 5692045, 5418137, 5341188), descriptions and Qty 1. The columns are in the right order. The photos in the Description cells are not part of the text. p815 (#/tables/371) and p822 (#/tables/378, items 45, 46, 49, 50) also match.",
+    "notes": "Pages p817-821 are not in the pages folder and were not compared."
+   },
+   "pages_to_check": [
+    816
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/372",
+     "page": 816,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0125|823|5.6-table_content",
+   "section_id": "sec_0125",
+   "page_sampled": 823,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    823
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/379",
+     "page": 823,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0126|827|5.6-table_content",
+   "section_id": "sec_0126",
+   "page_sampled": 827,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "p827 matches #/tables/383: ML6-15-D to S4-10-D with their sub-rows (5410769, 5499600, 5410798, 5499594, 5499318, 5438302-2, 5394804-2) and 'Non RoHS' or 'RoHS Compliant probe' in Description. The defect is on p826 in #/tables/382. In the PDF the Feature cell of C2-9-D ends with 'Volume Navigation, Biopsy' and spans three rows. In the node the C2-9-D Feature ends with 'Volume Navigation,' and 'Biopsy' is put in the Feature cell of row 5488219 C2-9VN-D. So a value moves to the wrong probe.",
+    "notes": "Confirmed on the p826 render. Medium by rule 2: the word 'Biopsy' sits under the wrong probe row and is lost from C2-9-D. Cause is probably a Docling split of a spanning cell."
+   },
+   "pages_to_check": [
+    827,
+    826,
+    828,
+    829
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/383",
+     "page": 827,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Part  Number | Part  Name | Illustration | Application | Feature | Description\n | 5271060 ML6-15-D |  | Small Parts,  Vascular (No  transcranial),  Pediatric, Neonatal,  Breast,  Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Contrast, Strain  Elastography, Virtual Convex,  CrossXBeam, LOGIQView, ATO/ASO,  SRI-HD, Advanced 3D, Volume  Navigation, Biopsy | Non RoHS. Replaced  by 5410769.\n5410769 |  |  |  |  | Non RoHS. Replaced  by 5499600.\n5499600 |  |  |  |  | RoHS Compliant  probe\n | 5335525 L8-18i-D |  | Small Pars,  Musculoskeletal,  Intraoperative | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, BF HD Color,  Contrast, Virtual Convex, CrossXBeam,  LOGIQView, ATO/ASO, SRI-HD,  Advanced 3D, Volume Navigation | Non RoHS. Replaced  by 5410798.\n5410798 |  |  |  |  | Non RoHS. Replaced  by 5499594.\n5499594 |  |  |  |  | RoHS Compliant  probe\nGE-3MIX M5S-D |  |  | Cardiac,  Transcranial,  Abdomen | B, CHI, CF, PDI, M, MCF, Anatomical M,  PW, CW, TVI, TVD, B-Flow, B-Flow  Color, Contrast, Virtual Convex,  LOGIQView, ATO/ASO, Stress Echo,  SRI-HD, Volume Navigation, Advanced  3D | \n5446030 M5Sc-D |  |  | Cardiac,  Transcranial,  Abdomen | B, CHI, CF, PDI, M, MCF, Anatomical M,  PW, CW, TVI, TVD, B-Flow, B-Flow  Color, Contrast, Virtual Convex,  LOGIQView, ATO/ASO, Stress Echo,  SRI-HD, Volume Navigation, Advanced  3D | \n |  |  | 5394466 6S-D Cardiac, OB,  Pediatrics, Neonatal | B, CHI, CF, PDI, M, MCF, Anatomical M,  PW, CW, TVI, TVD, Virtual Convex,  LOGIQView, ATO/ASO, SRIHD,  Advanced3D | Non RoHS.\n5499318 |  |  |  |  | RoHS Compliant  probe\n |  |  | 5438302 S1-5-D Abdomen, OB/GYN,  Vascular (No  transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Virtual Convex,  LOGIQView, ATO/ASO, SRI-HD,  Advanced3D, Volume Navigation,  Biopsy | Non RoHS.\n5438302-2 |  |  |  |  | RoHS Compliant  probe\n5394804 S4-10-D |  |  |  | Transcranial B, CHI, CF, PDI, M, MCF, Anatomical M,  PW, CW, TVI, TVD, Virtual Convex,  LOGIQView, ATO/ASO, SRI-HD,  Advanced 3D,Volume Navigation | Non RoHS.\n5394804-2 |  |  |  |  | RoHS Compliant  probe",
+     "round_one_text": "Part Number | Part Name | Application | Feature | Description\n5271060 | ML6-15-D | Small Parts, Vascular (No transcranial), Pediatric, Neonatal, Breast, Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Contrast, Strain Elastography, Virtual Convex, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D, Volume Navigation, Biopsy | Non RoHS. Replaced by 5410769.\n5410769 |  |  |  | Non RoHS. Replaced by 5499600.\n5499600 |  |  |  | RoHS Compliant probe\n5335525 | L8-18i-D | Small Pars, Musculoskeletal, Intraoperative | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, BF HD Color, Contrast, Virtual Convex, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D, Volume Navigation | Non RoHS. Replaced by 5410798.\n5410798 |  |  |  | Non RoHS. Replaced by 5499594.\n5499594 |  |  |  | RoHS Compliant probe\nGE-3MIX | M5S-D | Cardiac, Transcranial, Abdomen | B, CHI, CF, PDI, M, MCF, Anatomical M, PW, CW, TVI, TVD, B-Flow, B-Flow Color, Contrast, Virtual Convex, LOGIQView, ATO/ASO, Stress Echo, SRI-HD, Volume Navigation, Advanced 3D | \n5446030 | M5Sc-D | Cardiac, Transcranial, Abdomen | B, CHI, CF, PDI, M, MCF, Anatomical M, PW, CW, TVI, TVD, B-Flow, B-Flow Color, Contrast, Virtual Convex, LOGIQView, ATO/ASO, Stress Echo, SRI-HD, Volume Navigation, Advanced 3D | \n5394466 | 6S-D | Cardiac, OB, Pediatrics, Neonatal | B, CHI, CF, PDI, M, MCF, Anatomical M, PW, CW, TVI, TVD, Virtual Convex, LOGIQView, ATO/ASO, SRIHD, Advanced3D | Non RoHS.\n5499318 |  |  |  | RoHS Compliant probe\n5438302 | S1-5-D | Abdomen, OB/GYN, Vascular (No transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Virtual Convex, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, Volume Navigation, Biopsy | Non RoHS.\n5438302-2 |  |  |  | RoHS Compliant probe\n5394804 | S4-10-D | Transcranial | B, CHI, CF, PDI, M, MCF, Anatomical M, PW, CW, TVI, TVD, Virtual Convex, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D,Volume Navigation | Non RoHS.\n5394804-2 |  |  |  | RoHS Compliant probe"
+    },
+    {
+     "node_id": "#/tables/382",
+     "page": 826,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Part  Number | Part  Name | Illustration  Application | Feature | Description\n5304539 C1-5-D |  | Abdomen, Vascular  (No transcranial),  OB/GYN, Urology | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Contrast, Strain  Elastography, CrossXBeam,  LOGIQView, ATO/ASO, SRI-HD,  Advanced 3D, Volume Navigation,  Biopsy | Non RoHS. Replaced  by 5409287.\n5409287 |  |  |  | Non RoHS. Replaced  by 5499513.\n5499513 |  |  |  | RoHS Compliant  probe\n |  |  | 5397669 3CRF-D Abdomen B, CHI, CF, PDI, M, PW, Contrast,  CrossXBeam, LOGIQView, ATO/ASO,  SRI-HD, Advanced 3D, Volume  Navigation, Biopsy | Non RoHS.\n5499603 |  |  |  | RoHS Compliant  probe\n |  | 5405254 C2-9-D Abdomen, OB/GYN,  Pediatric, Neonatal,  Vascular (No  transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Contrast, Strain  Elastography, CrossXBeam,  LOGIQView, ATO/ASO, SRI-HD,  Advanced3D, Volume Navigation, | Non RoHS.\n5499605 |  |  |  | RoHS Compliant  probe\n | 5488219 C2-9VN-D |  | Biopsy | \n5476030/ 5476031  (Japan  model) |  | 10C-D Pediatric, Neonatal,  Vascular (No  transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, CrossXBeam,  LOGIQView, ATO/ASO, SRI-HD,  Advanced3D | \n5476026/ 5476027  (Japan  model) |  | C2-6b-D Abdomen (Radio  frequency Ablation  (RFA), Biopsy) | B, CHI, CF, PDI, M, Anatomical M, PW,  Contrast, CrossXBeam, LOGIQView,  ATO/ASO, SRI-HD, Advanced3D,  Volume Navigation, Biopsy | \n5212417 IC5-9-D |  |  | OB, Urology B, CHI, CF, PDI, M, Anatomical M, PW,  Contrast, Strain Elastography,  CrossXBeam, LOGIQView, ATO/ASO,  SRI-HD, Advanced 3D, Volume  Navigation, Biopsy | Non RoHS. Replaced  by 5499552.\n5499592 |  |  |  | RoHS Compliant  probe\n5212849 9L-D |  | Abdomen, Small  Parts, Vascular (No  transcranial),  Pediatric, Neonatal,  Breast,  Musculoskeletal, OB | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, BF HD Color,  Contrast, Strain Elastography,  Shearwave Elastography, Virtual  Convex, CrossXBeam, LOGIQView,  ATO/ASO, SRI-HD, Advanced  3D,Volume Navigation, Biopsy | Non RoHS. Replaced  by 5499510.\n5499510 |  |  |  | RoHS Compliant  probe\n |  | 5410800 11L-D Vascular (No  transcranial), Small  Parts, Pediatric,  Neonatal, Breast,  Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Contrast, Strain  Elastography, Virtual Convex,  CrossXBeam, LOGIQView, ATO/ASO,  SRI-HD, Advanced3D, Biopsy | ",
+     "round_one_text": "Part Number | Part Name | Application | Feature | Description\n5304539 | C1-5-D | Abdomen, Vascular (No transcranial), OB/GYN, Urology | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Contrast, Strain Elastography, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D, Volume Navigation, Biopsy | Non RoHS. Replaced by 5409287.\n5409287 |  |  |  | Non RoHS. Replaced by 5499513.\n5499513 |  |  |  | RoHS Compliant probe\n5397669 | 3CRF-D | Abdomen | B, CHI, CF, PDI, M, PW, Contrast, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D, Volume Navigation, Biopsy | Non RoHS.\n5499603 |  |  |  | RoHS Compliant probe\n5405254 | C2-9-D | Abdomen, OB/GYN, Pediatric, Neonatal, Vascular (No transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Contrast, Strain Elastography, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, Volume Navigation, | Non RoHS.\n5499605 |  |  |  | RoHS Compliant probe\n5488219 | C2-9VN-D |  | Biopsy | \n5476030/ 5476031 (Japan model) | 10C-D | Pediatric, Neonatal, Vascular (No transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D | \n5476026/ 5476027 (Japan model) | C2-6b-D | Abdomen (Radio frequency Ablation (RFA), Biopsy) | B, CHI, CF, PDI, M, Anatomical M, PW, Contrast, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, Volume Navigation, Biopsy | \n5212417 | IC5-9-D | OB, Urology | B, CHI, CF, PDI, M, Anatomical M, PW, Contrast, Strain Elastography, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D, Volume Navigation, Biopsy | Non RoHS. Replaced by 5499552.\n5499592 |  |  |  | RoHS Compliant probe\n5212849 | 9L-D | Abdomen, Small Parts, Vascular (No transcranial), Pediatric, Neonatal, Breast, Musculoskeletal, OB | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, BF HD Color, Contrast, Strain Elastography, Shearwave Elastography, Virtual Convex, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D,Volume Navigation, Biopsy | Non RoHS. Replaced by 5499510.\n5499510 |  |  |  | RoHS Compliant probe\n5410800 | 11L-D | Vascular (No transcranial), Small Parts, Pediatric, Neonatal, Breast, Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Contrast, Strain Elastography, Virtual Convex, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, Biopsy | "
+    },
+    {
+     "node_id": "#/tables/384",
+     "page": 828,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Part  Number | Part  Name | Illustration  Application | Feature | Description\nKTZ280168 3Sp-D Cardiac, |  | Transcranial,  Abdomen | B, CHI, CF, PDI, M, MCF, Anatomical M,  PW, CW, TVI, TVD, Virtual Convex,  LOGIQView, ATO/ASO, Stress Echo,  SRI-HD, Advanced3D | \n |  | KTZ302502 RAB6-D OB/GYN, Abdomen,  Pediatric | B, CHI, CF, PDI, M, Anatomical M, PW,  Contrast, CrossXBeam, LOGIQView,  ATO/ASO, SRI-HD, Advanced3D, 3D/ 4D, Biopsy | Non RoHS.\nKTZ303986 |  |  |  | RoHS Compliant  probe\nKTZ157043 RIC5-9-D OB/GYN |  | (Transvaginal),  Urology  (Transrectal) | B, CHI, CF, PDI, M, Anatomical M, PW,  CrossXBeam, LOGIQView, ATO/ASO,  SRI-HD, Advanced3D, 3D/4D, Biopsy | Non RoHS.\n |  |  |  | RoHS Compliant  probe\nKN100104 6Tc-RS Cardiac |  | (Transesophageal) | B, CHI, CF, PDI, M, MCF, Anatomical M,  PW, CW, TVI, TVD, Virtual Convex,  ATO/ASO, SRI-HD Note: Need DLP2RN adapter to  connect. Note: 6Tc-RS probe requires special  handling. Refer to the TEE Probe User  Manual enclosed with 6Tc-RS probe. | Non RoHS.\nKN100106 |  |  |  | RoHS Compliant  probe\n |  | TE100024 P2D Cardiac, Vascular CW, ASO |  | \n |  | TQ100002 P6D Cardiac, Vascular CW, ASO |  | \n5499606 |  | C1-6-D Abdomen, OB/GYN,  Vascular (No  transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, BF HD Color,  Contrast, CrossXBeam, LOGIQView,  ATO/ASO, SRI-HD, Advanced3D, Strain  Elastography, Shearwave Elastography,  Volume Navigation, Biopsy | \n5476279 | C1-6VN-D |  |  | \n5505700 |  |  | C2-7-D Abdomen B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Contrast,  CrossXBeam, LOGIQView, ATO/ASO,  SRI-HD, Advanced3D, Volume  Navigation, Biopsy | \n5505702 | C2-7-D-LC |  |  | LC = Long Cable\n5505701 | C2-7VN-D |  |  | ",
+     "round_one_text": "Part Number | Part Name | Application | Feature | Description\nKTZ280168 | 3Sp-D | Cardiac, Transcranial, Abdomen | B, CHI, CF, PDI, M, MCF, Anatomical M, PW, CW, TVI, TVD, Virtual Convex, LOGIQView, ATO/ASO, Stress Echo, SRI-HD, Advanced3D | \nKTZ302502 | RAB6-D | OB/GYN, Abdomen, Pediatric | B, CHI, CF, PDI, M, Anatomical M, PW, Contrast, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, 3D/ 4D, Biopsy | Non RoHS.\nKTZ303986 |  |  |  | RoHS Compliant probe\nKTZ157043 | RIC5-9-D | OB/GYN (Transvaginal), Urology (Transrectal) | B, CHI, CF, PDI, M, Anatomical M, PW, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, 3D/4D, Biopsy | Non RoHS.\n |  |  |  | RoHS Compliant probe\nKN100104 | 6Tc-RS | Cardiac (Transesophageal) | B, CHI, CF, PDI, M, MCF, Anatomical M, PW, CW, TVI, TVD, Virtual Convex, ATO/ASO, SRI-HD Note: Need DLP2RN adapter to connect. Note: 6Tc-RS probe requires special handling. Refer to the TEE Probe User Manual enclosed with 6Tc-RS probe. | Non RoHS.\nKN100106 |  |  |  | RoHS Compliant probe\nTE100024 | P2D | Cardiac, Vascular | CW, ASO | \nTQ100002 | P6D | Cardiac, Vascular | CW, ASO | \n5499606 | C1-6-D | Abdomen, OB/GYN, Vascular (No transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, BF HD Color, Contrast, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, Strain Elastography, Shearwave Elastography, Volume Navigation, Biopsy | \n5476279 | C1-6VN-D |  |  | \n5505700 | C2-7-D | Abdomen | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Contrast, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, Volume Navigation, Biopsy | \n5505702 | C2-7-D-LC |  |  | LC = Long Cable\n5505701 | C2-7VN-D |  |  | "
+    },
+    {
+     "node_id": "#/tables/385",
+     "page": 829,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Part  Number | Part  Name  Illustration | Application | Feature | Description\n5493012 |  | C3-10-D Pediatric, Neonatal,  Vascular (No  transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, CrossXBeam,  LOGIQView, ATO/ASO, SRI-HD,  Advanced 3D, Volume Navigation | \n5535371 | BE9CS-D Urology | (Transrectal) | B, CHI, CF, PDI, M, Anatomical M, PW,  CrossXBeam, LOGIQView, ATO/ASO,  SRI-HD, Advanced 3D, Biopsy, Strain  Elastography | \n5491310 |  |  | L3-9i-D Intraoperative B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Contrast, Virtual  Convex, CrossXBeam, LOGIQView,  ATO/ASO, SRI-HD, Advanced3D | \n5482856 |  | L3-12-D Vascular (No  transcranial), OB,  Small Parts, Breast,  Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, BF HD Color,  Contrast, Strain Elastography, Virtual  Convex, CrossXBeam, LOGIQView,  ATO/ASO, SRI-HD, Advanced3D,  Biopsy | \nKTZ157046 |  | RSP6-16-D Small Parts,  Vascular (No  transcranial), Breast,  Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW,  B-Flow, B-Flow Color, Contrast, Virtual  Convex, CrossXBeam, LOGIQView,  ATO/ASO, SRI-HD, Advanced3D, 3D/ 4D, Biopsy | \n5504447 |  | P8D Vascular (No  transcranial) | CW, ASO | \n5763787 | FibroScan  Probe M  Plus FRU |  | FibroScan FibroScan | \n5763788 | FibroScan  Probe XL  Plus FRU |  | FibroScan FibroScan | ",
+     "round_one_text": "Part Number | Part Name | Application | Feature | Description\n5493012 | C3-10-D | Pediatric, Neonatal, Vascular (No transcranial) | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D, Volume Navigation | \n5535371 | BE9CS-D | Urology (Transrectal) | B, CHI, CF, PDI, M, Anatomical M, PW, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced 3D, Biopsy, Strain Elastography | \n5491310 | L3-9i-D | Intraoperative | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Contrast, Virtual Convex, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D | \n5482856 | L3-12-D | Vascular (No transcranial), OB, Small Parts, Breast, Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, BF HD Color, Contrast, Strain Elastography, Virtual Convex, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, Biopsy | \nKTZ157046 | RSP6-16-D | Small Parts, Vascular (No transcranial), Breast, Musculoskeletal | B, CHI, CF, PDI, M, Anatomical M, PW, B-Flow, B-Flow Color, Contrast, Virtual Convex, CrossXBeam, LOGIQView, ATO/ASO, SRI-HD, Advanced3D, 3D/ 4D, Biopsy | \n5504447 | P8D | Vascular (No transcranial) | CW, ASO | \n5763787 | FibroScan Probe M Plus FRU | FibroScan | FibroScan | \n5763788 | FibroScan Probe XL Plus FRU | FibroScan | FibroScan | "
+    }
+   ]
+  },
+  {
+   "key": "sec_0127|830|5.6-table_content",
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    830,
+    832
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/386",
+     "page": 830,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/388",
+     "page": 832,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "No. | Part Name | Description\n12. | Power Cord for Canada/USA/ Japan Replace with 6736114-3 and  5669995 | 2388982 1\n | 13. Power Cord for Brazil | 5399665 1\n | 14. Power Cord for South Africa | 5408183 1\n | 15. Power Cord for Japan | 5408490 1\n | 16. Power Cord for Taiwan | 5792418 1\n17. | Power Supply Cord EUROPE  KOREA 10A 250V STRAIGHT 4M | 6736105-7 1\n18. | Power Supply Cord UNITED  STATES - CANADA 15A 125V  STRAIGHT 4M | 6736114-3 1",
+     "round_one_text": "No. | Part Name | Part Number | Qty\n12. | Power Cord for Canada/USA/ Japan Replace with 6736114-3 and 5669995 | 2388982 | 1\n13. | Power Cord for Brazil | 5399665 | 1\n14. | Power Cord for South Africa | 5408183 | 1\n15. | Power Cord for Japan | 5408490 | 1\n16. | Power Cord for Taiwan | 5792418 | 1\n17. | Power Supply Cord EUROPE KOREA 10A 250V STRAIGHT 4M | 6736105-7 | 1\n18. | Power Supply Cord UNITED STATES - CANADA 15A 125V STRAIGHT 4M | 6736114-3 | 1"
+    }
+   ]
+  },
+  {
+   "key": "sec_0128|837|5.6-table_content",
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p838 (render checked) #/tables/393 has a row 'Option | 5756406 | Fibroscan Probe Holder | Active ...' on the page, but this row is missing in the tree. In the tree 'Replace with 5761961' sits on the 5761961 row. On the page it belongs to the 5409146 row (Replaced). Rows around 5763099/5380960 are mixed: part numbers 5763099 and 5380960 sit in one row, and the cells 'Y Y' are merged. Row 6020710 has an empty Parts Group and Y values under wrong columns. On p837 #/tables/392 the Parts Group 'OPIO' of 6756412 is on the next row (6756412-2 shows 'OPIO OPIO').",
+    "notes": "Medium by rule 2: a row is lost and values sit under the wrong row or column on p838. The p837 label shift alone would be Low. Cause is probably Docling table cell split."
+   },
+   "pages_to_check": [
+    837,
+    838
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/392",
+     "page": 837,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/393",
+     "page": 838,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Parts Group Part  Number | Part Description | Replace with  R1.5 R2  Upg  R2 R3 | R1.5. 6 | Parts  staus  R3  Upg\n | Covers 5405167 Front Cover Active | Y  Y  Y  Y |  | Y\nOPIO 5756411 | LS8 OPIO4 Main PWA  Assy Active N N N N N |  |  | \nOPIO 6020704 | OP TGC Assembly with R  button Elastomer Active Y Y Y Y Y |  |  | \nOPIO 5756414 | LOGIQ S8 OPIO4 TGC  Assy Active N N N N N |  |  | \nOPIO 6020706 | OP Mode select Encoder  1pcs Replaced 6020706-2 Y Y Y Y Y |  |  | \nOPIO 6020706-2 | OP Mode select Encoder  1pcs Active Y Y Y Y Y |  |  | \nOPIO 6020715 | OP Button+Knob+Slidepot  sets Replaced 6020715-2 Y Y Y Y NR |  |  | \nOPIO 6020715-2 | OPIO Button top, base  and Knobs set Active 6020715-3 Y Y Y Y NR |  |  | \nOPIO 6020715-3 | OPIO Button top, base  and Knobs set Active Y Y Y Y Y |  |  | \n | OPIO 5756415 OPIO4 Button Sets Active N N N N N |  |  | \n | OPIO 5774760 FUNCTION KEY SET Replaced 5774760-2 N N N N N |  |  | \n | OPIO 5774760-2 FUNCTION KEY SET Active N N N N N |  |  | \n | OPIO 5207000-17 OP Joystick 1pc Replaced 5207000-29 NR N N N N |  |  | \n | OPIO 5207000-29 OP Joystick 1pc Active Y Y Y Y Y |  |  | \n | OPIO 5756416 OPIO4 Joystick Active N N N N N |  |  | \n | OPIO 5478021 LOGIQ E8 Emblem Active N N N N N |  |  | \n | OPIO 5760072 LOGIQ E8 EMBLEM Active N N N N N |  |  | \n | OPIO 5756410 LS8 OPIO4 Lower Assy Active N N N N N N |  |  | \n | OPIO 5756417 LS8 OPIO4 lower plastic Active N N N N N |  |  | \n | Option 5172178 Probe Cable Hanger Replaced 5172249 Y Y Y Y Y |  |  | \nOption 5172249 | CABLE HANGER  ASSY_4 CABLE Active Y Y Y Y Y |  |  | \n | Option 5307472 4D Probe cup | Active N Y Y Y Y |  | \nOption 5506495 | PROBE HOLDER  INSERT FOR 4D PROBE Active N Y Y Y Y |  |  | \n | Option 5763099 4D PROBE CUP BLACK Active N Y Y Y Y |  |  | \n | Option 5380960 USB Footswitch, 3 button Replaced 5380960-2 Y Y Y Y Y |  |  | \n | Option 5380960-2 USB Footswitch, 3 button Active Y Y Y Y Y |  |  | Option 5405177 Drawer Active Y Y Y Y Y\n |  | Option 5486935 Drawer Active N N N N N |  | \n | Option 5418137 LS8 ECG Module Active Y Y Y Y Y |  |  | \nOption 5761967 | LOGIQ S8 ECG Module2  Assy Active N N N N N |  |  | \n | Option 5341189 ECG Cable (AHA) Active Y Y Y Y Y |  |  | \n | Option 5341188 ECG Cable (IEC) Active Y Y Y Y Y |  |  | \nOption 5418149 | OPTION_PROBE_HOLD ER-ASSY-PYXIS Active Y Y Y Y Y |  |  | \n | Option 5725262 Optional Probe Holder Active N N N N N |  |  | \n | Option 5409146 TVTR Probe Holder Pyxis Replaced 5761961 Y Y Y Y Y | Option 5756406 Fibroscan Probe Holder Active N N N N N |  | \nOption 5761961 | TVTR PROBE HOLDER  R4 Active Y Y Y Y Y Y |  |  | \nOPIO 6020710 | Assembly - English Replaced 5480205 Y Y Y Y Y |  |  | \n | A/N Key Top w/Base |  |  | \nOption 6020711 | A/N Key Top w/Base  Assembly - Russian Replaced | 5480205 and  5480209 Y Y Y Y Y 5480205 and |  | \nOption 6020712 | A/N Key Top w/Base  Assembly - Greek Replaced | 5480210 Y Y Y Y Y |  | ",
+     "round_one_text": "Parts Group | Part Number | Part Description | Parts staus | Replace with | R1.5 | R1.5. 6 | R2 Upg | R2 | R3 Upg | R3\nCovers | 5405167 | Front Cover | Active |  | Y |  | Y | Y | Y | Y\nOPIO | 5756411 | LS8 OPIO4 Main PWA Assy | Active |  | N |  | N | N | N | N\nOPIO | 6020704 | OP TGC Assembly with R button Elastomer | Active |  | Y |  | Y | Y | Y | Y\nOPIO | 5756414 | LOGIQ S8 OPIO4 TGC Assy | Active |  | N |  | N | N | N | N\nOPIO | 6020706 | OP Mode select Encoder 1pcs | Replaced | 6020706-2 | Y |  | Y | Y | Y | Y\nOPIO | 6020706-2 | OP Mode select Encoder 1pcs | Active |  | Y |  | Y | Y | Y | Y\nOPIO | 6020715 | OP Button+Knob+Slidepot sets | Replaced | 6020715-2 | Y |  | Y | Y | Y | NR\nOPIO | 6020715-2 | OPIO Button top, base and Knobs set | Active | 6020715-3 | Y |  | Y | Y | Y | NR\nOPIO | 6020715-3 | OPIO Button top, base and Knobs set | Active |  | Y |  | Y | Y | Y | Y\nOPIO | 5756415 | OPIO4 Button Sets | Active |  | N |  | N | N | N | N\nOPIO | 5774760 | FUNCTION KEY SET | Replaced | 5774760-2 | N |  | N | N | N | N\nOPIO | 5774760-2 | FUNCTION KEY SET | Active |  | N |  | N | N | N | N\nOPIO | 5207000-17 | OP Joystick 1pc | Replaced | 5207000-29 | NR |  | N | N | N | N\nOPIO | 5207000-29 | OP Joystick 1pc | Active |  | Y |  | Y | Y | Y | Y\nOPIO | 5756416 | OPIO4 Joystick | Active |  | N |  | N | N | N | N\nOPIO | 5478021 | LOGIQ E8 Emblem | Active |  | N |  | N | N | N | N\nOPIO | 5760072 | LOGIQ E8 EMBLEM | Active |  | N |  | N | N | N | N\nOPIO | 5756410 | LS8 OPIO4 Lower Assy | Active |  | N | N | N | N | N | N\nOPIO | 5756417 | LS8 OPIO4 lower plastic | Active |  | N |  | N | N | N | N\nOption | 5172178 | Probe Cable Hanger | Replaced | 5172249 | Y |  | Y | Y | Y | Y\nOption | 5172249 | CABLE HANGER ASSY_4 CABLE | Active |  | Y |  | Y | Y | Y | Y\nOption | 5307472 | 4D Probe cup | Active |  | N |  | Y | Y | Y | Y\nOption | 5506495 | PROBE HOLDER INSERT FOR 4D PROBE | Active |  | N |  | Y | Y | Y | Y\nOption Option | 5763099 5380960 | 4D PROBE CUP BLACK | Active |  | N |  | Y | Y | Y | Y\nOption |  | USB Footswitch, 3 button | Replaced | 5380960-2 | Y |  | Y | Y Y | Y Y | Y Y\nOption | 5380960-2 5405177 | USB Footswitch, 3 button Drawer | Active Active |  | Y Y |  | Y Y | Y | Y | Y\nOption | 5486935 | Drawer | Active |  | N |  | N | N | N | N\nOption | 5418137 | LS8 ECG Module | Active |  | Y |  | Y | Y | Y | Y\nOption | 5761967 | LOGIQ S8 ECG Module2 Assy | Active |  | N |  | N | N | N | N\nOption | 5341189 | ECG Cable (AHA) | Active |  | Y |  | Y | Y | Y | Y\nOption | 5341188 | ECG Cable (IEC) | Active |  | Y |  | Y | Y | Y | Y\nOption | 5418149 | OPTION_PROBE_HOLD ER-ASSY-PYXIS | Active |  | Y |  | Y | Y | Y | Y\nOption | 5725262 | Optional Probe Holder | Active |  | N |  | N | N | N | N\nOption | 5409146 | TVTR Probe Holder Pyxis | Replaced |  | Y |  | Y | Y | Y | Y\nOption | 5761961 | TVTR PROBE HOLDER R4 | Active | 5761961 | Y |  | Y | Y | Y | Y\n | 6020710 | Assembly - English |  |  |  | Y | Y |  |  | \nOPIO |  | A/N Key Top w/Base | Replaced | 5480205 | Y |  |  | Y | Y | Y\nOption | 6020711 | A/N Key Top w/Base Assembly - Russian | Replaced | 5480205 and 5480209 5480205 and | Y |  | Y | Y | Y | Y\nOption | 6020712 | A/N Key Top w/Base Assembly - Greek | Replaced | 5480210 | Y |  | Y | Y | Y | Y"
+    }
+   ],
+   "lead_case_checks": [
+    "p838: Round one lost text here. Expected now: back to the original table. Confirm all words."
+   ]
+  },
+  {
+   "key": "sec_0128|840|5.6-table_content",
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    840
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/395",
+     "page": 840,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0128|849|5.6-table_content",
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p849 compared with #/tables/404 row by row: header 'Parts Group, Part Number, Part Description, Parts staus, Replace with, R4 Upg, R4, R4.2.5x Upg, R4.2.5 x' (the typo 'staus' is in the PDF). Rows from Covers 5405167 to Option 5460247-2 match, including 'Replaced' with '5480205 and 5480206' and the Y/N cells. No row has an extra or missing column on this page.",
+    "notes": "Other pages of this table are not in the pages folder. Node text of #/tables/413 and #/tables/414 has odd rows (for example 'Option Option | 5418149 5725262'), so the human should check those pages."
+   },
+   "pages_to_check": [
+    849
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/404",
+     "page": 849,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0130|873|5.6-table_content",
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p873 compared with #/tables/427 (chapter Contents). All 10 rows match: 10-1 Overview 10-1, 10-2 Warnings 10-2, 10-3 Why do maintenance 10-2, 10-4 Maintenance task schedule 10-3, 10-5 Tools required 10-6, 10-6 System maintenance 10-7, 10-7 Using a Phantom 10-16, 10-8 Electrical Safety Tests 10-17, 10-9 When There's Too Much Leakage Current... 10-35, and the Ultrasound INSPECTION CERTIFICATE row 10-37.",
+    "notes": "The dot leaders (. . . .) stay in the cell text. This is only noise and does not change the values."
+   },
+   "pages_to_check": [
+    873
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/427",
+     "page": 873,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0135|880|5.4-hierarchy_level",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The heading 'Section 10-6 System maintenance' (p879) is a section under Chapter 10 (sec_0129), so level 2 is right. p880 opens with sub-headings '10-6-2 Functional checks' and '10-6-2-1 System functional checks', kept as heading nodes.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p879 the heading 'Section 10-6 System maintenance' and 10-6-1 Preliminary checks on p879 (folio 10 - 7). It is a main section under Chapter 10 (sec_0129, p873-910, level 1). hierarchy_level 2 for sec_0135 is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.4-parent_child",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0129 (Chapter 10) and child_sections is empty. The neighbours sec_0134 (10-5 Tools required, p878) and sec_0136 (10-7 Using a Phantom, p888) are siblings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0135 has parent_section_id sec_0129 (Chapter 10), which is correct for a section heading on p879. child_sections is empty. The sub-headings 10-6-1 to 10-6-5-3 are headings inside the section and are not separate sections, so no child is missing.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.4-page_start_end",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p879 starts with the heading 'Section 10-6' and p887 ends with the probe cleaning cautions and folio '10 - 15'. sec_0136 starts at p888. The p880 content (10-6-2, Table 10-4, the NOTE) is owned by sec_0135, and no node of its 112 belongs to a neighbour.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts at heading 'Section 10-6 System maintenance' and 10-6-1 Preliminary checks on p879 (folio 10 - 7) and ends at 10-6-5-3 Basic Probe Cleaning and/or Disinfection on p887 (folio 10 - 15); the rest of p887 is blank. page_start 879 and page_end 887 match. Next section: sec_0136 (p888). p880 shows 10-6-2 Functional checks and Table 10-4 System Functional Checks. All nodes (#/texts/9671-9774 and #/tables/432-439) belong to this section. Running header and footer lines are kept as paragraph nodes on the same pages.",
+    "notes": "The page header and footer paragraphs ('GE Healthcare', folio line) are kept as nodes but stay inside the section pages, so I do not treat them as a boundary problem."
+   }
+  },
+  {
+   "key": "sec_0135|880|5.4-hierarchy_path",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 10/Section 10-6 System maintenance'. It matches the nesting of the bookmarks.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/Chapter 10/Section 10-6 System maintenance' matches the heading on p879 and the parent sec_0129 (Chapter 10). Order root, then chapter, then section is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.4-gaps_duplicates",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap: sec_0134 ends at p878, sec_0135 covers p879-p887 and sec_0136 starts at p888. Tables 10-3 to 10-10 and Figures 10-1 to 10-5 each appear once.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Previous section: sec_0134 (p878). This section: p879-887. Next section: sec_0136 (p888). There is no gap and no overlap. sec_0135 appears once, and p880 shows 10-6-2 Functional checks and Table 10-4 System Functional Checks.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.4-flagged_for_review",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is on p879, the first page of the range.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false for sec_0135 and verification_score is 100. The title on p879 agrees with the node title, so there is no uncertain boundary to confirm.",
+    "notes": "Flag state alone is not a defect."
+   }
+  },
+  {
+   "key": "sec_0135|880|5.4-structural_source",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark matches the 'Section 10-6' heading on p879 and the range ends right before sec_0136 at p888.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' for sec_0135. The bookmark title and the heading on p879 are the same, so the section is not inferred. No extra check is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.6-numbering_scheme",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Folios '10 - 7' to '10 - 15' (p879-p887) are chapter-page numbers of arabic digits. The label 'arabic' is acceptable.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p880 the printed folio is '10 - 8' (chapter-page style, arabic digits). numbering_scheme 'arabic' is right. Chapter 10 and the neighbouring sections use the same style.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.6-offset_applied",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The 'Section 10-6' heading is on physical p879 = page_start. No wrong shift is seen on p880 (folio '10 - 8').",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 for sec_0135 and for both neighbouring sections. The bookmark page matches the heading on physical p879. The folio '10 - 8' on p880 is chapter-based, so no offset is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.6-table_content",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Table 10-4 on p880 has 15 rows and all 15 are in node #/tables/433 in the right order. For rows 7, 10, 11, 12, 14 and 15 the Step name is merged into the Description cell and the Step cell is empty (example: 'Basic Measurements Check Distance and Tissue Depth Measurement.'). Rows 1-6, 8, 9 and 13 keep the Step name in its own column. The Check number is right in all rows.",
+    "notes": "Chosen Low, not Medium. Every value is present, in the right row and in reading order, and the step name stays first in its row. Only the cell border between Step and Description is merged. Medium needs a value that cannot be attributed to its column, which is not the case. The same pattern is on p879 (Table 10-3 rows 1, 4, 5) and p886 (Table 10-10 row 2)."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p880 compared with #/tables/433 (Table 10-4) cell by cell. Header: Check, Step, Description. All 15 rows match: 1 B Mode, 2 Color Flow Mode, 3 Doppler Mode, 4 M-Mode, 5 3D Mode, 6 Real Time 4D Mode, 7 Basic Measurements, 8 Probe Elements, 9 Applicable Software Options, 10 System Diagnostic, 11 Transmit/Receive, 12 Operating Panel test, 13 Keyboard, 14 Touch Panel, 15 Monitor. Each Description text is in the right column. Two-line descriptions are joined into one cell. No merged or shifted cell. I also checked #/tables/432 (Table 10-3, p879, 7 rows): it matches.",
+    "notes": "Tables on p881-886 were not rendered. #/tables/437 (cleaning agents) has a complex Notes row and the human may want to check it."
+   },
+   "pages_to_check": [
+    880
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/433",
+     "page": 880,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p880: Round one fixed this table (base was FAIL Low). Must still be fixed."
+   ]
+  },
+  {
+   "key": "sec_0135|880|5.5-filters_discarding",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p880 has no picture. On p886 and p887 the Figure 10-5 icon strip and the three probe icons (hands, NEVER, OK) are extracted, and the photos of Figures 10-1 to 10-4 (p883-p884, img_1390-img_1393) are kept. The small warning triangles beside CAUTION and NOTICE are not extracted, but their meaning is written in the text.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p880 has only text and Table 10-4, no figure. The figures of this section are on other pages: p883-884 (air filter, img_1390-1393), p886 (img_1394 vector) and p887 (img_1395-1397). On p887 all three drawings are present (hands, 'NEVER' tank, 'OK' tank).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0135|880|5.5-filters_passing_noise",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Pages 886 and 887. On p886 the vector image img_1394 (870x618) is the Figure 10-5 icon strip plus page text. Its top edge has a cut body line ('equipment damage. Failure to properly handle or maintain a probe may also void its warra...'). Below the icons it has the caption 'Figure 10-5 Probe handling icons' and two body lines ('Any evidence of wear...', 'Do a visual check...'). About half of the image is empty white. On p887 img_1396 (436x263) has a cut line 'NOTICE Disinfect a defective probe befo...' with the warning triangles and 'CAUTION' labels around the hands icon. The figures themselves are complete.",
+    "notes": "Extra page text kept inside a figure image. The same text is in the paragraph nodes 10179-10184, so the content is not affected. Low by contract (noise kept as image): not Critical (nothing is dropped) and not Medium (the section mapping is right). Graded once for the section. Probably the vector crop box is too large."
+   },
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p887 img_1396 (the hands drawing) is a crop that also holds the text 'NOTICE Disinfect a defective probe bef...' (cut off) and two yellow caution triangles. That text and those icons are not part of the figure. Other images look clean.",
+    "notes": "The crop of a vector figure took in nearby text and icons. The figure and the text are still in the section, so Low. The row is p880 because that is the sampled page; the defect is on p887."
+   }
+  },
+  {
+   "key": "sec_0135|880|5.5-image_section_mapping",
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "All images (img_1390-img_1397) are on p883-p887 inside sec_0135 (p879-p887). sec_0134 ends at p878 and sec_0136 starts at p888, so no page is shared. The captions Figure 10-1 to 10-5 match the images on the same pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p880 has no image. The images on p883-887 sit in 10-6-3 and 10-6-5, which are inside sec_0135 (p879-887), so the mapping is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.4-hierarchy_level",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The heading 'Section 10-8 Electrical Safety Tests' (p889) is a section under Chapter 10 (sec_0129), so level 2 is right. p895 shows '10-8-6 Data sheet for enclosure/chassis leakage current' with Table 10-15. The 10-8-x headings are kept as heading nodes of sec_0137.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p889 the heading 'Section 10-8 Electrical Safety Tests' and 10-8-1 Safety test overview on p889 (folio 10 - 17). It is a main section under Chapter 10 (sec_0129, p873-910, level 1). hierarchy_level 2 for sec_0137 is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.4-parent_child",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0129 (Chapter 10) and child_sections is empty. The neighbours sec_0136 (10-7 Using a Phantom, p888) and sec_0138 (10-9 Too Much Leakage Current, p907-p910) are siblings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0137 has parent_section_id sec_0129 (Chapter 10), which is correct for a section heading on p889. child_sections is empty. The sub-headings 10-8-1 to 10-8-13 are headings inside the section and are not separate sections, so no child is missing.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.4-page_start_end",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section opens on p889 with 'Section 10-8 Electrical Safety Tests'. The last page p906 has 10-8-13 and Table 10-19, then sec_0138 starts at p907. p895 (10-8-6 text, Table 10-15 caption, NOTEs) matches nodes 81-90 and is owned by this section. No neighbour content is inside the 256 nodes.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts at heading 'Section 10-8 Electrical Safety Tests' and 10-8-1 Safety test overview on p889 (folio 10 - 17) and ends at Table 10-19 (e-TRAX sink leakage) on p906 (folio 10 - 34); the rest of p906 is blank. page_start 889 and page_end 906 match. Next section: sec_0138 (p907). p895 shows 10-8-6 Data sheet and Table 10-15, with no figure. All nodes (#/texts/9781-10026 and #/tables/440-449) belong to this section. Running header and footer lines are kept as paragraph nodes on the same pages.",
+    "notes": "The page header and footer paragraphs ('GE Healthcare', folio line) are kept as nodes but stay inside the section pages, so I do not treat them as a boundary problem."
+   }
+  },
+  {
+   "key": "sec_0137|895|5.4-hierarchy_path",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 10/Section 10-8 Electrical Safety Tests'. It matches the bookmark nesting.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/Chapter 10/Section 10-8 Electrical Safety Tests' matches the heading on p889 and the parent sec_0129 (Chapter 10). Order root, then chapter, then section is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.4-gaps_duplicates",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No gap: sec_0136 ends at p888, sec_0137 covers p889-p906 and sec_0138 starts at p907. Tables 10-15 and 10-19 and Figures 10-6 to 10-15 each appear once. The 'Table 10-17' mention in text on p898 is probably a source typo.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Previous section: sec_0136 (p888). This section: p889-906. Next section: sec_0138 (p907). There is no gap and no overlap. sec_0137 appears once, and p895 shows 10-8-6 Data sheet and Table 10-15, with no figure.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.4-flagged_for_review",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The 'Section 10-8' heading is on p889, the first page of the range.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false for sec_0137 and verification_score is 100. The title on p889 agrees with the node title, so there is no uncertain boundary to confirm.",
+    "notes": "Flag state alone is not a defect."
+   }
+  },
+  {
+   "key": "sec_0137|895|5.4-structural_source",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark matches the heading on p889 and the range ends before sec_0138 at p907.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' for sec_0137. The bookmark title and the heading on p889 are the same, so the section is not inferred. No extra check is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.6-numbering_scheme",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Folios '10 - 17' to '10 - 34' (p889-p906) are chapter-page numbers of arabic digits. The label 'arabic' is acceptable.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p895 the printed folio is '10 - 23' (chapter-page style, arabic digits). numbering_scheme 'arabic' is right. Chapter 10 and the neighbouring sections use the same style.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.6-offset_applied",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The 'Section 10-8' heading is on physical p889 = page_start, and p906 (folio '10 - 34') is the last page. No wrong shift is seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 for sec_0137 and for both neighbouring sections. The bookmark page matches the heading on physical p889. The folio '10 - 23' on p895 is chapter-based, so no offset is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.6-table_content",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Table 10-15 on p895 (#/tables/445) keeps the title row, the header names (Rear Panel, Lower Frame, Probe Connector, Main Handle) and the four condition rows Off Closed, Off Open, On Closed, On Open in order. But 'System Power' and 'Grounding/PE' are merged in one cell, and 'Off Closed' etc. are in one cell. The measurement cells are empty, as in the PDF.",
+    "notes": "Merged cells with values and reading order kept: Low. The same pattern is in Table 10-19 on p906 ('On Closed' sits in the second column). The tables on p890, p898, p899 and p902 were not rendered here. Probably the same cell-merge cause as Table 10-4 in sec_0135."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p895 compared with #/tables/445 (Table 10-15) cell by cell. Row 1: 'Unit under test___' in the first cell and 'Date of test:___' in the fourth cell, with empty cells between (one wide header cell in the PDF). Row 2: 'Test Conditions' in cell 1 and 'Measurement/Test Point Location' in cell 3 (both are spanned headers). Row 3: System Power, Grounding/PE, Rear Panel, Lower Frame, Probe Connector, Main Handle. Data rows: Off Closed, Off Open, On Closed, On Open, with empty measurement cells. No value is in the wrong column.",
+    "notes": "Spanned header cells are shown as a value plus empty cells. Values and order are kept, so I treat this as PASS."
+   },
+   "pages_to_check": [
+    895
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/445",
+     "page": 895,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p895: Round one fixed this table (base was FAIL Low). Must still be fixed."
+   ]
+  },
+  {
+   "key": "sec_0137|895|5.5-filters_discarding",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p895 has no picture. In the section, the figures of 10-6 to 10-15 are extracted (img_1398-img_1409), including the drawing on p893 (img_1401). The small warning triangles beside CAUTION are not extracted, but their meaning is in the text.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p895 has no figure. The figures of this section (img_1398-1409) are on p891-905, for example the circuit drawings on p900 and p905. I opened img_1398, img_1403 and img_1409 and they look complete.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.5-filters_passing_noise",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "I checked all four edges of the vector image img_1401 (p893, 397x311). It holds only the grounding test drawing (plug, ohmmeter, device, labels 1-4), with no body text or caption. The other images are real figures (outlet tester, circuit diagrams, BF label, TEE test). No decorative strip is kept.",
+    "notes": "Hidden text nodes like '!! CAUTION:' (p905) and '!! DANGER:' (p906) are text, not images, so they are not graded here."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p895 no image was extracted and none should be. The caution triangles are not kept as images. I did not find a logo or rule among img_1398-1409 that I opened.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|895|5.5-image_section_mapping",
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "All 12 images (img_1398-img_1409, p891-p905) map to sec_0137 (p889-p906). sec_0136 is only p888 and sec_0138 starts at p907, so no page is shared. The captions match the nearby images.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p895 has no figure, so nothing is mapped there. The images on p891-905 belong to sub-sections 10-8-2 to 10-8-12, inside sec_0137 (p889-906).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.4-hierarchy_level",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The heading 'Section 10-8 Electrical Safety Tests' (p889) is a section under Chapter 10 (sec_0129), so level 2 is right. p894 shows '10-8-5 Chassis leakage current test' with its sub-headings and numbered steps. The 10-8-x headings are kept as heading nodes of sec_0137.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p889 the heading 'Section 10-8 Electrical Safety Tests' and 10-8-1 Safety test overview on p889 (folio 10 - 17). It is a main section under Chapter 10 (sec_0129, p873-910, level 1). hierarchy_level 2 for sec_0137 is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.4-parent_child",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0129 (Chapter 10) and child_sections is empty. The neighbours sec_0136 (10-7 Using a Phantom, p888) and sec_0138 (10-9 Too Much Leakage Current, p907-p910) are siblings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0137 has parent_section_id sec_0129 (Chapter 10), which is correct for a section heading on p889. child_sections is empty. The sub-headings 10-8-1 to 10-8-13 are headings inside the section and are not separate sections, so no child is missing.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.4-page_start_end",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p894 (10-8-5 Chassis leakage current test, with 10-8-5-1 Definition and 10-8-5-2 Generic Procedure) matches nodes 52-80 in order. It is inside p889-p906 and belongs to this section. The section ends at p906 and sec_0138 starts at p907.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The section starts at heading 'Section 10-8 Electrical Safety Tests' and 10-8-1 Safety test overview on p889 (folio 10 - 17) and ends at Table 10-19 (e-TRAX sink leakage) on p906 (folio 10 - 34); the rest of p906 is blank. page_start 889 and page_end 906 match. Next section: sec_0138 (p907). p894 shows 10-8-5 Chassis leakage current test: text, cautions and lists, no table and no figure. All nodes (#/texts/9781-10026 and #/tables/440-449) belong to this section. Running header and footer lines are kept as paragraph nodes on the same pages.",
+    "notes": "The page header and footer paragraphs ('GE Healthcare', folio line) are kept as nodes but stay inside the section pages, so I do not treat them as a boundary problem."
+   }
+  },
+  {
+   "key": "sec_0137|894|5.4-hierarchy_path",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is '/Chapter 10/Section 10-8 Electrical Safety Tests'. It matches the bookmark nesting.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/Chapter 10/Section 10-8 Electrical Safety Tests' matches the heading on p889 and the parent sec_0129 (Chapter 10). Order root, then chapter, then section is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.4-gaps_duplicates",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p894 each heading and step appears once (10-8-5, 10-8-5-1, 10-8-5-2, steps 1.) to 5.)). The section range p889-p906 touches sec_0136 (p888) and sec_0138 (p907) with no gap or overlap.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Previous section: sec_0136 (p888). This section: p889-906. Next section: sec_0138 (p907). There is no gap and no overlap. sec_0137 appears once, and p894 shows 10-8-5 Chassis leakage current test: text, cautions and lists, no table and no figure.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.4-flagged_for_review",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The 'Section 10-8' heading is on p889, the first page of the range.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false for sec_0137 and verification_score is 100. The title on p889 agrees with the node title, so there is no uncertain boundary to confirm.",
+    "notes": "Flag state alone is not a defect."
+   }
+  },
+  {
+   "key": "sec_0137|894|5.4-structural_source",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark matches the heading on p889 and the range ends before sec_0138 at p907.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc' for sec_0137. The bookmark title and the heading on p889 are the same, so the section is not inferred. No extra check is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.6-numbering_scheme",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Folios '10 - 17' to '10 - 34' (p889-p906) are chapter-page numbers of arabic digits. The label 'arabic' is acceptable.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p894 the printed folio is '10 - 22' (chapter-page style, arabic digits). numbering_scheme 'arabic' is right. Chapter 10 and the neighbouring sections use the same style.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.6-offset_applied",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The 'Section 10-8' heading is on physical p889 = page_start, and p906 (folio '10 - 34') is the last page. No wrong shift is seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0 for sec_0137 and for both neighbouring sections. The bookmark page matches the heading on physical p889. The folio '10 - 22' on p894 is chapter-based, so no offset is needed.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.6-table_content",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p894 has no table. The tables of this section are on p890, p891, p893, p895, p898, p899, p902 and p906. I checked the p893 legend table (4 cells, values match), Table 10-15 on p895 and Table 10-19 on p906. The merged-cell problem is logged on the p895 row.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p894 has no table. I checked the tables of this section that are rendered. On p895 #/tables/445 (Table 10-15) matches and on p906 #/tables/449 (Table 10-19) matches. Text in the other tables (p890, 891, 893, 898, 899, 902) has no clear column shift, but those pages are not in the pages folder.",
+    "notes": "Low confidence on unrendered pages. In #/tables/440 (p890) cells read 'Closed Open | 100 500'. This may be two lines in one cell in the PDF. The human should check p890."
+   },
+   "pages_to_check": [
+    894
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0137|894|5.5-filters_discarding",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p894 has no picture, only text with warning triangles. In the section, the figures of 10-6 to 10-15 are extracted (img_1398-img_1409), including the drawing on p893 (img_1401). The small warning triangles beside CAUTION are not extracted, but their meaning is in the text.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p894 has no figure. The figures of this section (img_1398-1409) are on p891-905, for example the circuit drawings on p900 and p905. I opened img_1398, img_1403 and img_1409 and they look complete.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.5-filters_passing_noise",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "I checked all four edges of the vector image img_1401 (p893, 397x311). It holds only the grounding test drawing (plug, ohmmeter, device, labels 1-4), with no body text or caption. The other images are real figures (outlet tester, circuit diagrams, BF label, TEE test). No decorative strip is kept.",
+    "notes": "Hidden text nodes like '!! CAUTION:' (p905) and '!! DANGER:' (p906) are text, not images, so they are not graded here."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p894 no image was extracted and none should be. The caution triangles are not kept as images. I did not find a logo or rule among img_1398-1409 that I opened.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0137|894|5.5-image_section_mapping",
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "All 12 images (img_1398-img_1409, p891-p905) map to sec_0137 (p889-p906). sec_0136 is only p888 and sec_0138 starts at p907, so no page is shared. The captions match the nearby images.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p894 has no figure, so nothing is mapped there. The images on p891-905 belong to sub-sections 10-8-2 to 10-8-12, inside sec_0137 (p889-906).",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0138|910|5.6-table_content",
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p910 compared with #/tables/451 and #/tables/452. Table 451 has the header Electrical Test Performed, Max Value Allowed, Value Measured, OK?, Comments and all 14 rows from 'Outlet (correct ground &wiring config.)' to 'Peripheral 3Ground Continuity'. Table 452 has the header Probe Number (from previous page) ... Comments and rows Probe 1 to Probe 9. The word PROBES is a separate heading node between the two tables. Empty cells are in the right places.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    910
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/451",
+     "page": 910,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/452",
+     "page": 910,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0138|909|5.6-table_content",
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p909 compared with #/tables/450. Header: Functional Check (if applicable), OK? or N/A, Physical Inspection and Cleaning (if applicable), Inspect, Clean. Rows B-Mode Function to Measurement Accuracy match, and the right side lists Console, Monitor, (blank), Air Filter, Probe Holders, External I/O, Wheels Brakes & Swivel Locks, Cables and Connectors, Approved Peripherals. The empty rows are kept. The empty last row of the PDF is not in the node.",
+    "notes": "The grid at the top of the page (Customer Name, System ID, Probe 1-9) is not a table node. It is paragraph text and the labels are kept, so no information is lost."
+   },
+   "pages_to_check": [
+    909
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/450",
+     "page": 909,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  }
+ ]
+}

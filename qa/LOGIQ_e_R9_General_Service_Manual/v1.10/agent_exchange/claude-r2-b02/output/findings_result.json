@@ -1,0 +1,2084 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p183 (printed 4-21) the page shows headings Performance Tests (#/texts/1925), B mode Checks (#/texts/1926), Introduction and Preparations, plus Figure 4-10 screenshot. sec_0029 'Functional checks' has hierarchy_level 2. Its opener on p180 is a chapter-style heading under the level 1 parent sec_0026, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has parent_section_id sec_0026, which lists sec_0029 in child_sections and covers p183. sec_0029 has no child_sections. The page shows headings Performance Tests (#/texts/1925), B mode Checks (#/texts/1926), Introduction and Preparations, plus Figure 4-10 screenshot, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has page_start 180 and page_end 225; p183 is inside it. The page shows headings Performance Tests (#/texts/1925), B mode Checks (#/texts/1926), Introduction and Preparations, plus Figure 4-10 screenshot. All its nodes belong to 'Functional checks'. Previous section is sec_0028 (ends p179), next is sec_0030 (starts p226), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Functional checks'. It lists the level 1 parent sec_0026 first and then sec_0029 'Functional checks'. This matches the chapter and section names in the page header and the opener on p180.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 covers p180 to p225. Previous section is sec_0028 (ends p179) and next is sec_0030 (starts p226), so there is no gap and no overlap. On p183 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p183 and the opener p180 agree with the title 'Functional checks', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has structural_source 'toc'. The title 'Functional checks' appears as the opener heading on p180, which equals page_start 180. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p183 is 4-21, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Functional checks' is on physical p180 (printed 4-18), equal to page_start. On p183 the printed folio is 4-21, so the folio step from the opener equals the physical page step (3 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p183 (headings Performance Tests (#/texts/1925), B mode Checks (#/texts/1926), Introduction and Preparations, plus Figure 4-10 screenshot). No table node has page_no 183 in sec_0029; #/tables/55 on p184. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p183 the page has Figure 4-10 B Mode screenshot. It was extracted as img_0154 and mapped to sec_0029. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p183 the retained image(s) img_0154 show Figure 4-10 B Mode screenshot. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0154 (Figure 4-10 B Mode screenshot) has page_no 183 and section_id sec_0029. Only sec_0029 has body content on p183, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p248 (printed 5-10) the page shows heading Advanced Information -Service Desktop (#/texts/2575), bullets and Table 5-2. sec_0037 'Common Service Desktop' has hierarchy_level 2. Its opener on p246 is a chapter-style heading under the level 1 parent sec_0033, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0037 has parent_section_id sec_0033, which lists sec_0037 in child_sections and covers p248. sec_0037 has no child_sections. The page shows heading Advanced Information -Service Desktop (#/texts/2575), bullets and Table 5-2, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Node #/texts/2645 'Chapter 6' (heading) is in sec_0037 but sits on p257. On p257 it is the big chapter number above 'Service Adjustments', the opener of the next chapter. Other nodes of sec_0037 belong to 'Common Service Desktop'. p248 itself shows Advanced Information -Service Desktop (#/texts/2575) and Table 5-2, which is correct.",
+   "notes": "Only a chapter-number label crosses the boundary. Content is not lost or misplaced, so Low. Same pattern as sec_0051. verify_claims expects Medium (content past page_end), but the node is only a chapter-number label. The contract maps this to Low (boilerplate crosses a boundary), as in the approved base.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Components and Functions (Theory)/Common Service Desktop'. It lists the level 1 parent sec_0033 first and then sec_0037 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p246.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0037 covers p246 to p256. Previous section is sec_0036 (ends p245) and next is sec_0038 (starts p257), so there is no gap and no overlap. On p248 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0037 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p248 and the opener p246 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0037 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p246, which equals page_start 246. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p248 is 5-10, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p246 (printed 5-8), equal to page_start. On p248 the printed folio is 5-10, so the folio step from the opener equals the physical page step (2 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Checked all 14 rows by 8 columns on p248 (Table 5-2). Header groups match: Class C View Levels sits over Service Advanced, Service Expert and Service Pro; Class M View Levels sits over SSA Key and Remote. Every X is in the right column: Home, Diags, Run Diags, Diag History, Utili- ties, Change Password, Disable Remote Connectivity (X only in Advanced, Expert, SSA Key), Gather Logs, Delete Files, Virtual Console Observation, Software Reload and Reset Patient Database. No value moved to another column.",
+   "notes": "Cells keep their columns. 'Utili- ties' keeps the printed line break. The table continues on p249 (#/tables/74), which was not rendered in this batch.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p248 (heading Advanced Information -Service Desktop (#/texts/2575), bullets and Table 5-2) I see no figure, photo, screenshot or icon that is not extracted. No image is expected for sec_0037 on this page.",
+   "notes": "Table pages contain no extra figures.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0037 on p248. The header rule, folio and footer text were not kept as images, so no noise was retained.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image has page_no 248 for sec_0037. This agrees with the page, which shows no figure for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p285 (printed 7-21) the page shows headings Color statuses (#/texts/2923) and Licenses (#/texts/2924) with bullet lists, no figure. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p285. sec_0047 has no child_sections. The page shows headings Color statuses (#/texts/2923) and Licenses (#/texts/2924) with bullet lists, no figure, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p285 is inside it. The page shows headings Color statuses (#/texts/2923) and Licenses (#/texts/2924) with bullet lists, no figure. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p285 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p285 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p285 is 7-21, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p285 the printed folio is 7-21, so the folio step from the opener equals the physical page step (2 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p285 (headings Color statuses (#/texts/2923) and Licenses (#/texts/2924) with bullet lists, no figure). No table node has page_no 285 in sec_0047; #/tables/76 is on p289. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p285 (headings Color statuses (#/texts/2923) and Licenses (#/texts/2924) with bullet lists, no figure) I see no figure, photo, screenshot or icon that is not extracted. No image is expected for sec_0047 on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0047 on p285. The header rule, folio and footer text were not kept as images, so no noise was retained.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image has page_no 285 for sec_0047. This agrees with the page, which shows no figure for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p383 (printed 7-119) the page shows heading Noise in B Mode (#/texts/4090) and the flow chart Figure 7-97. sec_0051 'Troubleshooting' has hierarchy_level 2. Its opener on p377 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0051 has parent_section_id sec_0042, which lists sec_0051 in child_sections and covers p383. sec_0051 has no child_sections. The page shows heading Noise in B Mode (#/texts/4090) and the flow chart Figure 7-97, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Node #/texts/4297 'Chapter 8' (heading) is in sec_0051 but sits on p397. On p397 it is the big chapter number above 'Replacement Procedures', the opener of the next chapter. All other nodes of sec_0051 belong to 'Troubleshooting'. p383 itself shows Noise in B Mode (#/texts/4090) and Figure 7-97, which is correct.",
+   "notes": "Only a chapter-number label crosses the boundary. Content is not lost or misplaced, so Low. sec_0051 page_end 396 is correct; the stray label is on p397. verify_claims expects Medium (content past page_end), but the node is only a chapter-number label. The contract maps this to Low (boilerplate crosses a boundary), as in the approved base.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Troubleshooting'. It lists the level 1 parent sec_0042 first and then sec_0051 'Troubleshooting'. This matches the chapter and section names in the page header and the opener on p377. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0051 covers p377 to p396. Previous section is sec_0050 (ends p376) and next is sec_0052 (starts p397), so there is no gap and no overlap. On p383 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0051 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p383 and the opener p377 agree with the title 'Troubleshooting', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0051 has structural_source 'toc'. The title 'Troubleshooting' appears as the opener heading on p377, which equals page_start 377. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p383 is 7-119, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Troubleshooting' is on physical p377 (printed 7-113), equal to page_start. On p383 the printed folio is 7-119, so the folio step from the opener equals the physical page step (6 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p383 (heading Noise in B Mode (#/texts/4090) and the flow chart Figure 7-97). No table node has page_no 383 in sec_0051; #/tables/107 is on p393. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p383 the page has Figure 7-97 flow chart. It was extracted as img_0305 and mapped to sec_0051. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "The PNG has a thin cut-off line of the caption at the bottom edge. This is harmless.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p383 the retained image(s) img_0305 show Figure 7-97 flow chart. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0051",
+   "page_sampled": 383,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0305 (Figure 7-97 flow chart) has page_no 383 and section_id sec_0051. Only sec_0051 has body content on p383, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p186 (printed 4-24) the page shows heading M Mode Checks (#/texts/1952), Introduction, Preparations and Figure 4-11 screenshot. sec_0029 'Functional checks' has hierarchy_level 2. Its opener on p180 is a chapter-style heading under the level 1 parent sec_0026, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has parent_section_id sec_0026, which lists sec_0029 in child_sections and covers p186. sec_0029 has no child_sections. The page shows heading M Mode Checks (#/texts/1952), Introduction, Preparations and Figure 4-11 screenshot, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has page_start 180 and page_end 225; p186 is inside it. The page shows heading M Mode Checks (#/texts/1952), Introduction, Preparations and Figure 4-11 screenshot. All its nodes belong to 'Functional checks'. Previous section is sec_0028 (ends p179), next is sec_0030 (starts p226), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Functional checks'. It lists the level 1 parent sec_0026 first and then sec_0029 'Functional checks'. This matches the chapter and section names in the page header and the opener on p180.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 covers p180 to p225. Previous section is sec_0028 (ends p179) and next is sec_0030 (starts p226), so there is no gap and no overlap. On p186 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p186 and the opener p180 agree with the title 'Functional checks', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has structural_source 'toc'. The title 'Functional checks' appears as the opener heading on p180, which equals page_start 180. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p186 is 4-24, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Functional checks' is on physical p180 (printed 4-18), equal to page_start. On p186 the printed folio is 4-24, so the folio step from the opener equals the physical page step (6 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p186 (heading M Mode Checks (#/texts/1952), Introduction, Preparations and Figure 4-11 screenshot). No table node has page_no 186 in sec_0029; #/tables/57 on p187. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p186 the page has Figure 4-11 M Mode screenshot. It was extracted as img_0155 and mapped to sec_0029. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p186 the retained image(s) img_0155 show Figure 4-11 M Mode screenshot. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 186,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0155 (Figure 4-11 M Mode screenshot) has page_no 186 and section_id sec_0029. Only sec_0029 has body content on p186, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p202 (printed 4-40) the page shows heading Probe/Connectors Check (#/texts/2101), a NOTE, numbered steps and Figure 4-16 photo. sec_0029 'Functional checks' has hierarchy_level 2. Its opener on p180 is a chapter-style heading under the level 1 parent sec_0026, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has parent_section_id sec_0026, which lists sec_0029 in child_sections and covers p202. sec_0029 has no child_sections. The page shows heading Probe/Connectors Check (#/texts/2101), a NOTE, numbered steps and Figure 4-16 photo, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has page_start 180 and page_end 225; p202 is inside it. The page shows heading Probe/Connectors Check (#/texts/2101), a NOTE, numbered steps and Figure 4-16 photo. All its nodes belong to 'Functional checks'. Previous section is sec_0028 (ends p179), next is sec_0030 (starts p226), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Functional checks'. It lists the level 1 parent sec_0026 first and then sec_0029 'Functional checks'. This matches the chapter and section names in the page header and the opener on p180.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 covers p180 to p225. Previous section is sec_0028 (ends p179) and next is sec_0030 (starts p226), so there is no gap and no overlap. On p202 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p202 and the opener p180 agree with the title 'Functional checks', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has structural_source 'toc'. The title 'Functional checks' appears as the opener heading on p180, which equals page_start 180. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p202 is 4-40, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Functional checks' is on physical p180 (printed 4-18), equal to page_start. On p202 the printed folio is 4-40, so the folio step from the opener equals the physical page step (22 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p202 (heading Probe/Connectors Check (#/texts/2101), a NOTE, numbered steps and Figure 4-16 photo). No table node has page_no 202 in sec_0029; no table node in this area. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p202 the page has Figure 4-16 probe photo. It was extracted as img_0160 and mapped to sec_0029. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p202 the retained image(s) img_0160 show Figure 4-16 probe photo. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0160 (Figure 4-16 probe photo) has page_no 202 and section_id sec_0029. Only sec_0029 has body content on p202, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p209 (printed 4-47) the page shows heading Restore System Presets and Configurations (continued) (#/texts/2194) and one bullet list, no figure. sec_0029 'Functional checks' has hierarchy_level 2. Its opener on p180 is a chapter-style heading under the level 1 parent sec_0026, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has parent_section_id sec_0026, which lists sec_0029 in child_sections and covers p209. sec_0029 has no child_sections. The page shows heading Restore System Presets and Configurations (continued) (#/texts/2194) and one bullet list, no figure, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has page_start 180 and page_end 225; p209 is inside it. The page shows heading Restore System Presets and Configurations (continued) (#/texts/2194) and one bullet list, no figure. All its nodes belong to 'Functional checks'. Previous section is sec_0028 (ends p179), next is sec_0030 (starts p226), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Functional checks'. It lists the level 1 parent sec_0026 first and then sec_0029 'Functional checks'. This matches the chapter and section names in the page header and the opener on p180.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 covers p180 to p225. Previous section is sec_0028 (ends p179) and next is sec_0030 (starts p226), so there is no gap and no overlap. On p209 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p209 and the opener p180 agree with the title 'Functional checks', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has structural_source 'toc'. The title 'Functional checks' appears as the opener heading on p180, which equals page_start 180. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p209 is 4-47, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Functional checks' is on physical p180 (printed 4-18), equal to page_start. On p209 the printed folio is 4-47, so the folio step from the opener equals the physical page step (29 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p209 (heading Restore System Presets and Configurations (continued) (#/texts/2194) and one bullet list, no figure). No table node has page_no 209 in sec_0029; no table node on this page. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p209 (heading Restore System Presets and Configurations (continued) (#/texts/2194) and one bullet list, no figure) I see no figure, photo, screenshot or icon that is not extracted. No image is expected for sec_0029 on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0029 on p209. The header rule, folio and footer text were not kept as images, so no noise was retained.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image has page_no 209 for sec_0029. This agrees with the page, which shows no figure for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p220 (printed 4-58) the page shows heading Color Printers (continued) (#/texts/2319), steps 4 to 8 and Figures 4-30 and 4-31. sec_0029 'Functional checks' has hierarchy_level 2. Its opener on p180 is a chapter-style heading under the level 1 parent sec_0026, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has parent_section_id sec_0026, which lists sec_0029 in child_sections and covers p220. sec_0029 has no child_sections. The page shows heading Color Printers (continued) (#/texts/2319), steps 4 to 8 and Figures 4-30 and 4-31, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has page_start 180 and page_end 225; p220 is inside it. The page shows heading Color Printers (continued) (#/texts/2319), steps 4 to 8 and Figures 4-30 and 4-31. All its nodes belong to 'Functional checks'. Previous section is sec_0028 (ends p179), next is sec_0030 (starts p226), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Functional checks'. It lists the level 1 parent sec_0026 first and then sec_0029 'Functional checks'. This matches the chapter and section names in the page header and the opener on p180.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 covers p180 to p225. Previous section is sec_0028 (ends p179) and next is sec_0030 (starts p226), so there is no gap and no overlap. On p220 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p220 and the opener p180 agree with the title 'Functional checks', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has structural_source 'toc'. The title 'Functional checks' appears as the opener heading on p180, which equals page_start 180. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p220 is 4-58, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Functional checks' is on physical p180 (printed 4-18), equal to page_start. On p220 the printed folio is 4-58, so the folio step from the opener equals the physical page step (40 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p220 (heading Color Printers (continued) (#/texts/2319), steps 4 to 8 and Figures 4-30 and 4-31). No table node has page_no 220 in sec_0029; #/tables/67 on p221. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p220 the page has Figure 4-30 and Figure 4-31 screenshots. It was extracted as img_0174 and img_0175 and mapped to sec_0029. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p220 the retained image(s) img_0174 and img_0175 show Figure 4-30 and Figure 4-31 screenshots. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0174 and img_0175 (Figure 4-30 and Figure 4-31) have page_no 220 and section_id sec_0029. They sit under Color Printers (continued) in sec_0029, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p231 is the first page of the next section (sec_0032 'Probe Check', the opener heading is big, printed 4-69). sec_0031 'Imaging Insights' ends on p230. Its level 2 matches its opener p228 under level 1 parent sec_0026.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0031 has parent_section_id sec_0026, which lists sec_0031 in child_sections. sec_0031 has no child_sections. p231 starts the sibling sec_0032, so it is correctly not part of sec_0031.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0031 has page_start 228 and page_end 230. p231 shows the chapter opener Probe Check with its own header and folio 4-69. No node of sec_0031 has page_no 231, so no neighbouring content is absorbed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Imaging Insights'. It lists the level 1 parent sec_0026 first and then sec_0031 'Imaging Insights'. This matches the chapter and section names in the page header and the opener on p228.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0031 covers p228 to p230 and next is sec_0032 (starts p231), so p231 starts the next section with no gap and no overlap. sec_0031 has no node on p231, so nothing is duplicated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0031 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p231 and the opener p228 agree with the title 'Imaging Insights', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0031 has structural_source 'toc'. The title 'Imaging Insights' appears as the opener heading on p228, which equals page_start 228. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p231 is 4-69, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Imaging Insights' is on physical p228 (printed 4-66), equal to page_start. On p231 the printed folio is 4-69, so the folio step from the opener equals the physical page step (3 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p231 (it is the Probe Check opener of sec_0032). sec_0031 has no table node on p231; its only table #/tables/71 is on p230. Nothing to compare here.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p231 (the Probe Check opener, printed 4-69) two small CAUTION warning triangles sit left of the caution texts. No image for them is in images.json. They are probably dropped by a size filter.",
+   "notes": "The meaning is fully in the text ('Probe Check can detect most probe defects...'), so the loss is minor. The page is the start of sec_0032, so the icons may belong to that section. Row is graded on the sampled page.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0031 on p231. The header rule, folio and footer text were not kept as images, so no noise was retained.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image has page_no 231 for sec_0031. This agrees with the page, which shows no figure for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p284 (printed 7-20) the page shows heading Disruptive mode (#/texts/2912) with text, bullets and a NOTE, no figure. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p284. sec_0047 has no child_sections. The page shows heading Disruptive mode (#/texts/2912) with text, bullets and a NOTE, no figure, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p284 is inside it. The page shows heading Disruptive mode (#/texts/2912) with text, bullets and a NOTE, no figure. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p284 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p284 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p284 is 7-20, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p284 the printed folio is 7-20, so the folio step from the opener equals the physical page step (1 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p284 (heading Disruptive mode (#/texts/2912) with text, bullets and a NOTE, no figure). No table node has page_no 284 in sec_0047; #/tables/76 is on p289. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p284 (heading Disruptive mode (#/texts/2912) with text, bullets and a NOTE, no figure) I see no figure, photo, screenshot or icon that is not extracted. No image is expected for sec_0047 on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0047 on p284. The header rule, folio and footer text were not kept as images, so no noise was retained.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image has page_no 284 for sec_0047. This agrees with the page, which shows no figure for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p290 (printed 7-26) the page shows heading Software Status (#/texts/3021) and Figure 7-17 screenshot. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p290. sec_0047 has no child_sections. The page shows heading Software Status (#/texts/3021) and Figure 7-17 screenshot, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p290 is inside it. The page shows heading Software Status (#/texts/3021) and Figure 7-17 screenshot. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p290 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p290 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p290 is 7-26, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p290 the printed folio is 7-26, so the folio step from the opener equals the physical page step (7 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p290 (heading Software Status (#/texts/3021) and Figure 7-17 screenshot). No table node has page_no 290 in sec_0047; #/tables/77 is on p291. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p290 the page has Figure 7-17 Software Status screenshot. It was extracted as img_0226 and mapped to sec_0047. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p290 the retained image(s) img_0226 show Figure 7-17 Software Status screenshot. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0226 (Figure 7-17 Software Status screenshot) has page_no 290 and section_id sec_0047. Only sec_0047 has body content on p290, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p292 (printed 7-28) the page shows heading System Status (#/texts/3037), bullets and Figure 7-18 screenshot. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p292. sec_0047 has no child_sections. The page shows heading System Status (#/texts/3037), bullets and Figure 7-18 screenshot, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p292 is inside it. The page shows heading System Status (#/texts/3037), bullets and Figure 7-18 screenshot. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p292 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p292 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p292 is 7-28, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p292 the printed folio is 7-28, so the folio step from the opener equals the physical page step (9 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p292 (heading System Status (#/texts/3037), bullets and Figure 7-18 screenshot). No table node has page_no 292 in sec_0047; #/tables/78 is on p293. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p292 the page has Figure 7-18 System Status screenshot. It was extracted as img_0227 and mapped to sec_0047. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p292 the retained image(s) img_0227 show Figure 7-18 System Status screenshot. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0227 (Figure 7-18 System Status screenshot) has page_no 292 and section_id sec_0047. Only sec_0047 has body content on p292, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p303 (printed 7-39) the page shows heading Network Configuration (continued) (#/texts/3148) and Figure 7-25. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p303. sec_0047 has no child_sections. The page shows heading Network Configuration (continued) (#/texts/3148) and Figure 7-25, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p303 is inside it. The page shows heading Network Configuration (continued) (#/texts/3148) and Figure 7-25. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p303 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p303 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p303 is 7-39, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p303 the printed folio is 7-39, so the folio step from the opener equals the physical page step (20 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is visible on p303 (heading Network Configuration (continued) (#/texts/3148) and Figure 7-25). No table node has page_no 303 in sec_0047; #/tables/82 is on p304. There is nothing to compare cell by cell on this page.",
+   "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p303 the page has Figure 7-25 Network Details screenshot. It was extracted as img_0234 and mapped to sec_0047. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p303 the retained image(s) img_0234 show Figure 7-25 Network Details screenshot. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0234 (Figure 7-25 Network Details screenshot) has page_no 303 and section_id sec_0047. Only sec_0047 has body content on p303, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p315 (printed 7-51) the page shows heading Delete Files (#/texts/3278), Figure 7-33, Table 7-12 and the delete steps. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p315. sec_0047 has no child_sections. The page shows heading Delete Files (#/texts/3278), Figure 7-33, Table 7-12 and the delete steps, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p315 is inside it. The page shows heading Delete Files (#/texts/3278), Figure 7-33, Table 7-12 and the delete steps. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p315 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p315 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p315 is 7-51, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p315 the printed folio is 7-51, so the folio step from the opener equals the physical page step (32 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Checked #/tables/88 on p315 (Table 7-12). Header Element | DESCRIPTION is correct. Row 1 'Delete Files' = 'Displays the files that are available for deletion.' Row 2 'Delete' = 'Deletes the selected files.' All 3 rows and 2 columns match the rendered table.",
+   "notes": "No merged or shifted cells. The caption 'Table 7-12: Delete Files' is a separate paragraph node (#/texts/3284).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p315 the page has Figure 7-33 Delete Files screenshot. It was extracted as img_0242 and mapped to sec_0047. I viewed the extracted PNG: the full figure is there and nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p315 the retained image(s) img_0242 show Figure 7-33 Delete Files screenshot. This is real content, not a rule, logo or footer divider. No decorative item was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0242 (Figure 7-33 Delete Files screenshot) has page_no 315 and section_id sec_0047. Only sec_0047 has body content on p315, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 (printed 7-69) the page shows Table 7-21 Checkpoints (continued table), the steps to create a check point and a link list. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p333. sec_0047 has no child_sections. The page shows Table 7-21 Checkpoints (continued table), the steps to create a check point and a link list, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p333 is inside it. The page shows Table 7-21 Checkpoints (continued table), the steps to create a check point and a link list. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p333 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p333 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p333 is 7-69, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p333 the printed folio is 7-69, so the folio step from the opener equals the physical page step (50 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Checked #/tables/100 on p333 (Table 7-21). All 8 rows match: Comment, Service Checkpoint, the sub-header row Create Checkpoint (second cell empty, as printed), Action, Service Personnel, Comment, Service Checkpoint, Save. Each description sits next to its own label. The bullet lists in Action and Service Personnel keep their order (4 items and 4 items).",
+   "notes": "The table has no header row in the PDF. 'Value values' is a typo in the source. The caption is node #/texts/3519 typed as heading, but the table cells are correct.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 (Table 7-21 Checkpoints (continued table), the steps to create a check point and a link list) I see no figure, photo, screenshot or icon that is not extracted. No image is expected for sec_0047 on this page.",
+   "notes": "Table pages contain no extra figures.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0047 on p333. The header rule, folio and footer text were not kept as images, so no noise was retained.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image has page_no 333 for sec_0047. This agrees with the page, which shows no figure for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p338 (printed 7-74) the page shows Table 7-23 Network Capture, the capture steps and a link list. sec_0047 'Common Service Desktop' has hierarchy_level 2. Its opener on p283 is a chapter-style heading under the level 1 parent sec_0042, so level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has parent_section_id sec_0042, which lists sec_0047 in child_sections and covers p338. sec_0047 has no child_sections. The page shows Table 7-23 Network Capture, the capture steps and a link list, with no bookmark-level heading that would need a child.",
+   "notes": "Sub-headings are inside the section body because the PDF bookmarks have only two levels.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has page_start 283 and page_end 343; p338 is inside it. The page shows Table 7-23 Network Capture, the capture steps and a link list. All its nodes belong to 'Common Service Desktop'. Previous section is sec_0046 (ends p282), next is sec_0048 (starts p344), so the boundaries are tight.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Diagnostics/Troubleshooting/Common Service Desktop'. It lists the level 1 parent sec_0042 first and then sec_0047 'Common Service Desktop'. This matches the chapter and section names in the page header and the opener on p283. The parent title itself contains a slash ('Diagnostics/Troubleshooting').",
+   "notes": "The path string looks like 3 levels but the parent title has a slash in its name. This is cosmetic. Probably no retrieval impact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 covers p283 to p343. Previous section is sec_0046 (ends p282) and next is sec_0048 (starts p344), so there is no gap and no overlap. On p338 I see no repeated node and no missing text block for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has flagged_for_review false, verification_score 100.0 and an empty verification_reason. The page content on p338 and the opener p283 agree with the title 'Common Service Desktop', so the flag state is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 has structural_source 'toc'. The title 'Common Service Desktop' appears as the opener heading on p283, which equals page_start 283. This supports a bookmark-based source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering_scheme is 'arabic'. The printed folio on p338 is 7-74, a chapter number plus an arabic page number. No roman or alphanumeric folios appear on this page.",
+   "notes": "Folio has a chapter prefix (for example 4-21). I treat it as arabic.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The opener 'Common Service Desktop' is on physical p283 (printed 7-19), equal to page_start. On p338 the printed folio is 7-74, so the folio step from the opener equals the physical page step (55 pages).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Checked #/tables/103 on p338 (Table 7-23). Rows match: Start Network Capture (text ends 'changes the Status to Running'), Stop Network Capture ('Select to stop the process..'), sub-header Network Capture Status, and two rows with an empty first cell and their descriptions. Bullets Not Running and Running keep their order. No value is in the wrong column.",
+   "notes": "Only a small extra space appears before the final period ('Running .'). The caption is node #/texts/3577 typed as heading, which does not change the table cells.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p338 (Table 7-23 Network Capture, the capture steps and a link list) I see no figure, photo, screenshot or icon that is not extracted. No image is expected for sec_0047 on this page.",
+   "notes": "Table pages contain no extra figures.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0047 on p338. The header rule, folio and footer text were not kept as images, so no noise was retained.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image has page_no 338 for sec_0047. This agrees with the page, which shows no figure for this section.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}
