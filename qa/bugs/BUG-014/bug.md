@@ -38,6 +38,8 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-03 | `Philips-MP20-MP90-Manual` | v2.4 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 3 → 4 | 8 | Approved rows; the extra FAIL is page_end grown by chapter numbers or margin labels, fixed later in 0b448dd |
+| 2026-10-03 | `SOMATOM_Force_IFU_VB30` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 0 → 0 | 16 | Approved rows; no target rows in the approved sample |
 | 2026-10-06 | `DOC-0136477A` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images are placed by their position on the page, and page_end covers trailing content. | 0 → 1 | 1 | Check: 0 -> 1 on 87 paired rows. One page_end row is new in DOC; review it on the Version Compare page. |
 
 <!-- generated:occurrences:start -->

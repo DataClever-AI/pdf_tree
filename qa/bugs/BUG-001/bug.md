@@ -39,6 +39,8 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-03 | `Philips-MP20-MP90-Manual` | v2.4 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 0 → 0 | 8 | Approved rows; no BUG-001 rows in Philips |
+| 2026-10-03 | `SOMATOM_Force_IFU_VB30` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 4 → 5 | 16 | Approved rows; limited by BUG-005 (window desync), fixed later in 360cf01 |
 | 2026-10-06 | `DOC-0136477A` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images are placed by their position on the page, and page_end covers trailing content. | 1 → 1 | 1 | Keep: 1 -> 1 on 87 paired rows (base = drafts). No change for BUG-001 in DOC. |
 
 <!-- generated:occurrences:start -->
