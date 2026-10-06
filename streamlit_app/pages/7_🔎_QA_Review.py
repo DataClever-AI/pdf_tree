@@ -346,11 +346,22 @@ with _tab_review:
                 }
             )
             _page = st.selectbox("Page", _page_options, index=_page_options.index(_page_sampled))
-            _zoom = st.slider("Zoom", 1.0, 3.0, 1.5, 0.25)
+            _zoom = st.slider("Zoom", 1.0, 3.0, 1.0, 0.25, help="1.0 fits the column width.")
+            # Render sharp enough for the shown size; the zoom enlarges the page inside a
+            # scrollable frame instead of being stretched back to the column width.
             _png = _render_page(
-                str(_integrity.source_path), _integrity.source_path.stat().st_mtime_ns, _page, _zoom
+                str(_integrity.source_path),
+                _integrity.source_path.stat().st_mtime_ns,
+                _page,
+                min(2.0 * _zoom, 5.0),
             )
-            st.image(_png, caption=f"PDF page {_page}", width="stretch")
+            st.html(
+                '<div style="overflow:auto;max-height:80vh;border:1px solid #ddd;">'
+                f'<img src="data:image/png;base64,{base64.b64encode(_png).decode()}" '
+                f'style="width:{_zoom * 100:.0f}%;max-width:none;display:block;" '
+                f'alt="PDF page {_page}"></div>'
+            )
+            st.caption(f"PDF page {_page}")
             st.download_button(
                 "Download page PNG", _png, file_name=f"page_{_page}.png", mime="image/png"
             )
