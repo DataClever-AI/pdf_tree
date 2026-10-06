@@ -1,0 +1,423 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0824|450|5.6-table_content",
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p450 table #/tables/226 matches: -40 to 360 mmHg, pulse rate 25 to 350 bpm, sensitivity, transducer, frequency response, zero adjustment, gain accuracy, analog output rows and volume displacement. Alarm table #/tables/227 matches, with 'max. 12 seconds' on the Pressure row (the page cell spans all four rows).",
+    "notes": ""
+   },
+   "pages_to_check": [
+    450
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/226",
+     "page": 450,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/227",
+     "page": 450,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0828|456|5.6-table_content",
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p456 table #/tables/240 matches: MVexp, TVin, TVexp, compliance, resistance, PIP, negative pressure, mean and plateau pressure, PEEP, PB, PIF, PEF and I:E rows. Each Range and Resolution value is in the right row.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    456
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/240",
+     "page": 456,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0829|457|5.6-table_content",
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p457 table #/tables/241 keeps the right rows and columns. But the page shows the plus-minus sign for accuracy values (for example 3 %, 5 %, 4 %, 10 %) and the tree has a plain '+' ('+3% or 0.1 l/min', '+10% or 30 ml'). Alarm table #/tables/242 matches.",
+    "notes": "The sign loses its minus part, but the numbers and columns are right, so Low. The PDF text layer probably holds a plus sign with an underline."
+   },
+   "pages_to_check": [
+    457
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/241",
+     "page": 457,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/242",
+     "page": 457,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0830|458|5.6-table_content",
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p458 I compared #/tables/244 and #/tables/245 cell by cell. Order and values are kept. Two small problems. In #/tables/244 the plus-minus sign is shown as '+' ('better than +5 mmHg(+0.7 kPa)', '+10% of reading') but the page shows a plus-minus sign. In #/tables/245 the Alarm Delay cell '10 seconds after the value exceeds the set limit range.' is one tall cell shared by tcpO2 and tcpCO2; the extract shows it only on the tcpO2 row and leaves the tcpCO2 delay empty.",
+    "notes": "Cosmetic: a merged cell is not repeated and a sign is simplified. Values stay in the right columns. The '+' versus plus-minus change is probably a text-layer limit. Low per the table_content pattern."
+   },
+   "pages_to_check": [
+    458
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/244",
+     "page": 458,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/245",
+     "page": 458,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0846|465|5.6-table_content",
+   "section_id": "sec_0846",
+   "page_sampled": 465,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p465 #/tables/255 has 5 columns and the same header and units row ('50/60 [Hz]', 'kg, lb', 'in, cm', 'IEC, AAMI'). I compared all rows from Afghanistan to Belgium: country, frequency, weight, height and cable color match the page in every cell.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    465
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/255",
+     "page": 465,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0846|469|5.6-table_content",
+   "section_id": "sec_0846",
+   "page_sampled": 469,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p469 I compared #/tables/259 row by row with the page. All values and the order are right. One problem: the country 'South Georgia and the South Sandwich Islands' wraps to two lines on the page. The extract makes two rows: 'South Georgia and the South Sandwich | 60 | lb | in | AAMI' and 'Islands |  |  |  | '.",
+    "notes": "Cosmetic: one wrapped cell became two rows. Values stay in the right columns. Probably a line-wrap limit in the cell reader. Low per the table_content pattern."
+   },
+   "pages_to_check": [
+    469
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/259",
+     "page": 469,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0846|470|5.6-table_content",
+   "section_id": "sec_0846",
+   "page_sampled": 470,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p470 #/tables/260 has 23 rows from Turkey to Zimbabwe. I compared each cell with the page (country, 50/60, kg/lb, cm/in, IEC/AAMI). All match, including 'UK' and 'United Kingdom' as two rows.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    470
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/260",
+     "page": 470,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0849|474|5.6-table_content",
+   "section_id": "sec_0849",
+   "page_sampled": 474,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p474 I compared #/tables/265, #/tables/266 and #/tables/267 with the page. Values match: 'ISO Point -80 ms', 'J Point 48 ms', 'ST Point J+60', 'ST(Label) High +2.0mm / Low -2.0mm' and '+1.0mm / -1.0mm' under the right Alarm Mode rows, 'QTc High Limit 500 ms / 480 ms / 460 ms'. 'ST Analysis On / Off' keeps Off in the Pedi column; the page merges Pedi and Neo.",
+    "notes": "Merged cells are shown once, in the first column of the span. Small spacing changes only ('+2.0mm', 'Δ QTc')."
+   },
+   "pages_to_check": [
+    474
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/265",
+     "page": 474,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/266",
+     "page": 474,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/267",
+     "page": 474,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0849|473|5.6-table_content",
+   "section_id": "sec_0849",
+   "page_sampled": 473,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p473 I compared #/tables/263 (28 data rows) and #/tables/264 with the page. Values match: for example 'Arrhythmia On / Off / Off', 'Pause Threshold 2.0 sec / 1.5 sec', 'VTach HR 100 / 120 / 150', and each 'Off' in the H30 group. A value that spans several columns on the page (for example 'On') is shown once in the first column; the other cells are empty. No value moves to another column.",
+    "notes": "Spanned cells are written once in the first column. This is the normal grid style, so I did not count it as a fail."
+   },
+   "pages_to_check": [
+    473
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/263",
+     "page": 473,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/264",
+     "page": 473,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0850|475|5.6-table_content",
+   "section_id": "sec_0850",
+   "page_sampled": 475,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p475 I compared #/tables/268 and #/tables/269 with the page. Values match: 'Alarms Source Auto' with H30 'Auto', 'System Pulse SpO 2' with H30 'Auto', 'High Limit 120 bpm / 160 bpm / 200 bpm', 'Brady Clamp 40 bpm / 40 bpm / 50 bpm' with H30 '40 / 60 / 80', 'Tachy Clamp 200 / 220 / 240 bpm'. Spanned cells are written once in the first column.",
+    "notes": "The sentence node #/texts/8202 comes before the tables in the data but is under them on the page. Order only; no table text is affected."
+   },
+   "pages_to_check": [
+    475
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/268",
+     "page": 475,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/269",
+     "page": 475,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0852|476|5.6-table_content",
+   "section_id": "sec_0852",
+   "page_sampled": 476,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p476 I compared #/tables/271 (12 rows) and #/tables/272 (17 rows) with the page. Values and columns match: 'Desat Limit 80 / 80 / 80', 'Low Limit 90 / 90 / 85', 'High Limit 100 / 100 / 95', 'Brady Clamp 40 / 40 / 50 bpm', 'Tachy Clamp 200 / 220 / 240 bpm'. The 'Pulse Settings' row is a full-width label row and is kept as an empty-value row.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    476
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/271",
+     "page": 476,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/272",
+     "page": 476,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0855|479|5.6-table_content",
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p479 I compared #/tables/278 and #/tables/279 with the page. Values match: 'High Limit 34/16 (20) | 60/4 (26) | 60/4 (26)', 'Low Clamp 5/-5 (-5) | 15/-5 (5) | 15/-5 (5)', 'Color Yellow' and 'Color Magenta', 'Extreme Alarms Enabled' in all three columns. Rows 'Scale 30', 'Speed 25 mm/s', 'Filter 12 Hz' span the columns and are written once.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    479
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/278",
+     "page": 479,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/279",
+     "page": 479,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0856|480|5.6-table_content",
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p480 I compared #/tables/280 and #/tables/281 with the page. Values match: 'Tblood High Limit 39.0 ° C', 'Tblood Low Limit 36.0 ° C', 'Color Green' with H30 'Yellow', 'CCO High Limit 8.5 / 3.7 / 1.3 l/min', 'CCO Low Limit 4.0 / 2.6 / 0.3 l/min', 'CCI High Limit 4.3 / 3.7 / 5.2 l/min/m 2', 'CCI Low Limit 2.0 / 2.6 / 1.2 l/min/m 2'. The label rows 'CCO' and 'CCI' are kept.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    480
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/280",
+     "page": 480,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/281",
+     "page": 480,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0860|482|5.6-table_content",
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p482 the cells of #/tables/286 'tcGas Settings' match the page: 'Heat Switch Off (i.e., after Site Timer elapsed) | No', 'Transducer Temp. | 43.0 °C', 'Metabolism Factor | 8 mmHg', 'tcpO 2 Color | Blue', 'tcpCO 2 Color | Green'. Cell content is right. The ownership problem is in 5.4-page_start_end.",
+    "notes": "The table text is good but it sits in the wrong section. The 'SO2 Settings' table on p482 is not in this section's nodes."
+   },
+   "pages_to_check": [
+    482
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/286",
+     "page": 482,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0864|484|5.6-table_content",
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p484 I compared #/tables/292 with the page. Values match: 'High Filter 70 Hz', 'Notch Filter On', 'High Alarm Limit 70', 'Low Alarm Limit 20', 'Alarms On', 'Smoothing Rate 30 sec' with H30 '15 sec', 'Color Yellow' with H30 'Magenta'. The repeated header row is kept at the top.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    484
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/292",
+     "page": 484,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0865|484|5.6-table_content",
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p484 #/tables/293 has two rows: 'Device Alarms | Ignored' and 'Color | Green'. This matches the page exactly. The table has no header row on the page and none is invented.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    484
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/293",
+     "page": 484,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0865|488|5.6-table_content",
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p488 is an index page in three text columns. It has no table and no node of sec_0865 is on it. The only table of this section, #/tables/293 on p484, matches the page.",
+    "notes": "Sampled page is outside the section range."
+   },
+   "pages_to_check": [
+    488
+   ],
+   "tables": []
+  }
+ ]
+}

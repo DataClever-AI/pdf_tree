@@ -1,0 +1,728 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0002|1|5.6-table_content",
+   "section_id": "sec_0002",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Checked table #/tables/0 on p1 (Quick Reference Index) against the render. All 18 rows are present and in order. Cells are shifted in some rows. 'Emission Control (Aux. Emission Control Devices) EC' has the code EC inside the label cell and an empty code cell. The code 'FU (w/o OBD)' is split: '(w/o' sits in the label cell and 'FU OBD)' in the code cell. The print slug 'W2290GE' is a row with an empty label. Tables #/tables/1 and #/tables/2 (p2, p3) were not rendered, so they were not checked.",
+    "notes": "Cells are merged or split across columns, but values and order are kept. Low by the lead rule. Probably caused by the black tab shapes of the index. Not checked: p2 and p3."
+   },
+   "pages_to_check": [
+    1
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/0",
+     "page": 1,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0004|8|5.6-table_content",
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Checked p8 (tables #/tables/7 to #/tables/11) cell by cell. Steering, suspension, brake and tire tables match. In the Capacity table (#/tables/11): the 'Engine coolant' row has '7.0 (7.4, 6.2) 6.9 (7.3, 6.1)' in one cell (2.0 L 5MT and 4AT merged). Unit text and values are mixed in rows 'Engine oil Total capacity' ('(US qt, Imp qt) 4.0 (4.2, | 3.5)'), 'Transmission gear oil' and 'Automatic transmission fluid'. In 'AT differential gear oil' the dash and '1.1 - 1.3' are one cell. All values and their order are kept. On p6, table #/tables/3 has 'AWD' under Sedan only, not across Sedan and Wagon. Table #/tables/4 and the p13 tables (#/tables/16, #/tables/17) match. The unit sign for litre is lost. p7, p9-p12 tables were not rendered.",
+    "notes": "Cells merged, values and order kept, so Low by the lead rule. The check tool suggests Medium because the 4AT coolant value 6.9 sits in the 5MT cell. The order still lets a reader assign it. Not checked: p7 and p9-p12."
+   },
+   "pages_to_check": [
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/7",
+     "page": 8,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/8",
+     "page": 8,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/9",
+     "page": 8,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/10",
+     "page": 8,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/11",
+     "page": 8,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/12",
+     "page": 9,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Option code *1 EC K4 KO, KS |  |  |  |  |  |  | \nModel |  | 2.0 L |  |  |  |  | \n |  | 4WD |  |  |  |  | \n |  | GL |  |  |  |  | \n |  |  |  | 5MT 4AT 5MT 4AT 5MT 4AT |  |  | \nCurb weight (C.W.) Front kg (lb) 785 (1,730) 810 (1,785) 775 (1,710) 800 (1,765) 790 (1,740) 815 (1,795) |  |  |  |  |  |  | \n |  |  | Rear kg (lb) 605 (1,335) 605 (1,335) 610 (1,345) 610 (1,345) 610 (1,345) 610 (1,345) |  |  |  | \n |  | Total kg (lb) 1,390  (3,065) | 1,415  (3,120) 1,385  (3,055) | 1,400  (3,085) | 1,410  (3,110) 1,425  (3,140) |  | \nMaximum permissible  axle weight (M.P.A.W.) |  |  |  | Front kg (lb) 970 (2,140) 970 (2,140) 970 (2,140) 970 (2,140) 970 (2,140) 970 (2,140) |  |  | \n |  |  |  | Rear kg (lb) 975 (2,150) 975 (2,150) 975 (2,150) 975 (2,150) 975 (2,150) 975 (2,150) |  |  | \nMaximum permissible  weight (M.P.W.) |  | Total kg (lb) 1,870  (4,125) | 1,870  (4,125) 1,870  (4,125) | 1,870  (4,125) | 1,870  (4,125) 1,870  (4,125) |  | \n | Option Side airbag |  |  | ———— |  |  | \n | Air conditioner |  | ———— |  |  |  | \n | Audio |  | ———— |  |  |  | \n | Cruise control |  |  |  | —————— |  | \n | Cold weather pack |  |  |  | —————— |  | \nOption code *1 EC K4 KO, KS |  |  |  |  |  |  | \nModel |  | 2.5 L |  |  |  |  | \n |  | 4WD |  |  |  |  | \n |  | GX |  |  |  |  | \n |  |  |  |  | 5MT 4AT 5MT 4AT 5MT 4AT |  | \nCurb weight (C.W.) Front kg (lb) 805 (1,775) 830 (1,830) 795 (1,755) 820 (1,810) 785 (1,730) 810 (1,785) |  |  |  |  |  |  | \n |  |  |  | Rear kg (lb) 605 (1,335) 610 (1,345) 610 (1,345) 615 (1,355) 610 (1,345) 615 (1,355) |  |  | \n |  | Total kg (lb) 1,410  (3,110) | 1,440  (3,175) 1,405  (3,110) | 1,395  (3,075) | 1,435  (3,165) 1,425  (3,140) |  | \nMaximum permissible  axle weight (M.P.A.W.) |  |  |  | Front kg (lb) 985 (2,170) 985 (2,170) 985 (2,170) 985 (2,170) 985 (2,170) 985 (2,170) |  |  | \n |  | Rear kg (lb) 1,000  (2,205) | 1,000  (2,205) 1,000  (2,205) | 1,000  (2,205) | 1,000  (2,205) 1,000  (2,205) |  | \nMaximum permissible  weight (M.P.W.) |  | Total kg (lb) 1,910  (4,210) | 1,910  (4,210) 1,910  (4,210) | 1,910  (4,210) | 1,910  (4,210) 1,910  (4,210) |  | \n | Option Side airbag |  |  | ———— |  |  | \n | Air conditioner |  |  |  | —— |  | \n | Audio |  | ———— |  |  |  | \n | Cruise control |  | —— —— |  |  |  | \n | Cold weather pack |  | —————— |  |  |  | ",
+     "round_one_text": "Option code *1 |  |  | EC |  | K4 |  | KO, KS | \nModel |  |  | 2.0 L |  |  |  |  | \n |  |  | 4WD |  |  |  |  | \n |  |  | GL |  |  |  |  | \n |  |  | 5MT | 4AT | 5MT | 4AT | 5MT | 4AT\nCurb weight (C.W.) | Front | kg (lb) | 785 (1,730) | 810 (1,785) | 775 (1,710) | 800 (1,765) | 790 (1,740) | 815 (1,795)\n | Rear | kg (lb) | 605 (1,335) | 605 (1,335) | 610 (1,345) | 610 (1,345) | 610 (1,345) | 610 (1,345)\n | Total | kg (lb) | 1,390 (3,065) | 1,415 (3,120) | 1,385 (3,055) | 1,410 (3,110) | 1,400 (3,085) | 1,425 (3,140)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 970 (2,140) | 970 (2,140) | 970 (2,140) | 970 (2,140) | 970 (2,140) | 970 (2,140)\n | Rear | kg (lb) | 975 (2,150) | 975 (2,150) | 975 (2,150) | 975 (2,150) | 975 (2,150) | 975 (2,150)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 1,870 (4,125) | 1,870 (4,125) | 1,870 (4,125) | 1,870 (4,125) | 1,870 (4,125) | 1,870 (4,125)\nOption | Side airbag |  |  |  | - | - | - | -\n | Air conditioner |  | - | - | - | - |  | \n | Audio |  | - | - | - | - |  | \n | Cruise control |  | - | - | - | - | - | -\n | Cold weather | pack | - | - | - | - | - | -\nOption code *1 |  |  | K4 |  |  |  | KO, KS | \nModel |  |  | 2.5 L |  |  |  |  | \n |  |  | 4WD |  |  |  |  | \n |  |  | GX |  |  |  |  | \n |  |  | 5MT | 4AT | 5MT | 4AT | 5MT | 4AT\nCurb weight (C.W.) | Front | kg (lb) | 805 (1,775) | 830 (1,830) | 795 (1,755) | 820 (1,810) | 785 (1,730) | 810 (1,785)\n | Rear | kg (lb) | 605 (1,335) | 610 (1,345) | 610 (1,345) | 615 (1,355) | 610 (1,345) | 615 (1,355)\n | Total | kg (lb) | 1,410 (3,110) | 1,440 (3,175) | 1,405 (3,110) | 1,435 (3,165) | 1,395 (3,075) | 1,425 (3,140)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 985 (2,170) | 985 (2,170) | 985 (2,170) | 985 (2,170) | 985 (2,170) | 985 (2,170)\n | Rear | kg (lb) | 1,000 (2,205) | 1,000 (2,205) | 1,000 (2,205) | 1,000 (2,205) | 1,000 (2,205) | 1,000 (2,205)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 1,910 (4,210) | 1,910 (4,210) | 1,910 (4,210) | 1,910 (4,210) | 1,910 (4,210) | 1,910 (4,210)\nOption | Side airbag |  |  |  | - | - | - | -\n | Air conditioner |  |  |  |  |  | - | -\n | Audio |  | - | - | - | - |  | \n | Cruise control |  | - | - |  |  | - | -\n | Cold weather pack |  | - | - | - | - | - | -"
+    },
+    {
+     "node_id": "#/tables/13",
+     "page": 10,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Option code *1 K1 EK |  |  |  |  |  | \nModel 2.0 L 2.5 L |  |  |  |  |  | \n |  | 4WD |  |  |  | \n |  | GL GX |  |  |  | \n |  |  | 4AT 5MT 4AT 5MT 4AT |  |  | \nCurb weight (C.W.) Front kg (lb) 800 (1,765) 785 (1,730) 810 (1,785) 795 (1,755) 820 (1,810) |  |  |  |  |  | \n |  |  | Rear kg (lb) 605 (1,335) 605 (1,335) 605 (1,335) 605 (1,335) 610 (1,345) |  |  | \n |  |  | Total kg (lb) 1,405 (3,100) 1,390 (3,065) 1,415 (3,120) 1,400 (3,085) 1,430 (3,155) |  |  | \nMaximum permissible  axle weight (M.P.A.W.) |  | Front kg (lb) 970 (2,140) 970 (2,140) 970 (2,140) 985 (2,170) 985 (2,170) |  |  |  | \n |  |  | Rear kg (lb) 975 (2,150) 975 (2,150) 975 (2,150) 1,000 (2,205) 1,000 (2,205) |  |  | \nMaximum permissible  weight (M.P.W.) |  | Total kg (lb) 1,870 (4,125) 1,870 (4,125) 1,870 (4,125) 1,910 (4,210) 1,910 (4,210) |  |  |  | \n | Option Side airbag | — |  |  |  | \n | Air conditioner |  | ————— |  |  | \n | Audio |  |  |  |  | \n | Cruise control |  | ————— |  |  | \n | Cold weather pack |  | ————— |  |  | \nOption code *1 KA |  |  |  |  |  | \n |  | Model 2.0 L 2.5 L |  |  |  | \n |  | 5MT 4AT 5MT 4AT |  |  |  | \nUnladen mass (U.M.) Front kg (lb) 780 (1,720) 775 (1,710) 775 (1,710) 785 (1,730) |  |  |  |  |  | \n |  | Rear kg (lb) 585 (1,290) 585 (1,290) 595 (1,310) 595 (1,310) |  |  |  | \n |  | Total kg (lb) 1,365 (3,010) 1,360 (3,000) 1,370 (3,020) 1,380 (3,045) |  |  |  | \nGross vehicle mass  (G.V.M.) |  | Front kg (lb) 930 (2,050) 930 (2,050) 940 (2,075) 940 (2,075) |  |  |  | \n |  | Rear kg (lb) 970 (2,140) 970 (2,140) 980 (2,160) 980 (2,160) |  |  |  | \n |  | Total kg (lb) 1,900 (4,190) 1,900 (4,190) 1,920 (4,235) 1,920 (4,235) |  |  |  | \n | Option Side airbag |  | ———— |  |  | \n | Air conditioner |  | ——— |  |  | \n | Audio |  |  |  |  | \n | Cruise control |  | ——— |  |  | \n | Cold weather pack |  | ———— |  |  | ",
+     "round_one_text": "Option code *1 |  |  | K1 | EK |  |  | \nModel |  |  |  |  |  | 2.5 L | \n |  |  | 4WD |  |  |  | \n |  |  | GL |  |  | GX | \n |  |  | 4AT | 5MT | 4AT | 5MT | 4AT\nCurb weight (C.W.) | Front | kg (lb) | 800 (1,765) | 785 (1,730) | 810 (1,785) | 795 (1,755) | 820 (1,810)\n | Rear | kg (lb) | 605 (1,335) | 605 (1,335) | 605 (1,335) | 605 (1,335) | 610 (1,345)\n | Total | kg (lb) | 1,405 (3,100) | 1,390 (3,065) | 1,415 (3,120) | 1,400 (3,085) | 1,430 (3,155)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 970 (2,140) | 970 (2,140) | 970 (2,140) | 985 (2,170) | 985 (2,170)\n | Rear | kg (lb) | 975 (2,150) | 975 (2,150) | 975 (2,150) | 1,000 (2,205) | 1,000 (2,205)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 1,870 (4,125) | 1,870 (4,125) | 1,870 (4,125) | 1,910 (4,210) | 1,910 (4,210)\nOption | Side airbag |  | - |  |  |  | \n | Air conditioner |  | - | - | - | - | -\n | Audio |  |  |  |  |  | \n | Cruise control |  | - | - | - | - | -\n | Cold weather | pack | - | - | - | - | -\nOption code *1 |  |  | KA |  |  |  | \nModel |  |  | 2.0 L |  | 2.5 L |  | \n |  |  |  |  | 4WD GX (RX) |  | \n |  |  | 5MT | 4AT |  | 5MT | 4AT\nUnladen mass (U.M.) | Front | kg (lb) | 780 (1,720) | 775 (1,710) | 775 | (1,710) | 785 (1,730)\n | Rear | kg (lb) | 585 (1,290) | 585 (1,290) | 595 | (1,310) | 595 (1,310)\n | Total | kg (lb) | 1,365 (3,010) | 1,360 (3,000) | 1,370 | (3,020) | 1,380 (3,045)\nGross vehicle mass (G.V.M.) | Front | kg (lb) | 930 (2,050) | 930 (2,050) | 940 | (2,075) | 940 (2,075)\n | Rear | kg (lb) | 970 (2,140) | 970 (2,140) | 980 | (2,160) | 980 (2,160)\n | Total | kg (lb) | 1,900 (4,190) | 1,900 (4,190) | 1,920 | (4,235) | 1,920 (4,235)\nOption | Side airbag |  | - | - |  | - | -\n | Air conditioner |  |  | - |  | - | -\n | Audio |  |  |  |  |  | \n | Cruise control |  |  | - |  | - | -\n | Cold weather pack |  | - | - | - |  | -"
+    },
+    {
+     "node_id": "#/tables/14",
+     "page": 11,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": " |  | Option code *1 EC K4 KO, KS |  |  |  |  | \nModel |  | 2.0 L 4WD |  |  |  |  | \n |  |  |  |  |  | 5MT 4AT 5MT 4AT 5MT 4AT | \nCurb weight (C.W.) Front kg (lb) 780 (1,720) 800 (1,765) 775 (1,710) 790 (1,740) 790 (1,740) 805 (1,775) |  |  |  |  |  |  | \n |  |  |  |  |  | Rear kg (lb) 650 (1,435) 650 (1,435) 655 (1,445) 655 (1,445) 655 (1,445) 655 (1,445) | \n |  | Total kg (lb) 1,430  (3,155) | 1,450  (3,195) | 1,430  (3,155) | 1,445  (3,185) | 1,445  (3,185) | 1,460  (3,220)\nMaximum permissible  axle weight (M.P.A.W.) |  |  |  |  |  | Front kg (lb) 960 (2,115) 960 (2,115) 960 (2,115) 960 (2,115) 960 (2,115) 960 (2,115) | \n |  | Rear kg (lb) 1,030  (2,270) | 1,030  (2,270) | 1,030  (2,270) | 1,030  (2,270) | 1,030  (2,270) | 1,030  (2,270)\nMaximum permissible  weight (M.P.W.) |  | Total kg (lb) 1,920  (4,235) | 1,920  (4,235) | 1,920  (4,235) | 1,920  (4,235) | 1,920  (4,235) | 1,920  (4,235)\nOption Side airbag |  |  | — ———— |  |  |  | \n | Air conditioner |  | ———— |  |  |  | \n | Audio |  | ———— |  |  |  | \n | Cruise control |  |  |  |  |  | ——————\n | Cold weather pack |  |  |  |  |  | ——————\n |  | Option code *1 EC K4 KO, KS |  |  |  |  | \nModel |  | 2.5 L |  |  |  |  | \n |  | 4WD |  |  |  |  | \n |  |  |  | 5MT 4AT 5MT 4AT 5MT 4AT |  |  | \nCurb weight (C.W.) Front kg (lb) 790 (1,740) 820 (1,810) 775 (1,710) 790 (1,740) 790 (1,740) 805 (1,775) |  |  |  |  |  |  | \n |  |  |  |  |  | Rear kg (lb) 655 (1,445) 655 (1,445) 655 (1,445) 655 (1,445) 655 (1,445) 655 (1,445) | \n |  | Total kg (lb) 1,445  (3,185) | 1,475  (3,250) | 1,430  (3,155) | 1,445  (3,185) | 1,445  (3,185) | 1,460  (3,220)\nMaximum permissible  axle weight (M.P.A.W.) |  |  |  |  |  | Front kg (lb) 995 (2,195) 995 (2,195) 960 (2,115) 960 (2,115) 960 (2,115) 960 (2,115) | \n |  | Rear kg (lb) 1,050  (2,315) | 1,050  (2,315) | 1,030  (2,270) | 1,030  (2,270) | 1,030  (2,270) | 1,030  (2,270)\nMaximum permissible  weight (M.P.W.) |  | Total kg (lb) 1,980  (4,365) | 1,980  (4,365) | 1,920  (4,235) | 1,920  (4,235) | 1,920  (4,235) | 1,920  (4,235)\n | Option Side airbag |  |  |  |  | ———— | \n | Air conditioner |  |  | — —— |  |  | \n | Audio |  |  | ———— |  |  | \n | Cruise control |  | — ———— |  |  |  | \n | Cold weather pack |  |  | — ———— |  |  | ",
+     "round_one_text": "Option code *1 |  |  | EC |  | K4 |  | KO, KS | \nModel |  |  | 2.0 L 4WD |  |  |  |  | \n |  |  | 5MT | 4AT | 5MT | 4AT | 5MT | 4AT\nCurb weight (C.W.) | Front | kg (lb) | 780 (1,720) | 800 (1,765) | 775 (1,710) | 790 (1,740) | 790 (1,740) | 805 (1,775)\n | Rear | kg (lb) | 650 (1,435) | 650 (1,435) | 655 (1,445) | 655 (1,445) | 655 (1,445) | 655 (1,445)\n | Total | kg (lb) | 1,430 (3,155) | 1,450 (3,195) | 1,430 (3,155) | 1,445 (3,185) | 1,445 (3,185) | 1,460 (3,220)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 960 (2,115) | 960 (2,115) | 960 (2,115) | 960 (2,115) | 960 (2,115) | 960 (2,115)\n | Rear | kg (lb) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235)\nOption | Side airbag |  | - |  | - | - | - | -\n | Air conditioner |  | - | - | - | - |  | \n | Audio |  | - | - | - | - |  | \n | Cruise control |  | - | - | - | - | - | -\n | Cold weather | pack | - | - | - | - | - | -\nOption code *1 |  |  | EC |  |  |  | KO, KS | \nModel |  |  | 2.5 L |  |  |  |  | \n |  |  | 4WD |  |  |  |  | \n |  |  | 5MT | 4AT | 5MT | 4AT | 5MT | 4AT\nCurb weight (C.W.) | Front | kg (lb) | 790 (1,740) | 820 (1,810) | 775 (1,710) | 790 (1,740) | 790 (1,740) | 805 (1,775)\n | Rear | kg (lb) | 655 (1,445) | 655 (1,445) | 655 (1,445) | 655 (1,445) | 655 (1,445) | 655 (1,445)\n | Total | kg (lb) | 1,445 (3,185) | 1,475 (3,250) | 1,430 (3,155) | 1,445 (3,185) | 1,445 (3,185) | 1,460 (3,220)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 995 (2,195) | 995 (2,195) | 960 (2,115) | 960 (2,115) | 960 (2,115) | 960 (2,115)\n | Rear | kg (lb) | 1,050 (2,315) | 1,050 (2,315) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 1,980 (4,365) | 1,980 (4,365) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235)\nOption | Side airbag |  |  |  | - | - | - | -\n | Air conditioner |  | - |  | - | - |  | \n | Audio |  | - | - | - | - |  | \n | Cruise control |  | - |  | - | - | - | -\n | Cold weather pack |  | - |  | - | - | - | -"
+    },
+    {
+     "node_id": "#/tables/15",
+     "page": 12,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Option code *1 K1 EK |  |  |  |  |  |  | \nModel 2.0 L 2.5 L |  |  |  |  |  |  | \n |  | 4WD |  |  |  |  | \n |  | GL GX |  |  |  |  | \n |  |  | 5MT 4AT 5MT 4AT 5MT 4AT |  |  |  | \nCurb weight (C.W.) Front kg (lb) 775 (1,710) 790 (1,740) 785 (1,731) 800 (1,765) 790 (1,740) 805 (1,775) |  |  |  |  |  |  | \n |  |  |  | Rear kg (lb) 655 (1,445) 655 (1,445) 650 (1,435) 650 (1,435) 655 (1,445) 655 (1,445) |  |  | \n |  | Total kg (lb) 1,430  (3,155) | 1,445  (3,185) 1,445  (3,185) | 1,435  (3,165) 1,450  (3,195) | 1,460  (3,220) |  | \nMaximum permissible  axle weight (M.P.A.W.) |  |  |  |  | Front kg (lb) 960 (2,115) 960 (2,115) 960 (2,115) 960 (2,115) 995 (2,195) 995 (2,195) |  | \n |  | Rear kg (lb) 1,030  (2,270) | 1,030  (2,270) 1,050  (2,315) | 1,030  (2,270) 1,030  (2,270) | 1,050  (2,315) |  | \nMaximum permissible  weight (M.P.W.) |  | Total kg (lb) 1,920  (4,235) | 1,920  (4,235) 1,980  (4,365) | 1,920  (4,235) 1,920  (4,235) | 1,980  (4,365) |  | \n | Option Side airbag |  | —— |  |  |  | \n | Air conditioner |  |  | —————— |  |  | \n | Audio |  |  |  |  |  | \n | Cruise control |  |  | —————— |  |  | \n | Cold weather pack |  |  | —————— |  |  | \nOption code *1 KA |  |  |  |  |  |  | \nModel 2.0 L 2.5 L |  |  |  |  |  |  | \n |  | 4WD |  |  |  |  | \n |  |  |  | GL (GX) GX (RX) |  |  | \n |  | 5MT 4AT 5MT 4AT |  |  |  |  | \nUnladen mass (U.M.) Front kg (lb) 775 (1,710) 775 (1,710) 765 (1,685) 780 (1,720) |  |  |  |  |  |  | \n |  | Rear kg (lb) 635 (1,400) 635 (1,400) 645 (1,420) 645 (1,420) |  |  |  |  | \n |  | Total kg (lb) 1,410 (3,110) 1,410 (3,110) 1,410 (3,110) 1,425 (3,140) |  |  |  |  | \nGross vehicle mass  (G.V.M.) |  | Front kg (lb) 930 (2,050) 930 (2,050) 950 (2,095) 950 (2,095) |  |  |  |  | \n |  | Rear kg (lb) 1,010 (2,225) 1,010 (2,225) 1,040 (2,295) 1,040 (2,295) |  |  |  |  | \n |  | Total kg (lb) 1,940 (4,280) 1,940 (4,280) 1,990 (4,390) 1,990 (4,390) |  |  |  |  | \n | Option Side airbag | ———— |  |  |  |  | \n | Air conditioner |  |  | ——— |  |  | \n | Audio |  |  |  |  |  | \n | Cruise control |  |  | ——— |  |  | \n | Cold weather pack | ———— |  |  |  |  | ",
+     "round_one_text": "Option code *1 |  |  | K1 |  | EK |  |  | \nModel |  |  | 2.0 L |  |  |  | 2.5 L | \n |  |  | 4WD |  |  |  |  | \n |  |  | GL |  |  |  | GX | \n |  |  | 5MT | 4AT | 5MT | 4AT | 5MT | 4AT\nCurb weight (C.W.) | Front | kg (lb) | 775 (1,710) | 790 (1,740) | 785 (1,731) | 800 (1,765) | 790 (1,740) | 805 (1,775)\n | Rear | kg (lb) | 655 (1,445) | 655 (1,445) | 650 (1,435) | 650 (1,435) | 655 (1,445) | 655 (1,445)\n | Total | kg (lb) | 1,430 (3,155) | 1,445 (3,185) | 1,435 (3,165) | 1,450 (3,195) | 1,445 (3,185) | 1,460 (3,220)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 960 (2,115) | 960 (2,115) | 960 (2,115) | 960 (2,115) | 995 (2,195) | 995 (2,195)\n | Rear | kg (lb) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270) | 1,030 (2,270) | 1,050 (2,315) | 1,050 (2,315)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235) | 1,920 (4,235) | 1,980 (4,365) | 1,980 (4,365)\nOption | Side airbag |  | - | - |  |  |  | \n | Air conditioner |  | - | - | - | - | - | -\n | Audio |  |  |  |  |  |  | \n | Cruise control |  | - | - | - | - | - | -\n | Cold weather | pack | - | - | - | - | - | -\nOption code *1 |  |  | KA |  |  |  |  | \nModel |  |  |  |  |  | 2.5 L |  | \n |  |  | 4WD |  |  |  |  | \n |  |  | (GX) |  |  | GX (RX) |  | \n |  |  | 5MT |  | 4AT | 5MT | 4AT | \nUnladen mass (U.M.) | Front | kg (lb) | 775 (1,710) |  | 775 (1,710) | 765 (1,685) | 780 (1,720) | \n | Rear | kg (lb) | 635 (1,400) |  | 635 (1,400) | 645 (1,420) | 645 (1,420) | \n | Total | kg (lb) | 1,410 (3,110) |  | 1,410 (3,110) | 1,410 (3,110) | 1,425 (3,140) | \nGross vehicle mass (G.V.M.) | Front | kg (lb) | 930 (2,050) |  | 930 (2,050) | 950 (2,095) | 950 (2,095) | \n | Rear | kg (lb) | 1,010 (2,225) |  | 1,010 (2,225) | 1,040 (2,295) | 1,040 (2,295) | \n | Total | kg (lb) | 1,940 (4,280) |  | 1,940 (4,280) | 1,990 (4,390) | 1,990 (4,390) | \nOption | Side airbag |  | - |  | - | - | - | \n | Air conditioner |  |  |  | - | - | - | \n | Audio |  |  |  |  |  |  | \n | Cruise control |  |  |  | - | - | - | \n | Cold weather pack |  | - |  | - | - | - | "
+    }
+   ]
+  },
+  {
+   "key": "sec_0005|14|5.6-table_content",
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p14 the Dimensions and Engine tables (#/tables/18, #/tables/19) match the render. On p15 the Transmission table (#/tables/21) loses the row-group label 'Final reduction' two times (rendered p15, section D). The tree shows 'Type of gear | Hypoid' and 'Gear ratio | 3.900*1, 4.111*2' straight after the '1st reduction' rows, and again after 'Transfer reduction'.",
+    "notes": "Words of the cell are lost and are not anywhere else. The Hypoid values can no longer be attributed to their group, so Medium (rule 2). Probably the merged label cells were dropped."
+   },
+   "pages_to_check": [
+    14,
+    15,
+    17,
+    18
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/18",
+     "page": 14,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/19",
+     "page": 14,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/20",
+     "page": 15,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/21",
+     "page": 15,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Model | OUTBACK |  | \n | 2.5 L 3.0 L |  | \nTransmission type 5MT 4AT 4AT |  |  | \nClutch type DSPD TCC TCC |  |  | \nGear ratio 1st 3.454 2.785 |  |  | \n | 2nd 2.062 1.545 |  | \n |  | 3rd 1.448 1.000 | \n |  | 4th 1.088 0.694 | \n | 5th 0.825 | — | \n | Reverse 3.333 2.272 |  | \nAuxiliary transmission gear ratio High 1.000 |  | — | \n | Low 1.196 | — | \nReduction gear 1st reduction Type of gear | — | Helical | \n(Front drive) | Gear ratio  — | 1.000 | \n |  | Final reduction Type of gear Hypoid Hypoid | \n | Gear ratio 3.900*1, 4.111*2 4.444 4.111 |  | \nReduction gear Transfer  reduction | Type of gear Helical | — | \n(Rear drive) | Gear ratio 1.000 | — | \n |  | Final reduction Type of gear Hypoid Hypoid | \n | Gear ratio 3.900*1, 4.111*2 4.444 4.111 |  | ",
+     "round_one_text": "Model |  | OUTBACK |  | \n |  | 2.5 L |  | 3.0 L\nTransmission type |  | 5MT | 4AT | 4AT\nClutch type |  | DSPD | TCC | TCC\nGear ratio | 1st | 3.454 | 2.785 | \n | 2nd | 2.062 | 1.545 | \n | 3rd | 1.448 | 1.000 | \n | 4th | 1.088 | 0.694 | \n | 5th | 0.825 | - | \n | Reverse | 3.333 | 2.272 | \nAuxiliary transmission gear ratio | High | 1.000 | - | \n | Low | 1.196 | - | \nReduction gear 1st reduction | Type of gear | - | Helical | \n(Front drive) | Gear ratio | - | 1.000 | \n | Type of gear | Hypoid | Hypoid | \n | Gear ratio | 3.900*1, 4.111*2 | 4.444 | 4.111\nReduction gear Transfer reduction | Type of gear | Helical | - | \n(Rear drive) | Gear ratio | 1.000 | - | \n | Type of gear | Hypoid | Hypoid | \n | Gear ratio | 3.900*1, 4.111*2 | 4.444 | 4.111"
+    },
+    {
+     "node_id": "#/tables/27",
+     "page": 17,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Option code *1 K4 KS KO |  |  |  | \nModel |  | 2.5 L 4WD |  | \n |  |  | 5MT 4AT 5MT 4AT | \nCurb weight (C.W.) Front kg (lb) 810 (1,785) 825 (1,820) 815 (1,795) 830 (1,830) 785 (1,730) |  |  |  | \n |  |  | Rear kg (lb) 670 (1,475) 670 (1,475) 670 (1,475) 670 (1,475) 650 (1,435) | \n |  |  | Total kg (lb) 1,480 (3,265) 1,495 (3,295) 1,485 (3,275) 1,500 (3,310) 1,435 (3,165) | \nMaximum permissible  axle weight (M.P.A.W.) |  |  |  | Front kg (lb) 995 (2,195) 995 (2,195) 995 (2,195) 995 (2,195) 960 (2,115)\n |  |  |  | Rear kg (lb) 1,050 (2,315) 1,050 (2,315) 1,050 (2,315) 1,050 (2,315) 1,030 (2,270)\nMaximum permissible  weight (M.P.W.) |  |  | Total kg (lb) 2,000 (4,410) 2,000 (4,410) 2,000 (4,410) 2,000 (4,410) 1,920 (4,235) | \n | Option Side airbag |  |  | —————\n | Air conditioner |  |  | \n | Audio | —— |  | \n | Cruise control |  |  | \n | Cold weather pack |  |  | —————\n | Leather interior |  | ———— | \n | Sunroof |  | ———— | \nOption code *1 EC |  |  |  | \n |  | Model 2.5 L 3.0 L |  | \n |  | 5MT 4AT |  | \nCurb weight (C.W.) Front kg (lb) 815 (1,795) 830 (1,830) 915 (2,020) |  |  |  | \n |  | Rear kg (lb) 675 (1,490) 675 (1,490) 695 (1,530) |  | \n |  | Total kg (lb) 1,490 (3,285) 1,505 (3,320) 1,610 (3,550) |  | \nMaximum permissible  axle weight (M.P.A.W.) | Front kg (lb) 1,010 (2,225) 1,010 (2,225) 1,040 (2,295) |  |  | \n |  |  | Rear kg (lb) 1,060 (2,335) 1,060 (2,335) 1,060 (2,335) | \nMaximum permissible  weight (M.P.W.) | Total kg (lb) 2,015 (4,445) 2,015 (4,445) 2,085 (4,595) |  |  | \nOption Side airbag |  |  |  | \n | Cruise control | —— |  | \n | Cold weather pack | —— |  | \n | Leather interior | —— |  | \n | Sunroof |  |  | \n |  | —— |  | ",
+     "round_one_text": "Option code *1 |  |  | K4 |  | KS |  | KO\nModel |  |  | 2.5 L 4WD |  |  |  | \n |  |  | 5MT 4AT |  | 5MT | 4AT | \nCurb weight (C.W.) | Front | kg (lb) | 810 (1,785) (1,820) | 825 | 815 (1,795) 830 | (1,830) | 785 (1,730)\n | Rear | kg (lb) | 670 (1,475) | (1,475) 670 | 670 (1,475) | 670 (1,475) | 650 (1,435)\n | Total | kg (lb) | 1,480 (3,295) | (3,265) 1,495 | 1,485 (3,275) | 1,500 (3,310) | 1,435 (3,165)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 995 (2,195) | (2,195) 995 | 995 (2,195) | 995 (2,195) | 960 (2,115)\n | Rear | kg (lb) | 1,050 (2,315) | (2,315) 1,050 | 1,050 (2,315) | 1,050 (2,315) | 1,030 (2,270)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 2,000 (4,410) | (4,410) 2,000 | 2,000 (4,410) | 2,000 (4,410) | 1,920 (4,235)\nOption | Side airbag |  | - | - | - | - | -\n | Air conditioner |  |  |  |  |  | \n | Audio |  | - | - |  |  | \n | Cruise control |  |  |  |  |  | \n | Cold weather pack |  | - | - | - | - | -\n | Leather interior |  | - | - | - | - | \n | Sunroof |  | - | - | - | - | \nOption code *1 |  |  | EC |  |  |  | \nModel |  |  | 2.5 L |  | 3.0 L |  | \n |  |  |  |  | 4WD |  | \n |  |  | 5MT |  |  |  | \nCurb weight (C.W.) |  |  |  |  | 4AT |  | \n | Front | kg (lb) | 815 (1,795) |  | 830 (1,830) | 915 (2,020) | \n | Rear | kg (lb) | 675 (1,490) |  | 675 (1,490) | 695 (1,530) | \n | Total | kg (lb) | 1,490 (3,285) |  | 1,505 (3,320) | 1,610 (3,550) | \nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 1,010 (2,225) 1,010 |  | (2,225) 1,060 (2,335) | 1,040 | (2,295)\n | Rear | kg (lb) | 1,060 (2,335) |  | 2,015 | 1,060 (2,335) | \nMaximum permissible weight (M.P .W.) | Total kg (lb) |  | 2,015 (4,445) |  | (4,445) | 2,085 (4,595) | \nOption |  |  |  |  |  |  | \n |  |  |  | - | - |  | \n | Audio Cruise control |  | - |  | - |  | \n | Cold weather | pack | - |  | - |  | \n | Leather interior |  | - |  | - |  | \n | Sunroof |  |  |  | - |  | \n |  |  | - |  |  |  | "
+    },
+    {
+     "node_id": "#/tables/28",
+     "page": 18,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Option code *1 EK |  |  |  | \n |  | Model 2.5 L 3.0 L |  | \n |  | 4WD |  | \n |  | 5MT 4AT |  | \nCurb weight (C.W.) Front kg (lb) 800 (1,765) 815 (1,795) 915 (2,020) |  |  |  | \n |  |  | Rear kg (lb) 670 (1,475) 670 (1,475) 695 (1,530) | \n |  | Total kg (lb) 1,470 (3,240) 1,485 (3,275) 1,610 (3,550) |  | \nMaximum permissible  axle weight (M.P.A.W.) |  | Front kg (lb) 1,010 (2,225) 1,010 (2,225) 1,040 (2,295) |  | \n |  | Rear kg (lb) 1,060 (2,335) 1,060 (2,335) 1,060 (2,335) |  | \nMaximum permissible  weight (M.P.W.) |  | Total kg (lb) 2,015 (4,445) 2,015 (4,445) 2,085 (4,595) |  | \nOption Side airbag |  | —— |  | \n | Air conditioner | —— |  | \n | Audio |  |  | \n | Cruise control | —— |  | \n | Cold weather pack | —— |  | \n | Leather interior | —— |  | \n | Sunroof | —— |  | \nOption code *1 KA |  |  |  | \nModel 2.5 L 3.0 L |  |  |  | \n |  | 4WD |  | \n |  | 5MT 4AT |  | \nUnladen mass (U.M.) Front kg (lb) 790 (1,740) 800 (1,765) 900 (1,985) |  |  |  | \n |  | Rear kg (lb) 650 (1,435) 650 (1,435) 690 (1,520) |  | \n |  | Total kg (lb) 1,440 (3,175) 1,410 (3,110) 1,590 (3,505) |  | \nGross vehicle mass  (G.V.M.) |  |  | Front kg (lb) 970 (2,140) 970 (2,140) 1,035 (2,280) | \n |  | Rear kg (lb) 1,050 (2,315) 1,050 (2,315) 1,050 (2,315) |  | \n |  | Total kg (lb) 2,020 (4,455) 2,020 (4,455) 2,085 (4,595) |  | \n | Option Side airbag | —— |  | \n | Air conditioner | —— |  | \n | Audio |  |  | \n | Cruise control | —— |  | \n | Cold weather pack | —— |  | ",
+     "round_one_text": "Option code *1 |  |  | EK |  | \nModel |  |  | 2.5 |  | 3.0 L\n |  |  | 4WD |  | \n |  |  | 5MT | 4AT | \nCurb weight (C.W.) | Front | kg (lb) | 800 (1,765) | 815 (1,795) | 915 (2,020)\n | Rear | kg (lb) | 670 (1,475) | 670 (1,475) | 695 (1,530)\n | Total | kg (lb) | 1,470 (3,240) | 1,485 (3,275) | 1,610 (3,550)\nMaximum permissible axle weight (M.P .A.W.) | Front | kg (lb) | 1,010 (2,225) | 1,010 (2,225) | 1,040 (2,295)\n | Rear | kg (lb) | 1,060 (2,335) | 1,060 (2,335) | 1,060 (2,335)\nMaximum permissible weight (M.P .W.) | Total | kg (lb) | 2,015 (4,445) | 2,015 (4,445) | 2,085 (4,595)\nOption | Side airbag |  | - | - | \n | Air conditioner |  | - | - | \n | Audio |  |  |  | \n | Cruise control |  | - | - | \n | Cold weather pack |  | - | - | \n | Leather interior |  | - | - | \n | Sunroof |  | - | - | \nOption code *1 |  |  | KA |  | \nModel |  |  | 2.5 L |  | 3.0 L\n |  |  | 4WD |  | \n |  |  | 5MT | 4AT | \nUnladen mass (U.M.) | Front | kg (lb) | 790 (1,740) | 800 (1,765) | 900 (1,985)\n | Rear | kg (lb) | 650 (1,435) | 650 (1,435) | 690 (1,520)\n | Total | kg (lb) | 1,440 (3,175) | 1,410 (3,110) | 1,590 (3,505)\nGross vehicle mass (G.V.M.) | Front | kg (lb) | 970 (2,140) | 970 (2,140) | 1,035 (2,280)\n | Rear | kg (lb) | 1,050 (2,315) | 1,050 (2,315) | 1,050 (2,315)\n | Total | kg (lb) | 2,020 (4,455) | 2,020 (4,455) | 2,085 (4,595)\nOption | Side airbag |  | - | - | \n | Air conditioner |  | - | - | \n | Audio |  |  |  | \n | Cruise control |  | - | - | \n | Cold weather pack |  | - | - | "
+    }
+   ],
+   "lead_case_checks": [
+    "p15: Round one lost the row-group label 'Final reduction' (two times). Expected now: back to the original table (#/tables/21) with 'Final reduction'. Also check #/tables/20 on the same page (kept re-read)."
+   ]
+  },
+  {
+   "key": "sec_0006|21|5.6-table_content",
+   "section_id": "sec_0006",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Table #/tables/31 on p21 is the chapter TOC. All six lines and page numbers are present and in order. In rows 4 and 5 the page numbers (19, 30) are inside the title cell ('Sensors and Switches ......19 | ') and the Page cell is empty. In row 6 the dots and '38' are in the Page column but the title cell is split from the dots. Rows 1-3 are correct.",
+    "notes": "Cells merged, values and order kept. Low by the lead rule."
+   },
+   "pages_to_check": [
+    21
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/31",
+     "page": 21,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0011|54|5.6-table_content",
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p57 table #/tables/33 matches the render (5 rows by 3 columns). On p51 (rendered, FU-31) the table 'B: Input and output signals' has three columns: Signal, Unit, Function. Table #/tables/32 has only 'Unit | Function'. The group labels 'Input signals' and 'Output signals' are lost. The word 'Signal' is left as a separate heading node #/texts/645.",
+    "notes": "Confirmed on the p51 render. The labels are not anywhere else, so rows can no longer be grouped as input or output. Medium by rule 2. Same root cause as sec_0089."
+   },
+   "pages_to_check": [
+    54,
+    51
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/32",
+     "page": 51,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p51: Round one: the Signal column labels ('Input signals' / 'Output signals') are missing. The table text is the same as round one, because the base table also missed them (the guard compares with the base). Check if 'Input signals'/'Output signals' are anywhere in the section nodes. If not, words are lost: Medium."
+   ]
+  },
+  {
+   "key": "sec_0018|88|5.6-table_content",
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p90 table #/tables/36 matches the render (5 rows by 3 columns). On p84 (rendered, FU-26) the table 'B: Input and output signals' has three columns: Signal, Unit, Function. Table #/tables/35 has only 'Unit | Function'. The group labels 'Input signals' and 'Output signals' are lost. The word 'Signal' is left as a separate heading node #/texts/1261.",
+    "notes": "Confirmed on the p84 render. The labels are not anywhere else, so rows can no longer be grouped as input or output. Medium by rule 2. Same root cause as sec_0089."
+   },
+   "pages_to_check": [
+    88,
+    84
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/35",
+     "page": 84,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": " | sensor the absolute pressure).\nInput signals | Throttle position sensor Detects the throttle valve position. Oxygen sensor* Detects the density of oxygen in exhaust gases at the upstream of the\n | front catalytic converter.\n | Crankshaft position sensor Detects the crankshaft angular position. Camshaft position sensor Detects the combustion cylinder.\n | Engine coolant temperature sensor Detects the engine coolant temperature.\n | Knock sensor Detects engine knocking.\n | Vehicle speed sensor Detects the vehicle speed.\n | Ignition switch Detects operation of the ignition switch.\n | Starter switch Detects the condition of engine cranking.\n | Neutral position switch (MT) Detects that the gear is in neutral.\n | Park/Neutral position switch (AT) Detects shift positions.\n | Torque control signal (AT) Controls engine torque.\n | Heater circuit of oxygen sensor* Detects abnormality in the heater circuit of the oxygen sensors.\n | Diagnostics of AT-ECU Detects the self-diagnostics of the AT-ECU. A/C switch Detects ON-OFF operation of the A/C switch.\n | Small light switch Detects ON-OFF operation of the small light switch.\n | Blower fan switch Detects ON-OFF operation of the blower fan switch.\n | Rear defogger switch Detects ON-OFF operation of the rear defogger switch.\n | Fuel Injector Activates an injector.\n | Ignition signal Turns the primary ignition current ON or OFF.\n*: With catalytic converter Output signals | Fuel pump relay Turns the fuel pump relay ON or OFF.\n | A/C control relay Turns the A/C control relay ON or OFF.\n | Radiator fan control relay Turns the radiator fan control relay ON or OFF.\n | Idle air control solenoid valve Adjusts the amount of air flowing through the bypass line in the throttle  body.\n | Malfunction indicator lamp Indicates existence of abnormality. Purge control solenoid valve Controls purge of evaporative gas absorbed by the canister.\n | Power supply Control ON/OFF of the main power supply relay.",
+     "round_one_text": "Unit | Function\nIntake air temperature and pressure sensor | Detects the temperature of intake and amount of intake air (Measures the absolute pressure).\nThrottle position sensor | Detects the throttle valve position.\nOxygen sensor* | Detects the density of oxygen in exhaust gases at the upstream of the front catalytic converter.\nCrankshaft position sensor | Detects the crankshaft angular position.\nCamshaft position sensor | Detects the combustion cylinder.\nEngine coolant temperature sensor | Detects the engine coolant temperature.\nKnock sensor | Detects engine knocking.\nVehicle speed sensor | Detects the vehicle speed.\nIgnition switch | Detects operation of the ignition switch.\nStarter switch | Detects the condition of engine cranking.\nNeutral position switch (MT) | Detects that the gear is in neutral.\nPark/Neutral position switch (AT) | Detects shift positions.\nTorque control signal (AT) | Controls engine torque.\nHeater circuit of oxygen sensor* | Detects abnormality in the heater circuit of the oxygen sensors.\nDiagnostics of AT-ECU | Detects the self-diagnostics of the AT-ECU.\nA/C switch | Detects ON-OFF operation of the A/C switch.\nSmall light switch | Detects ON-OFF operation of the small light switch.\nBlower fan switch | Detects ON-OFF operation of the blower fan switch.\nRear defogger switch | Detects ON-OFF operation of the rear defogger switch.\nFuel Injector | Activates an injector.\nIgnition signal | Turns the primary ignition current ON or OFF.\nFuel pump relay | Turns the fuel pump relay ON or OFF.\nA/C control relay | Turns the A/C control relay ON or OFF.\nRadiator fan control relay | Turns the radiator fan control relay ON or OFF.\nIdle air control solenoid valve | Adjusts the amount of air flowing through the bypass line in the throttle body.\nMalfunction indicator lamp | Indicates existence of abnormality.\nPurge control solenoid valve | Controls purge of evaporative gas absorbed by the canister.\nPower supply | Control ON/OFF of the main power supply relay."
+    }
+   ],
+   "lead_case_checks": [
+    "p84: Round one lost the Signal column ('Input signals'/'Output signals'). Expected now: back to the original table with these labels. Confirm."
+   ]
+  },
+  {
+   "key": "sec_0021|94|5.6-table_content",
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Checked table #/tables/38 on p94 cell by cell. All rows, columns and function texts match the render, including the front/rear catalyst and the two intake sensor lines. Line-break hyphens are kept inside words with a space: 'emis- sion', 're- ducing', 'air- fuel', 'discrimina- tion', 'dis- charged', 'igni- tion'. The 'Rear' cell next to the catalyst has no component, as in the render.",
+    "notes": "Hyphen artefacts only. Values and columns are right. Cosmetic, Low."
+   },
+   "pages_to_check": [
+    94
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/38",
+     "page": 94,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0036|121|5.4-hierarchy_level",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0036 is level 4. Its heading \"7. Evaporative Emission Control System\" on p119 is the large numbered-section style. Sub-parts A: to F: (p119-122) are smaller body headings, not sections.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.4-parent_child",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Parent sec_0029 (Emission Control, p109-124) lists sec_0036 as a child. sec_0036 has no children. Its neighbours are sec_0035 (p118) and sec_0037 (p123). The running header on p121 names the same chapter.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.4-page_start_end",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p119 starts with the heading \"7. Evaporative...\" and folio EC-11. p122 ends with \"F: TWO-WAY VALVE\" and folio EC-14. Sampled p121 holds D: CANISTER and E: PURGE CONTROL SOLENOID VALVE, which belong to this section. The next section starts at p123 (that page is not in the batch).",
+    "notes": "No node of sec_0035 or sec_0037 is in the range."
+   }
+  },
+  {
+   "key": "sec_0036|121|5.4-hierarchy_path",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path ends in \"7. Evaporative Emission Control System\" under \"Emission Control (Aux. Emission Control Devices)\". The running header on p121 shows the same chapter name.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.4-gaps_duplicates",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "96 nodes run in order from #/texts/1841 to #/texts/1936. Each page p119-p122 has its running header, its A:-F: heading and its folio (EC-11 to EC-14). No repeated text and no gap between pages.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.4-flagged_for_review",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is on its declared page (p119), so there is nothing to review.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.4-structural_source",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\" and not inferred. The visible heading on p119 matches the bookmark title and page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.6-numbering_scheme",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The scheme is \"arabic\". Printed folios are chapter-prefixed numbers (EC-11 to EC-14) and run in sequence. There is no roman or other scheme change inside this section.",
+    "notes": "Folios are not stored in tree.json."
+   }
+  },
+  {
+   "key": "sec_0036|121|5.6-offset_applied",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The heading shows on physical p119, the declared start page. Neighbour sections also use offset 0.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.5-filters_discarding",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "All six figures are in images.json: p119 img_0070, p120 img_0071 and img_0072, p121 img_0073 and img_0074, p122 img_0075. The text nodes list six drawing codes (B2H3841B, B2H3342D, B2H0395C, B2H3825B, B2H0426B, B2H2951C), so none is missing.",
+    "notes": "Raster images img_0071 and img_0073 show as white lines on black. The drawing is complete. Callout numbers are separate text nodes."
+   }
+  },
+  {
+   "key": "sec_0036|121|5.5-filters_passing_noise",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "I compared the vector images img_0070, img_0072, img_0074 and img_0075 with their pages on all four edges. Each holds only the drawing and its callouts. No running header, folio (EC-xx), rule or body text is inside. Raster img_0071 and img_0073 are drawings, not logos.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0036|121|5.5-image_section_mapping",
+   "section_id": "sec_0036",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No page is shared with another section (sec_0035 ends p118, sec_0037 starts p123). All six images on p119-p122 are mapped to sec_0036. On p121 the canister drawing (img_0074) and the solenoid drawing (img_0073) sit under D: and E: of this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0052|141|5.6-table_content",
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "The p141 TOC has two lines: '1. General ... 2' and '2. Composition ... 3'. Table #/tables/42 has only line 1 and the header is merged into the value cell ('Page 2'). Line 2 is outside the table as paragraph #/texts (semantic_order 2244). The text and page number 3 survive there.",
+    "notes": "The second TOC row left the table, but its information survives in a paragraph. Low per the contract. Probably the table detector cut the last row."
+   },
+   "pages_to_check": [
+    141
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/42",
+     "page": 141,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0084|181|5.6-table_content",
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Table #/tables/48 on p181 is the TOC with 6 rows. All titles and page numbers (2, 3, 6, 19, 28, 36) are present and in order. In rows 4 and 5 the page numbers 19 and 28 are inside the title cell and the Page cell is empty. In row 6 the dots and 36 are split from the title.",
+    "notes": "Cells merged, values and order kept. Low by the lead rule."
+   },
+   "pages_to_check": [
+    181
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/48",
+     "page": 181,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0089|208|5.4-hierarchy_level",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0089 is level 4. \"5. Control System\" on p208 is the large numbered-section heading. A: GENERAL to F: FUEL PUMP CONTROL are smaller body headings in this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p208 shows '5. Control System' with 'A: GENERAL'. Level 4 fits: parent sec_0084 is level 3 and the sibling sections are level 4. The headings B to F and the numbered sub-headings are heading nodes.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.4-parent_child",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Parent sec_0084 (Fuel Injection, p181-216) lists sec_0089. sec_0089 has no children. Neighbours are sec_0088 (p199-207) and sec_0090 (p216). The p208 running header names \"Fuel Injection (Fuel System)\".",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Parent is sec_0084. No children. This matches p208-p215.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.4-page_start_end",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p208 starts with \"5. Control System\", \"A: GENERAL\" and folio FU-28. p215 ends with \"F: FUEL PUMP CONTROL\", its table and folio FU-35. Folios FU-28 to FU-35 run without a gap. The next section starts at p216 (not in the batch). Tables 49 (p209) and 50 (p215) sit under headings of this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "page_start 208: p208 (FU-28) begins '5. Control System'. page_end 215: p215 (FU-35) ends with F: FUEL PUMP CONTROL and its table. p216 begins '6. On-board Diagnosis System' (sec_0090). No outside content is inside.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.4-hierarchy_path",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path \"/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)/5. Control System\" matches the running header on p208 and the heading style.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Path is .../FUEL INJECTION (FUEL SYSTEM)/5. Control System under sec_0084. It matches p208.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.4-gaps_duplicates",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "139 nodes run in order from #/texts/3104 to #/texts/3240, plus tables 49 and 50. Every page p208-p215 has a header, a heading and a folio. No repeated block and no missing page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Previous sec_0088 ends p207, this section is p208-p215, next sec_0090 is p216. No gap or overlap.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.4-flagged_for_review",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is on p208, the declared start page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. p208 heading is clear.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.4-structural_source",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is \"toc\". The heading on p208 agrees with the bookmark.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is toc. The title matches p208.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.6-numbering_scheme",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The scheme is \"arabic\". Printed folios are chapter-prefixed (FU-28 to FU-35) and in sequence, with no scheme change.",
+    "notes": "Folios are not stored in tree.json."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Folios FU-28, FU-29, FU-35 (chapter prefix). Arabic with bookmark = physical page works.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.6-offset_applied",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The heading is on physical p208. Neighbour sections also use offset 0.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. The title is on physical p208 (FU-28), same as page_start.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.6-table_content",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "tables/50 (p215) matches its page: 3 columns, 4 rows, values and ON/OFF states correct. tables/49 (p209) lists the signals and functions in order. But the row-group labels \"Input signals\" and \"Output signals\" sit in the middle of the row list, inside the \"Front vehicle speed sensor\" and \"Idle air control solenoid valve\" rows. The first 9 input rows come before the label.",
+    "notes": "Probably a merged group cell that the table model puts in one row. Values and reading order stay intact, so Low. The p209 page image is not in this batch, so this is judged from the node text. Please check on p209."
+   },
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "Checked table #/tables/49 on p209 cell by cell. The render has 3 columns: Signal, Unit, Function. The table has only 'Unit | Function'. The Signal labels 'Input signals' (19 rows) and 'Output signals' (11 rows) are gone. All 30 Unit and Function texts match in order. One cell keeps a break hyphen: 'oxygen sen- sor.'. Table #/tables/50 on p215 matches the render (5 rows by 3 columns).",
+    "notes": "Signal column lost, so a reader cannot tell input from output without outside knowledge. Medium: values can no longer be attributed to their column. Same pattern probably in sec_0011 and sec_0018."
+   },
+   "pages_to_check": [
+    208,
+    209
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/49",
+     "page": 209,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Signal Unit Function\nIntake manifold pressure sensor Detects the amount of intake air (Measures the absolute pressure).\nIntake air temperature sensor Detects the temperature of intake air.\nThrottle position sensor Detects the throttle valve position.\nFront oxygen (A/F) sensor Detects the density of oxygen in exhaust gases at the upstream of the  front catalytic converter.\nRear oxygen sensor Detects the density of oxygen in exhaust gases at the downstream of  the rear catalytic converter.\nCrankshaft position sensor Detects the crankshaft angular position.\nCamshaft position sensor Detects the combustion cylinder.\nEngine coolant temperature sensor Detects the engine coolant temperature.\nKnock sensor Detects engine knocking.\nInput signals Front vehicle speed sensor Detects the vehicle speed.\nIgnition switch Detects operation of the ignition switch.\nStarter switch Detects the condition of engine cranking.\nPark/Neutral position switch Detects shift positions.\nDiagnostic of AT Detects the self-diagnostics of AT\nHeater circuit of front and rear oxygen  sensor Detects the abnormality in heater circuit of front and rear oxygen sen\u0002 sor.\nA/C switch Detects ON-OFF operation of the A/C switch.\nFuel level sensor Detects the level of the fuel in the fuel tank.\nSmall light switch Detects ON-OFF operation of the small light switch.\nBlower fan switch Detects ON-OFF operation of the blower fan switch.\nRear defogger switch Detects ON-OFF operation of the rear defogger switch.\nFuel Injector Activates an injector.\nIgnition signal Turns the primary ignition current ON or OFF.\nFuel pump relay Turns the fuel pump relay ON or OFF.\nA/C control relay Turns the A/C control relay ON or OFF.\nRadiator fan control relay Turns the radiator fan control relay ON or OFF.\nOutput signals Idle air control solenoid valve Adjusts the amount of air flowing through the bypass line in the throttle  body.\nInduction control solenoid valve Controls induction control valve.\nEGR solenoid valve Controls EGR valve.\nMalfunction indicator lamp Indicates existence of abnormality.\nPurge control solenoid valve Controls purge of evaporative gas absorbed by the canister.\nPower supply Controls ON/OFF of the main power supply relay.",
+     "round_one_text": "Unit | Function\nIntake manifold pressure sensor | Detects the amount of intake air (Measures the absolute pressure).\nIntake air temperature sensor | Detects the temperature of intake air.\nThrottle position sensor | Detects the throttle valve position.\nFront oxygen (A/F) sensor | Detects the density of oxygen in exhaust gases at the upstream of the front catalytic converter.\nRear oxygen sensor | Detects the density of oxygen in exhaust gases at the downstream of the rear catalytic converter.\nCrankshaft position sensor | Detects the crankshaft angular position.\nCamshaft position sensor | Detects the combustion cylinder.\nEngine coolant temperature sensor | Detects the engine coolant temperature.\nKnock sensor | Detects engine knocking.\nFront vehicle speed sensor | Detects the vehicle speed.\nIgnition switch | Detects operation of the ignition switch.\nStarter switch | Detects the condition of engine cranking.\nPark/Neutral position switch | Detects shift positions.\nDiagnostic of AT | Detects the self-diagnostics of AT\nHeater circuit of front and rear oxygen sensor | Detects the abnormality in heater circuit of front and rear oxygen sen- sor.\nA/C switch | Detects ON-OFF operation of the A/C switch.\nFuel level sensor | Detects the level of the fuel in the fuel tank.\nSmall light switch | Detects ON-OFF operation of the small light switch.\nBlower fan switch | Detects ON-OFF operation of the blower fan switch.\nRear defogger switch | Detects ON-OFF operation of the rear defogger switch.\nFuel Injector | Activates an injector.\nIgnition signal | Turns the primary ignition current ON or OFF.\nFuel pump relay | Turns the fuel pump relay ON or OFF.\nA/C control relay | Turns the A/C control relay ON or OFF.\nRadiator fan control relay | Turns the radiator fan control relay ON or OFF.\nIdle air control solenoid valve | Adjusts the amount of air flowing through the bypass line in the throttle body.\nInduction control solenoid valve | Controls induction control valve.\nEGR solenoid valve | Controls EGR valve.\nMalfunction indicator lamp | Indicates existence of abnormality.\nPurge control solenoid valve | Controls purge of evaporative gas absorbed by the canister.\nPower supply | Controls ON/OFF of the main power supply relay."
+    }
+   ],
+   "lead_case_checks": [
+    "p209: Round one lost text in this table. Expected now: back to the original table (all text kept, cells may be merged). Confirm every word on the page is in the table."
+   ]
+  },
+  {
+   "key": "sec_0089|208|5.5-filters_discarding",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Four figures are extracted: p212 img_0140 (B2H0989C), p213 img_0141 (B2H4153A), p214 img_0142 (B2H3914B), p215 img_0143 (B2H3915A). The four drawing codes in the text match the four images. Rendered p208, p214 and p215 show no other figure.",
+    "notes": "p209-p213 are not rendered in the batch. No other drawing code exists in the nodes."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Diagrams on p212 to p215 are extracted (img_0140 to img_0143). The p215 idle air diagram matches img_0143. p209 and p208 have no drawing. Nothing meaningful is missing on the rendered pages.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.5-filters_passing_noise",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Vector img_0142 (p214) and img_0143 (p215) were compared with their pages on all four edges. They hold only the diagram and its drawing code (B2H3914B, B2H3915A). No body text, heading, rule or folio (FU-34, FU-35) is inside. Raster img_0140 and img_0141 are diagrams.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0140 to img_0143 are real figures (including the p214 timing chart img_0142). No rule or logo kept as an image.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|208|5.5-image_section_mapping",
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No page is shared with sec_0088 (ends p207) or sec_0090 (starts p216). The four images (p212-p215) are mapped to sec_0089 and sit under its C:, D: and E: headings.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0140 (p212), img_0141 (p213), img_0142 (p214) and img_0143 (p215) are mapped to sec_0089. The p215 diagram is under 'E: IDLE AIR CONTROL' in this section. Mapping is correct.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0089|214|5.6-table_content",
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    214
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0123|255|5.6-table_content",
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p255 table #/tables/56 has 3 columns and 6 rows. Every number (1-6), title and page number (2,4,5,6,7,8) matches the render, in order. The header is ' |  | Page'.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    255
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/56",
+     "page": 255,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  }
+ ]
+}

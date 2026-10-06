@@ -1,0 +1,1859 @@
+{
+ "schema_version": 1,
+ "rows": [
+  {
+   "key": "sec_0003|36|5.6-table_content",
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "Table 1-4 (#/tables/14) has 13 model columns and 15 probe rows. I compared every row with the render. All X and N values sit in the right model column, for example 4C-RS has N under Xe Pro and He Performance. The note row \"Note:X:Support ;N:Not Applicable\" below the table is not in the extracted text. The cell values are correct, but the legend for X and N is missing from the table text. The sister table on p35 keeps its \"Note:O:Option\" row.",
+    "notes": "Footnote row under the table is dropped. Probably the note spans all columns. Impact is small because the cells are intact."
+   },
+   "pages_to_check": [
+    36
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/14",
+     "page": 36,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0005|42|5.6-table_content",
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is on p42. The page has only Figure 1-2 and a numbered label list. So there is no table content to compare for this page.",
+    "notes": "Not applicable on this page. Table checks are done on pages with tables."
+   },
+   "pages_to_check": [
+    42
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0005|43|5.6-table_content",
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "Table 1-7 (#/tables/15) has the header Label/Icon | Purpose/Meaning | Location | Reference. In every row the extracted cells start with the Purpose text, so every value is under the wrong header and can no longer be attributed to its column by position. The empty Label/Icon cell is moved to the end of the row. For row 1, the label text \"Identification and Rating Plate\" ends up in the Reference column. In the render it is under Label/Icon, next to the rating plate icon.",
+    "notes": "The icon column is rotated to the end of each row. Values are attributed to the wrong column, so Medium. Order of the other three values is kept. Probably the empty icon cell is not kept at the front."
+   },
+   "pages_to_check": [
+    43
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/15",
+     "page": 43,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0011|68|5.6-table_content",
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table 1-8 (#/tables/23) matches the render. Location, phone label and number are in the right columns. Empty cells for Canada and the merged USA, Europe and Asia rows are kept. Examples: \"Service: On-site | 1-800-437-1171\" and Japan \"Phone: Fax: | 81-426-48-2940 81-426-48-2905\".",
+    "notes": "Cells merged inside one cell (Phone: Fax:) but values and order are kept."
+   },
+   "pages_to_check": [
+    68
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/23",
+     "page": 68,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0014|78|5.6-table_content",
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table 2-7 (#/tables/30) has 8 EMI rule rows. Each rule is in the EMI RULE column and its text is in DETAILS. Bullets of rows 1 and 3 are kept in order. The text matches the render.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    78
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/30",
+     "page": 78,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0014|77|5.6-table_content",
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is on p77. The page has the EMI limitations text and a bullet list only. So there is no table content to compare for this page.",
+    "notes": "Not applicable on this page. Table checks are done on pages with tables."
+   },
+   "pages_to_check": [
+    77
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0020|96|5.4-hierarchy_level",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0020 is level 2 under sec_0017 'System Setup' (level 1), the same level as its siblings sec_0019 and sec_0021. The p94 heading uses the large blue section-title style. On p96 (folio 3-8) the page content fits this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.4-parent_child",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0017 and its child_sections list contains sec_0020. Range 94-99 is inside the parent range 89-162. sec_0020 has no children and none are visible. On p96 (folio 3-8) the page content fits this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.4-page_start_end",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p96 (folio 3-8) the page shows the heading 'Unpacking the LOGIQ e (continued)', steps 3-6 and Figure 3-2, all owned by sec_0020. sec_0020 spans p94-p99. p94 opens with the title (#/texts/858); p99 ends with 'Packing the Equipment' and 'Unpacking LOGIQ e Cart'. The neighbours end on p93 and start on p100. All 65 nodes are on p94-p99.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.4-hierarchy_path",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/System Setup/Receiving and unpacking the equipment' matches the 'System Setup' running header and the p94 title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.4-gaps_duplicates",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0020 appears once. It follows sec_0019 (ends p93) and precedes sec_0021 (starts p100), with no gap and no overlap. On p96 (folio 3-8) the page shows the heading 'Unpacking the LOGIQ e (continued)', steps 3-6 and Figure 3-2, all owned by sec_0020; no neighbour content is seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.4-flagged_for_review",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is visible as the heading on p94, the declared start page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.4-structural_source",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title and page agree with the p94 heading.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.6-numbering_scheme",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is 'arabic'. Printed folios are chapter-page numbers (3-6 on p94 to 3-11 on p99), digits only.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.6-offset_applied",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. page_start 94 is the physical page where the title is rendered. The neighbours 91-93 and 100-101 are consecutive with it.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|96|5.5-filters_discarding",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p96 the CAUTION triangle icon next to 'Do not lift the unit by the rubber band' is visible but is not in images.json. The text 'CAUTION' and the warning are kept (#/texts/893, #/texts/892), so the meaning survives. The Figure 3-2 drawing is kept (img_0085).",
+    "notes": "Probably BUG-020 (the small-image area filter drops icons). Low per contract: small icon dropped, meaning stated in the text."
+   }
+  },
+  {
+   "key": "sec_0020|96|5.5-filters_passing_noise",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "The vector image img_0085 (948x737, p96) is cropped too wide. Against the p96 render, its top edge starts with the body step line '6. Take out Accessories Package.' and has a thin grey page rule under it. A second thin grey rule runs across its bottom edge, just above 'Figure 3-2.'. These lines are not part of the drawing. Pages with this case in sec_0020: p96 only. The other vector image, img_0084 (p95), has clean edges on all four sides.",
+    "notes": "Probably the vector render box caught the step line and the two page rules (BUG-010 render path). Low per contract: rule kept as image. The step text also exists as node #/texts/886, so no content is lost. Graded once for the section."
+   }
+  },
+  {
+   "key": "sec_0020|96|5.5-image_section_mapping",
+   "section_id": "sec_0020",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0085 (p96) is Figure 3-2 and sits under the 'Unpacking the LOGIQ e (continued)' heading in sec_0020. No sibling shares the page. The other images of the section are on p95 (img_0084) and p97 (img_0086) and are also mapped to sec_0020.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.4-hierarchy_level",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0020 is level 2 under sec_0017 'System Setup' (level 1), the same level as its siblings sec_0019 and sec_0021. The p94 heading uses the large blue section-title style. On p94 (folio 3-6) the page content fits this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.4-parent_child",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0017 and its child_sections list contains sec_0020. Range 94-99 is inside the parent range 89-162. sec_0020 has no children and none are visible. On p94 (folio 3-6) the page content fits this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.4-page_start_end",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p94 (folio 3-6) the page shows the title, contents list and 'Receiving the LOGIQ e' block, all owned by sec_0020. sec_0020 spans p94-p99. p94 opens with the title (#/texts/858); p99 ends with 'Packing the Equipment' and 'Unpacking LOGIQ e Cart'. The neighbours end on p93 and start on p100. All 65 nodes are on p94-p99.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.4-hierarchy_path",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/System Setup/Receiving and unpacking the equipment' matches the 'System Setup' running header and the p94 title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.4-gaps_duplicates",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0020 appears once. It follows sec_0019 (ends p93) and precedes sec_0021 (starts p100), with no gap and no overlap. On p94 (folio 3-6) the page shows the title, contents list and 'Receiving the LOGIQ e' block, all owned by sec_0020; no neighbour content is seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.4-flagged_for_review",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is visible as the heading on p94, the declared start page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.4-structural_source",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title and page agree with the p94 heading.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.6-numbering_scheme",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is 'arabic'. Printed folios are chapter-page numbers (3-6 on p94 to 3-11 on p99), digits only.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.6-offset_applied",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. page_start 94 is the physical page where the title is rendered. The neighbours 91-93 and 100-101 are consecutive with it.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.5-filters_discarding",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p94 has only text: the title, the contents list and the 'Receiving the LOGIQ e' block. There is no figure and no icon, so nothing was dropped.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.5-filters_passing_noise",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p94 has no extracted image and the render shows no figure, so no decorative element was kept.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|94|5.5-image_section_mapping",
+   "section_id": "sec_0020",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p94 has no figure and no image is mapped to it, so there is nothing to mis-assign. The other images of the section are on p95 (img_0084) and p97 (img_0086) and are also mapped to sec_0020.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.4-hierarchy_level",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0020 is level 2 under sec_0017 'System Setup' (level 1), the same level as its siblings sec_0019 and sec_0021. The p94 heading uses the large blue section-title style. On p98 (folio 3-10) the page content fits this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.4-parent_child",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0017 and its child_sections list contains sec_0020. Range 94-99 is inside the parent range 89-162. sec_0020 has no children and none are visible. On p98 (folio 3-10) the page content fits this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.4-page_start_end",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p98 (folio 3-10) the page shows the NOTE, Figures 3-4 and 3-5 and 'Moving into Position', all owned by sec_0020. sec_0020 spans p94-p99. p94 opens with the title (#/texts/858); p99 ends with 'Packing the Equipment' and 'Unpacking LOGIQ e Cart'. The neighbours end on p93 and start on p100. All 65 nodes are on p94-p99.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.4-hierarchy_path",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/System Setup/Receiving and unpacking the equipment' matches the 'System Setup' running header and the p94 title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.4-gaps_duplicates",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0020 appears once. It follows sec_0019 (ends p93) and precedes sec_0021 (starts p100), with no gap and no overlap. On p98 (folio 3-10) the page shows the NOTE, Figures 3-4 and 3-5 and 'Moving into Position', all owned by sec_0020; no neighbour content is seen.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.4-flagged_for_review",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title is visible as the heading on p94, the declared start page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.4-structural_source",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title and page agree with the p94 heading.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.6-numbering_scheme",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is 'arabic'. Printed folios are chapter-page numbers (3-6 on p94 to 3-11 on p99), digits only.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.6-offset_applied",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. page_start 94 is the physical page where the title is rendered. The neighbours 91-93 and 100-101 are consecutive with it.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0020|98|5.5-filters_discarding",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p98 three CAUTION triangle icons are visible (one after Figure 3-5, two under 'Moving into Position') and none is in images.json. The 'CAUTION' words and warning texts are kept (#/texts/906-912), so the meaning survives. Figures 3-4 and 3-5 are kept (img_0087, img_0088) and complete against the render.",
+    "notes": "Probably BUG-020. Low per contract: small icons dropped, meaning stated in the text."
+   }
+  },
+  {
+   "key": "sec_0020|98|5.5-filters_passing_noise",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0087 and img_0088 (p98) hold only the two label strips of Figures 3-4 and 3-5. The thin corner brackets at the edges of img_0087 are also in the page render and are part of the artwork. No heading, body text or page rule is inside either image.",
+    "notes": "The vector crop problem of this section is graded once on the p96 row."
+   }
+  },
+  {
+   "key": "sec_0020|98|5.5-image_section_mapping",
+   "section_id": "sec_0020",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0087 and img_0088 (p98) are Figures 3-4 and 3-5, mapped to sec_0020. No sibling section shares p98. The other images of the section are on p95 (img_0084) and p97 (img_0086) and are also mapped to sec_0020.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.4-hierarchy_level",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 is level 2 under sec_0017 'System Setup', like its siblings. On p111 it opens with the large blue section title. On p116 (folio 3-28) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.4-parent_child",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0017 and its child_sections list contains sec_0023. Range 111-124 is inside the parent range 89-162. It has no children; 'Pin Assignment' and 'Available probes' are in-section headings. On p116 (folio 3-28) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.4-page_start_end",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p116 (folio 3-28) the page shows 'Pin Assignment' and Tables 3-5 to 3-8, all owned by sec_0023. sec_0023 spans p111-p124. p111 opens with the title and p124 ends with Figure 3-17. The neighbours end on p110 and start on p125. All 156 nodes are on p111-p124 and each table is owned by the section where it is printed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p116.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.4-hierarchy_path",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/System Setup/System Configuration' matches the p111 title and the 'System Setup' chapter header.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.4-gaps_duplicates",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 appears once. It follows sec_0022 (ends p110) and precedes sec_0024 (starts p125). The nine entries of the p111 contents list are found as headings on p112-p122. On p116 (folio 3-28) the page shows 'Pin Assignment' and Tables 3-5 to 3-8, all owned by sec_0023; no neighbour content is seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.4-flagged_for_review",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title 'System Configuration' is visible on p111, the declared start page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p116 shows no sign of an error, so the flag is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.4-structural_source",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title and page agree with the p111 heading.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.6-numbering_scheme",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is 'arabic'. Printed folios run 3-23 (p111) to 3-36 (p124), chapter-page numbers.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. Printed folios on p116 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.6-offset_applied",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. p111 is the physical page of the title, and sec_0022 (102-110) and sec_0024 (125) are consecutive with it.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p116 is inside the declared range.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.6-table_content",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p116 the four pin tables (#/tables/38-41, Tables 3-5 to 3-8) show 'Pin No. Signal Pin No. | Signal' as the header and '1 +20V 3 GND | ' as a row: the second pin pair is merged into the first cell and the second column is empty. The render shows four separate columns. All pins and signals are present and in the right order.",
+    "notes": "Low per contract: cells merged but order and values kept. Probably Docling table structure."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The four pin tables (#/tables/38 to #/tables/41) match the render cell by cell. Table 3-5 DC input has 1 +20V, 2 +20V, 3 GND, 4 GND. Tables 3-6, 3-7 and 3-8 (USB1 to USB3) each have 1 +5VDC, 2 DATA-, 3 DATA+, 4 GND. Pin No. and Signal pairs are in the right columns and the tables are not mixed.",
+    "notes": "The four tables follow the page order."
+   },
+   "pages_to_check": [
+    116,
+    114
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/38",
+     "page": 116,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/39",
+     "page": 116,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/40",
+     "page": 116,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/41",
+     "page": 116,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/36",
+     "page": 114,
+     "status": "changed since round one: back to the base (original) text, guard kept it",
+     "base_text": "Name | Part No. | Figure | NOTE\nUSB Cable |  |  | For USB Printer &  USB DVD-RW",
+     "round_one_text": "Name | Part No. | NOTE\nUSB Cable |  | For USB Printer & USB DVD-RW"
+    }
+   ],
+   "lead_case_checks": [
+    "p116: Round one fixed these tables (base was FAIL). Must still be fixed."
+   ]
+  },
+  {
+   "key": "sec_0023|116|5.5-filters_discarding",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p116 has no figure or icon in the render; its content is the four pin tables.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No picture is on p116. It has four pin tables and headings. No image is mapped to this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.5-filters_passing_noise",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p116 has no image and shows no decorative element. The vector image of this section, img_0106 (p123, 812x952), holds only the worksheet frame of Figure 3-16, with no heading, caption or page rule at its edges.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No decorative image, rule or logo is kept as an image on p116. No image is mapped to this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|116|5.5-image_section_mapping",
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p116 has no figure; no image is mapped to it. The images of the section (p112 to p124) are all mapped to sec_0023, and no sibling shares these pages.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No picture is on p116. It has four pin tables and headings. No image is mapped to this page. The images belong to sec_0023, which owns this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.4-hierarchy_level",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 is level 2 under sec_0017 'System Setup', like its siblings. On p111 it opens with the large blue section title. On p119 (folio 3-31) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.4-parent_child",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0017 and its child_sections list contains sec_0023. Range 111-124 is inside the parent range 89-162. It has no children; 'Pin Assignment' and 'Available probes' are in-section headings. On p119 (folio 3-31) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.4-page_start_end",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p119 (folio 3-31) the page shows the caption and rows 4-7 of Table 3-10, owned by sec_0023. sec_0023 spans p111-p124. p111 opens with the title and p124 ends with Figure 3-17. The neighbours end on p110 and start on p125. All 156 nodes are on p111-p124 and each table is owned by the section where it is printed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p119.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.4-hierarchy_path",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/System Setup/System Configuration' matches the p111 title and the 'System Setup' chapter header.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.4-gaps_duplicates",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 appears once. It follows sec_0022 (ends p110) and precedes sec_0024 (starts p125). The nine entries of the p111 contents list are found as headings on p112-p122. On p119 (folio 3-31) the page shows the caption and rows 4-7 of Table 3-10, owned by sec_0023; no neighbour content is seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.4-flagged_for_review",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title 'System Configuration' is visible on p111, the declared start page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p119 shows no sign of an error, so the flag is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.4-structural_source",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title and page agree with the p111 heading.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.6-numbering_scheme",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is 'arabic'. Printed folios run 3-23 (p111) to 3-36 (p124), chapter-page numbers.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. Printed folios on p119 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.6-offset_applied",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. p111 is the physical page of the title, and sec_0022 (102-110) and sec_0024 (125) are consecutive with it.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p119 is inside the declared range.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.6-table_content",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Low",
+    "evidence": "On p119 Table 3-10 (#/tables/44) has the header 'No.  Steps | Corresponding Graphic', so No. and Steps are one cell. Rows 4-7 are one cell each ('4. Connect Color Printer. Connect the Color Printer...') and the Corresponding Graphic column is empty. The render shows the four photos in that column. The step text is complete and in order. The photos are kept as separate images (img_0102-0105).",
+    "notes": "Low per contract: text and order kept; the link between each row and its photo is only by position."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table 3-10 continued (#/tables/44) has No. | Steps | Corresponding Graphic. Steps 4 to 7 (Color Printer, ECG, Barcode Reader, HDMI) match the render, including the Sony UP-D899MD note in step 4. Each step number is with its own text. The Corresponding Graphic cells are empty because they hold photos only.",
+    "notes": "Graphic cells have no text. The four photos are kept as images img_0102 to img_0105 in the same section. Low confidence in cell-to-photo pairing, since it is not stored in the table."
+   },
+   "pages_to_check": [
+    119
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/44",
+     "page": 119,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p119: Round one fixed this table (base was FAIL). Must still be fixed."
+   ]
+  },
+  {
+   "key": "sec_0023|119|5.5-filters_discarding",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "All four photos on p119 (Table 3-10 rows 4-7) are kept as img_0102, img_0103, img_0104 and img_0105, and no icon or figure is missing.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Four photos on p119 (printer, ECG, barcode reader, HDMI monitor) are extracted as img_0102 to img_0105 and mapped to sec_0023. They are in the same order as steps 4 to 7. No photo is missing.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.5-filters_passing_noise",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "The four photos img_0102-0105 on p119 match the photos in the render and have no heading, text or rule around them. The edge scan shows only the photo frame.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0102 to img_0105 are real product photos, not noise.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|119|5.5-image_section_mapping",
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "img_0102-0105 are mapped to sec_0023 and match Table 3-10 rows 4 to 7 (Color Printer, ECG, Barcode Reader, HDMI) in the render.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Four photos on p119 (printer, ECG, barcode reader, HDMI monitor) are extracted as img_0102 to img_0105 and mapped to sec_0023. They are in the same order as steps 4 to 7. No photo is missing. The images belong to sec_0023, which owns this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.4-hierarchy_level",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 is level 2 under sec_0017 'System Setup', like its siblings. On p111 it opens with the large blue section title. On p120 (folio 3-32) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.4-parent_child",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0017 and its child_sections list contains sec_0023. Range 111-124 is inside the parent range 89-162. It has no children; 'Pin Assignment' and 'Available probes' are in-section headings. On p120 (folio 3-32) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.4-page_start_end",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p120 (folio 3-32) the page shows 'Available probes' and the probe list text, owned by sec_0023. sec_0023 spans p111-p124. p111 opens with the title and p124 ends with Figure 3-17. The neighbours end on p110 and start on p125. All 156 nodes are on p111-p124 and each table is owned by the section where it is printed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p120.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.4-hierarchy_path",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/System Setup/System Configuration' matches the p111 title and the 'System Setup' chapter header.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.4-gaps_duplicates",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 appears once. It follows sec_0022 (ends p110) and precedes sec_0024 (starts p125). The nine entries of the p111 contents list are found as headings on p112-p122. On p120 (folio 3-32) the page shows 'Available probes' and the probe list text, owned by sec_0023; no neighbour content is seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.4-flagged_for_review",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title 'System Configuration' is visible on p111, the declared start page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p120 shows no sign of an error, so the flag is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.4-structural_source",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title and page agree with the p111 heading.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.6-numbering_scheme",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is 'arabic'. Printed folios run 3-23 (p111) to 3-36 (p124), chapter-page numbers.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. Printed folios on p120 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.6-offset_applied",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. p111 is the physical page of the title, and sec_0022 (102-110) and sec_0024 (125) are consecutive with it.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p120 is inside the declared range.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.6-table_content",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p120 has no table: it shows the heading 'Available probes' and two text paragraphs. No table node is mapped to p120.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is on p120. The page has only the Available probes text with the supported probe list. So there is no table content to compare for this page.",
+    "notes": "Not applicable on this page. Table checks are done on pages with tables."
+   },
+   "pages_to_check": [
+    120
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0023|120|5.5-filters_discarding",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p120 has only text (heading and probe list); no figure or icon is on the page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No picture is on p120. The page has only the Available probes text. No image is mapped to this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.5-filters_passing_noise",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p120 has no image, and the render shows no decorative element, so nothing was wrongly kept.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No decorative image, rule or logo is kept as an image on p120. No image is mapped to this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|120|5.5-image_section_mapping",
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p120 has no figure; no image is mapped to it, and no sibling shares the page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No picture is on p120. The page has only the Available probes text. No image is mapped to this page. The images belong to sec_0023, which owns this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.4-hierarchy_level",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_level",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 is level 2 under sec_0017 'System Setup', like its siblings. On p111 it opens with the large blue section title. On p121 (folio 3-33) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.4-parent_child",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-parent_child",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id is sec_0017 and its child_sections list contains sec_0023. Range 111-124 is inside the parent range 89-162. It has no children; 'Pin Assignment' and 'Available probes' are in-section headings. On p121 (folio 3-33) the page content fits this section.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.4-page_start_end",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-page_start_end",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "On p121 (folio 3-33) the page shows 'Available probes (continued)', Table 3-11 and a NOTE, owned by sec_0023. sec_0023 spans p111-p124. p111 opens with the title and p124 ends with Figure 3-17. The neighbours end on p110 and start on p125. All 156 nodes are on p111-p124 and each table is owned by the section where it is printed.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p121.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.4-hierarchy_path",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_path",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path '/System Setup/System Configuration' matches the p111 title and the 'System Setup' chapter header.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.4-gaps_duplicates",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 appears once. It follows sec_0022 (ends p110) and precedes sec_0024 (starts p125). The nine entries of the p111 contents list are found as headings on p112-p122. On p121 (folio 3-33) the page shows 'Available probes (continued)', Table 3-11 and a NOTE, owned by sec_0023; no neighbour content is seen.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.4-flagged_for_review",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-flagged_for_review",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "flagged_for_review is false and verification_score is 100. The title 'System Configuration' is visible on p111, the declared start page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p121 shows no sign of an error, so the flag is right.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.4-structural_source",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-structural_source",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is 'toc'. The bookmark title and page agree with the p111 heading.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.6-numbering_scheme",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-numbering_scheme",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is 'arabic'. Printed folios run 3-23 (p111) to 3-36 (p124), chapter-page numbers.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "numbering_scheme is arabic. Printed folios on p121 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.6-offset_applied",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-offset_applied",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. p111 is the physical page of the title, and sec_0022 (102-110) and sec_0024 (125) are consecutive with it.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p121 is inside the declared range.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.6-table_content",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-table_content",
+   "base_approved": {
+    "result": "FAIL",
+    "severity": "Medium",
+    "evidence": "On p121 Table 3-11 (#/tables/45) has the header 'Material of Headshell | Probe Name TYPE Catalog Number Part Number', but each row starts with the probe name, for example ' | C1-5-RS NORYL CONVEX H40462LA 5384875' with an empty first cell. The render has five separate columns and 17 rows, with Probe Name first and Material second. Read by header order, the values change meaning: 'C1-5-RS' falls under Material and 'NORYL' under Probe Name. They can no longer be attributed to their column by structure. All 17 rows and values are present.",
+    "notes": "Medium by contract (values attributed to the wrong column). The keyword check suggests Low because the text is kept; I keep Medium because header order and value order differ. Probably Docling table structure. Table 3-3 on p113 has the same problem (not a sampled page)."
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table 3-11 (#/tables/45) has 5 columns: Probe Name, Material of Headshell, TYPE, Catalog Number, Part Number. All 17 rows match the render in column order. Examples: C1-5-RS NORYL CONVEX H40462LA 5384875, 6Tc-RS VALOX SECTOR H45551ZE KN100106, L4-20t-RS VALOX LINEAR H48062AJ 5843289. No value moved to another column.",
+    "notes": "Column order is kept. The note below the table is in a text node."
+   },
+   "pages_to_check": [
+    121
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/45",
+     "page": 121,
+     "status": "same text as round one (re-read kept)"
+    }
+   ],
+   "lead_case_checks": [
+    "p121: Round one fixed this table (base was FAIL Medium). Must still be fixed."
+   ]
+  },
+  {
+   "key": "sec_0023|121|5.5-filters_discarding",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_discarding",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p121 has only Table 3-11 and a NOTE; no figure or icon is on the page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No picture is on p121. The page has only Table 3-11 and a note. No image is mapped to this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.5-filters_passing_noise",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p121 has no image, and the render shows no logo, rule or icon that could have been kept.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No decorative image, rule or logo is kept as an image on p121. No image is mapped to this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0023|121|5.5-image_section_mapping",
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-image_section_mapping",
+   "base_approved": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "p121 has no figure; no image is mapped to it, and no sibling shares the page.",
+    "notes": ""
+   },
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No picture is on p121. The page has only Table 3-11 and a note. No image is mapped to this page. The images belong to sec_0023, which owns this page.",
+    "notes": ""
+   }
+  },
+  {
+   "key": "sec_0025|129|5.6-table_content",
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Tables 3-16, 3-17 and 3-18 (#/tables/50, 51, 52) each have the header Item | Description | Quantity | Note and one row. Values match the render: 1 | Wireless Adapter | 1, 1 | Footswitch | 1, 1 | Barcode Scanner | 1. The Note cell is empty in both the page and the text.",
+    "notes": ""
+   },
+   "pages_to_check": [
+    129
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/50",
+     "page": 129,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/51",
+     "page": 129,
+     "status": "same text as round one (re-read kept)"
+    },
+    {
+     "node_id": "#/tables/52",
+     "page": 129,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0025|130|5.6-table_content",
+   "section_id": "sec_0025",
+   "page_sampled": 130,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    130
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0025|161|5.6-table_content",
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Table 3-19 (#/tables/53) is the ECG lead table. The two-level header (Lead, Patient Cable Marking over AHA and IEC, Position on Patient) is split into two rows. The three data rows keep their columns: I | RA (White) | R (Red) | Right Arm, II | LA (Black) | L (Yellow) | Left Arm, III | RL (Green) | N (Black) | Right Leg.",
+    "notes": "Merged header cells are shown as an empty cell plus a second row. Values are correct."
+   },
+   "pages_to_check": [
+    161
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/53",
+     "page": 161,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0029|183|5.6-table_content",
+   "section_id": "sec_0029",
+   "page_sampled": 183,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p183 (headings Performance Tests (#/texts/1925), B mode Checks (#/texts/1926), Introduction and Preparations, plus Figure 4-10 screenshot). No table node has page_no 183 in sec_0029; #/tables/55 on p184. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    183
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0029|202|5.6-table_content",
+   "section_id": "sec_0029",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p202 (heading Probe/Connectors Check (#/texts/2101), a NOTE, numbered steps and Figure 4-16 photo). No table node has page_no 202 in sec_0029; no table node in this area. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    202
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0029|203|5.6-table_content",
+   "section_id": "sec_0029",
+   "page_sampled": 203,
+   "checklist_ref": "5.6-table_content",
+   "pages_to_check": [
+    203
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0029|209|5.6-table_content",
+   "section_id": "sec_0029",
+   "page_sampled": 209,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p209 (heading Restore System Presets and Configurations (continued) (#/texts/2194) and one bullet list, no figure). No table node has page_no 209 in sec_0029; no table node on this page. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    209
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0029|220|5.6-table_content",
+   "section_id": "sec_0029",
+   "page_sampled": 220,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p220 (heading Color Printers (continued) (#/texts/2319), steps 4 to 8 and Figures 4-30 and 4-31). No table node has page_no 220 in sec_0029; #/tables/67 on p221. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    220
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0031|231|5.6-table_content",
+   "section_id": "sec_0031",
+   "page_sampled": 231,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p231 (it is the Probe Check opener of sec_0032). sec_0031 has no table node on p231; its only table #/tables/71 is on p230. Nothing to compare here.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    231
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0037|248|5.6-table_content",
+   "section_id": "sec_0037",
+   "page_sampled": 248,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Checked all 14 rows by 8 columns on p248 (Table 5-2). Header groups match: Class C View Levels sits over Service Advanced, Service Expert and Service Pro; Class M View Levels sits over SSA Key and Remote. Every X is in the right column: Home, Diags, Run Diags, Diag History, Utili- ties, Change Password, Disable Remote Connectivity (X only in Advanced, Expert, SSA Key), Gather Logs, Delete Files, Virtual Console Observation, Software Reload and Reset Patient Database. No value moved to another column.",
+    "notes": "Cells keep their columns. 'Utili- ties' keeps the printed line break. The table continues on p249 (#/tables/74), which was not rendered in this batch."
+   },
+   "pages_to_check": [
+    248
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/73",
+     "page": 248,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0047|285|5.6-table_content",
+   "section_id": "sec_0047",
+   "page_sampled": 285,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p285 (headings Color statuses (#/texts/2923) and Licenses (#/texts/2924) with bullet lists, no figure). No table node has page_no 285 in sec_0047; #/tables/76 is on p289. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    285
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0047|284|5.6-table_content",
+   "section_id": "sec_0047",
+   "page_sampled": 284,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p284 (heading Disruptive mode (#/texts/2912) with text, bullets and a NOTE, no figure). No table node has page_no 284 in sec_0047; #/tables/76 is on p289. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    284
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0047|290|5.6-table_content",
+   "section_id": "sec_0047",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p290 (heading Software Status (#/texts/3021) and Figure 7-17 screenshot). No table node has page_no 290 in sec_0047; #/tables/77 is on p291. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    290
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0047|292|5.6-table_content",
+   "section_id": "sec_0047",
+   "page_sampled": 292,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p292 (heading System Status (#/texts/3037), bullets and Figure 7-18 screenshot). No table node has page_no 292 in sec_0047; #/tables/78 is on p293. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    292
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0047|303|5.6-table_content",
+   "section_id": "sec_0047",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "No table is visible on p303 (heading Network Configuration (continued) (#/texts/3148) and Figure 7-25). No table node has page_no 303 in sec_0047; #/tables/82 is on p304. There is nothing to compare cell by cell on this page.",
+    "notes": "Row answered PASS because no table is present on this sampled page. Tables of this section on other pages were not rendered in this batch."
+   },
+   "pages_to_check": [
+    303
+   ],
+   "tables": []
+  },
+  {
+   "key": "sec_0047|315|5.6-table_content",
+   "section_id": "sec_0047",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Checked #/tables/88 on p315 (Table 7-12). Header Element | DESCRIPTION is correct. Row 1 'Delete Files' = 'Displays the files that are available for deletion.' Row 2 'Delete' = 'Deletes the selected files.' All 3 rows and 2 columns match the rendered table.",
+    "notes": "No merged or shifted cells. The caption 'Table 7-12: Delete Files' is a separate paragraph node (#/texts/3284)."
+   },
+   "pages_to_check": [
+    315
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/88",
+     "page": 315,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  },
+  {
+   "key": "sec_0047|338|5.6-table_content",
+   "section_id": "sec_0047",
+   "page_sampled": 338,
+   "checklist_ref": "5.6-table_content",
+   "round_one_draft": {
+    "result": "PASS",
+    "severity": "",
+    "evidence": "Checked #/tables/103 on p338 (Table 7-23). Rows match: Start Network Capture (text ends 'changes the Status to Running'), Stop Network Capture ('Select to stop the process..'), sub-header Network Capture Status, and two rows with an empty first cell and their descriptions. Bullets Not Running and Running keep their order. No value is in the wrong column.",
+    "notes": "Only a small extra space appears before the final period ('Running .'). The caption is node #/texts/3577 typed as heading, which does not change the table cells."
+   },
+   "pages_to_check": [
+    338
+   ],
+   "tables": [
+    {
+     "node_id": "#/tables/103",
+     "page": 338,
+     "status": "same text as round one (re-read kept)"
+    }
+   ]
+  }
+ ]
+}

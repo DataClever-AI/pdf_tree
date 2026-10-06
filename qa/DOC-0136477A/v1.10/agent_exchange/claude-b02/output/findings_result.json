@@ -1,0 +1,334 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p88 the heading '5.7.2 Navigation Icons' (#/texts/1185) is a 3-part number under 5.7. hierarchy_level 3 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0095 has parent sec_0093 (5.7 Monitor Screen Navigation), and sec_0093 lists sec_0094 and sec_0095 as children. No children for 5.7.2, which is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading is at the top of p88. Keypad and the 'Keyboard' paragraph with its figure on p89 (#/texts/1205-1212) belong to 5.7.2. p89 has no further text and chapter 6 starts at p90 (sec_0096). So p88-89 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is Navigating.../5.7 Monitor Screen Navigation/5.7.2 Navigation Icons. It matches the heading numbers on p88.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "5.7.2 appears once. Order range 1168-1197 follows sec_0094 (ends 1167) and sec_0096 starts at 1198. No gap or duplicate.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score 100. Heading is clear on p88. No uncertainty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. Heading '5.7.2 Navigation Icons' is visible on p88, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios 88 and 89 are arabic. numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio at the bottom of p88 reads 88 and p89 reads 89. offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p88 the Home, Return, Enter and Cancel round icons (left of the text) and the Value button picture are not in the image output. Only the List button, Toggle button and keypad were kept (img_0060-0062).",
+   "notes": "Probably small-image filter. Impact is low: each icon is named in text nodes #/texts/1187-1191. verify_claims expects Critical for a raster on p89, but that raster is the keyboard figure and it is kept as vector render img_0063 (763x416), so it is not lost. Severity stays Low for the small p88 icons only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0060 (list button), img_0061 (toggle button), img_0062 (keypad) and img_0063 (keyboard) are real illustrations from the text. No decorative element was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0060, 0061, 0062 are on p88 and img_0063 is on p89, all under 5.7.2 and mapped to sec_0095. Correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p102 Table 7-1 (#/tables/55) has the header Alarm priority | Color | Light pattern and 3 rows: High red Flashing ON/OFF, Medium yellow Flashing ON/OFF, Low yellow Solid ON. All cells and their order match the render.",
+   "notes": "Same text as round one after the re-read. No value or word is lost.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p118. The page has the chapter 9 Contents list (dot leaders, not a table), heading 9.1 and one WARNING box. Table 9-1 (#/tables/63) is on p120, which is not in the batch.",
+   "notes": "Same as round one. Table 9-1 on p120 is not rendered, so it is not checked cell by cell. Its text has 3 columns and 4 rows (CO, iCO, EDV/RVEF (SV), SVR). Please check p120.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p134 '10.1 Pressure Cable Overview' (#/texts/2004) is a numbered subsection of chapter 10. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0162 has parent sec_0161 (chapter 10, level 1), and sec_0161 lists sec_0162 as a child. No 10.1.x headings exist, so no children is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading is on p134. Figure 10-1 and Table 10-1 are on p135. The NOTE, WARNING and CAUTION on p136 come before heading 10.2 and belong to 10.1. 10.2 and 10.3 on p136 are in sec_0163 and the next section. So p134-136 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Monitoring with the HemoSphere Pressure Cable/10.1 Pressure Cable Overview. It matches the chapter 10 title and heading 10.1 on p134.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "10.1 appears once. Order range 2003-2042 follows sec_0161 (ends 2002), and sec_0163 starts at 2043. No gap or duplicate.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score 100. Heading is clear on p134. No uncertainty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The Contents on p134 lists 'Pressure Cable Overview' at page 134, which supports the bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios 134, 135 and 136 are arabic. numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio at the bottom of p134 reads 134, p135 reads 135 and p136 reads 136. offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p135 Table 10-1 (#/tables/66) has 12 rows and 7 columns. Every bullet is under the right column when I compare with the render: CO/CI, SV/SVI, SVV first three columns; SVR/SVRI and SvO2/ScvO2 as shown; PR, SYS, DIA, MAP in four columns; MPAP in the last column; CVP in columns 2, 3 and 5; HPI* in the first three. The header row 'Pressure cable configuration' is written once. The six sensor names are in the second row. No table is on p134.",
+   "notes": "CASE: still fixed. The re-read kept the round-one result, and the bullets are not merged any more (BUG-008). The v1.8 FAIL is gone. Only 'SvO 2 /ScvO 2' has extra spaces in the subscripts, which is cosmetic.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 10-1 (pressure cable with callouts 1-4) on p135 is kept as img_0085. The Edwards logo on p134 is decorative. Nothing meaningful was dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0085 is the real cable figure (vector render, 901x445). No logo, rule or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0085 is Figure 10-1 on p135, and it is mapped to sec_0162, which owns it. No other image is on p134-136.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p153. The page has the chapter 12 Contents list (dot leaders, not a table), heading 12.1, text and CAUTION boxes. The section tables (Table 12-1, #/tables/72) are on p154, which is not in the batch.",
+   "notes": "Same as round one. Table 12-1 on p154 is not rendered, so it is not checked. Its text has 3 columns and 3 rows. Please check p154.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p98. The render shows only NOTE, WARNING and CAUTION boxes, body text and a numbered procedure. The section table (Table 6-2, #/tables/53) is on p99, which is not in the batch.",
+   "notes": "Same as round one. Table 6-2 on p99 was not rendered, so it is not checked against a page. Its text 'MAP | 0 to 510 mmHg (0 kPa to 68 kPa)' looks complete. Please check p99.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p103 the NOTE box is read as #/tables/56 with two cells: 'NOTE' and 'Physiological parameters can be configured to have no alarms. See sections 7.1.5 and 7.1.6.' The text equals the render.",
+   "notes": "A text box is read as a 2-cell table. Text and order are kept, so no defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p123 Table 9-2 (#/tables/64) has a two-row header. Values sit under the right column and row: 3½ / 6 / 15 / 30 minutes and 5 seconds from expiry of CO countdown timer / na / 6 / 20 minutes. 'Alert CO' is written once with a blank cell next to it. 'Condition' is in the second header row.",
+   "notes": "Spanned header written once is normal. No value or word is lost. Same as round one.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 Table 12-2 (#/tables/73) has 5 columns and 3 data rows (HPI ≤85, HPI >85, HPI >85 and persists for two continuous readings (40 seconds)). Each value is under the right column, for example 'Red (flashing) Popup' under Graphical display elements and 'High priority alarm tone' under Audible. On p156 #/tables/74 has the row 'HPI =100' with the same 5 columns and the same text as the render.",
+   "notes": "Multi-line cells are joined with a space. Values, order and columns are kept. Same as round one.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p173 Table 13-4 (#/tables/85) has 3 data rows: Fault: Module Slot 1, Module Slot 2 and Cable Port 1 - Hardware Failure. Causes and actions are in the right columns and match the render. Multi-line cells are joined with spaces, for example 'Reinsert the module Check for bent or broken pins'.",
+   "notes": "Joined lines keep order and values. Same as round one. Tables #/tables/86 and #/tables/87 (p174, p175) are not in the batch and were not checked.",
+   "confidence": 0.9
+  }
+ ]
+}
