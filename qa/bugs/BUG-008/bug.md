@@ -1,6 +1,6 @@
 ---
 bug_id: BUG-008
-status: in-progress
+status: mitigated
 finding: H-13
 fix_branch: fix/BUG-008-table-text
 fix_commit: 076dadd
@@ -32,12 +32,17 @@ Confirmed (2026-10-06). TableFormer finds the right rows and columns. The text g
 
 ## Verification
 
-Pending.
+Round one (`076dadd`, versions 2002 v2.8, DOC v1.9, LOGIQ_e v1.10, Philips v2.12, LOGIQ_S8 v1.9): fixed most merged cells but lost words, a spanning column or ° and ± signs in some tables; not approved. Round two with the text guard (`60110fa`, versions 2002 v2.9, DOC v1.10, LOGIQ_e v1.11, Philips v2.13, LOGIQ_S8 v1.10), approved by the reviewer on 2026-10-06: 18 -> 5 FAIL on paired rows, no lost text. Open: LOGIQ_S8 p618 and p798, DOC p27 (text in the wrong cell); Philips p305 row labels; good re-reads rejected by the guard (DOC p205, LOGIQ_e p441, LOGIQ_S8 p367, p28, p832).
 
 ## Attempts
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-06 | `2002_Service_Manual_TI` | v2.9 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 5 → 1 | 0 | Keep: 5 -> 1 on paired rows, no regressions. p51 still lacks the Input/Output signal labels, as in the base. |
+| 2026-10-06 | `DOC-0136477A` | v1.10 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 1 → 0 | 0 | Keep: 1 -> 0 on paired rows, no regressions. p27 keeps text in the wrong row (Medium). |
+| 2026-10-06 | `LOGIQ_e_R9_General_Service_Manual` | v1.11 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 6 → 0 | 0 | Keep: 6 -> 0 on paired rows, no regressions. p36 still misses the X/N legend row, as in the base. |
+| 2026-10-06 | `Philips-MP20-MP90-Manual` | v2.13 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 3 → 1 | 0 | Keep: 3 -> 1 on paired rows, no regressions. The one left is p305 row labels that span rows (Low). |
+| 2026-10-06 | `LOGIQ_S8` | v1.10 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 3 → 3 | 2 | Keep with open work: 3 -> 3. Two FAILs come from extra pages the base did not grade (p28, p367); p418 adds a NOTE row (Low). |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
