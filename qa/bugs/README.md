@@ -36,5 +36,6 @@ Statuses: `open`, `fix-proposed`, `in-progress`, `mitigated`, `fixed-pending-mer
 | [BUG-026](BUG-026/bug.md) | QA run.log captured from a shared Streamlit console mixes the run of another manual | — | fixed | H-03 | — | 0 | 0 | — |
 | [BUG-027](BUG-027/bug.md) | Streamlit page 8 regenerates consolidated_bugs.csv by note text, overwriting the curated root-cause list | — | in-progress | H-04 | — | 0 | 0 | — |
 | [BUG-028](BUG-028/bug.md) | normalize_page_sequence updates prev_scheme with alphanumeric tokens and restarts the numbering base | — | open | H-06 | — | 0 | 0 | — |
+| [BUG-029](BUG-029/bug.md) | Margin (side) headings read before the body: content above or beside a left-margin heading goes to the wrong section, and on pages with several margin headings all the body goes to the last one | — | in-progress | — | — | 0 | 0 | — |
 
 **Triage:** 2 FAIL row(s) not yet classified to a root cause are listed in [triage.csv](triage.csv).
