@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-010
-status: open
+status: mitigated
 finding: H-10
 fix_branch: 
 fix_commit: 
-updated: 2026-09-29
+updated: 2026-10-06
 ---
 
 # BUG-010 · Vector-drawn diagrams not captured as images — extractor only handles raster XObjects
@@ -37,6 +37,12 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-06 | `2002_Service_Manual_TI` | v2.7 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 4 → 1 | 1 | Keep: 4 -> 1 on paired rows (base = round-2 drafts). The one left is the folio 'AT-7' inside the p283 image (Low). |
+| 2026-10-06 | `AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION` | v1.4 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 5 → 2 | 0 | Keep: 5 -> 2. Titles are no longer cut; 10 rotated plates still lose the drawing number (graded Low, agreed rule says Medium). |
+| 2026-10-06 | `DOC-0136477A` | v1.8 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 0 → 0 | 0 | Keep: 0 -> 0 on paired rows. Long callout labels on p63, p68, p88 and p89 are now complete. |
+| 2026-10-06 | `LOGIQ_S8` | v1.8 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 3 → 8 | 6 | Keep with open work: 3 -> 8. The new rows are Low crop noise (extra text, neighbour photo slivers); p502 is still missing (Critical). |
+| 2026-10-06 | `LOGIQ_e_R9_General_Service_Manual` | v1.9 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 1 → 1 | 2 | Keep: 1 -> 1. The step line on p96 is still inside a crop (Low); the other regressions are table grading, not BUG-010. |
+| 2026-10-06 | `Philips-MP20-MP90-Manual` | v2.11 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 4 → 0 | 1 | Keep: 4 -> 0. Labels on p216, p305 and p354 are complete; p184 has body text in its crop (Low, not in the sample). |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

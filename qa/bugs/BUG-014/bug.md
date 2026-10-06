@@ -4,7 +4,7 @@ status: in-progress
 finding: H-15
 fix_branch: fix/BUG-001-positional-placement
 fix_commit: 04e1345, 36df68a, 0b448dd
-updated: 2026-09-30
+updated: 2026-10-06
 ---
 
 # BUG-014 · Section page_end declared one page short of the true content boundary — trailing content (text or images) bleeds into or is misattributed from the neighboring section
@@ -38,6 +38,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-06 | `DOC-0136477A` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images are placed by their position on the page, and page_end covers trailing content. | 0 → 1 | 1 | Check: 0 -> 1 on 87 paired rows. One page_end row is new in DOC; review it on the Version Compare page. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

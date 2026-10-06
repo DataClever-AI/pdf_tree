@@ -4,7 +4,7 @@ status: in-progress
 finding: H-05, H-12
 fix_branch: fix/BUG-002-back-matter-boundaries
 fix_commit: 86a3f21, de74fb6
-updated: 2026-10-03
+updated: 2026-10-06
 ---
 
 # BUG-002 · Back-matter silently absorbed past last bookmark
@@ -38,6 +38,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-06 | `DOC-0136477A` | v1.3 | `de74fb6` fix(section_matcher): end the last section at an unbookmarked index (BUG-002) | Excluded TOC entries act as section boundaries, and an index without a bookmark is detected. | 0 → 0 | 0 | Keep: 0 -> 0; no paired rows. The glossary (p233) is now outside the tree, which is pending decision 4. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

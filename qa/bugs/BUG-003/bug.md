@@ -4,7 +4,7 @@ status: in-progress
 finding: H-05, H-09
 fix_branch: fix/BUG-001-positional-placement
 fix_commit: fa0bc0b, 4bff4c2
-updated: 2026-09-30
+updated: 2026-10-06
 ---
 
 # BUG-003 · Sibling image/table mismapping on shared pages
@@ -40,6 +40,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-06 | `DOC-0136477A` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images are placed by their position on the page, and page_end covers trailing content. | 0 → 0 | 1 | Keep: 0 -> 0 on 87 paired rows. No sibling mismapping seen in the sample. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
