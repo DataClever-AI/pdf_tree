@@ -14,6 +14,7 @@ import hashlib
 import logging
 import os
 import time
+from collections import Counter
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
@@ -165,7 +166,11 @@ def _build_table_converter() -> Any:
 # matching puts a run that crosses columns into one cell (Philips p363 '1' + '2' -> '12').
 # Pages with tables are converted again with docling-parse (word-level text) and each table
 # takes the cell data of the re-read table at the same place; the rest of the text is kept.
+# docling-parse can drop words at a cell edge, a column that spans many rows, or signs such
+# as '°' and '±' (2002 p209, p557). A re-read table is used only when it keeps every
+# letter, digit and _TABLE_SIGNS character of the original; otherwise the original stays.
 _TABLE_MATCH_IOU = 0.5
+_TABLE_SIGNS = frozenset("°±%<>=+√")
 _TABLE_BATCH = 120  # pages per re-read conversion
 _TableBox = tuple[int, float, float, float, float]  # page, left, bottom, right, top
 
@@ -195,6 +200,19 @@ def _iou(a: _TableBox, b: _TableBox) -> float:
     return inter / union if union > 0 else 0.0
 
 
+def _table_chars(data: dict[str, Any]) -> Counter[str]:
+    return Counter(
+        char
+        for cell in data.get("table_cells") or []
+        for char in cell.get("text") or ""
+        if char.isalnum() or char in _TABLE_SIGNS
+    )
+
+
+def _keeps_all_text(original: dict[str, Any], reread: dict[str, Any]) -> bool:
+    return not _table_chars(original) - _table_chars(reread)
+
+
 def _refill_tables(
     merged: dict[str, Any],
     convert_pages: Any,
@@ -203,8 +221,8 @@ def _refill_tables(
     """
     Replace each table's cell data with the table re-read by ``convert_pages(pages)`` (a
     docling-parse conversion of only those pages, in that order, returning the document
-    dict) at the same page and place. A table without a match (IoU below _TABLE_MATCH_IOU)
-    keeps its data. Returns the number of tables replaced.
+    dict) at the same page and place. A table without a match (IoU below _TABLE_MATCH_IOU),
+    or whose match loses text, keeps its data. Returns the number of tables replaced.
     """
     tables = merged.get("tables") or []
     if not tables:
@@ -224,14 +242,21 @@ def _refill_tables(
             if 1 <= subset_page <= len(batch):
                 prov["page_no"] = batch[subset_page - 1]
                 reread.append(node)
-    replaced = 0
+    replaced = kept_for_text = 0
     for node in tables:
         box = _table_box(node)
         best = max(reread, key=lambda other: _iou(box, _table_box(other)), default=None)
-        if best is not None and _iou(box, _table_box(best)) >= _TABLE_MATCH_IOU:
-            node["data"] = best.get("data") or node.get("data")
-            replaced += 1
-    logger.info("tables re-read with docling-parse: %d of %d replaced", replaced, len(tables))
+        if best is None or _iou(box, _table_box(best)) < _TABLE_MATCH_IOU:
+            continue
+        if not _keeps_all_text(node.get("data") or {}, best.get("data") or {}):
+            kept_for_text += 1
+            continue
+        node["data"] = best.get("data") or node.get("data")
+        replaced += 1
+    logger.info(
+        "tables re-read with docling-parse: %d of %d replaced, %d kept because text was lost",
+        replaced, len(tables), kept_for_text,
+    )
     return replaced
 
 

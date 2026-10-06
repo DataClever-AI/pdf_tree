@@ -50,9 +50,14 @@ def test_input_is_not_modified() -> None:
     assert [item["text"] for item in doc["texts"]] == ["b", "a"]
 
 
-def _table(page: int, left: float, cells: str) -> dict:
+def _table(page: int, left: float, *cells: str) -> dict:
     box = {"l": left, "t": 500.0, "r": left + 200.0, "b": 400.0, "coord_origin": "BOTTOMLEFT"}
-    return {"prov": [{"page_no": page, "bbox": box}], "data": {"cells": cells}}
+    data = {"table_cells": [{"text": text} for text in cells]}
+    return {"prov": [{"page_no": page, "bbox": box}], "data": data}
+
+
+def _cells(table: dict) -> list[str]:
+    return [cell["text"] for cell in table["data"]["table_cells"]]
 
 
 def test_tables_take_the_cells_of_the_re_read_table_at_the_same_place() -> None:
@@ -62,12 +67,12 @@ def test_tables_take_the_cells_of_the_re_read_table_at_the_same_place() -> None:
 
     def convert_pages(pages: list[int]) -> dict:
         calls.append(pages)  # the re-read subset numbers its pages 1, 2, ...
-        return {"tables": [_table(1, 55, "1 | 2"), _table(2, 50, "y")]}
+        return {"tables": [_table(1, 55, "1", "2"), _table(2, 50, "x")]}
 
     replaced = _refill_tables(merged, convert_pages, logging.getLogger("test"))
 
     assert replaced == 2
-    assert [table["data"]["cells"] for table in merged["tables"]] == ["1 | 2", "kept", "y"]
+    assert [_cells(table) for table in merged["tables"]] == [["1", "2"], ["kept"], ["x"]]
     assert calls == [[363, 365]]
 
 
@@ -82,3 +87,16 @@ def test_cell_text_is_kept_on_one_line_in_the_table_text() -> None:
     }
 
     assert _render_table_markdown(data) == "Max Wave | 1"
+
+
+def test_a_re_read_table_that_loses_text_is_not_used() -> None:
+    # 2002 p557: docling-parse drops the '±' of '72 ± 6 rpm' and the 'Signal' column of p209.
+    merged = {"tables": [_table(557, 50, "72 ± 6 rpm"), _table(209, 50, "Signal Input", "A")]}
+
+    def convert_pages(pages: list[int]) -> dict:
+        return {"tables": [_table(1, 50, "Signal", "Input A"), _table(2, 50, "72 - 6 rpm")]}
+
+    replaced = _refill_tables(merged, convert_pages, logging.getLogger("test"))
+
+    assert replaced == 1  # p209 keeps all its text in new cells; p557 loses the '±'
+    assert [_cells(table) for table in merged["tables"]] == [["72 ± 6 rpm"], ["Signal", "Input A"]]
