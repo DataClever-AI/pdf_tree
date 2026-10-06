@@ -4,7 +4,7 @@ status: open
 finding: 
 fix_branch: 
 fix_commit: 
-updated: 2026-09-29
+updated: 2026-10-06
 ---
 
 # BUG-017 · UI reference-icon screenshots discarded by an over-aggressive minimum-pixel-dimension image filter
@@ -36,6 +36,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-06 | `SOMATOM_Force_IFU_VB30` | v1.7 | `819d98e` fix(pipeline): keep unique thin figures and repeated pictures inside the page body (BUG-017) | Pixel floor = min_image_px (48); unique thin strips kept; repeated images dropped only in the header/footer band. | 0 → 1 | 0 | Keep: 0 -> 1 on 12 paired rows. The Move and Start key pictures are back; icons of about 40 px stay filtered (Low, meaning is in the text). |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
