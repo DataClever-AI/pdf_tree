@@ -556,3 +556,16 @@ def test_page_title_read_last_comes_first():
     assert sorted(_texts(config)) == sorted(
         ["System Configuration", "Contents in this Section", "'LOGIQ e configuration' on page 3-24"]
     )
+
+
+def test_a_heading_with_a_subscript_anchors_its_section():
+    # Philips p482: 'SO2 Default Settings' is printed 'SO 2 Default Settings'.
+    blocks = {
+        482: [
+            _block(0, "39 Default Settings Appendix SO2 Default Settings", 482, "page_header"),
+            _block(1, "SO 2 Default Settings", 482, "section_header"),
+            _block(2, "SvO 2 Default Settings", 482, "section_header"),
+        ]
+    }
+    assert _find_heading_anchor("SO2 Default Settings", 482, blocks) == 1
+    assert _find_heading_anchor("SvO2 Default Settings", 482, blocks, after=1) == 2

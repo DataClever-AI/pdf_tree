@@ -161,7 +161,8 @@ def _find_heading_anchor(
 
     Only blocks after ``after`` (the previous section's anchor) are candidates,
     so two bookmarks never anchor on the same heading. Match tiers, first hit
-    wins: exact text on a "section_header" block; then the first
+    wins: exact text on a "section_header" block (also with spaces removed, for
+    subscripts); then the first
     "section_header" in reading order that matches without leading numbering,
     starts with the title (Docling merges a heading with its sub-heading) or
     covers most of it; then exact text on any block (headings are sometimes
@@ -189,8 +190,11 @@ def _find_heading_anchor(
             or _is_partial_match(norm_title, text)
         )
 
+    # A subscript is read as a separate token: 'SO2' is printed 'SO 2' (Philips p482).
+    compact_title = norm_title.replace(" ", "")
     tiers = (
         (headers, lambda text: text == norm_title),
+        (headers, lambda text: text.replace(" ", "") == compact_title),
         (headers, near_match),
         (candidates, lambda text: text == norm_title),
         # A margin heading merged with the note below it (SOMATOM p295) (BUG-029);
