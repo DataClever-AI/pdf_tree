@@ -1,0 +1,1394 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p169 the heading '12.2.2 SV Optimization' is a third-level numbered heading, the same style as 12.2.3 on p170. The tree gives hierarchy_level 3 (#/texts/2611).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0206 has parent sec_0201 (12.2 Enhanced Parameter Tracking) and no children. The 12.2.2 heading sits under 12.2 on p169 and has no sub-headings. This matches the page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0206 starts at heading #/texts/2611 on p169 and ends at step 10 and 'GDT tracking session.' (#/texts/2629) on p170. The next heading 12.2.3 on p170 is in sec_0207. Steps 8 to 10 on p170 are all in sec_0206. Boundaries and owners are correct. The p170 running header nodes #/texts/2622-2623 are page boilerplate inside the range.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Advanced Features/12.2 Enhanced Parameter Tracking/12.2.2 SV Optimization' matches the headings seen on p169-170.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p170 steps 8, 9 and 10 are in sec_0206 once. The next heading 12.2.3 is in sec_0207, with no overlap and no gap. Step number '5' is split into its own node #/texts/2617 but nothing is lost.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0206 is on its expected page in the p170 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0206 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p170 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p170 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p170 three small UI icons are not in the image output: the target value icon (steps 8), the edit target icon (step 9) and the GDT tracking icon (step 10). p169 has more of the same kind. images.json has no image for sec_0206.",
+   "notes": "Probably the small-image filter. Impact: the text names each icon, so the information is kept. Low per Sprint pattern.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0206. The red footer rule and the Edwards logo on p170 are not kept as images, so no noise passed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0206. The p170 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p171 '13.1 On Screen Help' is a second-level heading below the big chapter title 'Troubleshooting'. The tree gives hierarchy_level 2 (#/texts/2635).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0209 has parent sec_0208 (Troubleshooting, level 1) and no children. 13.1 is the first section of chapter 13 on p171, so the parent is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0209 starts at '13.1 On Screen Help' (#/texts/2635) and ends at step 6 on p171. The Contents table is not in sec_0209 any more. The big chapter number '13' (#/texts/2643) is printed at the top of p171 above the chapter title. It is in sec_0209 and belongs to the chapter sec_0208. The chapter number '13' (#/texts/2643, printed top right of p171 above 'Troubleshooting') is in sec_0209.",
+   "notes": "Cause: probably BUG-001 chapter-opening reading order (the exact cause is not confirmed). Impact: only a boilerplate number is in the wrong section, so retrieval is not harmed. Old FAIL (v1, BUG-001, Contents table in sec_0209) is now fixed: the Contents table is no longer in sec_0209. This Low row is a possible regression: the chapter number now sits in sec_0209. verify_claims finds no boundary signal because the node is boilerplate; it is visible on the render and kept as Low (confidence lowered).",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Troubleshooting/13.1 On Screen Help' matches the chapter title and the 13.1 heading on p171.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p171 text nodes #/texts/2635-2644 are in sec_0209 once. The Contents table is not in sec_0209. Sections 13.2 to 13.7 are separate sections. No duplicate seen.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0209 is on its expected page in the p171 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0209 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p171 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p171 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p171 the purple settings icon next to step 1 ('Touch the settings icon') is not in the image output. images.json has no image for sec_0209.",
+   "notes": "Probably the small-image filter. Impact: the step text names the icon, so the information is kept. Low per Sprint pattern.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0209. The red footer rule and the Edwards logo on p171 are not kept as images, so no noise passed.",
+   "notes": "Old Low FAIL (v1, BUG-004) is now fixed: no divider image is mapped to sec_0209 and the Edwards logo on p171 is not extracted.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0209. The p171 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p179 '13.5.3 iCO Faults/Alerts' is a third-level heading, the same style as 13.5.2 above it. The tree gives hierarchy_level 3 (#/texts/2700).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0219 has parent sec_0216 (13.5) and no children, like its siblings sec_0217, sec_0218 and sec_0220. This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0219 starts at the 13.5.3 heading on p179 and ends on p180. On p180 it holds the 'Table 13-9 (continued)' caption and #/tables/96 with 5 rows (Unstable Baseline to Warm Injectate). The 13.5.4 heading and Table 13-10 on p180 are in sec_0220. Boundaries are correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Troubleshooting/13.5 HemoSphere Swan-Ganz Module Error Messages/13.5.3 iCO Faults/Alerts' matches p179.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 13-9 is #/tables/95 (p179, 5 rows) plus #/tables/96 (p180, 5 rows), each once. The continuation is no longer in sec_0220. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0219 is on its expected page in the p180 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0219 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p180 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p180 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/95 (p179) has 5 rows and #/tables/96 (p180) has 5 rows. Messages, causes and actions match the render in order, including the bullet lists.",
+   "notes": "Old rows listed in prior_fails for this table are fixed: the p180 continuation is now in sec_0219.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0219 in images.json. On p180 there is no figure or photo to extract, only text and tables.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0219. The red footer rule and the Edwards logo on p180 are not kept as images, so no noise passed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0219. The p180 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p190 '13.7.3 Oximetry General Troubleshooting' is an indented third-level heading. The tree gives hierarchy_level 3 (#/texts/2761).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0231 has parent sec_0228 (13.7 Oximetry Error Messages) and no children. It follows 13.7.2 (sec_0230) on p189-190. This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0231 starts at the 13.7.3 heading on p190 and its table #/tables/111 is complete. But it also holds nodes #/texts/2770 'A' and #/texts/2771 'Appendix' from p191. This is the chapter tab printed above 'Specifications' and it belongs to sec_0232. page_end is 190 but these two nodes are on p191. This is boilerplate only. Nodes #/texts/2770 'A' and #/texts/2771 'Appendix' (the Appendix A tab at the top of p191) are in sec_0231, but sec_0231 ends on p190.",
+   "notes": "Cause: probably the same chapter-tab ordering issue as before (not confirmed). Impact: boilerplate only; Low per Sprint pattern. This is a possible regression: in v1 these nodes were in sec_0233, now they are in sec_0231. verify_claims expects Medium (content past page_end), but the nodes are only the chapter tab (boilerplate), so the Sprint boilerplate pattern Low applies.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Troubleshooting/13.7 Oximetry Error Messages/13.7.3 Oximetry General Troubleshooting' matches p190.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p190 table appears once. The only extra content is the two chapter-tab nodes from p191 that belong to the next chapter. Nothing is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0231 is on its expected page in the p190 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0231 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p190 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p190 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/111 on p190 has the header and 3 rows. Messages, causes and actions match the render. The dash in the first two messages is printed as '-', which does not change the meaning.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0231 in images.json. On p190 there is no figure or photo to extract, only text and tables.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0231. The red footer rule and the Edwards logo on p190 are not kept as images, so no noise passed.",
+   "notes": "Old Low FAIL (v1, BUG-004) is now fixed: no divider image is mapped to sec_0231 on p190.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0231. The p190 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p191 'A.1 Essential Performance Characteristics' is a second-level heading below the chapter title 'Specifications'. The tree gives hierarchy_level 2 (#/texts/2766).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0233 has parent sec_0232 (Specifications, level 1) and no children. A.2 (sec_0234) is its next sibling on p192. This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0233 starts at the A.1 heading on p191 and ends on p192 with the continued Table A-1 (#/tables/114). A.2 and Table A-2 on p192 are in sec_0234. The 'A' and 'Appendix' tab nodes are not in sec_0233 any more. page_end 192 is correct.",
+   "notes": "Old Low FAIL (v1.1, BUG-014) is now fixed: page_end is 192, the Table A-1 continuation is in sec_0233, and the Appendix A tab nodes are no longer in sec_0233. They are in sec_0231 (see that row).",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Specifications/A.1 Essential Performance Characteristics' matches p191.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table A-1 is #/tables/113 (p191) and #/tables/114 (p192), each once. The p191 Contents table is not in sec_0233. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0233 is on its expected page in the p191 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0233 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p191 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p191 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/113 (p191, 1 row) and #/tables/114 (p192, 4 rows) match the render. The module cell is empty in the iCO row of #/tables/114 because it is merged with the row above on the page, but all values stay in their columns.",
+   "notes": "Merged cell is shown as empty. Values and order are kept, so this is not a defect.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0233 in images.json. On p191 there is no figure or photo to extract, only text and tables.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0233. The red footer rule and the Edwards logo on p191 are not kept as images, so no noise passed.",
+   "notes": "Old Low FAIL (v1, BUG-004) is now fixed: img_0256 is no longer in images.json for sec_0233 and the footer logo on p191 is not extracted.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0233. The p191 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p170 '12.2.3 GDT Report Download' has the same third-level style as 12.2.2 above it. The tree gives hierarchy_level 3 (#/texts/2630).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0207 has parent sec_0201 (12.2) and no children, the same parent as its sibling sec_0206. On p170 it is a leaf heading under 12.2.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0207 holds heading #/texts/2630, one paragraph #/texts/2631 and folio #/texts/2632, all on p170. The rest of p170 is blank. Next section sec_0208 starts on p171. Start and end are correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Advanced Features/12.2 Enhanced Parameter Tracking/12.2.3 GDT Report Download' matches p170.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p170 has the heading and one paragraph. Both are in sec_0207 once. Steps 8 to 10 above are in sec_0206. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0207 is on its expected page in the p170 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0207 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p170 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p170 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p170 the three small icons (target value, edit target, GDT tracking) are in steps 8 to 10 of sec_0206, not in sec_0207. The 12.2.3 text on p170 has no figure. Nothing of sec_0207 is dropped.",
+   "notes": "verify_claims lists dropped small rasters on p170, but they belong to sec_0206 (flagged FAIL Low there). Impact on sec_0207: none.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0207. The red footer rule and the Edwards logo on p170 are not kept as images, so no noise passed.",
+   "notes": "Old Low FAIL (v1, BUG-004) is now fixed: images.json has no divider for sec_0207 and p170 shows only the red footer rule, which is not extracted.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0207. The p170 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p173 '13.4.1 System Faults/Alerts' is indented and smaller than '13.4 HemoSphere Advanced Monitor Error Messages' above it. The tree gives hierarchy_level 3.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0213 has parent sec_0212 (13.4, level 2) and no children. The next sibling sec_0214 (13.4.2) starts on p176. This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0213 starts at the 13.4.1 heading on p173 and ends on p176. On p176 it holds only the 'Table 13-4 (continued)' caption and its one row (#/tables/88). The 13.4.2 heading on p176 is in sec_0214. page_end 176 is correct. The 13.3 text, Figure 13-2 and Table 13-3 on p173 are not in sec_0213. p174 and p175 were not rendered in this batch.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Troubleshooting/13.4 HemoSphere Advanced Monitor Error Messages/13.4.1 System Faults/Alerts' matches p173.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables #/tables/85-88 follow p173 to p176 in order with the matching captions. No table is repeated. 13.3 content stays in sec_0211 and 13.4.2 in sec_0214.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0213 is on its expected page in the p173 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0213 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p173 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p173 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p173 #/tables/85 has the header and 3 rows (Module Slot 1, Module Slot 2, Cable Port 1) and each cell matches the render. On p176 #/tables/88 has the one row 'Alert: Pressure-Out Not Zeroed' with the same causes and actions. p174 and p175 tables were not rendered here.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p173 the Figure 13-2 cable drawing is kept as vector image img_0102 (577x272). It is not dropped. sec_0213 has no figure of its own on p173 or p176.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image near sec_0213 is img_0102, the Figure 13-2 cable drawing on p173. It is a real figure, not noise. The header rule and footer rule on p173 and p176 are not kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 173,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p173 img_0102 (Figure 13-2) is mapped to sec_0211 (13.3 Pressure Cable Communication). Its heading and caption are above 13.4.1 on the page, so the owner is right. sec_0213 correctly has no image.",
+   "notes": "Checked img_0102 against the p173 render: the drawing matches Figure 13-2 and belongs to 13.3.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p177 '13.5.1 CO Faults/Alerts' is indented under the bigger '13.5 HemoSphere Swan-Ganz Module Error Messages'. The tree gives hierarchy_level 3 (#/texts/2688).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0217 has parent sec_0216 (13.5, level 2) and no children. On p177 the 13.5 heading is directly above 13.5.1. This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0217 starts at the 13.5.1 heading on p177 and ends on p178 with the continued Table 13-7 (#/tables/92). The heading 13.5.2 and Table 13-8 on p178 are not in sec_0217. page_end 178 is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Troubleshooting/13.5 HemoSphere Swan-Ganz Module Error Messages/13.5.1 CO Faults/Alerts' matches p177.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 13-7 is split into #/tables/91 (p177) and #/tables/92 (p178) with no repeat. The Table 13-8 start on p178 stays in sec_0218.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0217 is on its expected page in the p177 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0217 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p177 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p177 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p178 the last row inside the Table 13-7 box reads '* These latching faults. Touch the silence icon to silence. To clear, restart monitoring.' It is not in #/tables/92 and not in any text node of sec_0217. The 12 CO rows on p177-p178 match the render, including the * marks.",
+   "notes": "Probably the footnote row is dropped or sits in sec_0218 (not confirmed in this batch). The * marks in the table still point to it. Impact: the meaning of the asterisk is lost for sec_0217.",
+   "confidence": 0.62
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0217 in images.json. On p177 there is no figure or photo to extract, only text and tables.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0217. The red footer rule and the Edwards logo on p177 are not kept as images, so no noise passed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0217. The p177 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p180 '13.5.4 SVR Faults/Alerts' is a third-level heading, the same style as 13.5.3 above it. The tree gives hierarchy_level 3 (#/texts/2706).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0220 has parent sec_0216 (13.5) and no children. It follows sec_0219 and precedes sec_0221 (13.5.5). This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0220 has only the 13.5.4 heading, the Table 13-10 caption, the folio and #/tables/97 with 2 rows (Slaved-In Pressures Signal Loss and Configure Analog Inputs). The 5 iCO rows printed above the heading are in sec_0219 now. page_start and page_end are both 180. Correct.",
+   "notes": "Old FAIL (v1, BUG-001) is now fixed: the 5 iCO rows of Table 13-9 (continued) are in sec_0219, and sec_0220 has only its own 2-row table.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Troubleshooting/13.5 HemoSphere Swan-Ganz Module Error Messages/13.5.4 SVR Faults/Alerts' matches p180.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p180 has two tables. The iCO continuation is in sec_0219 and the SVR table is in sec_0220. Each table appears once.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0220 is on its expected page in the p180 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0220 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p180 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p180 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/97 on p180 has the header and 2 rows (Slaved-In Pressures Signal Loss and Configure Analog Inputs). Each message, cause and action cell matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0220 in images.json. On p180 there is no figure or photo to extract, only text and tables.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0220. The red footer rule and the Edwards logo on p180 are not kept as images, so no noise passed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0220. The p180 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p198 'B.1 Accessories List' is a second-level heading below the chapter title 'Accessories'. The tree gives hierarchy_level 2 (#/texts/2831).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0240 has parent sec_0239 (Accessories, level 1) and no children. B.2 (sec_0241) is the next sibling on p199. This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0240 starts at B.1 on p198 and ends on p199 with Table B-1 part 3 (#/tables/133) and the footnotes. B.2 on p199 is in sec_0241. But nodes #/texts/2836 'B' and #/texts/2837 'Appendix' are the chapter tab printed above the title 'Accessories'. They belong to sec_0239 and are in sec_0240. This is boilerplate only. Nodes #/texts/2836 'B' and #/texts/2837 'Appendix' (the Appendix B tab above the chapter title on p198) are in sec_0240 and not in the chapter root sec_0239.",
+   "notes": "Cause: probably the chapter-tab reading-order issue (not confirmed). Impact: boilerplate only; Low per Sprint pattern. Possible regression: no older FAIL exists for this row. verify_claims expects Critical (node above heading), but the nodes are only the chapter tab (boilerplate), so the Sprint boilerplate pattern Low applies.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Accessories/B.1 Accessories List' matches p198.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table B-1 is #/tables/131-133 over p198-p199, each once. The caption appears twice (#/texts/2834-2835) because it is printed over both tables on p198. Nothing is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0240 is on its expected page in the p198 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0240 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p198 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p198 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/131 and #/tables/132 on p198 and #/tables/133 on p199 match the two side-by-side tables and the continuation. Group rows have an empty model cell as printed. Model numbers (HEM1, HEMBAT10, HEMQG1000 and others) and the * ** *** marks are correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0240 in images.json. On p198 there is no figure or photo to extract, only text and tables.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0240. The red footer rule and the Edwards logo on p198 are not kept as images, so no noise passed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0240. The p198 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p199 'B.2.1 Roll Stand' is an indented third-level heading under 'B.2 Additional Accessories Description'. The tree gives hierarchy_level 3 (#/texts/2846).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0242 has parent sec_0241 (B.2, level 2) and no children. On p199 B.2.1 follows B.2 directly. This is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0242 starts at B.2.1 on p199 and holds one paragraph and the folio. It also holds nodes #/texts/2849 'C' and #/texts/2850 'Appendix' from p200. This is the Appendix C tab and belongs to sec_0243. page_end is 199 but these nodes are on p200. This is boilerplate only. Nodes #/texts/2849 'C' and #/texts/2850 'Appendix' (the Appendix C tab at the top of p200) are in sec_0242, but sec_0242 ends on p199.",
+   "notes": "Cause: probably the chapter-tab reading-order issue (not confirmed). Impact: boilerplate only; Low per Sprint pattern. Possible regression: no older FAIL exists for this row. verify_claims expects Medium (content past page_end), but the nodes are only the chapter tab (boilerplate), so the Sprint boilerplate pattern Low applies.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Accessories/B.2 Additional Accessories Description/B.2.1 Roll Stand' matches p199.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "B.2.1 has one paragraph and the folio, each once. The only extra content is the two Appendix C tab nodes from p200. Nothing is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100 and no verification_reason. The heading of sec_0242 is on its expected page in the p200 render, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title of sec_0242 is printed as a heading in the rendered pages, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p200 is an arabic number equal to the physical page, and numbering_scheme is 'arabic'. The scheme is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p200 is the same number as the physical page file, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0242 in images.json. On p200 there is no figure or photo to extract, only text and tables.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image mapped to sec_0242. The red footer rule and the Edwards logo on p200 are not kept as images, so no noise passed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0242. The p200 render has no figure that belongs to this section, so nothing is missing or misplaced.",
+   "notes": "",
+   "confidence": 0.92
+  }
+ ]
+}

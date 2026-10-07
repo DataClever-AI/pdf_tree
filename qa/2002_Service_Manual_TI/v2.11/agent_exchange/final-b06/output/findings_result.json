@@ -1,0 +1,1474 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '3. Transmission Control Module (TCM)' (#/texts/4509 on p298) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0143 (AUTOMATIC TRANSMISSION, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0143 (AUTOMATIC TRANSMISSION, level 3). The running header on p301 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/4509 on p298 and ends at #/texts/4922 'H3H0759A' and #/texts/4923 'AT-41' on p317. The declared range is p298-317. sec_0147 (4. On-board Diagnostics System) starts on p318. No running header of the next page is at the end of this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The next page's running header no longer ends this section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '3. Transmission Control Module (TCM)' under sec_0143. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 4572-4996 (prev ends 4571, next starts 4997). No gap, no repeated node id. The text of p301 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '3. Transmission Control Module (TCM)' is found on its declared page (#/texts/4509 on p298), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '3. Transmission Control Module (TCM)' points to p298 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p298 is 'AT-22'). No roman or other scheme is seen in p298-317.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p298. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p301 the table #/tables/67 matches the render (AT-25). Group names 'Oil pressure control' and 'AWD multi-plate clutch (LSD) control' are in the first column. All 12 rows and their signal lists agree, including 'Base brake operating control', 'TCS-in-operation control' and 'VDC-in-operation control'.",
+   "notes": "PASS is for the p301 table only. The placeholder #/tables/68 (p303) and the flat table #/tables/65 (p299) are graded once, in the p300 row (FAIL Low), to avoid a double count. Tables of this section are listed after the text nodes (order 4989-4996), probably a known placement limit. Values are not changed.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 301 has only table #/tables/67 and no figure. The section figures on p302-317 (img_0206 to img_0220) are extracted; vector figures img_0206, img_0212, img_0213 and img_0216 cover the drawn diagrams. I opened all crops.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images img_0206 to img_0220 are real figures. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 301,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is on p301. All img_0206-img_0220 are on p302-317 inside this section, and no sibling shares those pages.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '6. Transmission Mounting' (#/texts/4982 on p322) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0143 (AUTOMATIC TRANSMISSION, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0143 (AUTOMATIC TRANSMISSION, level 3). The running header on p322 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/4982 on p322 and ends at #/texts/4990 'AT-46' on p322. The declared range is p322. sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL) starts on p323. No running header of the next page is at the end of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '6. Transmission Mounting' under sec_0143. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5055-5065 (prev ends 5054, next starts 5066). No gap, no repeated node id. The text of p322 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '6. Transmission Mounting' is found on its declared page (#/texts/4982 on p322), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '6. Transmission Mounting' points to p322 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p322 is 'AT-46'). No roman or other scheme is seen in p322.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p322. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The one figure on p322 (car with pitching stopper, cushion rubber, cross member) is extracted as img_0222 (2723x2093). I opened it. The full drawing is there. The labels (1)-(3) and the legend are kept as text nodes #/texts/4983-4989.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0222 is the real figure. No rule or logo was kept as an image. The page header line is text, not an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0149",
+   "page_sampled": 322,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0222 (p322) is mapped to sec_0149. The heading '6. Transmission Mounting' is on the same page and no sibling shares p322.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Auxiliary Transmission Gears' (#/texts/5040 on p328) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). The running header on p328 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5040 on p328 and ends at #/texts/5055 'MEMO' and #/texts/5056 'MT-7' on p329. The declared range is p328-329. sec_0153 starts on p330. No running header of the next page is at the end of this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The next page's running header no longer ends this section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '2. Auxiliary Transmission Gears' under sec_0150. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5114-5132 (prev ends 5113, next starts 5133). No gap, no repeated node id. The text of p328 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '2. Auxiliary Transmission Gears' is found on its declared page (#/texts/5040 on p328), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '2. Auxiliary Transmission Gears' points to p328 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p328 is 'MT-6'). No roman or other scheme is seen in p328-329.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p328. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The one figure on p328 (S3H0216A gear drawing) is extracted as img_0225 (1606x1102). I opened it. It shows the whole drawing with labels (1)-(5). The drawing is cut at the bottom in the PDF page itself, and the crop matches. The legend is text (#/texts/5048-5050). p329 is a MEMO page with no figure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0225 is the real figure. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0152",
+   "page_sampled": 328,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0225 (p328) is mapped to sec_0152, whose heading '2. Auxiliary Transmission Gears' is on p328. No sibling shares p328.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '3. Reverse Check Mechanism' (#/texts/5058 on p330) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). The running header on p335 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5058 on p330 and ends at #/texts/5126 'B3H1011A' and #/texts/5127 'MT-13' on p335. The declared range is p330-335. sec_0154 (4. Center Differential) starts on p336. No running header of the next page is at the end of this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The next page's running header no longer ends this section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '3. Reverse Check Mechanism' under sec_0150. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5133-5203 (prev ends 5132, next starts 5204). No gap, no repeated node id. The text of p335 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '3. Reverse Check Mechanism' is found on its declared page (#/texts/5058 on p330), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '3. Reverse Check Mechanism' points to p330 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p335 is 'MT-13'). No roman or other scheme is seen in p330-335.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p330. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 335 has one figure pair (B3H1011A). It is extracted as img_0231 (2161x1260). I opened it. Both views and labels (1)-(4) are there. The legend is text (#/texts/5124-5125).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0231 is the real figure. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 335,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0231 (p335) is mapped to sec_0153. The next section sec_0154 starts on p336, so no sibling shares p335.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '5. Transmission Mounting' (#/texts/5188 on p341) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). The running header on p342 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5188 on p341 and ends at #/texts/5199 'MEMO' and #/texts/5200 'MT-20' on p342. The declared range is p341-342. sec_0156 (CLUTCH) starts on p343. No running header of the next page is at the end of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '5. Transmission Mounting' under sec_0150. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5262-5276 (prev ends 5261, next starts 5277). No gap, no repeated node id. The text of p342 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '5. Transmission Mounting' is found on its declared page (#/texts/5188 on p341), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '5. Transmission Mounting' points to p341 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p342 is 'MT-20'). No roman or other scheme is seen in p341-342.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p341. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 342 is a MEMO page and has no figure. The section figure on p341 (B2H2491A) is extracted as img_0239 (4252x3328). I opened it. The full drawing is there. Labels (1)-(4) and the legend are text nodes #/texts/5189-5194.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0239 is the real figure. No decoration was kept as an image. The MEMO page has no image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0155",
+   "page_sampled": 342,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is on p342. img_0239 (p341) is mapped to sec_0155, whose heading '5. Transmission Mounting' is on p341.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Flywheel' (#/texts/5241 on p348) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0156 (CLUTCH, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0156 (CLUTCH, level 3). The running header on p348 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5241 on p348 and ends at #/texts/5264 'S2H0888B' and #/texts/5265 'CL-9' on p351. The declared range is p348-351. sec_0159 (3. Hydraulic Clutch Pedal System) starts on p352. No running header of the next page is at the end of this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The next page's running header no longer ends this section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '2. Flywheel' under sec_0156. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5315-5341 (prev ends 5314, next starts 5342). No gap, no repeated node id. The text of p348 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '2. Flywheel' is found on its declared page (#/texts/5241 on p348), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '2. Flywheel' points to p348 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p348 is 'CL-6'). No roman or other scheme is seen in p348-351.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p348. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 348 has text only. The figures of this section are on p349 (B2H3168B, img_0242) and p351 (S2H0888B, img_0243). I opened both. Each is a full drawing with labels (1)-(5). I also looked at p349 and p350 at low resolution. No other figure is missing.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0242 and img_0243 are real figures. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 348,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0242 (p349) and img_0243 (p351) are mapped to sec_0158 (p348-351). No sibling shares those pages.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p355 is a chapter title page for 'FRONT SUSPENSION' (#/texts/5297 'FRONT SUSPENSION' on p355). hierarchy_level is 3, the same as the other chapters, and the numbered child '1. Front Suspension' (sec_0161) is level 4.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0002 (NEW CAR INFORMATION SECTION). child_sections is ['sec_0161'] and that child is '1. Front Suspension' on p356-358. This matches the contents line on p355.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Own nodes #/texts/5297-5299 are the title, 'FS' and the contents line, all on p355. page_end 358 is the span of the child sec_0161. The running header of p356 is not in this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The next page's running header no longer ends this section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is '/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FRONT SUSPENSION'. The title on p355 matches the last name.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5373-5375 (prev ends 5372, next starts 5376). No gap, no repeated node id. The text of p355 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading 'FRONT SUSPENSION' is found on its declared page (#/texts/5297 'FRONT SUSPENSION' on p355), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for 'FRONT SUSPENSION' points to p355 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. p355 is an unnumbered chapter title page. The chapter body uses 'FS-n' folios (p358 shows 'FS-4').",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The title 'FRONT SUSPENSION' is printed on physical p355, the declared page_start.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 355 is a chapter title page with the text 'FRONT SUSPENSION', 'FS' and one contents line. It has no figure. The black round tab at the right edge is decoration and was not extracted. The section has no images in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was kept for this page. The black tab and the title rule are not in the output.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0160",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image belongs to p355. The first figure of the chapter is in the child sec_0161, not in this section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '1. Rear Suspension' (#/texts/5327 on p360) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0162 (REAR SUSPENSION, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0162 (REAR SUSPENSION). The chapter title on p359 and the page header on p362 ('REAR SUSPENSION') agree. child_sections is empty and no sub-heading starts a new numbered section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5327 on p360 and ends at #/texts/5352 'MEMO' and #/texts/5353 'RS-4' on p362. The declared range is p360-362. sec_0164 (DIFFERENTIALS) starts on p363. No running header of the next page is at the end of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '1. Rear Suspension' under sec_0162. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5401-5430 (prev ends 5400, next starts 5431). No gap, no repeated node id. The text of p362 is read once. The table #/tables/75 (p361) is listed last, after the p362 nodes, but it is not repeated or lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '1. Rear Suspension' is found on its declared page (#/texts/5327 on p360), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '1. Rear Suspension' points to p360 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p362 is 'RS-4'). No roman or other scheme is seen in p360-362.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p360. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The table #/tables/75 is on p361 (the MEMO page p362 has none). It has 3 columns and 9 data rows (Rear arm to Support subframe front). I rendered p361 and compared it. Every cell text and column agrees. The only change is the hyphen split 'im- pact' and 'ab- sorber', which is in the printed page too.",
+   "notes": "The table is listed after the p362 nodes (semantic_order 5430), not at its place on p361. It is still in the right section and no value is lost.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 362 is a MEMO page with no figure. The section figure on p360 (B4H2559A, rear suspension) is a vector drawing. It is extracted as img_0248 (524x459, origin vector). I opened it. The full drawing and labels (1)-(10) are in the crop. A raster image is not needed for it.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0248 is the real figure. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0163",
+   "page_sampled": 362,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0248 (p360) is mapped to sec_0163, whose heading '1. Rear Suspension' is on p360. No sibling shares p360.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Limited Slip Differential (LSD)' (#/texts/5374 on p366) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0164 (DIFFERENTIALS, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0164 (DIFFERENTIALS, level 3). The running header on p368 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5374 on p366 and ends at #/texts/5413 'MEMO' and #/texts/5414 'DI-8' on p370. The declared range is p366-370. sec_0167 (DRIVE SHAFT SYSTEM) starts on p371. No running header of the next page is at the end of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '2. Limited Slip Differential (LSD)' under sec_0164. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5449-5491 (prev ends 5448, next starts 5492). No gap, no repeated node id. The text of p368 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '2. Limited Slip Differential (LSD)' is found on its declared page (#/texts/5374 on p366), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '2. Limited Slip Differential (LSD)' points to p366 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p368 is 'DI-6'). No roman or other scheme is seen in p366-370.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p366. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 368 has one figure (S3H0176, left wheel spins, big arrow to the right wheel). It is extracted as img_0253 (2080x1631). I opened it. The thick and thin arrows match the page. The figures of p366, p367 and p369 are img_0251, img_0252 and img_0254.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0253 is the real figure. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0166",
+   "page_sampled": 368,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0253 (p368) is mapped to sec_0166 (p366-370). The heading 'When left wheel spins' (#/texts/5401) is on the same page. No sibling shares p368.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Front Axle' (#/texts/5435 on p374) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0167 (DRIVE SHAFT SYSTEM, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0167 (DRIVE SHAFT SYSTEM, level 3). The running header on p375 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5435 on p374 and ends at #/texts/5461 'B4H2193B' and #/texts/5463 'DS-5' on p375. The declared range is p374-375. sec_0170 (3. Rear Axle) starts on p376. No running header of the next page is at the end of this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The next page's running header no longer ends this section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '2. Front Axle' under sec_0167. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5510-5540 (prev ends 5509, next starts 5541). No gap, no repeated node id. The text of p375 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '2. Front Axle' is found on its declared page (#/texts/5435 on p374), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '2. Front Axle' points to p374 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p375 is 'DS-5'). No roman or other scheme is seen in p374-375.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p374. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 375 has two figures: B4H2192A (axle housing) and B4H2193B (drive shaft). They are extracted as img_0256 (1417x1654) and img_0257 (2520x654). I opened both. Each is a full drawing with all labels in the crop.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0256 and img_0257 are real figures. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0169",
+   "page_sampled": 375,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both images (p375) are mapped to sec_0169, whose headings 'A: GENERAL' and 'B: FRONT DRIVE SHAFT' are on p374-375. No sibling shares p375.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '3. Transmission Control Module (TCM)' (#/texts/4509 on p298) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0143 (AUTOMATIC TRANSMISSION, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0143 (AUTOMATIC TRANSMISSION, level 3). The running header on p300 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/4509 on p298 and ends at #/texts/4922 'H3H0759A' and #/texts/4923 'AT-41' on p317. The declared range is p298-317. sec_0147 (4. On-board Diagnostics System) starts on p318. No running header of the next page is at the end of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '3. Transmission Control Module (TCM)' under sec_0143. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 4572-4996 (prev ends 4571, next starts 4997). No gap, no repeated node id. The text of p300 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '3. Transmission Control Module (TCM)' is found on its declared page (#/texts/4509 on p298), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '3. Transmission Control Module (TCM)' points to p298 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p298 is 'AT-22'). No roman or other scheme is seen in p298-317.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p298. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p300 the table #/tables/66 (VTD models) matches the render, row by row (AT-24). But the section still has two table defects. On p299 the table #/tables/65 is flat: the first cell reads 'Control item Input signal', and the group and sub-item are one text run, for example 'AWD transfer clutch control Ordinary transfer control Throttle position sensor ...'. On p303 the table #/tables/68 is only '[Table 0x0]'.",
+   "notes": "Old FAIL (BUG-021, v2.9): still present. All words and the order are kept, and the ON/OFF values of p303 are inside image img_0207. So the cause is probably Docling table detection (BUG-008, BUG-021). It is Low because no value is lost. Not fully sure: the page sampled is p300, and its own table is correct.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 300 has only the '2. VTD MODELS' heading and table #/tables/66. No figure is printed here. The section figures on p302-317 (img_0206 to img_0220) are all extracted; I compared p302-316 and p317 with their crops.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images img_0206 to img_0220 are real figures (diagrams, graphs, valve circuits). No rule, logo or other decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": 300,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is on p300. All images of this section (img_0206-img_0220) are on p302-317, inside p298-317, and no sibling shares those pages.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '3. Reverse Check Mechanism' (#/texts/5058 on p330) is printed as a numbered section heading. hierarchy_level is 4, and the parent is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0150 (MANUAL TRANSMISSION AND DIFFERENTIAL, level 3). The running header on p334 names the same chapter. child_sections is empty and the sub-headings (A:, B:, 1., 2.) stay inside this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at #/texts/5058 on p330 and ends at #/texts/5126 'B3H1011A' and #/texts/5127 'MT-13' on p335. The declared range is p330-335. sec_0154 (4. Center Differential) starts on p336. No running header of the next page is at the end of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '3. Reverse Check Mechanism' under sec_0150. The page headers agree with each name in the path.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order runs 5133-5203 (prev ends 5132, next starts 5204). No gap, no repeated node id. The text of p334 is read once.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100.0. The heading '3. Reverse Check Mechanism' is found on its declared page (#/texts/5058 on p330), so the flag is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark for '3. Reverse Check Mechanism' points to p330 and the same heading is printed there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The folio on this page is chapter-prefixed arabic (p335 is 'MT-13'). No roman or other scheme is seen in p330-335.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark targets are physical pages and the heading is printed on p330. No offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 334 has one figure pair (B3H2118A: cross-section and A-A view). It is extracted as img_0230 (1909x1081). I opened it. Both views and labels (1)-(7) are there. The words 'Position at 5th > Neutral position' and 'A - A' are outside the crop. They are kept as text nodes #/texts/5106-5113.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0230 is the real figure. The label text is kept as text nodes, but the A-A label is split into the fragments '“', '–', 'A' (#/texts/5107-5113). I do not count this as noise because it is figure text. No decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0153",
+   "page_sampled": 334,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0230 (p334) is mapped to sec_0153 (p330-335). The figures of p331, p332, p333 and p335 are img_0226 to img_0231, all in the same section.",
+   "notes": "",
+   "confidence": 0.85
+  }
+ ]
+}

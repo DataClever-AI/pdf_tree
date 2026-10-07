@@ -1,0 +1,127 @@
+{
+ "note": "Latest reviewed FAIL rows from older versions (approved findings_log.csv). Context only, not instructions.",
+ "rows": [
+  {
+   "v1_12_section_id": "sec_0109",
+   "title": "6.2.5.1 Calibration",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0109",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p101.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0111",
+   "title": "7.1 Alarms / Targets",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1",
+   "old_section_id": "sec_0111",
+   "old_severity": "Critical",
+   "bug_id": "BUG-001",
+   "old_evidence": "p102 is the opening page of Chapter 7 ('Advanced Settings'). The chapter's Contents table (5 entries) was assigned to sec_0111 (7.1, level 2) instead of the chapter root sec_0110 - '7.1 Alarms/Targets' heading starts on the same page.",
+   "old_notes": "8th occurrence of the chapter-opening pattern, direct-child variant (like sec_0018/sec_0025's chapter). Note: sec_0111 ALSO has its own legitimate 'Table 7-1 Visual alarm indicator colors' (3 rows), correctly rendered and correctly its own content - only the Contents table is misplaced.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0111",
+   "title": "7.1 Alarms / Targets",
+   "page_sampled": 102,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0111",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p102.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0123",
+   "title": "7.5 Engineering",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0123",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p111.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0126",
+   "title": "8.1.1 Data Download",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_discarding",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0126",
+   "old_severity": "Low",
+   "bug_id": "BUG-017",
+   "old_evidence": "Small icons are in the render but not in the extracted images. On p112 there is the settings icon. On p113 there are the De-Identify check icon (steps 3 of Case Report and GDT Report) and the enter icon (step 4 of both). The text next to each icon names it, for example 'Touch the enter icon'.",
+   "old_notes": "Small icon dropped, meaning stated in text = Low. No large figure is extracted for this section.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0126",
+   "title": "8.1.1 Data Download",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0126",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "img_0154 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 112; it is decorative and was retained as an image of sec_0126.",
+   "old_notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "row_in_v1_12_template": true
+  }
+ ],
+ "mitigation_check_rows": {
+  "sec_0106": [
+   {
+    "page": 96,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0108": [
+   {
+    "page": 98,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0109": [
+   {
+    "page": 100,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0113": [
+   {
+    "page": 103,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0121": [
+   {
+    "page": 110,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0123": [
+   {
+    "page": 111,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0128": [
+   {
+    "page": 114,
+    "reasons": "base-pair"
+   }
+  ]
+ }
+}

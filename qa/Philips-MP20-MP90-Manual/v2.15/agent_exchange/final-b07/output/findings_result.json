@@ -1,0 +1,1204 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p183 'SpO2 Sensors' is a section heading, smaller than the chapter title 'Monitoring SpO2'. hierarchy_level=2 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0301 is the chapter 'Monitoring SpO2'. The heading sits below the chapter intro on p183. No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=page_end=183. The section has the heading (3242), two paragraphs (3243, 3244) and the CAUTION about OxiCliq (3232, 3245). The next heading 'Applying the Sensor' is lower on p183 and belongs to the next section. The chapter intro above belongs to sec_0301.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring SpO2/SpO2 Sensors' matches the chapter title and the heading on p183.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes 3242-3245 and 3232 cover all text from 'SpO2 Sensors' to the end of the CAUTION box. No gap and no duplicate.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0302 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0302 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p183 has no figure. Only text, a CAUTION box and headings are visible.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is a rule, divider or logo. Running headers and folios appear only as small text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0302",
+   "page_sampled": 183,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is assigned to this section on the sampled page, and none is missing there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p189 'Introducing the Oscillometric NBP Measurement' is a section heading under the chapter title 'Monitoring NBP'. hierarchy_level=2 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0320 is the chapter 'Monitoring NBP'. Children sec_0322, sec_0323 and sec_0324 are Measurement Limitations, Measurement Methods and Reference Method, which are the next headings on p190.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=189, page_end=190. P189 has the heading, two paragraphs and the WARNING block (3359-3366). P190 starts with the CAUTION about spilled liquid (3370, 3371), which still belongs here. 'Measurement Limitations' starts below it. The page range now covers the continued content.",
+   "notes": "Old problem (BUG-014, v2): now fixed. page_end is now 190 and the p190 CAUTION is in sec_0321.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring NBP/Introducing the Oscillometric NBP Measurement' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All WARNING items (Patient Category, Intravenous infusion, Skin Damage, Unattended measurement) are present once. The p190 CAUTION is in this section too.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0321 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0321 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p189 and p190 have no figure. Only text, a WARNING box and a CAUTION box.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is a rule, divider or logo. Running headers and folios appear only as small text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0321",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is assigned to this section on the sampled page, and none is missing there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p199 'Setting up the Pressure Measurement' is a section heading under the chapter title. hierarchy_level=2 matches. The sub-headings on p200 are level 3.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0340 is the chapter 'Monitoring Invasive Pressure'. Children sec_0342 and sec_0343 are the two label sections on p200-201.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=199, page_end=201. On p199 the section starts at the heading and has steps 1-3 and the photo labels (3525-3532). The chapter WARNING, CAUTION and intro above it belong to sec_0340. P200 holds steps 4-6 and the WARNINGs (3533-3541). P201 is covered by child sec_0343.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring Invasive Pressure/Setting up the Pressure Measurement' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Steps 1-6 and both WARNINGs are present once. The photo labels X1 MMS, X2 MMS and Module are in nodes 3529-3531.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0341 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0341 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p199 step 1 has three photos: X1 MMS, X2 MMS and Module. img_0110 (vector crop, 651x296 px) holds all three photos with their labels. img_0109 holds the full Module photo. No photo is lost now.",
+   "notes": "Old problem (BUG-020, v2): now fixed. The X2 MMS and Module photos are now kept. The right edge of the img_0110 crop cuts the Module photo, but img_0109 has the full photo. verify_claims flags the X1 (294x194 px) and X2 (128x294 px) rasters as missing standalone. Both are visible inside img_0110, so this flag is probably a false alarm.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0109 is the Module photo and img_0110 is the photo group with its labels. Both carry real content. The crop includes only the text labels of the photos. No rule or logo is kept.",
+   "notes": "img_0109 duplicates the Module photo that is also in img_0110. This is harmless.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0341",
+   "page_sampled": 199,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both img_0109 and img_0110 are on p199 under the heading 'Setting up the Pressure Measurement' and mapped to sec_0341. This is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p180 'Resp Safety Information' is a large chapter-level-2 heading, same size as 'Using Resp Alarms'. hierarchy_level=2 under sec_0285 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0300 has parent sec_0285 (Monitoring Respiration Rate) and no children. The page 180 heading sits under that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=180, page_end=182. On p180 the heading, the WARNING and the Resp Accessories text are in nodes 3217-3224. P181 carries the pacemaker text (3227). P182 shows only a running header and folio 170. P183 starts the SpO2 chapter in sec_0301, so nothing is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring Respiration Rate (Resp)/Resp Safety Information' matches the chapter and the heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every visible block on p180 is in sec_0300 once: WARNING, Apnea, Interference, Resp Accessories. No text is repeated or left in a neighbour.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0300 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0300 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p182 has no figure, only a header bar and folio 170. p180 has none either.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for this section. Only the running header and folio on p181-182 (nodes 3225, 3226, 3229-3231) are kept as text nodes, which is the usual boilerplate.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0300",
+   "page_sampled": 182,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p182 is blank apart from the header bar and folio 170, and p180 has no figure. Nothing to map.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p188 'Setting SpO2/Pleth as Pulse Source' is a section heading at the top of the page. hierarchy_level=2 matches its siblings on the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0301 is 'Monitoring SpO2'. The heading is one of several sibling headings on p188. No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=page_end=188. Nodes 3333-3337 are the running header, the heading and steps 1 and 2. The next heading 'Setting Up Tone Modulation' starts below and is not in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring SpO2/Setting SpO2/Pleth as Pulse Source' matches chapter 9 and the heading. The extra slash comes from the title text.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Steps 1 and 2 (3336, 3337) are the only body text under the heading. Nothing is missing or duplicated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0316 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0316 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p188 has no figure. Only headings, steps and menu names are visible.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is a rule, divider or logo. Running headers and folios appear only as small text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0316",
+   "page_sampled": 188,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is assigned to this section on the sampled page, and none is missing there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p188 'Calculating SpO2 Difference' is a section heading, same size as the other headings on the page. hierarchy_level=2 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0301 is 'Monitoring SpO2'. The heading is a sibling of 'Setting the QRS Volume'. No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=page_end=188. Nodes 3344-3350 are the heading, the intro and steps 1-5. Node 3351 is folio 176. The sampled p189 starts chapter 10 'Monitoring NBP' and has no node of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring SpO2/Calculating SpO2 Difference' matches the chapter title and the heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Intro and steps 1-5 are all present once. No gap and no duplicate.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0319 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0319 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p189 (sampled) and p188 show no figure for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is a rule, divider or logo. Running headers and folios appear only as small text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0319",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is assigned to this section on the sampled page, and none is missing there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p191 'Understanding the NBP Numerics' has the same heading size as 'Correcting the Measurement if Limb is not at Heart Level' (level 3). 'Preparing to Measure NBP' is larger (level 2). hierarchy_level=3 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0325 'Preparing to Measure NBP' is correct. The heading sits below that level-2 section on p191. No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=191, page_end=192. P191 has the heading, the numerics picture labels (3406-3415), the 'Depending on...' text and 'Alarm Sources'. P192 has the NBP Timestamp text and the Meas Time and Next Meas items (3421-3424), above the heading 'Starting and Stopping Measurements', which is sec_0328. Both pages are correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring NBP/Preparing to Measure NBP/Understanding the NBP Numerics' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Label words (Sys., Auto, Alarm limits, Systolic...) are present as short nodes. Timestamp text on p192 is present. No other section holds these nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0327 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0327 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p192 the Next Meas example picture (black display with a bar and '8:51') sits beside the text 'as shown here'. It is not in images.json or exports/images_v1.json. Only the p191 numerics picture (img_0096) is kept for this section.",
+   "notes": "Small picture lost, probably BUG-020 (small raster dropped by the area filter, 130x28 pt, 0.8% of the page). The text already says a bar with the remaining time is shown, so I grade Low (small figure, meaning in text). A reviewer could grade it Medium.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0096 is a crop of the numerics display only. The callout words are separate text nodes. No rule, logo or divider is kept as an image.",
+   "notes": "The callout lines and arrows of the numerics picture are not in the crop. The labels are in the text nodes, so the meaning is kept.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0327",
+   "page_sampled": 192,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p191: img_0096 (the NBP numerics display) is mapped to sec_0327 and sits under its heading. img_0097 (NBP connector drawing, vector) is mapped to sec_0325 and sits above the heading 'Correcting the Measurement...', so that is right. On p192 the five SmartKey icons are in the table of sec_0328, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p195 'Calibrating NBP' is a section heading, same size as 'Assisting Venous Puncture'. hierarchy_level=2 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0320 is 'Monitoring NBP'. It is a sibling of 'Assisting Venous Puncture' (sec_0333). No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=195, page_end=196. P195 has the heading and one paragraph (3476, 3477). P196 (sampled) is a blank page with only a header bar 'Calibrating NBP' and folio 184. The next section starts on p197, so nothing is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring NBP/Calibrating NBP' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The single paragraph about calibration is present once. The venous puncture text and picture above belong to sec_0333.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0334 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0334 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p196 has no figure. The venous puncture figure on p195 belongs to sec_0333 (img_0107).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0334. P196 is blank apart from the header bar and folio 184.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0334",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p196 has no figure. On p195 the venous puncture figure (img_0107) is mapped to sec_0333 and sits above the heading 'Calibrating NBP', so it is correctly not in sec_0334.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p198 'Calculating Temp Difference' is a large section heading, bigger than the two sub-headings above it. hierarchy_level=2 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0335 is 'Monitoring Temperature'. The heading is below the level-3 label sections, so it is a sibling of sec_0336. No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=page_end=198. Nodes 3509-3515 are the heading, the intro and steps 1-5. The sampled p199 starts chapter 12 and none of its content belongs here. The label tables on p198 belong to sec_0337 and sec_0338.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring Temperature/Calculating Temp Difference' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Intro and steps 1-5 are present once. No node of the label tables is in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0339 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0339 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sampled p199 has three photos under 'Setting up the Pressure Measurement'. They belong to sec_0341, not to sec_0339. None of them is lost: img_0110 and img_0109 hold them.",
+   "notes": "verify_claims flags two rasters (X1 and X2 MMS) as not in images_v1.json. They are inside the img_0110 vector crop (X1 and X2 photos with labels), so they are not lost.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is a rule, divider or logo. Running headers and folios appear only as small text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0339",
+   "page_sampled": 199,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sampled p199 has three photos under 'Setting up the Pressure Measurement'. They are mapped to sec_0341 (img_0109, img_0110), which is correct. sec_0339 has no figure.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p207 'Calculating Pulse Pressure Variation' is a large section heading, same size as 'Calculating Cerebral Perfusion'. hierarchy_level=2 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0340 is 'Monitoring Invasive Pressure'. It is a sibling of sec_0362 and sec_0364. No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start=207, page_end=208. P207 has the heading, the Note and the PPV paragraph (3687-3689). P208 has the WARNING bullets, the PPV source steps and the CAUTION (3693-3704) above 'Measuring Pulmonary Artery Wedge Pressure', which is sec_0364. Both pages are correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitoring Invasive Pressure/Calculating Pulse Pressure Variation' is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All three WARNING bullet groups, steps 1-2 and the CAUTION are present once. No node belongs to a neighbour.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0363 has flagged_for_review=false and verification_score=100. The heading is visible on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source='toc'. The heading text for sec_0363 is visible on the physical page and agrees with the bookmark title.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme='arabic'. The printed folios are arabic numbers (for example 168 on physical p180), so this is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied=0 and page_start matches the physical page where the heading is rendered. The printed folio differs from the physical number, but the tree uses physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p208 has no figure. Only text, a WARNING box and a CAUTION box.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is a rule, divider or logo. Running headers and folios appear only as small text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0363",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is assigned to this section on the sampled page, and none is missing there.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}

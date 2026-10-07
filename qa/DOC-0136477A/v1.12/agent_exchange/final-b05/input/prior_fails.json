@@ -1,0 +1,93 @@
+{
+ "note": "Latest reviewed FAIL rows from older versions (approved findings_log.csv). Context only, not instructions.",
+ "rows": [
+  {
+   "v1_12_section_id": "sec_0137",
+   "title": "9.1 Connecting the HemoSphere Swan-Ganz Module",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0137",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "img_0162 and img_0164 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 118; it is decorative and was retained as an image of sec_0137.",
+   "old_notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0148",
+   "title": "9.3.2.1 Select Injectate Volume",
+   "page_sampled": 126,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0148",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p126.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0148",
+   "title": "9.3.2.1 Select Injectate Volume",
+   "page_sampled": 126,
+   "checklist_ref": "5.5-image_section_mapping",
+   "old_version": "v1",
+   "old_section_id": "sec_0148",
+   "old_severity": "Medium",
+   "bug_id": "BUG-003",
+   "old_evidence": "Figure 9-5 (643x530px, p126) is visually under '9.3.2 Configuration Settings' intro (sec_0147's own text confirms the 'Figure 9-5...' caption lives correctly in sec_0147), but the image itself is mapped to sec_0148 (9.3.2.1, its child) instead of sec_0147.",
+   "old_notes": "3rd confirmed occurrence of the parent/sibling image-mismapping pattern (after sec_0076/0077 and sec_0097/0098) - now a well-established systemic bug, not isolated cases. Worth escalating alongside the Contents-table bug as the two highest-confidence findings.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0159",
+   "title": "9.4.5 STAT EDV and RVEF",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0159",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p133.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  }
+ ],
+ "mitigation_check_rows": {
+  "sec_0138": [
+   {
+    "page": 120,
+    "reasons": "base-pair"
+   },
+   {
+    "page": 121,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0142": [
+   {
+    "page": 123,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0156": [
+   {
+    "page": 131,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0159": [
+   {
+    "page": 133,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0167": [
+   {
+    "page": 140,
+    "reasons": "base-pair"
+   }
+  ]
+ }
+}

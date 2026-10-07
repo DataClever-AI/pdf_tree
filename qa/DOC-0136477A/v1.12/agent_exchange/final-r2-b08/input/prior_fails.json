@@ -1,0 +1,237 @@
+{
+ "note": "Latest reviewed FAIL rows from older versions (approved findings_log.csv). Context only, not instructions.",
+ "rows": [
+  {
+   "v1_12_section_id": "sec_0279",
+   "title": "G.3.6 European Union R&TTE Statements",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "old_version": "v1.3",
+   "old_section_id": "sec_0279",
+   "old_severity": "Critical",
+   "bug_id": "BUG-002",
+   "old_evidence": "Physical page 240 is the last page of the manual and shows only a back cover: Caution text, trademark list, copyright 2019 Edwards and the Edwards logo. The tree covers physical pages up to 232 for the last section, so the text on pages 233-240, including this back cover text, is a gap in structural coverage.",
+   "old_notes": "Same root cause as page_start_end on page 240. Confidence is low because I cannot see pages 233-239 or other sections.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0279",
+   "title": "G.3.6 European Union R&TTE Statements",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1.3",
+   "old_section_id": "sec_0279",
+   "old_severity": "Critical",
+   "bug_id": "BUG-002",
+   "old_evidence": "Physical page 240 is the last page of the manual and shows only a back cover: Caution text, trademark list, copyright 2019 Edwards and the Edwards logo. sec_0279 is the last section and ends on page 232 (next_section is null). None of its nodes are on page 240, and pages 233-240 are not in this batch view as any section. The back cover text (Caution, trademarks, copyright, Part No 10013498009/A) is not owned by any section shown, so back matter is lost from the tree.",
+   "old_notes": "Back-matter/loss pattern, Critical per contract. Not fully sure: I only see sec_0279 and could not check if another section owns page 240. Human check needed. verify_claims shows UNSUPPORTED (no automatic boundary signal) because no node of sec_0279 is on page 240; the claim comes from the visible orphan back cover.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0279",
+   "title": "G.3.6 European Union R&TTE Statements",
+   "page_sampled": 240,
+   "checklist_ref": "5.6-table_content",
+   "old_version": "v1",
+   "old_section_id": "sec_0279",
+   "old_severity": "Medium",
+   "bug_id": "BUG-002",
+   "old_evidence": "The two table nodes attributed to sec_0279 ('electromagnetic | HemoSphere oximetry cable...25...' and 'monitor settings, general 104...84 | communication...') are not real tables at all - they are fragments of the back-matter Index's two-column alphabetical layout, misclassified as table structure and, per the main finding above, misattributed to the wrong section entirely.",
+   "old_notes": "Symptom of the same root cause as 5.4-page_start_end - listed separately since it's a distinct checklist item, but do not count as a separate bug for Task 2.3 consolidation.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0243",
+   "title": "Equations for Calculated Patient Parameters",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0243",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p200.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0243",
+   "title": "Equations for Calculated Patient Parameters",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-table_content",
+   "old_version": "v1.10",
+   "old_section_id": "sec_0243",
+   "old_severity": "Medium",
+   "bug_id": "BUG-008",
+   "old_evidence": "On p202, #/tables/136 has 7 rows (Ea dyn, EDV, EDVI, ESV, ESVI, LVSWI, O2EI) and each matches the render. But the table checked on p205, #/tables/139, is wrong. In the print, 'VO2Ie' is the Parameter and 'VQI' is the Parameter of the next row. In the node, the Ie is moved into the Description column ('VO 2 | Ie Estimated Oxygen...'). The VQI row has an empty Parameter cell and 'VQI' at the start of the Description. The VQI fraction is garbled: a stray '22' appears, and one line reads '{138 G16113(10 (SO/100)) (00031 O)}' while the print has '{1.38 x HGB SI x 1.611344 x (1.0 - (SvO2/100)) + ...}'.",
+   "old_notes": "CASE: back to original. Round one read #/tables/139 correctly ('VO 2 Ie' and 'VQI' in the Parameter column); the guard now keeps the original text, so the Parameter labels are in the wrong column again (BUG-008). The p202 table #/tables/136 is fine. Medium because a parameter name sits in the wrong column and formula text is garbled, but the formula words are mostly still present.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0245",
+   "title": "D.1 Patient Data Input Range",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1",
+   "old_section_id": "sec_0245",
+   "old_severity": "Critical",
+   "bug_id": "BUG-001",
+   "old_evidence": "p206: sec_0245's own content (D.1 heading + Table D-1 Patient information, 6 rows) is correct, BUT it ALSO includes the full data table for 'Table D-2 Graphical trend parameter scale defaults' (12 rows), which visually and textually belongs to the SIBLING section 'D.2 Trend Scale Default Limits' (sec_0246) - confirmed sec_0246's own text nodes correctly contain the 'D.2' heading and 'Table D-2...' caption, but the actual table DATA is missing from sec_0246 and sitting in sec_0245 instead.",
+   "old_notes": "4th occurrence of the sibling-mismapping pattern (after sec_0076/77, sec_0097/98, sec_0147/148) - and the first one involving a TABLE rather than an image, confirming the bug isn't image-specific: any content block (image or table) near a heading transition on a shared page can be mismapped to the wrong sibling. No Contents-box was involved here (this appendix has none), so this is purely the sibling-mismapping bug, independent of the chapter-opening bug.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0245",
+   "title": "D.1 Patient Data Input Range",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0245",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p206.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0245",
+   "title": "D.1 Patient Data Input Range",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-table_content",
+   "old_version": "v1.10",
+   "old_section_id": "sec_0245",
+   "old_severity": "Medium",
+   "bug_id": "BUG-008",
+   "old_evidence": "On p206, #/tables/140 (Table D-1) has values in the wrong columns. The print has Parameter, Minimum, Maximum and Available units. The Age row is ' | 2 | 120 years | Age': the label 'Age' is in the last column and 'years' is joined to Maximum. The Height and Weight rows also end with their label, for example '12 in / 30 cm | 98 in / 250 cm | inches (in) or cm | Height'. The BSA row is '0.08 |  | 5.02 m 2 | BSA'. The ID row is 'ID | 0 digits | 40 characters None | '. Only the Gender row is correct.",
+   "old_notes": "CASE: still wrong. Table structure is shifted in the Age to ID rows (BUG-008). The values are present but cannot be tied to their columns. Medium, not Low: this is not a simple cell merge. Values sit under the wrong column (Age label under 'Available units', 'years' under Maximum), so the checker's Low signal is wrong here. Same text as round one.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0254",
+   "title": "F.1 General Maintenance",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0254",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "img_0279 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 214; it is decorative and was retained as an image of sec_0254.",
+   "old_notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0261",
+   "title": "F.5 Edwards Lifesciences Regional Headquarters",
+   "page_sampled": 218,
+   "checklist_ref": "5.6-table_content",
+   "old_version": "v1.10",
+   "old_section_id": "sec_0261",
+   "old_severity": "Medium",
+   "bug_id": "BUG-008",
+   "old_evidence": "On p218, #/tables/151 (address list under 'F.5 Edwards Lifesciences Regional Headquarters') loses text. The India entry ends with 'Goregaon west-Mumbai 400062 India'. The print has 'Phone +91.022.66935701 04' below 'India'. The number '66935701' is not in the section JSON. The other entries (USA, China, Switzerland, Japan, Australia, Brazil) match the print, and their phone numbers are kept.",
+   "old_notes": "CASE: still wrong. A phone number is lost from one cell. It is probably a line-break or small-text issue in the table reader (BUG-008). Same text as round one.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0271",
+   "title": "G.1 Electromagnetic Compatibility",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1",
+   "old_section_id": "sec_0271",
+   "old_severity": "Critical",
+   "bug_id": "BUG-001",
+   "old_evidence": "p221 is the opening page of Appendix G. Contents table (literal 'Contents\\n' prefix + 3 entries: Electromagnetic Compatibility...221, Instructions for Use...222, Wireless Technology Information...227) assigned to sec_0271 (G.1, level 2) instead of the chapter root sec_0270.",
+   "old_notes": "17th occurrence of the chapter-opening pattern.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0271",
+   "title": "G.1 Electromagnetic Compatibility",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0271",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p221.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0275",
+   "title": "G.3.2 Wireless Security Measures",
+   "page_sampled": 230,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0275",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p230.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0279",
+   "title": "G.3.6 European Union R&TTE Statements",
+   "page_sampled": 232,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1.3",
+   "old_section_id": "sec_0279",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "img_0297 (page 232) and img_0296 (page 231) are 2800x200 pixel strips that show only the red footer divider line with white space. They are decorative and were kept as images of sec_0279.",
+   "old_notes": "Footer divider kept as image, Low per contract. The same line appears on both pages, so it is one root cause.",
+   "row_in_v1_12_template": true
+  }
+ ],
+ "mitigation_check_rows": {
+  "sec_0243": [
+   {
+    "page": 202,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0252": [
+   {
+    "page": 214,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0261": [
+   {
+    "page": 218,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0269": [
+   {
+    "page": 221,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0272": [
+   {
+    "page": 225,
+    "reasons": "random-check"
+   }
+  ],
+  "sec_0274": [
+   {
+    "page": 229,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0275": [
+   {
+    "page": 230,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0279": [
+   {
+    "page": 240,
+    "reasons": "base-pair"
+   }
+  ]
+ }
+}

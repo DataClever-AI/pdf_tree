@@ -1,0 +1,137 @@
+{
+ "note": "Latest reviewed FAIL rows from older versions (approved findings_log.csv). Context only, not instructions.",
+ "rows": [
+  {
+   "v1_12_section_id": "sec_0176",
+   "title": "10.6.3 Waveform Confirmation",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0176",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p144.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0178",
+   "title": "11.1 Oximetry Cable Overview",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1",
+   "old_section_id": "sec_0178",
+   "old_severity": "Critical",
+   "bug_id": "BUG-001",
+   "old_evidence": "p145 is the opening page of Chapter 11. Contents table (8 entries: Oximetry Setup...145, In Vitro Calibration...147, etc.) assigned to sec_0178 (11.1, level 2) instead of the chapter root sec_0177.",
+   "old_notes": "12th occurrence of the chapter-opening pattern.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0178",
+   "title": "11.1 Oximetry Cable Overview",
+   "page_sampled": 145,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0178",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p145.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0189",
+   "title": "12.1 Acumen Hypotension Prediction Index (HPI) Software Feature",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1",
+   "old_section_id": "sec_0189",
+   "old_severity": "Critical",
+   "bug_id": "BUG-001",
+   "old_evidence": "p153 is the opening page of Chapter 12. Contents table (2 entries: Acumen HPI Software Feature...153, Enhanced Parameter Tracking...167) - INCLUDING the literal 'Contents' label text itself this time - assigned to sec_0189 (12.1, level 2) instead of the chapter root sec_0188.",
+   "old_notes": "13th occurrence of the chapter-opening pattern. This occurrence's table canonical_text starts with the literal word 'Contents\\n', confirming beyond doubt this is the chapter's own Contents box, not a legitimate section-level mini-TOC.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0189",
+   "title": "12.1 Acumen Hypotension Prediction Index (HPI) Software Feature",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0189",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p153.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0198",
+   "title": "12.1.9 Additional Parameters",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0198",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p162.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  }
+ ],
+ "mitigation_check_rows": {
+  "sec_0176": [
+   {
+    "page": 144,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0179": [
+   {
+    "page": 146,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0184": [
+   {
+    "page": 150,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0190": [
+   {
+    "page": 155,
+    "reasons": "base-pair"
+   },
+   {
+    "page": 156,
+    "reasons": "random-check"
+   }
+  ],
+  "sec_0197": [
+   {
+    "page": 161,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0198": [
+   {
+    "page": 162,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0200": [
+   {
+    "page": 166,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0203": [
+   {
+    "page": 167,
+    "reasons": "base-pair"
+   }
+  ]
+ }
+}

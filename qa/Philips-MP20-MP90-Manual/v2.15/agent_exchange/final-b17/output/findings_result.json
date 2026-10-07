@@ -1,0 +1,784 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0864 'BIS Default Settings' has hierarchy_level 2. On p484 its heading has the same size as the other appendix headings (NBP, Temperature, SO2 and so on).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0864 has parent_section_id sec_0845 and no children. Parent sec_0845 'Default Settings Appendix' (level 1, p465-484) has this section as a level-2 child.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0864 covers p483 to p484. It starts at the 'BIS Default Settings' heading on p483, under the EEG section (sec_0863). It ends with the second BIS table (#/tables/292) at the top of p484. The 'VueLink Default Settings' heading below it is in sec_0865.",
+   "notes": "The header text 'VueLink Default Settings' on p484 (#/texts/8243) is page boilerplate. It is inside the page range, so this is not an error.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Default Settings Appendix/BIS Default Settings'. This matches the chapter 39 appendix title and the section heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes #/texts/8240 to 8243 and #/tables/291, 292 appear once, in sec_0864. sec_0865 has the VueLink nodes. No gap and no duplicate between p483 and p484.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0864 has flagged_for_review false and verification_score 100. The heading is visible on p483, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'BIS Default Settings' is printed on p483, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. Physical p484 shows an arabic folio and there is no roman part in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'BIS Default Settings' is on physical p483, the same page as the bookmark, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p484, #/tables/292 (BIS Settings, second part) matches the render. Values are High Filter 70 Hz, Notch Filter On, Alarms On, Smoothing Rate 30 sec and 15 sec in H30, Color Yellow and Magenta. #/tables/291 on p483 also matches (SQI to Low Filter 2 Hz, Bursts On and Off).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty. Page p484 shows no figure, photo or drawing, only tables and headings. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no noise image was kept. The blue header bar on p484 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0864",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0864. Page p484 has no visual to map, so none is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0865 'VueLink Default Settings' has hierarchy_level 2. On p484 its heading has the same size as the other appendix headings (NBP, Temperature, SO2 and so on).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0865 has parent_section_id sec_0845 and no children. Parent sec_0845 'Default Settings Appendix' (level 1, p465-484) has this section as a level-2 child.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0865 covers p484 only. It starts at the 'VueLink Default Settings' heading and has the small Device Alarms table (#/tables/293). It is the last bookmarked section. The index (p485 to p496) is not in it. The tree ends at p484.",
+   "notes": "BUG-002 check: the unbookmarked index is not absorbed.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Default Settings Appendix/VueLink Default Settings'. This matches the chapter 39 appendix title and the section heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/texts/8244, #/texts/8245 and #/tables/293 appear once, in sec_0865. The BIS table above the heading is in sec_0864. No index node is in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0865 has flagged_for_review false and verification_score 100. The heading is visible on p484, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'VueLink Default Settings' is printed on p484, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. Physical p484 shows an arabic folio and there is no roman part in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'VueLink Default Settings' is on physical p484, the same page as the bookmark, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p484, #/tables/293 matches the render. It has Device Alarms = Ignored and Color = Green.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty. Page p484 shows no figure, photo or drawing, only tables and headings. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no noise image was kept. The blue header bar on p484 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0865. Page p484 has no visual to map, so none is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0855 'Invasive Pressure Default Settings' has hierarchy_level 2. On p479 its heading has the same size as the other appendix headings (NBP, Temperature, SO2 and so on).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0855 has parent_section_id sec_0845 and no children. Parent sec_0845 'Default Settings Appendix' (level 1, p465-484) has this section as a level-2 child.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0855 has page_start 477 and page_end 479. It starts at its heading on p477, below the NBP and Temperature sections. It ends with the ICP, IC1, IC2 table (#/tables/279) on p479. sec_0856 begins at its own heading on p480. No neighbour content is absorbed.",
+   "notes": "Only p477 and p479 were rendered. p478 was not.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Default Settings Appendix/Invasive Pressure Default Settings'. This matches the chapter 39 appendix title and the section heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The five tables #/tables/275 to 279 and the p477 to p479 header and folio nodes appear once, in sec_0855. The neighbours sec_0854 and sec_0856 do not repeat them. No gap is seen from p477 to p479.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0855 has flagged_for_review false and verification_score 100. The heading is visible on p477, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Invasive Pressure Default Settings' is printed on p477, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. Physical p479 shows an arabic folio and there is no roman part in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Invasive Pressure Default Settings' is on physical p477, the same page as the bookmark, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p479, #/tables/278 (PAP Settings) and #/tables/279 (ICP, IC1, IC2 Settings) match the rendering. Values such as 34/16 (20), 60/4 (26), 14/6 (10) and Color Yellow or Magenta are in the right columns. On p477, #/tables/275 matches the rows Alarms from to Alarms.",
+   "notes": "Tables #/tables/276 and 277 are on p478. That page was not rendered, so they are not checked visually. Confidence is lower for that reason.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty. Page p479 shows no figure, photo or drawing, only tables and headings. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no noise image was kept. The blue header bar on p479 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0855",
+   "page_sampled": 479,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0855. Page p479 has no visual to map, so none is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0856 'Cardiac Output Default Settings' has hierarchy_level 2. On p480 its heading has the same size as the other appendix headings (NBP, Temperature, SO2 and so on).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0856 has parent_section_id sec_0845 and no children. Parent sec_0845 'Default Settings Appendix' (level 1, p465-484) has this section as a level-2 child.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0856 covers p480 only. It has its heading 'Cardiac Output Default Settings', the C.O. Settings table (#/tables/280) and the CCO/CCI table (#/tables/281). The 'CO2 Default Settings' heading and its CO2 table sit below on p480. They are in sec_0857 (#/texts/8224, #/tables/282), not here.",
+   "notes": "Old problem (BUG-001, v2): now fixed. The CO2 table is no longer in sec_0856. sec_0857 now has its own table.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Default Settings Appendix/Cardiac Output Default Settings'. This matches the chapter 39 appendix title and the section heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes #/texts/8221 to 8223 and #/tables/280, 281 appear once, in sec_0856. The CO2 table #/tables/282 is only in sec_0857. sec_0857 is no longer empty. No gap and no duplicate.",
+   "notes": "Old problem (BUG-001, v2): now fixed. Tables are placed by position under the correct heading.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0856 has flagged_for_review false and verification_score 100. The heading is visible on p480, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Cardiac Output Default Settings' is printed on p480, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. Physical p480 shows an arabic folio and there is no roman part in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Cardiac Output Default Settings' is on physical p480, the same page as the bookmark, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p480, #/tables/280 (C.O. Settings) matches the render. Values are 39.0 C, 36.0 C, On, Green and Yellow in H30. #/tables/281 (CCO/CCI) matches too. Values such as 8.5 l/min, 3.7 l/min, 1.3 l/min and 4.3 l/min/m 2 are in the right columns.",
+   "notes": "Superscript 2 is written as 'm 2'. The meaning is kept.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty. Page p480 shows no figure, photo or drawing, only tables and headings. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no noise image was kept. The blue header bar on p480 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0856",
+   "page_sampled": 480,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0856. Page p480 has no visual to map, so none is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0860 'SO2 Default Settings' has hierarchy_level 2. On p482 its heading has the same size as the other appendix headings (NBP, Temperature, SO2 and so on).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0860 has parent_section_id sec_0845 and no children. Parent sec_0845 'Default Settings Appendix' (level 1, p465-484) has this section as a level-2 child.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0860 covers p482 only. It starts at the heading 'SO2 Default Settings' and has one table (#/tables/287). The tcGas table above it belongs to sec_0859 (#/tables/286). The SvO2 heading and table below belong to sec_0861 (#/texts/8234, #/tables/288).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Default Settings Appendix/SO2 Default Settings'. This matches the chapter 39 appendix title and the section heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/texts/8233 and #/tables/287 appear once, in sec_0860. The tcGas and SvO2 content on the same page is in sec_0859 and sec_0861. No gap and no duplicate.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0860 has flagged_for_review false and verification_score 100. The heading is visible on p482, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'SO2 Default Settings' is printed on p482, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. Physical p482 shows an arabic folio and there is no roman part in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'SO2 Default Settings' is on physical p482, the same page as the bookmark, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p482, #/tables/287 (SO2 Settings) matches the render. Rows are Low Limit 70%, High Limit 80%, Alarms On, Light Intensity On, Color Yellow, Hb/Hct Entry Hct [%], Factor Entry Disabled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty. Page p482 shows no figure, photo or drawing, only tables and headings. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no noise image was kept. The blue header bar on p482 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0860",
+   "page_sampled": 482,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0860. Page p482 has no visual to map, so none is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0865 'VueLink Default Settings' has hierarchy_level 2. On p488 its heading has the same size as the other appendix headings (NBP, Temperature, SO2 and so on).",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0865 has parent_section_id sec_0845 and no children. Parent sec_0845 'Default Settings Appendix' (level 1, p465-484) has this section as a level-2 child.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sampled p488 is an alphabetical index page (entries 'display' to 'event snapshots', roman folio iv). It is not a node of sec_0865. The section ends at page_end 484 and the tree has no section past p484. The index is not absorbed.",
+   "notes": "Old problem (BUG-002, v2): now fixed. The last section no longer runs to the last page.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Default Settings Appendix/VueLink Default Settings'. This matches the chapter 39 appendix title and the section heading.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The index pages p485 to p496 are in no section. They have no bookmark and are back matter, so this is the intended exclusion. No node is duplicated. sec_0865 holds only the VueLink nodes.",
+   "notes": "Old problem (BUG-002, v2): now fixed. Open design question: the index is outside the tree on purpose. Confidence is lower for that reason.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0865 has flagged_for_review false and verification_score 100. The heading is visible on p484, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'VueLink Default Settings' is printed on p484, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic' for sec_0865, which ends at p484 (folio 472). The roman index folio 'iv' on p488 is outside this section, so no arabic to roman change is hidden inside it.",
+   "notes": "Old problem (BUG-002, v2): now fixed. The index was in this section before.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'VueLink Default Settings' is on physical p484, the bookmark page. Sampled p488 is outside the section and needs no offset.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is on p488. It has only index text in three columns. The only table of sec_0865 is #/tables/293 on p484, which matches the render.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty. Index page p488 has only text. The header bar is decorative. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no noise image was kept. The blue header bar on p488 is not an image in the tree.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0865",
+   "page_sampled": 488,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0865. Page p488 has no figure, so none is missing.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}

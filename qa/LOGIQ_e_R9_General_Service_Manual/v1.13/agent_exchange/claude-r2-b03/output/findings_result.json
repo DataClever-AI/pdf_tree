@@ -1,0 +1,364 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p170 the heading #/texts/1704 'Switch ON the AC Power to LOGIQ e' is a sub-topic. The running header says 'General Procedures and Functional Checks'. sec_0028 'General procedures' is level 2 under sec_0026 (level 1).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0028 has parent sec_0026 and no children. sec_0026 lists sec_0028 in child_sections. The p170 page has no sub-heading that needs a child section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0028 spans p165-p179. It starts at heading #/texts/1653 on p165. It ends with the Lockout/Tagout text on p179 (printed 4-17). On p170 the nodes #/texts/1703-1710 all belong to this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/General procedures'. The p170 running header matches the parent name. The order is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0028 covers p165-p179 with semantic_order 1612-1814. On p170 the nodes #/texts/1703-1710 appear once. No page gap or repeated node is visible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The p170 page shows the expected heading #/texts/1704, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'General procedures' matches the p165 heading #/texts/1653 and the p179 running header.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The p170 folio is printed '4-8' (chapter-page style, digits).",
+   "notes": "The chapter-page style is not named in the tree, but retrieval is not affected.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p170 prints folio 4-8, and the section start p165 shows 4-3. The step of 1 per page is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The sampled p170 has no dropped icon, and Figure 4-2 is kept as img_0145. In the same section, p179 has a yellow WARNING triangle next to the text. It is not in images.json. The Tag & Lockout drawing is kept as img_0151.",
+   "notes": "Small icon dropped (BUG-020), and its meaning is in the text node #/texts/1842 'WARNING'. Recorded here for the section because it is the only 5.5 discard row. No figure is lost, so Low. verify_claims may say Critical because it counts a missing image; this is wrong for a small icon.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image is kept for p170. img_0145 is the real Figure 4-2 photo. The other images of sec_0028 are figures, not rules or logos.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p170 Figure 4-2 is img_0145 (1260x709), mapped to sec_0028, whole, with the yellow arrow. The p169 Figure 4-1 is img_0144 (1500x1125), also in sec_0028. In img_0144 the GE HealthCare logo and the LOGIQ e label are upside down. The p169 render (zoomed) shows the same upside-down logo, so the PDF prints it this way.",
+   "notes": "Old FAIL (v1, Medium, img_0144 upside down, BUG-013) is now fixed: the image is faithful to the PDF page, so it was not a defect of extraction. No rotation problem is present.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p231 the large title 'Probe Check' (#/texts/2421) starts the section. sec_0032 'Probe Check' is level 2 under sec_0026 (level 1). This fits the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0032 has parent sec_0026 and no children. sec_0026 lists sec_0032 in child_sections. Page p231 has no sub-section that needs its own node.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0032 spans p231-p238 and its start on p231 is right: #/texts/2421 'Probe Check' to #/texts/2427. But the heading #/texts/2493 'Chapter 5' (p239) is owned by sec_0032 and is not part of it. It is the start of the next chapter title page.",
+   "notes": "Only boilerplate (a chapter label) crosses the boundary (BUG-022). Low. This is a section-level defect, so it is recorded on this row only. verify_claims expects Medium (content past page_end), but the only node past page_end is a chapter label, so Low by the contract (boilerplate crosses a boundary).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Probe Check'. The p231 header agrees with the ancestry ('Probe Check').",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0032 covers p231-p238 with semantic_order 2401-2481. The nodes on p231 appear once and are in this section. The next section sec_0033 follows p238.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The p231 page matches the section title and content, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Probe Check' matches the large heading on p231 and the p232 content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The p231 folio is printed '4-69' (chapter-page style, digits).",
+   "notes": "The chapter-page style is not named in the tree, but retrieval is not affected.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p231 prints folio 4-69. The step of 1 per page is consistent with p165 = 4-3.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p231 the yellow CAUTION triangle icons are dropped. No image of p231 is in images.json. The text 'CAUTION' (#/texts/2415 and #/texts/2416) and its message are kept.",
+   "notes": "Small icons dropped (BUG-020). The meaning is in the text, so no figure is lost. Low. verify_claims may say Critical because it counts a missing image; this is wrong for a small icon.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for p231. No rule, logo or footer divider is retained as an image in sec_0032 for this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 231,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p231 has no figure, only text and CAUTION icons. images.json lists no image for p231. The first image of sec_0032 is img_0184 on p233, so nothing is mis-mapped here.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p232 the headings #/texts/2429 'Supported probes' and #/texts/2430 'Presets' are sub-topics of the section. sec_0032 'Probe Check' is level 2 under sec_0026 (level 1). This fits the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0032 has parent sec_0026 and no children. sec_0026 lists sec_0032 in child_sections. Page p232 has no sub-section that needs its own node.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p232 the nodes #/texts/2428-2442 (heading 'Supported probes', 'Presets', the preset list, NOTEs, CAUTION text) all belong to Probe Check. They are inside the p231-p238 range. No neighbouring content is on this page.",
+   "notes": "Same section-level defect (BUG-022, 'Chapter 5' label) is recorded on p231. verify_claims CONTRADICTED here is the same p239 label, not on this page.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/General Procedures and Functional Checks/Probe Check'. The p232 header agrees with the ancestry ('General Procedures and Functional Checks').",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0032 covers p231-p238 with semantic_order 2401-2481. The nodes on p232 appear once and are in this section. The next section sec_0033 follows p238.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The p232 page matches the section title and content, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'Probe Check' matches the large heading on p231 and the p232 content.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The p232 folio is printed '4-70' (chapter-page style, digits).",
+   "notes": "The chapter-page style is not named in the tree, but retrieval is not affected.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p232 prints folio 4-70. The step of 1 per page is consistent with p165 = 4-3.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p232 the yellow CAUTION triangle icon is dropped. No image of p232 is in images.json. The text 'CAUTION' (#/texts/2439) and its message are kept.",
+   "notes": "Small icon dropped (BUG-020). The meaning is in the text, so no figure is lost. Low. verify_claims may say Critical because it counts a missing image; this is wrong for a small icon.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for p232. No rule, logo or footer divider is retained as an image in sec_0032 for this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 232,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p232 has no figure, only text and CAUTION icons. images.json lists no image for p232. The first image of sec_0032 is img_0184 on p233, so nothing is mis-mapped here.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}

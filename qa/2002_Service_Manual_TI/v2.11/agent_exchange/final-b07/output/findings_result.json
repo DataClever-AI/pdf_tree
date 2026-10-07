@@ -1,0 +1,1524 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p382 (ABS-4), '1. Anti-lock Brake System (ABS)' is printed as a numbered main heading under the ABS chapter. The tree has sec_0172 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is ABS (sec_0171). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Anti-lock Brake System (ABS) sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 is declared as pages 380-398. The nodes start at 5503 on p380 with heading 1. Anti-lock Brake System (ABS) (5505). The last nodes are 5738-5744 on p398 (heading H: G SENSOR and folio ABS-20). The next section sec_0173 (VDC) starts on p399. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > ABS > 1. Anti-lock Brake System (ABS). It is the correct ordered path from the root. It agrees with the page headers (ABS) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 appears once. Its pages 380-398 do not overlap the previous or next sibling. No page gap was found around it. The sampled p382 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 has flagged_for_review = false and verification_score 100. The title '1. Anti-lock Brake System (ABS)' is visible on its first page, so no uncertain boundary needs checking.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p382 the printed folio is ABS-4: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p382 shows folio ABS-4 and the heading found at the declared page_start 380. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p382. The legend is plain text lines, not a table. The section table (#/tables/76) is on p381 and matches the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0261 (origin vector) is mapped to sec_0172 on p382. It shows the whole wiring diagram B4H0580A with callouts (1)-(26). Nothing is cut. The legend is in nodes 5554-5564. Nothing meaningful was discarded.",
+   "notes": "The figure is a vector image (origin vector). Any raster check should use img_0261 on p382, which covers the whole diagram.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0261 holds only the diagram. The callout numbers are also kept as short text nodes (5527-5552) and the figure code B4H0580A is typed as a heading (5553). This is small noise, probably from the vector figure text. The retrieval meaning is not harmed.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 382,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0261 (origin vector) is mapped to sec_0172 on p382. It shows the whole wiring diagram B4H0580A with callouts (1)-(26). Nothing is cut. The legend is in nodes 5554-5564. The images on this page are in the right section.",
+   "notes": "The figure is a vector image (origin vector). Any raster check should use img_0261 on p382, which covers the whole diagram.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p402 (VDC-4), '1. Vehicle Dynamics Control (VDC) System' is printed as a numbered main heading under the VDC chapter. The tree has sec_0174 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is VDC (sec_0173). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Vehicle Dynamics Control (VDC) System sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 is declared as pages 400-420. The nodes start at 5748 on p400 with heading 1. Vehicle Dynamics Control (VDC) System (5750). The last nodes are 6040-6041 on p420 (MEMO page, folio VDC-22). The next section sec_0175 (BRAKES) starts on p421. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > VDC > 1. Vehicle Dynamics Control (VDC) System. It is the correct ordered path from the root. It agrees with the page headers (VDC) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 appears once. Its pages 400-420 do not overlap the previous or next sibling. No page gap was found around it. The sampled p402 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has flagged_for_review = false and verification_score 100. The title and the start on p400 are visible. The MEMO page p420 is the last page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p402 the printed folio is VDC-4: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p402 shows folio VDC-4 and the heading found at the declared page_start 400. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/78 (node /78) has 3 rows and 2 columns: VDC function, TCS function, ABS function. Row names and texts match the printed table. Cell texts are complete.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is printed on p402. It has one table and bullet text. No image is mapped to this page, and nothing was dropped. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to p402, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 402,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is printed on p402. It has one table and bullet text. No image is mapped to this page, and nothing was dropped. No image should be mapped to sec_0174 for this page, and none is.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p422 (BR-2), '1. Front and Rear Disc Brakes' is printed as a numbered main heading under the BRAKES chapter. The tree has sec_0176 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is BRAKES (sec_0175). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Front and Rear Disc Brakes sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0176 is declared as pages 422-423. The nodes start at 6044 on p422 with heading 1. Front and Rear Disc Brakes (6046). The last node is 6064 (folio BR-3) on p423. No p424 header nodes are included. The next section sec_0177 starts on p424. The nodes between belong to this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The section now ends with node 6064 (folio BR-3) on p423. The p424 running header 'Brakes' and 'MASTER CYLINDER' are no longer included.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > BRAKES > 1. Front and Rear Disc Brakes. It is the correct ordered path from the root. It agrees with the page headers (Brakes) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0176 appears once. Its pages 422-423 do not overlap the previous or next sibling. No page gap was found around it. The sampled p422 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0176 has flagged_for_review = false and verification_score 100. The title '1. Front and Rear Disc Brakes' is visible on its first page, so no uncertain boundary needs checking.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0176 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p422 the printed folio is BR-2: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p422 shows folio BR-2 and the heading found at the declared page_start 422. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0283 is mapped to sec_0176 on p422. It holds both drawings of B4H2195C (caliper and hub section) with callouts (1)-(4). Nothing is cut. The legend is in nodes 6051-6052. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0283 holds only the two drawings with their callouts. The header, folio BR-2 and legend are not images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 422,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0283 is mapped to sec_0176 on p422. It holds both drawings of B4H2195C (caliper and hub section) with callouts (1)-(4). Nothing is cut. The legend is in nodes 6051-6052. The images on this page are in the right section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p428 (BR-8), '4. Proportioning Valve' is printed as a numbered main heading under the BRAKES chapter. The tree has sec_0179 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is BRAKES (sec_0175). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 4. Proportioning Valve sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0179 is declared as pages 428-430. The nodes start at 6107 on p428 with heading 4. Proportioning Valve (6109). The last node is 6137 (folio BR-10) on p430. No p431 header nodes (HILL HOLDER, Brakes) are included. The next section sec_0180 starts on p431. The nodes between belong to this section.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The section now ends with node 6137 (folio BR-10) on p430. The p431 running header 'HILL HOLDER' and 'Brakes' are no longer included.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > BRAKES > 4. Proportioning Valve. It is the correct ordered path from the root. It agrees with the page headers (Brakes) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0179 appears once. Its pages 428-430 do not overlap the previous or next sibling. No page gap was found around it. The sampled p428 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0179 has flagged_for_review = false and verification_score 100. The title '4. Proportioning Valve' is visible on its first page, so no uncertain boundary needs checking.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0179 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p428 the printed folio is BR-8: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p428 shows folio BR-8 and the heading found at the declared page_start 428. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0289 and img_0290 are mapped to sec_0179 on p428. They are the two pressure graphs (VDC model, B4H2221C, and Except VDC model, B4H1942B). Axis values and the split point lines are complete. The labels VDC model and Except VDC model are heading nodes 6111-6112. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0289 and img_0290 hold only the graphs and their axis text, which is part of the figure. The folio BR-8 is not an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0289 and img_0290 are mapped to sec_0179 on p428. They are the two pressure graphs (VDC model, B4H2221C, and Except VDC model, B4H1942B). Axis values and the split point lines are complete. The labels VDC model and Except VDC model are heading nodes 6111-6112. The images on this page are in the right section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p377 (DS-7), '3. Rear Axle' is printed as a numbered main heading under the DRIVE SHAFT SYSTEM chapter. The tree has sec_0170 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is DRIVE SHAFT SYSTEM (sec_0167). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 3. Rear Axle sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0170 is declared as pages 376-378. The nodes start at 5464 on p376 with the running header and heading 3. Rear Axle (5466). p378 is the MEMO page (nodes 5496-5499, folio DS-8). The next section sec_0171 starts on p379. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > DRIVE SHAFT SYSTEM > 3. Rear Axle. It is the correct ordered path from the root. It agrees with the page headers (Drive Shaft System) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0170 appears once. Its pages 376-378 do not overlap the previous or next sibling. No page gap was found around it. The sampled p377 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0170 has flagged_for_review = false and verification_score 100. The title '3. Rear Axle' is visible on its first page, so no uncertain boundary needs checking.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0170 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p377 the printed folio is DS-7: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p377 shows folio DS-7 and the heading found at the declared page_start 376. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0259 is mapped to sec_0170 on p377. It shows the full rear drive shaft drawing (B4H2194B) with both joints and both arrows. The callouts (1)-(4) are not in the crop, but they are text nodes 5490-5493 and the legend is in nodes 5486-5489. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0259 holds only the figure. The page header, folio DS-7 and legend are not kept as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0170",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0259 is mapped to sec_0170 on p377. It shows the full rear drive shaft drawing (B4H2194B) with both joints and both arrows. The callouts (1)-(4) are not in the crop, but they are text nodes 5490-5493 and the legend is in nodes 5486-5489. The images on this page are in the right section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p380 (ABS-2), '1. Anti-lock Brake System (ABS)' is printed as a numbered main heading under the ABS chapter. The tree has sec_0172 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is ABS (sec_0171). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Anti-lock Brake System (ABS) sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 is declared as pages 380-398. The nodes start at 5503 on p380 with heading 1. Anti-lock Brake System (ABS) (5505). The last nodes are 5738-5744 on p398 (heading H: G SENSOR and folio ABS-20). The next section sec_0173 (VDC) starts on p399. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > ABS > 1. Anti-lock Brake System (ABS). It is the correct ordered path from the root. It agrees with the page headers (ABS) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 appears once. Its pages 380-398 do not overlap the previous or next sibling. No page gap was found around it. The sampled p380 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 has flagged_for_review = false and verification_score 100. The title '1. Anti-lock Brake System (ABS)' is visible on its first page, so no uncertain boundary needs checking.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0172 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p380 the printed folio is ABS-2: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p380 shows folio ABS-2 and the heading found at the declared page_start 380. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p380. The section table (#/tables/76) is on p381. I checked p381 and its cell text matches the page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0260 is mapped to sec_0172 on p380. It shows the whole car cutaway (B4H2196A) with callouts (1)-(12). The legend is in nodes 5514-5519. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0260 holds only the figure. The header, folio ABS-2 and the legend are not images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0172",
+   "page_sampled": 380,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0260 is mapped to sec_0172 on p380. It shows the whole car cutaway (B4H2196A) with callouts (1)-(12). The legend is in nodes 5514-5519. The images on this page are in the right section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p399 the page title 'VDC' is a chapter divider. The tree has sec_0173 at level 3, below NEW CAR INFORMATION SECTION (level 2) and above its child sec_0174. This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is NEW CAR INFORMATION SECTION (sec_0002). Its child is sec_0174. The PDF structure agrees: VDC sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0173 is declared as pages 399-420, the same range as its child. On p399 it owns only the divider nodes 5745-5747 (VDC title and one contents line). The body starts in sec_0174 on p400. No neighbour nodes are absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > VDC. It is the correct ordered path from the root. It agrees with the page headers (VDC) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0173 appears once. It owns only p399. Its child sec_0174 starts on p400, so there is no gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0173 has flagged_for_review = false and verification_score 100. The title VDC is printed on p399. No uncertain boundary.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0173 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The divider page p399 has no folio. The contents line gives the page as 2 (VDC-2 is physical p400). The scheme is arabic, which is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like its neighbours sec_0171 and sec_0174. The contents line says page 2, and VDC-2 is on p400, which is the start of sec_0174. This is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p399 is the VDC divider page. It shows only the title, a one-line contents entry and a black round tab at the bottom right. No figure is printed. No image is mapped to sec_0173. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0173. The black tab at the bottom right is decoration and was not kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0173",
+   "page_sampled": 399,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p399 is the VDC divider page. It shows only the title, a one-line contents entry and a black round tab at the bottom right. No figure is printed. No image is mapped to sec_0173. No image should be mapped to sec_0174 for this page, and none is.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p400 (VDC-2), '1. Vehicle Dynamics Control (VDC) System' is printed as a numbered main heading under the VDC chapter. The tree has sec_0174 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is VDC (sec_0173). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Vehicle Dynamics Control (VDC) System sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 is declared as pages 400-420. The nodes start at 5748 on p400 with heading 1. Vehicle Dynamics Control (VDC) System (5750). The last nodes are 6040-6041 on p420 (MEMO page, folio VDC-22). The next section sec_0175 (BRAKES) starts on p421. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > VDC > 1. Vehicle Dynamics Control (VDC) System. It is the correct ordered path from the root. It agrees with the page headers (VDC) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 appears once. Its pages 400-420 do not overlap the previous or next sibling. No page gap was found around it. The sampled p400 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has flagged_for_review = false and verification_score 100. The title and the start on p400 are visible. The MEMO page p420 is the last page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p400 the printed folio is VDC-2: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p400 shows folio VDC-2 and the heading found at the declared page_start 400. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p400. The legend is plain text lines.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0271 is mapped to sec_0174 on p400. It shows the whole car cutaway (B4H0579A) with nothing cut. The callouts (1)-(19) are text nodes 5753-5777 and the legend is in nodes 5779-5786. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0271 holds only the drawing. The folio VDC-2 and the legend are not images. The callout numbers are kept as short text nodes (5753-5777).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 400,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0271 is mapped to sec_0174 on p400. It shows the whole car cutaway (B4H0579A) with nothing cut. The callouts (1)-(19) are text nodes 5753-5777 and the legend is in nodes 5779-5786. The images on this page are in the right section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p401 (VDC-3), '1. Vehicle Dynamics Control (VDC) System' is printed as a numbered main heading under the VDC chapter. The tree has sec_0174 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is VDC (sec_0173). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Vehicle Dynamics Control (VDC) System sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 is declared as pages 400-420. The nodes start at 5748 on p400 with heading 1. Vehicle Dynamics Control (VDC) System (5750). The last nodes are 6040-6041 on p420 (MEMO page, folio VDC-22). The next section sec_0175 (BRAKES) starts on p421. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > VDC > 1. Vehicle Dynamics Control (VDC) System. It is the correct ordered path from the root. It agrees with the page headers (VDC) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 appears once. Its pages 400-420 do not overlap the previous or next sibling. No page gap was found around it. The sampled p401 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has flagged_for_review = false and verification_score 100. The title and the start on p400 are visible. The MEMO page p420 is the last page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p401 the printed folio is VDC-3: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p401 shows folio VDC-3 and the heading found at the declared page_start 400. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p401.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0272 and img_0273 are mapped to sec_0174 on p401. They are the two figures B4H1634B (oversteer) and B4H1635B (understeer). Both are complete. Callout numbers and legends are in text nodes 5793-5802. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0272 and img_0273 hold only the two car drawings. No header, folio or legend text is in the crops.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 401,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0272 and img_0273 are mapped to sec_0174 on p401. They are the two figures B4H1634B (oversteer) and B4H1635B (understeer). Both are complete. Callout numbers and legends are in text nodes 5793-5802. The images on this page are in the right section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p406 (VDC-8), '1. Vehicle Dynamics Control (VDC) System' is printed as a numbered main heading under the VDC chapter. The tree has sec_0174 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is VDC (sec_0173). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Vehicle Dynamics Control (VDC) System sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 is declared as pages 400-420. The nodes start at 5748 on p400 with heading 1. Vehicle Dynamics Control (VDC) System (5750). The last nodes are 6040-6041 on p420 (MEMO page, folio VDC-22). The next section sec_0175 (BRAKES) starts on p421. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > VDC > 1. Vehicle Dynamics Control (VDC) System. It is the correct ordered path from the root. It agrees with the page headers (VDC) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 appears once. Its pages 400-420 do not overlap the previous or next sibling. No page gap was found around it. The sampled p406 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has flagged_for_review = false and verification_score 100. The title and the start on p400 are visible. The MEMO page p420 is the last page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p406 the printed folio is VDC-8: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p406 shows folio VDC-8 and the heading found at the declared page_start 400. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p406, and none was extracted.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is printed on p406. It has only text (heading F, 1. DURING NORMAL BRAKING, NOTE). The drawings for this part are on p407 (img_0276). Nothing was dropped. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to p406, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 406,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is printed on p406. It has only text (heading F, 1. DURING NORMAL BRAKING, NOTE). The drawings for this part are on p407 (img_0276). Nothing was dropped. No image should be mapped to sec_0174 for this page, and none is.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p413 (VDC-15), '1. Vehicle Dynamics Control (VDC) System' is printed as a numbered main heading under the VDC chapter. The tree has sec_0174 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is VDC (sec_0173). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Vehicle Dynamics Control (VDC) System sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 is declared as pages 400-420. The nodes start at 5748 on p400 with heading 1. Vehicle Dynamics Control (VDC) System (5750). The last nodes are 6040-6041 on p420 (MEMO page, folio VDC-22). The next section sec_0175 (BRAKES) starts on p421. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > VDC > 1. Vehicle Dynamics Control (VDC) System. It is the correct ordered path from the root. It agrees with the page headers (VDC) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 appears once. Its pages 400-420 do not overlap the previous or next sibling. No page gap was found around it. The sampled p413 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has flagged_for_review = false and verification_score 100. The title and the start on p400 are visible. The MEMO page p420 is the last page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p413 the printed folio is VDC-15: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p413 shows folio VDC-15 and the heading found at the declared page_start 400. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p413. The legend is plain text lines, not a table.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0279 is mapped to sec_0174 on p413. It shows the full hydraulic diagram B4H1640B with callouts (1)-(22) and the M motor. Nothing is cut. The legend is in nodes 5966-5973. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0279 holds only the diagram. The header, folio VDC-15 and legend are not images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 413,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0279 is mapped to sec_0174 on p413. It shows the full hydraulic diagram B4H1640B with callouts (1)-(22) and the M motor. Nothing is cut. The legend is in nodes 5966-5973. The images on this page are in the right section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p414 (VDC-16), '1. Vehicle Dynamics Control (VDC) System' is printed as a numbered main heading under the VDC chapter. The tree has sec_0174 at level 4, below level 3 (chapter) and level 2 (NEW CAR INFORMATION SECTION). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is VDC (sec_0173). It has no children, and none is expected: the printed subsections (A:, B:, ...) are headings inside the section. The PDF structure agrees: 1. Vehicle Dynamics Control (VDC) System sits inside that chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 is declared as pages 400-420. The nodes start at 5748 on p400 with heading 1. Vehicle Dynamics Control (VDC) System (5750). The last nodes are 6040-6041 on p420 (MEMO page, folio VDC-22). The next section sec_0175 (BRAKES) starts on p421. The nodes between belong to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path is 2002 LEGACY SERVICE MANUAL > NEW CAR INFORMATION SECTION > VDC > 1. Vehicle Dynamics Control (VDC) System. It is the correct ordered path from the root. It agrees with the page headers (VDC) and the chapter bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 appears once. Its pages 400-420 do not overlap the previous or next sibling. No page gap was found around it. The sampled p414 content is in this section only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has flagged_for_review = false and verification_score 100. The title and the start on p400 are visible. The MEMO page p420 is the last page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0174 has structural_source = toc. The title is a real bookmark and it matches the printed heading on its first page. No inferred structure here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p414 the printed folio is VDC-16: a chapter prefix and an arabic number. The tree uses numbering_scheme = arabic. This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like the neighbouring sections. Page p414 shows folio VDC-16 and the heading found at the declared page_start 400. The mapping is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p414, and none was extracted.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is printed on p414. It has only the heading 5. PRESSURE INCREASE CONTROL, two paragraphs and a NOTE. Nothing was dropped. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to p414, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0174",
+   "page_sampled": 414,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is printed on p414. It has only the heading 5. PRESSURE INCREASE CONTROL, two paragraphs and a NOTE. Nothing was dropped. No image should be mapped to sec_0174 for this page, and none is.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

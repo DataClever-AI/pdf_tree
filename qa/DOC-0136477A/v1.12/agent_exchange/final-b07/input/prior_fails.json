@@ -1,0 +1,134 @@
+{
+ "note": "Latest reviewed FAIL rows from older versions (approved findings_log.csv). Context only, not instructions.",
+ "rows": [
+  {
+   "v1_12_section_id": "sec_0207",
+   "title": "12.2.3 GDT Report Download",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0207",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p170.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0209",
+   "title": "13.1 On Screen Help",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1",
+   "old_section_id": "sec_0209",
+   "old_severity": "Critical",
+   "bug_id": "BUG-001",
+   "old_evidence": "p171 is the opening page of Chapter 13. Contents table (6 entries: On Screen Help...171, Monitor Status Lights...172, etc.) assigned to sec_0209 (13.1, level 2) instead of the chapter root sec_0208.",
+   "old_notes": "14th occurrence of the chapter-opening pattern.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0209",
+   "title": "13.1 On Screen Help",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0209",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p171.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0220",
+   "title": "13.5.4 SVR Faults/Alerts",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1",
+   "old_section_id": "sec_0220",
+   "old_severity": "Critical",
+   "bug_id": "BUG-001",
+   "old_evidence": "p180: sec_0220's own content ('13.5.4 SVR Faults/Alerts' heading + 'Table 13-10' with its 2 visible rows) is correct, BUT the section ALSO includes 'Table 13-9 (continued)' (5 rows: Alert: iCO - Unstable Baseline / Curve Not Detected / Extended Curve / Irregular Curve / Warm Injectate), which is visually positioned ABOVE the '13.5.4' heading and belongs to the PRECEDING section '13.5.3 iCO Faults/Alerts' (sec_0219). Confirmed: sec_0219's own page range is 179-179 only, even though Table 13-9 visibly continues onto p180 - the continuation rows are missing from sec_0219 and misplaced into sec_0220 instead.",
+   "old_notes": "NEW VARIANT of the reading_order-vs-heading-transition bug (previously only seen at chapter openings, now confirmed mid-chapter too, at any heading transition where a table's continuation crosses it). Broadens the root-cause characterization: this is not limited to chapter-opening Contents boxes - it's a general risk whenever a table spans/ends right at a section-heading boundary. Escalate as the same underlying section_matcher.py reading_order issue, generalized.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0231",
+   "title": "13.7.3 Oximetry General Troubleshooting",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0231",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p190.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0233",
+   "title": "A.1 Essential Performance Characteristics",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-page_start_end",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0233",
+   "old_severity": "Low",
+   "bug_id": "BUG-014",
+   "old_evidence": "The section pages are 191 to 192. The new page_end 192 is correct. On p192, the 'Table A-1 (continued)' caption and the table (#/tables/114) print above the A.2 heading. They belong to A.1. There is a start problem on p191. The nodes #/texts/2770 'A' and #/texts/2771 'Appendix' are the chapter tab printed above the title. Folio #/texts/2772 '191' is also inside. These are boilerplate.",
+   "old_notes": "Boilerplate (the Appendix tab and the folio), so Low. verify_claims expects Critical for a node above the heading, but the node is boilerplate, so the Sprint pattern Low applies. The v1.1 problem 'page_end one page short' is fixed by BUG-014.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0233",
+   "title": "A.1 Essential Performance Characteristics",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0233",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "img_0256 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 191; it is decorative and was retained as an image of sec_0233.",
+   "old_notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "row_in_v1_12_template": true
+  }
+ ],
+ "mitigation_check_rows": {
+  "sec_0207": [
+   {
+    "page": 170,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0213": [
+   {
+    "page": 173,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0217": [
+   {
+    "page": 177,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0220": [
+   {
+    "page": 180,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0240": [
+   {
+    "page": 198,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0242": [
+   {
+    "page": 200,
+    "reasons": "base-pair"
+   }
+  ]
+ }
+}

@@ -1,0 +1,1344 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"9. Compressor\" (node #/texts/6857, p486) is a top heading in the HVAC chapter, one level below the chapter title. Level 4 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0186 (HVAC SYSTEM). child_sections is empty. The sub-headings \"A: LHD MODEL\" and \"B: RHD MODEL\" are nodes inside sec_0195, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0195 owns p486-499. It begins on p486 with the page header nodes and heading #/texts/6857. It ends with the AC-27 folio (#/texts/7012) on p499. The p488 nodes 6883-6891 (Discharge text, legend, B4H0747A, AC-16) all belong here. Next section sec_0196 starts on p500.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \"/HVAC SYSTEM (HEATER, VENTILATOR AND A/C)/9. Compressor\". This is the right chain: manual, chapter, system, topic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. Nodes run 6855-7012 in order. Each page 486-499 has its own folio AC-14 to AC-27 inside this section. The p488 text is not repeated in sec_0194 or sec_0196.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0195. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0195. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading \"9. Compressor\" shows on physical p486, the page_start. The p499 render shows folio AC-27, the last page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p488 has one figure (B4H0747A, discharge cut-away with labels 1-7). It was extracted as img_0348 (1150x1075). No figure on p488 was dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 15 images in sec_0195 are real figures (for example img_0345 on p486 and img_0348 on p488). No logo, rule or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 488,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0348 is on p488 and is mapped to sec_0195. The p488 text \"Discharge\" is in sec_0195, so the owner is correct. There are no sibling sections on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"11.Receiver Drier (LHD Model)\" (#/texts/7036) is a topic heading at the same size as siblings 10 and 12. Level 4 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0186 (HVAC SYSTEM). It has no children. Siblings sec_0196 (10. Condenser) and sec_0198 (12. Modulator) are at the same level.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0197 owns only p502 (nodes 7034-7050). It begins with the page header and heading \"11.Receiver Drier\" and ends with the AC-30 folio (#/texts/7050). sec_0196 ends on p501 and sec_0198 starts on p503. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../HVAC SYSTEM (HEATER, VENTILATOR AND A/C)/11. Receiver Drier (LHD Model)\". It matches the visible heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps or duplicates. The p502 page has the intro text, the 1) to 3) list, the legend (1)-(9) and the folio, all in nodes 7034-7050.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0197. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0197. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p502, which is page_start and page_end. The folio is AC-30.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p502 has one figure with two views (side section and top view). It is extracted as vector image img_0362 (651x557). Both views and labels (1)-(9) are visible. The legend table text is in nodes 7044-7048.",
+   "notes": "verify_claims reports an embedded raster on this page that is not in images_v1.json. The visible figure is extracted as the vector image (img_0362), which I checked against the render and found complete. Probably the raster was replaced by the vector render of the same region. Not a lost figure.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0362 is the real drawing. No decoration was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 502,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0362 is on p502 and mapped to sec_0197. The page has only this one section, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"15.Expansion Valve\" (#/texts/7114) is a topic heading with the same style as siblings. Level 4 matches. p508 shows \"2. FUNCTION\", a sub-point inside this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0186 (HVAC SYSTEM). It has no children. Neighbours sec_0200 (14. Evaporator) and sec_0202 (16. Compressor Clutch) are siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0201 owns p507-509 (nodes 7112-7147). It starts at heading 7114 on p507 and ends with the AC-37 folio (#/texts/7147). sec_0200 ends on p506 and sec_0202 starts on p510. p508 content (\"2. FUNCTION\", text, H4H1124, AC-36) is all inside.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../HVAC SYSTEM (HEATER, VENTILATOR AND A/C)/15. Expansion Valve\". This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. Nodes 7112-7147 follow p507, p508, p509 in order. The LHD and RHD parts are both inside this one section, as in the PDF.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0201. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0201. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Heading \"15.Expansion Valve\" is on physical p507 (page_start). Folios AC-35 to AC-37 follow in order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p508 has one figure (H4H1124, valve with P1/P2/F arrows). It is img_0368 (585x899). It is not dropped. The p507 and p509 figures are also extracted (img_0367, img_0369, img_0370).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 4 images in sec_0201 are real valve drawings. No header or rule kept as an image. On p509, img_0369 is cropped inside the labels \"Low-pressure (To evaporator)\" and \"High-pressure (From modulator)\". Their text is in nodes 7139-7140, so nothing is lost.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0201",
+   "page_sampled": 508,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0368 is on p508 and belongs to sec_0201. No other section shares p508.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"18.Automatic Air Conditioning\" (#/texts/7188, p514) is a topic heading like its siblings. Level 4 matches. On p515 the \"1. AUTOMATIC CONTROL OPERATION\" heading is a sub-point.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0186 (HVAC SYSTEM). child_sections is empty. Neighbours are sec_0203 (17. Compressor Control System) and sec_0205 (AIRBAG SYSTEM, a chapter).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0204 owns p514-532 (nodes 7186-7429 plus table #/tables/84). It starts at heading 7188 on p514. It ends with \"MEMO\" (#/texts/7428) and the AC-60 folio on p532. sec_0203 ends on p513 and sec_0205 starts on p533. p515 nodes 7206-7222 are all inside.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../HVAC SYSTEM (HEATER, VENTILATOR AND A/C)/18. Automatic Air Conditioning\". This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. Nodes run in page order from p514 to p532. No p515 text is repeated in another section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0204. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0204. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p514 (page_start). Folios AC-42 to AC-60 run in order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The sampled p515 has no table. The only table is #/tables/84 (2 rows: 18.0 MAX COOL / 32.0 MAX HOT with TAO values), on p523. The p523 render is not in this batch, so the cell values could not be checked on the page. The values agree with the p523 text nodes 7317-7320 (18.0 and 32.0 deg C).",
+   "notes": "Not verified on the page because p523 is not rendered in this batch. Left as PASS at low confidence for the human reviewer.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p515 has the mode-selector icon strip (B4H1314B). It is img_0376 (1466x428) and shows all four icons. Not dropped. Inline icons in the text \"light switch to the “ ” or “ ” position\" (node 7212) show as empty quotes in the text.",
+   "notes": "The empty quotes in node 7212 come from inline symbols in the text, probably not from the image filters. They are the light-switch icons and the meaning is partly in the words. Not graded as a FAIL.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0375 (p514) and img_0376 (p515) are real figures. The other images in this section are also diagrams. No decoration kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0204",
+   "page_sampled": 515,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0376 is on p515 and mapped to sec_0204. The p515 text and the figure are both owned by sec_0204.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"1. Airbag System\" (#/texts/7434, p534) is a topic heading, same style as \"2. Construction\" in sec_0207. Level 4 matches. \"B: FUNCTION\" on p535 is a sub-point.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0205 (AIRBAG SYSTEM chapter). It has no children. sec_0207 (2. Construction) is the next sibling.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0206 owns p534-536 (nodes 7432-7481). It starts at the header and heading on p534 and ends with the AB-4 folio (#/texts/7481) on p536. The p537 header lines \"CONSTRUCTION\" and \"Airbag System\" are now the first nodes of sec_0207 (7482-7483), not at the end of sec_0206. p535 nodes 7445-7466 are inside.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../AIRBAG SYSTEM/1. Airbag System\". This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. Nodes 7432-7481 run p534 to p536 in order. No p535 text appears in sec_0207.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0206. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0206. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p534 (page_start). Folios AB-2 to AB-4 are in order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p535 has one big figure (B5H0504B, driver and passenger airbag steps). It is vector image img_0396 (1074x965) with all labels and the side text. Not dropped.",
+   "notes": "verify_claims reports an embedded raster on this page that is not in images_v1.json. The visible figure is extracted as the vector image (img_0396), which I checked against the render and found complete. Probably the raster was replaced by the vector render of the same region. Not a lost figure.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0395, img_0396 and img_0397 are real figures. No decoration kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0396 is on p535 and mapped to sec_0206. The figure sits under \"1. FRONT AIRBAGS\", which belongs to sec_0206.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"2. Construction\" (#/texts/7484, p537) is a topic heading like \"1. Airbag System\". Level 4 matches. \"3. AIRBAG HARNESS-TO-BODY HARNESS CONNECTOR\" on p542 is a sub-point.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0205 (AIRBAG SYSTEM). It has no children. Siblings are sec_0206 and sec_0208 (SEAT BELT SYSTEM, a chapter).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0207 owns p537-546 (nodes 7482-7614). It starts with the p537 header lines and heading 7484. It ends with \"MEMO\" and the AB-14 folio (#/texts/7614) on p546. sec_0206 ends on p536. p542 nodes 7559-7567 are inside.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../AIRBAG SYSTEM/2. Construction\". This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. Nodes 7482-7614 run p537 to p546 in order. The p542 text is not repeated elsewhere.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0207. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0207. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p537 (page_start). Folios AB-5 to AB-14 are in order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p542 has one figure (B5H0841A, connector in two views). It is img_0405 (2835x828), cropped to the drawing with the (A) and (B) labels. Not dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 13 images in sec_0207 are real figures. Vector crops img_0409 and img_0410 are drawings. No decoration kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 542,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0405 is on p542 and mapped to sec_0207. No other section shares p542.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"1. Seat Belt\" (#/texts/7620, p548) is a topic heading, one level below chapter SEAT BELT SYSTEM. Level 4 matches. \"B:\" and \"C:\" on p549 are sub-points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0208 (SEAT BELT SYSTEM). It has no children. This is the only topic under that chapter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0209 owns p548-554 (nodes 7618-7707). It starts with the p548 header and heading 7620. It ends with the SB-8 folio (#/texts/7707) on p554. The next section sec_0210 starts on p555 with its own heading. p549 nodes 7625-7636 are inside.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../SEAT BELT SYSTEM/1. Seat Belt\". This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. Nodes 7618-7707 run p548 to p554 in order. No p549 text is repeated elsewhere.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0209. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0209. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p548 (page_start). Folios SB-2 to SB-8 are in order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p549 has two figures (B5H0792A sedan seat, B5H0606A wagon ceiling). They are img_0412 (1777x1641) and img_0413 (1378x826). Both are complete. Not dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 9 images in sec_0209 are real figures. No decoration kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0412 and img_0413 are on p549 and mapped to sec_0209. The two figures sit under \"B:\" and \"C:\", both owned by sec_0209.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"WIPER AND WASHER SYSTEMS\" (#/texts/7708) is a chapter opener page with the \"WW\" tab. It is level 3, the same as the other chapters in NEW CAR INFORMATION SECTION. This matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0002 (NEW CAR INFORMATION SECTION). Children sec_0211, sec_0212 and sec_0213 match the three contents lines (1. Front, 2. Rear, 3. Deicer). They start on p556, p558 and p559.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section owns only 3 nodes, all on p555: the title 7708, \"WW\" 7709 and table #/tables/86. The p556 running header lines (“Wiper and Washer Systems”, “FRONT WIPER AND WASHER”) are not in sec_0210 any more. page_end 560 covers the children, as for other chapters.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is \".../NEW CAR INFORMATION SECTION/WIPER AND WASHER SYSTEMS\". This is correct for a level-3 chapter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. The opener page content (title, tab, contents table) is here and appears nowhere else. Children cover p556-560. The p560 MEMO page is in the last child range.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0210. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0210. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The chapter title is on physical p555 (page_start). The contents list gives chapter-relative pages 2, 4 and 5, which match children starting on p556, p558, p559.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The table #/tables/86 has the three contents lines: 1. Front Wiper and Washer (2), 2. Rear Wiper and Washer (4), 3. Windshield Wiper Deicer (5). It matches the render. The header cells are empty except \"Page\". Dot leaders are kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p555 has no figure. The black \"WW\" tab and the rule are page decoration, not content. No image was extracted for sec_0210, which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images are mapped to sec_0210. Nothing decorative was kept. The \"WW\" tab is only text node 7709.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0210",
+   "page_sampled": 555,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There are no images on p555, and none are mapped. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"1. Power Window\" (#/texts/7784) is a topic heading under GLASS/WINDOWS/MIRRORS. Level 4 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0214 (GLASS/WINDOWS/MIRRORS). It has no children. sec_0216 (BODY STRUCTURE) is the next chapter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0215 owns only p562 (nodes 7782-7830). It starts with the page header lines and heading 7784 and ends with the GW-2 folio (#/texts/7830). The next chapter sec_0216 starts on p563. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../GLASS/WINDOWS/MIRRORS/1. Power Window\". This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. The p562 text, notes and circuit labels are in nodes 7782-7830 and not elsewhere. The circuit labels are split into many short nodes, but all are here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0215. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0215. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p562, which is page_start and page_end. The folio is GW-2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p562 has one circuit diagram (B6H1684A). It is vector image img_0424 (1051x820), complete with all labels. Not dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0424 is the real diagram. No decoration kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0215",
+   "page_sampled": 562,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0424 is on p562 and mapped to sec_0215. The page has only this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"6. Anti Chipping Coat (ACC) Application\" (#/texts/7874) is a topic heading under BODY STRUCTURE. Level 4 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0216 (BODY STRUCTURE). It has no children. Siblings sec_0221 (5. Painting) and sec_0223 (7. Sealer Application) are at the same level.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0222 owns only p569 (nodes 7872-7876): header, heading, figure code B5H0831 and folio BS-7. It ends with BS-7 (#/texts/7876). The p570 header lines \"Body Structure\" and \"SEALER APPLICATION\" are not in this section any more. sec_0223 starts on p570.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \".../BODY STRUCTURE/6. Anti Chipping Coat (ACC) Application\". This is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. The 5 nodes cover the page text. The figure is image img_0429. No other section repeats them.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0222. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0222. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p569, which is page_start and page_end. The folio is BS-7.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p569 has one figure (body shell with dotted ACC areas, B5H0831). It is img_0429 (2835x1517), complete. Not dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0429 is the real figure. No decoration kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0222",
+   "page_sampled": 569,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0429 is on p569 and mapped to sec_0222. The page has only this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading \"9. Compressor\" (node #/texts/6857, p486) is a top heading in the HVAC chapter, one level below the chapter title. Level 4 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0186 (HVAC SYSTEM). child_sections is empty. The sub-headings \"A: LHD MODEL\" and \"B: RHD MODEL\" are nodes inside sec_0195, not bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0195 owns p486-499. On p497 the section \"3. PRESSURE RELIEF VALVE\" (#/texts/6986), the CAUTION notes and the AC-25 folio (#/texts/6994) are inside it. Section start is p486 and end is p499 with the AC-27 folio. Next section sec_0196 starts on p500.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with \"/HVAC SYSTEM (HEATER, VENTILATOR AND A/C)/9. Compressor\". This is the right chain: manual, chapter, system, topic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gaps. Nodes run 6855-7012 in order. P497 nodes 6984-6994 are only in sec_0195. Nothing is repeated in sec_0194 or sec_0196.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is high for sec_0195. The heading is on its declared page in the render. No title mismatch is visible, so no review flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" for sec_0195. The heading text and page match the embedded bookmark. Nothing is inferred.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is \"arabic\". Bookmark targets are plain physical page numbers, and the printed folios are chapter-prefixed numbers in sequence. No roman or other scheme change is seen in the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading \"9. Compressor\" shows on physical p486, the page_start. The p499 render shows folio AC-27, the last page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p497 has two drawings (pressure relief valve section and the discharge-rate graph). Both are in img_0357 (1300x2314). The graph axis labels and values (2.76, 3.43, 4.14, 113) are visible. The caption line is not in the crop, but it is text node #/texts/6992.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0357 holds only the two real drawings. No header, folio or rule was kept as an image on p497.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0195",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0357 is on p497 and mapped to sec_0195. The headings \"3. PRESSURE RELIEF VALVE\" and the figure are both owned by sec_0195, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

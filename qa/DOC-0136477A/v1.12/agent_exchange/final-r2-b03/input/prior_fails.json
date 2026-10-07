@@ -1,0 +1,147 @@
+{
+ "note": "Latest reviewed FAIL rows from older versions (approved findings_log.csv). Context only, not instructions.",
+ "rows": [
+  {
+   "v1_12_section_id": "sec_0066",
+   "title": "5.3.2 Graphical Trend Monitoring View",
+   "page_sampled": 69,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0066",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p69. Continuing pattern.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0068",
+   "title": "5.3.2.2 Intervention Events",
+   "page_sampled": 71,
+   "checklist_ref": "5.6-table_content",
+   "old_version": "v1.10",
+   "old_section_id": "sec_0068",
+   "old_severity": "Low",
+   "bug_id": "BUG-008",
+   "old_evidence": "On p71 Table 5-2 (#/tables/46) has the header and 4 rows. Intervention, Positional, Fluids and Custom, the color names (green) (purple) (blue) (gray) and the types are in the right columns and order. In the Type cell the lines of one row (Inotrope Vasodilator Vasopressor PEEP) are joined by spaces. The colored triangle icons are not in the text.",
+   "old_notes": "Cell lines are merged but values and order are kept. The color names stay in the text. Low by the contract. Same text as round one.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0076",
+   "title": "5.3.6.2 Historic Physiology Screen",
+   "page_sampled": 76,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0076",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p76. Continuing pattern.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0076",
+   "title": "5.3.6.2 Historic Physiology Screen",
+   "page_sampled": 76,
+   "checklist_ref": "5.5-image_section_mapping",
+   "old_version": "v1",
+   "old_section_id": "sec_0076",
+   "old_severity": "Medium",
+   "bug_id": "BUG-001",
+   "old_evidence": "'Figure 5-13 Cockpit monitoring screen' (691x529px) is visually captioned under '5.3.7 Cockpit Screen' (sec_0077, a SIBLING sharing p76), but is mapped to sec_0076 (5.3.6.2 Historic Physiology Screen) instead - sec_0076 has no figure of its own in its text. sec_0077 has zero images mapped to it despite owning this figure.",
+   "old_notes": "New defect type, distinct from the chapter-opening Contents-table bug. Matches EVALUATION_GUIDE.md SS5.5's own documented risk ('images on pages shared by sibling sections') and the Medium-severity rubric example verbatim ('Image assigned to the wrong sibling section on a shared page'). Root cause likely in pipeline.py::_map_images_to_sections page-based mapping picking the wrong sibling when multiple sections share a page - worth checking against section_matcher.py's reading_order for a fix, similar to how text blocks are disambiguated.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0085",
+   "title": "5.4.2 Historical Graphical Trends",
+   "page_sampled": 82,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1",
+   "old_section_id": "sec_0085",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "2800x200 divider present at p82. Continuing pattern.",
+   "old_notes": "Same recommendation as prior occurrences.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0095",
+   "title": "5.7.2 Navigation Icons",
+   "page_sampled": 89,
+   "checklist_ref": "5.5-filters_discarding",
+   "old_version": "v1.10",
+   "old_section_id": "sec_0095",
+   "old_severity": "Low",
+   "bug_id": "BUG-017",
+   "old_evidence": "On p88 the Home, Return, Enter and Cancel round icons (left of the text) and the Value button picture are not in the image output. Only the List button, Toggle button and keypad were kept (img_0060-0062).",
+   "old_notes": "Probably small-image filter. Impact is low: each icon is named in text nodes #/texts/1187-1191. verify_claims expects Critical for a raster on p89, but that raster is the keyboard figure and it is kept as vector render img_0063 (763x416), so it is not lost. Severity stays Low for the small p88 icons only.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0098",
+   "title": "6.1.1 New Patient",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-filters_discarding",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0098",
+   "old_severity": "Low",
+   "bug_id": "BUG-017",
+   "old_evidence": "Small icons are in the render but not in the extracted images. On p91 there is the settings icon. On p92 there are the enter icon (step 13) and the home icon (step 16). The text next to each icon names it, for example 'Touch the enter icon'.",
+   "old_notes": "Small icon dropped, meaning stated in text = Low. The images are the same as in v1.1, where this row was PASS. So this is a grading difference, not a pipeline regression.",
+   "row_in_v1_12_template": true
+  },
+  {
+   "v1_12_section_id": "sec_0098",
+   "title": "6.1.1 New Patient",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "old_version": "v1.2",
+   "old_section_id": "sec_0098",
+   "old_severity": "Low",
+   "bug_id": "BUG-004",
+   "old_evidence": "img_0123 and img_0125 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 90; it is decorative and was retained as an image of sec_0098.",
+   "old_notes": "Known footer divider issue, BUG-004. Sprint pattern: decorative element (rule, footer logo) kept as an image = Low.",
+   "row_in_v1_12_template": true
+  }
+ ],
+ "mitigation_check_rows": {
+  "sec_0066": [
+   {
+    "page": 69,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0068": [
+   {
+    "page": 71,
+    "reasons": "base-pair; bug-occurrence"
+   }
+  ],
+  "sec_0072": [
+   {
+    "page": 74,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0082": [
+   {
+    "page": 80,
+    "reasons": "base-pair"
+   }
+  ],
+  "sec_0090": [
+   {
+    "page": 85,
+    "reasons": "random-check"
+   }
+  ],
+  "sec_0103": [
+   {
+    "page": 94,
+    "reasons": "base-pair"
+   }
+  ]
+ }
+}

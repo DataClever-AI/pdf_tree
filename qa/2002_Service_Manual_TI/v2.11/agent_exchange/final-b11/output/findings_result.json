@@ -1,0 +1,504 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0247 CRUISE CONTROL SYSTEM is level 3 under NEW CAR INFORMATION SECTION (level 2). On p629 it is a chapter title with the \"CC\" tab. Its child sec_0248 is level 4.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002 and its child_sections list sec_0247. Child sec_0248 (\"1. Cruise Control\", p630-638) lists sec_0247 as parent. This matches the p629 contents line \"1. Cruise Control ... 2\".",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section has 3 nodes, all on p629: #/texts/8619 title, #/texts/8620 \"CC\", #/texts/8621 contents line. The p630 running header nodes (#/texts/8622, 8623) now belong to sec_0248. page_end 638 is the end of the child sec_0248.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The running header lines of p630 are no longer in sec_0247.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/CRUISE CONTROL SYSTEM. This is the correct order for a chapter-cover page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p629 text appears once, in sec_0247. Previous section sec_0246 ends on p628 and next sec_0248 starts on p630. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is visible on p629, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The chapter title and its contents line are visible on p629, and the section starts there.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Chapter pages are numbered CC-2, CC-3 and so on. The cover page p629 has no folio.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p629 is the chapter cover, and the child starts at physical p630 (printed CC-2). This is consistent with the TOC page numbers.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p629 has only text, a rule and a black index tab on the right edge. No meaningful figure is lost.",
+   "notes": "The black tab is decoration only.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0247 in images.json. The black tab on p629 and the rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 629,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p629 has no figure to map. No image is assigned to sec_0247, which is correct. All figures of p630-638 go to sec_0248.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"1. Cruise Control\" is level 4 under the level 3 chapter sec_0247. On p630 it is a numbered heading with A:, B: subtopics under it.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0247, which lists sec_0248 as child. No child sections. The A: to L: topics are headings inside the section, which is fine.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on p630 with #/texts/8624 \"1. Cruise Control\" after the running header nodes. It ends on p638 with \"MEMO\" (#/texts/8726) and folio CC-10 (#/texts/8727). The next chapter starts on p639. Sampled p635 content (H, I, J) is all in sec_0248.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path ends with CRUISE CONTROL SYSTEM/1. Cruise Control. This matches the visible chapter and heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes run in order from p630 to p638 with no jumps. The p635 text (H: CANCEL SIGNALS, I:, J:) appears once. Previous sec_0247 ends on p629 and next sec_0249 starts on p639.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is visible on p630.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading \"1. Cruise Control\" is on p630 as the TOC says.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Folios CC-2 to CC-10 are visible (p635 shows CC-7). This is a prefixed arabic scheme inside one chapter.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p635 shows folio CC-7. The chapter starts at CC-2 on p630, so p635 is CC-7. The p629 contents line says page 2, which matches p630.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p635 has no table. The only table in sec_0248 is #/tables/99 on p631 (\"C: CONTROL AND OPERATION\"). I rendered p631. All 8 rows match the page: Constant speed, Speed setting, Deceleration, Acceleration, Resume, Manual cancel, Low speed limit and Motor control. The text is complete and each name stays with its description.",
+   "notes": "No table on the sampled page. I checked #/tables/99 on p631 instead.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p635 has one figure, the throttle cam drawing B6H1300A with labels (1), (2), (3). It is img_0483 (2270x1260). I opened it and it shows the full drawing and all three labels. The figures of p630, p632-634, p636 are also in images.json.",
+   "notes": "I also opened img_0478, 0479, 0480, 0481, 0482 and 0484. All show complete figures. p631 has only a table and p637 only text, so nothing is lost there.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Eight images (img_0478 to img_0484) are mapped to sec_0248. I opened them all. Each is a real figure. The crops have no header, footer or body text.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0248",
+   "page_sampled": 635,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0483 (p635, throttle cam with cables) belongs to \"J: ENGINE THROTTLE\" in sec_0248. The other images (p630, 632, 633 x2, 634, 636) are also on pages owned by sec_0248. No sibling shares these pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"2. Trailer Lights Connector\" is level 4 under the level 3 chapter sec_0249. The p641 heading is a numbered heading with \"A: DESCRIPTION\" below it.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0249, which lists sec_0251 as a child. It is the second contents entry on p639. No children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on p641 with the running header nodes and the heading #/texts/8758. It ends on p642 with \"MEMO\" (#/texts/8770) and folio EI-4 (#/texts/8771). All p641 text, the legend and \"B6H1434A\" are in this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path ends with EXTERIOR/INTERIOR TRIM/2. Trailer Lights Connector. It matches the visible chapter and heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous sec_0250 is only p640. sec_0251 covers p641-642 once. The p641 legend text appears once, as nodes #/texts/8761 to 8765.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100. The heading is visible on p641.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading is on p641 as the TOC says (printed page 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. p641 shows folio EI-3 and p642 shows EI-4. This matches the chapter-prefixed scheme.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The TOC says printed page 3, and EI-3 is on physical p641 (cover p639 = page 1). It is consistent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Sampled p642 has no table (MEMO page). The section table #/tables/100 is on p641 and its text is the empty placeholder \"[Table 0x0]\". The p641 render shows a 2x5 connector grid with pins (1) to (10). It is a drawing, not a data table. The pin names are in the legend text nodes #/texts/8761 to 8765, so no information is lost. The figure itself is now img_0486.",
+   "notes": "Old FAIL (BUG-021, v2.9): still present. The empty [Table 0x0] placeholder is still there. Low by the contract. Probably the drawing was read as a table.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p642 is blank. On p641 the connector drawing B6H1434A is now extracted as img_0486 (663x290, origin vector). I opened it. It shows the full 2x5 grid with pins (1) to (10) and the top tab. Nothing meaningful is lost.",
+   "notes": "Old FAIL (BUG-020, v2): now fixed. The figure was dropped before, and it is now in images.json.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only one image is mapped, img_0486. It is the connector grid without extra text or header. It is a real figure, not decoration.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": 642,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0486 is on p641 and is mapped to sec_0251. p641 belongs only to sec_0251, so the mapping is right. p642 is blank.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"EXTERIOR/INTERIOR TRIM\" is level 3, same as the other chapter covers such as sec_0247. p639 shows the chapter title with the \"EI\" tab. Children are level 4.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002, which lists sec_0249. Children sec_0250 and sec_0251 match the two contents lines on p639 (\"1. Instrument Panel\", \"2. Trailer Lights Connector\").",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section has 5 nodes, all on p639: title, \"EI\", \"Page\" and the two contents lines (#/texts/8728 to 8732). page_end 642 is the end of the last child sec_0251. No body text from p640 is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EXTERIOR/INTERIOR TRIM. It is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p639 content appears once. Previous sec_0248 ends on p638. Next sec_0250 starts on p640. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100. The title is clearly visible on p639.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The chapter cover is visible on p639 as the TOC says.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The cover p639 has no folio. Following pages use EI-2, EI-3 and EI-4.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Cover p639 lists \"1. Instrument Panel ... 2\" and \"2. Trailer Lights Connector ... 3\". The latter is at physical p641 (EI-3). So 639 + 2 = 641 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p639 has only text, a rule and a black tab on the edge. No meaningful figure is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0249. The black tab and rule on p639 are not kept as images.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0249",
+   "page_sampled": 639,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p639 has no figure, so no image is mapped to sec_0249. This is correct. The connector image on p641 is in child sec_0251.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}

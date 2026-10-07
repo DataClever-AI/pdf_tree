@@ -1,0 +1,1084 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p159 'Foot switch' is a margin/section heading. In the tree sec_0280 has hierarchy_level 3, the same depth as the printed heading style under 'Accessories'. Heading '3.7.7 Foot switch' is on p158.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0280 has parent_section_id sec_0218 ('Accessories'). The printed page shows 'Foot switch' as a part of that topic. sec_0280 has no children, which fits: the section has only one intro text and one note.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/3321 and text #/texts/3322 are on p158. The note #/texts/3326 and the connector text #/texts/3327 are on p159. page_start 158 and page_end 159 match. The next section sec_0281 starts on p160. The p158 header/footer nodes are boilerplate only.",
+      "notes": "The old v1 problem (BUG-005) is not seen now.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System description/Accessories/Foot switch' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The nodes #/texts/3321-3329 are in reading order with no gap and no repeat. The tables above the heading belong to sec_0279 and are not absorbed here.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0280 has flagged_for_review=false and verification_score 100. Old FAIL (v1, BUG-005): now fixed. The nodes #/texts/3321-3329 match the text on p158 and p159.",
+      "notes": "Old FAIL (v1, BUG-005): now fixed. Flag state alone is not a failure.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Foot switch' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 159 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 159 equals the physical page 159, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The foot switch picture on p158 is kept as img_0142. On p159 only the small 'i' note icon is not kept. It is a note marker and the text is in #/texts/3326.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0142 is the foot switch picture (528x425). It is real content, not a rule or logo. No noise image is kept for sec_0280.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0280",
+      "page_sampled": 159,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0142 is on p158 under the heading '3.7.7 Foot switch' and is mapped to sec_0280. This is the right section. The LED icon above belongs to sec_0278.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p160 'Switching on the system' is a margin/section heading. In the tree sec_0284 has hierarchy_level 4, the same depth as the printed heading style under 'Switching on'. On p160 it is a small margin title below '4.1.1 Switching on' (level 3).",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0284 has parent_section_id sec_0283 ('Switching on'). The printed page shows 'Switching on the system' as a part of that topic. Neighbour sec_0285 'Switching on the computer only' is a sibling on p161.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p160 the title #/texts/3347 and the steps #/texts/3344-3346 (Sys On key, wall switch, LED) are in sec_0284. On p161 the note #/texts/3357 'Full operability is reached...' is the end of the same procedure. The next margin title on p161 starts sec_0285. page 160-161 is right.",
+      "notes": "Old FAIL (v1, BUG-005): now fixed. The p160 text is present in #/texts/3344-3347.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Switching the system on and off/Switching on/Switching on the system' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Nodes #/texts/3344-3350 and #/texts/3357 cover the p160 procedure and the p161 note. The ids 3351-3356 are the next section. No text is missing or doubled.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0284 has flagged_for_review=false and verification_score 100. The p160 text is now in the section.",
+      "notes": "Old FAIL (v1, BUG-005): now fixed. Flag state alone is not a failure.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Switching on the system' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 160 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 160 equals the physical page 160, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The Sys On key picture on p160 is kept as img_0143 (528x425). No figure of this section is lost. The 'i' icons are note markers only.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0143 shows the control box with the Sys On key. It is a real figure. The grey bar inside it is part of the original picture.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0284",
+      "page_sampled": 160,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0143 on p160 is next to the 'Switching on the system' steps and is mapped to sec_0284. img_0144 on p161 is next to 'Switching on the computer only' and is mapped to sec_0285. Both are right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p167 'Restarting the application' is a margin/section heading. In the tree sec_0303 has hierarchy_level 5, the same depth as the printed heading style under 'Shutdown and restart'. On p167 it is a margin title at the same style as 'Restarting after system emergency stop'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0303 has parent_section_id sec_0301 ('Shutdown and restart'). The printed page shows 'Restarting the application' as a part of that topic. Siblings sec_0302 and sec_0304 are also level 5 under sec_0301.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p167 the intro text 'If you want to close all applications and restart the syngo application only, use the third option in the End Session dialog box.' belongs under the title 'Restarting the application'. Sec_0303 has only #/texts/3487, 3488 and the steps #/texts/3491-3493. The intro text is inside node #/texts/3490, which is in sec_0305.",
+      "notes": "The intro text is in the wrong section (sec_0305, node 3490, merged with the title 'Shutting down the system after computer failure'). Probably Docling merged two margin lines into one node; no BUG id in root_causes.json for this. verify_claims shows UNSUPPORTED because it has no automatic signal for a merged node. I checked the node text in the tree export. Lead check: confirmed in the tree. Same pattern as sec_0069 p36: a margin heading merged with body text of another section. Cause: probably BUG-029.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Switching the system on and off/Shutting down the system/Shutdown and restart/Restarting the application' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The ids #/texts/3489 and 3490 are skipped between heading #/texts/3488 and step 1 #/texts/3491. Node 3490 holds the intro text of 'Restarting the application' but sits in sec_0305. Sec_0303 has a heading and steps but no intro.",
+      "notes": "Same defect as the page_start_end row. Content is in a sibling section, so Critical. Probably a Docling merge of two margin lines. Lead check: confirmed in the tree. Same pattern as sec_0069 p36: a margin heading merged with body text of another section. Cause: probably BUG-029.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0303 has flagged_for_review=false and verification_score 100. No defect is visible on the page, so the flag state is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Restarting the application' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 167 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 167 equals the physical page 167, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p167 the two small dialog pictures are not in images.json: the 'Restart Application' button and the 'Yes' button next to steps 1 and 2. Their words are in the step text #/texts/3491 and #/texts/3492.",
+      "notes": "Small UI pictures dropped. No information is lost because the text names both buttons. Probably the same cause as BUG-017.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json lists no image for sec_0303 or for p167, so no noise image is kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0303",
+      "page_sampled": 167,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is extracted for p167, so none is mapped to a wrong section. The missing pictures are reported in the filters_discarding row.",
+      "notes": "Not scored twice.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p174 'Checking the STOP keys' is a margin/section heading. In the tree sec_0343 has hierarchy_level 3, the same depth as the printed heading style under 'Function tests'. Heading '4.2.1 Checking the STOP keys' is on p173 below '4.2 Function tests' (level 2).",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0343 has parent_section_id sec_0342 ('Function tests'). The printed page shows 'Checking the STOP keys' as a part of that topic. Siblings '4.2.2 Testing the keys...' (sec_0344) etc. are also under sec_0342.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/3695 and step 1 #/texts/3696 are at the bottom of p173. Steps 2-3 and the note #/texts/3700-3704 are on p174 above heading 4.2.2. page 173-174 is right. The p173 header/footer nodes #/texts/3697-3699 are boilerplate inside the span.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Function tests/Checking the STOP keys' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Nodes #/texts/3695-3704 are in order. The screen saver text above heading 4.2.1 on p173 belongs to the previous section. 4.2.2 starts a new section (sec_0344). No gap or repeat.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0343 has flagged_for_review=false and verification_score 100. No defect is visible on the page, so the flag state is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Checking the STOP keys' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 174 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 174 equals the physical page 174, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The two gantry panel pictures on p173 are kept as img_0150. The red STOP buttons on p174 are kept as img_0151. The 'i' icon is only a note marker.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0150 (panel icons) and img_0151 (STOP buttons) are the pictures for steps 1 and 2. They are real content and not decoration.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0343",
+      "page_sampled": 174,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0150 (p173) and img_0151 (p174) sit beside steps 1-3 of 4.2.1 and are mapped to sec_0343. img_0149 on p173 is the control box picture of 'Shutting down the gantry only' and is mapped to sec_0340. Both right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p181 'Loading the patient using the gantry control panel' is a margin/section heading. In the tree sec_0364 has hierarchy_level 4, the same depth as the printed heading style under 'Moving the patient table using the gantry operator panel with Touch Panel'. On p181 it is the first margin title under 4.3.2 (level 3).",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0364 has parent_section_id sec_0361 ('Moving the patient table using the gantry operator panel with Touch Panel'). The printed page shows 'Loading the patient using the gantry control panel' as a part of that topic. Sibling sec_0365 'Configuring predefined table positions' is also level 4 under sec_0361.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p181 the margin title #/texts/3891 and the step #/texts/3894-3895 (press the area between Up and In) are in sec_0364. 'Configuring predefined table positions' starts sec_0365. page 181-181 is right. #/texts/3890 is the running header only.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Operation of the patient table/Moving the patient table using the gantry operator panel with Touch Panel/Loading the patient using the gantry control panel' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Four nodes cover the heading and the one step with its result text. The text of 'Configuring predefined table positions' and 'Restore Topogram Presets' is in other sections. No gap or repeat.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0364 has flagged_for_review=false and verification_score 100. No defect is visible on the page, so the flag state is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Loading the patient using the gantry control panel' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 181 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 181 equals the physical page 181, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The gantry panel picture with the arrow on p181 is kept as img_0161. No figure is lost.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0161 (272x240) shows the panel with an arrow. It is a real figure. The arrow is part of the drawing.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0364",
+      "page_sampled": 181,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0161 is beside 'Loading the patient' and is mapped to sec_0364. img_0162 and img_0163 are beside 'Configuring predefined table positions' and are mapped to sec_0365. All right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p169 'Overheating or low temperature' is a margin/section heading. In the tree sec_0309 has hierarchy_level 5, the same depth as the printed heading style under 'Gantry temperature outside permissible range'. On p169 it is a margin title like 'Recovery' and 'Shutdown' below it.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0309 has parent_section_id sec_0308 ('Gantry temperature outside permissible range'). The printed page shows 'Overheating or low temperature' as a part of that topic. Siblings 'Recovery' (sec_0310) and the next ones are also under sec_0308.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p169 the margin title #/texts/3547 and its text #/texts/3558 ('countdown starts. A temperature warning is displayed') are in sec_0309. The next title 'Recovery' starts sec_0310. page 169-169 is right.",
+      "notes": "Old FAIL (v1, BUG-005): now fixed. The real p169 text is present and no p238 stray node remains.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Switching the system on and off/Exceptional situations/Gantry temperature outside permissible range/Overheating or low temperature' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section has 2 nodes: title #/texts/3547 and body #/texts/3558. The note boxes on p169 belong to neighbours. No missing or repeated text.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0309 has flagged_for_review=false and verification_score 100. The text 'If the temperature of the gantry exceeds the permissible range...' is now present in #/texts/3558.",
+      "notes": "Old FAIL (v1, BUG-005): now fixed. Flag state alone is not a failure.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Overheating or low temperature' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 169 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 169 equals the physical page 169, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p169 has no figure, only 'i' and check-mark icons. Nothing meaningful is dropped. images.json has no entry for this page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is kept for sec_0309 on p169, so there is no noise image.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0309",
+      "page_sampled": 169,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p169 shows no figure and images.json lists none for sec_0309. Nothing to map.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p175 'Defining a special scan protocol for CTDI measurement' is a margin/section heading. In the tree sec_0350 has hierarchy_level 4, the same depth as the printed heading style under 'Using the Customer CTDI service function'. On p175 it is a margin title under '4.2.7 Using the Customer CTDI service function' (level 3). Its four sub-steps are level 5 children.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0350 has parent_section_id sec_0349 ('Using the Customer CTDI service function'). The printed page shows 'Defining a special scan protocol for CTDI measurement' as a part of that topic. child_sections sec_0351-0354 are the steps 'Loading', 'Deleting', 'Adapting' and 'Saving' on p176-177. The parent is sec_0349 (p175-178).",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p175 the margin title #/texts/3747 and the note #/texts/3746 ('Only routine scan protocols are available...') are in sec_0350. The steps on p176-177 are in the child sections, so page_end 177 covers the children. The next section after the children is sec_0355 on p177.",
+      "notes": "The section's own nodes are all on p175 and the children cover p176-177. This is normal for a parent.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Function tests/Using the Customer CTDI service function/Defining a special scan protocol for CTDI measurement' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 5 nodes #/texts/3746-3750 are in this section. The 4.2.7 intro text above the margin title belongs to sec_0349. The children sec_0351-0354 follow without overlap.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0350 has flagged_for_review=false and verification_score 100. No defect is visible on the page, so the flag state is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Defining a special scan protocol for CTDI measurement' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 175 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 175 equals the physical page 175, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p175 shows the laser lightmarker icons above 4.2.4 (kept as img_0152 for sec_0346) and 'i' and '>>' icons only. No figure of sec_0350 is lost.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0350 on p175. img_0152 on that page is a real picture of the lightmarker key, not noise.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0350",
+      "page_sampled": 175,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0152 (lightmarker keys) is on p175 beside 4.2.4 and is mapped to sec_0346, not to sec_0350. It is right. sec_0350 has no figure of its own on p175.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p178 'Starting CTDI measurement' is a margin/section heading. In the tree sec_0355 has hierarchy_level 4, the same depth as the printed heading style under 'Using the Customer CTDI service function'. On p177 it is a margin title, then the steps continue on p178.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0355 has parent_section_id sec_0349 ('Using the Customer CTDI service function'). The printed page shows 'Starting CTDI measurement' as a part of that topic. Sibling sec_0350 is also level 4 under sec_0349. Sec_0355 has no children.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The margin title #/texts/3786 and steps 1-2 are on p177. Steps 3-9, the caution list and 'Click Done' (#/texts/3815-3836) are on p178 above heading 4.3. page 177-178 is right. Heading 4.3 starts sec_0356.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Function tests/Using the Customer CTDI service function/Starting CTDI measurement' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The step numbers 1-9 appear once each in #/texts/3809-3835. The id gaps (3787-3804) are the previous steps and screenshot text. No repeat found.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0355 has flagged_for_review=false and verification_score 100. The old unflagged problem is not seen. Steps 1-9 are in order in #/texts/3805-3836.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Starting CTDI measurement' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 178 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 178 equals the physical page 178, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p178 the black 'Go' button picture next to step 6 is not in images.json. Kept are the Quality menu (img_0154), the yellow Start key (img_0155) and the Home Menu (img_0153, p177). The words 'Click Go' are in #/texts/3825.",
+      "notes": "Old FAIL (v1.7, BUG-017): still present. A small button picture, no information lost.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0153 (Home Menu), img_0154 (Quality menu) and img_0155 (Start key) are real screens or keys. None is a rule, logo or decoration.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0355",
+      "page_sampled": 178,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0153 on p177 is under step 1-2 and img_0154/img_0155 on p178 are beside steps 3-7. All are mapped to sec_0355, which is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p179 'STOP keys' is a margin/section heading. In the tree sec_0358 has hierarchy_level 4, the same depth as the printed heading style under 'Patient table movements'. On p179 it is a margin title under '4.3.1 Patient table movements' (level 3).",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0358 has parent_section_id sec_0357 ('Patient table movements'). The printed page shows 'STOP keys' as a part of that topic. Siblings 'Displays' (sec_0359) and 'Safety advice for biopsy' are also level 4 under sec_0357.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p179 the margin title #/texts/3843 and the two paragraphs #/texts/3853-3854 about the STOP keys are in sec_0358. The next margin title 'Displays' starts sec_0359. page 179-179 is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/System operation/Operation of the patient table/Patient table movements/STOP keys' lists the ancestors in the same order as the printed headings.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Three nodes: title #/texts/3843 and body #/texts/3853-3854. The caution box above and the 'Displays' text below belong to other sections. No repeat.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0358 has flagged_for_review=false and verification_score 100. The text 'With the STOP keys, you can interrupt table movements...' is now in #/texts/3853.",
+      "notes": "Old FAIL (v1, BUG-005): now fixed. Flag state alone is not a failure.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'STOP keys' is visible on the rendered page, so the TOC origin is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio is arabic (page 179 shown at the bottom right). numbering_scheme is 'arabic'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 179 equals the physical page 179, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The two red STOP key pictures beside the text on p179 are kept as img_0156. Nothing meaningful is lost.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0156 (220x79) shows the two STOP keys. It is a real figure, not decoration.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0358",
+      "page_sampled": 179,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0156 on p179 sits beside the 'STOP keys' text and is mapped to sec_0358. This is right.",
+      "notes": "",
+      "confidence": 0.93
+    }
+  ]
+}

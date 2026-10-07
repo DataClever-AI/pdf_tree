@@ -1,0 +1,1045 @@
+{
+ "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+ "findings": [
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has hierarchy_level 1 and no parent. p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has parent_section_id null and child_sections empty. p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The section starts at t352 '9. Gear Train' and t353 'A: CONSTRUCTION' on p33 (AT-18) and ends at t613 'B3H0935A' and t614 'AT-39' on p54. page_start 33 and page_end 54 match these nodes. The next section sec_0018 starts on the next page.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. sec_0017 (p33-p54) has 268 nodes in a continuous reading order (semantic_order 355 to 622). sec_0016 ends on p32 and sec_0018 starts on p55. There is no gap and no overlap.",
+   "notes": "sec_0018 has the same text as this section because the PDF repeats these pages. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p33. p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The first node on p33 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p33 is the page where '9. Gear Train' starts, so no shift is needed. p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table node #/tables/4 on p34 ('B: OPERATION TABLE', 1. NORTH AMERICAN MODEL) has only the 6 column headers: Reverse clutch, 2-4 brake, High clutch, Low clutch, Low & reverse brake, One-way clutch. The extracted image img_0029 of p34 shows a grid with row labels P, R, N and D, 3, 2, 1 with 1ST to 4TH, and circle marks. None of these row labels or marks are in any text node of p34. The p34 text nodes are only t363-t368 (headings and caption B3H0998A). The table on p35 (2. EXCEPT FOR NORTH AMERICAN MODEL, img_0030) has no table node at all.",
+   "notes": "The old v1 and v1.5 FAIL (Medium, BUG-007) is still there in v1.6. Nothing changed. The grid is kept as a picture (img_0029, img_0030), so it is not lost, but its text cannot be searched. I used Medium because the picture keeps the rows. It would be Critical if the images were ignored. Note: img_0029 does not show the column headers; they are only in the table node text. Probably Docling cannot read glyph grids.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The extracted figure(s) are img_0028 (p33 gear diagram), all mapped to sec_0017. I see no figure on the page that is missing from images.json.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The extracted image(s) img_0028 (p33 gear diagram) are real figures, not rules, logos or footers. No decorative crop is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 33,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p33 shows AT-18 with the heading '9. Gear Train' and 'A: CONSTRUCTION' and one gear diagram. The image(s) img_0028 (p33 gear diagram) are mapped to sec_0017 and p33 is inside sec_0017 (p33-p54). No other section shares this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has hierarchy_level 1 and no parent. p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has parent_section_id null and child_sections empty. p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The section starts at t617 '9. Gear Train' and t618 'A: CONSTRUCTION' on p55 (AT-18 again) and ends at t878 'B3H0935A' and t879 'AT-39' on p76. page_start 55 and page_end 76 match these nodes. The next section sec_0019 starts on the next page.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. sec_0018 (p55-p76) has 268 nodes (semantic_order 623 to 890). sec_0017 ends on p54 and sec_0019 starts on p77. There is no gap and no overlap.",
+   "notes": "This section has the same text as sec_0017 because the PDF repeats pages AT-18 to AT-39. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p55. p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The first node on p55 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p55 is the page where '9. Gear Train' starts, so no shift is needed. p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table node #/tables/7 on p56 ('B: OPERATION TABLE', 1. NORTH AMERICAN MODEL) has only the 6 column headers: Reverse clutch, 2-4 brake, High clutch, Low clutch, Low & reverse brake, One-way clutch. The extracted image img_0057 of p56 shows the grid with row labels P, R, N and D, 3, 2, 1 with 1ST to 4TH, and circle marks. None of these are in any text node of p56. The table on p57 (img_0058) has no table node at all.",
+   "notes": "The old v1 and v1.5 FAIL (Medium, BUG-007) is still there in v1.6. Nothing changed. The grid survives only as pictures (img_0057, img_0058). Same defect as sec_0017 p34, because the PDF repeats these pages. Medium because the picture keeps the rows; it would be Critical without the images. Probably Docling cannot read glyph grids.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The extracted figure(s) are img_0056 (p55 gear diagram), all mapped to sec_0018. I see no figure on the page that is missing from images.json.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The extracted image(s) img_0056 (p55 gear diagram) are real figures, not rules, logos or footers. No decorative crop is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 55,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p55 shows AT-18, the same page as p33, with '9. Gear Train' and 'A: CONSTRUCTION'. The image(s) img_0056 (p55 gear diagram) are mapped to sec_0018 and p55 is inside sec_0018 (p55-p76). No other section shares this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has hierarchy_level 1 and no parent. p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has parent_section_id null and child_sections empty. p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. The section starts at t352 '9. Gear Train' and t353 'A: CONSTRUCTION' on p33 (AT-18) and ends at t613 'B3H0935A' and t614 'AT-39' on p54. page_start 33 and page_end 54 match these nodes. The next section sec_0018 starts on the next page. The MEMO page belongs to this section because it sits between AT-20 and 'C: N RANGE'.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p36 shows AT-21, a nearly blank page with only the heading 'MEMO'.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. sec_0017 (p33-p54) has 268 nodes in a continuous reading order (semantic_order 355 to 622). sec_0016 ends on p32 and sec_0018 starts on p55. There is no gap and no overlap.",
+   "notes": "sec_0018 has the same text as this section because the PDF repeats these pages. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p33. p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. The first node on p33 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p36 shows AT-21, a nearly blank page with only the heading 'MEMO'.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p33 is the page where '9. Gear Train' starts, so no shift is needed. p36 shows AT-21, a nearly blank page with only the heading 'MEMO'.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. There is no table on this page and no table node on it. The section's table nodes are on other pages.",
+   "notes": "The glyph table defect of this section is reported on the p33 row (BUG-007).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. The page has no figure, and images.json has no image for p36. Nothing is missing.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. No image is kept for this page, so no noise image is present.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 shows AT-21, a nearly blank page with only the heading 'MEMO'. No image is expected on p36 and none is mapped. sec_0017 is the only section on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has hierarchy_level 1 and no parent. p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has parent_section_id null and child_sections empty. p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The section starts at t352 '9. Gear Train' and t353 'A: CONSTRUCTION' on p33 (AT-18) and ends at t613 'B3H0935A' and t614 'AT-39' on p54. page_start 33 and page_end 54 match these nodes. The next section sec_0018 starts on the next page.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. sec_0017 (p33-p54) has 268 nodes in a continuous reading order (semantic_order 355 to 622). sec_0016 ends on p32 and sec_0018 starts on p55. There is no gap and no overlap.",
+   "notes": "sec_0018 has the same text as this section because the PDF repeats these pages. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p33. p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The first node on p33 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p33 is the page where '9. Gear Train' starts, so no shift is needed. p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p41 the table frame is read as paragraph nodes t420-t427 ('Operating condition of components', 'Low clutch : Engaged', 'One-way clutch : Locked', 'Power flow (in acceleration)'). There is no table node. The flow chart words are only in img_0035 and img_0036. All the words are kept and the order is right.",
+   "notes": "Not a defect for retrieval, but a table node is missing. This is the same kind of issue as BUG-007 (glyph grids), at most Low.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The extracted figure(s) are img_0035 and img_0036 (the MPT and VTD flow charts), all mapped to sec_0017. I see no figure on the page that is missing from images.json.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The extracted image(s) img_0035 and img_0036 (the MPT and VTD flow charts) are real figures, not rules, logos or footers. No decorative crop is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 41,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 shows AT-26 with heading 'E: 1ST GEAR OF D OR 3 RANGE' and a table frame with two flow charts. The image(s) img_0035 and img_0036 (the MPT and VTD flow charts) are mapped to sec_0017 and p41 is inside sec_0017 (p33-p54). No other section shares this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has hierarchy_level 1 and no parent. p52 shows AT-37 with a gear diagram, a legend and a parts list. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 has parent_section_id null and child_sections empty. p52 shows AT-37 with a gear diagram, a legend and a parts list. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p52 shows AT-37 with a gear diagram, a legend and a parts list. The section starts at t352 '9. Gear Train' and t353 'A: CONSTRUCTION' on p33 (AT-18) and ends at t613 'B3H0935A' and t614 'AT-39' on p54. page_start 33 and page_end 54 match these nodes. The next section sec_0018 starts on the next page.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p52 shows AT-37 with a gear diagram, a legend and a parts list.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p52 shows AT-37 with a gear diagram, a legend and a parts list. sec_0017 (p33-p54) has 268 nodes in a continuous reading order (semantic_order 355 to 622). sec_0016 ends on p32 and sec_0018 starts on p55. There is no gap and no overlap.",
+   "notes": "sec_0018 has the same text as this section because the PDF repeats these pages. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0017 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p33. p52 shows AT-37 with a gear diagram, a legend and a parts list. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p52 shows AT-37 with a gear diagram, a legend and a parts list. The first node on p33 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p52 shows AT-37 with a gear diagram, a legend and a parts list.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p33 is the page where '9. Gear Train' starts, so no shift is needed. p52 shows AT-37 with a gear diagram, a legend and a parts list.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p52 shows AT-37 with a gear diagram, a legend and a parts list. There is no table on this page and no table node on it. The section's table nodes are on other pages.",
+   "notes": "The glyph table defect of this section is reported on the p33 row (BUG-007).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p52 shows AT-37 with a gear diagram, a legend and a parts list. The extracted figure(s) are img_0052 (p52 gear diagram), all mapped to sec_0017. I see no figure on the page that is missing from images.json.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p52 shows AT-37 with a gear diagram, a legend and a parts list. The extracted image(s) img_0052 (p52 gear diagram) are real figures, not rules, logos or footers. No decorative crop is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 52,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p52 shows AT-37 with a gear diagram, a legend and a parts list. The image(s) img_0052 (p52 gear diagram) are mapped to sec_0017 and p52 is inside sec_0017 (p33-p54). No other section shares this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has hierarchy_level 1 and no parent. p68 shows AT-31 with a gear diagram, a legend and a parts list. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has parent_section_id null and child_sections empty. p68 shows AT-31 with a gear diagram, a legend and a parts list. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 shows AT-31 with a gear diagram, a legend and a parts list. The section starts at t617 '9. Gear Train' and t618 'A: CONSTRUCTION' on p55 (AT-18 again) and ends at t878 'B3H0935A' and t879 'AT-39' on p76. page_start 55 and page_end 76 match these nodes. The next section sec_0019 starts on the next page.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p68 shows AT-31 with a gear diagram, a legend and a parts list.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 shows AT-31 with a gear diagram, a legend and a parts list. sec_0018 (p55-p76) has 268 nodes (semantic_order 623 to 890). sec_0017 ends on p54 and sec_0019 starts on p77. There is no gap and no overlap.",
+   "notes": "This section has the same text as sec_0017 because the PDF repeats pages AT-18 to AT-39. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p55. p68 shows AT-31 with a gear diagram, a legend and a parts list. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p68 shows AT-31 with a gear diagram, a legend and a parts list. The first node on p55 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p68 shows AT-31 with a gear diagram, a legend and a parts list.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p55 is the page where '9. Gear Train' starts, so no shift is needed. p68 shows AT-31 with a gear diagram, a legend and a parts list.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 shows AT-31 with a gear diagram, a legend and a parts list. There is no table on this page and no table node on it. The section's table nodes are on other pages.",
+   "notes": "The glyph table defect of this section is reported on the p55 row (BUG-007).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 shows AT-31 with a gear diagram, a legend and a parts list. The extracted figure(s) are img_0071 (p68 gear diagram), all mapped to sec_0018. I see no figure on the page that is missing from images.json.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 shows AT-31 with a gear diagram, a legend and a parts list. The extracted image(s) img_0071 (p68 gear diagram) are real figures, not rules, logos or footers. No decorative crop is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 shows AT-31 with a gear diagram, a legend and a parts list. The image(s) img_0071 (p68 gear diagram) are mapped to sec_0018 and p68 is inside sec_0018 (p55-p76). No other section shares this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has hierarchy_level 1 and no parent. p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has parent_section_id null and child_sections empty. p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The section starts at t617 '9. Gear Train' and t618 'A: CONSTRUCTION' on p55 (AT-18 again) and ends at t878 'B3H0935A' and t879 'AT-39' on p76. page_start 55 and page_end 76 match these nodes. The next section sec_0019 starts on the next page.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. sec_0018 (p55-p76) has 268 nodes (semantic_order 623 to 890). sec_0017 ends on p54 and sec_0019 starts on p77. There is no gap and no overlap.",
+   "notes": "This section has the same text as sec_0017 because the PDF repeats pages AT-18 to AT-39. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p55. p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The first node on p55 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p55 is the page where '9. Gear Train' starts, so no shift is needed. p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p71 the table frame is read as paragraph nodes ('Operating condition of components', '2-4 brake : Engaged', 'High clutch : Engaged', 'Power flow'). There is no table node. The flow chart words are only in img_0075 and img_0076. All the words are kept and the order is right.",
+   "notes": "Not a defect for retrieval, but a table node is missing. This is the same kind of issue as BUG-007 (glyph grids), at most Low.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The extracted figure(s) are img_0075 and img_0076 (the MPT and VTD flow charts), all mapped to sec_0018. I see no figure on the page that is missing from images.json.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The extracted image(s) img_0075 and img_0076 (the MPT and VTD flow charts) are real figures, not rules, logos or footers. No decorative crop is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 71,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p71 shows AT-34 with heading 'I: 4TH GEAR OF D RANGE (D4)' and a table frame with two flow charts. The image(s) img_0075 and img_0076 (the MPT and VTD flow charts) are mapped to sec_0018 and p71 is inside sec_0018 (p55-p76). No other section shares this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has hierarchy_level 1 and no parent. p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The bookmark list is flat (sec_0016, sec_0017, sec_0018, sec_0019 are all level 1).",
+   "notes": "The bookmark titles are codes like MSA5T0200A30119, not the printed headings. The level still matches the bookmarks.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has parent_section_id null and child_sections empty. p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The lettered headings A to K are heading nodes inside the section, not bookmarks.",
+   "notes": "This matches the flat bookmark list. No child bookmark is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The section starts at t617 '9. Gear Train' and t618 'A: CONSTRUCTION' on p55 (AT-18 again) and ends at t878 'B3H0935A' and t879 'AT-39' on p76. page_start 55 and page_end 76 match these nodes. The next section sec_0019 starts on the next page.",
+   "notes": "No heading or body node of a neighbour section is inside this section. No node of this section is missing.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /MSA5T0200A30119, one level, same as the title. p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts.",
+   "notes": "The title MSA5T0200A30119 and the path are the same for sec_0017 and sec_0018. The PDF repeats pages AT-18 to AT-39 in both ranges (p33-54 and p55-76). The path is correct for the bookmark but it does not tell the two sections apart.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. sec_0018 (p55-p76) has 268 nodes (semantic_order 623 to 890). sec_0017 ends on p54 and sec_0019 starts on p77. There is no gap and no overlap.",
+   "notes": "This section has the same text as sec_0017 because the PDF repeats pages AT-18 to AT-39. It is not a pipeline error.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 is flagged. The reason is verification_score 40.0 below 85 because the bookmark code does not appear as text on p55. p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The start and end boundaries are correct.",
+   "notes": "The flag is right: the title is a code, so it cannot be checked on the page. The boundary itself is correct, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section start matches a real page change: p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The first node on p55 is the heading '9. Gear Train'.",
+   "notes": "The bookmark page agrees with the rendered page.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on these pages are 'AT-n' (AT-18 on p33, AT-39 on p54). The section records numbering_scheme arabic. p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts.",
+   "notes": "The folio has a fixed AT- prefix and the pipeline uses the bookmark pages directly. No earlier review marked this as a defect.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The bookmark page p55 is the page where '9. Gear Train' starts, so no shift is needed. p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts.",
+   "notes": "Printed AT-18 equals physical p33 or p55, so the printed folio and the physical page differ, but the bookmarks use physical pages. Offset 0 is plausible.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p73 the table frame is read as paragraph nodes ('Low clutch : Engaged', 'Low & reverse brake : Engaged', 'One-way clutch : Operating'). There is no table node. The flow chart words are only in img_0078 and img_0079. All the words are kept and the order is right.",
+   "notes": "Not a defect for retrieval, but a table node is missing. This is the same kind of issue as BUG-007 (glyph grids), at most Low.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The extracted figure(s) are img_0078 and img_0079 (the MPT and VTD flow charts), all mapped to sec_0018. I see no figure on the page that is missing from images.json.",
+   "notes": "Checked on the rendered page against images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The extracted image(s) img_0078 and img_0079 (the MPT and VTD flow charts) are real figures, not rules, logos or footers. No decorative crop is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 73,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p73 shows AT-36 with heading 'J: 1ST GEAR OF 1 RANGE (11)' and a table frame with two flow charts. The image(s) img_0078 and img_0079 (the MPT and VTD flow charts) are mapped to sec_0018 and p73 is inside sec_0018 (p55-p76). No other section shares this page.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

@@ -1,0 +1,1324 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165, sec_0254 \"Switching Between ST Map Views\" is printed as the level-4 heading at the lower part of p165, below \"Working in the ST Map Task Window\". Its hierarchy_level is 4, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0254 is sec_0253 (Working in the ST Map Task Window). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Numeric bounds p165-p165 are right, and the old p166 running header is no longer in this section. But nodes #/texts/2975 (\"current ST values\") and #/texts/2976 (\"In this diagram, V4 was either temporarily switched off...\") are in sec_0254. On p165 they are printed above the heading \"Viewing an ST Map\", as the caption of the two ST map figures. They belong to sec_0251 (Trend View, p164-p165), which has the figure labels and \"trending interval\" (#/texts/2960-2965).",
+   "notes": "Old problem (BUG-022, v2): trailing p166 running header is now fixed. Old problem (BUG-023, v2): body nodes in the wrong section are still present. Cause is probably the reading order around the heading on the same page. The caption of the figures in sec_0251 is stuck to sec_0254.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0254 is built from its ancestors in order and ends with \"Switching Between ST Map Views\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Numeric bounds p165-p165 are right, and the old p166 running header is no longer in this section. But nodes #/texts/2975 (\"current ST values\") and #/texts/2976 (\"In this diagram, V4 was either temporarily switched off...\") are in sec_0254. On p165 they are printed above the heading \"Viewing an ST Map\", as the caption of the two ST map figures. They belong to sec_0251 (Trend View, p164-p165), which has the figure labels and \"trending interval\" (#/texts/2960-2965). So sec_0251 misses these two nodes and sec_0254 has extra ones.",
+   "notes": "Same defect as in 5.4-page_start_end for this section. Old problem (BUG-023, v2): still present. Probably the same cause.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 has flagged_for_review False, but two nodes in it belong to sec_0251. The flag state alone is not a failure, so this row is PASS.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 has structural_source toc. Its heading \"Switching Between ST Map Views\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0254 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both p165 figures are in the image list: img_0086 (214x215) and img_0087 vector (679x414). img_0087 shows the full ST Map (Trend) screen with its callouts. Nothing is cut or lost.",
+   "notes": "Old problem (BUG-003, v2): both figures were mapped to sec_0254; now they are kept. See the mapping row. verify_claims says the raster 306x173 px is missing, but it is inside the vector crop img_0087 (visible in the image file), so the figure is not lost.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All images listed for this page are real content (screens, ECG icons or ST maps), not decoration. Both p165 figures (img_0086 chest-lead map, img_0087 vector \"ST Map (Trend)\" screenshot) are in the image list. They are mapped to sec_0251, not to sec_0254.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The two p165 figures (img_0086, img_0087) are in sec_0251 (Trend View), which owns the figure labels and the caption. sec_0254 has no figure, and its text only has 'To switch between views'. So the mapping is correct.",
+   "notes": "Old problem (BUG-003, v2): now fixed. The figures moved from sec_0254 to sec_0251.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p172, sec_0274 \"Switching QT Monitoring On and Off\" is printed as the large level-2 heading on p171, after \"Changing QTc Alarm Limits\". Its hierarchy_level is 2, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0274 is sec_0170 (ECG, Arrhythmia, ST and QT Monitoring). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p171 holds the heading and one bullet (#/texts/3084, 3085). p172 is a blank page with only running header and folio 160 (#/texts/3087-3089), so page_end 172 is right. The chapter number \"7\" from p173 is no longer in this section; its last node is the folio \"160\".",
+   "notes": "Old problem (BUG-022, v2): now fixed. The chapter number '7' is not in this section any more.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0274 is built from its ancestors in order and ends with \"Switching QT Monitoring On and Off\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. p171 holds the heading and one bullet (#/texts/3084, 3085). p172 is a blank page with only running header and folio 160 (#/texts/3087-3089), so page_end 172 is right. The chapter number \"7\" from p173 is no longer in this section; its last node is the folio \"160\".",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0274 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0274 has structural_source toc. Its heading \"Switching QT Monitoring On and Off\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0274 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p171 or p172 and none is mapped to sec_0274. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. No figure on p171 or p172 and none is mapped to sec_0274.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0274",
+   "page_sampled": 172,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p171 or p172 and none is mapped to sec_0274. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p173, sec_0276 \"Entering the Setup Pulse Menu\" is printed as the level-2 heading in the middle of p173, under the chapter 7 intro text. Its hierarchy_level is 2, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0276 is sec_0275 (Monitoring Pulse Rate). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0276 has the heading and its one paragraph (#/texts/3094, 3095), both only on p173. The chapter 7 intro text is in sec_0275 (#/texts/3093), as it should be. The next heading \"System Pulse Source\" is in sec_0277.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0276 is built from its ancestors in order and ends with \"Entering the Setup Pulse Menu\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. sec_0276 has the heading and its one paragraph (#/texts/3094, 3095), both only on p173. The chapter 7 intro text is in sec_0275 (#/texts/3093), as it should be. The next heading \"System Pulse Source\" is in sec_0277.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0276 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0276 has structural_source toc. Its heading \"Entering the Setup Pulse Menu\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0276 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p173 and none is mapped to sec_0276. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. No figure on p173 and none is mapped to sec_0276.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0276",
+   "page_sampled": 173,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p173 and none is mapped to sec_0276. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p177, sec_0287 \"Optimizing Lead Placement for Resp\" is printed as the level-3 bold heading on p177, under \"Lead Placement for Monitoring Resp\". Its hierarchy_level is 3, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0287 is sec_0286 (Lead Placement for Monitoring Resp). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0287 has the heading and its one paragraph (#/texts/3155, 3156), both on p177. The next heading \"Cardiac Overlay\" starts sec_0288. The earlier text is in sec_0286.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0287 is built from its ancestors in order and ends with \"Optimizing Lead Placement for Resp\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. sec_0287 has the heading and its one paragraph (#/texts/3155, 3156), both on p177. The next heading \"Cardiac Overlay\" starts sec_0288. The earlier text is in sec_0286.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0287 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0287 has structural_source toc. Its heading \"Optimizing Lead Placement for Resp\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0287 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p177 and none is mapped to sec_0287. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. No figure on p177 and none is mapped to sec_0287.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0287",
+   "page_sampled": 177,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p177 and none is mapped to sec_0287. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p161, sec_0245 \"Adjusting ST Measurement Points\" is printed as the level-3 heading at the bottom of p160, under \"About the ST Measurement Points\". Its hierarchy_level is 3, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0245 is sec_0244 (About the ST Measurement Points). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at the heading on p160 (#/texts/2868) and runs through p161 and p162 (#/texts/2868-2913). On p161 it has the bullets, steps 1-3, the Adjust ST Points screen labels and the ISO-point text. On p162 it has the J-point and ST-point text and steps 4-5. \"ST Alarms\" starts later on p162 in sec_0246.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0245 is built from its ancestors in order and ends with \"Adjusting ST Measurement Points\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. The section starts at the heading on p160 (#/texts/2868) and runs through p161 and p162 (#/texts/2868-2913). On p161 it has the bullets, steps 1-3, the Adjust ST Points screen labels and the ISO-point text. On p162 it has the J-point and ST-point text and steps 4-5. \"ST Alarms\" starts later on p162 in sec_0246.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0245 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0245 has structural_source toc. Its heading \"Adjusting ST Measurement Points\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0245 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p161 the vector crop img_0079 (848x437) shows the Adjust ST Points screen with its callouts. The crop starts too low and too far left. The first callout line \"ST label and the ST\" and the start of its arrow are cut off. The crop is cut, not lost. The cut text is probably still in the text nodes (#/texts/2889).",
+   "notes": "Figure is cut at its top-left edge. Medium by the agreed image rule. The cut words are in the text, so not Critical. Cause is probably the vector crop box (BUG-010 family, mitigated). verify_claims expects Critical because the raster screen (642x360 px) is not in images_v1.json by itself. But it is inside the vector crop img_0079, so the figure is not lost; only its callout edge is cut.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All images listed for this page are real content (screens, ECG icons or ST maps), not decoration. p161 has the ISO icon (img_0078) and the vector screenshot \"Adjust ST Points\" (img_0079). Both are mapped to sec_0245, which is the right owner.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p161 has the ISO icon (img_0078) and the vector screenshot \"Adjust ST Points\" (img_0079). Both are mapped to sec_0245, which is the right owner. There is no wrong sibling mapping.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162, sec_0245 \"Adjusting ST Measurement Points\" is printed as the level-3 heading at the bottom of p160. Its hierarchy_level is 3, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0245 is sec_0244 (About the ST Measurement Points). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 the section has the J-point text, the ST-point instructions and steps 4 and 5 (#/texts/2903-2913), down to just before the \"ST Alarms\" heading. page_end 162 is right. The heading \"ST Alarms\" and later text are in sec_0246 and sec_0247.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0245 is built from its ancestors in order and ends with \"Adjusting ST Measurement Points\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. On p162 the section has the J-point text, the ST-point instructions and steps 4 and 5 (#/texts/2903-2913), down to just before the \"ST Alarms\" heading. page_end 162 is right. The heading \"ST Alarms\" and later text are in sec_0246 and sec_0247.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0245 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0245 has structural_source toc. Its heading \"Adjusting ST Measurement Points\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0245 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p162 has two small ECG icons (img_0080 J-point, img_0081 ST-point). Both are mapped to sec_0245, the right owner. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All images listed for this page are real content (screens, ECG icons or ST maps), not decoration. p162 has two small ECG icons (img_0080 J-point, img_0081 ST-point). Both are mapped to sec_0245, the right owner.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p162 has two small ECG icons (img_0080 J-point, img_0081 ST-point). Both are mapped to sec_0245, the right owner. There is no wrong sibling mapping.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162, sec_0247 \"Single- or Multi-lead ST Alarming\" is printed as the level-3 heading on p162, under \"ST Alarms\". Its hierarchy_level is 3, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0247 is sec_0246 (ST Alarms). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0247 has the heading and three body nodes (#/texts/2917-2920), all on p162, before \"Changing ST Alarm Limits\" (sec_0248). The last node ends with a stray \"T.\" after \"Multi ST.\" that is not printed on the page. This is only a small text artefact; no node is in the wrong section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0247 is built from its ancestors in order and ends with \"Single- or Multi-lead ST Alarming\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. sec_0247 has the heading and three body nodes (#/texts/2917-2920), all on p162, before \"Changing ST Alarm Limits\" (sec_0248). The last node ends with a stray \"T.\" after \"Multi ST.\" that is not printed on the page. This is only a small text artefact; no node is in the wrong section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0247 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0247 has structural_source toc. Its heading \"Single- or Multi-lead ST Alarming\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0247 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The two J-point icons on p162 are above \"ST Alarms\" and belong to sec_0245. sec_0247 has no figure of its own. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. The two J-point icons on p162 are above \"ST Alarms\" and belong to sec_0245. sec_0247 has no figure of its own.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0247",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The two J-point icons on p162 are above \"ST Alarms\" and belong to sec_0245. sec_0247 has no figure of its own. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p168, sec_0263 \"Indications For Use Of QT Interval Monitoring\" is printed as the level-3 heading at the top of p168, under the page header. Its hierarchy_level is 3, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0263 is sec_0260 (About QT/QTc Interval Monitoring). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0263 has the p168 running header, the heading and one paragraph (#/texts/3017-3020). The next heading \"Limitations For Use Of QT Interval Monitoring\" starts sec_0264. Nothing is mixed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0263 is built from its ancestors in order and ends with \"Indications For Use Of QT Interval Monitoring\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. sec_0263 has the p168 running header, the heading and one paragraph (#/texts/3017-3020). The next heading \"Limitations For Use Of QT Interval Monitoring\" starts sec_0264. Nothing is mixed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0263 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0263 has structural_source toc. Its heading \"Indications For Use Of QT Interval Monitoring\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0263 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p168 and none is mapped to sec_0263. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. No figure on p168 and none is mapped to sec_0263.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0263",
+   "page_sampled": 168,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p168 and none is mapped to sec_0263. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p170, sec_0268 \"Setting The QT Baseline\" is printed as the level-4 heading on p169, under \"QT View\". Its hierarchy_level is 4, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0268 is sec_0266 (QT View). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p169 (#/texts/3055-3059) and goes on to p170 (#/texts/3060-3062). On p170 it has the running header and the paragraph \"If no baseline has been set...\", which belongs to this section. The next heading \"Printing The QT Waves\" is in sec_0269.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0268 is built from its ancestors in order and ends with \"Setting The QT Baseline\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. The section starts on p169 (#/texts/3055-3059) and goes on to p170 (#/texts/3060-3062). On p170 it has the running header and the paragraph \"If no baseline has been set...\", which belongs to this section. The next heading \"Printing The QT Waves\" is in sec_0269.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0268 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0268 has structural_source toc. Its heading \"Setting The QT Baseline\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0268 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p170. The QT View screenshot on p169 (img_0089) is mapped to sec_0266, which is right. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. No figure on p170. The QT View screenshot on p169 (img_0089) is mapped to sec_0266, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0268",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p170. The QT View screenshot on p169 (img_0089) is mapped to sec_0266, which is right. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p171, sec_0272 \"Switching Individual QTc Alarms On and Off\" is printed as the level-3 heading at the top of p171, under the page header. Its hierarchy_level is 3, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0272 is sec_0271 (QT Alarms). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0272 has the p171 running header, the heading, one sentence and one bullet (#/texts/3073-3077), all on p171. \"Changing QTc Alarm Limits\" starts sec_0273. Nothing is mixed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0272 is built from its ancestors in order and ends with \"Switching Individual QTc Alarms On and Off\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. sec_0272 has the p171 running header, the heading, one sentence and one bullet (#/texts/3073-3077), all on p171. \"Changing QTc Alarm Limits\" starts sec_0273. Nothing is mixed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0272 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0272 has structural_source toc. Its heading \"Switching Individual QTc Alarms On and Off\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0272 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p171 and none is mapped to sec_0272. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. No figure on p171 and none is mapped to sec_0272.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0272",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p171 and none is mapped to sec_0272. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p175, sec_0280 \"Selecting the Active Alarm Source: ECG or Pulse?\" is printed as the level-3 heading on p174, under \"Using Pulse Alarms\". Its hierarchy_level is 3, which fits the heading size and style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent of sec_0280 is sec_0279 (Using Pulse Alarms). This is the heading above it on the page and in the document. It has no children, and none is expected.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p174 (#/texts/3115-3125) and goes on to p175 (#/texts/3126-3130). On p175 it has the running header, the WARNING box and the sentence about pulse alarms. These belong to it. The next heading \"Alarm Source Selection Disabled\" is in sec_0281.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0280 is built from its ancestors in order and ends with \"Selecting the Active Alarm Source: ECG or Pulse?\". It matches the headings above it on the printed pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node is duplicated and no node is missing on the sampled page. The section starts on p174 (#/texts/3115-3125) and goes on to p175 (#/texts/3126-3130). On p175 it has the running header, the WARNING box and the sentence about pulse alarms. These belong to it. The next heading \"Alarm Source Selection Disabled\" is in sec_0281.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0280 has flagged_for_review False. Its boundaries on the rendered page are correct, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0280 has structural_source toc. Its heading \"Selecting the Active Alarm Source: ECG or Pulse?\" is a real printed heading on the rendered page, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The numbering scheme is arabic. The folios printed on the sampled pages are plain arabic numbers (for example 148-165 in chapters 6-8).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start of sec_0280 matches the physical page where the heading is printed. The printed folio differs from the physical page, but the section pages are physical and correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p174 or p175 and none is mapped to sec_0280. No visible figure on the sampled page is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative item, rule or logo is kept as an image for this section on the sampled page. No figure on p174 or p175 and none is mapped to sec_0280.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0280",
+   "page_sampled": 175,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure on p174 or p175 and none is mapped to sec_0280. Nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}
