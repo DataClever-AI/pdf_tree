@@ -727,13 +727,7 @@ def run_pipeline(
         with open(tree_json_path, "w") as f:
             json.dump(sections, f, indent=2, ensure_ascii=False)
 
-        # Blocks on pages no section covers (cover, the manual's own TOC, an excluded
-        # Index) are correctly outside the tree, not coverage gaps.
-        covered = {p for s in matched for p in range(s.page_start, s.page_end + 1)}
-        expected_front_matter = (
-            sum(1 for b in doc.text_blocks if b.page_no not in covered)
-            + sum(1 for t in doc.tables if t.page_no not in covered)
-        ) if doc else 0
+        expected_front_matter = _front_matter_count(doc, matched) if doc else 0
         total_blocks = len(doc.text_blocks) + len(doc.tables) if doc else 0
         validation = validate_tree(
             tree_json_path=tree_json_path,
@@ -789,6 +783,24 @@ def run_pipeline(
             stage_times=stage_times,
             error=str(exc),
         )
+
+
+def _front_matter_count(doc: DoclingDocument, matched: list[MatchedSection]) -> int:
+    """Blocks that are correctly outside the tree, so they are not coverage gaps.
+
+    These are blocks on pages no section covers (cover, the manual's own TOC, an excluded
+    Index) and text read before the first section's first block, such as a cover title
+    on the page where the first section starts (LOGIQ_S8 p1). The first heading is only
+    searched on that start page, so only text above it there is counted. Tables have no
+    reading order and keep the page rule.
+    """
+    covered = {p for s in matched for p in range(s.page_start, s.page_end + 1)}
+    first_order = min((b.reading_order for s in matched for b in s.text_blocks), default=None)
+    return sum(
+        1
+        for b in doc.text_blocks
+        if b.page_no not in covered or (first_order is not None and b.reading_order < first_order)
+    ) + sum(1 for t in doc.tables if t.page_no not in covered)
 
 
 def _extract_embedded_images(
