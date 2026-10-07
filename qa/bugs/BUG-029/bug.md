@@ -1,6 +1,6 @@
 ---
 bug_id: BUG-029
-status: in-progress
+status: mitigated
 finding:
 fix_branch: fix/BUG-029-margin-headings
 fix_commit: 175c3d1, bacf325, 0128ad0
@@ -40,6 +40,7 @@ Simulation: SOMATOM sections with only a heading went from 219 to 44. Residual: 
 |---|---|---|---|---|---|---|---|
 | 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 5 | 1 | No change: 5 -> 5 FAIL on paired rows. Still open in this manual. |
 | 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 3 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.10 | `29ad53c` fix(section_matcher): split merged margin headings and anchor on exact margin headings (BUG-029) | Phase 1: merged margin headings are split and placed by the PDF text layer; an exact margin heading is the first anchor (pipeline 29ad53c). | 47 → 4 | 5 | Keep: 47 -> 4 FAIL by the catalogue (the lead counts 7, with sec_0195 and sec_0785 noted as BUG-019). Left: a merge across pages, a two-line heading, a heading with no node, and a p152 regression. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

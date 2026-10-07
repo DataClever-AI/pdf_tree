@@ -42,6 +42,7 @@ Pending.
 | 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 3 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
 | 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 3 → 3 | 7 | No change: 3 -> 3 FAIL on paired rows. Still open in this manual. |
 | 2026-10-07 | `LOGIQ_S8` | v1.13 | `54a8acf` fix(pipeline): keep wide but short pictures in the image filter (BUG-011) | Phase 0: the image filter keeps pictures under 48 px in one side only, and Coverage counts the p1 cover title as front matter (pipeline 54a8acf). | 5 → 4 | 2 | Keep: 5 -> 4 FAIL. Wide UI pictures are kept now; icons small in both sides are still dropped. |
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.10 | `29ad53c` fix(section_matcher): split merged margin headings and anchor on exact margin headings (BUG-029) | Phase 1: merged margin headings are split and placed by the PDF text layer; an exact margin heading is the first anchor (pipeline 29ad53c). | 26 → 23 | 5 | Keep: 26 -> 23 FAIL. Icons small in both sides are still dropped; their names are in the text (Low). |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
