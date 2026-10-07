@@ -161,6 +161,11 @@
       "bug_id": "BUG-032",
       "title": "Same content kept twice in one section: a legend read twice, or a table also kept as paragraphs",
       "suspected_module": "docling_extract / section_matcher (unconfirmed)"
+    },
+    {
+      "bug_id": "BUG-033",
+      "title": "An image drawn more than once on a page is extracted only once: the second use (another item or figure) has no picture",
+      "suspected_module": "src/pipeline/pipeline.py::_extract_embedded_images (uses only rects[0] of each image object)"
     }
   ],
   "rules": [

@@ -40,5 +40,6 @@ Statuses: `open`, `fix-proposed`, `in-progress`, `mitigated`, `fixed-pending-mer
 | [BUG-030](BUG-030/bug.md) | Full-width footnote row of a table is lost: its text is in no table cell and in no text node | Critical | open | H-17 | DOC-0136477A | 1 | 0 | — |
 | [BUG-031](BUG-031/bug.md) | Table cell text artefacts: leader dots, line-break hyphens, a lost plus-minus sign or a repeated legend letter; values and columns are kept | Low | open | — | 2002_Service_Manual_TI; LOGIQ_S8; Philips-MP20-MP90-Manual | 11 | 0 | — |
 | [BUG-032](BUG-032/bug.md) | Same content kept twice in one section: a legend read twice, or a table also kept as paragraphs | Low | open | — | 2002_Service_Manual_TI | 2 | 0 | — |
+| [BUG-033](BUG-033/bug.md) | An image drawn more than once on a page is extracted only once: the second use (another item or figure) has no picture | — | open | — | — | 0 | 0 | — |
 
 **Triage:** 3 FAIL row(s) not yet classified to a root cause are listed in [triage.csv](triage.csv).
