@@ -27,6 +27,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.qa_workflow.mitigation import (  # noqa: E402
     PipelineInfo,
     create_mitigation_version,
+    standing_fail_pairs,
     validate_mitigation_name,
 )
 from src.qa_workflow.root_causes import (  # noqa: E402
@@ -60,6 +61,11 @@ def main() -> None:
     parser.add_argument("--extra-pages", type=int, default=5)
     parser.add_argument("--window-size", type=int, default=120)
     parser.add_argument("--window-overlap", type=int, default=6)
+    parser.add_argument(
+        "--all-fails",
+        action="store_true",
+        help="also check every row whose latest reviewed result in any version is FAIL",
+    )
     parser.add_argument(
         "--allow-dirty",
         action="store_true",
@@ -111,6 +117,8 @@ def main() -> None:
     )
     if result.error:
         sys.exit(f"Pipeline failed: {result.error}")
+    if args.all_fails:
+        occurrences |= standing_fail_pairs(QA_DIR, args.manual, result.sections)
 
     validation = {
         "pdf_name": pdf_path.name,

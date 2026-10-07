@@ -27,6 +27,7 @@ from src.qa_workflow.mitigation import (
     PipelineInfo,
     create_mitigation_version,
     plan_mitigation_sample,
+    standing_fail_pairs,
     validate_mitigation_name,
 )
 from src.qa_workflow.models import QA_COLUMNS
@@ -287,3 +288,45 @@ def test_random_checks_never_repeat_an_official_row():
     plan = plan_mitigation_sample(tree, PAGES, set(), set(), extra_pages=PAGES, seed="m:v2.1")
     official = {(row.section_id, row.page) for row in plan.sample.rows}
     assert not {(row.section_id, row.page) for row in plan.check_rows} & official
+
+
+def _reviewed_version(root: Path, version: str, tree: list[dict], rows: list[tuple]) -> None:
+    (root / version / "exports").mkdir(parents=True)
+    (root / version / "findings").mkdir(parents=True)
+    (root / version / "exports" / "tree.json").write_text(json.dumps(tree))
+    with (root / version / "findings" / "findings_log.csv").open("w", newline="") as handle:
+        writer = csv.writer(handle)
+        writer.writerow(QA_COLUMNS)
+        for section_id, page, ref, result in rows:
+            writer.writerow(["M", section_id, page, ref, result, "Low", "", ""])
+
+
+def test_standing_fails_follow_titles_and_newest_result(tmp_path):
+    def section(section_id, title, start, end, level=1):
+        return {
+            "section_id": section_id,
+            "title": title,
+            "page_start": start,
+            "page_end": end,
+            "hierarchy_level": level,
+        }
+
+    old_tree = [section("sec_0001", "Intro", 1, 2), section("sec_0002", "Setup", 3, 5)]
+    _reviewed_version(
+        tmp_path / "M",
+        "v1",
+        old_tree,
+        [
+            ("sec_0002", 4, "5.1-a", "FAIL"),
+            ("sec_0001", 1, "5.1-a", "FAIL"),
+            ("sec_0002", 5, "5.1-a", "FAIL"),
+        ],
+    )
+    # v1.1 fixes p1; v1.2 ids shift because a section was added before "Setup".
+    _reviewed_version(tmp_path / "M", "v1.1", old_tree, [("sec_0001", 1, "5.1-a", "PASS")])
+    new_tree = [
+        section("sec_0001", "Intro", 1, 2),
+        section("sec_0002", "Notes", 3, 3),
+        section("sec_0003", "Setup", 3, 5),
+    ]
+    assert standing_fail_pairs(tmp_path, "M", new_tree) == {("sec_0003", 4), ("sec_0003", 5)}
