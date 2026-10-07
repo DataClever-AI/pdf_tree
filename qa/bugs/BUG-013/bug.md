@@ -4,7 +4,7 @@ status: open
 finding: 
 fix_branch: 
 fix_commit: 
-updated: 2026-09-29
+updated: 2026-10-07
 ---
 
 # BUG-013 · Extracted image asset incorrectly rotated 180°
@@ -36,6 +36,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 12 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

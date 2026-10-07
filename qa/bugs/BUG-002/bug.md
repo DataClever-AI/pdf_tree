@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-002
-status: in-progress
+status: fixed-pending-merge
 finding: H-05, H-12
 fix_branch: fix/BUG-002-back-matter-boundaries
 fix_commit: 86a3f21, de74fb6
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # BUG-002 · Back-matter silently absorbed past last bookmark
@@ -39,6 +39,11 @@ Pending.
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
 | 2026-10-06 | `DOC-0136477A` | v1.3 | `de74fb6` fix(section_matcher): end the last section at an unbookmarked index (BUG-002) | Excluded TOC entries act as section boundaries, and an index without a bookmark is detected. | 0 → 0 | 0 | Keep: 0 -> 0; no paired rows. The glossary (p233) is now outside the tree, which is pending decision 4. |
+| 2026-10-07 | `DOC-0136477A` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 0 | 1 | Fixed in this manual: 2 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 3 → 0 | 17 | Fixed in this manual: 3 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 3 → 0 | 9 | Fixed in this manual: 3 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 8 → 0 | 12 | Fixed in this manual: 8 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 6 → 0 | 58 | Fixed in this manual: 6 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

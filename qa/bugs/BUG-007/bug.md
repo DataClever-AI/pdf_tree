@@ -4,7 +4,7 @@ status: open
 finding: 
 fix_branch: 
 fix_commit: 
-updated: 2026-09-29
+updated: 2026-10-07
 ---
 
 # BUG-007 · Native table extractor captures only the header row for symbol/glyph-marked grids, losing all data rows
@@ -36,6 +36,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION` | v1.6 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 2 | 0 | No change: 2 -> 2 FAIL on paired rows. Still open in this manual. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

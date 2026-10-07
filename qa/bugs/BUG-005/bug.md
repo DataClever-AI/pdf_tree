@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-005
-status: in-progress
+status: fixed-pending-merge
 finding: H-05
 fix_branch: fix/BUG-005-reading-order
 fix_commit: 360cf01
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-005 · Content-stream desync — body text lost/misattributed around a chapter boundary (sec_0035 root cause family, SOMATOM)
@@ -37,6 +37,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 113 → 0 | 17 | Fixed in this manual: 113 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

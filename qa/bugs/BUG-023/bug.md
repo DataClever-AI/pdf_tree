@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-023
-status: in-progress
+status: mitigated
 finding: 
 fix_branch: fix/BUG-029-margin-headings-residual
 fix_commit: 360cf01, beb1698, 175c3d1, bacf325
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-023 · Reading-order misattribution around a same-page heading transition: content printed before or after a heading on the same page is assigned to the neighbouring section
@@ -37,6 +37,8 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 8 → 3 | 9 | Better: 8 -> 3 FAIL on paired rows. The rest is still open. |
+| 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 0 | 13 | Fixed in this manual: 2 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

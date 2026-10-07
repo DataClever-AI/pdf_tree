@@ -38,6 +38,8 @@ Simulation: SOMATOM sections with only a heading went from 219 to 44. Residual: 
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 5 | 1 | No change: 5 -> 5 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 3 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

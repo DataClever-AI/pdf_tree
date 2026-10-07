@@ -4,7 +4,7 @@ status: mitigated
 finding: H-10
 fix_branch: 
 fix_commit: 
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # BUG-010 · Vector-drawn diagrams not captured as images — extractor only handles raster XObjects
@@ -44,6 +44,12 @@ Pending.
 | 2026-10-06 | `LOGIQ_e_R9_General_Service_Manual` | v1.9 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 1 → 1 | 2 | Keep: 1 -> 1. The step line on p96 is still inside a crop (Low); the other regressions are table grading, not BUG-010. |
 | 2026-10-06 | `Philips-MP20-MP90-Manual` | v2.11 | `2b58bb4` fix(pipeline): do not take headings as vector figure labels (BUG-010) | Round 3: callout labels are short text blocks, a figure over 75% of the page is the whole page, and nested figures are dropped. | 4 → 0 | 1 | Keep: 4 -> 0. Labels on p216, p305 and p354 are complete; p184 has body text in its crop (Low, not in the sample). |
 | 2026-10-06 | `LOGIQ_S8` | v1.11 | `6eddaf1` fix(section_matcher): match headings with subscripts by text without spaces (BUG-019) | Drawings in table cells are kept (only straight grid lines are dropped); marks drawn on a photo are rendered with the photo. | 2 → 0 | 0 | Keep: the p502 cover drawing is back (Critical row now PASS). New Low: a strip of marks on p613. |
+| 2026-10-07 | `AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION` | v1.6 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 2 | 0 | No change: 2 -> 2 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `DOC-0136477A` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 1 | 0 | No change: 1 -> 1 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 4 → 3 | 9 | Better: 4 -> 3 FAIL on paired rows. The rest is still open. |
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 2 | 2 | 1 -> 2 FAIL on paired rows. The lead found no change in the tree; the new rows come from stricter grading. |
+| 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 12 → 1 | 13 | Better: 12 -> 1 FAIL on paired rows. The rest is still open. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 8 → 6 | 7 | Better: 8 -> 6 FAIL on paired rows. The rest is still open. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

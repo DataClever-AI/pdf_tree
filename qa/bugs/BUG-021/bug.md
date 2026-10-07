@@ -4,7 +4,7 @@ status: open
 finding: 
 fix_branch: 
 fix_commit: 
-updated: 2026-09-29
+updated: 2026-10-07
 ---
 
 # BUG-021 · Empty '[Table 0x0]' placeholder or a running header misdetected as a table
@@ -36,6 +36,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 2 | 1 | No change: 2 -> 2 FAIL on paired rows. Still open in this manual. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
