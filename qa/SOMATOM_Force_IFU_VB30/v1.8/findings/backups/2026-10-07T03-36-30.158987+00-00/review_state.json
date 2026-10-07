@@ -1,0 +1,1289 @@
+{
+  "schema_version": 1,
+  "manual_id": "SOMATOM_Force_IFU_VB30",
+  "version": "v1.8",
+  "reviewer": "legacy-migration",
+  "updated_at": "2026-10-07T03:36:26.043281+00:00",
+  "decisions": {
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.4-hierarchy_level": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.4-hierarchy_level",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p2 'Legend' is the large orange chapter title, so level 1 is right. The section has no parent, as expected for a top-level chapter.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.4-parent_child": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.4-parent_child",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "sec_0001 has no parent and no children. Pages 2-3 show only one title, with no sub-headings that need child sections. The next sibling is sec_0002 'Introduction'.",
+        "notes": "Orange, CAUTION and WARNING are labels inside the legend, not sections.",
+        "confidence": 0.92,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.4-page_start_end": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.4-page_start_end",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The section starts at the 'Legend' title on p2 and ends with the WARNING block on p3. The legend table (#/tables/0), CAUTION text on p2 and WARNING text on p3 all belong to it. No text from another chapter is included.",
+        "notes": "The nodes include running headers and footers (#/texts/3, 18-21, 29-31). These are boilerplate inside the section, not a boundary problem.",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.4-hierarchy_path": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.4-hierarchy_path",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "hierarchy_path is '/Legend'. It matches the single top-level title shown on p2.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.4-gaps_duplicates": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.4-gaps_duplicates",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "Nodes 1-30 run in order and cover all text on p2 and p3. The same words appear twice only because of the running header 'Legend' (#/texts/3, #/texts/21) and the title (#/texts/11). Pages 4-9 are not in any section before sec_0002 starts on p10.",
+        "notes": "Two nodes hold garbled text: '&$87,21' (#/texts/10) is the CAUTION label and ':$51,1*' (#/texts/22) is the WARNING label. This is a font-encoding problem and the real words are in the next nodes. Pages 4-9 were not rendered here; they are probably the printed contents, so confidence is lower.",
+        "confidence": 0.72,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.72,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.4-flagged_for_review": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.4-flagged_for_review",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "flagged_for_review is false and verification_score is 100. The title 'Legend' is clearly visible at the top of p2, so no flag is needed.",
+        "notes": "",
+        "confidence": 0.92,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.4-structural_source": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.4-structural_source",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "structural_source is 'toc'. The title and page 2 match the visible title on p2, so the TOC source is supported.",
+        "notes": "",
+        "confidence": 0.92,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.6-numbering_scheme": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.6-numbering_scheme",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The printed folios are '2' on p2 and '3' on p3 in Arabic numerals. numbering_scheme is 'arabic'.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.6-offset_applied": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.6-offset_applied",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The printed folio on p2 is 2 and on p3 is 3. offset_applied is 0, so printed and physical pages agree.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.6-table_content": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.6-table_content",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p2 the legend table has the description column with real grid content matching the visible text. Only hyphenation changed since v1. The left symbol labels are not table cells.",
+        "notes": "The left labels are separate nodes (#/texts/4-9). This matches the approved v1 grading (PASS). The icons are reported in 5.5-filters_discarding.",
+        "confidence": 0.8,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.8,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.5-filters_discarding": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.5-filters_discarding",
+        "result": "FAIL",
+        "severity": "Low",
+        "evidence": "The legend icons on p2 are not in the image output (the 'i' hint icon, the '>>' icon and the CAUTION banner). The list has no image for this section.",
+        "notes": "Each icon meaning is also written in the text ('Indicates a hint', and so on), so retrieval still works. Only the pictures are lost. This follows the Sprint pattern of a small icon dropped.",
+        "confidence": 0.72,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.72,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.5-filters_passing_noise": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.5-filters_passing_noise",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "No image is kept for sec_0001 and none for p2 or p3. No decorative item (orange tab, footer line) was kept as an image.",
+        "notes": "",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0001|2|5.5-image_section_mapping": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0001",
+        "page_sampled": "2",
+        "checklist_ref": "5.5-image_section_mapping",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The p2 and p3 renderings show only small icons and text. The image list has no image for these pages. There is nothing to map to a wrong section.",
+        "notes": "The missing icons are reported in 5.5-filters_discarding.",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.4-hierarchy_level": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.4-hierarchy_level",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p235 '6.1 Examination procedure overview' is a section heading under the chapter '6 Examination'. hierarchy_level 2 is right.",
+        "notes": "",
+        "confidence": 0.94,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.94,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.4-parent_child": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.4-parent_child",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The parent sec_0490 is the chapter '6 Examination'. The children sec_0492 to sec_0501 match 6.1.1 to 6.1.10 on p236 to p238. The next section 6.2 (sec_0502) is a sibling.",
+        "notes": "",
+        "confidence": 0.92,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.4-page_start_end": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.4-page_start_end",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The section starts at the '6.1' heading on p235. The chapter title '6 Examination' and its intro line above it are not in sec_0491. The two workflow tables belong to 6.1 (tables 21 and 22 on p235, table 23 on p236, steps 3-11 before the 6.1.1 heading). page_end 238 matches the last child 6.1.10, and 6.2 starts below it on p238.",
+        "notes": "Nodes include running headers and footers (#/texts/4972-4974). The tables are placed after the text in semantic_order, not in page order. Both points are minor.",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.4-hierarchy_path": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.4-hierarchy_path",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "hierarchy_path '/Examination/Examination procedure overview' matches the chapter 6 and section 6.1 headings on p235.",
+        "notes": "",
+        "confidence": 0.94,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.94,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.4-gaps_duplicates": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.4-gaps_duplicates",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The table on p236 (#/tables/23, steps 3-11) continues the p235 table (#/tables/22, steps 1-2) and repeats only the header row. No row is lost or duplicated, and the first table (#/tables/21) is a different table.",
+        "notes": "",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.4-flagged_for_review": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.4-flagged_for_review",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "flagged_for_review is false with verification_score 100. The '6.1 Examination procedure overview' title is clearly on p235.",
+        "notes": "",
+        "confidence": 0.92,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.4-structural_source": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.4-structural_source",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "structural_source is 'toc'. The title and page 235 agree with the heading seen on p235.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.6-numbering_scheme": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.6-numbering_scheme",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The folios are '235' on p235 and '238' on p238 in Arabic numerals. numbering_scheme is 'arabic'.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.6-offset_applied": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.6-offset_applied",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The printed folio is 235 on p235 and 238 on p238. offset_applied is 0, so they agree with the physical pages.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.6-table_content": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.6-table_content",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p235 the Touch Panel table has 4 columns and 9 steps. #/tables/21 keeps all rows and cells. The predecessor table on p235 and p236 (#/tables/22 and #/tables/23, steps 1-11) also matches the render.",
+        "notes": "The arrow in the cross-references ('Page 236') is an empty private-use character in the text. This is cosmetic. The table was split in two at the page break.",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.5-filters_discarding": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.5-filters_discarding",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "p235 and p238 contain only text, headings and tables. The cross-reference arrows are small glyphs inside the text. No figure or photo was lost.",
+        "notes": "",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.5-filters_passing_noise": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.5-filters_passing_noise",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "No image is kept for sec_0491. The teal tab and footer line on p235 and p238 are not in the image list.",
+        "notes": "",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0491|235|5.5-image_section_mapping": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0491",
+        "page_sampled": "235",
+        "checklist_ref": "5.5-image_section_mapping",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "p235 and p238 have no figure. The image list has no image mapped to sec_0491, so there is nothing mapped wrongly.",
+        "notes": "",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.4-hierarchy_level": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.4-hierarchy_level",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p329 'State of Reconstruction' is a margin title under '6.7.4 Performing a reconstruction'. The tree has it at level 5. This matches the PDF bookmark nesting (levels 3, 4, 5, all on p329).",
+        "notes": "On p329 the printed margin titles 'Starting reconstruction' and 'State of Reconstruction' look like siblings. The PDF bookmark tree nests them as levels 4 and 5, so this is a source bookmark choice, not a pipeline defect. Graded PASS as in approved v1.",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.4-parent_child": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.4-parent_child",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The parent is sec_0672 'Starting reconstruction'. This is the same nesting as in the PDF bookmark tree. The intro, table and last table row of 'State of Reconstruction' are in sec_0673 on p329 and p330.",
+        "notes": "On p329 the printed margin titles 'Starting reconstruction' and 'State of Reconstruction' look like siblings. The PDF bookmark tree nests them as levels 4 and 5, so this is a source bookmark choice, not a pipeline defect. Graded PASS as in approved v1.",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.4-page_start_end": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.4-page_start_end",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The section starts at the margin title 'State of Reconstruction' on p329. It holds the intro line, the icon table (#/tables/30) and its last row on p330 (#/texts/7123-7127, 'Indicates that images have been reconstructed'). It ends before 'Performing retrospective reconstruction' on p330. 'Starting reconstruction' content stays in sec_0672.",
+        "notes": "The p330 table row is stored as paragraph nodes before the table in semantic_order. All text is owned by the right section.",
+        "confidence": 0.87,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.87,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.4-hierarchy_path": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.4-hierarchy_path",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "hierarchy_path is '/Examination/Reconstruction/Performing a reconstruction/Starting reconstruction/State of Reconstruction'. It follows the PDF bookmark nesting, and the headings on p329 are in this order.",
+        "notes": "On p329 the printed margin titles 'Starting reconstruction' and 'State of Reconstruction' look like siblings. The PDF bookmark tree nests them as levels 4 and 5, so this is a source bookmark choice, not a pipeline defect. Graded PASS as in approved v1.",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.4-gaps_duplicates": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.4-gaps_duplicates",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "All text of the 'State of Reconstruction' block is present once: the intro on p329, ten table rows on p329 and the eleventh row on p330. Nothing is repeated in sec_0672 or sec_0674.",
+        "notes": "",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.4-flagged_for_review": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.4-flagged_for_review",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "flagged_for_review is false with verification_score 100. The title is clearly seen on p329. The nesting problem was not flagged, but the flag only needs to show uncertainty.",
+        "notes": "The unflagged nesting error is reported in 5.4-hierarchy_level.",
+        "confidence": 0.8,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.8,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.4-structural_source": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.4-structural_source",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "structural_source is 'toc'. The title and page 329 match the margin title on p329.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.6-numbering_scheme": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.6-numbering_scheme",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The folios are '329' on p329 and '330' on p330 in Arabic numerals. numbering_scheme is 'arabic'.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.6-offset_applied": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.6-offset_applied",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "Printed folio 329 is on physical p329, and 330 on p330. offset_applied is 0, so they agree.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.6-table_content": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.6-table_content",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p329 the status table has ten rows with an icon column and a description column. #/tables/30 keeps the ten descriptions in order with real grid content. Only hyphenation changed since v1.",
+        "notes": "The icon column is empty because the icons are pictures. The 11th row on p330 is outside the table node. This matches the approved v1 grading (PASS); the lost icons are in 5.5-filters_discarding.",
+        "confidence": 0.8,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.8,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.5-filters_discarding": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.5-filters_discarding",
+        "result": "FAIL",
+        "severity": "Low",
+        "evidence": "On p329 each table row starts with a small status icon (grey square, pink frame, '3D', 'RT', black 'RT', checker, X, hourglass, bars, queue). The p330 row has a thumbnail icon. The image list has no image for p329 or p330 in this section.",
+        "notes": "The meaning of each row is written in the text, but the icon that a user must recognise is lost. This is a small-icon drop with the meaning in text, so Low. If the reviewer thinks the icon appearance is the key information, the severity may be higher.",
+        "confidence": 0.62,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.62,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.5-filters_passing_noise": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.5-filters_passing_noise",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "No image is kept for sec_0673, so no decorative element is kept as an image.",
+        "notes": "",
+        "confidence": 0.87,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.87,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0673|329|5.5-image_section_mapping": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0673",
+        "page_sampled": "329",
+        "checklist_ref": "5.5-image_section_mapping",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The image list has no image for p329 or p330, so no image is mapped to the wrong section. The info box icon on p329 is a small icon outside this section.",
+        "notes": "The missing icons are reported in 5.5-filters_discarding.",
+        "confidence": 0.8,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.8,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.4-hierarchy_level": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.4-hierarchy_level",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p21 'SOMATOM Force / Force Velo (side view)' is a figure heading above the dose map. It is a lower level than the section heading '2.1.14 Radiation protection equipment' below it. hierarchy_level 4 fits a sibling of '(top view)'.",
+        "notes": "The parent heading is on an earlier page and was not rendered here, so confidence is a little lower.",
+        "confidence": 0.8,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.8,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.4-parent_child": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.4-parent_child",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The parent is sec_0026 'Radiation protection', which lists sec_0027 'top view' and sec_0028 'side view'. sec_0028 has no children and none are needed.",
+        "notes": "",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.4-page_start_end": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.4-page_start_end",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The section covers only the figure and caption at the top of p21. The '2.1.14 Radiation protection equipment' heading and its text start below the figure and belong to sec_0029. The section is one page, page_start = page_end = 21.",
+        "notes": "The checker says the section has no body of its own. This is expected: its body is the figure, a vector drawing saved as img_0008 (the heading text and the dose values are in the image). The node '2 Safety information' (#/texts/285) is the p21 running header. No text node of another section is lost or absorbed, so PASS is kept.",
+        "confidence": 0.82,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.82,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.4-hierarchy_path": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.4-hierarchy_path",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "hierarchy_path '/Safety information/General safety information/Radiation protection/SOMATOM Force / Force Velo (side view)' is consistent with the running header '2 Safety information' on p21 and with the sibling and parent sections.",
+        "notes": "",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.4-gaps_duplicates": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.4-gaps_duplicates",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The p21 figure heading and image img_0008 are in sec_0028. The 2.1.14 text on p21 is in sec_0029. Nothing is duplicated between sec_0027, sec_0028 and sec_0029.",
+        "notes": "The checker flags a section with no body, but the body is the figure img_0008 and no text is missing. Same reasoning as 5.4-page_start_end.",
+        "confidence": 0.82,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.82,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.4-flagged_for_review": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.4-flagged_for_review",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "flagged_for_review is false with verification_score 100. The title is clearly seen above the figure on p21.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.4-structural_source": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.4-structural_source",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "structural_source is 'toc'. The title and page 21 match the figure heading seen on p21.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.6-numbering_scheme": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.6-numbering_scheme",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The folio on p21 is '21' in Arabic numerals. numbering_scheme is 'arabic'.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.6-offset_applied": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.6-offset_applied",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The printed folio '21' is on physical p21. offset_applied is 0, so they agree.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.5-filters_discarding": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.5-filters_discarding",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The dose map on p21 is a vector drawing. img_0008 (origin vector, 886 x 494 px) shows the whole map with its scales and values. No meaningful figure is lost.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.5-filters_passing_noise": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.5-filters_passing_noise",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The only image kept for sec_0028 is img_0008, the dose map. It is real content, not a rule, logo or footer line.",
+        "notes": "",
+        "confidence": 0.92,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0028|21|5.5-image_section_mapping": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0028",
+        "page_sampled": "21",
+        "checklist_ref": "5.5-image_section_mapping",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "img_0008 is mapped to sec_0028 on p21 and sits directly under its heading. The next figure-free text '2.1.14' is in sec_0029, so the mapping is right.",
+        "notes": "",
+        "confidence": 0.92,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.4-hierarchy_level": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.4-hierarchy_level",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "On p116 'Orientation aids' is a margin title in the same style as 'RTP adaptor connections' (sec_0202). Both are level 6 under the RTP table top (level 5, sec_0201).",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.4-parent_child": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.4-parent_child",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The parent sec_0201 'Radiation Therapy Planning (RTP) table top' lists sec_0202 and sec_0203 as children. On p116 both margin titles sit under the RTP table top. sec_0203 has no children.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.4-page_start_end": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.4-page_start_end",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The section starts at the 'Orientation aids' margin title and its intro paragraph at the bottom of p116. It continues on p117 with the figure, the key (1) to (3) and the three-row table. '3.3.3 Definitions and limit values' below the table is a new section (sec_0204). page_end 117 is right.",
+        "notes": "The title node #/texts/2491 is typed 'paragraph', not 'heading'. This is cosmetic.",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.4-hierarchy_path": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.4-hierarchy_path",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "hierarchy_path ends '.../Radiation Therapy Planning (RTP) table top/Orientation aids'. This is consistent with the parent and the folio '3 System description' header on p116 and p117.",
+        "notes": "",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.4-gaps_duplicates": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.4-gaps_duplicates",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The p116 intro and the p117 figure, key and table form one continuous block in order. The two p116 photos belong to sec_0202 and the load icon to sec_0201, so nothing is shared or repeated.",
+        "notes": "",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.4-flagged_for_review": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.4-flagged_for_review",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "flagged_for_review is false with verification_score 100. The title is clearly visible on p116.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.4-structural_source": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.4-structural_source",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "structural_source is 'toc'. The title and page 116 match the margin title seen on p116.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.6-numbering_scheme": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.6-numbering_scheme",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The folios are '116' and '117' in Arabic numerals. numbering_scheme is 'arabic'.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.6-offset_applied": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.6-offset_applied",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "Printed folio 116 is on physical p116 and 117 on p117. offset_applied is 0, so they agree.",
+        "notes": "",
+        "confidence": 0.93,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.6-table_content": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.6-table_content",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The p117 table has Object, Position and Function columns and three rows. #/tables/9 has the same cells (air filled plastic tube, Perspex rod, 3 copper wires) with the right values in the right columns.",
+        "notes": "The words 'x-direc- tion' and 'equiva- lent' keep the print hyphen from the line wrap. This is cosmetic.",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.5-filters_discarding": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.5-filters_discarding",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "The only figure in this section (the table top with callouts 1, 2 and 3 on p117) is extracted as img_0080. No other figure is lost in sec_0203.",
+        "notes": "The small 'i' note icon and CAUTION icon on p116 are not in the image list, but they lie in sec_0202 and sec_0201 and their text is kept.",
+        "confidence": 0.85,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.5-filters_passing_noise": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.5-filters_passing_noise",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "img_0080 is the table top figure with callouts, which is real content. No footer line or logo is kept for sec_0203.",
+        "notes": "",
+        "confidence": 0.9,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    },
+    "SOMATOM_Force_IFU_VB30|sec_0203|117|5.5-image_section_mapping": {
+      "original_proposal": {
+        "manual_id": "SOMATOM_Force_IFU_VB30",
+        "section_id": "sec_0203",
+        "page_sampled": "117",
+        "checklist_ref": "5.5-image_section_mapping",
+        "result": "PASS",
+        "severity": "",
+        "evidence": "img_0080 is the p117 figure of the orientation aids and is mapped to sec_0203. The two photos on p116 are mapped to sec_0202 'RTP adaptor connections' and the load icon img_0079 to sec_0201. These match the page.",
+        "notes": "img_0079 (227 kg icon) is upside down in its PNG. This extraction fault is in sec_0201, which is outside this batch.",
+        "confidence": 0.88,
+        "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+      },
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+      "approved": false,
+      "reviewer": "",
+      "current": null,
+      "history": []
+    }
+  }
+}

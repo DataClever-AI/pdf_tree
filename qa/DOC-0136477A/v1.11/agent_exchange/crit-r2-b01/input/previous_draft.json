@@ -1,0 +1,134 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p39 the heading '2.5 Symbols on Product Labels' (#/texts/333) is a numbered sub-heading under chapter 2 'Safety and Symbols'. hierarchy_level 2 fits, like siblings sec_0023 and sec_0025.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id is sec_0016 ('Safety and Symbols'), and sec_0016 lists sec_0024 in child_sections. The section has no children, and the pages show no sub-headings.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/333 is at the top of p39. The last content is the NOTE at the bottom of p40 (#/texts/346, #/texts/352). Sec_0025 starts on p41. No neighbour content is absorbed. Only running headers and folios 39/40 are included.",
+      "notes": "Running headers and folios inside the range are boilerplate, not a boundary problem.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Safety and Symbols/2.5 Symbols on Product Labels' matches the page headers ('2 Safety and Symbols') and the heading on p39.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section appears once. sec_0023 ends p38 and sec_0025 starts p41, so there is no gap or overlap. All four table blocks on p39 and p40 and the NOTE are owned by sec_0024.",
+      "notes": "Some table text is also repeated as small paragraph nodes (PN, Pb, ECG, x, y, 1, 2). The table content is not lost, so I do not count it as a defect here.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false, verification_score is 100 and the title matches the printed heading on p39. Nothing to confirm.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc', not inferred. The bookmark title matches the heading on p39 exactly.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folios are arabic (39 and 40 at the page bottom). numbering_scheme 'arabic' is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 39 is on physical page 39, and p40 is folio 40. Neighbours sec_0023 and sec_0025 also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Four tables (#/tables/33-36) hold all Description cells and group rows ('Connector Identification Labels', 'Additional Packaging Labels'), in the same order as the rendered pages. Text symbols (IPX1, IPX4, PN, Pb, ECG, x y) are kept. Graphic symbol cells are empty.",
+      "notes": "Graphic symbols are not text, so the Symbol column is empty for most rows. Every meaning survives in the Description column. At most a cosmetic gap.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Most symbol icons in Table 2-2 on p39 and p40 are not in images.json (for example MR, CE, LOT, REF, SN, USB, HDMI, Fragile). Only img_0009 (Intertek ETL, p39) and img_0010 (a vector crop of three package symbols on p40, cutting the 4th symbol at the bottom) were extracted.",
+      "notes": "Each dropped icon is named in the text of the Description column, so the information survives. Per the contract this is Low. img_0010 is also cropped through the temperature symbol. Probably the icon filter drops small images.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0009 is the Intertek ETL certification mark and img_0010 shows package symbols. Both are real table symbols. No logo, rule, header or footer line was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 39,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0009 (p39) and img_0010 (p40) are mapped to sec_0024. Both appear inside Table 2-2 under heading 2.5, and no other section is on these pages.",
+      "notes": "",
+      "confidence": 0.92
+    }
+  ]
+}

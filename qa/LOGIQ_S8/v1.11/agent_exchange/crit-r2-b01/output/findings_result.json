@@ -1,0 +1,1434 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 4-3 General procedures (sec_0038) has hierarchy_level 2, level 2 under Chapter 4 (sec_0035, level 1). On p196 the running footer reads the same section title, so it is a section-level entry. On p196 (folio 4 - 8) the page shows heading 4-3-5-2 Monitor Arm Lock, five steps, Figure 4-4 Unlock/Lock dials.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0035 Chapter 4 (p189-238) and child_sections is empty. Sub-headings seen on p196 (nodes #/texts/2409-2418) are only heading nodes inside sec_0038, with no bookmark-level children. On p196 (folio 4 - 8) the page shows heading 4-3-5-2 Monitor Arm Lock, five steps, Figure 4-4 Unlock/Lock dials.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p190 (title node #/texts/2313) and ends at p205 (4-3-9 and Figure 4-14, node #/texts/2572; folio 4 - 17). Boundaries: sec_0039 starts at p206; sec_0037 ends at p189. On p196 all nodes (#/texts/2409-2418) belong to Section 4-3 General procedures.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 4/Section 4-3 General procedures\" matches the visible chain Chapter -> section title. p196 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 2386-2649 (previous ends 2385, next starts 2650) joins the previous and next sections with no gap and no overlap. Section 4-3 General procedures appears once. On p196 the nodes #/texts/2409-2418 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0038 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p190 (title node #/texts/2313)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p190 (title node #/texts/2313).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p196 is \"4 - 8\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p190 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table on p196. The section has one table, #/tables/77 (monitor range values for 19 inch, 23 inch and 22 inch monitors), on p195, which was not rendered in this batch.",
+   "notes": "",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p196 (folio 4 - 8) the page shows heading 4-3-5-2 Monitor Arm Lock, five steps, Figure 4-4 Unlock/Lock dials. Extracted images cover every figure: img_0180 (227x99) shows both Figure 4-4 dials (Unlock, Lock). No figure on the page is missing from images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p196 are all content figures (img_0180 (227x99) shows both Figure 4-4 dials (Unlock, Lock)). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0038 is the only section on p196 (neighbouring sections end before and start after this one), so images on p196 map to the right section: img_0180 (227x99) shows both Figure 4-4 dials (Unlock, Lock).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-15 Monitor and Monitor Arm Plastic Covers Replacement (sec_0083) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p491 the running footer reads the same section title, so it is a section-level entry. On p491 (folio 8 - 115) the page shows title Section 8-15, 8-15-1 Manpower, 8-15-2 Tools, 8-15-3 19 inch LCD monitor, 8-15-3-1 Preparations and 8-15-3-2 Remove Procedure, each with a Step/Illustration table.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p491 (nodes #/texts/6334-6352) are only heading nodes inside sec_0083, with no bookmark-level children. On p491 (folio 8 - 115) the page shows title Section 8-15, 8-15-1 Manpower, 8-15-2 Tools, 8-15-3 19 inch LCD monitor, 8-15-3-1 Preparations and 8-15-3-2 Remove Procedure, each with a Step/Illustration table.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p491 (title node #/texts/6336) and ends at p502 (8-15-7-3 Functional Checks and table #/tables/205; folio 8 - 126). Boundaries: sec_0084 starts at p503; sec_0082 ends at p490. On p491 all nodes (#/texts/6334-6352) belong to Section 8-15 Monitor and Monitor Arm Plastic Covers Replacement.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-15 Monitor and Monitor Arm Plastic Covers Replacement\" matches the visible chain Chapter -> section title. p491 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 6533-6692 (previous ends 6532, next starts 6693) joins the previous and next sections with no gap and no overlap. Section 8-15 Monitor and Monitor Arm Plastic Covers Replacement appears once. On p491 the nodes #/texts/6334-6352 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0083 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p491 (title node #/texts/6336)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p491 (title node #/texts/6336).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p491 is \"8 - 115\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p491 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p491 two Step/Illustration tables are visible (8-15-3-1 Preparations and 8-15-3-2 Remove Procedure). Neither is a table node. Their cells are flat paragraphs #/texts/6343-6351: \"Step\", \"Illustration\", \"1.\", \"Lock the Monitor Arm to prevent hazard.\", \"Locked\" and so on. The text and order are kept, but the grid is lost. The other section tables (#/tables/201-205) are on p495-p502.",
+   "notes": "Low kept: step numbers, text and order are all preserved, only the grid is lost, so values still attach to the right step. verify_claims suggests Medium because the table nodes are missing. Probably a Docling table detection miss.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p491 the photos are kept: img_0542 (571x458) is the monitor arm photo and img_0543 (vector, 1094x446) is the rear-panel photo with two arrows. On p502 (folio 8 - 126) Table 8-39 has a 'Corresponding Graphic' cover drawing with callouts 1 to 6. It is kept as img_0565 (p502, vector, 437x296) and mapped to sec_0083. I compared it with the p502 render. It shows the full drawing with all callouts 1, 2, 3, 4, 5 and 6, and nothing is cut off.",
+   "notes": "Base v1.10 was FAIL/Critical because this p502 drawing was missing. Now fixed. verify_claims reports one raster missing on p491, but that photo is inside img_0543. Probable false positive.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p491 img_0543 (vector, 1094x446) is not only the photo. It is a render of the whole Remove Procedure table. It also holds the heading '8-15-3-2 Remove Procedure', the Step and Illustration header cells and the step text 'Loosen 2 screws, then remove the Monitor rear panel.' This text is also in the paragraph nodes. img_0542 (571x458) is only the monitor arm photo.",
+   "notes": "Low, as in approved base v1.10. img_0543 is unchanged. The real photo with arrows is kept, only repeated text and table frame come with it.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0083 is the only section on p491 (neighbouring sections end before and start after this one), so images on p491 map to the right section: img_0542 (571x458) is the monitor arm photo from the Preparations table and img_0543 (vector, 1094x446) is the rear-panel photo with arrows from the Remove Procedure table.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-18 Replacement around ACQ Box (sec_0086) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p558 the running footer reads the same section title, so it is a section-level entry. On p558 (folio 8 - 182) the page shows the end of the 8-18-4-2 Step/Illustration table (step 4 Separate BF192 and PID, with photo) and a NOTE about the stacking connector.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p558 (nodes #/texts/7102-7109) are only heading nodes inside sec_0086, with no bookmark-level children. On p558 (folio 8 - 182) the page shows the end of the 8-18-4-2 Step/Illustration table (step 4 Separate BF192 and PID, with photo) and a NOTE about the stacking connector.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p552 (title node #/texts/7044) and ends at p571 (8-18-9 Installation Procedure, node #/texts/7228; folio 8 - 195). Boundaries: sec_0087 starts at p572; sec_0085 ends at p551. On p558 all nodes (#/texts/7102-7109) belong to Section 8-18 Replacement around ACQ Box. Bottom of the range was checked on p571: only the 8-18-9 heading and step 6 are there.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-18 Replacement around ACQ Box\" matches the visible chain Chapter -> section title. p558 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7255-7450 (previous ends 7254, next starts 7451) joins the previous and next sections with no gap and no overlap. Section 8-18 Replacement around ACQ Box appears once. On p558 the nodes #/texts/7102-7109 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p552 (title node #/texts/7044)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p552 (title node #/texts/7044).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p558 is \"8 - 182\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p552 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The step 4 table is not a table node. Its cells are separate paragraphs #/texts/7104-7107 (\"4.\", \"Separate BF192 and PID.\", \"Step\", \"Illustration\"), and the header cells come after the step text.",
+   "notes": "Low kept: the step number \"4.\" and its text are still adjacent, only the header cells are out of order. verify_claims suggests Medium because the table grid is flattened. Probably a Docling table detection miss.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p558 (folio 8 - 182) the page shows the end of the 8-18-4-2 Step/Illustration table (step 4 Separate BF192 and PID, with photo) and a NOTE about the stacking connector. Extracted images cover every figure: img_0669 (496x377) is the step 4 photo. No figure on the page is missing from images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p558 are all content figures (img_0669 (496x377) is the step 4 photo). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 is the only section on p558 (neighbouring sections end before and start after this one), so images on p558 map to the right section: img_0669 (496x377) is the step 4 photo.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-24 Replacement of Cables (sec_0092) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p598 the running footer reads the same section title, so it is a section-level entry. On p598 (folio 8 - 222) the page shows only Figure 8-134 (arm photo with callouts 1 to 5), with no heading on the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p598 (nodes #/texts/7552-7560) are only heading nodes inside sec_0092, with no bookmark-level children. On p598 (folio 8 - 222) the page shows only Figure 8-134 (arm photo with callouts 1 to 5), with no heading on the page.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The section is declared p596-p611. It ends on p611 (8-24-5-5 Functional Check, folio 8 - 235). But sec_0092 also holds three p612 nodes: #/texts/7667 'GE Healthcare', #/texts/7668 the manual running header, and heading #/texts/7669 'Section 8-25'. I checked p612: these are the page header and the first line of the next title 'Section 8-25 Replacement of the Probe Holder'. sec_0093 starts on p612. The sampled p598 shows only Figure 8-134 and is inside the section.",
+   "notes": "Low, same as approved precedent v1.10 sec_0066 p355: the 'Section N-N' line and running header are boilerplate. page_end stays 611 and no body text is absorbed. Probably the next title was split at the section edge.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-24 Replacement of Cables\" matches the visible chain Chapter -> section title. p598 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7762-7910 (previous ends 7761, next starts 7911) joins the previous and next sections with no gap and no overlap. Section 8-24 Replacement of Cables appears once. On p598 the nodes #/texts/7552-7560 appear once. The three p612 header nodes are noted in the 5.4-page_start_end row, but no content is lost or duplicated.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0092 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p596 (title node #/texts/7533)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p596 (title node #/texts/7533).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p598 is \"8 - 222\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p596 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table on p598. The section tables are on other pages. Table #/tables/233 on p596 keeps dot leaders inside cells but the values are readable.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p598 (folio 8 - 222) the page shows only Figure 8-134 (arm photo with callouts 1 to 5), with no heading on the page. Extracted images cover every figure: img_0759 (388x327) is the Figure 8-134 photo. No figure on the page is missing from images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p598 are all content figures (img_0759 (388x327) is the Figure 8-134 photo). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0092 is the only section on p598 (neighbouring sections end before and start after this one), so images on p598 map to the right section: img_0759 (388x327) is the Figure 8-134 photo.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 4-3 General procedures (sec_0038) has hierarchy_level 2, level 2 under Chapter 4 (sec_0035, level 1). On p198 the running footer reads the same section title, so it is a section-level entry. On p198 (folio 4 - 10) the page shows heading 4-3-6-2 To move the operator panel from side to side, NOTE, Figures 4-7 and 4-8, five steps, NOTICE.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0035 Chapter 4 (p189-238) and child_sections is empty. Sub-headings seen on p198 (nodes #/texts/2436-2448) are only heading nodes inside sec_0038, with no bookmark-level children. On p198 (folio 4 - 10) the page shows heading 4-3-6-2 To move the operator panel from side to side, NOTE, Figures 4-7 and 4-8, five steps, NOTICE.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p190 (title node #/texts/2313) and ends at p205 (4-3-9 and Figure 4-14, node #/texts/2572; folio 4 - 17). Boundaries: sec_0039 starts at p206; sec_0037 ends at p189. On p198 all nodes (#/texts/2436-2448) belong to Section 4-3 General procedures.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 4/Section 4-3 General procedures\" matches the visible chain Chapter -> section title. p198 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 2386-2649 (previous ends 2385, next starts 2650) joins the previous and next sections with no gap and no overlap. Section 4-3 General procedures appears once. On p198 the nodes #/texts/2436-2448 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0038 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p190 (title node #/texts/2313)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p190 (title node #/texts/2313).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p198 is \"4 - 10\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p190 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table on p198. The only table, #/tables/77, is on p195 and was not rendered in this batch.",
+   "notes": "",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p198 (folio 4 - 10) the page shows heading 4-3-6-2 To move the operator panel from side to side, NOTE, Figures 4-7 and 4-8, five steps, NOTICE. Extracted images cover every figure: img_0184 (vector, 609x391) shows the Figure 4-7 top view and Swivel inset, and img_0183 (585x404) shows the Figure 4-8 keyboard photo with marker 1. No figure on the page is missing from images.json. The two rasters on the page (the top-view picture and the Swivel inset of Figure 4-7) are both inside the vector render img_0184, which I opened and checked.",
+   "notes": "verify_claims reports two rasters missing, but the vector render img_0184 contains both. Probable false positive.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p198 are all content figures (img_0184 (vector, 609x391) shows the Figure 4-7 top view and Swivel inset, and img_0183 (585x404) shows the Figure 4-8 keyboard photo with marker 1). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0038",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0038 is the only section on p198 (neighbouring sections end before and start after this one), so images on p198 map to the right section: img_0184 (vector, 609x391) shows the Figure 4-7 top view and Swivel inset, and img_0183 (585x404) shows the Figure 4-8 keyboard photo with marker 1.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-18 Replacement around ACQ Box (sec_0086) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p555 the running footer reads the same section title, so it is a section-level entry. On p555 (folio 8 - 179) the page shows heading 8-18-4-1 Removal Procedure - Separating PID and BF192, step 1, Figure 8-99 with five board photos, NOTE.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p555 (nodes #/texts/7073-7079) are only heading nodes inside sec_0086, with no bookmark-level children. On p555 (folio 8 - 179) the page shows heading 8-18-4-1 Removal Procedure - Separating PID and BF192, step 1, Figure 8-99 with five board photos, NOTE.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p552 (title node #/texts/7044) and ends at p571 (8-18-9 Installation Procedure, node #/texts/7228; folio 8 - 195). Boundaries: sec_0087 starts at p572; sec_0085 ends at p551. On p555 all nodes (#/texts/7073-7079) belong to Section 8-18 Replacement around ACQ Box. Bottom of the range was checked on p571: only the 8-18-9 heading and step 6 are there.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-18 Replacement around ACQ Box\" matches the visible chain Chapter -> section title. p555 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7255-7450 (previous ends 7254, next starts 7451) joins the previous and next sections with no gap and no overlap. Section 8-18 Replacement around ACQ Box appears once. On p555 the nodes #/texts/7073-7079 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p552 (title node #/texts/7044)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p552 (title node #/texts/7044).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p555 is \"8 - 179\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p552 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table on p555.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p555 (folio 8 - 179) the page shows heading 8-18-4-1 Removal Procedure - Separating PID and BF192, step 1, Figure 8-99 with five board photos, NOTE. Extracted images cover every figure: img_0660 to img_0664 are the five board photos of Figure 8-99. No figure on the page is missing from images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p555 are all content figures (img_0660 to img_0664 are the five board photos of Figure 8-99). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 is the only section on p555 (neighbouring sections end before and start after this one), so images on p555 map to the right section: img_0660 to img_0664 are the five board photos of Figure 8-99.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-18 Replacement around ACQ Box (sec_0086) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p556 the running footer reads the same section title, so it is a section-level entry. On p556 (folio 8 - 180) the page shows heading 8-18-4-2 (R1 and R2 system), two NOTEs, Top view/Side view photos, and a Step/Illustration table with step 1 (remove 2 M3 screws for louver).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p556 (nodes #/texts/7080-7091) are only heading nodes inside sec_0086, with no bookmark-level children. On p556 (folio 8 - 180) the page shows heading 8-18-4-2 (R1 and R2 system), two NOTEs, Top view/Side view photos, and a Step/Illustration table with step 1 (remove 2 M3 screws for louver).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p552 (title node #/texts/7044) and ends at p571 (8-18-9 Installation Procedure, node #/texts/7228; folio 8 - 195). Boundaries: sec_0087 starts at p572; sec_0085 ends at p551. On p556 all nodes (#/texts/7080-7091) belong to Section 8-18 Replacement around ACQ Box. Bottom of the range was checked on p571: only the 8-18-9 heading and step 6 are there.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-18 Replacement around ACQ Box\" matches the visible chain Chapter -> section title. p556 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7255-7450 (previous ends 7254, next starts 7451) joins the previous and next sections with no gap and no overlap. Section 8-18 Replacement around ACQ Box appears once. On p556 the nodes #/texts/7080-7091 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p552 (title node #/texts/7044)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p552 (title node #/texts/7044).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p556 is \"8 - 180\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p552 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The Step/Illustration table at the bottom of p556 is not a table node. Its text is in separate paragraphs #/texts/7087-7090 (Step, Illustration, Remove 2 (two) M3 screws for removing louver., Top view). The step number \"1.\" is missing.",
+   "notes": "Low, same as the approved flattened Step/Illustration rows (sec_0086 p558, sec_0083 p491). Text and order are kept, only the grid and step number '1.' are lost. verify_claims may suggest Medium because the table node is missing. Probably a Docling table detection miss.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p556 (folio 8 - 180) the page shows heading 8-18-4-2 (R1 and R2 system), two NOTEs, Top view/Side view photos, and a Step/Illustration table with step 1 (remove 2 M3 screws for louver). Extracted images cover every figure: img_0665 (808x299) is the Top view and Side view pair and img_0666 (400x298) is the step 1 photo. No figure on the page is missing from images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p556 are all content figures (img_0665 (808x299) is the Top view and Side view pair and img_0666 (400x298) is the step 1 photo). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 556,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 is the only section on p556 (neighbouring sections end before and start after this one), so images on p556 map to the right section: img_0665 (808x299) is the Top view and Side view pair and img_0666 (400x298) is the step 1 photo.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-18 Replacement around ACQ Box (sec_0086) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p563 the running footer reads the same section title, so it is a section-level entry. On p563 (folio 8 - 187) the page shows heading 8-18-4-7 Handling EEPROM on GFS Board, items A and B, Figure 8-101 EEPROM diagram, step 1 and Figure 8-102 photo.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p563 (nodes #/texts/7144-7157) are only heading nodes inside sec_0086, with no bookmark-level children. On p563 (folio 8 - 187) the page shows heading 8-18-4-7 Handling EEPROM on GFS Board, items A and B, Figure 8-101 EEPROM diagram, step 1 and Figure 8-102 photo.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p552 (title node #/texts/7044) and ends at p571 (8-18-9 Installation Procedure, node #/texts/7228; folio 8 - 195). Boundaries: sec_0087 starts at p572; sec_0085 ends at p551. On p563 all nodes (#/texts/7144-7157) belong to Section 8-18 Replacement around ACQ Box. Bottom of the range was checked on p571: only the 8-18-9 heading and step 6 are there.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-18 Replacement around ACQ Box\" matches the visible chain Chapter -> section title. p563 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7255-7450 (previous ends 7254, next starts 7451) joins the previous and next sections with no gap and no overlap. Section 8-18 Replacement around ACQ Box appears once. On p563 the nodes #/texts/7144-7157 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p552 (title node #/texts/7044)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p552 (title node #/texts/7044).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p563 is \"8 - 187\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p552 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table on p563.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 8-101 on p563 (two GFS boards, EEPROM chip callout, arrow, labels) is only partly in an image: img_0678 (250x153) is one board, img_0679 (97x97) is the EEPROM chip, and img_0680 (400x305) is the Figure 8-102 photo. The labels \"EEPROM must move\", \"GFS Board being replaced\" and \"New GFS Board\" are text nodes #/texts/7151, 7153 and 7154. The caption and body text say the EEPROM moves to the new board.",
+   "notes": "Borderline. The arrow and the second board are not in any image, but all the information is in the text, so I did not fail it. Low if the reviewer disagrees.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p563 are all content figures (img_0678 (250x153) is one board picture, img_0679 (97x97) is the EEPROM chip and img_0680 (400x305) is the Figure 8-102 photo). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 is the only section on p563 (neighbouring sections end before and start after this one), so images on p563 map to the right section: img_0678 (250x153) is one board picture, img_0679 (97x97) is the EEPROM chip and img_0680 (400x305) is the Figure 8-102 photo.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-18 Replacement around ACQ Box (sec_0086) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p566 the running footer reads the same section title, so it is a section-level entry. On p566 (folio 8 - 190) the page shows heading 8-18-5 Installation Procedure, 8-18-5-1, DIP switch Figure 8-106 and cable routing Figure 8-107.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p566 (nodes #/texts/7181-7195) are only heading nodes inside sec_0086, with no bookmark-level children. On p566 (folio 8 - 190) the page shows heading 8-18-5 Installation Procedure, 8-18-5-1, DIP switch Figure 8-106 and cable routing Figure 8-107.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p552 (title node #/texts/7044) and ends at p571 (8-18-9 Installation Procedure, node #/texts/7228; folio 8 - 195). Boundaries: sec_0087 starts at p572; sec_0085 ends at p551. On p566 all nodes (#/texts/7181-7195) belong to Section 8-18 Replacement around ACQ Box. Bottom of the range was checked on p571: only the 8-18-9 heading and step 6 are there.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-18 Replacement around ACQ Box\" matches the visible chain Chapter -> section title. p566 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7255-7450 (previous ends 7254, next starts 7451) joins the previous and next sections with no gap and no overlap. Section 8-18 Replacement around ACQ Box appears once. On p566 the nodes #/texts/7181-7195 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p552 (title node #/texts/7044)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p552 (title node #/texts/7044).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p566 is \"8 - 190\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p552 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table on p566.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p566 (folio 8 - 190) the page shows heading 8-18-5 Installation Procedure, 8-18-5-1, DIP switch Figure 8-106 and cable routing Figure 8-107. Extracted images cover every figure: img_0685 (363x262) is the DIP switch photo and img_0686 (vector, 355x470) is the cable routing photo with Left Upper and Right Upper arrows. No figure on the page is missing from images.json. The cable routing photo with the Left Upper and Right Upper arrows is inside the vector render img_0686, which I opened and checked.",
+   "notes": "verify_claims reports one raster missing on p566, but the photo is inside the vector render img_0686. Probable false positive.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p566 are all content figures (img_0685 (363x262) is the DIP switch photo and img_0686 (vector, 355x470) is the cable routing photo with Left Upper and Right Upper arrows). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 is the only section on p566 (neighbouring sections end before and start after this one), so images on p566 map to the right section: img_0685 (363x262) is the DIP switch photo and img_0686 (vector, 355x470) is the cable routing photo with Left Upper and Right Upper arrows.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-18 Replacement around ACQ Box (sec_0086) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p567 the running footer reads the same section title, so it is a section-level entry. On p567 (folio 8 - 191) the page shows \"For R1 and R2 system\" and \"For R3 and R4 system\" signal tables and a Power table.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p567 (nodes #/texts/7196-7200 and #/tables/217-219) are only heading nodes inside sec_0086, with no bookmark-level children. On p567 (folio 8 - 191) the page shows \"For R1 and R2 system\" and \"For R3 and R4 system\" signal tables and a Power table.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p552 (title node #/texts/7044) and ends at p571 (8-18-9 Installation Procedure, node #/texts/7228; folio 8 - 195). Boundaries: sec_0087 starts at p572; sec_0085 ends at p551. On p567 all nodes (#/texts/7196-7200 and #/tables/217-219) belong to Section 8-18 Replacement around ACQ Box. Bottom of the range was checked on p571: only the 8-18-9 heading and step 6 are there.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-18 Replacement around ACQ Box\" matches the visible chain Chapter -> section title. p567 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7255-7450 (previous ends 7254, next starts 7451) joins the previous and next sections with no gap and no overlap. Section 8-18 Replacement around ACQ Box appears once. On p567 the nodes #/texts/7196-7200 and #/tables/217-219 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p552 (title node #/texts/7044)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p552 (title node #/texts/7044).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p567 is \"8 - 191\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p552 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables #/tables/217, 218 and 219 match the rendering row by row (for example LCD / To main LCD / Right Side; AC Inlet / AC Inlet / Fixed with bracket - routed outside). Columns are kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p567 (folio 8 - 191) the page shows \"For R1 and R2 system\" and \"For R3 and R4 system\" signal tables and a Power table. Extracted images cover every figure: the page has only tables and no figures, and no image is mapped to p567. No figure on the page is missing from images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p567 are all content figures (the page has only tables and no figures, and no image is mapped to p567). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 567,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 is the only section on p567 (neighbouring sections end before and start after this one), so images on p567 map to the right section: the page has only tables and no figures, and no image is mapped to p567.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 8-18 Replacement around ACQ Box (sec_0086) has hierarchy_level 2, level 2 under Chapter 8 (sec_0068). On p568 the running footer reads the same section title, so it is a section-level entry. On p568 (folio 8 - 192) the page shows heading 8-18-6 GFSR4 FPGA flash update procedure (7 steps, Figure 8-108 desktop screenshot) and 8-18-7 Functional Check with a WARNING.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 Chapter 8 and child_sections is empty. Sub-headings seen on p568 (nodes #/texts/7201-7215) are only heading nodes inside sec_0086, with no bookmark-level children. On p568 (folio 8 - 192) the page shows heading 8-18-6 GFSR4 FPGA flash update procedure (7 steps, Figure 8-108 desktop screenshot) and 8-18-7 Functional Check with a WARNING.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at p552 (title node #/texts/7044) and ends at p571 (8-18-9 Installation Procedure, node #/texts/7228; folio 8 - 195). Boundaries: sec_0087 starts at p572; sec_0085 ends at p551. On p568 all nodes (#/texts/7201-7215) belong to Section 8-18 Replacement around ACQ Box. Bottom of the range was checked on p571: only the 8-18-9 heading and step 6 are there.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/Chapter 8/Section 8-18 Replacement around ACQ Box\" matches the visible chain Chapter -> section title. p568 footer shows the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "semantic_order range 7255-7450 (previous ends 7254, next starts 7451) joins the previous and next sections with no gap and no overlap. Section 8-18 Replacement around ACQ Box appears once. On p568 the nodes #/texts/7201-7215 appear once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false with verification_score 100.0. The title is seen on its first page (p552 (title node #/texts/7044)), so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and page match the embedded bookmark position seen at p552 (title node #/texts/7044).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p568 is \"8 - 192\" (chapter-page style), which agrees with an arabic scheme with no roman front matter nearby.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, the same as the neighbouring sections. The section title is on physical page p552 which equals page_start, so offset 0 is plausible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table on p568.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p568 (folio 8 - 192) the page shows heading 8-18-6 GFSR4 FPGA flash update procedure (7 steps, Figure 8-108 desktop screenshot) and 8-18-7 Functional Check with a WARNING. Extracted images cover every figure: img_0687 (457x257) is the Figure 8-108 desktop screenshot with the red circled icon. No figure on the page is missing from images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The images on p568 are all content figures (img_0687 (457x257) is the Figure 8-108 desktop screenshot with the red circled icon). The \"GE Healthcare\" header, the header rule and the footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 is the only section on p568 (neighbouring sections end before and start after this one), so images on p568 map to the right section: img_0687 (457x257) is the Figure 8-108 desktop screenshot with the red circled icon.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}
