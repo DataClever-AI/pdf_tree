@@ -101,3 +101,31 @@ def page_text_reader(pdf_path: Path) -> Callable[[int], str]:
         return cache[page_no]
 
     return read
+
+
+Word = tuple[float, float, float, float, str]
+
+
+def page_words_reader(pdf_path: Path) -> Callable[[int], list[Word]]:
+    """
+    Return a cached `page_no -> words` reader (1-indexed). Each word is
+    (x0, y0, x1, y1, text) in top-left page coordinates, in the text layer's order.
+    Opens the PDF on each call, like page_text_reader.
+    """
+    cache: dict[int, list[Word]] = {}
+
+    def read(page_no: int) -> list[Word]:
+        if page_no not in cache:
+            doc = _open_pdf(pdf_path)
+            try:
+                in_range = 1 <= page_no <= doc.page_count
+                cache[page_no] = (
+                    [tuple(word[:5]) for word in doc[page_no - 1].get_text("words")]
+                    if in_range
+                    else []
+                )
+            finally:
+                doc.close()
+        return cache[page_no]
+
+    return read
