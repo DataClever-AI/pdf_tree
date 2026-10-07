@@ -170,6 +170,11 @@
   ],
   "rules": [
     {
+      "bug_id": "BUG-033",
+      "regex": "one of the two is extracted|^(?=[\\s\\S]*ids shifted by)[\\s\\S]*same raster and was skipped",
+      "ignore_case": true
+    },
+    {
       "bug_id": "BUG-022",
       "regex": "Old FAIL \\(v[\\d.]+, BUG-001[^)]*\\) is now fixed[\\s\\S]*chapter number|chapter number[\\s\\S]*Old FAIL \\(v[\\d.]+, BUG-001[^)]*\\) is now fixed",
       "ignore_case": true

@@ -40,6 +40,7 @@ Pending.
 | 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 9 → 4 | 9 | Better: 9 -> 4 FAIL on paired rows. The rest is still open. |
 | 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 1 | 2 | No change: 1 -> 1 FAIL on paired rows. Still open in this manual. |
 | 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 13 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_S8` | v1.13 | `54a8acf` fix(pipeline): keep wide but short pictures in the image filter (BUG-011) | Phase 0: the image filter keeps pictures under 48 px in one side only, and Coverage counts the p1 cover title as front matter (pipeline 54a8acf). | 8 → 6 | 2 | Keep: 8 -> 6 FAIL. The p462 indicator picture is kept; warning triangles under 48 px are still dropped. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

@@ -1,6 +1,6 @@
 ---
 bug_id: BUG-011
-status: in-progress
+status: mitigated
 finding: 
 fix_branch: fix/BUG-020-image-filters
 fix_commit: 8a06c44
@@ -38,6 +38,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `LOGIQ_S8` | v1.13 | `54a8acf` fix(pipeline): keep wide but short pictures in the image filter (BUG-011) | Phase 0: the image filter keeps pictures under 48 px in one side only, and Coverage counts the p1 cover title as front matter (pipeline 54a8acf). | 4 → 2 | 2 | Keep: 4 -> 2 FAIL. The p828 probe drawings are back (Critical -> PASS). p832 item 18 reuses item 17's drawing (now BUG-033); the 2 left are small icons (Low). |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
