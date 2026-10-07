@@ -770,12 +770,14 @@ def _split_merged_margin_headings(
     paragraph of the section before, at the top of the page (SOMATOM p102: 'Touch Panel
     The laser lightmarkers are ...'). The block keeps only the heading's bbox, so the
     text went to the next section (BUG-029). Split such a block into the heading and a
-    tail placed where the text layer prints it. The tail keeps Docling's reading position
-    and the heading comes right after it; _place_margin_headings then orders the page by
+    tail placed where the text layer prints it. A tail printed above the heading keeps
+    Docling's reading position and the heading comes right after it; a tail level with
+    or below the heading comes after it. _place_margin_headings then orders the page by
     position. reading_order values are renumbered 0, 1, 2, ...: an anchor fallback steps
     to the next block with ``prev_anchor + 1``.
     """
     titles = _titles_by_page(page_ranges)
+    # The two parts of each split block, in reading order.
     splits: dict[str, tuple[DoclingTextBlock, DoclingTextBlock]] = {}
     for block in doc.text_blocks:
         page = doc.pages.get(block.page_no)
@@ -800,17 +802,25 @@ def _split_merged_margin_headings(
         ]
         split = _split_merged_block(block, page_words(block.page_no), page.height, other_boxes)
         if split is not None:
-            splits[block.block_id] = split
+            heading, tail = split
+            assert heading.bbox is not None and tail.bbox is not None
+            # A tail level with the heading is the heading's own first line (SOMATOM
+            # p152): it comes after the heading. A tail printed above it comes before.
+            above = (
+                vertical_span(tail.bbox)[0]
+                > vertical_span(heading.bbox)[0] + _SIDE_HEADING_TOLERANCE
+            )
+            splits[block.block_id] = (tail, heading) if above else (heading, tail)
     if not splits:
         return doc
     in_order: list[DoclingTextBlock] = []
     for block in sorted(doc.text_blocks, key=lambda b: b.reading_order):
-        in_order.extend(splits.get(block.block_id, (block,))[::-1])
+        in_order.extend(splits.get(block.block_id, (block,)))
     order = {block.block_id: n for n, block in enumerate(in_order)}
     blocks = [
         replace(part, reading_order=order[part.block_id])
         for block in doc.text_blocks
-        for part in splits.get(block.block_id, (block,))[::-1]
+        for part in splits.get(block.block_id, (block,))
     ]
     return replace(doc, text_blocks=blocks)
 
