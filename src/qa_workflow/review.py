@@ -248,6 +248,22 @@ def prioritize_findings(
     return sorted(enriched, key=lambda item: (item["priority"], item["stable_key"]))
 
 
+def unreviewed_without_draft(
+    items: list[dict[str, Any]], state: dict[str, Any]
+) -> list[dict[str, Any]]:
+    """Rows with no result and no AI proposal (e.g. ``DOCUMENT-LEVEL``).
+
+    No bulk action counts them, so the reviewer must open them one by one.
+    """
+    decisions = state.get("decisions", {})
+    return [
+        item
+        for item in items
+        if not item.get("result")
+        and not (decisions.get(item["stable_key"], {}).get("original_proposal"))
+    ]
+
+
 def bulk_eligible(
     item: dict[str, Any], state: dict[str, Any], sections_by_id: dict[str, dict[str, Any]]
 ) -> bool:

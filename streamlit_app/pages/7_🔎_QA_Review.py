@@ -36,6 +36,7 @@ from src.qa_workflow.review import (
     prioritize_findings,
     restore_original_proposal,
     save_review_decision,
+    unreviewed_without_draft,
 )
 from src.qa_workflow.storage import open_qa_version, verify_source_pdf
 
@@ -273,6 +274,17 @@ with _tab_review:
     if not _visible:
         st.info("No findings match the selected priorities.")
         st.stop()
+    _without_draft = unreviewed_without_draft(_visible, _state)
+    if _without_draft:
+        _first = _without_draft[0]
+        st.warning(
+            f"{len(_without_draft)} row(s) have no AI draft and are not reviewed yet; "
+            "no approval button counts them. First: "
+            f"{_first['section_id']} · {_first['checklist_ref']}."
+        )
+        if st.button("Open the first unreviewed row"):
+            st.session_state.qa_review_cursor = _visible.index(_first)
+            st.rerun()
     _cursor = min(st.session_state.get("qa_review_cursor", 0), len(_visible) - 1)
     _labels = [
         f"P{item['priority']} · {item['section_id']} · {item['checklist_ref']} · "
