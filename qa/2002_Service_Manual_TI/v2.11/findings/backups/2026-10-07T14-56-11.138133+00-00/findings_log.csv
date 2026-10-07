@@ -980,7 +980,7 @@ manual_id,section_id,page_sampled,checklist_ref,result,severity,evidence,notes
 2002_Service_Manual_TI,sec_0251,642,5.5-filters_discarding,PASS,,"p642 is blank. On p641 the connector drawing B6H1434A is now extracted as img_0486 (663x290, origin vector). I opened it. It shows the full 2x5 grid with pins (1) to (10) and the top tab. Nothing meaningful is lost.","Old FAIL (BUG-020, v2): now fixed. The figure was dropped before, and it is now in images.json."
 2002_Service_Manual_TI,sec_0251,642,5.5-filters_passing_noise,PASS,,"Only one image is mapped, img_0486. It is the connector grid without extra text or header. It is a real figure, not decoration.",
 2002_Service_Manual_TI,sec_0251,642,5.5-image_section_mapping,PASS,,"img_0486 is on p641 and is mapped to sec_0251. p641 belongs only to sec_0251, so the mapping is right. p642 is blank.",
-2002_Service_Manual_TI,DOCUMENT-LEVEL,,5.6-sanity_report,PASS,,"bookmark_sanity repaired one known problem: '1. General' pointed to p3 and was moved to p22, where its title is (relocated). No hard failure. The run finished.",Checked in logs/run.log of this version.
+2002_Service_Manual_TI,DOCUMENT-LEVEL,,5.6-sanity_report,,,,
 2002_Service_Manual_TI,sec_0009,31,5.4-hierarchy_level,PASS,,'3. Fuel Line' is the heading at the top of p28. The tree has hierarchy_level 4 for 3. Fuel Line. This fits its place under sec_0006.,
 2002_Service_Manual_TI,sec_0009,31,5.4-parent_child,PASS,,parent_section_id is sec_0006. The printed titles on p31 fit this parent and the child list.,
 2002_Service_Manual_TI,sec_0009,31,5.4-page_start_end,PASS,,"p31 shows the injector figure and its legend. All p31 nodes (#/texts/288 to #/texts/296) are in sec_0009, which owns p28-38. Nothing belongs to a neighbour.",
