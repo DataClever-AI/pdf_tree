@@ -12,6 +12,7 @@ check rows so the result can be compared with its base version:
 from __future__ import annotations
 
 import csv
+import json
 import random
 from dataclasses import dataclass
 from pathlib import Path
@@ -37,6 +38,7 @@ from .storage import (
     is_version_name,
     open_qa_version,
     utc_now,
+    version_sort_key,
     write_pipeline_artifacts,
 )
 
@@ -178,6 +180,56 @@ def reviewed_pairs(findings_csv: Path) -> set[tuple[str, int]]:
             for row in csv.DictReader(handle)
             if str(row.get("page_sampled", "")).isdigit()
         }
+
+
+def standing_fail_pairs(
+    qa_root: Path, manual_id: str, sections: list[dict[str, Any]]
+) -> set[tuple[str, int]]:
+    """New-tree (section_id, page) pairs of every reviewed row whose latest result is FAIL.
+
+    Section ids are positional and change between versions, so rows are matched across
+    versions by (section title, page, checklist_ref); the newest reviewed version wins.
+    A title not found on its page in the new tree falls back to the deepest section there.
+    """
+    latest: dict[tuple[str, int, str], str] = {}
+    manual_dir = qa_root / manual_id
+    versions = sorted(
+        (path.name for path in manual_dir.iterdir() if is_version_name(path.name)),
+        key=version_sort_key,
+    )
+    for version in versions:
+        tree_path = manual_dir / version / "exports" / "tree.json"
+        titles = (
+            {s["section_id"]: str(s.get("title", "")) for s in json.loads(tree_path.read_text())}
+            if tree_path.exists()
+            else {}
+        )
+        findings_csv = manual_dir / version / "findings" / "findings_log.csv"
+        if not findings_csv.exists():
+            continue
+        with findings_csv.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                result = row.get("result", "").strip().upper()
+                if result in {"PASS", "FAIL"} and str(row.get("page_sampled", "")).isdigit():
+                    title = titles.get(row["section_id"], row["section_id"])
+                    latest[(title, int(row["page_sampled"]), row["checklist_ref"])] = result
+    pairs: set[tuple[str, int]] = set()
+    for (title, page, _ref), result in latest.items():
+        if result != "FAIL":
+            continue
+        section = next(
+            (
+                s
+                for s in sections
+                if s.get("title") == title
+                and isinstance(s.get("page_start"), int)
+                and s["page_start"] <= page <= (s.get("page_end") or s["page_start"])
+            ),
+            None,
+        ) or deepest_section_for_page(sections, page)
+        if section is not None:
+            pairs.add((section["section_id"], page))
+    return pairs
 
 
 def create_mitigation_version(
