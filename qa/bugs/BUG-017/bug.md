@@ -4,7 +4,7 @@ status: open
 finding: 
 fix_branch: 
 fix_commit: 
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # BUG-017 · UI reference-icon screenshots discarded by an over-aggressive minimum-pixel-dimension image filter
@@ -37,6 +37,10 @@ Pending.
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
 | 2026-10-06 | `SOMATOM_Force_IFU_VB30` | v1.7 | `819d98e` fix(pipeline): keep unique thin figures and repeated pictures inside the page body (BUG-017) | Pixel floor = min_image_px (48); unique thin strips kept; repeated images dropped only in the header/footer band. | 0 → 1 | 0 | Keep: 0 -> 1 on 12 paired rows. The Move and Start key pictures are back; icons of about 40 px stay filtered (Low, meaning is in the text). |
+| 2026-10-07 | `DOC-0136477A` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 2 | 2 | No change: 2 -> 2 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 6 | 1 | 5 -> 6 FAIL on paired rows. The lead found no change in the tree; the new rows come from stricter grading. |
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 3 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 3 → 3 | 7 | No change: 3 -> 3 FAIL on paired rows. Still open in this manual. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

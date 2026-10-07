@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-018
-status: in-progress
+status: fixed-pending-merge
 finding: 
 fix_branch: fix/BUG-005-reading-order
 fix_commit: 360cf01
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-018 · Cross-chapter node swap — content misattributed across non-adjacent chapter boundaries (new pattern, single instance so far)
@@ -37,6 +37,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 17 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

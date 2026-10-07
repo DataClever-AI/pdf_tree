@@ -4,7 +4,7 @@ status: in-progress
 finding: 
 fix_branch: fix/BUG-020-image-filters
 fix_commit: 8a06c44
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-012 · Sporadic single/partial image omissions from the image index — mechanism unconfirmed
@@ -37,6 +37,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 2 | 12 | Better: 5 -> 2 FAIL on paired rows. The rest is still open. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

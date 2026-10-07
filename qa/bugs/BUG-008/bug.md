@@ -4,7 +4,7 @@ status: mitigated
 finding: H-13
 fix_branch: fix/BUG-008-table-text
 fix_commit: 076dadd
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # BUG-008 · Table header cells merge/reorder during extraction, breaking column-to-value attribution
@@ -43,6 +43,11 @@ Round one (`076dadd`, versions 2002 v2.8, DOC v1.9, LOGIQ_e v1.10, Philips v2.12
 | 2026-10-06 | `LOGIQ_e_R9_General_Service_Manual` | v1.11 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 6 → 0 | 0 | Keep: 6 -> 0 on paired rows, no regressions. p36 still misses the X/N legend row, as in the base. |
 | 2026-10-06 | `Philips-MP20-MP90-Manual` | v2.13 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 3 → 1 | 0 | Keep: 3 -> 1 on paired rows, no regressions. The one left is p305 row labels that span rows (Low). |
 | 2026-10-06 | `LOGIQ_S8` | v1.10 | `60110fa` fix(docling_extract): keep the original table when the re-read loses text (BUG-008) | Table pages are read again with docling-parse; a re-read table is used only when it keeps all the text of the original. | 3 → 3 | 2 | Keep with open work: 3 -> 3. Two FAILs come from extra pages the base did not grade (p28, p367); p418 adds a NOTE row (Low). |
+| 2026-10-07 | `DOC-0136477A` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 6 → 7 | 2 | 6 -> 7 FAIL on paired rows. The lead found no change in the tree; the new rows come from stricter grading. |
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 11 → 12 | 3 | 11 -> 12 FAIL on paired rows. The lead found no change in the tree; the new rows come from stricter grading. |
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 3 → 4 | 2 | 3 -> 4 FAIL on paired rows. The lead found no change in the tree; the new rows come from stricter grading. |
+| 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 8 → 8 | 1 | No change: 8 -> 8 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 25 → 28 | 7 | 25 -> 28 FAIL on paired rows. The lead found no change in the tree; the new rows come from stricter grading. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

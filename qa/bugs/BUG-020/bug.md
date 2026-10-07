@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-020
-status: in-progress
+status: mitigated
 finding: H-11
 fix_branch: fix/BUG-020-image-filters
 fix_commit: 8a06c44
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-020 · Minimum-area image filter (2% of the page) drops small but meaningful rasters: icons, symbols and small step photos
@@ -37,6 +37,9 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 9 → 4 | 9 | Better: 9 -> 4 FAIL on paired rows. The rest is still open. |
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 1 | 2 | No change: 1 -> 1 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 13 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-022
-status: in-progress
+status: mitigated
 finding: H-15
 fix_branch: fix/BUG-022-page-furniture (b0231b9 on fix/BUG-029-margin-headings-residual)
 fix_commit: beb1698, be16ac4, b0231b9
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-022 · Boilerplate boundary noise: running headers, large chapter numbers and invisible print-job slugs of the next page are appended to the preceding section
@@ -37,6 +37,10 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 24 → 0 | 9 | Fixed in this manual: 24 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 1 | 2 | No change: 1 -> 1 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 44 → 0 | 13 | Fixed in this manual: 44 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 1 | 7 | No change: 1 -> 1 FAIL on paired rows. Still open in this manual. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

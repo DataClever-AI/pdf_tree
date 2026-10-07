@@ -4,7 +4,7 @@ status: open
 finding: 
 fix_branch: 
 fix_commit: 
-updated: 2026-09-29
+updated: 2026-10-07
 ---
 
 # BUG-009 · Table mistyped as paragraph/heading node instead of a table node (single instance)
@@ -36,6 +36,8 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 1 | 2 | No change: 1 -> 1 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 1 | 7 | No change: 1 -> 1 FAIL on paired rows. Still open in this manual. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

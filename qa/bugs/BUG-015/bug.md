@@ -4,7 +4,7 @@ status: in-progress
 finding: 
 fix_branch: fix/BUG-020-image-filters
 fix_commit: 8a06c44
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-015 · Step-illustration photos silently dropped on pages that also carry multiple table-embedded images
@@ -37,6 +37,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 3 → 1 | 58 | Better: 3 -> 1 FAIL on paired rows. The rest is still open. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

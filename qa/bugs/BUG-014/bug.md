@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-014
-status: in-progress
+status: fixed-pending-merge
 finding: H-15
 fix_branch: fix/BUG-001-positional-placement
 fix_commit: 04e1345, 36df68a, 0b448dd
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # BUG-014 · Section page_end declared one page short of the true content boundary — trailing content (text or images) bleeds into or is misattributed from the neighboring section
@@ -41,6 +41,10 @@ Pending.
 | 2026-10-03 | `Philips-MP20-MP90-Manual` | v2.4 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 3 → 4 | 8 | Approved rows; the extra FAIL is page_end grown by chapter numbers or margin labels, fixed later in 0b448dd |
 | 2026-10-03 | `SOMATOM_Force_IFU_VB30` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 0 → 0 | 16 | Approved rows; no target rows in the approved sample |
 | 2026-10-06 | `DOC-0136477A` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images are placed by their position on the page, and page_end covers trailing content. | 0 → 1 | 1 | Check: 0 -> 1 on 87 paired rows. One page_end row is new in DOC; review it on the Version Compare page. |
+| 2026-10-07 | `DOC-0136477A` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 2 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 0 | 17 | Fixed in this manual: 2 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 7 → 0 | 9 | Fixed in this manual: 7 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 12 → 0 | 58 | Fixed in this manual: 12 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-004
-status: in-progress
+status: fixed-pending-merge
 finding: H-05
 fix_branch: fix/BUG-020-image-filters
 fix_commit: 8a06c44
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-004 · Decorative footer divider passes image aspect-ratio filter
@@ -37,6 +37,7 @@ Pending.
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-07 | `DOC-0136477A` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 34 → 0 | 11 | Fixed in this manual: 34 -> 0 FAIL on paired rows. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

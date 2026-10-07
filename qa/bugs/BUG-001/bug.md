@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-001
-status: in-progress
+status: mitigated
 finding: H-05
 fix_branch: fix/BUG-001-positional-placement
 fix_commit: fa0bc0b, 4bff4c2
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # BUG-001 · Chapter/appendix-opening Contents-box misplacement
@@ -42,6 +42,9 @@ Pending.
 | 2026-10-03 | `Philips-MP20-MP90-Manual` | v2.4 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 0 → 0 | 8 | Approved rows; no BUG-001 rows in Philips |
 | 2026-10-03 | `SOMATOM_Force_IFU_VB30` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images placed by position on the page (BUG-001/003); page_end extended by one page for owned content (BUG-014) | 4 → 5 | 16 | Approved rows; limited by BUG-005 (window desync), fixed later in 360cf01 |
 | 2026-10-06 | `DOC-0136477A` | v1.2 | `04e1345` fix(section_matcher): extend page_end to the next page when the section owns body content there (BUG-014) | Tables and images are placed by their position on the page, and page_end covers trailing content. | 1 → 1 | 1 | Keep: 1 -> 1 on 87 paired rows (base = drafts). No change for BUG-001 in DOC. |
+| 2026-10-07 | `DOC-0136477A` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 19 → 2 | 11 | Better: 19 -> 2 FAIL on paired rows. The rest is still open. |
+| 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 0 | 0 | Fixed in this manual: 5 -> 0 FAIL on paired rows. |
+| 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 7 → 3 | 58 | Better: 7 -> 3 FAIL on paired rows. The rest is still open. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
