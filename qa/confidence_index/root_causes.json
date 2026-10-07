@@ -146,6 +146,11 @@
       "bug_id": "BUG-029",
       "title": "Margin (side) headings read before the body: content above or beside a left-margin heading goes to the wrong section, and on pages with several margin headings all the body goes to the last one",
       "suspected_module": "src/tree_builder/section_matcher.py (reading order of side-heading pages)"
+    },
+    {
+      "bug_id": "BUG-030",
+      "title": "Full-width footnote row of a table is lost: its text is in no table cell and in no text node",
+      "suspected_module": "src/tree_builder/docling_extract.py (table cells; text inside the table area is not kept as text)"
     }
   ],
   "rules": [
@@ -341,7 +346,8 @@
     "LOGIQ_S8|sec_0001|5.5-filters_passing_noise": "BUG-010",
     "LOGIQ_S8|sec_0066|5.4-page_start_end": "BUG-022",
     "LOGIQ_e_R9_General_Service_Manual|sec_0051|5.4-page_start_end": "BUG-022",
-    "LOGIQ_S8|sec_0074|5.5-filters_discarding": "BUG-017"
+    "LOGIQ_S8|sec_0074|5.5-filters_discarding": "BUG-017",
+    "DOC-0136477A|sec_0217|5.6-table_content": "BUG-030"
   },
   "exclusions": {
     "SOMATOM_Force_IFU_VB30|sec_0906|5.4-flagged_for_review": "Positive/control finding: the verification mechanism correctly flagged a low title match; informational, not a defect."

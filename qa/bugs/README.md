@@ -37,5 +37,6 @@ Statuses: `open`, `fix-proposed`, `in-progress`, `mitigated`, `fixed-pending-mer
 | [BUG-027](BUG-027/bug.md) | Streamlit page 8 regenerates consolidated_bugs.csv by note text, overwriting the curated root-cause list | — | in-progress | H-04 | — | 0 | 0 | — |
 | [BUG-028](BUG-028/bug.md) | normalize_page_sequence updates prev_scheme with alphanumeric tokens and restarts the numbering base | — | open | H-06 | — | 0 | 0 | — |
 | [BUG-029](BUG-029/bug.md) | Margin (side) headings read before the body: content above or beside a left-margin heading goes to the wrong section, and on pages with several margin headings all the body goes to the last one | — | in-progress | — | — | 0 | 0 | — |
+| [BUG-030](BUG-030/bug.md) | Full-width footnote row of a table is lost: its text is in no table cell and in no text node | — | open | H-17 | — | 0 | 0 | — |
 
 **Triage:** 2 FAIL row(s) not yet classified to a root cause are listed in [triage.csv](triage.csv).
