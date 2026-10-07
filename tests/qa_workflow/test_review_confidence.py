@@ -21,6 +21,7 @@ from src.qa_workflow.review import (
     pending_approvals,
     prioritize_findings,
     save_review_decision,
+    unreviewed_without_draft,
 )
 from src.qa_workflow.storage import (
     create_qa_version,
@@ -99,6 +100,28 @@ def test_priority_order_fail_low_confidence_flag_and_pass_audit(qa_version) -> N
     )
     ordered = prioritize_findings(rows, state, {"sec_0001": {"flagged_for_review": False}})
     assert [item["priority"] for item in ordered] == [1, 2]
+
+
+def test_rows_without_draft_are_listed_until_reviewed(qa_version) -> None:
+    rows = load_findings(qa_version.findings_csv)
+    state = merge_drafts_into_state(qa_version, [_draft(rows[0])])
+    items = prioritize_findings(rows, state, {})
+    assert [item["stable_key"] for item in unreviewed_without_draft(items, state)] == [
+        stable_finding_key(rows[1])
+    ]
+
+    save_review_decision(
+        qa_version,
+        stable_finding_key(rows[1]),
+        result="PASS",
+        severity="",
+        evidence="Human evidence",
+        notes="",
+        reviewer="Alice",
+    )
+    rows = load_findings(qa_version.findings_csv)
+    state = load_review_state(qa_version)
+    assert unreviewed_without_draft(prioritize_findings(rows, state, {}), state) == []
 
 
 @pytest.mark.parametrize(
