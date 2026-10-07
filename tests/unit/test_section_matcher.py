@@ -748,3 +748,30 @@ def test_the_longest_matching_copy_wins():
     blocks = _merged_page("Observe the safety information when using the trolley.", words)
     tail = blocks["b1-tail"]
     assert tail.bbox is not None and round(792 - tail.bbox.y0) == 400
+
+
+def test_a_tail_level_with_the_heading_stays_with_it():
+    # SOMATOM p152: the tail is printed on the heading's own line, 2 pt higher; it is the
+    # new section's first sentence, so it must not go to the previous section.
+    blocks = [
+        _side(0, "Previous", 1, "section_header", 700, 96, 184),
+        _side(1, "Body text of the previous section.", 2, "text", 700, 199, 538),
+        _side(
+            2, "Scan ranges The different distance enlargements decrease.", 2, "text", 520, 80, 184
+        ),
+    ]
+    words = {
+        2: _line("Body text of the previous section.", 199, 92)
+        + _line("Scan", 80, 272, 50)
+        + _line("ranges", 132, 272, 50)
+        + _line("The different distance enlargements decrease.", 199, 270)
+    }
+    bookmarks = [(2, "Previous", 1), (2, "Scan ranges", 2)]
+    previous, scan = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 2), 2, page_words=lambda page: words.get(page, [])
+    )
+    assert _texts(previous) == ["Previous", "Body text of the previous section."]
+    in_order = sorted(scan.text_blocks, key=lambda block: block.reading_order)
+    assert [block.text for block in in_order] == [
+        "Scan ranges", "The different distance enlargements decrease."
+    ]
