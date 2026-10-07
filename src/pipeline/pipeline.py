@@ -727,13 +727,7 @@ def run_pipeline(
         with open(tree_json_path, "w") as f:
             json.dump(sections, f, indent=2, ensure_ascii=False)
 
-        # Blocks on pages no section covers (cover, the manual's own TOC, an excluded
-        # Index) are correctly outside the tree, not coverage gaps.
-        covered = {p for s in matched for p in range(s.page_start, s.page_end + 1)}
-        expected_front_matter = (
-            sum(1 for b in doc.text_blocks if b.page_no not in covered)
-            + sum(1 for t in doc.tables if t.page_no not in covered)
-        ) if doc else 0
+        expected_front_matter = _front_matter_count(doc, matched) if doc else 0
         total_blocks = len(doc.text_blocks) + len(doc.tables) if doc else 0
         validation = validate_tree(
             tree_json_path=tree_json_path,
@@ -791,6 +785,24 @@ def run_pipeline(
         )
 
 
+def _front_matter_count(doc: DoclingDocument, matched: list[MatchedSection]) -> int:
+    """Blocks that are correctly outside the tree, so they are not coverage gaps.
+
+    These are blocks on pages no section covers (cover, the manual's own TOC, an excluded
+    Index) and text read before the first section's first block, such as a cover title
+    on the page where the first section starts (LOGIQ_S8 p1). The first heading is only
+    searched on that start page, so only text above it there is counted. Tables have no
+    reading order and keep the page rule.
+    """
+    covered = {p for s in matched for p in range(s.page_start, s.page_end + 1)}
+    first_order = min((b.reading_order for s in matched for b in s.text_blocks), default=None)
+    return sum(
+        1
+        for b in doc.text_blocks
+        if b.page_no not in covered or (first_order is not None and b.reading_order < first_order)
+    ) + sum(1 for t in doc.tables if t.page_no not in covered)
+
+
 def _extract_embedded_images(
     pdf_path: Path,
     n_pages: int,
@@ -816,7 +828,7 @@ def _extract_embedded_images(
     # covering 1%+ of the page is a thin screenshot (LOGIQ_S8 p679, 231x79 px).
     _MAX_ASPECT    = 15.0
     _STRIP_MIN_AREA_FRAC = 0.01
-    _STRIP_MIN_PX  = 20                     # a unique strip may be under _MIN_PX (35 px high)
+    _STRIP_MIN_PX  = 20                     # a unique strip may be under _MIN_PX on its short side
     # An image shown on many pages in the top/bottom 10% band is page decoration (BUG-004:
     # DOC's footer divider on 210 pages). A repeated key picture or icon inside the page
     # body is content (SOMATOM's Move key on 8 pages).
@@ -848,9 +860,14 @@ def _extract_embedded_images(
             h = base_image.get("height", 0)
 
             strip = max(w, h) / max(min(w, h), 1) > _MAX_ASPECT
-            small = w < _MIN_PX or h < _MIN_PX
-            if small and not strip:
+            # A wide but short picture (a cable or probe drawing, 203x42 px) is content;
+            # only an image small in both sides is an icon or decoration (BUG-011).
+            if w < _MIN_PX and h < _MIN_PX:
                 continue  # filter 1: pixel dimensions (no rect lookup for tiny images)
+            # A short picture repeated on many pages is a pictogram or rule, even in the
+            # page body; a repeated key picture of 48 px or more is content (SOMATOM).
+            if min(w, h) < _MIN_PX and len(pages_of.get(xref, ())) >= _REPEAT_PAGES:
+                continue
             try:
                 rects = page.get_image_rects(xref)
             except Exception:
@@ -868,8 +885,6 @@ def _extract_embedded_images(
             )
             if strip and not unique_strip:
                 continue
-            if small and not unique_strip:
-                continue  # filter 1: a strip under the pixel floor must be a unique screenshot
 
             # filters 2-4, 6: page-coordinate bbox checks
             if bbox is not None:

@@ -41,6 +41,7 @@ Pending.
 | 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 6 | 1 | 5 -> 6 FAIL on paired rows. The lead found no change in the tree; the new rows come from stricter grading. |
 | 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 3 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
 | 2026-10-07 | `LOGIQ_S8` | v1.12 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 3 → 3 | 7 | No change: 3 -> 3 FAIL on paired rows. Still open in this manual. |
+| 2026-10-07 | `LOGIQ_S8` | v1.13 | `54a8acf` fix(pipeline): keep wide but short pictures in the image filter (BUG-011) | Phase 0: the image filter keeps pictures under 48 px in one side only, and Coverage counts the p1 cover title as front matter (pipeline 54a8acf). | 5 → 4 | 2 | Keep: 5 -> 4 FAIL. Wide UI pictures are kept now; icons small in both sides are still dropped. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
