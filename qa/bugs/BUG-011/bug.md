@@ -4,7 +4,7 @@ status: in-progress
 finding: 
 fix_branch: fix/BUG-020-image-filters
 fix_commit: 8a06c44
-updated: 2026-10-03
+updated: 2026-10-07
 ---
 
 # BUG-011 · Simple line-art/pictogram diagrams missing from image extraction — mechanism unconfirmed (possibly size-filtered)
@@ -24,6 +24,7 @@ Unconfirmed; possibly the size filters (see BUG-020).
 - 2026-09-04: identified in the v1 QA review of LOGIQ_S8 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
 - 2026-10-03: verified with the image inventory: the p893 'Ground Continuity Test' diagram (193x192 px) was dropped by the 2% area filter and is kept at 8a06c44 (BUG-020). The p886 probe-handling pictograms are 88 tiny raster fragments, in practice a vector drawing (BUG-010 family); not recoverable by the raster filters.
+- 2026-10-07: the final re-measurement (LOGIQ_S8 v1.12, agent drafts) still finds lost part drawings. On p828 (sec_0126) the drawings of probes P2D and P6D are not extracted. On p832 (sec_0127) the line drawings of power cords 17 and 18 are not extracted. The names and part numbers are in the text, but the look of the part is lost. The reviewer (Oscar Munoz) decided these rows are Critical (figure lost), because in a parts catalogue the picture is how a person finds the part.
 
 ## Fix
 
