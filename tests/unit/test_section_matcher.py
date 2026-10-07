@@ -13,6 +13,7 @@ from src.models.extraction import (
 from src.tree_builder.section_matcher import (
     _find_heading_anchor,
     _is_partial_match,
+    _split_merged_margin_headings,
     find_unbookmarked_index,
     match_content_to_sections,
 )
@@ -569,3 +570,208 @@ def test_a_heading_with_a_subscript_anchors_its_section():
     }
     assert _find_heading_anchor("SO2 Default Settings", 482, blocks) == 1
     assert _find_heading_anchor("SvO2 Default Settings", 482, blocks, after=1) == 2
+
+
+def _line(text: str, x0: float, top: float, width: float = 30) -> list:  # type: ignore[type-arg]
+    """Text-layer words in top-left coordinates, one fixed-width word after another."""
+    return [
+        (x0 + i * width, top, x0 + (i + 1) * width - 2, top + 10, word)
+        for i, word in enumerate(text.split())
+    ]
+
+
+def test_margin_heading_merged_with_text_printed_above_is_split():
+    # SOMATOM p102: Docling merges the margin heading 'Touch Panel' with the last
+    # paragraph of 'Laser lightmarkers', printed at the top of the page, and the block
+    # keeps only the heading's bbox (BUG-029).
+    blocks = [
+        _side(0, "Laser lightmarkers", 1, "section_header", 700, 96, 184),
+        _side(1, "Touch Panel The laser lightmarkers are laser beams.", 2, "text", 520, 134, 184),
+        _side(2, "The laser lightmarkers indicate the scan center.", 2, "text", 650, 199, 538),
+        _side(3, "The Touch Panel is part of the panel.", 2, "text", 520, 199, 538),
+    ]
+    words = {
+        2: _line("Touch", 134, 272, 24)
+        + _line("Panel", 160, 272, 24)
+        + _line("The laser lightmarkers are laser beams.", 199, 92)
+        + _line("The laser lightmarkers indicate the scan center.", 199, 142)
+        + _line("The Touch Panel is part of the panel.", 199, 272)
+    }
+    bookmarks = [(2, "Laser lightmarkers", 1), (2, "Touch Panel", 2)]
+    laser, touch = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 2), 2, page_words=lambda page: words.get(page, [])
+    )
+    assert _texts(laser)[1:] == [
+        "The laser lightmarkers are laser beams.",
+        "The laser lightmarkers indicate the scan center.",
+    ]
+    in_order = sorted(touch.text_blocks, key=lambda block: block.reading_order)
+    assert [block.text for block in in_order] == [
+        "Touch Panel", "The Touch Panel is part of the panel."
+    ]
+    assert [block.block_id for block in laser.text_blocks][1] == "b1-tail"
+
+
+def test_margin_heading_merged_with_its_note_below_keeps_the_note():
+    # SOMATOM p295 with the text layer: the merged note is printed below the heading,
+    # so it stays in the new section.
+    blocks = [
+        _side(0, "Previous", 1, "section_header", 700, 199, 538),
+        _side(1, "Step two of the previous task.", 2, "text", 627, 199, 517),
+        _side(2, "Planning the scan ranges The body landmarks", 2, "text", 567, 80, 184),
+        _side(3, "You can modify the scan ranges.", 2, "text", 567, 198, 495),
+    ]
+    words = {
+        2: _line("Step two of the previous task.", 199, 165)
+        + _line("Planning the scan ranges", 80, 225, 26)
+        + _line("The body landmarks", 80, 250, 26)
+        + _line("You can modify the scan ranges.", 198, 225)
+    }
+    bookmarks = [(2, "Previous", 1), (2, "Planning the scan ranges", 2)]
+    previous, planning = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 2), 2, page_words=lambda page: words.get(page, [])
+    )
+    assert _texts(previous)[-1] == "Step two of the previous task."
+    assert sorted(_texts(planning)) == sorted(
+        ["Planning the scan ranges", "The body landmarks", "You can modify the scan ranges."]
+    )
+
+
+def test_margin_heading_wins_over_a_body_list_item_with_the_same_text():
+    # SOMATOM p138: the body lists 'Flat cushions' as a "section_header" item above the
+    # real margin heading, which Docling labels as plain text (BUG-019).
+    blocks = [
+        _side(0, "Cushions", 1, "section_header", 700, 96, 184),
+        _side(1, "Flat cushions", 1, "section_header", 530, 199, 260),
+        _side(2, "Wedge shaped cushions", 1, "section_header", 512, 199, 303),
+        _side(3, "Flat cushions", 1, "text", 451, 130, 184),
+        _side(4, "Flat cushions are used for positioning.", 1, "text", 451, 199, 538),
+    ]
+    bookmarks = [(2, "Cushions", 1), (3, "Flat cushions", 1)]
+    cushions, flat = match_content_to_sections(bookmarks, _paged_doc(blocks, 1), 1)
+    assert "Wedge shaped cushions" in _texts(cushions)
+    assert _texts(flat)[0] == "Flat cushions"
+    assert flat.text_blocks[0].block_id == "b3"
+
+
+def test_split_keeps_reading_order_consecutive():
+    # SOMATOM p114: sections whose heading is not found fall back to the previous
+    # anchor + 1, which must be the next block, so reading orders stay 0, 1, 2, ...
+    blocks = [
+        _side(0, "Laser lightmarkers", 1, "section_header", 700, 96, 184),
+        _side(1, "Touch Panel The laser lightmarkers are laser beams.", 1, "text", 520, 134, 184),
+        _side(2, "The Touch Panel is part of the panel.", 1, "text", 520, 199, 538),
+    ]
+    words = {
+        1: _line("Touch", 134, 272, 24)
+        + _line("Panel", 160, 272, 24)
+        + _line("The laser lightmarkers are laser beams.", 199, 150)
+    }
+    ranges = [("s0", "Laser lightmarkers", 2, 1, 1), ("s1", "Touch Panel", 2, 1, 1)]
+    doc = _split_merged_margin_headings(_paged_doc(blocks, 1), ranges, words.get)
+    assert sorted(block.reading_order for block in doc.text_blocks) == [0, 1, 2, 3]
+    assert [b.text for b in sorted(doc.text_blocks, key=lambda b: b.reading_order)][1:3] == [
+        "The laser lightmarkers are laser beams.", "Touch Panel"
+    ]
+
+
+def test_running_header_with_the_title_is_not_a_margin_heading():
+    # Philips p273: the running header repeats 'BIS Window' at the top-left edge; the
+    # text above the real heading stays with the previous section.
+    blocks = [
+        _side(0, "Stopping a Cyclic Impedance Check", 1, "section_header", 164, 71, 250),
+        _side(1, "BIS Window", 2, "text", 776, 75, 130),
+        _side(2, "If you stop a check, no values are shown.", 2, "text", 723, 137, 540),
+        _side(3, "BIS Window", 2, "section_header", 686, 71, 130),
+        _side(4, "To open the BIS window, select Show Sensor.", 2, "text", 652, 137, 540),
+    ]
+    bookmarks = [(2, "Stopping a Cyclic Impedance Check", 1), (2, "BIS Window", 2)]
+    stopping, window = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert "If you stop a check, no values are shown." in _texts(stopping)
+    assert _texts(window)[0] == "BIS Window"
+    assert window.text_blocks[0].block_id == "b3"
+
+
+def _merged_page(tail: str, words: list) -> tuple:  # type: ignore[type-arg]
+    blocks = [
+        _side(0, "Laser lightmarkers", 1, "section_header", 700, 96, 184),
+        _side(1, f"Touch Panel {tail}", 1, "text", 520, 134, 184),
+        _side(2, "The Touch Panel is part of the panel.", 1, "text", 520, 199, 538),
+    ]
+    heading = _line("Touch", 134, 272, 24) + _line("Panel", 160, 272, 24)
+    ranges = [("s0", "Laser lightmarkers", 2, 1, 1), ("s1", "Touch Panel", 2, 1, 1)]
+    doc = _split_merged_margin_headings(_paged_doc(blocks, 1), ranges, {1: heading + words}.get)
+    return {block.block_id: block for block in doc.text_blocks}
+
+
+def test_merged_block_is_kept_when_its_tail_is_not_in_the_text_layer():
+    blocks = _merged_page("The laser beams cross here.", _line("Other words only.", 199, 150))
+    assert "b1-tail" not in blocks
+    assert blocks["b1"].text == "Touch Panel The laser beams cross here."
+
+
+def test_a_short_tail_is_not_split():
+    # Two tokens could match a running footer or a repeated label.
+    blocks = _merged_page("See note.", _line("See note.", 199, 760))
+    assert "b1-tail" not in blocks
+
+
+def test_a_tail_printed_twice_takes_the_copy_nearest_the_heading():
+    words = _line("Clean the panel daily.", 199, 60) + _line("Clean the panel daily.", 199, 250)
+    blocks = _merged_page("Clean the panel daily.", words)
+    tail = blocks["b1-tail"]
+    assert tail.bbox is not None and round(792 - tail.bbox.y0) == 250
+
+
+def test_a_tail_copy_inside_another_block_is_skipped():
+    # SOMATOM p209: the sentence is printed twice; the copy near the heading is already
+    # its own Docling block, so the tail is the other copy (no duplicated text).
+    blocks = [
+        _side(0, "Laser lightmarkers", 1, "section_header", 700, 96, 184),
+        _side(1, "Touch Panel Clean the panel daily.", 1, "text", 520, 134, 184),
+        _side(2, "Clean the panel daily.", 1, "text", 542, 199, 538),
+    ]
+    heading = _line("Touch", 134, 272, 24) + _line("Panel", 160, 272, 24)
+    words = heading + _line("Clean the panel daily.", 199, 60) + _line(
+        "Clean the panel daily.", 199, 250
+    )
+    ranges = [("s0", "Laser lightmarkers", 2, 1, 1), ("s1", "Touch Panel", 2, 1, 1)]
+    doc = _split_merged_margin_headings(_paged_doc(blocks, 1), ranges, {1: words}.get)
+    tail = next(block for block in doc.text_blocks if block.block_id == "b1-tail")
+    assert tail.bbox is not None and round(792 - tail.bbox.y0) == 60
+
+
+def test_the_longest_matching_copy_wins():
+    # SOMATOM p36: two sentences start with the same six words; the full match wins.
+    words = _line("Observe the safety information when using the foot switch.", 199, 60)
+    words += _line("Observe the safety information when using the trolley.", 199, 400)
+    blocks = _merged_page("Observe the safety information when using the trolley.", words)
+    tail = blocks["b1-tail"]
+    assert tail.bbox is not None and round(792 - tail.bbox.y0) == 400
+
+
+def test_a_tail_level_with_the_heading_stays_with_it():
+    # SOMATOM p152: the tail is printed on the heading's own line, 2 pt higher; it is the
+    # new section's first sentence, so it must not go to the previous section.
+    blocks = [
+        _side(0, "Previous", 1, "section_header", 700, 96, 184),
+        _side(1, "Body text of the previous section.", 2, "text", 700, 199, 538),
+        _side(
+            2, "Scan ranges The different distance enlargements decrease.", 2, "text", 520, 80, 184
+        ),
+    ]
+    words = {
+        2: _line("Body text of the previous section.", 199, 92)
+        + _line("Scan", 80, 272, 50)
+        + _line("ranges", 132, 272, 50)
+        + _line("The different distance enlargements decrease.", 199, 270)
+    }
+    bookmarks = [(2, "Previous", 1), (2, "Scan ranges", 2)]
+    previous, scan = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 2), 2, page_words=lambda page: words.get(page, [])
+    )
+    assert _texts(previous) == ["Previous", "Body text of the previous section."]
+    in_order = sorted(scan.text_blocks, key=lambda block: block.reading_order)
+    assert [block.text for block in in_order] == [
+        "Scan ranges", "The different distance enlargements decrease."
+    ]
