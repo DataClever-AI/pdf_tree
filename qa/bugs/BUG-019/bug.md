@@ -4,7 +4,7 @@ status: in-progress
 finding: H-08, H-14
 fix_branch: fix/BUG-019-heading-anchor
 fix_commit: 3497934, d19c4ab
-updated: 2026-09-30
+updated: 2026-10-06
 ---
 
 # BUG-019 · Heading anchor accepts a contained or empty normalized heading: a short or glyph-only section_header (e.g. '!' or 'Trends') anchors the wrong section, shifting its content to the parent or a sibling
@@ -45,6 +45,7 @@ Pending.
 | 2026-09-29 | `2002_Service_Manual_TI` | v2.1 | `3497934` fix(section_matcher): require exact or near-full heading match for section anchors (BUG-019) | Exact heading match first; ignore '!' and short contained headers. | not reviewed | — | Rejected before review. Tree check: 5 more sections start at their heading, but sec_0184 anchors on a figure label and sec_0185 loses its heading. Replaced by v2.2. |
 | 2026-09-29 | `Philips-MP20-MP90-Manual` | v2.1 | `3497934` fix(section_matcher): require exact or near-full heading match for section anchors (BUG-019) | Exact heading match first; ignore '!' and short contained headers. | not reviewed | — | Not reviewed. Tree check: 12 more sections start at their heading, none lost. Same commit as the 2002 attempt, so replaced by v2.2. |
 | 2026-09-30 | `2002_Service_Manual_TI` | v2.2 | `d19c4ab` fix(section_matcher): anchor merged headings by reading order before exact body text (BUG-019) | Exact heading match first; ignore '!' and short contained headers; a merged heading wins over a later figure label. | 7 → 0 | 3 | Keep. All 7 paired BUG-019 rows now pass; the reviewer approved v2.2. The 3 regressions are 5.6-table_content rows on tables that are the same in v2 and v2.2 (grading difference). Philips v2.2 is still a draft. |
+| 2026-10-06 | `Philips-MP20-MP90-Manual` | v2.14 | `6eddaf1` fix(section_matcher): match headings with subscripts by text without spaces (BUG-019) | Section headers also match the bookmark title with all spaces removed, for subscripts such as 'SO 2'. | 0 → 0 | 0 | Keep: p482 Critical fixed; 31 nodes moved back to their sections (p134, p406-p410, p451, p482), all checked correct. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
