@@ -4,7 +4,7 @@ status: in-progress
 finding:
 fix_branch: fix/BUG-029-margin-headings
 fix_commit: 175c3d1, bacf325, 0128ad0
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # BUG-029 · Margin (side) headings read before the body: content above or beside a left-margin heading goes to the wrong section, and on pages with several margin headings all the body goes to the last one
@@ -23,6 +23,8 @@ Confirmed with page coordinates (SOMATOM p393 and p295). Docling reads the whole
 
 - 2026-10-03: found during the BUG-022 work on SOMATOM; approved as a new bug by the reviewer (Oscar Munoz). Fixed in `175c3d1`, then `bacf325` and `0128ad0` for the residual cases.
 - 2026-10-06: added to the catalogue `root_causes.json` by request of the reviewer. The SOMATOM v1.7 rows of sec_0617 (p295) and sec_0624 (p301) are classified here: the first sentence of a boxed note (p295), and step 5 with its info box and Move key (p301), are printed above the margin heading but stay in the next section.
+
+- 2026-10-07: the final re-measurement (SOMATOM v1.9, agent drafts) found a residual. Docling merges a margin heading and the last sentence of the previous section into one node, for example `#/texts/2215` "Touch Panel The laser lightmarkers are laser beams…" on p102. The sentence belongs to sec_0170 but is in sec_0171. There are about 104 such nodes, the same in v1.7, v1.8 and v1.9. The v1.9 sample has 47 FAIL rows. The reviewer (Oscar Munoz) decided these are Critical, because the section fills with content that is not its own. Proposed fix: split the anchor block, so the heading starts the new section and the rest of the text goes to the previous section.
 
 ## Fix
 
