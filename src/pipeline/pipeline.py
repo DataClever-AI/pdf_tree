@@ -37,7 +37,12 @@ from src.tree_builder.bookmark_sanity import (
     check_bookmark_sanity,
     repair_bookmarks,
 )
-from src.tree_builder.fitz_toc import get_embedded_toc, page_count, page_text_reader
+from src.tree_builder.fitz_toc import (
+    get_embedded_toc,
+    page_count,
+    page_text_reader,
+    page_words_reader,
+)
 from src.tree_builder.section_matcher import (
     MatchedSection,
     find_unbookmarked_index,
@@ -709,6 +714,7 @@ def run_pipeline(
             numbering_schemes=numbering_schemes,
             offsets_applied=offsets_applied,
             boundaries=boundaries,
+            page_words=page_words_reader(pdf_path),
         )
         logger.info("section_matcher: %d sections", len(matched))
         ts = _lap("section_matcher", ts)
@@ -728,7 +734,11 @@ def run_pipeline(
             json.dump(sections, f, indent=2, ensure_ascii=False)
 
         expected_front_matter = _front_matter_count(doc, matched) if doc else 0
-        total_blocks = len(doc.text_blocks) + len(doc.tables) if doc else 0
+        # The matcher splits some merged margin headings into two blocks (BUG-029); the
+        # extra tail blocks count as blocks of the document too.
+        total_blocks = (
+            len(doc.text_blocks) + len(doc.tables) + _split_tail_count(doc, matched) if doc else 0
+        )
         validation = validate_tree(
             tree_json_path=tree_json_path,
             bookmarks=bookmarks,
@@ -795,12 +805,23 @@ def _front_matter_count(doc: DoclingDocument, matched: list[MatchedSection]) -> 
     reading order and keep the page rule.
     """
     covered = {p for s in matched for p in range(s.page_start, s.page_end + 1)}
-    first_order = min((b.reading_order for s in matched for b in s.text_blocks), default=None)
+    # The matcher can renumber reading orders, so compare Docling's own values.
+    order = {b.block_id: b.reading_order for b in doc.text_blocks}
+    first_order = min(
+        (order[b.block_id] for s in matched for b in s.text_blocks if b.block_id in order),
+        default=None,
+    )
     return sum(
         1
         for b in doc.text_blocks
         if b.page_no not in covered or (first_order is not None and b.reading_order < first_order)
     ) + sum(1 for t in doc.tables if t.page_no not in covered)
+
+
+def _split_tail_count(doc: DoclingDocument, matched: list[MatchedSection]) -> int:
+    """Blocks the matcher added by splitting merged margin headings (not in Docling's list)."""
+    known = {b.block_id for b in doc.text_blocks}
+    return sum(1 for s in matched for b in s.text_blocks if b.block_id not in known)
 
 
 def _extract_embedded_images(

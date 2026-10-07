@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from src.models.extraction import DoclingDocument, DoclingTextBlock, ExtractionProvenance
-from src.pipeline.pipeline import _front_matter_count
+from src.pipeline.pipeline import _front_matter_count, _split_tail_count
 from src.tree_builder.section_matcher import MatchedSection
 
 
@@ -28,3 +28,36 @@ def test_cover_title_before_the_first_section_counts_as_front_matter() -> None:
 
     # #/texts/0-2 come before the anchor; #/texts/6 is on a page no section covers.
     assert _front_matter_count(doc, [first]) == 4
+
+
+def test_split_tails_count_as_blocks_and_keep_docling_orders() -> None:
+    # SOMATOM p102: the matcher splits a merged margin heading and renumbers reading
+    # orders; front matter is still found with Docling's own orders (BUG-029).
+    blocks = [_block(order, 1) for order in range(4)]
+    doc = DoclingDocument("d", "d.pdf", 1, text_blocks=blocks)
+    tail = _block(9, 1)
+    tail = DoclingTextBlock(
+        block_id="#/texts/2-tail",
+        text=tail.text,
+        label="text",
+        page_no=1,
+        reading_order=2,
+        depth=0,
+        provenance=tail.provenance,
+    )
+    renumbered = [
+        DoclingTextBlock(
+            block_id=b.block_id,
+            text=b.text,
+            label="text",
+            page_no=1,
+            reading_order=b.reading_order - 1,
+            depth=0,
+            provenance=b.provenance,
+        )
+        for b in blocks[2:]
+    ]
+    first = MatchedSection("sec_0001", "Title", 1, 1, 1, text_blocks=[tail, *renumbered])
+
+    assert _split_tail_count(doc, [first]) == 1
+    assert _front_matter_count(doc, [first]) == 2
