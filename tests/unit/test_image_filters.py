@@ -84,3 +84,34 @@ def test_repeated_key_picture_in_the_body_and_a_thin_unique_figure_are_kept(tmp_
     sizes = [(image.width_px, image.height_px) for image in images]
     assert sizes.count((177, 177)) == 6
     assert (1600, 35) in sizes
+
+
+def test_wide_short_part_drawing_is_kept_and_a_tiny_icon_is_dropped(tmp_path: Path) -> None:
+    # LOGIQ_S8 p832: power-cord drawings of 203x42 px are under 48 px in one side only.
+    pdf = fitz.open()
+    page = pdf.new_page(width=612, height=792)
+    page.insert_image(fitz.Rect(332, 629, 484, 661), stream=_png(203, 42))
+    page.insert_image(fitz.Rect(100, 100, 130, 130), stream=_png(40, 40))
+    path = tmp_path / "parts.pdf"
+    pdf.save(path)
+
+    images = _extract_embedded_images(path, 1, 48, logging.getLogger("test"))
+
+    assert [(image.width_px, image.height_px) for image in images] == [(203, 42)]
+
+
+def test_a_short_pictogram_repeated_in_the_body_is_dropped(tmp_path: Path) -> None:
+    # A 64x40 px note pictogram on every page body is decoration, not a part drawing.
+    pdf = fitz.open()
+    note_xref = 0
+    for _ in range(5):
+        page = pdf.new_page(width=612, height=792)
+        note = fitz.Rect(60, 400, 124, 440)
+        if note_xref:
+            page.insert_image(note, xref=note_xref)
+        else:
+            note_xref = page.insert_image(note, stream=_png(64, 40))
+    path = tmp_path / "notes.pdf"
+    pdf.save(path)
+
+    assert _extract_embedded_images(path, 5, 48, logging.getLogger("test")) == []
