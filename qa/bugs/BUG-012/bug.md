@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-012
-status: in-progress
+status: mitigated
 finding: 
 fix_branch: fix/BUG-020-image-filters
 fix_commit: 8a06c44
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # BUG-012 · Sporadic single/partial image omissions from the image index — mechanism unconfirmed
@@ -24,6 +24,7 @@ Unconfirmed.
 - 2026-09-04: identified in the v1 QA review of LOGIQ_e_R9 and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
 - 2026-10-03: verified with the image inventory: three p436 part photos are kept at 8a06c44 (BUG-020). Still missing: p95 and p123 (vector figures, BUG-010); p274 and p417 thin screenshots (673x35 and 808x39 px, under the pixel floor and over the 15:1 aspect filter); p434 two photos and p436 one photo under 0.5% of the page (would be kept by the BUG-017 proposal: pixel floor 48 and area 0.3%).
+- 2026-10-08: closing measure on LOGIQ_e v1.14: 3 → 0. The last rows were decorative icons (rule 6i), not omissions.
 
 ## Fix
 
@@ -31,13 +32,19 @@ Re-check after the BUG-020 fix.
 
 ## Verification
 
-Pending.
+2026-10-08: no BUG-012 FAIL row in LOGIQ_e v1.14 (approved and finalized).
+
+- The 3 Low rows of v1.13 (sec_0020 p96 and p98, sec_0056 p404) were the decorative CAUTION triangle. By rule 6i (2026-10-07) a decorative icon that is not extracted is PASS.
+- Earlier rows went from 5 to 2 with the image filter fixes (BUG-020, BUG-010).
+
+No real image omission is left. Status `mitigated`: if Phase 4 shows no new case, the bug can be closed.
 
 ## Attempts
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
 | 2026-10-07 | `LOGIQ_e_R9_General_Service_Manual` | v1.13 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 2 | 12 | Better: 5 -> 2 FAIL on paired rows. The rest is still open. |
+| 2026-10-08 | `LOGIQ_e_R9_General_Service_Manual` | v1.14 | `476da09` fix(docling_extract): recover table lines missing from cells (BUG-030) | Measure after Phases 0-3 (pipeline 476da09) and rule 6i (decorative icons are PASS). | 3 → 0 | 2 | No BUG-012 row left. The 3 Low rows of v1.13 (sec_0020 p96/p98, sec_0056 p404) were the CAUTION triangle, which is decorative, so PASS by rule 6i. No real image omission was seen. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
