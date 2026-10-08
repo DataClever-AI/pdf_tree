@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-019
-status: mitigated
+status: fixed-pending-merge
 finding: H-08, H-14
 fix_branch: fix/BUG-019-heading-anchor
 fix_commit: 3497934, d19c4ab
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # BUG-019 · Heading anchor accepts a contained or empty normalized heading: a short or glyph-only section_header (e.g. '!' or 'Trends') anchors the wrong section, shifting its content to the parent or a sibling
@@ -29,6 +29,7 @@ Confirmed in code: `src/tree_builder/section_matcher.py:139` accepts `norm_title
 - 2026-09-29: attempt 2 in `d19c4ab`: a merged heading like '1. Tilt Steering Column A: TILT MECHANISM' now anchors before a later figure label. Versions `v2.2` created for 2002 and Philips.
 
 - 2026-10-07: status set back from fixed-pending-merge to mitigated. Philips and 2002 are at 0, but the final SOMATOM version v1.9 still has 4 FAIL rows (sec_0225 and sec_0244, 3 Critical). These rows were BUG-005 before; BUG-005 is fixed and the same sections now show this anchor problem.
+- 2026-10-08: closing measure on SOMATOM v1.12 against v1.9: 4 → 0. Status set to `fixed-pending-merge`.
 
 ## Fix
 
@@ -38,7 +39,13 @@ First proposal: ignore headings whose normalized text is empty or shorter than 3
 
 ## Verification
 
-Pending.
+2026-10-08: no BUG-019 FAIL row in any final version (2002 v2.12, Philips v2.17, SOMATOM v1.12, all approved and finalized).
+
+- 2002: 7 → 0 since v2.2. Philips: 6 → 0 since v2.15.
+- SOMATOM: sec_0225 p131 and sec_0244 p138 pass since v1.10 (Phase 1, `29ad53c`).
+- The SOMATOM rows sec_0195 and sec_0785 are BUG-029 cases (margin headings), not BUG-019.
+
+The fixes are on `feat/bug-mitigation-integration`; the status becomes `fixed` after the merge to `main`.
 
 ## Attempts
 
@@ -50,6 +57,7 @@ Pending.
 | 2026-10-06 | `Philips-MP20-MP90-Manual` | v2.14 | `6eddaf1` fix(section_matcher): match headings with subscripts by text without spaces (BUG-019) | Section headers also match the bookmark title with all spaces removed, for subscripts such as 'SO 2'. | 0 → 0 | 0 | Keep: p482 Critical fixed; 31 nodes moved back to their sections (p134, p406-p410, p451, p482), all checked correct. |
 | 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 6 → 0 | 9 | Fixed in this manual: 6 -> 0 FAIL on paired rows. |
 | 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.10 | `29ad53c` fix(section_matcher): split merged margin headings and anchor on exact margin headings (BUG-029) | Phase 1: merged margin headings are split and placed by the PDF text layer; an exact margin heading is the first anchor (pipeline 29ad53c). | 4 → 4 | 5 | Keep: sec_0225 p131 and sec_0244 p138 are fixed. The 4 rows left (sec_0195, sec_0785) cite BUG-019 in notes, but the lead found BUG-029 cases. |
+| 2026-10-08 | `SOMATOM_Force_IFU_VB30` | v1.12 | `476da09` fix(docling_extract): recover table lines missing from cells (BUG-030) | Measure after Phases 1-3 against the final version v1.9: margin headings split and anchored (29ad53c), text above a heading (027c3a4), table lines (476da09). | 4 → 0 | 8 | Fixed in SOMATOM: sec_0225 p131 and sec_0244 p138 pass since v1.10. sec_0195 and sec_0785 are BUG-029 cases (v1.10 notes cited BUG-019 by mistake). No BUG-019 FAIL in any final version. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

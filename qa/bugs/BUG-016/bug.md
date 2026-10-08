@@ -1,10 +1,10 @@
 ---
 bug_id: BUG-016
-status: open
+status: mitigated
 finding: 
 fix_branch: 
 fix_commit: 
-updated: 2026-09-29
+updated: 2026-10-08
 ---
 
 # BUG-016 · Near-duplicate/overlapping embedded image xrefs cause under-extraction on pages with several similar photos
@@ -23,6 +23,7 @@ Unconfirmed: xref deduplication in `_extract_embedded_images`.
 
 - 2026-09-04: identified in the v1 QA review of SOMATOM and consolidated by root cause in Task 2.3 (commit `3a4ec7f`).
 - 2026-09-29: registered in the root-cause catalogue `qa/confidence_index/root_causes.json`.
+- 2026-10-08: closing measure on SOMATOM v1.12 against v1.9: 3 → 0. One row fixed, two re-diagnosed as BUG-017.
 
 ## Fix
 
@@ -30,12 +31,18 @@ Not started.
 
 ## Verification
 
-Pending.
+2026-10-08: no BUG-016 FAIL row in SOMATOM v1.12 (approved and finalized).
+
+- sec_0517 p248 passes since v1.10.
+- sec_0518 p248 and sec_0531 p255 are still FAIL Low, but the reviewers traced them to a small button icon that is not extracted (BUG-017).
+
+The near-duplicate cause was not confirmed. Status `mitigated`: if no new case appears in Phase 4, the bug can be closed as `wont-fix` (no own cause).
 
 ## Attempts
 
 | Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
 |---|---|---|---|---|---|---|---|
+| 2026-10-08 | `SOMATOM_Force_IFU_VB30` | v1.12 | `476da09` fix(docling_extract): recover table lines missing from cells (BUG-030) | Measure after Phases 0-3 against the final version v1.9 (image filter 54a8acf and later fixes). | 3 → 0 | 8 | No BUG-016 row left. sec_0517 p248 passes since v1.10. sec_0518 p248 and sec_0531 p255 are still Low, but the reviewers found a small button icon that is not extracted, so they are BUG-017 now. The near-duplicate cause was not confirmed. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
