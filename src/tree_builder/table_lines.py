@@ -267,6 +267,26 @@ def _lost_phrases(
     return lost
 
 
+def _short_values_of_lost_rows(
+    lost: list[_Phrase], free: list[_Phrase], rows: dict[int, tuple[float, float]]
+) -> list[_Phrase]:
+    """
+    Short phrases printed on the line of a lost row ('50', 'kg', 'IEC' after 'Equatorial
+    Guinea' on Philips p466). They are under _MIN_LOST_CHARS, but outside every row they
+    are in no cell either, so they go with the row.
+    """
+    lines = [phrase for phrase in lost if _row_of(phrase, rows) is None]
+    return [
+        phrase
+        for phrase in free
+        if phrase not in lost
+        and _letters(phrase.text)
+        and len(_letters(phrase.text)) < _MIN_LOST_CHARS
+        and _row_of(phrase, rows) is None
+        and any(line.top <= phrase.middle <= line.bottom for line in lines)
+    ]
+
+
 def _recover_table(
     table: dict[str, Any], merged: dict[str, Any], words: list[Word], page_height: float
 ) -> list[str]:
@@ -299,14 +319,16 @@ def _recover_table(
     if not rows or not columns:
         return []
     cell_boxes = [_top_left(cell["bbox"], page_height) for cell in cells if cell.get("bbox")]
+    free_phrases = _phrases(free, columns, cell_boxes)
     lost = _lost_phrases(
-        _phrases(free, columns, cell_boxes),
+        free_phrases,
         _phrases(inside, columns, cell_boxes),
         cell_letters,
         page_letters,
         rows,
         _row_words(cells),
     )
+    lost += _short_values_of_lost_rows(lost, free_phrases, rows)
     # A line inside a row but outside every column belongs to a column Docling lost entirely
     # (LOGIQ_S8 p817: the header 'Description'); joined to a neighbour cell it would read
     # as part of that cell ('Part Number Description'), so it is left out.

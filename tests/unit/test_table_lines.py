@@ -422,3 +422,13 @@ def test_header_word_of_a_lost_column_is_not_joined_to_a_neighbour_cell() -> Non
     document = _document(cells, 95, 130)
 
     assert _recover(document, words) == ["Part Number | Qty", "5763099 | 1"]
+
+
+def test_short_values_on_the_line_of_a_lost_row_come_back_with_it() -> None:
+    # Philips p466: the row 'Equatorial Guinea | 50 | kg' is lost; the values are short.
+    cells = _rows(("El Salvador", "60 kg", 100), ("Eritrea", "50 kg", 130))
+    words = _printed(cells) + _words("Equatorial Guinea", 60, 116)
+    words += _words("50", 190, 116) + _words("kg", 220, 116)
+    document = _document(cells, 95, 145)
+
+    assert _recover(document, words)[1] == "Equatorial Guinea | 50 kg"
