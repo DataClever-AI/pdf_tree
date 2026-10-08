@@ -1,0 +1,37 @@
+---
+bug_id: BUG-034
+status: open
+finding:
+fix_branch:
+fix_commit:
+updated: 2026-10-08
+---
+
+# BUG-034 · Page footer text is merged with the first body line of a page: the merged node goes to the wrong section
+
+**Suspected module:** Docling layout (footer not split from body text); src/tree_builder/section_matcher.py places the merged node
+
+## Description
+
+On SOMATOM p365 the intro sentence of sec_0729 ("You can synchronize an ECG-gated spiral…") is not lost. It is in node `#/texts/7874` together with the page footer text "Force / Force Velo | Instructions for Use". The merged node is placed in sec_0732, so sec_0729 lacks its intro and sec_0732 has text that is not its own. A RAG consumer gets the sentence under the wrong title.
+
+## Root cause
+
+Not confirmed. Probably Docling reads the footer and the next body line as one text block, so the block is neither furniture nor in its own reading-order place.
+
+## What was done
+
+- 2026-10-08: found by the QA lead in the Phase 3 review of SOMATOM v1.12 (random-check row `sec_0729|365|5.4-gaps_duplicates`). The reviewer (Oscar Munoz) chose Critical (rule 6d, content in the wrong section) and asked for a new bug. Registered in `root_causes.json` with an override for that row.
+
+## Fix
+
+Not designed yet. First check how many merged footer blocks exist in the 7 manuals (footer text inside a body node).
+
+## Verification
+
+Not fixed yet.
+
+## Attempts
+
+| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |
+|---|---|---|---|---|---|---|---|
