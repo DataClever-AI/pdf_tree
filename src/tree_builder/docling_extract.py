@@ -30,6 +30,8 @@ from src.models.extraction import (
     DoclingTextBlock,
     ExtractionProvenance,
 )
+from src.tree_builder.fitz_toc import page_words_reader
+from src.tree_builder.table_lines import recover_table_lines
 
 try:
     from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
@@ -590,6 +592,8 @@ class DoclingExtractionEngine:
                 lambda pages: _convert_page_subset(table_converter, pdf_path, pages),
                 logger,
             )
+        if merged.get("tables"):
+            recover_table_lines(merged, page_words_reader(pdf_path), logger)
         elapsed_s = time.perf_counter() - t_start
         document_id = hashlib.sha256(str(pdf_path.resolve()).encode()).hexdigest()[:24]
 

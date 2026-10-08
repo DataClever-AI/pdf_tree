@@ -1,25 +1,34 @@
 ---
 bug_id: BUG-030
-status: open
+status: in-progress
 finding: H-17
-fix_branch:
-fix_commit:
-updated: 2026-10-07
+fix_branch: fix/BUG-030-table-lost-lines
+fix_commit: 476da09
+updated: 2026-10-08
 ---
 
-# BUG-030 · Full-width footnote row of a table is lost: its text is in no table cell and in no text node
+# BUG-030 · Printed table text is lost: a line inside the table area is in no cell and in no text node
 
-**Suspected module:** src/tree_builder/docling_extract.py (table cells; text inside the table area is not kept as text)
+**Suspected module:** src/tree_builder/docling_extract.py (TableFormer drops the row; fix in src/tree_builder/table_lines.py)
 
 ## Description
 
-A table can end with a row that spans all columns, such as a footnote that explains the `*` marks. This row is lost. Its text is not in any table cell and not in any text node of the tree. The `*` marks in the table then point to nothing. A RAG consumer cannot answer questions that need the footnote.
+A printed line inside a table is lost: it is in no table cell and in no text node of the tree. It can be a footnote row that spans all columns, a legend row under the table, a row in the middle of the table, or a line of a cell. A RAG consumer cannot answer questions that need this text.
 
-Example: DOC-0136477A p178, Table 13-7 "HemoSphere Swan-Ganz module CO faults/alerts" (sec_0217). The last row reads "* These are latching faults. Touch the silence icon to silence. To clear, restart monitoring." The 12 message rows are kept in `#/tables/91` and `#/tables/92`, with their `*` marks, but the footnote row is in no node.
+Examples:
+
+- DOC-0136477A p178, Table 13-7 (sec_0217). The footnote row "* These are latching faults. Touch the silence icon to silence. To clear, restart monitoring." is in no node. The `*` marks in the table point to nothing.
+- Philips p443 (sec_0820). The row "Gain 2.0, Range 5.3 to 6.1 seconds, Average 5.7 seconds" is missing in the middle of the table.
+- LOGIQ_e p36 (sec_0003). The legend row "Note: X: Support; N: Not Applicable" under Table 1-4 is lost.
+- AUTOMATIC p27 and p31 (sec_0015, sec_0016). The row "2-4 brake timing valve A" and its description are lost.
+
+On 2026-10-08 the scope grew from footnote rows to all lost table lines (decision D1 of the reviewer, Oscar Munoz). The four lost-row cases above were first filed under BUG-008.
 
 ## Root cause
 
-Hypothesis, not confirmed. Docling's table reader does not make a cell for a row that spans the full table width. Docling also does not keep text inside a table area as a text node. So the text of that row is dropped. Check whether both table backends (PyPdfium and docling-parse, see BUG-008) drop it.
+Confirmed on 2026-10-08. The words are in the PDF text layer, inside the table box. TableFormer makes no cell for them, and Docling keeps no text item for text inside a table area. Both table readers (PyPdfium and docling-parse, see BUG-008) drop the same lines.
+
+Out of scope here: cells that are shifted by one row (AUTOMATIC p27) and deformed text such as "CO 2" or "pres- sure". Those are other causes.
 
 ## What was done
 
@@ -27,11 +36,18 @@ Hypothesis, not confirmed. Docling's table reader does not make a cell for a row
 
 ## Fix
 
-Proposed (deterministic, no AI): after a table is read, compare it with the PDF text inside the table area (PyMuPDF words in the table bbox). If some lines are in no cell, add them as a final full-width row. Reuse the text check `_keeps_all_text` from the BUG-008 table re-read. Before the fix, search the other six manuals for the same pattern.
+Branch `fix/BUG-030-table-lost-lines`, commit `476da09`. New step `src/tree_builder/table_lines.py`, called after the docling-parse table re-read:
+
+1. Read the PyMuPDF words inside the table box. Skip words owned by other Docling items and overprinted copies.
+2. Split the words into lines and phrases at cell boxes and column gaps.
+3. A phrase is lost when its text is not in the cells, its longest run in the cells is under 80 %, and (inside a row) most of its words are missing from that row.
+4. A lost phrase goes into the cell of its row and column, or into a new row after the row printed above it.
+
+Simulation on the table pages of the 7 manuals: about 136 lines recovered in 66 of 1,196 tables, including the four examples above. Plan: `../doc/PLAN_FASE3_TABLAS_2026-10-08_pdf_tree.md`.
 
 ## Verification
 
-Not fixed yet.
+Pending: mitigation versions AUTOMATIC v1.7, LOGIQ_e v1.14, DOC v1.13, Philips v2.17, LOGIQ_S8 v1.14, 2002 v2.12 and SOMATOM v1.12.
 
 ## Attempts
 
