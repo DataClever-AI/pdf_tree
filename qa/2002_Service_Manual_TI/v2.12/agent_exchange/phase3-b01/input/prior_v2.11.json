@@ -1,0 +1,60 @@
+{
+ "base_version": "v2.11",
+ "prior_fail_rows": [
+  {
+   "section_id": "sec_0002",
+   "page_sampled": "1",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "#/tables/0 (p1) splits two labels wrongly. 'Fuel Injection (Fuel System) (w/o' is in the label cell and 'FU OBD)' is in the code cell. The render shows code 'FU (w/o OBD)'. The EC row has an empty code cell, and 'EC (w/o OBD)' is in the next row. Other rows and their order match the render.",
+   "notes": "Old FAIL (BUG-008, v2.10): still present. The cell text is the same as before. Order and values can still be read, so Low."
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": "1",
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0000, img_0001 and img_0002 (origin vector) are crops of the whole p1, p2 and p3 index areas. They show the black navigation tabs. img_0000 also has the 'NEW CAR INFORMATION SECTION' heading, 'FOREWORD' and its paragraphs. This is page layout, not a figure. The same text is in #/texts and #/tables/0 to #/tables/2.",
+   "notes": "Old FAIL (no bug id, v2.10): still present. Probably the vector filter treats the black tab shapes as a figure. Content is only duplicated, not lost, so Low."
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": "8",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p8 tables #/tables/7 to #/tables/10 match the render. #/tables/11 has merged cells. 'Engine coolant' has '7.0 (7.4, 6.2) 6.9 (7.3, 6.1)' in one cell for 2.0 L 5MT and 4AT. 'Total capacity' puts '4.0 (4.2,' and '3.5)' in different cells. Values and order are kept.",
+   "notes": "Old FAIL (BUG-008, v2.9): still present. Cells are merged but values and order survive, so Low."
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": "14",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p14 #/tables/18 and #/tables/19 match the render. In the same section, text of #/tables/21 (p15) has merged cells, for example 'Transmission type 5MT 4AT 4AT' in one cell. #/tables/27 (p17) and #/tables/28 (p18) show Option rows as dashes in merged cells. Values and order are kept. p15 to p18 are not rendered in this batch.",
+   "notes": "Old FAIL (BUG-008, v2.9): still present. Judged from the table text for p15 to p18 only, because those pages are not in the batch. Low."
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": "21",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "#/tables/31 on p21 is the chapter contents. All six lines and page numbers (2, 3, 8, 19, 30, 38) are there in order. In rows 4 and 5 the page number is in the title cell and the Page cell is empty. In row 6 the dots and 38 are split from the title.",
+   "notes": "Old FAIL (no bug id, v2.9): still present. Digits moved between cells, but values and order are kept, so Low."
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": "54",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "p54 has no table. In this section #/tables/32 (p51) has only 'Unit | Function' with 30 rows. The row labels 'Input signals' and 'Output signals' are missing from the table text and are in no node of sec_0011. This text is lost. #/tables/33 on p57 matches the render. The p51 render is not in this batch.",
+   "notes": "Old FAIL (BUG-008, v2.9): still present. The old review saw the labels in the p51 render. Row labels are lost text, not shifted cells, so not Low. Rows cannot be sorted into input or output. Probably the merged label cell is dropped by the table reader. Medium. Not rendered here, so confidence is lower."
+  }
+ ],
+ "new_keys_without_v2_11_row": []
+}

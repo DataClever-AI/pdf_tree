@@ -1,0 +1,724 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p77 (A: P AND N RANGES, 1. MPT MODELS heading (first half of the schematic)) sec_0019 is a top-level bookmark with hierarchy_level 1, path /MSA5T0200A30120 and no parent. It is a flat chapter of schematic drawings, so level 1 fits.",
+      "notes": "Bookmark title is a code, not the printed title '10. Schematic Drawing'. This is how the PDF bookmark is named.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p77 the page is one drawing with no sub-headings that need child sections. sec_0019 has parent_section_id null and child_sections empty, same as neighbours sec_0018 and sec_0020.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p77 (A: P AND N RANGES, 1. MPT MODELS heading (first half of the schematic)) all nodes of the page belong to the drawing of this chapter. The section runs p77-p108 and every node page_no is inside it. p77 starts with '10. Schematic Drawing' and no neighbour content is absorbed.",
+      "notes": "Next section sec_0020 starts p109; I did not see p109, so the end boundary is judged from p108 only.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p77 the section has path /MSA5T0200A30120 with a single element, matching a level-1 bookmark with no ancestors.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p77 the page appears once, in sec_0019 only. Semantic order 891-19657 is continuous and ends before sec_0020 (19658-38424), so there is no overlap with sec_0018 or sec_0020. The similar node_count of sec_0019 and sec_0020 is because the drawing pages repeat; ranges differ.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 is flagged because the bookmark title code does not match page text (score 30.0 under 85). On p77 the drawing pages are in the right place, so the page boundary is right. The flag only shows weak title matching.",
+      "notes": "Flag is a title-match issue, not a wrong boundary.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The embedded bookmark MSA5T0200A30120 points to p77, where '10. Schematic Drawing' begins, so the TOC source is supported. p77 is within the bookmark range.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed page on p77 shows no folio, only a drawing code in the corner or none. numbering_scheme 'arabic' is the plain physical numbering, and nothing contradicts it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 for sec_0019, the same as sec_0018 and sec_0020. Physical p77 lies inside p77-p108 and shows the expected drawing, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "All 32 figures of p77-p108 are kept as images in sec_0019. On p77 the crop is full page and nothing is lost. But the crops of p88, p90, p92, p106 and p108 are smaller (about 1130x1399 px). On p108 the page shows the drawing number 'B3H2108A' at the bottom left. The crop of p108 does not have it, and no node in the tree has it. Images are the same size as in v1.6.",
+      "notes": "BUG-010 residue (rotated plates lose the drawing number). Same defect and same grade as the approved v1.6 row. Lead correction: the reviewer graded PASS from the sampled pages only; the lead checked p108 on the render.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted image for p77 is the schematic itself. It has no logo, rule or footer divider kept as a separate image. The image count is one per page, no extra decorative images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 77,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json maps one image to sec_0019 for each page p77-p108, including p77. The drawing on p77 belongs to this chapter, so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p86 (second half of a schematic (D RANGE, manual valve, drawing code B3H2097A)) sec_0019 is a top-level bookmark with hierarchy_level 1, path /MSA5T0200A30120 and no parent. It is a flat chapter of schematic drawings, so level 1 fits.",
+      "notes": "Bookmark title is a code, not the printed title '10. Schematic Drawing'. This is how the PDF bookmark is named.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p86 the page is one drawing with no sub-headings that need child sections. sec_0019 has parent_section_id null and child_sections empty, same as neighbours sec_0018 and sec_0020.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p86 (second half of a schematic (D RANGE, manual valve, drawing code B3H2097A)) all nodes of the page belong to the drawing of this chapter. The section runs p77-p108 and every node page_no is inside it. p77 starts with '10. Schematic Drawing' and no neighbour content is absorbed.",
+      "notes": "Next section sec_0020 starts p109; I did not see p109, so the end boundary is judged from p108 only.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p86 the section has path /MSA5T0200A30120 with a single element, matching a level-1 bookmark with no ancestors.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p86 the page appears once, in sec_0019 only. Semantic order 891-19657 is continuous and ends before sec_0020 (19658-38424), so there is no overlap with sec_0018 or sec_0020. The similar node_count of sec_0019 and sec_0020 is because the drawing pages repeat; ranges differ.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 is flagged because the bookmark title code does not match page text (score 30.0 under 85). On p86 the drawing pages are in the right place, so the page boundary is right. The flag only shows weak title matching.",
+      "notes": "Flag is a title-match issue, not a wrong boundary.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The embedded bookmark MSA5T0200A30120 points to p77, where '10. Schematic Drawing' begins, so the TOC source is supported. p86 is within the bookmark range.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed page on p86 shows no folio, only a drawing code in the corner or none. numbering_scheme 'arabic' is the plain physical numbering, and nothing contradicts it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 for sec_0019, the same as sec_0018 and sec_0020. Physical p86 lies inside p77-p108 and shows the expected drawing, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p86 (second half of a schematic (D RANGE, manual valve, drawing code B3H2097A)) the whole schematic is extracted as one vector image (origin vector) for this page. The image shows the drawing, the pressure legend and the labels, so nothing meaningful was dropped.",
+      "notes": "The pipeline renders the full page region for each schematic page (BUG-010 fix).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted image for p86 is the schematic itself. It has no logo, rule or footer divider kept as a separate image. The image count is one per page, no extra decorative images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 86,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json maps one image to sec_0019 for each page p77-p108, including p86. The drawing on p86 belongs to this chapter, so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p87 (2. VTD MODELS first half of a schematic) sec_0019 is a top-level bookmark with hierarchy_level 1, path /MSA5T0200A30120 and no parent. It is a flat chapter of schematic drawings, so level 1 fits.",
+      "notes": "Bookmark title is a code, not the printed title '10. Schematic Drawing'. This is how the PDF bookmark is named.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p87 the page is one drawing with no sub-headings that need child sections. sec_0019 has parent_section_id null and child_sections empty, same as neighbours sec_0018 and sec_0020.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p87 (2. VTD MODELS first half of a schematic) all nodes of the page belong to the drawing of this chapter. The section runs p77-p108 and every node page_no is inside it. p77 starts with '10. Schematic Drawing' and no neighbour content is absorbed.",
+      "notes": "Next section sec_0020 starts p109; I did not see p109, so the end boundary is judged from p108 only.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p87 the section has path /MSA5T0200A30120 with a single element, matching a level-1 bookmark with no ancestors.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p87 the page appears once, in sec_0019 only. Semantic order 891-19657 is continuous and ends before sec_0020 (19658-38424), so there is no overlap with sec_0018 or sec_0020. The similar node_count of sec_0019 and sec_0020 is because the drawing pages repeat; ranges differ.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 is flagged because the bookmark title code does not match page text (score 30.0 under 85). On p87 the drawing pages are in the right place, so the page boundary is right. The flag only shows weak title matching.",
+      "notes": "Flag is a title-match issue, not a wrong boundary.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The embedded bookmark MSA5T0200A30120 points to p77, where '10. Schematic Drawing' begins, so the TOC source is supported. p87 is within the bookmark range.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed page on p87 shows no folio, only a drawing code in the corner or none. numbering_scheme 'arabic' is the plain physical numbering, and nothing contradicts it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 for sec_0019, the same as sec_0018 and sec_0020. Physical p87 lies inside p77-p108 and shows the expected drawing, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p87 (2. VTD MODELS first half of a schematic) the whole schematic is extracted as one vector image (origin vector) for this page. The image shows the drawing, the pressure legend and the labels, so nothing meaningful was dropped.",
+      "notes": "The pipeline renders the full page region for each schematic page (BUG-010 fix).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted image for p87 is the schematic itself. It has no logo, rule or footer divider kept as a separate image. The image count is one per page, no extra decorative images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 87,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json maps one image to sec_0019 for each page p77-p108, including p87. The drawing on p87 belongs to this chapter, so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p93 (E: 3RD GEAR OF D AND 3 RANGES, 1. MPT MODELS first half) sec_0019 is a top-level bookmark with hierarchy_level 1, path /MSA5T0200A30120 and no parent. It is a flat chapter of schematic drawings, so level 1 fits.",
+      "notes": "Bookmark title is a code, not the printed title '10. Schematic Drawing'. This is how the PDF bookmark is named.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p93 the page is one drawing with no sub-headings that need child sections. sec_0019 has parent_section_id null and child_sections empty, same as neighbours sec_0018 and sec_0020.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p93 (E: 3RD GEAR OF D AND 3 RANGES, 1. MPT MODELS first half) all nodes of the page belong to the drawing of this chapter. The section runs p77-p108 and every node page_no is inside it. p77 starts with '10. Schematic Drawing' and no neighbour content is absorbed.",
+      "notes": "Next section sec_0020 starts p109; I did not see p109, so the end boundary is judged from p108 only.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p93 the section has path /MSA5T0200A30120 with a single element, matching a level-1 bookmark with no ancestors.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p93 the page appears once, in sec_0019 only. Semantic order 891-19657 is continuous and ends before sec_0020 (19658-38424), so there is no overlap with sec_0018 or sec_0020. The similar node_count of sec_0019 and sec_0020 is because the drawing pages repeat; ranges differ.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 is flagged because the bookmark title code does not match page text (score 30.0 under 85). On p93 the drawing pages are in the right place, so the page boundary is right. The flag only shows weak title matching.",
+      "notes": "Flag is a title-match issue, not a wrong boundary.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The embedded bookmark MSA5T0200A30120 points to p77, where '10. Schematic Drawing' begins, so the TOC source is supported. p93 is within the bookmark range.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed page on p93 shows no folio, only a drawing code in the corner or none. numbering_scheme 'arabic' is the plain physical numbering, and nothing contradicts it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 for sec_0019, the same as sec_0018 and sec_0020. Physical p93 lies inside p77-p108 and shows the expected drawing, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p93 (E: 3RD GEAR OF D AND 3 RANGES, 1. MPT MODELS first half) the whole schematic is extracted as one vector image (origin vector) for this page. The image shows the drawing, the pressure legend and the labels, so nothing meaningful was dropped.",
+      "notes": "The pipeline renders the full page region for each schematic page (BUG-010 fix).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted image for p93 is the schematic itself. It has no logo, rule or footer divider kept as a separate image. The image count is one per page, no extra decorative images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 93,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json maps one image to sec_0019 for each page p77-p108, including p93. The drawing on p93 belongs to this chapter, so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p95 (2. VTD MODELS first half of a schematic) sec_0019 is a top-level bookmark with hierarchy_level 1, path /MSA5T0200A30120 and no parent. It is a flat chapter of schematic drawings, so level 1 fits.",
+      "notes": "Bookmark title is a code, not the printed title '10. Schematic Drawing'. This is how the PDF bookmark is named.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p95 the page is one drawing with no sub-headings that need child sections. sec_0019 has parent_section_id null and child_sections empty, same as neighbours sec_0018 and sec_0020.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p95 (2. VTD MODELS first half of a schematic) all nodes of the page belong to the drawing of this chapter. The section runs p77-p108 and every node page_no is inside it. p77 starts with '10. Schematic Drawing' and no neighbour content is absorbed.",
+      "notes": "Next section sec_0020 starts p109; I did not see p109, so the end boundary is judged from p108 only.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p95 the section has path /MSA5T0200A30120 with a single element, matching a level-1 bookmark with no ancestors.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p95 the page appears once, in sec_0019 only. Semantic order 891-19657 is continuous and ends before sec_0020 (19658-38424), so there is no overlap with sec_0018 or sec_0020. The similar node_count of sec_0019 and sec_0020 is because the drawing pages repeat; ranges differ.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 is flagged because the bookmark title code does not match page text (score 30.0 under 85). On p95 the drawing pages are in the right place, so the page boundary is right. The flag only shows weak title matching.",
+      "notes": "Flag is a title-match issue, not a wrong boundary.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The embedded bookmark MSA5T0200A30120 points to p77, where '10. Schematic Drawing' begins, so the TOC source is supported. p95 is within the bookmark range.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed page on p95 shows no folio, only a drawing code in the corner or none. numbering_scheme 'arabic' is the plain physical numbering, and nothing contradicts it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 for sec_0019, the same as sec_0018 and sec_0020. Physical p95 lies inside p77-p108 and shows the expected drawing, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p95 (2. VTD MODELS first half of a schematic) the whole schematic is extracted as one vector image (origin vector) for this page. The image shows the drawing, the pressure legend and the labels, so nothing meaningful was dropped.",
+      "notes": "The pipeline renders the full page region for each schematic page (BUG-010 fix).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted image for p95 is the schematic itself. It has no logo, rule or footer divider kept as a separate image. The image count is one per page, no extra decorative images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 95,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json maps one image to sec_0019 for each page p77-p108, including p95. The drawing on p95 belongs to this chapter, so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p105 (H: 1ST GEAR OF 1 RANGE, 1. MPT MODELS first half) sec_0019 is a top-level bookmark with hierarchy_level 1, path /MSA5T0200A30120 and no parent. It is a flat chapter of schematic drawings, so level 1 fits.",
+      "notes": "Bookmark title is a code, not the printed title '10. Schematic Drawing'. This is how the PDF bookmark is named.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p105 the page is one drawing with no sub-headings that need child sections. sec_0019 has parent_section_id null and child_sections empty, same as neighbours sec_0018 and sec_0020.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p105 (H: 1ST GEAR OF 1 RANGE, 1. MPT MODELS first half) all nodes of the page belong to the drawing of this chapter. The section runs p77-p108 and every node page_no is inside it. p77 starts with '10. Schematic Drawing' and no neighbour content is absorbed.",
+      "notes": "Next section sec_0020 starts p109; I did not see p109, so the end boundary is judged from p108 only.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p105 the section has path /MSA5T0200A30120 with a single element, matching a level-1 bookmark with no ancestors.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p105 the page appears once, in sec_0019 only. Semantic order 891-19657 is continuous and ends before sec_0020 (19658-38424), so there is no overlap with sec_0018 or sec_0020. The similar node_count of sec_0019 and sec_0020 is because the drawing pages repeat; ranges differ.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 is flagged because the bookmark title code does not match page text (score 30.0 under 85). On p105 the drawing pages are in the right place, so the page boundary is right. The flag only shows weak title matching.",
+      "notes": "Flag is a title-match issue, not a wrong boundary.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The embedded bookmark MSA5T0200A30120 points to p77, where '10. Schematic Drawing' begins, so the TOC source is supported. p105 is within the bookmark range.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed page on p105 shows no folio, only a drawing code in the corner or none. numbering_scheme 'arabic' is the plain physical numbering, and nothing contradicts it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 for sec_0019, the same as sec_0018 and sec_0020. Physical p105 lies inside p77-p108 and shows the expected drawing, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p105 (H: 1ST GEAR OF 1 RANGE, 1. MPT MODELS first half) the whole schematic is extracted as one vector image (origin vector) for this page. The image shows the drawing, the pressure legend and the labels, so nothing meaningful was dropped.",
+      "notes": "The pipeline renders the full page region for each schematic page (BUG-010 fix).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted image for p105 is the schematic itself. It has no logo, rule or footer divider kept as a separate image. The image count is one per page, no extra decorative images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 105,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json maps one image to sec_0019 for each page p77-p108, including p105. The drawing on p105 belongs to this chapter, so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    }
+  ]
+}

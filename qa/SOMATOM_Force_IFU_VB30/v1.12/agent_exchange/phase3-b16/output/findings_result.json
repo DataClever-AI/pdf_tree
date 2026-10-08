@@ -1,0 +1,1104 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p387 \"Mounting i\u2011Control to the coded surgical rail\" is a margin or numbered heading. hierarchy_level 4 matches its nesting under sec_0784 in the path /Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Mounting i\u2011Control to the coded surgical rail.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0784 fits the printed structure on p387. The heading sits inside the parent topic and not under a sibling.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p387 the four WARNING boxes (#/texts/8352-8367) are printed ABOVE the margin heading \"Mounting i-Control to the coded surgical rail\". They are general warnings of the parent topic 7.4.2 Using i-Control (sec_0784). They are kept in sec_0785. Also, sec_0785 has no node with its own heading text; the first body node is #/texts/8368.",
+      "notes": "Content in the wrong section: the receiver fails page_start_end. The owner sec_0784 is not in this batch, so both rows are recorded here. Probably BUG-029 (margin heading not anchored; text above the heading read after it). verify_claims only sees boilerplate crossing (Low). It does not check the WARNING boxes. Grading follows the reviewer rule: wrong-section content is Critical. The warnings sit above the margin heading and are probably general to 7.4.2, like the boxes on p402 that are kept out of sec_0844. Confidence is lower because I cannot see sec_0784 nodes.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path \"/Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Mounting i\u2011Control to the coded surgical rail\" lists the ancestors in the right order for the heading on p387.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The four WARNING boxes (#/texts/8352-8367) belong to sec_0784 (Using i-Control) and are missing from it. The margin heading \"Mounting i-Control to the coded surgical rail\" has no heading node in sec_0785, so the heading is missing from the tree.",
+      "notes": "Owner side of the same defect. Recorded on the sampled section because sec_0784 is not in the batch. Probably BUG-029.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is found on p387, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The title is in the bookmarks and is printed on the page, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p387 is arabic (387).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p387 equals the physical page, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p387 the four warning triangle icons in the WARNING bars and the \"i\" note icon are not in images.json. Only img_0383 (the two photos) is extracted. The WARNING words are in #/texts/8352, 8356, 8360 and 8364.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image for this section on p387.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0785",
+      "page_sampled": 387,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0383 (567x222) is the photo pair under the \"Mounting\" heading on p387 and is mapped to sec_0785. This is the right section. The photo is not flipped.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p393 \"Scrolling through the image stack\" is a margin or numbered heading. hierarchy_level 6 matches its nesting under sec_0806 in the path /Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Operating the system using i\u2011Control/Operating the syngo software/Scrolling through the image stack.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0806 fits the printed structure on p393. The heading sits inside the parent topic and not under a sibling.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p393 the heading (#/texts/8493), two check items, steps 1 and 2 and the two result lines (#/texts/8499-8504) are in sec_0807. The joystick figure and its caption (1)/(2) above the heading belong to sec_0806 and are not here. \"Controlling the syngo software\" is in sec_0808.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path \"/Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Operating the system using i\u2011Control/Operating the syngo software/Scrolling through the image stack\" lists the ancestors in the right order for the heading on p393.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All text of this topic on p393 is in sec_0807 once. Nothing from the previous or next topic is mixed in.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is found on p393, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The title is in the bookmarks and is printed on the page, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p393 is arabic (393).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p393 equals the physical page, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p393 the Cursor / Navigation key icon beside \"Scrolling through the image stack\" is not in images.json. Only img_0390 (the joystick figure) is extracted for the page. The step text names the key.",
+      "notes": "Small key icon not extracted (BUG-017). The text names the key, so Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image for this section on p393.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 393,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The joystick figure img_0390 (1150x669) above the heading is mapped to sec_0806, which owns it. No image is wrongly mapped to sec_0807. The missing key icon is in 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p399 \"Stopping automatically at the position of the last scan\" is a margin or numbered heading. hierarchy_level 7 matches its nesting under sec_0830 in the path /Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Operating the system using i\u2011Control/Moving the patient table/Moving the table to predefined positions/Stopping automatically at the position of the last scan.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0830 fits the printed structure on p399. The heading sits inside the parent topic and not under a sibling.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p399 the margin heading (#/texts/8632), the text \"The position of a scan is saved automatically...\" (#/texts/8637) and the bullet \"Press this key...\" (#/texts/8638) are in sec_0831. The next heading \"Stopping automatically at any other position\" is sec_0832.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path \"/Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Operating the system using i\u2011Control/Moving the patient table/Moving the table to predefined positions/Stopping automatically at the position of the last scan\" lists the ancestors in the right order for the heading on p399.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading, the paragraph and the bullet are all present once. Nothing from the neighbours is added.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is found on p399, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The title is in the bookmarks and is printed on the page, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p399 is arabic (399).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p399 equals the physical page, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p399 the round table-key icon beside \"Stopping automatically at the position of the last scan\" is not in images.json. Only img_0398 (the joystick figure) is extracted for p399. The bullet text is kept.",
+      "notes": "Small key icon not extracted (BUG-017). Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image for this section on p399.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0831",
+      "page_sampled": 399,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0831. The joystick figure img_0398 lower on p399 is mapped to sec_0834 (Operating the syngo software), which owns it.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p400 \"Scrolling through the image stack\" is a margin or numbered heading. hierarchy_level 6 matches its nesting under sec_0834 in the path /Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Operating the system using i\u2011Control/Operating the syngo software/Scrolling through the image stack.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0834 fits the printed structure on p400. The heading sits inside the parent topic and not under a sibling.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p400 the margin heading text (#/texts/8655), \"Image segment is selected.\" (#/texts/8658) and the bullet \"Scroll forward or backward...\" (#/texts/8659) are in sec_0835. \"Toggling between image segments\" is the next section. The heading text is stored as a paragraph, not as a heading node, but the section content is right.",
+      "notes": "Heading stored as paragraph. Probably related to BUG-029. No content is misplaced.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path \"/Enhanced examination/Adaptive 3D Intervention/Using i\u2011Control/Operating the system using i\u2011Control/Operating the syngo software/Scrolling through the image stack\" lists the ancestors in the right order for the heading on p400.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading text, check item and bullet are all in sec_0835 once. Nothing is missing or repeated.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is found on p400, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The title is in the bookmarks and is printed on the page, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p400 is arabic (400).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p400 equals the physical page, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p400 the plus and minus key icons beside \"Scrolling through the image stack\" are not in images.json. No image is extracted for sec_0835. The bullet text is kept.",
+      "notes": "Small key icon not extracted (BUG-017). Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image for this section on p400.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0835",
+      "page_sampled": 400,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0835, and the only visuals beside this topic are the +/- key icons. They are covered in 5.5-filters_discarding. No visual is mapped to a wrong section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p405 the heading '7.4.10 Setting a tube position for HandCARE' is a numbered heading. hierarchy_level 3 matches its siblings 7.4.9 and 7.4.11 under sec_0764.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0764 (Adaptive 3D Intervention) is right. Sections 7.4.9 and 7.4.11 are siblings. sec_0851 has no children, and none are printed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/8786 is on p405. The intro, bullet and table #/tables/37 follow. On p406 the watermark text and the 'i' note (#/texts/8793-8795) end the section. 7.4.11 is not included.",
+      "notes": "Footer and header nodes #/texts/8790-8792 sit inside the section at the page change. They are boilerplate only. Same as other sections, graded PASS.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Enhanced examination/Adaptive 3D Intervention/Setting a tube position for HandCARE' lists the ancestors in the right order. 7.4.10 is in 7.4 Adaptive 3D Intervention.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All text of 7.4.10 on p405 and p406 is in sec_0851 once. The notes above the heading on p405 belong to sec_0850. The 7.4.11 text on p406 starts in sec_0852.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 7.4.10 is printed on p405, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The bookmark title is printed as heading 7.4.10 on p405, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folios on p405 and p406 are arabic numbers.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p406 is 406, the same as the physical page.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p405 #/tables/37 keeps the header row (10, 12, 2 o'clock, None) and both row labels. The 8 pictogram cells are empty. No row is lost and no value moved to another column.",
+      "notes": "Lead regraded from PASS to keep the same grade as the approved sec_0710 icon tables (empty icon cells = Low). Cause: BUG-008 (icon cells are images, so the cell text is empty). Row and column labels still say what each symbol stands for.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p405 the table has 8 small HandCARE pictograms (2 rows by 4 columns). None is in images.json. The cells of #/tables/37 are empty. The row labels name the symbol type only.",
+      "notes": "Small pictograms with their own meaning are not extracted. Probably the same cause as BUG-017. Graded Low as a small symbol. Medium is possible, since the text does not describe them. Lead: Low confirmed, same as the sec_0710 icon tables (BUG-017/BUG-008).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image for sec_0851 on p405 or p406. No image is mapped to this section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0851",
+      "page_sampled": 406,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0851. No photo or diagram belongs to it. The only visuals are the table pictograms, covered in 5.5-filters_discarding. The Move Table Top Only icon on p406 belongs to sec_0852.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p407 \"Defining the table repositioning\" is a margin or numbered heading. hierarchy_level 3 matches its nesting under sec_0764 in the path /Enhanced examination/Adaptive 3D Intervention/Defining the table repositioning.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0764 fits the printed structure on p407. The heading sits inside the parent topic and not under a sibling.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading \"7.4.12 Defining the table repositioning\" (#/texts/8806) is on p406. The section continues on p407 with the No Feed, Feed to Begin Position and Feed to Scan Position bullets and the \"i\" note text (#/texts/8813-8818), up to the heading 7.4.13. page_end 407 is right. The 7.4.11 text above the heading on p406 is not included.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path \"/Enhanced examination/Adaptive 3D Intervention/Defining the table repositioning\" lists the ancestors in the right order for the heading on p407.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Intro, prerequisites, the three options and the note (#/texts/8807-8818) are all present once. 7.4.13 starts in sec_0854 with no overlap.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is found on p407, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The title is in the bookmarks and is printed on the page, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p407 is arabic (407).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p407 equals the physical page, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p407 the \"i\" note icon next to \"The items Feed to i-Sequence Scan Position...\" (#/texts/8818) is not in images.json. No image is mapped to sec_0853.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image for this section on p407.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0853",
+      "page_sampled": 407,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No photo or diagram belongs to sec_0853 on p406 or p407. The monitor-position icon img_0404 is below heading 7.4.13 and is mapped to sec_0854. This is correct.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p407 \"Defining the image order\" is a margin or numbered heading. hierarchy_level 3 matches its nesting under sec_0764 in the path /Enhanced examination/Adaptive 3D Intervention/Defining the image order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0764 fits the printed structure on p407. The heading sits inside the parent topic and not under a sibling.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p407 the heading \"7.4.13 Defining the image order\" (#/texts/8819), its two intro lines, the Contents of the table (#/tables/38), the bullet and the last line (#/texts/8820-8823) are in sec_0854. It ends before heading 7.4.14. The note text above 7.4.13 is in sec_0853.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path \"/Enhanced examination/Adaptive 3D Intervention/Defining the image order\" lists the ancestors in the right order for the heading on p407.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Every node between headings 7.4.13 and 7.4.14 is present once. Nothing is missing or repeated.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is found on p407, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The title is in the bookmarks and is printed on the page, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p407 is arabic (407).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p407 equals the physical page, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p407 #/tables/38 has the header \"Patient orientation | Monitor left of the gantry | Monitor right of the gantry\". The rows \"Head first | Feet-Center-Head | Head-Center-Feet\" and \"Feet first | Head-Center-Feet | Feet-Center-Head\" match the rendering. The table is in the right section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The monitor-position icon beside the bullet is extracted as img_0404 (99x55). No other visual belongs to this section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image for this section on p407.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0854",
+      "page_sampled": 407,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0404 is the gantry and monitor icon printed beside the \"Select the side of the patient table\" bullet. It is mapped to sec_0854, the right section. It is small but not flipped.",
+      "notes": "Image is low resolution (99x55) but complete.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p417 'Example of a needle path in a 3D model' is a margin heading under 'Planning the needle path'. hierarchy_level 5 under sec_0880 (level 4) is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0880 'Planning the needle path' is right. The next margin headings on p417 ('Adjusting', 'Deleting') are siblings, not children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0881 has heading #/texts/9032 and the six legend lines #/texts/9035 to 9040, all on p417. 'Adjusting the needle path' is in sec_0882 and is not absorbed. The legend numbers (1) to (6) are not in the text, but they are in img_0425.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path /Enhanced examination/Adaptive 3D Intervention/Using 3D Intervention/Planning the needle path/Example of a needle path in a 3D model is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Order range 9101 to 9108 is continuous. The legend text is here once and not in sec_0882.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p417.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc and the margin heading is on p417.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio 417 equals the physical page. Scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied 0 is right for folio 417 on physical page 417.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. Two 'i' note icons on p417 are missing from images.json: one before 'The target point remains marked' and one before 'For more information, refer to'. Both belong to sec_0882 'Adjusting the needle path', next to sec_0881.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0425 is a real figure with callouts 1 to 6. The other icons on the page (img_0423, img_0424) are tool icons for the steps. No decorative item is kept.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0881",
+      "page_sampled": 417,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0425 (1150x836) is the 3D needle-path figure. It sits under the heading of sec_0881 and is mapped to sec_0881. The Needle Tip icon (img_0423) goes to sec_0882 and the Delete icon (img_0424) to sec_0883. Both are right.",
+      "notes": "verify_claims matches same-size 58x58 icons by size only, so it reports a false mismatch. I checked each icon by eye and each one is next to its own heading and mapped to that section.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p418 'Switching to the 3D view mode' is a margin heading. hierarchy_level 4 under sec_0869 (level 3) is right. 'Detecting the needle' on p419 is a sibling at level 4.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id sec_0869 'Using 3D Intervention' is right. sec_0884 has no children. The sub-heads 'Patient-oriented view' and 'Needle-oriented view' are run-in orange heads, not bookmarks.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/9054 is on p418. Text, figure legend and steps end on p419 with 'Click the Needle Oriented View icon' (#/texts/9075). 'Detecting the needle' (#/texts/9068) is in sec_0885, as it should be.",
+      "notes": "Footer nodes #/texts/9065-9067 sit inside the section at the page change. They are boilerplate only. The legend label '(4) Needle' (#/texts/9072) is typed heading but stays in the right section.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Enhanced examination/Adaptive 3D Intervention/Using 3D Intervention/Switching to the 3D view mode' lists the ancestors in the right order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The text on p418 and p419 is here once. The legend labels (1) to (4) are in #/texts/9058-9061 and #/texts/9069-9072. The 'Detecting the needle' text is only in sec_0885.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The margin heading is printed on p418, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The bookmark title matches the margin heading on p418, so the source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p419 is arabic (419).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 419 equals physical page 419.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Both 3D plane figures are extracted whole: img_0426 on p418 and img_0429 on p419, with callouts 1 to 4. The Patient Oriented View and Needle Oriented View icons are img_0427 and img_0428. Only the 'i' note icon on p419 is not extracted.",
+      "notes": "The 'i' note icon is decorative and belongs to sec_0885, so PASS (noise rule).",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative logo, rule or divider is kept as an image. All 4 images are real figures or tool icons: img_0426, img_0427, img_0428 and img_0429.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0884",
+      "page_sampled": 419,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0426 (p418) and img_0429 (p419) are the figures under 'Switching to the 3D view mode'. The two icons img_0427 and img_0428 sit beside the steps. All four are mapped to sec_0884, which is right.",
+      "notes": "Same-size 58x58 icons may confuse a size-only check. Checked by eye: both are next to the sec_0884 steps.",
+      "confidence": 0.92
+    }
+  ]
+}

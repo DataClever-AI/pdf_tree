@@ -1,0 +1,1944 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. On p427 the heading 'Physical Specifications' (node #/texts/7959) is smaller than the chapter heading style. Level 3 under 'EMC And Radio Regulatory Compliance' (sec_0814) is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. Parent is sec_0814 'EMC And Radio Regulatory Compliance'. The section has no children. Sibling sec_0816 'Environmental Specifications' starts on p428 after this section's last table.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. The section starts on p427 with heading #/texts/7959 and ends on p428 with table #/tables/182 (the continued weight table). On p428 the heading 'Environmental Specifications' (#/texts/7963) and its two paragraphs are in sec_0816, not here. Only the running headers #/texts/7961 and #/texts/7962 and the folio are boilerplate.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. /Installation and Specifications/EMC And Radio Regulatory Compliance/Physical Specifications matches the chapter, the EMC parent and this heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. Both weight tables (#/tables/181 on p427, #/tables/182 on p428) are in sec_0815 once. No content from p428 below the table is lost or duplicated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. sec_0815 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. sec_0815 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. offset_applied is 0. The bookmark page for sec_0815 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p427 table #/tables/181 still has shifted cells. The M3012A, M3014A, M3015A and M3016A values sit in the next product's row. For example '<7.5 x 4 x 1.6 in' for M3012A is in the M3014A row. '225 g (7.9 oz.)' is on the 'Temperature Module' row, not M1012A. Table #/tables/182 on p428 matches the page.",
+   "notes": "Changed vs v2.16: the 'Remote SpeedPoint' line is now back as its own row with '4 x 5.5 x 2.5 in', and 'Cardiac Output Module' is complete (the lost line is fixed). The cell shift is still present (BUG-008). The weight '<400 g' stays in the M8026A row. Values cannot be tied to the right product.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. p428 has no picture, icon or figure. images.json lists no image for this section. Nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. No image is kept for this section, so no decorative item passes the filters. The blue header bars are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0815",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. No image exists on p427-p428 for sec_0815 or its neighbour. There is nothing to map.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. On p431 the heading 'Monitor Performance Specifications' (#/texts/7977) is H2 size, the same as chapter-level sub-headings. Level 2 under 'Installation and Specifications' is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. Parent is sec_0799 'Installation and Specifications'. The section has no children. The next section sec_0818 'M4605A Battery Specifications' is a sibling.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. The section starts on p431 with heading #/texts/7977 and ends on p440 with table #/tables/210 'Compatible Devices'. The heading 'M4605A Battery Specifications' on p440 is in sec_0818. On p435 the tables #/tables/198 to #/tables/202 and folio 423 are in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. /Installation and Specifications/Monitor Performance Specifications is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. p435 tables are in sec_0817 once. The 46 nodes from p431 to p440 give each table once. The footnote #/texts/7996 on p437 is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. sec_0817 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. sec_0817 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. offset_applied is 0. The bookmark page for sec_0817 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p434 the '4 different alarm sounds' line of #/tables/197 is now present. It sits in its own row under 'Sounds', so the 'Sounds' cell is split over two rows. On p432 #/tables/195 now has 'QRS tone... Tone for Timer expired' in a second row. Text is complete and in order. Tables #/tables/198 to #/tables/202 match p435.",
+   "notes": "Changed vs v2.16: the lost line is fixed (BUG-030 recovery). New small issue: the 'Sounds' list is split in two rows in #/tables/195 and #/tables/197. Order and values are kept, so the impact is Low (merged cells with order kept). The tool expects Medium. I grade Low because the continuation row sits right under 'Sounds', so every value can still be tied to its row.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. p435 has only tables. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. No image is kept for sec_0817.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 435,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p435 render. No image on p435. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. On p441 the heading 'ECG/Arrhythmia/ST/QT' (#/texts/8016) is smaller than the H2 'Measurement Specifications' above it. Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. Parent is sec_0819 'Measurement Specifications'. No children. Next sibling sec_0821 'Respiration' starts on p443.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. The section runs p441 to p443. The H2 'Measurement Specifications' and its sentence on p441 are not in this section. The 'Respiration' heading on p443 is in sec_0821. On p442 all tables are ECG tables and belong here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. /Installation and Specifications/Measurement Specifications/ECG/Arrhythmia/ST/QT is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. p442 tables #/tables/213 to #/tables/215 are in sec_0820 once. No content on p442 is lost or duplicated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. sec_0820 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. sec_0820 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. offset_applied is 0. The bookmark page for sec_0820 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Re-checked on the p442 render. On p442 table #/tables/213 splits the left note 'when the ECG is transmitted from a telemetry device via short range radio' over two rows. 'via' ends row 1 and 'short range radio' starts row 2. Values in the Bandwidth rows stay correct. Tables #/tables/214 and #/tables/215 match the page.",
+   "notes": "Merged cell text is split, but order and values are kept. The impact is small.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. p442 has only tables and no picture or icon. Nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. No image is kept. The blue header bars are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 442,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p442 render. No image on p442. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. On p447 the heading 'NBP' (#/texts/8041) is a level 3 heading, like 'SpO2' above it. Level 3 under 'Measurement Specifications' is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. Parent is sec_0819. No children. Previous sibling sec_0822 'SpO2' ends on p447. Next sibling sec_0824 starts on p450.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. The section starts on p447 with the heading 'NBP' (#/texts/8041) and ends on p449 with table #/tables/225. The SpO2 tables above the heading on p447 are in sec_0822. 'Invasive Pressure and Pulse' starts on p450 in sec_0824.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. /Installation and Specifications/Measurement Specifications/NBP is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. p449 has only the NBP alarm table #/tables/224 and the overpressure table #/tables/225. Both are in sec_0823 once. Nothing is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. sec_0823 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. sec_0823 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. offset_applied is 0. The bookmark page for sec_0823 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. Tables #/tables/224 and #/tables/225 match p449. Systolic, Diastolic and Mean ranges and the Adult, Pedi and Neo overpressure values are correct. The merged 'not user adjustable' cell is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. p449 has only two tables. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. No image is kept for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0823",
+   "page_sampled": 449,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p449 render. No image on p449. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. On p457 the heading 'Cardiac Output / Continuous Cardiac Output' (#/texts/8096) is level 3, same size as 'tcGas' below. Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. Parent is sec_0819. No children. Previous sibling sec_0828 ends on p456. Next sibling sec_0830 'tcGas' starts lower on p457.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. Section starts and ends on p457. It has the heading, the C.O./CCO performance table #/tables/241 and the alarm table #/tables/242. The heading 'tcGas' (#/texts/8098) and the following tcGas table are in sec_0830. page_start and page_end are both 457, which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. /Installation and Specifications/Measurement Specifications/Cardiac Output / Continuous Cardiac Output is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. Both tables are in sec_0829 once. The two sections on p457 do not share content.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. sec_0829 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. sec_0829 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. offset_applied is 0. The bookmark page for sec_0829 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Re-checked on the p457 render. On p457 #/tables/241 and #/tables/242 keep the right rows, columns and numbers. The page shows a plus-minus sign, but #/tables/241 has a plain '+' ('+3% or 0.1 l/min', '+10% or 30 ml').",
+   "notes": "Same as v2.16 (table text unchanged). (no BUG id): the sign loses its minus part. Probably a text-layer limit.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. p457 has only tables and headings. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. No image is kept for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0829",
+   "page_sampled": 457,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p457 render. No image on p457. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. On p428 the heading 'Environmental Specifications' (#/texts/7963) is a sub-heading, smaller than the H2 'Monitor Performance Specifications'. Level 3 under sec_0814 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. Parent is sec_0814 'EMC And Radio Regulatory Compliance', same as sibling sec_0815. There are no children. Next section sec_0817 is a level 2 sibling of the chapter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. On p428 the heading #/texts/7963 and the two intro paragraphs #/texts/7964 and #/texts/7965 are in sec_0816. The table above the heading (#/tables/182) is in sec_0815. The section starts and ends at the correct places.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. /Installation and Specifications/EMC And Radio Regulatory Compliance/Environmental Specifications is the correct chain.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. The heading and both paragraphs on p428 appear once, in sec_0816. Nothing is missing or duplicated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. sec_0816 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. sec_0816 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. offset_applied is 0. The bookmark page for sec_0816 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. p428 has no table that belongs to sec_0816. The weight table on p428 is #/tables/182 and belongs to sec_0815. The environmental tables on p429-p431 are checked on their own pages.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. p428 shows only text and a table. No picture or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. No image is kept for sec_0816. No decorative item passes the filters.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 428,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p428 render. No image is on p428 for this section. images.json is empty, so no mapping is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. The section heading is on p428. On p429 there is no new heading. Level 3 is still correct for 'Environmental Specifications'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. Parent sec_0814 is correct. The tables on p429 belong to this section, not to a child.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. p429 holds four environmental tables (#/tables/183 to #/tables/186), the footnote '1.Sufficient for flight altitudes...' (#/texts/7969) and the folio 417. All of them belong to 'Environmental Specifications'. The running headers #/texts/7967 and #/texts/7968 are boilerplate.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. Path /Installation and Specifications/EMC And Radio Regulatory Compliance/Environmental Specifications is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. All four tables on p429 are in sec_0816 once. The footnote is present. No content is lost or duplicated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. sec_0816 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. sec_0816 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. offset_applied is 0. The bookmark page for sec_0816 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. The four tables on p429 match the page. Temperature, humidity, altitude and 'Ingress Protection IP32' rows are in the correct columns in #/tables/183 to #/tables/186. The footnote marker '1' is kept in '4600m 1'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. p429 has only tables and a footnote. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. No image is kept for this section. No noise passes the filters.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 429,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p429 render. No image on p429, and images.json is empty. Nothing to map.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. No new heading on p430. Section level 3 stays correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. Parent sec_0814 is correct. The p430 tables are content of this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. p430 has tables #/tables/187 to #/tables/190, the title #/texts/7973 and folio 418. All belong to 'Environmental Specifications'. The next heading is on p431 and is in sec_0817.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. Path under EMC And Radio Regulatory Compliance is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. All four tables on p430 are in sec_0816 once. The table title text is kept in #/texts/7973. Nothing is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. sec_0816 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. sec_0816 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. offset_applied is 0. The bookmark page for sec_0816 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Re-checked on the p430 render. The first p430 table has a blue title bar 'Multi-measurement Module M3001A, MMS Extensions ... Flexible Module Rack M8048A'. It is read as a heading node #/texts/7973. Table #/tables/187 starts at 'Item | Condition | Range' with no title. The rows and values are correct. The other tables #/tables/188 to #/tables/190 keep their titles.",
+   "notes": "Probably BUG-021 (header bar read as the wrong element). The title text is kept in the same section, so retrieval is not blocked.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. p430 has only tables. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. No image is kept. The blue title bars are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 430,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p430 render. No image on p430. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. On p431 the H2 'Monitor Performance Specifications' (#/texts/7977) is in sec_0817 at level 2. This section keeps level 3 and is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. Parent sec_0814 is correct. The next section sec_0817 is a sibling of the chapter, not a child of sec_0814.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. p431 begins with tables #/tables/191 to #/tables/193 (Thermal Array Recorder, Remote SpeedPoint, Remote Alarm Device). They belong to 'Environmental Specifications' and are in sec_0816. The heading 'Monitor Performance Specifications' (#/texts/7977) and the power table #/tables/194 start sec_0817. page_end 431 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. Path under EMC And Radio Regulatory Compliance is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. The three tables above the heading are in sec_0816. The tables below the heading are in sec_0817. No overlap or loss.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. sec_0816 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. sec_0816 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. offset_applied is 0. The bookmark page for sec_0816 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. Tables #/tables/191 to #/tables/193 match p431. Humidity, altitude and storage rows for M1116B, M8026A and M8025A have the right values in the right columns.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. p431 has only tables. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. No image is kept for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0816",
+   "page_sampled": 431,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p431 render. No image on p431. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. Heading level 2 for 'Monitor Performance Specifications' is correct. p436 has no new heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. Parent sec_0799 is correct. The p436 table is content of this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. p436 holds one long table #/tables/203 'Monitor Interface Specifications' (continued), the running header #/texts/7991 and #/texts/7992, and folio 424. All belong to sec_0817. No other section starts on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. Path /Installation and Specifications/Monitor Performance Specifications is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. Table #/tables/203 appears once, in sec_0817. Nothing is missing or duplicated on p436.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. sec_0817 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. sec_0817 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. offset_applied is 0. The bookmark page for sec_0817 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. Table #/tables/203 matches p436. Rows for MIB/RS232, USB, ECG Output, Marker Input and both Nurse Call Relays are present with correct values. The rows are in the right columns.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. p436 has only one table. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. No image is kept for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0817",
+   "page_sampled": 436,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p436 render. No image on p436. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. Level 3 for 'ECG/Arrhythmia/ST/QT' stays correct. The heading is on p441. The heading on p443 is 'Respiration' and belongs to sec_0821.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. Parent sec_0819 is correct. 'Respiration' is a sibling, not a child.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. p443 starts with the running headers #/texts/8022 and #/texts/8023 and the ECG supplemental table #/tables/216. The heading 'Respiration' and its table are below that table and are in sec_0821. page_end 443 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. Path under Measurement Specifications is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. Table #/tables/216 is in sec_0820 and the Respiration table is not here. But one table row from p443 is lost, see 5.6-table_content.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. sec_0820 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. sec_0820 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. offset_applied is 0. The bookmark page for sec_0820 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p443 #/tables/216 now has all six gain rows. The row 'Gain 2.0, Range 5.3 to 6.1 seconds, Average 5.7 seconds' is under 'Vent Tachycardia 2 mVpp, 195 bpm', as printed. Other rows (T-Wave, Heart Rate Averaging, Response Time, Irregular Rhythm, Pacemaker) match the page.",
+   "notes": "Changed vs v2.16: the lost row is fixed (BUG-030 recovery). The garbled subscript 'mVp Vpp' remains. It is cosmetic and values are still tied to their rows, so it is not graded as a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. p443 has a table and the start of Respiration. No picture or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. No image is kept. No decorative item passes the filters.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0820",
+   "page_sampled": 443,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p443 render. No image on p443. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. On p450 the heading 'Invasive Pressure and Pulse' (#/texts/8054) is level 3 and matches 'NBP' and 'Temp'. Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. Parent is sec_0819. No children. Previous sibling sec_0823 ends on p449. Next sibling sec_0825 'Temp' starts on p451.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. p450 begins with the running headers #/texts/8052 and #/texts/8053, then the heading, the sentence 'Complies with IEC 60601-2-34' and two tables. They are all in sec_0824. The section ends on p451 with table #/tables/228, above the 'Temp' heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. /Installation and Specifications/Measurement Specifications/Invasive Pressure and Pulse is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. The tables #/tables/226 and #/tables/227 on p450 are in sec_0824 once. No lost or duplicate content.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. sec_0824 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. sec_0824 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. offset_applied is 0. The bookmark page for sec_0824 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. Tables #/tables/226 and #/tables/227 match p450. Pulse Rate, Zero Adjustment, Gain Accuracy, Analog Output and the alarm rows are in the right columns. Merged cells like 'max. 12 seconds' are kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. p450 has only text and tables. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. No image is kept for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0824",
+   "page_sampled": 450,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p450 render. No image on p450. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. On p455 the heading 'Spirometry' (#/texts/8088) is level 3, same as 'NBP' and 'tcGas'. Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. Parent is sec_0819. No children. The CO2 table rows at the top of p455 (Ethanol, Acetone, ...) belong to sec_0827. Next sibling sec_0829 starts on p457.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. The section starts on p455 with heading #/texts/8088 and ends on p456 with table #/tables/240 and folio 444. The CO2 interference rows at the top of p455 are not in this section. p456 has no content from another section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. /Installation and Specifications/Measurement Specifications/Spirometry is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. p456 has one table #/tables/240 and the running header. Both are in sec_0828 once. The table does not repeat.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. sec_0828 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. sec_0828 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. offset_applied is 0. The bookmark page for sec_0828 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. Table #/tables/240 matches p456. All rows from 'Expired Minute Volume' to 'Inspiration to Expiration ratio' are present with the right ranges and resolutions. Subscript in cmH2O is split with spaces ('cmH 2 O'), which does not change the meaning.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. p456 has only a table. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. No image is kept for sec_0828.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0828",
+   "page_sampled": 456,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p456 render. No image on p456. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. On p457 the heading 'tcGas' (#/texts/8098) is level 3, same as 'Cardiac Output'. Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. Parent is sec_0819. No children. Previous sibling sec_0829 is on p457 only. Next sibling sec_0831 'Intravascular Oxygen Saturation' starts on p458.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. The section starts on p457 with heading #/texts/8098 and the sentence 'Complies with IEC 60601-2-23'. On p458 it holds the running headers and tables #/tables/244 and #/tables/245. The heading 'Intravascular Oxygen Saturation' below is in sec_0831. page_end 458 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. /Installation and Specifications/Measurement Specifications/tcGas is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. Tables #/tables/243 (p457), #/tables/244 and #/tables/245 (p458) are in sec_0830 once. Nothing is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. sec_0830 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. sec_0830 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. offset_applied is 0. The bookmark page for sec_0830 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Re-checked on the p458 render. On p458 #/tables/244 and #/tables/245 keep order and values. In #/tables/244 the plus-minus sign shows as '+' ('better than +5 mmHg'). In #/tables/245 the shared Alarm Delay cell is only on the tcpO2 row; the tcpCO2 delay is empty.",
+   "notes": "Same as v2.16 (table text unchanged). (no BUG id): sign simplified and merged cell not repeated. Probably a text-layer limit.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. p458 has only tables and headings. No figure or icon is visible, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. No image is kept for this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0830",
+   "page_sampled": 458,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p458 render. No image on p458. images.json is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. On p463 the heading 'Electrosurgery Interference/Defibrillation/Electrostatic Discharge' (#/texts/8150) is smaller than level 3 headings and has the same style as 'Fast Transients/Bursts'. Level 4 looks right. I did not see the parent heading page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. Parent is sec_0841 'Recommended separation distances...'. No children. The separation table at the top of p463 belongs to sec_0841. The next sibling sec_0843 'Fast Transients/Bursts' follows. The parent heading is not on a provided page, so this is not fully checked.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. The section has the heading #/texts/8150 and one paragraph #/texts/8151 on p463. The table above it is in sec_0841. 'Fast Transients/Bursts' and 'Restart time' below are in later sections. The start and end are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. Path /Installation and Specifications/Safety and Performance Tests/Recommended separation distances.../Electrosurgery... follows the parent chain. I could not see the bookmark tree, so I trust the path from the parent section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. The full paragraph (ending '...strong magnetic fields (MRI)') is in sec_0842 once. The separation table is not duplicated here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. sec_0842 has flagged_for_review false and verification_score 100. The heading is visible on its physical page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. sec_0842 has structural_source 'toc'. The bookmark title matches the printed heading, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. The printed folios are arabic numbers (for example 415 to 463). The tree says numbering_scheme 'arabic', which is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. offset_applied is 0. The bookmark page for sec_0842 is the physical page where the heading is found, so no offset is needed. The printed folio differs from the physical page only by front matter.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. p463 has a table with square-root equations (in sec_0841) and text. No picture or icon is visible in this section, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. No image is kept for sec_0842.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0842",
+   "page_sampled": 463,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Re-checked on the p463 render. No image belongs to sec_0842 on p463, and images.json is empty. The equation cells are part of the table in sec_0841.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

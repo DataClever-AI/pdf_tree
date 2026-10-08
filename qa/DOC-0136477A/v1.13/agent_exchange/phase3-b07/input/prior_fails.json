@@ -1,0 +1,89 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0206",
+   "title": "12.2.2 SV Optimization",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p170 three small UI icons are not in the image output: the target value icon (steps 8), the edit target icon (step 9) and the GDT tracking icon (step 10). p169 has more of the same kind. images.json has no image for sec_0206.",
+   "old_notes": "Probably the small-image filter. Impact: the text names each icon, so the information is kept. Low per Sprint pattern."
+  },
+  {
+   "section_id": "sec_0209",
+   "title": "13.1 On Screen Help",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "sec_0209 starts at '13.1 On Screen Help' (#/texts/2635) and ends at step 6 on p171. The big chapter number '13' (#/texts/2643), printed top right of p171 above 'Troubleshooting', is stored in sec_0209. It belongs to the chapter root sec_0208.",
+   "old_notes": "Cause: BUG-022 (chapter number stored in the first subsection). Present since v1; not a regression. Old FAIL (v1, BUG-001) is now fixed: the Contents table is no longer in sec_0209. Impact: only a boilerplate number is misplaced, so retrieval is not harmed. verify_claims finds no signal because the node is boilerplate. The '13' is visible on the p171 render, so Low is kept."
+  },
+  {
+   "section_id": "sec_0209",
+   "title": "13.1 On Screen Help",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p171 the purple settings icon next to step 1 ('Touch the settings icon') is not in the image output. images.json has no image for sec_0209.",
+   "old_notes": "Probably the small-image filter. Impact: the step text names the icon, so the information is kept. Low per Sprint pattern."
+  },
+  {
+   "section_id": "sec_0203",
+   "title": "12.2.1.1 Key Parameter and Target Selection",
+   "page_sampled": 167,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "Figures 12-7 and 12-8 (img_0098, img_0099) and Figure 12-9 (img_0100, p168) are all kept. But the inline icons are not: the GDT tracking icon in step 1, the two Parameter/Target icons in steps 2 and 3, and the green enter key in step 3.",
+   "old_notes": "Small inline icons are dropped. The text names each icon, so the meaning is kept. Probably BUG-017 (small inline icons dropped). Low."
+  },
+  {
+   "section_id": "sec_0217",
+   "title": "13.5.1 CO Faults/Alerts",
+   "page_sampled": 177,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Critical",
+   "old_evidence": "On p178 the last row of the Table 13-7 box reads '* These latching faults. Touch the silence icon to silence. To clear, restart monitoring.' This text is not in #/tables/92. It is not in any node of the tree, also not in sec_0218. The 12 CO rows on p177-p178 match the render, including the * marks.",
+   "old_notes": "New root cause (no BUG id yet): full-width footnote row of a table is dropped. The * marks in the table now point to nothing. Critical: lost table row whose text is nowhere else in the tree. Old defect, first graded in v1.12; not a regression. verify_claims expects Medium (values changed). Here a whole row is lost and its text is nowhere else, so the agreed rule gives Critical."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p171.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0207",
+   "page_sampled": 170,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p170.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p180: sec_0220's own content ('13.5.4 SVR Faults/Alerts' heading + 'Table 13-10' with its 2 visible rows) is correct, BUT the section ALSO includes 'Table 13-9 (continued)' (5 rows: Alert: iCO - Unstable Baseline / Curve Not Detected / Extended Curve / Irregular Curve / Warm Injectate), which is visually positioned ABOVE the '13.5.4' heading and belongs to the PRECEDING section '13.5.3 iCO Faults/",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

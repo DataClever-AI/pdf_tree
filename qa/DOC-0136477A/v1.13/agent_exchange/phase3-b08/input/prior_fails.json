@@ -1,0 +1,209 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0231",
+   "title": "13.7.3 Oximetry General Troubleshooting",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "sec_0231 starts at the 13.7.3 heading on p190 and its table #/tables/111 is complete. It also holds nodes #/texts/2770 'A' and #/texts/2771 'Appendix' from p191. This is the Appendix A tab printed above 'Specifications'. It belongs to sec_0232. page_end is 190.",
+   "old_notes": "Cause: BUG-022 (Appendix tab label stored in the previous section). The nodes sit in 13.7.3 since v1.8; not a regression. Impact: boilerplate only, so Low. verify_claims may expect Medium, but the nodes are only the tab label."
+  },
+  {
+   "section_id": "sec_0243",
+   "title": "Equations for Calculated Patient Parameters",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "Section is p200-205 and the real content (heading, intro, Table C-1 pages) is correct. But nodes #/texts/2879 'D' and #/texts/2880 'Appendix' sit at the end of sec_0243 with page_no 206. They are the chapter label of Appendix D, which starts on p206.",
+   "old_notes": "BUG-022: the chapter label is stored in the previous section. Only boilerplate crosses the boundary, so Low. verify_claims expects Medium (page_end short), but all real content is owned correctly. Present since v1; not a regression."
+  },
+  {
+   "section_id": "sec_0245",
+   "title": "D.1 Patient Data Input Range",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "On p206, #/tables/140 (Table D-1) has values in the wrong columns. The print has Gender, Age, Height, Weight, BSA, ID rows. In the node the Age row is ' | 2 | 120 years | Age', so the label 'Age' is in the last column and 'years' is joined to Maximum. Height, Weight and BSA rows also end with their label. The ID row is 'ID | 0 digits | 40 characters None | '. Only the Gender row is right.",
+   "old_notes": "Old FAIL (v1.10, BUG-008) is still there. Values are present but cannot be tied to their column. Medium, not Low: labels sit in the wrong column."
+  },
+  {
+   "section_id": "sec_0240",
+   "title": "B.1 Accessories List",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "sec_0240 starts at B.1 on p198 and ends on p199 with Table B-1 part 3 (#/tables/133) and the footnotes. Nodes #/texts/2836 'B' and #/texts/2837 'Appendix' are the tab printed above the title 'Accessories'. They are in sec_0240 and belong to the chapter root sec_0239.",
+   "old_notes": "Cause: BUG-022 (Appendix tab label stored in another section). Old defect, first graded in v1.12; not a regression. Impact: boilerplate only, so Low. verify_claims may expect Critical, but the nodes are only the tab label."
+  },
+  {
+   "section_id": "sec_0242",
+   "title": "B.2.1 Roll Stand",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "sec_0242 starts at B.2.1 on p199 and holds one paragraph and the folio. It also holds nodes #/texts/2849 'C' and #/texts/2850 'Appendix' from p200. This is the Appendix C tab and belongs to sec_0243. page_end is 199.",
+   "old_notes": "Cause: BUG-022 (Appendix tab label stored in the previous section). Old defect, first graded in v1.12; not a regression. Impact: boilerplate only, so Low. verify_claims may expect Medium, but the nodes are only the tab label."
+  },
+  {
+   "section_id": "sec_0243",
+   "title": "Equations for Calculated Patient Parameters",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "The p202 content (running header, caption 'Table C-1 ... (continued)', folio 202, table #/tables/136) is correctly in sec_0243. But the section still ends with #/texts/2879 'D' and #/texts/2880 'Appendix' on p206, after its page_end 205. They are the chapter label of Appendix D.",
+   "old_notes": "Same root cause as the p200 row. BUG-022: the chapter label is stored in the previous section. Only boilerplate crosses the boundary, so Low. verify_claims expects Medium (page_end short), but all real content is owned correctly. Present since v1; not a regression."
+  },
+  {
+   "section_id": "sec_0243",
+   "title": "Equations for Calculated Patient Parameters",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "The p202 table #/tables/136 is correct (7 rows, Ea dyn, EDV, EDVI, ESV, ESVI, LVSWI, O2EI match the render). But #/tables/139 on p205 is still wrong. The row 'VO 2 | Ie Estimated Oxygen Consumption Index' has 'Ie' in the Description column, while the print has 'VO2Ie' as the Parameter. The VQI row has an empty Parameter cell. The VQI formula has a stray '22' and a garbled line '{138 G16113(10 (SO/100)) (00031 O)}'.",
+   "old_notes": "Old FAIL (v1.10, BUG-008) is still there. The table reader keeps the wrong column split and garbled formula text. The words are mostly present, but a label sits in the wrong column, so Medium."
+  },
+  {
+   "section_id": "sec_0252",
+   "title": "E.1 Computation Constant Values",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "sec_0252 (E.1) is p212-213 and its content is correct. But #/texts/2938 'F' and #/texts/2939 'Appendix' are the last text nodes and have page_no 214. They are the chapter label of Appendix F, which starts on p214 (heading 'System Care, Service and Support').",
+   "old_notes": "BUG-022: the chapter label is stored in the previous section. Only boilerplate crosses the boundary, so Low. verify_claims expects Medium (page_end short), but all real content is owned correctly. Present since v1.8; not a regression."
+  },
+  {
+   "section_id": "sec_0252",
+   "title": "E.1 Computation Constant Values",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "Table E-1 (#/tables/148, p212) matches the render: 4 temperature rows, volumes 10 5 3 and constants are in order, with the 3 values of each cell on one line. Table E-2 (#/tables/149, p213) is scrambled. '18-22.5 °C | 10' is split from 'Room temp.', and the values of the 5-18 and 0-5 rows are spread over extra rows, for example '0.562 | | 0.257 | 0.568 0.276 | 0.581' and a row '0.537 | 0.533 | 0.549'. Values cannot be tied to row or volume.",
+   "old_notes": "BUG-008 (table re-read). Old defect, first graded in v1.12; not a regression. Table E-2 text is the same since v1.10. Numbers are mostly present but cannot be tied to row and volume, so Medium. verify_claims suggests Low (merged cells), but that fits Table E-1 only."
+  },
+  {
+   "section_id": "sec_0261",
+   "title": "F.5 Edwards Lifesciences Regional Headquarters",
+   "page_sampled": 218,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "On p218, #/tables/151 (address list) loses text. The India entry ends with 'Goregaon west-Mumbai 400062 India'. The print has 'Phone +91.022.66935701 04' below India, and it is not in the node. The other 6 entries (USA, China, Switzerland, Japan, Australia, Brazil) match the print.",
+   "old_notes": "Old FAIL (v1.10, BUG-008) is still there. One phone number is lost. It is probably a small-text or line-break issue in the table reader. Medium, not Critical, because it is one line and not a table row."
+  },
+  {
+   "section_id": "sec_0269",
+   "title": "F.9 Warranty",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "sec_0269 (F.9 Warranty) is p220 and its warranty text is correct. But #/texts/3055 'G' and #/texts/3056 'Appendix' are the last nodes and have page_no 221. They are the chapter label of Appendix G, printed at the top of p221 above 'Guidance and Manufacturer's Declaration'.",
+   "old_notes": "BUG-022: the chapter label is stored in the previous section. Only boilerplate crosses the boundary, so Low. verify_claims expects Medium (page_end short), but all real content is owned correctly. Present since v1.8; not a regression."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p190.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "The section pages are 191 to 192. The new page_end 192 is correct. On p192, the 'Table A-1 (continued)' caption and the table (#/tables/114) print above the A.2 heading. They belong to A.1. There is a start problem on p191. The nodes #/texts/2770 'A' and #/texts/2771 'Appendix' are the chapter tab printed above the title. Folio #/texts/2772 '191' is also inside. These are boilerplate.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-table_content",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "Table A-1 on p191 is #/tables/113. The label 'General: all monitoring modes and parameters' is in the third column (Essential Performance). Columns 1 and 2 are empty. On p191 the printed label spans the first two columns. The continued table on p192 (#/tables/114) matches the render. The values (45 °C, ±0.3 °C, 57 seconds, ±4% or ±4mmHg, ±2%) and the reading order are kept.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "img_0256 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 191; it is decorative and was retained as an image of sec_0233.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p200.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p206: sec_0245's own content (D.1 heading + Table D-1 Patient information, 6 rows) is correct, BUT it ALSO includes the full data table for 'Table D-2 Graphical trend parameter scale defaults' (12 rows), which visually and textually belongs to the SIBLING section 'D.2 Trend Scale Default Limits' (sec_0246) - confirmed sec_0246's own text nodes correctly contain the 'D.2' heading and 'Table D-2...'",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p206.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p214 is the opening page of Appendix F. Contents table (8 entries) assigned to sec_0254 (F.1, level 2) instead of the chapter root sec_0253.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "img_0279 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 214; it is decorative and was retained as an image of sec_0254.",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

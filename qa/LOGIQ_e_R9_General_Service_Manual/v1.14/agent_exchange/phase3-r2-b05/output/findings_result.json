@@ -1,0 +1,136 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_level 1 fits: p397 is the chapter title page 'Chapter 8 / Replacement Procedures' (#/texts/4298 heading) and the section has seven child sections.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is empty, correct for a chapter. child_sections lists sec_0053 to sec_0059 (Overview, ..., Used Media and Used Parts Disposal), which start at p398 to p425 inside p397-426. Neighbours: sec_0051 before and sec_0053 after.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0052 is declared p397-426. p397 shows the chapter title 'Replacement Procedures' (#/texts/4298) and the intro (#/texts/4299), both kept here. The chapter ends on blank p426 (folio 8-30). sec_0053 starts on p398 (next_section).",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Replacement Procedures' fits a top-level chapter. The p397 title is 'Replacement Procedures'.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap and no overlap with the neighbours. The title and the intro are in sec_0052 once. p397 shows 'Chapter 8' above the title, but that label (#/texts/4297) is not in sec_0052.",
+   "notes": "The missing 'Chapter 8' label is graded once, on the receiver sec_0051 (Low, BUG-022). The render of p397 agrees with the lead correction.",
+   "confidence": 0.85,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false. The chapter title page is simple and the content matches the title.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title 'Replacement Procedures' is the heading on p397, so the source is supported.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on p397 is 8-1, the first page of chapter 8. Chapter-page labels (8-1) with scheme 'arabic' are consistent with the rest of the manual.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p397 is label 8-1, and p402 is 8-6 (397 plus 5), so the offset is constant.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p397 has only the chapter title and an italic intro. There is no figure, icon or photo to extract, and none is lost.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json lists no image for sec_0052. No decorative item (line, logo) is kept as an image on p397.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 397,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0052 and the p397 render has no figure, so the empty mapping is correct.",
+   "notes": "",
+   "confidence": 0.9,
+   "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+  }
+ ]
+}

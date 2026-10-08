@@ -1,0 +1,105 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0175",
+   "title": "10.6.2 Pressure-Out",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "In step 3 on p143 a '-0-' zero patient monitor icon is printed, and in step 4 on p144 a pressure signal icon. Neither is extracted. No image is listed for sec_0175.",
+   "old_notes": "Small inline icons dropped by the size filter. Their names are written in the steps, so no information is lost."
+  },
+  {
+   "section_id": "sec_0176",
+   "title": "10.6.3 Waveform Confirmation",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Critical",
+   "old_evidence": "On p144 the first line is step 4 'Touch the pressure signal icon ... to begin pressure signal output to the patient monitor.' It sits above the heading 10.6.3 and belongs to 10.6.2 Pressure-Out. Node #/texts/2208 ('to begin pressure signal output to the patient monitor.') is in sec_0176 instead of sec_0175. The heading and body text of 10.6.3 are correct.",
+   "old_notes": "Old defect, first graded in v1.12; not a regression. The fragment #/texts/2208 has been in sec_0176 since v1. Cause: probably BUG-023 (text after an inline icon is read after the next heading). Impact: step 4 of 10.6.2 is cut, and 10.6.3 gets a stray line. The automatic check has no boundary signal because the page numbers are right; this FAIL is from the visual node-ownership check."
+  },
+  {
+   "section_id": "sec_0179",
+   "title": "11.2 Oximetry Setup",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p145 the big chapter number '11' (node #/texts/2220) is stored in sec_0179. It belongs to the chapter root sec_0177. Section sec_0179 starts at the 11.2 heading and ends on p147 with the WARNING. Steps 2-4, Figure 11-1, NOTE and CAUTION on p146 belong to 11.2. Heading 11.3 is in sec_0180.",
+   "old_notes": "BUG-022 (chapter number kept in a section that is not the chapter root). Present since v1.8 (most trees since v1); not a regression. Running headers and folios on p146-147 are boilerplate and are not graded. Impact: one stray chapter number in 11.2. The automatic check has no boundary signal because the page numbers are right; this FAIL is from node ownership (lead ruling 1)."
+  },
+  {
+   "section_id": "sec_0184",
+   "title": "11.6 Recall Oximetry Data",
+   "page_sampled": 150,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p150 the clinical actions icon and the Oximetry Calibration icon (step 4) and the settings icon (below step 7) are visible. None is in images.json. No image is mapped to sec_0184.",
+   "old_notes": "Small icons are dropped. Their names are in the text next to them, so the meaning is kept. Probably BUG-017 (small inline icons dropped). Low."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p145 is the opening page of Chapter 11. Contents table (8 entries: Oximetry Setup...145, In Vitro Calibration...147, etc.) assigned to sec_0178 (11.1, level 2) instead of the chapter root sec_0177.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p145.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p153 is the opening page of Chapter 12. Contents table (2 entries: Acumen HPI Software Feature...153, Enhanced Parameter Tracking...167) - INCLUDING the literal 'Contents' label text itself this time - assigned to sec_0189 (12.1, level 2) instead of the chapter root sec_0188.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p153.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p144.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p162.",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

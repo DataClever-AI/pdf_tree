@@ -1,0 +1,140 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0111",
+   "title": "7.1 Alarms / Targets",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "p102 opens chapter 7. The Contents table is not in sec_0111 any more. Heading 7.1, the intro text, and Table 7-1 are in sec_0111. But #/texts/1430, the large chapter number '7' at the top right, is also in sec_0111.",
+   "old_notes": "Old FAIL (v1, BUG-001, Critical) is now fixed: the Contents table stays with the chapter. Remaining defect: only the chapter number boilerplate crosses the boundary. Probably chapter-number text is not filtered. Content is not affected. verify_claims has no deterministic boundary signal for this row. The FAIL is visual only: #/texts/1430 is the big chapter number on the render, which is boilerplate of sec_0110 (contract Low row)."
+  },
+  {
+   "section_id": "sec_0126",
+   "title": "8.1.1 Data Download",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p112 the settings icon in step 1 is visible, and it is not in images.json. On p113 the check icon (steps 3) and the enter icon (steps 4) of Case Report and GDT Report are also missing from the images.",
+   "old_notes": "Old FAIL (v1.2, BUG-017) is still there. Icons are about 40 px and stay filtered. The text names each icon, so impact is Low."
+  },
+  {
+   "section_id": "sec_0103",
+   "title": "6.2.1.1 Change Language",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "Figure 6-4 is kept as img_0068 and is complete. The settings icon in step 1 (p93) and the home icon in step 5 (p94) are not in the image output.",
+   "old_notes": "Probably small-image filter (BUG-017). Both icons are named in the text, so impact is low. Old defect, first graded in v1.12; not a regression."
+  },
+  {
+   "section_id": "sec_0106",
+   "title": "6.2.3 Monitoring Screens Settings",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p96 the render shows inline UI icons (settings icon in step 1 and home icon in step 7) inside the steps. images.json has no extracted image for them. The text next to each icon names it.",
+   "old_notes": "BUG-017: small icons are probably dropped by the pixel-size filter. The meaning is stated in the text, so impact is small."
+  },
+  {
+   "section_id": "sec_0108",
+   "title": "6.2.5 Analog Pressure Signal Input",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p98 the render shows inline UI icons (settings icon in step 1) inside the steps. images.json has no extracted image for them. The text next to each icon names it.",
+   "old_notes": "BUG-017: small icons are probably dropped by the pixel-size filter. The meaning is stated in the text, so impact is small."
+  },
+  {
+   "section_id": "sec_0109",
+   "title": "6.2.5.1 Calibration",
+   "page_sampled": 100,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p100 the render shows inline UI icons (settings icon in step 1 and home icon in step 11) inside the steps. images.json has no extracted image for them. The text next to each icon names it.",
+   "old_notes": "BUG-017: small icons are probably dropped by the pixel-size filter. The meaning is stated in the text, so impact is small."
+  },
+  {
+   "section_id": "sec_0113",
+   "title": "7.1.1.1 Physiological Alarms",
+   "page_sampled": 103,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p103 the render shows inline UI icons (red silence audible alarms icon) inside the steps. images.json has no extracted image for them. The text next to each icon names it.",
+   "old_notes": "BUG-017: small icons are probably dropped by the pixel-size filter. The meaning is stated in the text, so impact is small."
+  },
+  {
+   "section_id": "sec_0121",
+   "title": "7.3 Serial Port Setup",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p110 the render shows inline UI icons (return icon in the intro, settings icon in step 1, and return icon in step 5) inside the steps. images.json has no extracted image for them. The text next to each icon names it.",
+   "old_notes": "BUG-017: small icons are probably dropped by the pixel-size filter. The meaning is stated in the text, so impact is small."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p101.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p102.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p112 is the opening page of Chapter 8 ('Data Export and Connectivity Settings'). Contents table (5 entries: Export Data...112, Clear Data and Settings...113, etc.) assigned to sec_0126 (8.1.1, level 3) instead of the chapter root sec_0124.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "img_0154 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 112; it is decorative and was retained as an image of sec_0126.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p111.",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

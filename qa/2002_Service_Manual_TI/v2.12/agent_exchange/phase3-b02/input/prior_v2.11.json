@@ -1,0 +1,27 @@
+{
+ "base_version": "v2.11",
+ "prior_fail_rows": [
+  {
+   "section_id": "sec_0018",
+   "page_sampled": "88",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/36 on p90 matches the render (5 rows by 3 columns). Table #/tables/35 on p84 is joined: several rows are in one cell (for example 'Throttle position sensor ... Oxygen sensor* ...'). The first row starts in paragraph texts/1262 and ends in the table. 'Output signals' sits in the same row as '*: With catalytic converter'.",
+   "notes": "Old FAIL (BUG-008, v2.9): still present. Words and order are kept and no value is lost, so Low. verify_claims suggests Medium because the Input/Output labels sit in the middle of merged cells. I keep Low: the label is probably one centred merged cell, so order is the same as in the render. p84 is not in the sampled page images, so this is checked from the text only. Please decide."
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": "94",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/38 on p94 matches the render: same rows, 5 columns and the empty 'Rear' cell. But line-break hyphens are kept with a space: 'emis- sion', 're- ducing', 'air- fuel', 'discrimina- tion', 'dis- charged'.",
+   "notes": "Old FAIL (no BUG id, v2.9): still present. Only hyphen artefacts. Values and columns are correct, so Low."
+  }
+ ],
+ "new_keys_without_v2_11_row": [
+  "sec_0018 p89",
+  "sec_0043 p130"
+ ]
+}

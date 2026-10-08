@@ -1,0 +1,1404 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p190 the heading '13.7.3 Oximetry General Troubleshooting' is printed at the level of a subsection. hierarchy_level 3 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0231 has parent sec_0228 (13.7 Oximetry Error Messages) and no child sections. This matches the printed structure: no lower-level heading appears inside p190.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0231 covers p190 and holds the 13.7.3 heading, the caption of Table 13-19 and table #/tables/111, which is correct. But it also holds nodes #/texts/2770 'A' and #/texts/2771 'Appendix' from p191. This is the Appendix A tab printed above the next chapter title. It belongs to the chapter root sec_0232, not to sec_0231.",
+   "notes": "BUG-022: the Appendix tab label is stored in the previous section. Only boilerplate crosses the boundary, so Low. SEVERITY signal justified: verify_claims sees only the tab label nodes (boilerplate), and the lead rule grades boilerplate crossing a boundary as Low; all real content is owned correctly. Same as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0231 ends with '13.7.3 Oximetry General Troubleshooting' under its parent sec_0228 (13.7 Oximetry Error Messages). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0231 holds the 13.7.3 heading, the caption of Table 13-19 and table #/tables/111. Nothing is missing from the render of p190 and no node is repeated, except the normal running header and folio nodes. The Appendix tab nodes sit here by mistake (see page_start_end), but no content of sec_0231 is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0231 has flagged_for_review false and verification_score 100. The heading is found on the render of p190, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '13.7.3 Oximetry General Troubleshooting' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p190 is an arabic number, and section numbers such as '13.7.3' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p190 equals the physical page number 190, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p190 table #/tables/111 has 3 columns and 3 body rows. All cells match the render (Oximetry Cable Not Calibrated, Patient data in oximetry cable, Connect oximetry cable). No text is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p190 and the other pages of sec_0231 there is no figure or photo to extract; only text, tables. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0231 on p190.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0231 and none is needed. The render of p190 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p191 the heading 'A.1 Essential Performance Characteristics' is printed at the level of a section. hierarchy_level 2 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0233 has parent sec_0232 (Specifications) and no child sections. This matches the printed structure: no lower-level heading appears inside p191-192.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0233 starts at the A.1 heading on p191 and ends on p192 with the continued Table A-1 (#/tables/114). A.2 starts below it on p192 and belongs to sec_0234. The Appendix A tab nodes are not here; they are in sec_0231.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0233 ends with 'A.1 Essential Performance Characteristics' under its parent sec_0232 (Specifications). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0233 holds the A.1 heading, two intro paragraphs, the Table A-1 caption and tables #/tables/113 and #/tables/114. Nothing is missing from the render of p191 and no node is repeated, except the normal running header and folio nodes. The caption 'Table A-1 ... (continued)' on p192 is the printed repeat, not a duplicate.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0233 has flagged_for_review false and verification_score 100. The heading is found on the render of p191, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'A.1 Essential Performance Characteristics' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p191 is an arabic number, and section numbers such as 'A.1' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p191 equals the physical page number 191, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/113 (p191) has the header and the General row. The long Essential Performance text matches the render. Table #/tables/114 (p192) matches the continued Table A-1 rows. No cell is lost or doubled.",
+   "notes": "Deformed subscripts such as SvO 2 are known and out of scope (Phase 4).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p191 and the other pages of sec_0233 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0233 on p191.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0233 and none is needed. The render of p191 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p200 the heading 'Equations for Calculated Patient Parameters' is printed at the level of a chapter (Appendix title). hierarchy_level 1 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0243 has parent none (chapter level) and no child sections. This matches the printed structure: no lower-level heading appears inside p200-205.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section is p200-205 and the real content (heading, intro, Table C-1 pages) is correct. But nodes #/texts/2879 'D' and #/texts/2880 'Appendix' sit at the end of sec_0243 with page_no 206. They are the chapter label of Appendix D, which starts on p206.",
+   "notes": "BUG-022: the Appendix tab label is stored in the previous section. Only boilerplate crosses the boundary, so Low. SEVERITY signal justified: verify_claims sees only the tab label nodes (boilerplate), and the lead rule grades boilerplate crossing a boundary as Low; all real content is owned correctly. Same as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0243 ends with 'Equations for Calculated Patient Parameters' under its parent none (chapter level). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0243 holds the chapter heading, intro, NOTE and Table C-1 on six pages (#/tables/134 to 139). Nothing is missing from the render of p200 and no node is repeated, except the normal running header and folio nodes. The Appendix tab nodes sit here by mistake (see page_start_end), but no content of sec_0243 is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0243 has flagged_for_review false and verification_score 100. The heading is found on the render of p200, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Equations for Calculated Patient Parameters' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio on p200 is arabic, and the chapter is an Appendix with lettered tables (C-1).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p200 equals the physical page number 200, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p200 table #/tables/134 (BSA and CaO 2 rows) matches the render: formulas, where-lists and units m 2 and mL/dL are in the right columns. The later table #/tables/139 is graded on the p202 row.",
+   "notes": "Table text with deformed subscripts like CaO 2 is out of scope.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p200 and the other pages of sec_0243 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0243 on p200.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0243 and none is needed. The render of p200 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p206 the heading 'D.1 Patient Data Input Range' is printed at the level of a section. hierarchy_level 2 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0245 has parent sec_0244 (Monitor Settings and Defaults) and no child sections. This matches the printed structure: no lower-level heading appears inside p206.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0245 is only p206: the D.1 heading, the Table D-1 caption and #/tables/140. D.2 starts below it on p206 and belongs to sec_0246. The Appendix D tab is not here (it is in sec_0243).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0245 ends with 'D.1 Patient Data Input Range' under its parent sec_0244 (Monitor Settings and Defaults). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0245 holds the D.1 heading, the Table D-1 caption and table #/tables/140. Nothing is missing from the render of p206 and no node is repeated, except the normal running header and folio nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0245 has flagged_for_review false and verification_score 100. The heading is found on the render of p206, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'D.1 Patient Data Input Range' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p206 is an arabic number, and section numbers such as 'D.1' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p206 equals the physical page number 206, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p206 table #/tables/140 (Table D-1) still has values in the wrong columns. The print has Gender, Age, Height, Weight, BSA and ID rows. The Age row is ' | 2 | 120 years | Age'. The label 'Age' is in the last column and 'years' sits in the Maximum column. The Height, Weight and BSA rows also end with their label. The ID row is 'ID | 0 digits | 40 characters None | '. Only the Gender row is right.",
+   "notes": "BUG-008, same as v1.12 (cells shifted; out of scope for the BUG-030 change). SEVERITY signal justified: labels sit in the wrong column, not merged cells with order kept. Values are present but cannot be tied to their column, so Medium.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p206 and the other pages of sec_0245 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0245 on p206.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0245 and none is needed. The render of p206 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p214 the heading 'F.1 General Maintenance' is printed at the level of a section. hierarchy_level 2 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 has parent sec_0253 (System Care, Service and Support) and no child sections. This matches the printed structure: no lower-level heading appears inside p214-215.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 starts at the F.1 heading on p214 and ends on p215 with the second CAUTION box. F.2 starts on p215 and belongs to sec_0255. The Appendix F tab is not here (it is in sec_0252).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0254 ends with 'F.1 General Maintenance' under its parent sec_0253 (System Care, Service and Support). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0254 holds the F.1 heading, intro, WARNING and two CAUTION boxes. Nothing is missing from the render of p214 and no node is repeated, except the normal running header and folio nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 has flagged_for_review false and verification_score 100. The heading is found on the render of p214, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'F.1 General Maintenance' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p214 is an arabic number, and section numbers such as 'F.1' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p214 equals the physical page number 214, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty. The WARNING and CAUTION boxes on p214 and p215 have only a coloured rule and a text label, no figure. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0254 on p214.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0254 and none is needed. The render of p214 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p198 the heading 'B.1 Accessories List' is printed at the level of a section. hierarchy_level 2 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0240 has parent sec_0239 (Accessories) and no child sections. This matches the printed structure: no lower-level heading appears inside p198-199.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0240 covers p198-199 and holds the B.1 heading, the WARNING box, the Table B-1 captions, tables #/tables/131, 132, 133 and the footnotes, which is correct. But it also holds nodes #/texts/2836 'B' and #/texts/2837 'Appendix' from p198. This is the Appendix B tab printed above the next chapter title. It belongs to the chapter root sec_0239, not to sec_0240.",
+   "notes": "BUG-022: the Appendix tab label is stored in the previous section. Only boilerplate crosses the boundary, so Low. SEVERITY signal justified: verify_claims sees only the tab label nodes (boilerplate), and the lead rule grades boilerplate crossing a boundary as Low; all real content is owned correctly. Same as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0240 ends with 'B.1 Accessories List' under its parent sec_0239 (Accessories). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0240 holds the B.1 heading, the WARNING box, the Table B-1 captions, tables #/tables/131, 132, 133 and the footnotes. Nothing is missing from the render of p198 and no node is repeated, except the normal running header and folio nodes. The two 'Table B-1' captions are two printed captions, one per table half. The Appendix tab nodes sit here by mistake (see page_start_end), but no content of sec_0240 is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0240 has flagged_for_review false and verification_score 100. The heading is found on the render of p198, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'B.1 Accessories List' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p198 is an arabic number, and section numbers such as 'B.1' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p198 equals the physical page number 198, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables #/tables/131, 132 and 133 match Table B-1 on p198 and p199: group rows, model numbers (HEM1, HEMBAT10, HEMOXSC100, HEMQG1000) and the *, ** and *** marks are in the right rows.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p198 and the other pages of sec_0240 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0240 on p198.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0240 and none is needed. The render of p198 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p200 the heading 'B.2.1 Roll Stand' is printed at the level of a subsection. hierarchy_level 3 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0242 has parent sec_0241 (B.2 Additional Accessories Description) and no child sections. This matches the printed structure: no lower-level heading appears inside p199.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0242 covers p199 and holds the B.2.1 heading and one roll stand paragraph, which is correct. But it also holds nodes #/texts/2849 'C' and #/texts/2850 'Appendix' from p200. This is the Appendix C tab printed above the next chapter title. It belongs to the chapter root sec_0243, not to sec_0242.",
+   "notes": "BUG-022: the Appendix tab label is stored in the previous section. Only boilerplate crosses the boundary, so Low. SEVERITY signal justified: verify_claims sees only the tab label nodes (boilerplate), and the lead rule grades boilerplate crossing a boundary as Low; all real content is owned correctly. Same as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0242 ends with 'B.2.1 Roll Stand' under its parent sec_0241 (B.2 Additional Accessories Description). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0242 holds the B.2.1 heading and one roll stand paragraph. Nothing is missing from the render of p200 and no node is repeated, except the normal running header and folio nodes. The Appendix tab nodes sit here by mistake (see page_start_end), but no content of sec_0242 is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0242 has flagged_for_review false and verification_score 100. The heading is found on the render of p200, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'B.2.1 Roll Stand' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p200 is an arabic number, and section numbers such as 'B.2.1' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p200 equals the physical page number 200, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p200 and the other pages of sec_0242 there is no figure or photo to extract; only text, tables. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0242 on p200.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0242",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0242 and none is needed. The render of p200 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p202 the heading 'Equations for Calculated Patient Parameters' is printed at the level of a chapter (Appendix title). hierarchy_level 1 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0243 has parent none (chapter level) and no child sections. This matches the printed structure: no lower-level heading appears inside p200-205.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Section is p200-205 and the real content (heading, intro, Table C-1 pages) is correct. But nodes #/texts/2879 'D' and #/texts/2880 'Appendix' sit at the end of sec_0243 with page_no 206. They are the chapter label of Appendix D, which starts on p206.",
+   "notes": "BUG-022: the Appendix tab label is stored in the previous section. Only boilerplate crosses the boundary, so Low. SEVERITY signal justified: verify_claims sees only the tab label nodes (boilerplate), and the lead rule grades boilerplate crossing a boundary as Low; all real content is owned correctly. Same as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0243 ends with 'Equations for Calculated Patient Parameters' under its parent none (chapter level). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0243 holds the chapter heading, intro, NOTE and Table C-1 on six pages (#/tables/134 to 139). Nothing is missing from the render of p202 and no node is repeated, except the normal running header and folio nodes. The Appendix tab nodes sit here by mistake (see page_start_end), but no content of sec_0243 is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0243 has flagged_for_review false and verification_score 100. The heading is found on the render of p202, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Equations for Calculated Patient Parameters' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio on p202 is arabic, and the chapter is an Appendix with lettered tables (C-1).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p202 equals the physical page number 202, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "The p202 table #/tables/136 is correct (7 rows, Ea dyn to O 2 EI match the render). But table #/tables/139 (p205) is still wrong in v1.13. The row 'VO 2 | Ie Estimated Oxygen Consumption Index' puts 'Ie' in the Description column, while the print has 'VO2Ie' as the Parameter. The VQI row has an empty Parameter cell. The VQI formula has a stray '22' and a garbled line '{138 G16113(10 (SO/100)) (00031 O)}'.",
+   "notes": "BUG-008, same as v1.12 (table text unchanged). A label is in the wrong column and the formula text is garbled, so Medium. Not a regression.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p202 and the other pages of sec_0243 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0243 on p202.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0243 and none is needed. The render of p202 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p214 the heading 'E.1 Computation Constant Values' is printed at the level of a section. hierarchy_level 2 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0252 has parent sec_0251 (Computation Constants) and no child sections. This matches the printed structure: no lower-level heading appears inside p212-213.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0252 covers p212-213 and holds the E.1 heading, intro, NOTE, Table E-1 and Table E-2 (#/tables/148 and #/tables/149) with footnotes, which is correct. But it also holds nodes #/texts/2938 'F' and #/texts/2939 'Appendix' from p214. This is the Appendix F tab printed above the next chapter title. It belongs to the chapter root sec_0253, not to sec_0252.",
+   "notes": "BUG-022: the Appendix tab label is stored in the previous section. Only boilerplate crosses the boundary, so Low. SEVERITY signal justified: verify_claims sees only the tab label nodes (boilerplate), and the lead rule grades boilerplate crossing a boundary as Low; all real content is owned correctly. Same as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0252 ends with 'E.1 Computation Constant Values' under its parent sec_0251 (Computation Constants). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0252 holds the E.1 heading, intro, NOTE, Table E-1 and Table E-2 (#/tables/148 and #/tables/149) with footnotes. Nothing is missing from the render of p214 and no node is repeated, except the normal running header and folio nodes. The Appendix tab nodes sit here by mistake (see page_start_end), but no content of sec_0252 is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0252 has flagged_for_review false and verification_score 100. The heading is found on the render of p214, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'E.1 Computation Constant Values' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p214 is an arabic number, and section numbers such as 'E.1' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p214 equals the physical page number 214, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table E-1 (#/tables/148, p212) matches the render: 4 temperature rows with the volumes 10 5 3 and the constants in order. Table E-2 (#/tables/149, p213) is still scrambled. 'Room temp.' is split from '18-22.5 °C', and the values of the 5-18 and 0-5 rows are spread over extra rows, for example '0.562 |  | 0.257 | 0.568 0.276 | 0.581' and a row '0.537 | 0.533 | 0.549'. Values cannot be tied to row or volume.",
+   "notes": "BUG-008, same as v1.12 (Table E-2 text is unchanged). Numbers are mostly present but not under their row and volume, so Medium.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p214 and the other pages of sec_0252 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0252 on p214.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0252 and none is needed. The render of p214 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p218 the heading 'F.5 Edwards Lifesciences Regional Headquarters' is printed at the level of a section. hierarchy_level 2 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0261 has parent sec_0253 (System Care, Service and Support) and no child sections. This matches the printed structure: no lower-level heading appears inside p218.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0261 is only p218: the F.5 heading and the address table #/tables/151. F.6 starts on p219 (sec_0262). No node of a neighbour is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0261 ends with 'F.5 Edwards Lifesciences Regional Headquarters' under its parent sec_0253 (System Care, Service and Support). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0261 holds the F.5 heading and the address table #/tables/151. Nothing is missing from the render of p218 and no node is repeated, except the normal running header and folio nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0261 has flagged_for_review false and verification_score 100. The heading is found on the render of p218, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'F.5 Edwards Lifesciences Regional Headquarters' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p218 is an arabic number, and section numbers such as 'F.5' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p218 equals the physical page number 218, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p218 table #/tables/151 now has the India phone line 'Phone +91.022.66935701 04' (BUG-030 recovery). It is in its own new row, between the India row and the Japan row, but in the third cell. That cell is the label column ('India:'), not the address column where the print has it. The other 6 entries (USA, China, Switzerland, Japan, Australia, Brazil) match the print and nothing is doubled.",
+   "notes": "BUG-030: the lost line is back (no text lost), but it is probably in the wrong column. Medium by the rule for a recovered line in the wrong column. Unsure: a reviewer may accept a new own row as fixed (PASS). Not a regression of text.",
+   "confidence": 0.62
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p218 and the other pages of sec_0261 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0261 on p218.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0261 and none is needed. The render of p218 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p221 the heading 'F.9 Warranty' is printed at the level of a section. hierarchy_level 2 matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0269 has parent sec_0253 (System Care, Service and Support) and no child sections. This matches the printed structure: no lower-level heading appears inside p220.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0269 covers p220 and holds the F.9 heading and two warranty paragraphs, which is correct. But it also holds nodes #/texts/3055 'G' and #/texts/3056 'Appendix' from p221. This is the Appendix G tab printed above the next chapter title. It belongs to the chapter root sec_0270, not to sec_0269.",
+   "notes": "BUG-022: the Appendix tab label is stored in the previous section. Only boilerplate crosses the boundary, so Low. SEVERITY signal justified: verify_claims sees only the tab label nodes (boilerplate), and the lead rule grades boilerplate crossing a boundary as Low; all real content is owned correctly. Same as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path of sec_0269 ends with 'F.9 Warranty' under its parent sec_0253 (System Care, Service and Support). This is the order shown in the printed contents list and the headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0269 holds the F.9 heading and two warranty paragraphs. Nothing is missing from the render of p221 and no node is repeated, except the normal running header and folio nodes. The Appendix tab nodes sit here by mistake (see page_start_end), but no content of sec_0269 is lost or doubled.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0269 has flagged_for_review false and verification_score 100. The heading is found on the render of p221, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'F.9 Warranty' is visible on the page and agrees with the bookmark, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The scheme is arabic. The folio printed on p221 is an arabic number, and section numbers such as 'F.9' follow the same style.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p221 equals the physical page number 221, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty for this batch. On p221 and the other pages of sec_0269 there is no figure or photo to extract; only text, tables and the Edwards logo at the page corner. Nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json is empty, so no decorative element (footer rule, logo, tab) was kept as an image for sec_0269 on p221.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0269",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0269 and none is needed. The render of p221 shows no figure that belongs to this section.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}

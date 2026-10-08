@@ -1,0 +1,76 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0050",
+   "title": "4.1.2 Intermittent Cardiac Output Monitoring",
+   "page_sampled": 56,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "The section covers p55-56. On p55 the small inline icons are not in the image output. They are the clinical actions icon, the iCO icon, and the Wait, Ready, Inject and Computing buttons. p56 has only step 21 with no icon. No larger figure is lost.",
+   "old_notes": "Probably BUG-017 (small-image filter). The text names each icon, for example 'Touch clinical actions icon' and 'iCO icon' (#/texts/602, 607), so the information survives. Impact is low."
+  },
+  {
+   "section_id": "sec_0054",
+   "title": "4.2.2 Zero Pressure Cable",
+   "page_sampled": 58,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p57-58 small inline icons are not in the image output. They are the Zero & Waveform icon, the small zero button (p57 and step 5), the large on-screen zero button, the home icon (step 7) and the monitor screen selection icon (step 8). Figure 4-2 on p57 belongs to sec_0052. No larger figure is lost.",
+   "old_notes": "Probably BUG-017 (small-image filter). The text names the icons, for example 'Touch the home icon' (#/texts/673) and 'monitor screen selection icon' (#/texts/675), so the information survives. Impact is low."
+  },
+  {
+   "section_id": "sec_0056",
+   "title": "4.3.1 In vitro Calibration",
+   "page_sampled": 60,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p60 two small inline icons of this section are not in the image output: the clinical actions icon and the Oximetry Calibration icon in step 3. The monitor screen selection icon in step 10 belongs to sec_0057. Figure 4-3 on p59 is in sec_0055. No larger figure is lost.",
+   "old_notes": "Probably BUG-017 (small-image filter). The text names both icons (#/texts/704-705: 'clinical actions icon', 'Oximetry Calibration icon'), so the information survives. Impact is low."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 52,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider image again present at p52. 6th occurrence.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 53,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider image again present at p53. 7th occurrence.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p62 is the opening page of Chapter 5. The chapter's Contents table (HemoSphere Advanced Monitor Screen Appearance...62, Navigation Bar...64, Monitor Views...66, etc.) was assigned to sec_0059 (5.1, level 2) instead of the chapter root sec_0058 - '5.1 HemoSphere Advanced Monitor Screen Appearance' heading starts on the SAME page 62 as the chapter opening.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present on both p62 and p63. 8th/9th occurrence (two instances this section).",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

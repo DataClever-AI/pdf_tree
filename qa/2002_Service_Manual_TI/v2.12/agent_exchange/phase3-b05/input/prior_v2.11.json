@@ -1,0 +1,33 @@
+{
+ "base_version": "v2.11",
+ "prior_fail_rows": [
+  {
+   "section_id": "sec_0145",
+   "page_sampled": "288",
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Vector img_0189 (p283, 1018x1093) contains the page folio 'AT-7' under the diagram. The folio is not part of the figure. The other vector image img_0190 (p284) has no folio. The diagram itself is complete. All other images (img_0191 to img_0205) have no folio or body text.",
+   "notes": "Old FAIL (BUG-010, v2.9): still present. Probably the vector crop box reaches the footer text. Boilerplate kept inside an image. Graded once for the section."
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": "290",
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p293 the pin table 'Range position / Pin No.' is in the section twice. Text nodes #/texts/4445 to #/texts/4458 repeat the same rows as table #/tables/63 (P (4)-(3) (12)-(11), R (4)-(2) (10)-(9), and so on). All other pages are covered once. No gap or overlap with neighbours.",
+   "notes": "Same table read twice (as paragraphs and as a table). Cause not confirmed, probably the text layer and the table detector both keep it. Content stays in the right section, so it is Low. This is a section-level finding placed on the p290 row."
+  },
+  {
+   "section_id": "sec_0146",
+   "page_sampled": "300",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p300 the table #/tables/66 (VTD models) matches the render, row by row (AT-24). But the section still has two table defects. On p299 the table #/tables/65 is flat: the first cell reads 'Control item Input signal', and the group and sub-item are one text run, for example 'AWD transfer clutch control Ordinary transfer control Throttle position sensor ...'. On p303 the table #/tables/68 is only '[Table 0x0]'.",
+   "notes": "Old FAIL (BUG-021, v2.9): still present. All words and the order are kept, and the ON/OFF values of p303 are inside image img_0207. So the cause is probably Docling table detection (BUG-008, BUG-021). It is Low because no value is lost. Not fully sure: the page sampled is p300, and its own table is correct."
+  }
+ ],
+ "new_keys_without_v2_11_row": []
+}

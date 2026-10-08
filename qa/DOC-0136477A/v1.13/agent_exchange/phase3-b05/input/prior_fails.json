@@ -1,0 +1,156 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0137",
+   "title": "9.1 Connecting the HemoSphere Swan-Ganz Module",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p118 the big chapter number '9' at the top right is node #/texts/1727. It is stored in sec_0137 (9.1). It belongs to the chapter title in sec_0136. The 9.1 heading and its text start below the Contents list.",
+   "old_notes": "BUG-022 (chapter number kept in the first subsection). Present since v1; not a regression. Only boilerplate crosses the boundary, so Low. Impact: one stray digit in the 9.1 text. verify_claims shows UNSUPPORTED because it probably does not test a lone digit."
+  },
+  {
+   "section_id": "sec_0158",
+   "title": "9.4.4 Active EDV Monitoring",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p133 two paragraphs mention the stop monitoring icon. A red stop icon with '0:54' is printed in each (in the text and in the NOTE box). Neither icon is extracted. No image is listed for sec_0158.",
+   "old_notes": "Small inline icons dropped by the size filter. The icon name is in the text, so no information is lost."
+  },
+  {
+   "section_id": "sec_0128",
+   "title": "8.2.1 Restore Factory Defaults",
+   "page_sampled": 114,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p114 the render shows inline UI icons (settings icon in step 1) inside the steps. images.json has no extracted image for them. The text next to each icon names it.",
+   "old_notes": "BUG-017: small icons are probably dropped by the pixel-size filter. The meaning is stated in the text, so impact is small."
+  },
+  {
+   "section_id": "sec_0138",
+   "title": "9.1.1 Patient CCO Cable Test",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p121 the first paragraph has 3 inline icons: clinical actions, More, and Patient CCO Cable Test. Step 5 has an enter icon. None of them is extracted. Figure 9-2 is extracted as img_0078.",
+   "old_notes": "Small inline icons are dropped by the size filter. Their names are written in the text, so the meaning is kept. Impact: no information lost."
+  },
+  {
+   "section_id": "sec_0142",
+   "title": "9.2.3 Thermal Signal Conditions",
+   "page_sampled": 123,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p123 the text 'touching the start monitoring icon' is followed by a green start monitoring icon. It is not extracted. There is no figure on this page. No image is listed for sec_0142.",
+   "old_notes": "Small inline icon dropped by the size filter. The name is in the text, so no information is lost."
+  },
+  {
+   "section_id": "sec_0156",
+   "title": "9.4.2 Connecting the ECG Interface Cable",
+   "page_sampled": 131,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "At the end of the p130 part, a tiny ECG input pictogram (the word 'ECG' with an arrow) is printed after 'rear panel of the HemoSphere advanced monitor'. It is not in images.json. p131 has no icon.",
+   "old_notes": "Small pictogram dropped by the size filter. verify_claims has no raster signal for p131 because the pictogram is on p130. The text already says 'ECG monitor input', so the meaning is kept. Low confidence: the pictogram is tiny."
+  },
+  {
+   "section_id": "sec_0167",
+   "title": "10.3.3 Zero Arterial Pressure",
+   "page_sampled": 140,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "The p140 part of sec_0167 is one paragraph with no icon. The p139 steps have inline icons: Zero & Waveform icon, two '-0-' zero buttons, a '-0-' screen button and a home icon. None of them is extracted. No image is listed for sec_0167.",
+   "old_notes": "Small inline icons dropped by the size filter. Their names are written in the steps, so no information is lost."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-table_content",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "Table 9-1 (#/tables/63) is on p120. The lead checked the render. The printed table has 4 rows. The export puts the labels CO, iCO and SVR at the start of the column 2 text. The first cell is empty. The values and the reading order are kept.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "img_0162 and img_0164 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 118; it is decorative and was retained as an image of sec_0137.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p126.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.5-image_section_mapping",
+   "fail_version": "v1",
+   "severity": "Medium",
+   "evidence": "Figure 9-5 (643x530px, p126) is visually under '9.3.2 Configuration Settings' intro (sec_0147's own text confirms the 'Figure 9-5...' caption lives correctly in sec_0147), but the image itself is mapped to sec_0148 (9.3.2.1, its child) instead of sec_0147.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p134 is the opening page of Chapter 10. Contents table (6 entries) assigned to sec_0162 (10.1, level 2) instead of the chapter root sec_0161.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-table_content",
+   "fail_version": "v1.8",
+   "severity": "Medium",
+   "evidence": "On p135 Table 10-1 (#/tables/66) has shifted cells. Bullets are merged into one cell, for example 'CO/CI | •••' and 'PR | ••••' in a single column. The header row repeats the FloTrac text. So the bullets cannot be tied to the six configuration columns. In the PDF CO/CI has bullets in the first three columns only.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "img_0185 and img_0186 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 134; it is decorative and was retained as an image of sec_0162.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p133.",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

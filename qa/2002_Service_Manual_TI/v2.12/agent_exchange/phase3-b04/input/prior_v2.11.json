@@ -1,0 +1,24 @@
+{
+ "base_version": "v2.11",
+ "prior_fail_rows": [
+  {
+   "section_id": "sec_0089",
+   "page_sampled": "208",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The only table in sec_0089 near this page is #/tables/49 on p209. p209 is not in the batch pages, so I judged from the node text. All 31 signal rows with Unit and Function text are present. But the group labels 'Input signals' and 'Output signals' sit in the middle of the row list, so the first nine input rows and the first output row have no label next to them. There is no table on p208 itself.",
+   "notes": "Old FAIL (BUG-008, v2.9): still present. The text is complete, only the merged label cells are misplaced. The reading order and values are kept. BUG-008. I did not see the p209 render, so confidence is lower."
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": "253",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p254 the fan-operation table is table #/tables/55. All 12 data rows are present. But cells are merged. One cell reads 'Off Off Off Low-speed Low-speed Mid-speed Mid-speed'. The header 'Lower than 95 C' is lost and only '(203 F)' stays. The values cannot be tied to Main fan/Subfan or to a temperature column.",
+   "notes": "Probably BUG-008 (table cells merge during extraction). No row is lost, so it is Medium, not Critical. The same table text is nowhere else in the tree."
+  }
+ ],
+ "new_keys_without_v2_11_row": []
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "provider": "claude/opus (lead, run.log check)",
+  "validated_at": "2026-10-08T07:36:58.355544+00:00",
+  "findings": [
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "run.log shows no hard failure and the run finished. bookmark_sanity made the same one repair as v2.16: the cover bookmark 'M8000-9001K_cover_22sep08.pdf' has no destination, so it and its 1 child were dropped (dropped_orphan_subtree). 868 bookmarks - 2 dropped - 1 excluded (list_of_symbols) = 865 sections, the same as tree.json and validation_report.json. toc_resolution: arabic, global offset 0, 0/865 flagged. Validation PASS (Coverage, Precision, Structure). 297 tables, 286 re-read with docling-parse. New line: 'table lines recovered: 22 in 15 tables'. 272 images, the same as images_v1.json.",
+      "notes": "Checked by the lead against v2.16 run.log. The only new line is the BUG-030 table-line recovery. tree.json has 14 changed table nodes, not 15. The 15th table is probably outside the tree (front matter tables 0-9 before p13, or the unbookmarked index tables 294-296 from p485). 0 nodes moved and images_v1.json is identical to v2.16. Same result as the approved v2.16 row.",
+      "confidence": 0.95,
+      "provider": "claude/opus (lead, run.log check)"
+    }
+  ]
+}

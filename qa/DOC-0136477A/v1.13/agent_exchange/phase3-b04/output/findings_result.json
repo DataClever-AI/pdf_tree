@@ -1,0 +1,1354 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p101 the heading '6.2.5.1 Calibration' is shown as a level-4 heading, and sec_0109 has hierarchy_level 4, one below its parent '6.2.5 Analog Pressure Signal Input'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0109 has parent_section_id sec_0108 ('6.2.5 Analog Pressure Signal Input'), which matches the printed numbering. It has no child sections, and the render of p101 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0109 runs p100 to p101 with 25 nodes. On the p101 render the nodes of sec_0109 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/User Interface Settings/6.2 Monitor Settings/6.2.5 Analog Pressure Signal Input/6.2.5.1 Calibration' lists the chapter, parents and title in printed order. It matches the headings seen on p101.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p101 that belongs to '6.2.5.1 Calibration' appears once in sec_0109 (semantic_order 1393 to 1417). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0109 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '6.2.5.1 Calibration' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p101 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p101 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p101 there is only a CAUTION box. There is no figure or icon to extract.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0109 on p101 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p101 has no figure for sec_0109 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p102 the heading '7.1 Alarms / Targets' is shown as a level-2 heading, and sec_0111 has hierarchy_level 2, one below its parent 'Advanced Settings'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0111 has parent_section_id sec_0110 ('Advanced Settings'), which matches the printed numbering. Its children sec_0112, sec_0115, sec_0116, sec_0117, sec_0118, sec_0119 are its printed sub-sections.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p102 heading 7.1, the intro text and Table 7-1 are in sec_0111, and the numeric bounds 102 to 107 fit. But #/texts/1442, the big chapter number '7' at the top right of p102, is also in sec_0111. It is chapter boilerplate of sec_0110.",
+   "notes": "Only boilerplate crosses the boundary (BUG-022); probably chapter-number text is not filtered. Content is not affected. Same as v1.12. verify_claims has no deterministic boundary signal for this row; the FAIL is visual only (big chapter number on the render, contract Low row).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Advanced Settings/7.1 Alarms / Targets' lists the chapter, parents and title in printed order. It matches the headings seen on p102.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p102 that belongs to '7.1 Alarms / Targets' appears once in sec_0111 (semantic_order 1421 to 1443). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0111 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '7.1 Alarms / Targets' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p102 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p102 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p102 Table 7-1 (Alarm priority, Color, Light pattern) has 3 data rows: High red Flashing ON/OFF, Medium yellow Flashing ON/OFF, Low yellow Solid ON. #/tables/55 has the same header and rows in the same columns. No row is lost or duplicated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p102 there is no figure. The Edwards logo at the bottom right is decorative and is not extracted. No meaningful visual is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p102 the Edwards logo at the bottom right is not kept as an image. No decorative image is mapped to sec_0111.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 102,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p102 has no figure for sec_0111 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p111 the heading '7.4 Demo Mode' is shown as a level-2 heading, and sec_0122 has hierarchy_level 2, one below its parent 'Advanced Settings'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0122 has parent_section_id sec_0110 ('Advanced Settings'), which matches the printed numbering. It has no child sections, and the render of p111 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0122 runs p110 to p111 with 21 nodes. On the p111 render the nodes of sec_0122 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Advanced Settings/7.4 Demo Mode' lists the chapter, parents and title in printed order. It matches the headings seen on p111.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p111 that belongs to '7.4 Demo Mode' appears once in sec_0122 (semantic_order 1578 to 1598). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0122 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '7.4 Demo Mode' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p111 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p111 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p111 there is no figure or icon. The settings icon in step 1 of 7.4 is on p110 and is graded in the sec_0121 p110 row.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0122 on p111 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p111 has no figure for sec_0122 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p112 the heading '8.1.1 Data Download' is shown as a level-3 heading, and sec_0126 has hierarchy_level 3, one below its parent '8.1 Export Data'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0126 has parent_section_id sec_0125 ('8.1 Export Data'), which matches the printed numbering. It has no child sections, and the render of p112 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0126 runs p112 to p113 with 37 nodes. On the p112 render the nodes of sec_0126 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Data Export and Connectivity Settings/8.1 Export Data/8.1.1 Data Download' lists the chapter, parents and title in printed order. It matches the headings seen on p112.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p112 that belongs to '8.1.1 Data Download' appears once in sec_0126 (semantic_order 1608 to 1644). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0126 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '8.1.1 Data Download' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p112 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p112 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p112 the settings icon in step 1 is not in images.json. On p113 the check icon (step 3) and the enter icon (step 4) of Case Report and GDT Report are also missing. The text names each icon.",
+   "notes": "BUG-017: small icons are probably dropped by the size filter. The text names each icon, so the meaning is kept. Same defect as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p112 the Edwards logo at the bottom right is not kept as an image. No decorative image is mapped to sec_0126.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 112,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p112 has no figure for sec_0126 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p94 the heading '6.2.1.1 Change Language' is shown as a level-4 heading, and sec_0103 has hierarchy_level 4, one below its parent '6.2.1 General Monitor Settings'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0103 has parent_section_id sec_0102 ('6.2.1 General Monitor Settings'), which matches the printed numbering. It has no child sections, and the render of p94 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0103 runs p93 to p94 with 12 nodes. On the p94 render the nodes of sec_0103 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/User Interface Settings/6.2 Monitor Settings/6.2.1 General Monitor Settings/6.2.1.1 Change Language' lists the chapter, parents and title in printed order. It matches the headings seen on p94.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p94 that belongs to '6.2.1.1 Change Language' appears once in sec_0103 (semantic_order 1262 to 1273). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0103 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '6.2.1.1 Change Language' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p94 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p94 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Figure 6-4 is kept as img_0070 and is complete. The settings icon in step 1 (p93) and the home icon in step 5 (p94) are not in images.json.",
+   "notes": "BUG-017: small icons are probably dropped by the size filter. The text names each icon, so the meaning is kept. Same defect as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image on these pages is img_0070 (Figure 6-4, p94), which is real content. No rule or logo is kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 6-4 on p94 is img_0070 and is mapped to sec_0103, where it is printed (after step 3). Figure 6-3 (img_0069) is on p93 above the 6.2.1 heading and is mapped to sec_0101, which is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p96 the heading '6.2.3 Monitoring Screens Settings' is shown as a level-3 heading, and sec_0106 has hierarchy_level 3, one below its parent '6.2 Monitor Settings'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0106 has parent_section_id sec_0101 ('6.2 Monitor Settings'), which matches the printed numbering. It has no child sections, and the render of p96 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0106 runs p95 to p96 with 13 nodes. On the p96 render the nodes of sec_0106 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/User Interface Settings/6.2 Monitor Settings/6.2.3 Monitoring Screens Settings' lists the chapter, parents and title in printed order. It matches the headings seen on p96.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p96 that belongs to '6.2.3 Monitoring Screens Settings' appears once in sec_0106 (semantic_order 1298 to 1310). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0106 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '6.2.3 Monitoring Screens Settings' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p96 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p96 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p96 the settings icon (step 1) and the home icon (step 7) are inline in the steps. images.json has no image for them. The step text names each icon.",
+   "notes": "BUG-017: small icons are probably dropped by the size filter. The text names each icon, so the meaning is kept. Same defect as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0106 on p96 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0106",
+   "page_sampled": 96,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p96 has no figure. Figure 6-5 (img_0071, p95) is mapped to sec_0104, where it is printed, not to sec_0106.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p98 the heading '6.2.5 Analog Pressure Signal Input' is shown as a level-3 heading, and sec_0108 has hierarchy_level 3, one below its parent '6.2 Monitor Settings'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0108 has parent_section_id sec_0101 ('6.2 Monitor Settings'), which matches the printed numbering. Its children sec_0109 are its printed sub-sections.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0108 runs p97 to p101 with 51 nodes. On the p98 render the nodes of sec_0108 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/User Interface Settings/6.2 Monitor Settings/6.2.5 Analog Pressure Signal Input' lists the chapter, parents and title in printed order. It matches the headings seen on p98.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p98 that belongs to '6.2.5 Analog Pressure Signal Input' appears once in sec_0108 (semantic_order 1342 to 1392). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0108 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '6.2.5 Analog Pressure Signal Input' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p98 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p98 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/53 (Table 6-2, p99) has the header Parameter | Full Scale Range and rows MAP and CVP with their mmHg and kPa ranges, which is consistent with its caption and the voltage list nodes #/texts/1397-1400. The p99 render is not in this batch, so I could not compare it cell by cell.",
+   "notes": "No p99 image available for the table. This table was not in the list of changed tables.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p98 the settings icon in step 1 is inline in the step. images.json has no image for it. The text says 'Touch the settings icon'.",
+   "notes": "BUG-017: small icons are probably dropped by the size filter. The text names each icon, so the meaning is kept. Same defect as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0108 on p98 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0108",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p98 has no figure for sec_0108 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p100 the heading '6.2.5.1 Calibration' is shown as a level-4 heading, and sec_0109 has hierarchy_level 4, one below its parent '6.2.5 Analog Pressure Signal Input'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0109 has parent_section_id sec_0108 ('6.2.5 Analog Pressure Signal Input'), which matches the printed numbering. It has no child sections, and the render of p100 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0109 runs p100 to p101 with 25 nodes. On the p100 render the nodes of sec_0109 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/User Interface Settings/6.2 Monitor Settings/6.2.5 Analog Pressure Signal Input/6.2.5.1 Calibration' lists the chapter, parents and title in printed order. It matches the headings seen on p100.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p100 that belongs to '6.2.5.1 Calibration' appears once in sec_0109 (semantic_order 1393 to 1417). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0109 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '6.2.5.1 Calibration' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p100 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p100 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p100 the settings icon (step 1) and the home icon (step 11) are inline in the steps. images.json has no image for them. The text names each icon.",
+   "notes": "BUG-017: small icons are probably dropped by the size filter. The text names each icon, so the meaning is kept. Same defect as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0109 on p100 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0109",
+   "page_sampled": 100,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p100 has no figure for sec_0109 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p103 the heading '7.1.1.1 Physiological Alarms' is shown as a level-4 heading, and sec_0113 has hierarchy_level 4, one below its parent '7.1.1 Silence Alarms'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0113 has parent_section_id sec_0112 ('7.1.1 Silence Alarms'), which matches the printed numbering. It has no child sections, and the render of p103 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0113 runs p103 to p104 with 11 nodes. On the p103 render the nodes of sec_0113 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Advanced Settings/7.1 Alarms / Targets/7.1.1 Silence Alarms/7.1.1.1 Physiological Alarms' lists the chapter, parents and title in printed order. It matches the headings seen on p103.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p103 that belongs to '7.1.1.1 Physiological Alarms' appears once in sec_0113 (semantic_order 1445 to 1455). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0113 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '7.1.1.1 Physiological Alarms' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p103 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p103 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p103 the NOTE box (Physiological parameters can be configured to have no alarms. See sections 7.1.5 and 7.1.6.) is kept as #/tables/56 with two cells, NOTE and the text. The text is complete and in order.",
+   "notes": "A NOTE box read as a table is harmless here; no information is lost.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p103 the red silence audible alarms icon is inline in the text of 7.1.1.1. images.json has no image for it. The text names it as the 'silence audible alarms icon'.",
+   "notes": "BUG-017: small icons are probably dropped by the size filter. The text names each icon, so the meaning is kept. Same defect as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0113 on p103 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 103,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p103 has no figure for sec_0113 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p110 the heading '7.3 Serial Port Setup' is shown as a level-2 heading, and sec_0121 has hierarchy_level 2, one below its parent 'Advanced Settings'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0121 has parent_section_id sec_0110 ('Advanced Settings'), which matches the printed numbering. It has no child sections, and the render of p110 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0121 runs p110 to p110 with 12 nodes. On the p110 render the nodes of sec_0121 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Advanced Settings/7.3 Serial Port Setup' lists the chapter, parents and title in printed order. It matches the headings seen on p110.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p110 that belongs to '7.3 Serial Port Setup' appears once in sec_0121 (semantic_order 1566 to 1577). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0121 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '7.3 Serial Port Setup' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p110 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p110 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p110 the return icon (intro), the settings icon (step 1) and the return icon (step 5) are inline. images.json has no image for them. The text names each icon.",
+   "notes": "BUG-017: small icons are probably dropped by the size filter. The text names each icon, so the meaning is kept. Same defect as v1.12; not a regression.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0121 on p110 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0121",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p110 has no figure for sec_0121 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p111 the heading '7.5 Engineering' is shown as a level-2 heading, and sec_0123 has hierarchy_level 2, one below its parent 'Advanced Settings'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0123 has parent_section_id sec_0110 ('Advanced Settings'), which matches the printed numbering. It has no child sections, and the render of p111 shows no sub-heading that belongs below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0123 runs p111 to p111 with 3 nodes. On the p111 render the nodes of sec_0123 start at its heading or continue from its own text, and end before the next heading. No text of a neighbour is absorbed and none of its own is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Advanced Settings/7.5 Engineering' lists the chapter, parents and title in printed order. It matches the headings seen on p111.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text on p111 that belongs to '7.5 Engineering' appears once in sec_0123 (semantic_order 1599 to 1601). Nothing is repeated in a neighbour and no printed paragraph of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0123 has flagged_for_review=false and verification_score 100.0. The heading is found on the rendered page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '7.5 Engineering' is a printed heading and matches the embedded bookmark.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page folio on p111 is a plain arabic number and matches numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio printed on p111 equals the physical page number, so offset_applied=0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p111 the Engineering section has only a heading and one paragraph. There is no figure or icon to extract.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0123 on p111 that is a rule, logo or other decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 111,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p111 has no figure for sec_0123 and images.json lists none for it, so there is nothing to map wrongly.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

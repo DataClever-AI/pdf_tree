@@ -1,0 +1,24 @@
+{
+ "base_version": "v2.11",
+ "prior_fail_rows": [
+  {
+   "section_id": "sec_0232",
+   "page_sampled": "589",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p589 table #/tables/93 has header cells Warning/Indicator light, LOCK/ACC, ON, ST, While engine is running. In rows (2) to (9) the label is split from its number, and the first two values are joined in one cell, for example '(2) | Brake fluid level / parking brake | OFF ON | ON | *3'. The render shows four separate cells OFF, ON, ON, *3. Only row (1) is correct, so the LOCK/ACC value cannot be read from its column in 8 of 9 rows.",
+   "notes": "Old FAIL (BUG-008, v2.9): still present. The table cells are still shifted in 8 of 9 rows. Values are kept but are under the wrong column. Probably the two-line header confuses the column detection (BUG-008). No value is lost, but column attribution is wrong."
+  },
+  {
+   "section_id": "sec_0251",
+   "page_sampled": "642",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Sampled p642 has no table (MEMO page). The section table #/tables/100 is on p641 and its text is the empty placeholder \"[Table 0x0]\". The p641 render shows a 2x5 connector grid with pins (1) to (10). It is a drawing, not a data table. The pin names are in the legend text nodes #/texts/8761 to 8765, so no information is lost. The figure itself is now img_0486.",
+   "notes": "Old FAIL (BUG-021, v2.9): still present. The empty [Table 0x0] placeholder is still there. Low by the contract. Probably the drawing was read as a table."
+  }
+ ],
+ "new_keys_without_v2_11_row": []
+}

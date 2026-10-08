@@ -1,0 +1,94 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0272",
+   "title": "G.2 Instructions for Use",
+   "page_sampled": 225,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "On p226 the render of Table G-5 has three guidance lines: d = [1.2] x sqrt(P) for 150 kHz to 80 MHz, the same for 80 to 800 MHz, and d = [2.3] x sqrt(P) for 800 MHz to 2500 MHz. In #/tables/158 the third line is missing. The square roots are also lost ('x ; ... P P'). The line text '800 MHz to 2500 MHz' with 'd = [2.3]' is in no other node of this batch. The same information is in Table G-3 (#/tables/156): column '800 to 2500 MHz' with equation 'd = 2.3 P'. On p225, #/tables/157 (Table G-4) matches the render. Some cells are merged, but values stay in order.",
+   "old_notes": "Probably BUG-008 (table reader). The exact guidance line is lost, but the same band and coefficient are in Table G-3, so the information survives. Medium, not Critical, per the agreed rule. The old text said Medium too. Row page is 225 but the loss is on p226 in the same section."
+  },
+  {
+   "section_id": "sec_0274",
+   "title": "G.3.1 Quality of Service for Wireless Technology",
+   "page_sampled": 229,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "p229 has no figure for G.3.1. Table G-6 above the heading has a small raster, the MIC (Japan) certification mark (201x57 px) in the 'MIC (Japan) (Certification ID: ...)' cell. It was dropped and is not in images.json.",
+   "old_notes": "Small icon dropped, so Low. The mark is in the table of the parent G.3 (probably owned by sec_0273), not in sec_0274 text. Not sure which section should own it, so a human should check."
+  },
+  {
+   "section_id": "sec_0279",
+   "title": "G.3.6 European Union R&TTE Statements",
+   "page_sampled": 240,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "img_0105 (176x216 px, origin vector, page 240) is the Edwards logo from the back cover. It is a decorative logo and it is kept in the image output.",
+   "old_notes": "Decorative logo kept as an image, Low per the contract. It is mapped to no section (section_id null), so the impact is small. Probably the vector-figure rule accepts the logo."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p221 is the opening page of Appendix G. Contents table (literal 'Contents\\n' prefix + 3 entries: Electromagnetic Compatibility...221, Instructions for Use...222, Wireless Technology Information...227) assigned to sec_0271 (G.1, level 2) instead of the chapter root sec_0270.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p221.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 232,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1.3",
+   "severity": "Low",
+   "evidence": "img_0297 (page 232) and img_0296 (page 231) are 2800x200 pixel strips that show only the red footer divider line with white space. They are decorative and were kept as images of sec_0279.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "2800x200 divider present at p230.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1.3",
+   "severity": "Critical",
+   "evidence": "Physical page 240 is the last page of the manual and shows only a back cover: Caution text, trademark list, copyright 2019 Edwards and the Edwards logo. sec_0279 is the last section and ends on page 232 (next_section is null). None of its nodes are on page 240, and pages 233-240 are not in this batch view as any section. The back cover text (Caution, trademarks, copyright, Part No 10013498009/A) i",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "fail_version": "v1.3",
+   "severity": "Critical",
+   "evidence": "Physical page 240 is the last page of the manual and shows only a back cover: Caution text, trademark list, copyright 2019 Edwards and the Edwards logo. The tree covers physical pages up to 232 for the last section, so the text on pages 233-240, including this back cover text, is a gap in structural coverage.",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

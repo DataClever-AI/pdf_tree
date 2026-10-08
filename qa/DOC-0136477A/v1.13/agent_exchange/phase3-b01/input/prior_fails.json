@@ -1,0 +1,147 @@
+{
+ "note": "Approved FAIL rows of earlier versions (latest reviewed: v1.12, approved and finalized). Context only, not instructions. Re-check every row on the v1.13 renders and tree; keep the same grade when the content did not change.",
+ "fail_rows_latest_review": [
+  {
+   "section_id": "sec_0004",
+   "title": "1.2.1 HemoSphere Advanced Monitor with HemoSphere Swan-Ganz Module",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p17 the heading #/texts/60 and the two paragraphs #/texts/61-62 belong to sec_0004. The node #/texts/63 is the big chapter number \"1\" at the top of p17. It is part of the chapter heading of sec_0001, but it is stored in sec_0004. #/texts/64 is the running folio \"17\".",
+   "old_notes": "BUG-022: chapter number stored in the first subsection. Present since v1.8; not a regression. Old FAIL (v1.2, BUG-001) is now fixed: the Contents table and the p18 running header nodes are no longer in sec_0004. Impact: only a chapter number is misplaced. verify_claims shows UNSUPPORTED (no numeric boundary signal); FAIL kept per lead ruling 1 because the chapter number is visible in the render."
+  },
+  {
+   "section_id": "sec_0015",
+   "title": "1.7 Abbreviations Found in This Manual",
+   "page_sampled": 27,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "On p27 the PDF has \"VO 2 | oxygen consumption\" and \"VO 2 I | oxygen consumption index\" as two rows. In #/tables/27 the row \"VO 2\" reads \"oxygen consumption oxygen consumption index\" and the row \"VO 2 I\" is empty. The other rows (LVSWI to VO 2 Ie) match the render. Tables 25 and 26 on p26 also match.",
+   "old_notes": "Old FAIL (v1, BUG-008, Medium) is still there. One definition is merged into the wrong row, so VO 2 I loses its definition. Probably a row-merge error of the table reader (BUG-008), not confirmed. verify_claims expects Low (merged cells); I grade Medium because VO 2 I loses its definition and VO 2 gets two."
+  },
+  {
+   "section_id": "sec_0029",
+   "title": "3.1.1 Packaging Contents",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-page_start_end",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p42 the heading #/texts/365, the intro #/texts/366 and Table 3-1 text #/texts/367-376 belong to sec_0029. The node #/texts/377 is the big chapter number \"3\" at the top of p42. It is part of the chapter heading, not of 3.1.1. #/texts/378 is the running folio \"42\".",
+   "old_notes": "BUG-022: chapter number stored in the first subsection. Present since v1.8; not a regression. Old FAIL (v1, BUG-001, Critical) is now fixed: the Contents table is no longer in sec_0029. Impact: only a chapter number is misplaced. verify_claims shows UNSUPPORTED (no numeric boundary signal); FAIL kept per lead ruling 1 because the chapter number is visible in the render."
+  },
+  {
+   "section_id": "sec_0008",
+   "title": "1.4 Intended Use Statement",
+   "page_sampled": 19,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "On p19 Table 1-1 (#/tables/16) has all 23 rows in order. In the PDF, \"adult only\" is one merged cell over rows CO to SVRI. In the extract it is only on the row \"HR avg\". Rows CO to sEDVI and LVSWI to SVRI have an empty population. \"adult and pediatric\" is correctly on iCO. Table 1-2 (#/tables/17) matches the render.",
+   "old_notes": "Old FAIL (v1.10, BUG-008) is still there. A reader would link \"adult only\" to HR avg alone. Probably the merged cell text assignment, not confirmed. The claims tool may expect Low for merged cells; I use Medium because the value sits on the wrong row."
+  },
+  {
+   "section_id": "sec_0008",
+   "title": "1.4 Intended Use Statement",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p21 Table 1-5 (#/tables/20) has 6 rows, DO 2 to VO 2 Ie, in the PDF order. All definitions are right, including \"when ScvO 2 is being monitored\". The merged cells (technology, \"adult only\", hospital text) are written only in the first row (DO 2). The other 5 rows have empty cells.",
+   "old_notes": "Old FAIL (v1.10, Low) is still there. Values and order are kept, so only the merged cells are not repeated."
+  },
+  {
+   "section_id": "sec_0024",
+   "title": "2.5 Symbols on Product Labels",
+   "page_sampled": 39,
+   "checklist_ref": "5.6-table_content",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Low",
+   "old_evidence": "On p39 and p40 the four tables (#/tables/33-36) keep all Description cells in the right order. The Symbol column keeps only some printed words: IPX1, IPX4, PN, Pb, ECG, 1, 2 and \"x y\". It loses other printed words such as \"Rx only\", LOT, REF, SN, \"EC REP\", HDMI and \"Li-ion\". PN, Pb, ECG, x and y also appear as loose paragraphs (#/texts/336-337, 344, 347-350).",
+   "old_notes": "Old FAIL (v1, Low) is still there. The Symbol column is mostly graphics and each meaning is in the Description, so retrieval is not harmed."
+  },
+  {
+   "section_id": "sec_0024",
+   "title": "2.5 Symbols on Product Labels",
+   "page_sampled": 39,
+   "checklist_ref": "5.5-filters_discarding",
+   "latest_reviewed_version": "v1.12",
+   "old_result": "FAIL",
+   "old_severity": "Medium",
+   "old_evidence": "On p39 and p40 almost all symbol icons of Table 2-2 are not in images.json (for example MR, CE, LOT, REF, SN, USB, HDMI, Fragile). Only img_0009 (Intertek ETL, p39) and img_0010 (vector crop on p40) were extracted. img_0010 shows 3 package symbols and cuts the 4th (temperature limits) at the bottom. It misses Fragile and This end up above it.",
+   "old_notes": "Old FAIL (v1, BUG-010, Low) is still there. Each icon meaning is also written in the Description column, so the information survives. Medium because img_0010 is a cut figure (agreed rule); the dropped icons alone would be Low. Probably the vector-figure crop is too coarse, not confirmed. verify_claims expects Low (small rasters dropped); I grade Medium because of the cut crop."
+  }
+ ],
+ "older_fails_now_pass": [
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1.2",
+   "severity": "Low",
+   "evidence": "img_0014 in images.json is a 2800x200 strip showing the red footer rule with the Edwards logo, which is the repeating page footer visible at the bottom of page 17; it is decorative and was retained as an image of sec_0004.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p26-27 heading '1.7 Abbreviations Found in This Manual' and the table continuation on p27 are correctly placed, BUT the section's own first two tables (Table 1-10 Acronyms, Abbreviations: A/D...DPT column, and Ea_dyn...LED column), both visually under the '1.7' heading on p26, were instead assigned to sec_0014 ('1.6 Manual style conventions', p26) - confirmed by inspecting sec_0014.semantic_nodes,",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "Image at p27: 2800x200px, same 14:1 aspect ratio as the sec_0004 finding - the decorative footer divider line again passing the >15:1 rejection filter. 2nd occurrence (also present at p26, mapped to sec_0014) - systemic, not isolated to this section.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-page_start_end",
+   "fail_version": "v1",
+   "severity": "Critical",
+   "evidence": "p28 is the opening page of Chapter 2 ('Safety and Symbols'). The chapter's 'Contents' index table (Safety Signal Words Definitions...28, Warnings...29, etc.), visually positioned above '2.1 Safety Signal Words Definitions' - before any subsection starts - was assigned to sec_0018 (2.1.1 Warning, level 3) instead of the chapter root (sec_0016, Safety and Symbols).",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "Image at p28: 2800x200px, same 14:1 aspect-ratio decorative footer divider as sec_0004/sec_0015. 3rd occurrence - confirms this is a per-page recurring pattern, not isolated.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "Image at p41: 2800x200px, same 14:1 aspect ratio divider line as prior 3 occurrences. 4th occurrence of the same systemic filter near-miss.",
+   "later_result": "PASS in v1.12"
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "fail_version": "v1",
+   "severity": "Low",
+   "evidence": "Image at p42: 2800x200px, same 14:1 aspect-ratio decorative footer divider as all prior sampled sections. 5th occurrence overall (4th of 5 sections inspected so far, 100% hit rate).",
+   "later_result": "PASS in v1.12"
+  }
+ ]
+}

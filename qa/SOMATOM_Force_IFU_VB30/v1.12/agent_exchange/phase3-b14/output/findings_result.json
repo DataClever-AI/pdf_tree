@@ -1,0 +1,1204 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p291 'Centering the patient' is printed in the same margin style as 'Checking the patient position', but the tree makes it level 5 under sec_0611. I cannot see the PDF bookmarks, so I follow the TOC value.",
+      "notes": "Visual style looks like a sibling of 'Checking the patient position'. Please confirm with the bookmark tree. If the bookmark is flat, this is a nesting error. Lead: PDF bookmarks give 'Checking the patient position' level 4 and 'Centering the patient' level 5 on p291, so the nesting follows the TOC.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0612 is the only child of sec_0611 'Checking the patient position' (p291-292). On p291 both are margin headings with the same style, so the nesting may be wrong. I use the TOC as the reference.",
+      "notes": "Uncertain: same visual style for parent and child. Please check bookmarks. Lead: PDF bookmarks give 'Checking the patient position' level 4 and 'Centering the patient' level 5 on p291, so the nesting follows the TOC.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p291 sec_0612 starts at heading 'Centering the patient' (#/texts/6320) with step 1. On p292 it holds step 2 and the two notes (nodes 6383-6386). It stops before 'Checking patient safety' (sec_0613). No foreign text found.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path ends with 'Checking the patient position/Centering the patient'. This follows the TOC. The two headings look like siblings on p291, so the extra level is uncertain.",
+      "notes": "Same doubt as hierarchy_level. Lead: PDF bookmarks give 'Checking the patient position' level 4 and 'Centering the patient' level 5 on p291, so the nesting follows the TOC.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Step 1 (p291) and step 2 plus the two 'i' notes (p292) are all present once in nodes 6378 and 6383-6386. Nothing is missing.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title 'Centering the patient' is printed on p291, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The title 'Centering the patient' is found on the page, which supports a bookmark based tree.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on the rendered page is the same arabic number as the physical page.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The folio printed on p291 is 291, equal to the physical page, so offset 0 is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p291 the centering figure (check and cross circles) is extracted as img_0289 and is complete. On p292 the two black 'i' note icons in this section are not extracted. Their notes are in the text.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low. verify_claims lists 3 small dropped rasters on p291: they are the key icons above the heading 'Centering the patient' (other sections) and the 'i' icons (decorative). None belongs to sec_0612.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, logo or divider is kept as an image for sec_0612 on the pages checked. Kept images (if any) show real figures or key icons.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0612",
+      "page_sampled": 291,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0289 (p291, 761x485) shows the check and cross centering circles under step 1 of 'Centering the patient'. It is mapped to sec_0612, which is right, and the image is not flipped.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading 'Planning the scan ranges' on p295 is a margin or numbered heading at the same style as its sibling headings. Level 4 under sec_0614 fits the printed layout.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0617 has parent sec_0614 and the parent title and page range cover this section. The heading 'Planning the scan ranges' is printed on p295.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p295 sec_0617 starts at heading 'Planning the scan ranges' (#/texts/6401) with one sentence. The nodes on p296 end at the legend label 'Preset icons' (#/texts/6421). The p296 page image was not given, so I cannot see if a text line under 'Preset icons' went to sec_0618.",
+      "notes": "p296 not rendered. Please check that the text under 'Preset icons' is not in sec_0618. If it is, it is Critical. Lead: checked on a p296 render. The legend (1)-(5) ends at 'Preset icons' (#/texts/6421). The next text starts 'Using the scan range presets' (sec_0618). Nothing is lost. The screen figure is img_0291.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path ends with 'Planning the scan ranges', which is the heading printed on p295. The ancestors follow the book's chapter 6 Examination order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p295 the heading and its sentence are present once. On p296 the legend of the figure (green line, white line, arrows, red frame, scan direction icons, camera icon, preset icons) is present. I could not check p296 visually.",
+      "notes": "Uncertain because p296 image is missing. Lead: checked on a p296 render. The legend (1)-(5) ends at 'Preset icons' (#/texts/6421). The next text starts 'Using the scan range presets' (sec_0618). Nothing is lost. The screen figure is img_0291.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title 'Planning the scan ranges' is printed on p295, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The title 'Planning the scan ranges' is found on the page, which supports a bookmark based tree.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on the rendered page is the same arabic number as the physical page.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The folio printed on p295 is 295, equal to the physical page, so offset 0 is right.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p295 the part of sec_0617 is only a heading and one sentence. It has no icon or figure. The p296 figure is extracted as img_0291. p296 small icons were not visible to me.",
+      "notes": "p296 not rendered; small icons there not checked. verify_claims shows a 38x33 px raster dropped on p295: it is the (>>) note icon or Camera icon at the top of p295, which sit in sec_0616 (graded there as Low), not in sec_0617. verify_claims lists a 38x33 px raster on p295: it is the '>>' icon or the Camera icon, both above the heading 'Planning the scan ranges' (other section), so not graded here. Lead: checked on a p296 render. The legend (1)-(5) ends at 'Preset icons' (#/texts/6421). The next text starts 'Using the scan range presets' (sec_0618). Nothing is lost. The screen figure is img_0291.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, logo or divider is kept as an image for sec_0617 on the pages checked. Kept images (if any) show real figures or key icons.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0617",
+      "page_sampled": 295,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0291 (p296, 911x959) is the topogram scan range screen with callouts 1 to 5. It matches the legend nodes in sec_0617 (Topogram scan range, scan direction icons, camera icon, preset icons). Mapping is right.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading 'Positioning the patient for radiotherapy without automated zeroing' on p302 is a margin or numbered heading at the same style as its sibling headings. Level 4 under sec_0622 fits the printed layout.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0625 has parent sec_0622 and the parent title and page range cover this section. The heading 'Positioning the patient for radiotherapy without automated zeroing' is printed on p302.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p302 sec_0625 starts at heading 'Positioning the patient for radiotherapy without automated zeroing' (#/texts/6531) after step 4 of sec_0624. It ends on p303 with 'The marks on the patient...' (6554). Heading '6.4.7 Talking to the user' starts sec_0626.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path ends with 'Positioning the patient for radiotherapy without automated zeroing', which is the heading printed on p302. The ancestors follow the book's chapter 6 Examination order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Check lines, figure legend (1) to (4), step 1 on p302 and steps 2 to 6 on p303 are all present once (nodes 6536-6554). Nothing is missing or repeated.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title 'Positioning the patient for radiotherapy without automated zeroing' is printed on p302, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The title 'Positioning the patient for radiotherapy without automated zeroing' is found on the page, which supports a bookmark based tree.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on the rendered page is the same arabic number as the physical page.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The folio printed on p302 is 302, equal to the physical page, so offset 0 is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p302 the Save at RT Laser icon beside step 1 is not extracted. On p303 the Horizontal zeroing icon, the Move to RT Laser icon and one of the two play icons are also not extracted. The figure img_0306 is complete.",
+      "notes": "Small icons are missing from the image output (BUG-017). Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, logo or divider is kept as an image for sec_0625 on the pages checked. Kept images (if any) show real figures or key icons.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0625",
+      "page_sampled": 302,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0306 (p302 patient figure), img_0308 (p303 table keys) and img_0309 (p303 play icon) are in sec_0625 and match the steps on those pages. No image is flipped.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading 'Immobilizing animal patients' on p304 is a margin or numbered heading at the same style as its sibling headings. Level 3 under sec_0628 fits the printed layout.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0629 has parent sec_0628 and the parent title and page range cover this section. The heading 'Immobilizing animal patients' is printed on p304.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0629 starts at heading '6.5.1 Immobilizing animal patients' (#/texts/6584, p304) and ends with the WARNING box on p305 (6613). The 6.5 text, notes and two CAUTION boxes above it on p304 belong to sec_0628. Next section 'Scan' starts on p306.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path ends with 'Immobilizing animal patients', which is the heading printed on p304. The ancestors follow the book's chapter 6 Examination order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p304 has the 'Sedate or anesthetize' text. p305 has the four CAUTION boxes, 'Movement during scanning' text and the WARNING box. All appear once in nodes 6585-6612. Boxes are split into heading and body nodes, but the text is complete.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title 'Immobilizing animal patients' is printed on p304, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The title 'Immobilizing animal patients' is found on the page, which supports a bookmark based tree.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on the rendered page is the same arabic number as the physical page.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The folio printed on p305 is 305, equal to the physical page, so offset 0 is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p305 the small triangle marks of the 5 CAUTION and WARNING boxes were not saved as images. The words CAUTION and WARNING and the hazard text are kept as nodes.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, logo or divider is kept as an image for sec_0629 on the pages checked. Kept images (if any) show real figures or key icons.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0629",
+      "page_sampled": 305,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0629 and none is needed. The pages show only text boxes and warning triangles.",
+      "notes": "Triangles are graded in 5.5-filters_discarding.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading 'Starting the topogram scan' on p309 is a margin or numbered heading at the same style as its sibling headings. Level 4 under sec_0633 fits the printed layout.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0636 has parent sec_0633 and the parent title and page range cover this section. The heading 'Starting the topogram scan' is printed on p309.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0636 starts at heading 'Starting the topogram scan' (#/texts/6683, p309) and ends on p310 with the table safety note (6703-6704). The heading '6.6.4 Planning an Examination' on p310 is in the next section. The p309 note before the heading is in sec_0635.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path ends with 'Starting the topogram scan', which is the heading printed on p309. The ancestors follow the book's chapter 6 Examination order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Two notes, the blue shutter text, the four bullets, steps 1 to 3 on p309 and the CARE Profile text, note and step 4 on p310 are present once (6685-6704). Nothing is missing.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title 'Starting the topogram scan' is printed on p309, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The title 'Starting the topogram scan' is found on the page, which supports a bookmark based tree.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on the rendered page is the same arabic number as the physical page.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The folio printed on p309 is 309, equal to the physical page, so offset 0 is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p309 the yellow radiation icon beside step 3 and the two black 'i' icons are not extracted. On p310 the 'i' icons are also missing. The topogram screenshot img_0314 and the keys img_0315 are extracted.",
+      "notes": "Still Low because a meaningful icon is missing: the yellow radiation (Start) icon beside step 3. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, logo or divider is kept as an image for sec_0636 on the pages checked. Kept images (if any) show real figures or key icons.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0636",
+      "page_sampled": 309,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0314 (p310 topogram with CARE Profile) and img_0315 (p310 four direction keys beside step 4) are mapped to sec_0636 and match the text. Both are the right way up.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading 'Checking parameter settings' on p315 is a margin or numbered heading at the same style as its sibling headings. Level 4 under sec_0644 fits the printed layout.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0645 has parent sec_0644 and the parent title and page range cover this section. The heading 'Checking parameter settings' is printed on p315.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0645 starts at the margin heading 'Checking parameter settings' (#/texts/6812, p315) and ends on p316 with the CTDI note (6824). 'Optimizing the applied dose...' on p316 is in sec_0646. The two bullets above the heading on p315 belong to sec_0644.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path ends with 'Checking parameter settings', which is the heading printed on p315. The ancestors follow the book's chapter 6 Examination order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The eight legend lines, the Scan parameter card note on p315, and the CAUTION box, bullet and two notes on p316 are present once (6849-6869). The callout numbers are not text nodes but the legend text is complete.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title 'Checking parameter settings' is printed on p315, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The title 'Checking parameter settings' is found on the page, which supports a bookmark based tree.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on the rendered page is the same arabic number as the physical page.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The folio printed on p315 is 315, equal to the physical page, so offset 0 is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p315 the small black 'i' mark of the note 'The Scan parameter card...' was not saved as an image. On p316 the CAUTION triangle and two 'i' marks are also not saved. Their text is kept.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, logo or divider is kept as an image for sec_0645 on the pages checked. Kept images (if any) show real figures or key icons.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0645",
+      "page_sampled": 315,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0322 (p315, 865x460 Routine card screenshot with callouts 1 to 8) is mapped to sec_0645 and matches the legend. It is complete and not flipped.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Visual level matches: 'Performing the spiral acquisition' is a margin heading under 6.6.7 'Acquiring a Spiral', so level 4 under the level 3 section is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0650 'Acquiring a Spiral' (6.6.7) is correct. sec_0651 has no children and has no sub-headings on p318 to p320.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The margin heading (#/texts/6862) and the first sentence are at the bottom of p318. The last node is step 6 on p320 (#/texts/6906), just above heading 6.6.8. Steps 1 to 5 and the notes on p319 are inside. The RTD note and 'Canceling in an emergency' at the top of p318 stay in the previous sections.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'/Examination/Scan/Acquiring a Spiral/Performing the spiral acquisition' matches chapter 6, section 6.6.7 and the margin heading.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All printed text from the heading to step 6 is present once and in order (nodes 6926 to 6952). No text is missing or repeated. 6.6.8 is not absorbed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100 for sec_0651. The title is found on its page and the boundaries checked above are right. No review flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The bookmark title matches the printed heading on the page, so no inferred structure needs extra scrutiny.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folios 318, 319 and 320 are arabic and match the scheme arabic.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio '318' is on physical p318 and '320' on p320, so the offset is right and matches the neighbours.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p319 the steps are the same as on p322 (sec_0656), where the MOVE key icon, the START radiation icon and the 'i' note icons are visible. In sec_0651 only the screenshot img_0325 is extracted. The small icons are not. p319 is not in the sampled pages, so this is inferred from the same steps on p322.",
+      "notes": "Still Low because a meaningful icon is missing: the MOVE key icon and the START radiation icon (inferred from the same steps on p322). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017. Lead: checked on a p319 render. The MOVE key icon (steps 2 and 4) and the START key icon (step 3) are printed and not extracted. Low is confirmed.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0325 is a real screenshot (topogram and axial image with the Examination chronicle). No logo, rule or decoration is extracted for this section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": 320,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0325 (p319) is the scan-progress screenshot between steps 3 and the 'You can observe' note. It is mapped to sec_0651, which is the right deepest section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Displaying the Cycle time table dialog box' is a margin heading under 6.6.8, so level 4 under the level 3 parent is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0652 'Acquiring an Adaptive 4D spiral' is correct. Siblings sec_0653, sec_0655 and sec_0656 are also margin headings of 6.6.8.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p321 the section starts at the margin heading (#/texts/6925) with its first sentence (#/texts/6926-tail). It ends with the note 'You can use the cycle time table also...' (#/texts/6931), just above the next margin heading 'Defining different cycle times'. The sentence with the same wording below that heading is in sec_0655.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'/Examination/Scan/Acquiring an Adaptive 4D spiral/Displaying the Cycle time table dialog box' is correct.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Steps 1 and 2, the result lines and the closing note are all present once. The repeated sentence 'You can define different cycle times...' is printed twice in the PDF and appears once in each section. This is not a duplicate error.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100 for sec_0654. The title is found on its page and the boundaries checked above are right. No review flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The bookmark title matches the printed heading on the page, so no inferred structure needs extra scrutiny.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Folio 321 is arabic and matches.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. Folio '321' is on physical p321.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p321 the two table icons next to steps 1 and 2 and the 'i' note icon are not in the image output. Only the large screenshot img_0326 is. The text explains the icons ('Activate cycle time table', 'Edit cycle time table').",
+      "notes": "Still Low because a meaningful icon is missing: the two table icons next to steps 1 and 2. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0326 is the Cycle time table dialog screenshot. It is real content. No decorative item is extracted.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": 321,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0326 (447x415, p321) is the Cycle time table dialog under step 2. It is mapped to sec_0654. This is the right section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Performing acquisition' is a margin heading under 6.6.8, level 4. Its child sec_0657 (Real Time Display reconstruction mode) is level 5.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0652 is correct. Child sec_0657 'Real Time Display reconstruction mode' starts on p323, and that is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p322 the section starts at the heading (#/texts/6945). Its own text ends with step 5 (#/texts/6961) at the bottom of p322. The child sec_0657 starts at the top of p323, so page_end 323 comes from the child. No text of sec_0657 or of 'Canceling in an emergency' is absorbed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'/Examination/Scan/Acquiring an Adaptive 4D spiral/Performing acquisition' is correct.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Steps 1 to 5, the three-line list and the RTD note are present once. The text is similar to sec_0651 but it is a separate printed passage.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100 for sec_0656. The title is found on its page and the boundaries checked above are right. No review flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The bookmark title matches the printed heading on the page, so no inferred structure needs extra scrutiny.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Folios 322 and 323 are arabic and match.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. Folio '322' is on physical p322 and '323' on p323.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p322 the MOVE key icon (step 2), the yellow START icon (step 3) and two 'i' note icons are not in the image output. The three-screenshot strip is extracted as img_0327.",
+      "notes": "Still Low because a meaningful icon is missing: the MOVE key icon (step 2) and the yellow START icon (step 3). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0327 is a strip of three real screenshots. No decorative item is kept.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": 322,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0327 (1517x476, p322) is the three screenshots between step 3 and the 'You can observe' note. It is mapped to sec_0656, which is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Autoranges in coupled mode' is a margin heading. Level 5 under the margin heading 'Setting the coupled mode' follows the TOC nesting. It looks the same style as its sibling but I accept the bookmark.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0712 'Setting the coupled mode' (352 to 353) is correct by the TOC. Next section sec_0714 is 7.2.2 on p353.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p353 the section is the margin heading (#/texts/7599, y381) and two paragraphs (#/texts/7614, #/texts/7615). The CAUTION box, steps 1 to 4 and the two notes above it stay in sec_0712. Heading 7.2.2 below is in sec_0714. Start and end are both p353.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'/Enhanced examination/CARE Contrast CT/Activating the coupled mode/Setting the coupled mode/Autoranges in coupled mode' follows the TOC nesting.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Both paragraphs are present once. The CAUTION and steps 1 to 4 are not absorbed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100 for sec_0713. The title is found on its page and the boundaries checked above are right. No review flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The bookmark title matches the printed heading on the page, so no inferred structure needs extra scrutiny.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Folio 353 is arabic and matches.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. Folio '353' is on physical p353.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The visible part of the section on p353 has only text. The CAUTION triangle and the 'i' icons on the page are in sec_0712 and sec_0714. No figure or icon belongs to sec_0713.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is extracted for sec_0713 and none belongs to it.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0713",
+      "page_sampled": 353,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is extracted for sec_0713. The page has no figure in its part, so no mapping is needed.",
+      "notes": "",
+      "confidence": 0.92
+    }
+  ]
+}

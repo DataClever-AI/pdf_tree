@@ -1,0 +1,35 @@
+{
+ "base_version": "v2.11",
+ "prior_fail_rows": [
+  {
+   "section_id": "sec_0052",
+   "page_sampled": "141",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The p141 contents has two lines: '1. General ... 2' and '2. Composition ... 3'. Table #/tables/42 has only line 1, and the header word 'Page' is merged in the value cell ('Page 2'). Line 2 is outside the table, in paragraph #/texts/2201, which comes before the table in reading order.",
+   "notes": "Old FAIL (BUG-008, v2.9): still present. The second row is outside the table, but its text and page number 3 survive in #/texts/2201, so Low. Probably the table reader cut the last row."
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": "175",
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p175 the legend 'Gap: 1.0 - 1.1 mm ... *1' and '0.7 - 0.8 mm ... *2' appears twice in sec_0079. Nodes #/texts/2606 and #/texts/2608 have the same text and bbox, as do #/texts/2607 and #/texts/2609. The page shows this legend once.",
+   "notes": "Probably the legend text was read twice by the extractor; cause not confirmed, no BUG id yet. The content is in the right section and nothing is lost, so Low."
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": "181",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/48 on p181 is the contents with 6 rows. All titles and page numbers (2, 3, 6, 19, 28, 36) are present and in order. In rows 4 and 5 the numbers 19 and 28 sit in the title cell and the Page cell is empty. In row 6 the dots and 36 are split from the title.",
+   "notes": "Old FAIL (no BUG id, v2.9): still present. Page-number digits moved between cells. Values and order are kept, so Low."
+  }
+ ],
+ "new_keys_without_v2_11_row": [
+  "sec_0088 p200"
+ ]
+}
