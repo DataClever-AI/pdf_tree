@@ -1,0 +1,94 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0005",
+      "page_sampled": "11",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The WARNING box on p12 that belongs to 2.1 has a warning triangle next to the word WARNING. No image is extracted for it.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0023",
+      "page_sampled": "18",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. Page 18 has an 'i' note icon next to 'Only use remote access in high performance networks...'. All CAUTION boxes on p17 and p18 have a warning triangle. No image is extracted for them.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": "18",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The CAUTION box on p18 under 2.1.11 has a warning triangle next to the word CAUTION. No image is extracted for it.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0046",
+      "page_sampled": "25",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The 'i' note icon at the top of p25 next to 'Please note that this does not imply...' is not kept as an image. No image is mapped to this section.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": "25",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The 'i' note icon next to 'For further information, contact your local Siemens Healthineers Representative...' on p25 is not kept as an image. No image is mapped to this section.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0053",
+      "page_sampled": "29",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The three CAUTION boxes on p28 and p29 in 2.2.1 each have a warning triangle next to the word CAUTION. No image is extracted for them.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0055",
+      "page_sampled": "30",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The CAUTION box of this section on p30 has a warning triangle next to the word CAUTION. No image is extracted for it.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0057",
+      "page_sampled": "32",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The five CAUTION boxes on p31 and p32 in 2.2.4 each have a warning triangle next to the word CAUTION. No image is extracted for them.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": "2",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Page 2 has the 'i' hint icon, the '>>' solution icon and the CAUTION triangle badge. Page 3 has the WARNING triangle badge. No image is extracted for them (images.json has only img_0008 for another section).",
+      "notes": "Still Low because a meaningful icon is missing: the legend symbols on p2-p3 ('i', '>>' and the CAUTION/WARNING badges are the subject of the legend table, so the picture itself is the information). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.88
+    }
+  ]
+}

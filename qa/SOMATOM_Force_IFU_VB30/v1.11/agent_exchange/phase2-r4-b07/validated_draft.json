@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "provider": "claude/opus (lead regrade, corrected rule 6i)",
+  "validated_at": "2026-10-08T05:02:35.884689+00:00",
+  "findings": [
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0427",
+      "page_sampled": "212",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On the sampled page p212 the small 'dose settings' icon (20x20 pt) next to '1 Click the dose settings icon' (#/texts/4478) has no image file. That step belongs to sec_0428, the next section. The three 'i' note icons of sec_0427 on p212 also have no image file, but they are decorative.",
+      "notes": "Still Low because a meaningful icon is missing on the sampled page: the dose settings icon (owner sec_0428). The 'i' note icons are noise (rule 6i, corrected 2026-10-07). Same grade as v1.10. Probably BUG-017. Replaces phase2-r3-b07 for this row.",
+      "confidence": 0.85,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    }
+  ]
+}

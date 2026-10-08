@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "provider": "claude/opus (lead, run.log check)",
+  "validated_at": "2026-10-08T04:20:50.677014+00:00",
+  "findings": [
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "run.log shows no hard failure and the run finished. bookmark_sanity made one repair: the cover bookmark 'M8000-9001K_cover_22sep08.pdf' has no destination, so it and its 1 child were dropped as orphan front matter (dropped_orphan_subtree). 868 bookmarks - 2 dropped - 1 excluded (list_of_symbols) = 865 sections, the same as tree.json and validation_report.json. toc_resolution: arabic, global offset 0, 0/865 flagged. Validation PASS. 272 images, the same as images_v1.json.",
+      "notes": "Checked by the lead in logs/run.log of v2.16 and compared with v2.15: only stage times and the image count change (263 -> 272, Phase 0 image filter for BUG-017/BUG-020). Same result as the approved v2.15 row.",
+      "confidence": 0.95,
+      "provider": "claude/opus (lead, run.log check)"
+    }
+  ]
+}

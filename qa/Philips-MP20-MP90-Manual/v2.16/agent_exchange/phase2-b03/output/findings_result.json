@@ -1,0 +1,1454 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p49, 'Resolving Label Conflicts' (sec_0073) is printed as a smaller sub-heading on p48 (same style as 'About Label Sets'). hierarchy_level is 3, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0073 is Using Labels (sec_0070, level 2). This matches the printed structure on p49. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0073 has page_start 48 and page_end 50. On p49 all nodes from #/texts/846 to #/texts/894 belong to 'Resolving Label Conflicts': the key caption, bullets and two Measurement Selection screens. The figure labels (for example 'SpO2', 'BIS') stay in sec_0073, next to their figures. The next heading 'Label Compatibility' is on p50, in sec_0074.",
+      "notes": "Running headers #/texts/846, #/texts/847 and folio #/texts/845 and #/texts/894 stay inside the section (probably BUG-022). They do not cross into a neighbour.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0073 is correct and in order. The last part is 'Resolving Label Conflicts'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p49 the text and figure labels printed under 'Resolving Label Conflicts' are all in sec_0073. I see no missing or duplicated paragraph. The label text of the two screenshots is kept in the same section as the screenshots.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0073 is not flagged for review. The heading 'Resolving Label Conflicts' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Resolving Label Conflicts' is printed on the page range 48-50, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folios 37 and 38 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p49, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p49, the small key icon with red '???' at the top left is not in images.json. Its caption 'Measurement selection key with question marks indicating a label conflict.' is #/texts/848. The small inline key icon 'marked (icon)' in the paragraph 'All the currently available measurement devices' is also not extracted. The two Measurement Selection screenshots are extracted as img_0043 and img_0042.",
+      "notes": "Small icons are dropped by the image filters (probably BUG-017 or BUG-020). The caption text states the meaning of the icon, so little information is lost.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted images img_0043 and img_0042 are both real screenshots (Measurement Selection windows) with clean crops. No rule, logo or header bar was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 49,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p49, img_0043 (452x198, MP20/30 to MP90 screen) and img_0042 (512x294, X2 connected to host monitor screen) are mapped to sec_0073. Both are printed under 'Resolving Label Conflicts', so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p56, 'Remote Application Popup Keys' (sec_0091) is printed as a smaller sub-heading under the large 'Using Remote Applications' heading on p55. hierarchy_level is 3, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0091 is Using Remote Applications (sec_0090, level 2). This matches the printed structure on p56. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0091 has page_start 55 and page_end 56. On p56, the first paragraph 'If you change the monitor Screen while a Remote Application is running...' (#/texts/1033) is the end of the 'Remote Application Popup Keys' text, so sec_0091 keeps it. The heading 'Using the X2 or MP5 with a Host Monitor' starts sec_0092. page_end 56 is correct.",
+      "notes": "The table #/tables/15 is last in node order but is printed above the paragraph #/texts/1029 on p55. It is still in the right section.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0091 is correct and in order. The last part is 'Remote Application Popup Keys'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading, the table #/tables/15, the paragraph on p55 and the paragraph on p56 are all in sec_0091. Nothing from 'Using the X2 or MP5 with a Host Monitor' is absorbed. No gap and no duplicate.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0091 is not flagged for review. The heading 'Remote Application Popup Keys' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Remote Application Popup Keys' is printed on the page range 55-56, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folio 44 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p56, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p55, the Pop-Up Keys table (#/tables/15) has a header row and four rows: Minimize, Keyboard, Refresh and Close. Each key name matches its description text in the extracted table. No cell is merged or shifted.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The sampled p56 of sec_0091 has only one paragraph and no figure. The table on p55 is kept as a table. The SmartKey icon on p55 is printed in the previous section sec_0090, not in sec_0091.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0091. No decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 56,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0091 has no visual on p56 and none on p55 (the table is text). images.json lists no image for it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p57, 'What's New in Release G.0?' (sec_0094) is printed as a medium heading below the chapter title 'What's New?' on p57. hierarchy_level is 2, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0094 is What's New? (sec_0093, level 1). This matches the printed structure on p57. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0094 has page_start 57 and page_end 58. On p57 it starts at the heading #/texts/1049 and holds all feature headings and paragraphs (#/texts/1050 to #/texts/1060). The chapter intro text 'This section lists the most important new features...' is in the parent sec_0093. On p58 the G.0 list continues (XDS Solution to USB Interface) and it stops before 'What's New in Release F.0?' (sec_0095).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0094 is correct and in order. The last part is 'What's New in Release G.0?'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The Release G.0 items on p57 (Short Range Radio, IntelliBridge, Intravascular Oxygen, Histogram Trend, Car Seat Assessment Record) are all in sec_0094. The G.0 list continues on p58 (XDS Solution to USB Interface, #/texts/1064 to #/texts/1077), also in sec_0094. The F.0 heading and text are in sec_0095. No gap and no duplicate.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0094 is not flagged for review. The heading 'What's New in Release G.0?' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'What's New in Release G.0?' is printed on the page range 57-58, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folio 45 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p57, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p57 has no figure or icon below the heading 'What's New in Release G.0?'. The large chapter number '2' and the blue bar are decorative and belong to the chapter title. Nothing meaningful was dropped.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0094. The chapter number '2' and the blue bar were not kept as images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0094",
+      "page_sampled": 57,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0094 has no visual on p57, and images.json lists none. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p66, 'What's New in Release A.2?' (sec_0101) is printed as a medium heading at the top of p66. hierarchy_level is 2, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0101 is What's New? (sec_0093, level 1). This matches the printed structure on p66. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0101 has page_start and page_end 66. It holds the heading #/texts/1267 and the 14 feature paragraphs down to 'Second display' (#/texts/1268 to #/texts/1281), plus the folio. The B.0 text is on p65, in sec_0100. The next chapter 'Alarms' starts on p67, in sec_0102.",
+      "notes": "Running header #/texts/1265 and #/texts/1266 is kept at the top of the section (probably BUG-022). It is boilerplate only.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0101 is correct and in order. The last part is 'What's New in Release A.2?'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All 14 A.2 feature paragraphs on p66 (from '12-Lead ECG recordings' to 'Second display') are in sec_0101. I see no missing or duplicated paragraph.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0101 is not flagged for review. The heading 'What's New in Release A.2?' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'What's New in Release A.2?' is printed on the page range 66-66, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folio 54 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p66, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p66 has no figure or icon. Only text is printed, so nothing was dropped.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0101. No decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0101",
+      "page_sampled": 66,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0101 has no visual on p66, and images.json lists none. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p67, 'Alarms' (sec_0102) is printed as the large chapter title 'Alarms' with a big '3' above it on p67. hierarchy_level is 1, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0102 is a level 1 chapter with no parent. Its children (sec_0103 and later) are the Alarms sub-sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0102 has page_start 67 and page_end 82. On p67 it starts at the chapter title (#/texts/1284 '3 Alarms') and holds the intro paragraphs, the INOP list and the folio 55 (#/texts/1285 to #/texts/1301). The last three nodes are on p68 (#/texts/1302 to #/texts/1304): the running header and one paragraph about the audible indicator. The p68 image is not in the batch, so I could not see whether that paragraph is above the 'Visual Alarm Indicators' heading.",
+      "notes": "Lead check of the p68 render: #/texts/1304 'The monitor sounds an audible indicator...' is printed above the heading 'Visual Alarm Indicators', so it is chapter intro text and sec_0102 owns it correctly. Same result as the approved v2.15 row.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0102 is correct and in order. The last part is 'Alarms'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p67 text (intro, Patient Alarms, INOPs, the seven INOP names and the HR HIGH example) is all in sec_0102 and in order. The big chapter number '3' appears twice as text (#/texts/1283 and in the heading #/texts/1284 '3 Alarms'). This is a small duplicate of boilerplate only.",
+      "notes": "The duplicate chapter number is minor and does not change the content.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0102 is not flagged for review. The heading 'Alarms' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Alarms' is printed on the page range 67-82, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folio 55 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p67, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p67 the bordered example '** HR HIGH' is a text box, not a picture. Its words are kept in #/texts/1300 in sec_0102. No raster figure is on the page.",
+      "notes": "Lead change: FAIL Low to PASS, the same result as the approved v2.15 row. The page and its nodes did not change in v2.16.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0102. The large chapter number '3' and the blue bar were not kept as images.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 67,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The only visual on p67 is the small HR HIGH box, which is not extracted, so no image can be mapped to a wrong section. images.json lists none for sec_0102.",
+      "notes": "The missing box is graded in 5.5-filters_discarding.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p48, 'About Label Sets' (sec_0071) is printed as a smaller sub-heading under the large 'Using Labels' heading. hierarchy_level is 3, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0071 is Using Labels (sec_0070, level 2). This matches the printed structure on p48. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p48, sec_0071 has the heading '#/texts/830' and three paragraphs (#/texts/831 to #/texts/833). They all sit between 'About Label Sets' and 'Changing Measurement Labels' on the page. page_start and page_end are both 48 and no neighbour content is absorbed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0071 is correct and in order. The last part is 'About Label Sets'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The four nodes of sec_0071 (#/texts/830 to #/texts/833) match the heading and three paragraphs printed on p48. Nothing is missing and nothing is duplicated. The 'Changing Measurement Labels' text is in sec_0072.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0071 is not flagged for review. The heading 'About Label Sets' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'About Label Sets' is printed on the page range 48-48, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folio 36 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p48, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p48 has no figure, icon or screenshot in the area of sec_0071. Only text is printed there, so nothing was dropped.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0071 in images.json, so no decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0071",
+      "page_sampled": 48,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p48 has no visual in sec_0071, and images.json lists none for it. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p50, 'Resolving Label Conflicts' (sec_0073) is printed as a smaller sub-heading on p48 (same style as 'About Label Sets'). hierarchy_level is 3, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0073 is Using Labels (sec_0070, level 2). This matches the printed structure on p50. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p50, sec_0073 holds the MP5 figure text (#/texts/899 to #/texts/907), the WARNING (#/texts/897 and #/texts/908) and the steps '1 Select the measurement selection key' to 'Modify Driver' (#/texts/909 to #/texts/916). The heading 'Label Compatibility' and its text are after that, in sec_0074. page_end 50 is correct.",
+      "notes": "Reading order of #/texts/897 and #/texts/898 is out of place in the node list, but all nodes stay in the right section.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0073 is correct and in order. The last part is 'Resolving Label Conflicts'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p50 the steps list, the WARNING box text and the MP5 figure labels are all in sec_0073. The 'WARNING' label (#/texts/897) is kept with its paragraph #/texts/908. Nothing is missing or duplicated.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0073 is not flagged for review. The heading 'Resolving Label Conflicts' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Resolving Label Conflicts' is printed on the page range 48-50, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folios 37 and 38 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p50, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p50, the MP5 connected to host monitor screenshot is extracted as img_0044. The right edge of the screenshot is cut in the PDF itself and the crop matches the page. The orange WARNING rules are not kept. No meaningful visual is missing.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0044 is a real screenshot. No decorative element (orange WARNING rules, header bar) is kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0073",
+      "page_sampled": 50,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p50, img_0044 (300x339, 'MP5 connected to host monitor') is mapped to sec_0073. It is printed under 'Resolving Label Conflicts' and before 'Label Compatibility', so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p52, 'Adjusting the Screen Brightness' (sec_0078) is printed as a smaller sub-heading at the top of p52. hierarchy_level is 3, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0078 is Changing Monitor Settings (sec_0077, level 2). This matches the printed structure on p52. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0078 has page_start and page_end 52. It holds the heading #/texts/948 and the steps and two paragraphs #/texts/949 to #/texts/952. The next heading 'Setting the Date and Time' is in sec_0079. The running header #/texts/946, #/texts/947 is at the top of the page.",
+      "notes": "The running header is kept inside the section (probably BUG-022). It is boilerplate and does not change the section content.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0078 is correct and in order. The last part is 'Adjusting the Screen Brightness'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The text under 'Adjusting the Screen Brightness' on p52 (two steps and two paragraphs) is all in sec_0078. The date and time WARNING and steps are in sec_0079. Nothing is missing or duplicated.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0078 is not flagged for review. The heading 'Adjusting the Screen Brightness' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Adjusting the Screen Brightness' is printed on the page range 52-52, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folio 40 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p52, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p52, a small Brightness SmartKey icon (sun above a slope) is printed at the right of step 1. It is not in images.json for sec_0078. The text 'Select the Brightness SmartKey' states the key name.",
+      "notes": "Small icons are dropped by the image filters (probably BUG-017 or BUG-020). The meaning is in the text, so the loss is small.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0078. No decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0078",
+      "page_sampled": 52,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The only visual in sec_0078 on p52 is the small SmartKey icon, which is not extracted, so no mapping can be wrong. No image is mapped to a neighbour section.",
+      "notes": "The missing icon is graded in 5.5-filters_discarding.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p56, 'Using the X2 or MP5 with a Host Monitor' (sec_0092) is printed as a large heading on p56, same size as 'Using Remote Applications'. hierarchy_level is 2, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0092 is Basic Operation (sec_0001, level 1). This matches the printed structure on p56. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0092 has page_start and page_end 56. It starts at the heading #/texts/1034 and holds the intro paragraph, six bullets and the folio (#/texts/1035 to #/texts/1044). The paragraph above the heading (#/texts/1033) is in sec_0091, which is correct. The last bullet is 'The date and time...', and nothing follows on the page.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0092 is correct and in order. The last part is 'Using the X2 or MP5 with a Host Monitor'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All text under the heading 'Using the X2 or MP5 with a Host Monitor' on p56 is in sec_0092. The six bullets are all present. No gap and no duplicate.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0092 is not flagged for review. The heading 'Using the X2 or MP5 with a Host Monitor' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Using the X2 or MP5 with a Host Monitor' is printed on the page range 56-56, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folio 44 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p56, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p56 has no figure, icon or screenshot. Only text is printed, so nothing was dropped.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0092. No decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 56,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0092 has no visual on p56, and images.json lists none. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p61, 'What's New in Release E.0?' (sec_0096) is printed as a medium heading at the bottom of p60. hierarchy_level is 2, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0096 is What's New? (sec_0093, level 1). This matches the printed structure on p61. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0096 has page_start 60 and page_end 62. On p61, all items from 'Pulse From Noninvasive Blood Pressure' to 'PiCCO Enhancements' (#/texts/1128 to #/texts/1150) are Release E.0 text, so they belong to sec_0096. The Release D.0 heading is on p62, in sec_0097.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0096 is correct and in order. The last part is 'What's New in Release E.0?'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p61 all headings, bullets and paragraphs from the E.0 list are in sec_0096. I see no missing or duplicated paragraph. The page is text only.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0096 is not flagged for review. The heading 'What's New in Release E.0?' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'What's New in Release E.0?' is printed on the page range 60-62, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folios 48 to 50 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p61, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p61 has no figure or icon. Only text is printed, so nothing was dropped.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0096. No decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 61,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0096 has no visual on p61, and images.json lists none. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p62, 'What's New in Release E.0?' (sec_0096) is printed as a medium heading at the bottom of p60. hierarchy_level is 2, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0096 is What's New? (sec_0093, level 1). This matches the printed structure on p62. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p62, the bullets 'New continuous measurement: PPV' to 'SVV, PPV and dPmax' and the 'New SmartKeys' text (#/texts/1154 to #/texts/1159) continue Release E.0, so they belong to sec_0096. They sit above the heading 'What's New in Release D.0?', which starts sec_0097. page_end 62 is correct.",
+      "notes": "Running header #/texts/1152 and #/texts/1153 on p62 names Release D.0, but it is boilerplate (probably BUG-022).",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0096 is correct and in order. The last part is 'What's New in Release E.0?'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The six E.0 nodes at the top of p62 (#/texts/1154 to #/texts/1159) are in sec_0096 and not in sec_0097. The D.0 and C.0 text is in later sections. No gap and no duplicate.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0096 is not flagged for review. The heading 'What's New in Release E.0?' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'What's New in Release E.0?' is printed on the page range 60-62, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folios 48 to 50 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p62, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p62 has no figure or icon in the part owned by sec_0096. Only text is printed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0096. No decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0096",
+      "page_sampled": 62,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0096 has no visual on p62, and images.json lists none. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p64, 'What's New in Release C.0?' (sec_0098) is printed as a medium heading at the bottom of p62. hierarchy_level is 2, which matches its bookmark nesting.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent of sec_0098 is What's New? (sec_0093, level 1). This matches the printed structure on p64. The section has no child sections.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0098 has page_start 62 and page_end 64. On p64, the bullets from 'In graphical and horizon Screen Trends a cursor is available' to 'Freeze and measure waves on the Main Screen' (#/texts/1209 to #/texts/1221) continue the Release C.0 list (after the 'Trends' heading on p63), so they belong to sec_0098. The heading 'What's New in Release B.1?' is below them and starts sec_0099.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path of sec_0098 is correct and in order. The last part is 'What's New in Release C.0?'.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p64 the C.0 items (Events, Measurements, Applications) are all in sec_0098. The B.1 heading and text are not absorbed. No gap and no duplicate.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0098 is not flagged for review. The heading 'What's New in Release C.0?' is clearly visible on the page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'What's New in Release C.0?' is printed on the page range 62-64, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The page numbers are arabic (folios 50 to 52 on the sampled pages). numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On physical p64, the printed folio is 12 lower than the physical page. The bookmark pages are already physical and the heading appears on the stated page, so offset_applied 0 is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p64 has no figure or icon. Only text is printed, so nothing was dropped.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0098. No decorative element was kept as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0098",
+      "page_sampled": 64,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0098 has no visual on p64, and images.json lists none. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.9
+    }
+  ]
+}

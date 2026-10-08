@@ -1,0 +1,74 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0540",
+      "page_sampled": "258",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p259 two black 'i' note icons (next to 'The contrast protocols cannot be restored...' and 'The newly created contrast protocol...') are not in images.json. Only the step 2 button img_0251 is extracted.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0590",
+      "page_sampled": "282",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p282 the black 'i' note icon beside 'Please observe the manufacturer's notes in the attached assembly instructions.' is not extracted. Its meaning is stated in the text.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0591",
+      "page_sampled": "282",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p282 the CAUTION warning triangle and the black 'i' note icon (before 'After finishing the examination...') are not extracted. Their meaning is stated in the text.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0600",
+      "page_sampled": "286",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p286 the WARNING triangle in the box 'The restraint straps are not permanently attached to the table!' is not extracted. The word WARNING is in the text node #/texts/6218.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0601",
+      "page_sampled": "287",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p286 the black 'i' note icon and the CAUTION triangle, and on p287 two WARNING triangles, are not extracted. images.json has no image for this section. The box types are stated in the heading nodes.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0554",
+      "page_sampled": "268",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p268 two small blue icons for steps 1 and 2 (Select or change exam, Change patient position) and the two CAUTION warning triangles are not extracted. images.json has no image for this section. The icon meaning is stated in the step text.",
+      "notes": "Still Low because a meaningful icon is missing: the two blue step icons (Select or change exam, Change patient position). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0555",
+      "page_sampled": "268",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p268 the black 'i' note icon and the small blue person icon for step 1 (Select or change exam) are not extracted. images.json has no image for this section.",
+      "notes": "Still Low because a meaningful icon is missing: the blue person icon of step 1 (Select or change exam). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.88
+    }
+  ]
+}

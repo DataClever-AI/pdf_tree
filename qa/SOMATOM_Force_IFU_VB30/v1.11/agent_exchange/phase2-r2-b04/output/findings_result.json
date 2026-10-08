@@ -1,0 +1,124 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p110 'Labels' is a margin label at level 4 under 'Patient table with 2000 mm scan range' (level 3). It is a sub-topic of that section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0187. It lists sec_0188, sec_0189 and sec_0190 as children. sec_0188 has no children, which matches the pages.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0188 starts at the 'Labels' text on p110 and ends with the 'Caution, leg injuries' text on p111. The numbered list and the table photo stay in sec_0187. 'Material' on p111 is in sec_0189.",
+   "notes": "Footer nodes #/texts/2395, 2396 and header #/texts/2397 are only boilerplate inside the section.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path is /System description/Patient Table/Patient table with 2000 mm scan range/Labels. This matches the 'System description' header on p110 and p111 and the nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 10 nodes #/texts/2390 to 2397, 2402 and 2403 cover the Labels text, 'Type B applied part', its two sentences and the caution text. No duplicate or missing body text seen on p110 or p111.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and the heading is visible on p110. No sign of doubt in the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The 'Labels' title is visible on p110 where page_start is 110, so the TOC entry is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios 110 and 111 are arabic. numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio at the bottom of the p110 render is 110 and on p111 it is 111. offset_applied is 0, which is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The Type B symbol on p110 is extracted as img_0065. The caution box with the warning triangle on p111 is extracted as img_0066. No meaningful visual of this section is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0065 and img_0066 are real label symbols (person for Type B, leg injury caution). Neither is a rule, logo or other decoration.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0065 (p110, Type B person symbol) is in the right section and is upright. img_0066 (p111, caution box) is in the right section and complete. But it is stored upside down. The page shows the arrow pointing down and the triangle at the lower right. The PNG shows the arrow pointing up, the triangle at the upper right, and the base line at the bottom.",
+   "notes": "Probably BUG-013 (flipped image): the PDF places the image with a negative vertical scale and the export ignores it. Section and content are right, so Medium.",
+   "confidence": 0.93
+  }
+ ]
+}
