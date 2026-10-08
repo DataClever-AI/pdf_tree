@@ -49,6 +49,21 @@ def test_classify_prefers_override_then_rule_order():
     assert classify(catalogue, "m1", _fail("sec_0001", notes="something new")) is None
 
 
+def test_page_override_wins_over_the_section_override():
+    payload = {
+        **CATALOGUE,
+        "overrides": {
+            "m1|sec_0009|5.4-page_start_end": "BUG-002",
+            "m1|sec_0009|7|5.4-page_start_end": "BUG-001",
+        },
+    }
+    catalogue = parse_catalogue(payload)
+    on_page_7 = {**_fail("sec_0009"), "page_sampled": "7"}
+
+    assert classify(catalogue, "m1", on_page_7) == "BUG-001"
+    assert classify(catalogue, "m1", _fail("sec_0009")) == "BUG-002"
+
+
 def test_classify_uses_bug_id_cited_in_notes():
     catalogue = parse_catalogue(CATALOGUE)
     row = _fail("sec_0010", notes="The heading is in sec_0008. Cause: BUG-002.")
