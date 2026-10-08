@@ -176,6 +176,11 @@
       "bug_id": "BUG-035",
       "title": "A formula printed as text is extracted as an empty node: the formula text is lost",
       "suspected_module": "Docling layout (formula items keep no text); src/tree_builder/docling_extract.py"
+    },
+    {
+      "bug_id": "BUG-036",
+      "title": "Printed text is deformed in the tree: line-break hyphens kept, split subscripts, spaced degree signs, control characters",
+      "suspected_module": "Docling text cells (PyPdfium/docling-parse); no normalization step yet (planned Phase 4)"
     }
   ],
   "rules": [
@@ -287,6 +292,11 @@
     {
       "bug_id": "BUG-010",
       "regex": "^(?![\\s\\S]*BUG-\\d{3})[\\s\\S]*Edwards logo",
+      "ignore_case": true
+    },
+    {
+      "bug_id": "BUG-036",
+      "regex": "^Low by the reviewer rule of 2026-10-08 \\(line-break hyphens in cells\\)",
       "ignore_case": true
     }
   ],
@@ -433,7 +443,8 @@
     "Philips-MP20-MP90-Manual|sec_0820|443|5.6-table_content": "BUG-030",
     "Philips-MP20-MP90-Manual|sec_0846|469|5.6-table_content": "BUG-030",
     "SOMATOM_Force_IFU_VB30|sec_0729|5.4-gaps_duplicates": "BUG-034",
-    "AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION|sec_0021|148|5.5-filters_discarding": "BUG-035"
+    "AUTOMATIC_TRANSMISSION_MECHANISM_AND_FUNCTION_SECTION|sec_0021|148|5.5-filters_discarding": "BUG-035",
+    "Philips-MP20-MP90-Manual|sec_0820|442|5.6-table_content": "BUG-008"
   },
   "exclusions": {
     "SOMATOM_Force_IFU_VB30|sec_0906|5.4-flagged_for_review": "Positive/control finding: the verification mechanism correctly flagged a low title match; informational, not a defect."
