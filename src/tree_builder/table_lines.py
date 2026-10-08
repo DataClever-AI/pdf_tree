@@ -140,10 +140,17 @@ def _column_of(x: float, columns: dict[int, tuple[float, float]]) -> int:
     """
     The column whose band holds x, else the last column that starts before x. Bands are built
     from the cell boxes, which hug left-aligned text, so a phrase is placed by its left edge.
+    A band that starts up to _ROW_TOLERANCE after x still holds it (DOC p218: 'Phone' at
+    405.0 pt under an address cell that starts at 405.6 pt); of the bands that hold x, the
+    one that starts last wins.
     """
-    inside = [index for index, (left, right) in columns.items() if left <= x <= right]
-    if inside:
-        return min(inside, key=lambda index: x - columns[index][0])
+    holding = [
+        index
+        for index, (left, right) in columns.items()
+        if left - _ROW_TOLERANCE <= x <= right + _ROW_TOLERANCE
+    ]
+    if holding:
+        return max(holding, key=lambda index: columns[index][0])
     started = [index for index, (left, _) in columns.items() if left <= x]
     return max(started, key=lambda index: columns[index][0]) if started else min(columns)
 

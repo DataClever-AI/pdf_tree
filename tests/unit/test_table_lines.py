@@ -395,3 +395,13 @@ def test_new_row_follows_the_row_printed_above_when_indices_are_swapped() -> Non
         ["Alpha row | Alpha value", "Beta row lost | ", "Delta row | Delta value",
          "Gamma row | Gamma value"]
     )
+
+
+def test_line_starting_just_before_a_cell_edge_goes_to_that_column() -> None:
+    # DOC p218: 'Phone ...' starts 0.6 pt left of the address cell, inside the label band.
+    cells = [_cell(0, 0, "India:", 100, 110), _cell(0, 1, "Edwards Lifesciences India", 100, 110)]
+    cells[0]["bbox"]["r"] = 200.0
+    words = _printed(cells) + _words("Phone +91.022.66935701 04", 189.4, 121)
+    document = _document(cells, 95, 135)
+
+    assert _recover(document, words)[-1] == " | Phone +91.022.66935701 04"
