@@ -10,7 +10,7 @@ import csv
 import json
 import re
 from collections.abc import Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -39,6 +39,9 @@ class RootCauseCatalogue:
     rules: tuple[MatchRule, ...]
     overrides: dict[tuple[str, str, str], str]
     exclusions: dict[tuple[str, str, str], str]
+    # 'manual|section|page|checklist_ref': one sampled page, when the rows of a section
+    # differ in cause (Philips sec_0820: p443 lost row BUG-030, p442 split cells BUG-008).
+    page_overrides: dict[tuple[str, str, str, str], str] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -58,6 +61,11 @@ def _row_key(key: str) -> tuple[str, str, str]:
     return parts[0], parts[1], parts[2]
 
 
+def _page_key(key: str) -> tuple[str, str, str, str]:
+    manual, section, page, ref = key.split("|")
+    return manual, section, page, ref
+
+
 def parse_catalogue(payload: dict[str, Any]) -> RootCauseCatalogue:
     bugs = {
         item["bug_id"]: RootCause(item["bug_id"], item["title"], item.get("suspected_module", ""))
@@ -70,13 +78,21 @@ def parse_catalogue(payload: dict[str, Any]) -> RootCauseCatalogue:
         )
         for rule in payload.get("rules", [])
     )
-    overrides = {_row_key(key): value for key, value in payload.get("overrides", {}).items()}
+    raw_overrides = payload.get("overrides", {})
+    overrides = {
+        _row_key(key): value for key, value in raw_overrides.items() if key.count("|") != 3
+    }
+    page_overrides = {
+        _page_key(key): value for key, value in raw_overrides.items() if key.count("|") == 3
+    }
     exclusions = {_row_key(key): value for key, value in payload.get("exclusions", {}).items()}
-    referenced = {rule.bug_id for rule in rules} | set(overrides.values())
+    referenced = (
+        {rule.bug_id for rule in rules} | set(overrides.values()) | set(page_overrides.values())
+    )
     unknown = sorted(referenced - set(bugs))
     if unknown:
         raise ValueError(f"Catalogue references undefined bug ids: {', '.join(unknown)}")
-    return RootCauseCatalogue(bugs, rules, overrides, exclusions)
+    return RootCauseCatalogue(bugs, rules, overrides, exclusions, page_overrides)
 
 
 def load_catalogue(path: Path) -> RootCauseCatalogue:
@@ -86,8 +102,11 @@ def load_catalogue(path: Path) -> RootCauseCatalogue:
 
 
 def classify(catalogue: RootCauseCatalogue, manual_id: str, row: dict[str, str]) -> str | None:
-    """Override, then the ordered rules, then the first catalogued BUG-NNN cited in notes."""
+    """Override (page, then section), then the ordered rules, then the first BUG-NNN in notes."""
     key = (manual_id, row.get("section_id", ""), row.get("checklist_ref", ""))
+    page_key = (key[0], key[1], str(row.get("page_sampled", "")), key[2])
+    if page_key in catalogue.page_overrides:
+        return catalogue.page_overrides[page_key]
     if key in catalogue.overrides:
         return catalogue.overrides[key]
     text = f"{row.get('notes', '')} {row.get('evidence', '')}".strip()

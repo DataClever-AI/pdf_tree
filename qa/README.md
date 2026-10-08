@@ -71,6 +71,8 @@ reviewed and are marked `draft:<batch>` (`--official-only` ignores them). The re
 `bug.md` is never overwritten: update its `status` and its "What was done", "Fix" and
 "Verification" sections by hand. To register a new bug, add it (and its matching rule or
 override) to `root_causes.json` and re-run the script; it creates `bug.md` from a template.
+An override key is `manual|section|checklist_ref`; use `manual|section|page|checklist_ref`
+when the rows of one section have different causes on different sampled pages.
 
 **Mitigation versions (`v2.1`, `v2.2`, ...).** After a bug fix, a manual is re-run into a new
 minor version of its base; the base is never modified. The version manifest records the
