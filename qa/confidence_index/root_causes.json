@@ -149,8 +149,8 @@
     },
     {
       "bug_id": "BUG-030",
-      "title": "Full-width footnote row of a table is lost: its text is in no table cell and in no text node",
-      "suspected_module": "src/tree_builder/docling_extract.py (table cells; text inside the table area is not kept as text)"
+      "title": "Printed table text is lost: a line inside the table area is in no cell and in no text node",
+      "suspected_module": "src/tree_builder/docling_extract.py (TableFormer drops the row; fix in src/tree_builder/table_lines.py)"
     },
     {
       "bug_id": "BUG-031",
