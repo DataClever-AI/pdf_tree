@@ -155,6 +155,12 @@ def _column_of(x: float, columns: dict[int, tuple[float, float]]) -> int:
     return max(started, key=lambda index: columns[index][0]) if started else min(columns)
 
 
+def _in_a_column(x: float, columns: dict[int, tuple[float, float]]) -> bool:
+    return any(
+        left - _ROW_TOLERANCE <= x <= right + _ROW_TOLERANCE for left, right in columns.values()
+    )
+
+
 def _row_of(phrase: _Phrase, rows: dict[int, tuple[float, float]]) -> int | None:
     """
     The row printed at the phrase's height. Docling row bands often overlap or nest
@@ -301,6 +307,14 @@ def _recover_table(
         rows,
         _row_words(cells),
     )
+    # A line inside a row but outside every column belongs to a column Docling lost entirely
+    # (LOGIQ_S8 p817: the header 'Description'); joined to a neighbour cell it would read
+    # as part of that cell ('Part Number Description'), so it is left out.
+    lost = [
+        phrase
+        for phrase in lost
+        if _row_of(phrase, rows) is None or _in_a_column(phrase.left, columns)
+    ]
     if not lost:
         return []
     _place(data, cells, lost, rows, columns, page_height)

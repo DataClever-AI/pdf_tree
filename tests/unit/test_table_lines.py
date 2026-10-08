@@ -405,3 +405,20 @@ def test_line_starting_just_before_a_cell_edge_goes_to_that_column() -> None:
     document = _document(cells, 95, 135)
 
     assert _recover(document, words)[-1] == " | Phone +91.022.66935701 04"
+
+
+def test_header_word_of_a_lost_column_is_not_joined_to_a_neighbour_cell() -> None:
+    # LOGIQ_S8 p817: Docling lost the 'Description' column; its header word is printed
+    # between the 'Part Number' and 'Qty' columns.
+    cells = [
+        _cell(0, 0, "Part Number", 100, 110),
+        {**_cell(0, 1, "Qty", 100, 110), "bbox": {
+            "l": 500.0, "t": 100.0, "r": 540.0, "b": 110.0, "coord_origin": "TOPLEFT"}},
+        _cell(1, 0, "5763099", 115, 125),
+        {**_cell(1, 1, "1", 115, 125), "bbox": {
+            "l": 500.0, "t": 115.0, "r": 540.0, "b": 125.0, "coord_origin": "TOPLEFT"}},
+    ]
+    words = _printed(cells) + _words("Description", 300, 101)
+    document = _document(cells, 95, 130)
+
+    assert _recover(document, words) == ["Part Number | Qty", "5763099 | 1"]
