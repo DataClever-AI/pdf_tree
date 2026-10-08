@@ -221,7 +221,7 @@ def _compute_reading_order_ranges(
     doc: DoclingDocument,
     boundaries: list[bool] | None = None,
     margin: frozenset[str] = frozenset(),
-) -> list[tuple[int, int]]:
+) -> tuple[list[tuple[int, int]], frozenset[int]]:
     """
     Compute (reading_order_start, reading_order_end) per bookmark.
 
@@ -241,19 +241,23 @@ def _compute_reading_order_ranges(
         page_blocks.sort(key=lambda b: b.reading_order)
 
     anchors: list[int] = []
+    heading_anchors: set[int] = set()
     prev_anchor = -1
     for i, (_section_id, title, _level, page_start, _page_end) in enumerate(page_ranges):
-        anchor = (
+        found = (
             None
             if boundaries and boundaries[i]
             else _find_heading_anchor(
                 title, page_start, blocks_by_page, after=prev_anchor, margin=margin
             )
         )
+        anchor = found
         if anchor is None:
             page_blocks = blocks_by_page.get(page_start, [])
             anchor = page_blocks[0].reading_order if page_blocks else prev_anchor + 1
         anchor = max(anchor, prev_anchor + 1)
+        if anchor == found:
+            heading_anchors.add(anchor)
         anchors.append(anchor)
         prev_anchor = anchor
 
@@ -269,7 +273,7 @@ def _compute_reading_order_ranges(
                 break
         ranges.append((anchors[i], max(anchors[i], end)))
 
-    return ranges
+    return ranges, frozenset(heading_anchors)
 
 
 # A block counts as "above" a table or image when its bottom is at most this many
@@ -348,6 +352,7 @@ def _assign_content(
     sections: list[MatchedSection],
     reading_order_ranges: dict[str, tuple[int, int]],
     doc: DoclingDocument,
+    heading_anchors: frozenset[int] = frozenset(),
 ) -> None:
     """
     Assign text_blocks by reading-order interval containment (the section
@@ -403,6 +408,11 @@ def _assign_content(
             )
             leading_by_page[page_no] = (leading, first_top)
 
+    anchors = frozenset(start for start, _end in reading_order_ranges.values())
+    moved = _place_text_read_after_its_heading(
+        heading_anchors, anchors, blocks_by_page, owners, doc
+    )
+
     page_sections: dict[int, list[MatchedSection]] = {}
     for sec in sections:
         for p in range(sec.page_start, sec.page_end + 1):
@@ -412,7 +422,10 @@ def _assign_content(
 
     for table in doc.tables:
         position = _table_position(table, blocks_by_page)
-        owner = _owner(position) if position is not None else None
+        # A table under a block moved by position follows that block's new owner.
+        owner = (
+            moved.get(position) or _owner(position) if position is not None else None
+        )
         # Reading order can be out of sync with the pages (BUG-005): only trust an
         # owner whose page range contains the table or ends on the page before it
         # (a table continued at the top of the next page).
@@ -427,6 +440,107 @@ def _assign_content(
         text_owner = owners[block.block_id]
         if text_owner is not None:
             text_owner.text_blocks.append(block)
+
+
+# A single text line is at most this tall; two blocks with tops and bottoms this close
+# are pieces of one printed line (a step split by an inline icon, DOC p144).
+_MAX_LINE_HEIGHT = 14.0
+_SAME_LINE_TOLERANCE = 3.0
+
+
+def _same_line(
+    block: DoclingTextBlock, content: list[DoclingTextBlock], skip: set[str]
+) -> DoclingTextBlock | None:
+    """The nearest other block on the same printed line as a one-line ``block``."""
+    assert block.bbox is not None
+    top, bottom = vertical_span(block.bbox)
+    if top - bottom > _MAX_LINE_HEIGHT:
+        return None
+    line = [
+        other
+        for other in content
+        if other.block_id not in skip
+        and abs(vertical_span(other.bbox)[0] - top) <= _SAME_LINE_TOLERANCE  # type: ignore[arg-type]
+        and abs(vertical_span(other.bbox)[1] - bottom) <= _SAME_LINE_TOLERANCE  # type: ignore[arg-type]
+    ]
+    return min(
+        line,
+        key=lambda other: abs(other.bbox.x0 - block.bbox.x0),  # type: ignore[union-attr]
+        default=None,
+    )
+
+
+def _place_text_read_after_its_heading(
+    heading_anchors: frozenset[int],
+    anchors: frozenset[int],
+    blocks_by_page: dict[int, list[DoclingTextBlock]],
+    owners: dict[str, MatchedSection | None],
+    doc: DoclingDocument,
+) -> dict[int, MatchedSection]:
+    """
+    Docling reads the text of a figure or screenshot last on the page, after a heading
+    printed below it (Philips p41: the 'Change Screen' dialog labels; DOC p144: the end
+    of a step), so reading order gives that text to the heading's section (BUG-023).
+    A text block printed above a section heading on the same page but read after it
+    goes with the nearest content block printed above it, like a table (see
+    _table_position). Short labels move too (they are figure text). Running headers,
+    footers and headings keep their owner, and so does a block with only page
+    furniture above it: the top of a right-hand text column continues the new section.
+    A one-line block with nothing above it follows the block on its printed line (DOC
+    p144: the end of step 4, after an inline icon).
+
+    Only headings found by their title count (not a fallback anchor), and only when
+    earlier content is printed above them: on a page that opens a chapter, the labels
+    above the heading (2002 tab codes 'FU', DOC 'Appendix B') belong to the chapter.
+    Returns the new owner of each moved block, by reading order.
+    """
+
+    def is_furniture(block: DoclingTextBlock) -> bool:
+        return block.label in _FURNITURE_LABELS or _in_furniture_band(block, doc)
+
+    moved: dict[int, MatchedSection] = {}
+    for page_blocks in blocks_by_page.values():
+        content = [b for b in page_blocks if b.bbox is not None and not is_furniture(b)]
+        heading_tops = [
+            (heading.reading_order, vertical_span(heading.bbox)[0])
+            for heading in content
+            if heading.reading_order in heading_anchors
+        ]
+        heading_tops = [
+            (order, top)
+            for order, top in heading_tops
+            if any(
+                other.reading_order < order
+                and vertical_span(other.bbox)[0] > top + _SIDE_HEADING_TOLERANCE  # type: ignore[arg-type]
+                for other in content
+            )
+        ]
+        if not heading_tops:
+            continue
+        late = [
+            block
+            for block in content
+            if block.reading_order not in anchors
+            and any(
+                block.reading_order > order
+                and vertical_span(block.bbox)[0] > top + _SIDE_HEADING_TOLERANCE  # type: ignore[arg-type]
+                for order, top in heading_tops
+            )
+        ]
+        late_ids = {block.block_id for block in late}
+        placed = [
+            (block.bbox, block.label == "section_header", block)
+            for block in content
+            if block.block_id not in late_ids
+        ]
+        for block in late:
+            assert block.bbox is not None
+            above = nearest_above(block.bbox, placed) or _same_line(block, content, late_ids)
+            owner = owners[above.block_id] if above is not None else None
+            if owner is not None:
+                owners[block.block_id] = owner
+                moved[block.reading_order] = owner
+    return moved
 
 
 def _give_furniture_to_table_above(
@@ -970,7 +1084,7 @@ def match_content_to_sections(
     margins = _margin_headings(doc, all_ranges)
     doc = _place_margin_headings(doc, all_ranges, margins)
     margin = frozenset(block_id for ids in margins.values() for block_id in ids)
-    all_reading_order = _compute_reading_order_ranges(
+    all_reading_order, heading_anchors = _compute_reading_order_ranges(
         bookmarks, all_ranges, doc, boundaries, margin=margin
     )
     kept = [i for i in range(len(bookmarks)) if not (boundaries and boundaries[i])]
@@ -1003,7 +1117,7 @@ def match_content_to_sections(
             )
         )
 
-    _assign_content(sections, reading_order_ranges, doc)
+    _assign_content(sections, reading_order_ranges, doc, heading_anchors)
     _extend_page_ends(sections, doc)
 
     return sections

@@ -775,3 +775,152 @@ def test_a_tail_level_with_the_heading_stays_with_it():
     assert [block.text for block in in_order] == [
         "Scan ranges", "The different distance enlargements decrease."
     ]
+
+
+def test_figure_text_printed_above_a_heading_but_read_last_goes_to_the_previous_section():
+    # Philips p41: Docling reads the 'Change Screen' dialog labels, printed above the
+    # next heading, after that heading's text (BUG-023).
+    blocks = [
+        _side(0, "Changing a Screen", 1, "section_header", 700, 72, 300),
+        _side(1, "Connecting Displays 1 Basic Operation", 2, "page_header", 754, 75, 548),
+        _side(2, "In the Change Screen menu, the Screen is marked.", 2, "text", 709, 138, 364),
+        _side(3, "Connecting Displays", 2, "section_header", 402, 72, 508),
+        _side(4, "A second display shows the same Screen.", 2, "text", 371, 137, 523),
+        _side(5, "Change Screen", 2, "text", 708, 394, 475),
+        _side(6, "Vital Signs A", 2, "text", 563, 390, 472),
+    ]
+    bookmarks = [(2, "Changing a Screen", 1), (2, "Connecting Displays", 2)]
+    changing, connecting = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    # 'Change Screen' has only the running header above it but is on the same printed
+    # line as the previous section's text.
+    assert _texts(changing)[-2:] == ["Change Screen", "Vital Signs A"]
+    assert _texts(connecting) == ["Connecting Displays", "A second display shows the same Screen."]
+
+
+def test_a_legend_above_the_heading_moves_and_the_one_below_stays():
+    # Philips p26: the legend of the second figure is printed below its heading; it is
+    # read last but belongs to that section.
+    blocks = [
+        _side(0, "Controls", 1, "section_header", 706, 74, 225),
+        _side(1, "2", 1, "text", 379, 72, 76),
+        _side(2, "Connectors", 1, "section_header", 313, 74, 266),
+        _side(3, "Showing symbols version.", 1, "text", 297, 74, 364),
+        _side(4, "1 On/Standby switch", 1, "text", 689, 379, 472),
+        _side(5, "1 Pressure (option)", 1, "text", 264, 379, 473),
+    ]
+    bookmarks = [(2, "Controls", 1), (2, "Connectors", 1)]
+    controls, connectors = match_content_to_sections(bookmarks, _paged_doc(blocks, 1), 1)
+    assert _texts(controls)[-1] == "1 On/Standby switch"
+    assert "1 Pressure (option)" in _texts(connectors)
+
+
+def test_a_fallback_anchor_does_not_move_text():
+    # A section whose heading is not found anchors on its page's first block; that block
+    # is not a heading, so text above it keeps the reading-order owner.
+    blocks = [
+        _side(0, "Previous", 1, "section_header", 700, 72, 300),
+        _side(1, "Body of the next section.", 2, "text", 400, 72, 500),
+        _side(2, "Caption printed higher.", 2, "text", 700, 72, 500),
+    ]
+    bookmarks = [(2, "Previous", 1), (2, "Missing heading", 2)]
+    _previous, missing = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert "Caption printed higher." in _texts(missing)
+
+
+def test_labels_above_the_heading_of_a_chapter_opening_page_stay():
+    # 2002 p125: the chapter tab code 'IN' is printed above the chapter heading and read
+    # after it; nothing of the previous chapter is on the page, so it stays.
+    blocks = [
+        _side(0, "Exhaust", 1, "section_header", 700, 72, 300),
+        _side(1, "Exhaust body text on its own page.", 1, "text", 650, 72, 500),
+        _side(2, "INTAKE (INDUCTION)", 2, "section_header", 697, 251, 502),
+        _side(3, "Intake body text.", 2, "text", 600, 72, 500),
+        _side(4, "IN", 2, "text", 716, 530, 584),
+    ]
+    bookmarks = [(1, "Exhaust", 1), (1, "INTAKE (INDUCTION)", 2)]
+    _exhaust, intake = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert "IN" in _texts(intake)
+
+
+def test_a_label_with_nothing_above_it_keeps_its_owner():
+    # DOC p198: the 'Appendix B' tab at the top of the page is read after the B.1
+    # heading lower on the page; nothing is printed above it, so it stays.
+    blocks = [
+        _side(0, "A.6 Cable", 1, "section_header", 700, 55, 300),
+        _side(1, "Accessories", 2, "section_header", 663, 54, 230),
+        _side(2, "Contents of this appendix.", 2, "text", 604, 55, 500),
+        _side(3, "B.1 Accessories List", 2, "section_header", 526, 55, 211),
+        _side(4, "Only use approved accessories.", 2, "text", 483, 174, 540),
+        _side(5, "Appendix", 2, "section_header", 719, 328, 476),
+    ]
+    bookmarks = [(1, "A.6 Cable", 1), (1, "Accessories", 2), (2, "B.1 Accessories List", 2)]
+    cable, _accessories, _b1 = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert "Appendix" not in _texts(cable)
+
+
+def _tall(  # type: ignore[no-untyped-def]
+    order: int, text: str, page: int, top: float, bottom: float, x0: float, x1: float
+):
+    return DoclingTextBlock(
+        block_id=f"b{order}", text=text, label="text", page_no=page, reading_order=order,
+        depth=0, provenance=ExtractionProvenance(source="docling", page_no=page),
+        bbox=_box(page, top, bottom, x0, x1),
+    )
+
+
+def test_the_top_of_a_right_hand_text_column_stays_with_the_new_section():
+    # Two text columns: the left column ends with the next heading, and the right column
+    # continues that section from the top of the page (only a running header above it).
+    blocks = [
+        _side(0, "Previous", 1, "section_header", 700, 50, 290),
+        _side(1, "Running header", 2, "page_header", 770, 50, 560),
+        _tall(2, "Previous body text at the top of the left column.", 2, 700, 640, 50, 290),
+        _side(3, "Next", 2, "section_header", 300, 50, 290),
+        _side(4, "Next body text below its heading.", 2, "text", 280, 50, 290),
+        _tall(5, "Next body continues in the right column here.", 2, 700, 620, 310, 560),
+    ]
+    bookmarks = [(2, "Previous", 1), (2, "Next", 2)]
+    _previous, nxt = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert "Next body continues in the right column here." in _texts(nxt)
+
+
+def test_a_table_under_a_moved_block_follows_it():
+    # Philips p358: a screenshot's text and the table printed under it belong to the
+    # section above the next heading.
+    blocks = [
+        _side(0, "Using the Table", 1, "section_header", 700, 71, 305),
+        _side(1, "Use the table to see the doses.", 1, "text", 466, 136, 258),
+        _side(2, "Documenting", 1, "section_header", 202, 71, 371),
+        _side(3, "Select the pop-up key.", 1, "text", 171, 136, 552),
+        _side(4, "Titration Table", 1, "text", 470, 345, 425),
+    ]
+    tables = [_table("t1", 1, 440, 380)]
+    tables[0] = DoclingTable(
+        table_id="t1",
+        page_no=1,
+        provenance=ExtractionProvenance(source="docling", page_no=1),
+        bbox=_box(1, 440, 380, 345, 520),
+    )
+    bookmarks = [(2, "Using the Table", 1), (2, "Documenting", 1)]
+    using, documenting = match_content_to_sections(
+        bookmarks, _paged_doc(blocks, 1, tables), 1
+    )
+    assert "Titration Table" in _texts(using)
+    assert _table_ids(using) == ["t1"]
+    assert _table_ids(documenting) == []
+
+
+def test_the_end_of_a_line_split_by_an_icon_follows_its_line():
+    # DOC p144: step 4 is split by an inline icon; its end is read after the next heading
+    # and has only the running header above it.
+    blocks = [
+        _side(0, "10.6.2 Pressure-Out", 1, "section_header", 700, 105, 284),
+        _side(1, "Running header", 2, "page_header", 764, 56, 553),
+        _side(2, "4 Touch the pressure signal icon", 2, "text", 738, 134, 281),
+        _side(3, "10.6.3 Waveform Confirmation", 2, "section_header", 712, 105, 284),
+        _side(4, "The Zero and Waveform screen shows the pressure.", 2, "text", 690, 104, 504),
+        _side(5, "to begin pressure signal output.", 2, "text", 738, 316, 545),
+    ]
+    bookmarks = [(3, "10.6.2 Pressure-Out", 1), (3, "10.6.3 Waveform Confirmation", 2)]
+    pressure, _waveform = match_content_to_sections(bookmarks, _paged_doc(blocks, 2), 2)
+    assert _texts(pressure)[-1] == "to begin pressure signal output."
