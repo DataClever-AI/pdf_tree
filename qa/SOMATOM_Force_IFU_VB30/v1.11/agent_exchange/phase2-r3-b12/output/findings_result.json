@@ -1,0 +1,74 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0716",
+      "page_sampled": "357",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p356 and p357 the black 'i' note icons were not kept as images (two on p356, two on p357). Their text is in nodes 7675 and 7679-7681 and 7685-7689.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0717",
+      "page_sampled": "357",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p357 the 'i' note icon and the two yellow CAUTION triangles were not kept as images. On p358 two more 'i' icons are missing. The text of every note is in nodes 7691-7705 and 7710-7713.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0742",
+      "page_sampled": "369",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p368 the 'i' icon of the 27 mm note and on p369 the 'i' icon of the Scan time note were not kept as images. Their text is in nodes 8021-8023 and 7972.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0744",
+      "page_sampled": "370",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p369 two WARNING triangles and on p370 one CAUTION triangle and four 'i' note icons were not kept as images. Their text is in nodes 8036-8046 and 8053-8068. The FlashCheck button icon on p370 is extracted as img_0357.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0746",
+      "page_sampled": "371",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p371 the 'i' icon of the 'cardiac/standard dose range' note and on p372 the 'i' icon of the 'You cannot delete' note were not kept as images. The text is in nodes 8084 and 8094.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0753",
+      "page_sampled": "375",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p375 the 'i' icon of the Recon selection list note was not kept as an image. Its text is in node 8121. The icon at the top of p375 (img_0361) is in sec_0752 and not rated here.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0758",
+      "page_sampled": "378",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p378 the two 'i' icons of the scroll note and the yellow-phase note were not kept as images. Their text is in nodes 8182-8183. The Preview Series and Multiphase icons at the top of p378 are not in images.json, but they belong to sec_0757.",
+      "notes": "Still Low because a meaningful icon is missing: the Preview Series and Multiphase icons at the top of p378 (owner sec_0757), dropped on the sampled page. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.9
+    }
+  ]
+}

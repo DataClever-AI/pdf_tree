@@ -4,7 +4,7 @@ status: mitigated
 finding: 
 fix_branch: fix/BUG-029-margin-headings-residual
 fix_commit: 360cf01, beb1698, 175c3d1, bacf325
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # BUG-023 · Reading-order misattribution around a same-page heading transition: content printed before or after a heading on the same page is assigned to the neighbouring section
@@ -39,6 +39,8 @@ Pending.
 |---|---|---|---|---|---|---|---|
 | 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 8 → 3 | 9 | Better: 8 -> 3 FAIL on paired rows. The rest is still open. |
 | 2026-10-07 | `2002_Service_Manual_TI` | v2.11 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 2 → 0 | 13 | Fixed in this manual: 2 -> 0 FAIL on paired rows. |
+| 2026-10-08 | `Philips-MP20-MP90-Manual` | v2.16 | `027c3a4` fix(section_matcher): place text printed above a heading but read after it by position (BUG-023) | Phase 2: text printed above a heading but read after it takes the owner of the content above it or on its line (pipeline 027c3a4). | 9 → 2 | 1 | Keep: 9 -> 2 FAIL, no Critical left. Left: the lone 'Change Screen' label (sec_0047, Medium, known trade-off) and the lone WARNING label (sec_0515, Medium). |
+| 2026-10-08 | `SOMATOM_Force_IFU_VB30` | v1.11 | `027c3a4` fix(section_matcher): place text printed above a heading but read after it by position (BUG-023) | Phase 2: text printed above a heading but read after it takes the owner of the content above it or on its line (pipeline 027c3a4). | 3 → 3 | 4 | Keep: p11, p171 and p174 improve; the 3 rows left (sec_0395) are a garbled heading not found as anchor, not BUG-023. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen

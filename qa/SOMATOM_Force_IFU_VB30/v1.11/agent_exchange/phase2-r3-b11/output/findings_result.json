@@ -1,0 +1,84 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0655",
+      "page_sampled": "322",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p322 the two 'i' note icons at the top are not in the image output. The note text is in #/texts/6946 and #/texts/6947. p321 has no icon in this section.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0685",
+      "page_sampled": "335",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p335 three 'i' note icons (before 'To deactivate iMAR', 'The following labels...' and 'The suffix is not shown') are not in the image output. The note texts are in nodes 7248, 7250 and 7262.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0715",
+      "page_sampled": "356",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p356 the warning triangle in the CAUTION bar is not in the image output. The word CAUTION and the warning text are in nodes 7661 to 7664.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0651",
+      "page_sampled": "320",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p319 the steps are the same as on p322 (sec_0656), where the MOVE key icon, the START radiation icon and the 'i' note icons are visible. In sec_0651 only the screenshot img_0325 is extracted. The small icons are not. p319 is not in the sampled pages, so this is inferred from the same steps on p322.",
+      "notes": "Still Low because a meaningful icon is missing: the MOVE key icon and the START radiation icon (inferred from the same steps on p322). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0654",
+      "page_sampled": "321",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p321 the two table icons next to steps 1 and 2 and the 'i' note icon are not in the image output. Only the large screenshot img_0326 is. The text explains the icons ('Activate cycle time table', 'Edit cycle time table').",
+      "notes": "Still Low because a meaningful icon is missing: the two table icons next to steps 1 and 2. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0656",
+      "page_sampled": "322",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p322 the MOVE key icon (step 2), the yellow START icon (step 3) and two 'i' note icons are not in the image output. The three-screenshot strip is extracted as img_0327.",
+      "notes": "Still Low because a meaningful icon is missing: the MOVE key icon (step 2) and the yellow START icon (step 3). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "No images are extracted (images.json is empty). Small icons were not extracted: the 'i' note icons on p350 and p351, and the status and scan range icons in the two p351 tables (#/tables/32, #/tables/33). The meaning of each status icon is written in the Meaning column.",
+      "notes": "Still Low because a meaningful icon is missing: the status and scan range icons in the two p351 tables (#/tables/32, #/tables/33). Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": "350",
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0710 covers p350-p353. The only extra nodes are its own p350 footers (#/texts/7574, 7575) and p351 running header (#/texts/7576). They are inside its own page range, so no boundary is crossed. All real content is owned correctly.",
+      "notes": "Regraded by the lead from FAIL Low: boilerplate inside the section's own range is not a defect. Same as v1.10 (PASS).",
+      "confidence": 0.9
+    }
+  ]
+}

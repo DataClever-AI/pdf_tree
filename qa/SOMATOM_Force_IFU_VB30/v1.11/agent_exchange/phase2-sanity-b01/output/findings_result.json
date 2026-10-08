@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "bookmark_sanity ran with no hard failure and no repair (953 bookmarks, 467 pages). The run finished. toc_classification excluded 2 bookmarks (index, table_of_contents). Coverage, Precision and Structure are PASS.",
+      "notes": "Checked in logs/run.log of v1.11. The counts agree with the artifacts: 951 sections, 1 flagged section, 502 images, 9920 matched blocks + 169 front matter = 10089 blocks, 0 orphans, 0 duplicates. All counts are the same as v1.10; only timings differ. The log does not list the BUG-023 and BUG-029 moves (15 nodes); that is missing detail, not a defect.",
+      "confidence": 0.95
+    }
+  ]
+}
