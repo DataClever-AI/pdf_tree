@@ -4,7 +4,7 @@ status: mitigated
 finding:
 fix_branch: fix/BUG-029-margin-headings
 fix_commit: 175c3d1, bacf325, 0128ad0
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # BUG-029 · Margin (side) headings read before the body: content above or beside a left-margin heading goes to the wrong section, and on pages with several margin headings all the body goes to the last one
@@ -41,6 +41,7 @@ Simulation: SOMATOM sections with only a heading went from 219 to 44. Residual: 
 | 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.9 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 5 → 5 | 1 | No change: 5 -> 5 FAIL on paired rows. Still open in this manual. |
 | 2026-10-07 | `Philips-MP20-MP90-Manual` | v2.15 | `211981b` feat(qa): add --all-fails to check every standing FAIL row in a mitigation version | Final re-measurement with all fixes on the integration branch (pipeline 211981b). The sample has every row that was still FAIL. | 1 → 0 | 3 | Fixed in this manual: 1 -> 0 FAIL on paired rows. |
 | 2026-10-07 | `SOMATOM_Force_IFU_VB30` | v1.10 | `29ad53c` fix(section_matcher): split merged margin headings and anchor on exact margin headings (BUG-029) | Phase 1: merged margin headings are split and placed by the PDF text layer; an exact margin heading is the first anchor (pipeline 29ad53c). | 47 → 4 | 5 | Keep: 47 -> 4 FAIL by the catalogue (the lead counts 7, with sec_0195 and sec_0785 noted as BUG-019). Left: a merge across pages, a two-line heading, a heading with no node, and a p152 regression. |
+| 2026-10-08 | `SOMATOM_Force_IFU_VB30` | v1.11 | `027c3a4` fix(section_matcher): place text printed above a heading but read after it by position (BUG-023) | A split tail printed level with its margin heading stays with it (pipeline dc8b3a5). | 5 → 8 | 4 | Keep: the p152 regression is fixed (2 Critical -> PASS). The count rises to 8 only because sec_0195 and sec_0785 are now filed under BUG-029 instead of BUG-019. |
 
 <!-- generated:occurrences:start -->
 ## Where it was seen
