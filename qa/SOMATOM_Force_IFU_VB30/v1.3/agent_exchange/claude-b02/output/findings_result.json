@@ -1,0 +1,734 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 295 the margin heading 'Planning the scan ranges' sits under the level-3 section 'Using the 3D camera' and above its two sub-steps (presets p296, manual adjust p297, level 5). Level 4 fits this nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0614 'Using the 3D camera' (p293-298) lists sec_0617 as a child. Children sec_0618 (p296) and sec_0619 (p297) match the heading 'Manually adjusting the scan range' seen on page 297.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 295 the heading 'Planning the scan ranges' is in the left margin at the bottom, next to one sentence ('You can modify the topogram scan ranges...'). The warning box about body landmarks, the three bullets, step 2 'Optional: retake a planning image' and 'A live image of the patient is displayed again' are ABOVE this heading and belong to the previous section 'Taking a planning image' (sec_0616). They are nodes #/texts/6401-6406 inside sec_0617, and #/texts/6401 even joins the heading text with the box text.",
+   "notes": "Checker note: verify_claims only sees boilerplate crossing (the p296 running header, which alone would be Low). I keep Critical because I saw on page 295 that body text of the previous section (box, bullets, step 2) is inside this section. Root cause: content printed above a margin heading is assigned to the section after it. The page_end 297 is fine because children sec_0618 and sec_0619 cover p296-297.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Positioning the patient/Using the 3D camera/Planning the scan ranges is in the right order; page header on 295 says '6 Examination' and the parent title is 'Using the 3D camera'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The body of sec_0616 (box with Preset icons, bullets, step 2 and live image sentence on page 295) is stored in sec_0617 (#/texts/6401-6406), so sec_0616 loses its end and sec_0617 keeps content that is not its own. Only one real sentence of sec_0617 is on page 295.",
+   "notes": "Same root cause as page_start_end; graded the same.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The flag does not say that the section is wrong; the content error is reported in 5.4-page_start_end.",
+   "notes": "The flag missed a real problem, but flag state alone is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' and the heading 'Planning the scan ranges' is visible on page 295, so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio at bottom of page 295 is the arabic number 295, same as numbering_scheme 'arabic'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 295 equals physical page 295 in the render, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Page 295 shows a small blue Camera icon (about 38x33 px) and a double-chevron Preset icon. They are not extracted. The text names the Camera icon, so the meaning is kept; the large picture of this section is extracted (img_0168).",
+   "notes": "Small icon dropped, meaning stated in the text. Matches the checker signal.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image mapped to this section is img_0168 (911x959), a real planning-image screenshot with callouts 1-5. No rule, logo or footer strip was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0617",
+   "page_sampled": 295,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0168 (911x959, page 296) is a planning image with callouts 1-5 and the body-region preset column. It is mapped to sec_0617, but page 296 is fully covered by the child sec_0618 'Using the scan range presets', which is the deepest section for that page. The parent has only one real sentence of its own.",
+   "notes": "I did not get a rendering of page 296, so this is based on the page range, the callout picture content and the pipeline rule (deepest section). Lower confidence.",
+   "confidence": 0.68
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The margin heading 'Starting the topogram scan' on page 309 is a level-4 item under 'Acquiring a Topogram' (level 3, path Examination/Scan). Style matches other margin headings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0633 'Acquiring a Topogram' (p308-310) contains sec_0636. Next section sec_0637 'Planning an Examination' is the numbered heading 6.6.4 at the bottom of page 310, so it is not a child.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 309 the info box 'When scanning several topograms for separate body areas, observe the following sequence...' is printed ABOVE the margin heading 'Starting the topogram scan'. It is node #/texts/6684 in sec_0636, so it was assigned to the wrong section (it belongs to the previous section, sec_0635 on page 308). The end is correct: 6.6.4 'Planning an Examination' at the bottom of page 310 is not absorbed.",
+   "notes": "Same margin-heading root cause as sec_0617 and sec_0746. I assume this box continues sec_0635, which was not shown to me.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Scan/Acquiring a Topogram/Starting the topogram scan matches the parent chain; header on page 309 says '6 Examination'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The first info box on page 309 (#/texts/6684) is stored in sec_0636 although it is printed above this section's heading; the previous section loses it. The other nodes (blue shutter, bullets, steps 1-3, CARE Profile, steps up to 4 on page 310) are correctly kept.",
+   "notes": "Same root cause as page_start_end.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The flag state is not a defect; the misplaced box is reported in 5.4-page_start_end.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' and the heading is visible on page 309.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Footer folios 309 and 310 are arabic, like numbering_scheme.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Footer folio 309 equals physical page 309 in the render, so offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The topogram screenshot at the top of page 310 is extracted as img_0173. The small yellow radiation icon next to step 3 on page 309 (about 34x34 pt) is not extracted. The step text 'Press the START key' gives the action, so the meaning is mostly kept.",
+   "notes": "Small icon dropped, meaning in the text. Matches the checker signal.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only img_0173 (615x536), a real topogram with CARE Profile, is kept. No decorative strip or logo is extracted.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0636",
+   "page_sampled": 309,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0173 (page 310) matches the topogram at the top of page 310, which follows step 3 of this section and is above the 6.6.4 heading. It is mapped to sec_0636, which is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 343 shows the numbered heading '7.1.1 Activating Bolus Tracking' under '7.1 CARE Bolus CT' and chapter 7. Level 3 inside the Enhanced examination tree is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0697 'CARE Bolus CT' is 7.1 on page 343 and contains 7.1.1. Next section sec_0699 is the heading 7.1.2 'Performing a PreMonitoring Scan' on page 344, a sibling.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Page 343 start is right: 7.1.1 heading is the first node and the 7.1 intro above is not included. On page 344 the figure legend (1)-(4) is correct, but node #/texts/7433 'Setting the scan parameters' (order 7454, before the legend) is the margin heading that is printed BELOW the heading 7.1.2 'Performing a PreMonitoring Scan', so it belongs to the next section.",
+   "notes": "A heading of the next section is kept in this section and the node order is mixed up. Confidence is a bit lower because one heading node is the only wrong item.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Bolus CT/Activating Bolus Tracking agrees with the headings 7, 7.1 and 7.1.1 and the page header '7 Enhanced examination'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The heading 'Setting the scan parameters' (#/texts/7433), printed below 7.1.2 on page 344, is in sec_0698. The next section therefore lacks its own sub-heading, and this section has an extra heading that is not its own.",
+   "notes": "Same root cause as page_start_end.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100; flag state is not a defect. The stray heading is reported in 5.4-page_start_end.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' and the numbered heading 7.1.1 is visible on page 343.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 343 and 344 are arabic, as numbering_scheme says.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 343 equals physical page 343, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The chronicle screenshot at the top of page 344 is extracted as img_0188. The two small icons at lower left of page 344 belong to the next section (7.1.2) and are not in this section.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only img_0188 (400x199), a real chronicle picture with callouts (1)-(4), is mapped. No decorative strip is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0188 (page 344) is the PreMonitoring/Contrast/Monitoring/AbdFast list that follows the last step of 7.1.1 and sits above the 7.1.2 heading. It is correctly mapped to sec_0698 on a page shared with sec_0699.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 350 shows '7.2.1 Activating the coupled mode' as a numbered third-level heading under 7.2 CARE Contrast CT. Level 3 fits.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0709 'CARE Contrast CT' (p349-358) is 7.2. Children sec_0711 (p351-352) and sec_0712 (p352-353) are its sub-topics. Page 353 shows the next sibling heading 7.2.2.",
+   "notes": "Pages 351 and 352 were not in my input.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 350 the first node is the heading 7.2.1 near the bottom, and the intro of 7.2 and the notes above it are not in this section. The last own node is the status-icon table on page 351. Page_end 353 is the end of child sec_0712; page 353 shows content above the 7.2.2 heading and the 7.2.2 heading itself starts the next sibling.",
+   "notes": "Pages 351-352 were not rendered, so the middle was not checked.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Contrast CT/Activating the coupled mode agrees with headings 7, 7.2 and 7.2.1.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No block above the 7.2.1 heading on page 350 is in this section, and the child topics are separate sections. I found no duplicated or missing block on pages 350 and 353.",
+   "notes": "Pages 351-352 were not rendered.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100; nothing on the pages contradicts it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' and the heading 7.2.1 is visible on page 350.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 350 and 353 are arabic numbers.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 350 and 353 equal the physical pages, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table #/tables/32 on page 351 has the text 'Icon | Meaning' and four meanings (coupling rejected, available, ready, local procedure active), but the Icon column is empty in every row. The icons that identify each status are lost, so a reader cannot match a meaning to its icon. The meanings themselves survive.",
+   "notes": "Page 351 was not rendered in my input, so I judged from the extracted text only: the empty first cells are visible in canonical_text.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is extracted for this section. The pages shown (350, 353) only have small info and caution icons. The status icons of the table on page 351 are discussed in 5.6-table_content.",
+   "notes": "Page 351 was not rendered; confidence is low.",
+   "confidence": 0.62
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section, so no noise is kept. Pages 350 and 353 show no decorative strip that was extracted.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0710. Pages 350 and 353 show no figure, only text boxes, so none is missing.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 371 shows 'Turbo Flash Spiral Chest Pain scan range' as a margin heading under the chest-pain topic (level 3), so level 4 is right.",
+   "notes": "The heading node itself is typed 'paragraph' (#/texts/8015), which is a node issue and not a level issue.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0741 'Turbo Flash Spiral Cardiac/Chest Pain' (p368-373) contains sec_0746. Previous sibling sec_0745 'Turbo Flash Spiral Cardiac scan range' is on page 370 and next sibling sec_0747 starts on page 372.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 371 the margin heading is at the middle, next to 'For the chest pain scan protocols...'. Above it are the CAUTION box ('Turbo Flash Spiral Cardiac: The usable scan field is smaller...'), the first topogram picture, the bullets 'Blue box' and 'Magenta box', and 'You can adapt the scan range in the usual way'. These belong to the previous section 'Turbo Flash Spiral Cardiac scan range' (sec_0745), but nodes #/texts/8016-8023 are in sec_0746.",
+   "notes": "Same margin-heading root cause as sec_0617 and sec_0636.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/Cardiac CT/Turbo Flash Spiral Cardiac/Chest Pain/Turbo Flash Spiral Chest Pain scan range follows the parent chain; page header says '7 Enhanced examination'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Eight nodes (#/texts/8016-8023: CAUTION box, bullets and 'You can adapt the scan range') are printed above this section's heading on page 371 but are stored in sec_0746; the previous section loses the end of its content.",
+   "notes": "Same root cause as page_start_end.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100; flag state is not a defect. The misplaced content is reported in 5.4-page_start_end.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' and the heading text is visible on page 371.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio 371 at the bottom of the page is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 371 equals physical page 371, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both topogram pictures on page 371 are extracted (img_0195 and img_0196). Only small icons (info, caution triangle) are not extracted and their meaning is in the text.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both extracted images (828x340 and 827x496) are real topogram pictures. No decorative strip or logo is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0195 (828x340, page 371) is the first topogram, printed under the CAUTION box and above the 'Blue box / Magenta box' bullets, before the section heading. It belongs to sec_0745 but is mapped to sec_0746. img_0196 (827x496, with heart icon, under 'The recon job...') is correct for sec_0746.",
+   "notes": "The page range of sec_0745 is only page 370, so the pipeline mapped by page; the real owner is the previous section by layout.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 315 'Checking parameter settings' is a margin heading under the numbered heading 6.6.5 'Acquiring a Sequence' (parent, level 3), so level 4 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0644 'Acquiring a Sequence' (p315-318) is the 6.6.5 heading on page 315. Its bullet list points to 'Checking parameter settings' (page 315) and the next topic, so sec_0645 is a child.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "sec_0645 has only 5 nodes: the heading #/texts/6812 and header/footer text. Page 315 shows, under the heading, the screenshot with callouts 1-8, the list (1) Examination direction to (8) Radiation parameters, and the info box 'The Scan parameter card contains further parameter settings for scanning.' None of this text is in the section, so it is left with only its heading.",
+   "notes": "I cannot see in my input where the list and the info box went (parent or neighbour); either way they are not owned by this section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Scan/Acquiring a Sequence/Checking parameter settings matches parent sec_0644 and the heading 6.6.5 'Acquiring a Sequence' on page 315.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The callout list (1)-(8) and the 'Scan parameter card' info box on page 315 are not in sec_0645. They are missing from the section that owns them, so there is a gap in its coverage.",
+   "notes": "Same root cause as page_start_end.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The flag state is not a defect; the empty section is reported in 5.4-page_start_end.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' and the heading is visible on page 315.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 315 folio is the arabic 315.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 315 equals physical page 315, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parameter-card screenshot with callouts 1-8 on page 315 is extracted as img_0178 (865x460). Only small info icons are not extracted.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only mapped image img_0178 is a real screenshot. No rule or logo is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0645",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0178 (page 315) is the Routine parameter-card screenshot placed right under the margin heading 'Checking parameter settings', so sec_0645 is the right owner.",
+   "notes": "The image is correct although the text of the section is missing.",
+   "confidence": 0.88
+  }
+ ]
+}

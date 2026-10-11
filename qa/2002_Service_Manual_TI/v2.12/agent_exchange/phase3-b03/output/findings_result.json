@@ -1,0 +1,1584 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "EXHAUST is printed as a level-3 heading on p141 and tree.json has hierarchy_level 3. It is a chapter-level title under the manual section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0052 has parent sec_0002 (NEW CAR INFORMATION SECTION), which matches the chapter the page belongs to (running header on p141). Its children (numbered subsections) follow the contents list in order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p141 the chapter cover shows the title EXHAUST, the large \"EX\" and a two-line contents list. Nodes #/texts/2199, #/texts/2200, #/texts/2201 and #/tables/42 are all from this cover. Children sec_0053 (p142) and sec_0054 (p143-144) start after it. Range p141-144: first and last page agree with the headings and no neighbour content is absorbed. The contents line '2. Composition' is in #/texts/2201 and is on the p141 cover, so it is in the right section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EXHAUST lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p141.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p141-144 with no gap and no overlap. No node is repeated in the node list for this section. Content on p141 is not repeated in children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0052 has flagged_for_review false. The chapter title is clearly visible on the p141 cover, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0052. The heading 'EXHAUST' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. The cover page has no folio. Physical p141 is used with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The cover page has no folio. Physical p141 is used with offset 0. The heading of sec_0052 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The p141 contents has two lines: '1. General ... 2' and '2. Composition ... 3'. Table #/tables/42 has only line 1, and the header word 'Page' is merged in the value cell ('Page 2'). Line 2 is outside the table, in paragraph #/texts/2201, which comes before the table in reading order.",
+   "notes": "Old FAIL (BUG-008, v2.11): still present. This table did not change in v2.12. The second row is outside the table, but its text and page number 3 survive in #/texts/2201, so Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for sec_0052 and p141 shows none: only the title, the big \"EX\" letters, a black rule, a contents list and a black tab at the right edge. No meaningful figure is missing. The black tab at the page edge is decoration.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for sec_0052. The title rule, the 'EX' letters and the black tab on p141 are decorative and were not kept as images.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0052",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for sec_0052 and p141 shows none: only the title, the big \"EX\" letters, a black rule, a contents list and a black tab at the right edge. Nothing is mapped, and nothing needs mapping.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "2. Composition is printed as a level-4 heading on p148 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0057 has parent sec_0055 (EXHAUST), which matches the chapter the page belongs to (running header on p148). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p147 the heading \"2. Composition\" starts the section, followed by A: WITH CATALYTIC CONVERTER, B: AUSTRALIA OUTBACK MODELS (p148), C: WITHOUT CATALYTIC CONVERTER (p149) and a MEMO page (p150, EX-6). All nodes in sec_0057 belong to these parts. Next section sec_0058 COOLING starts on p151. Range p147-150: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../EXHAUST/2. Composition lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p148.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p147-150 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0057 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0057. The heading '2. Composition' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folios EX-3 (p147), EX-4 (p148), EX-5 (p149) and EX-6 (p150) are consistent with offset 0 and the arabic scheme.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios EX-3 (p147), EX-4 (p148), EX-5 (p149) and EX-6 (p150) are consistent with offset 0 and the arabic scheme. The heading of sec_0057 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_0093 and img_0094 (p147, 2000 cc and 2500 cc exhaust drawings), img_0095 (p148, Australia Outback drawing) and img_0096 and img_0097 (p149, 2000 cc and 2500 cc drawings) are all mapped to sec_0057. Each crop shows the full drawing. Page 150 is a MEMO page with no figure. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_0093 and img_0094 (p147, 2000 cc and 2500 cc exhaust drawings), img_0095 (p148, Australia Outback drawing) and img_0096 and img_0097 (p149, 2000 cc and 2500 cc drawings) are all mapped to sec_0057. Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0057",
+   "page_sampled": 148,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_0093 and img_0094 (p147, 2000 cc and 2500 cc exhaust drawings), img_0095 (p148, Australia Outback drawing) and img_0096 and img_0097 (p149, 2000 cc and 2500 cc drawings) are all mapped to sec_0057. Each crop shows the full drawing. Page 150 is a MEMO page with no figure. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "4. Mechanical Seal is printed as a level-4 heading on p155 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0062 has parent sec_0058 (COOLING), which matches the chapter the page belongs to (running header on p155). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 the heading \"4. Mechanical Seal\", one paragraph, the seal drawing and the legend (1)-(3) are all in sec_0062 (#/texts/2391-2399). Range p155: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../COOLING/4. Mechanical Seal lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p155.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p155 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0062 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0062. The heading '4. Mechanical Seal' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folio CO-5 on p155 is consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio CO-5 on p155 is consistent with offset 0. The heading of sec_0062 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0100 (p155) is the mechanical seal drawing with call-outs (1)-(3). It is mapped to sec_0062 and the crop is complete. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0100 (p155) is the mechanical seal drawing with call-outs (1)-(3). Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0062",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0100 (p155) is the mechanical seal drawing with call-outs (1)-(3). It is mapped to sec_0062 and the crop is complete. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "1. General is printed as a level-4 heading on p161 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0066 has parent sec_0065 (LUBRICATION), which matches the chapter the page belongs to (running header on p161). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p160 the heading \"1. General\" and six bullets are in sec_0066 (#/texts/2435-2441). On p161 the two drawings and their legend (1)-(7), (a), (b) are in sec_0066 (#/texts/2443-2455). Next sec_0067 starts on p162. Range p160-161: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../LUBRICATION/1. General lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p161.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p160-161 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0066 has flagged_for_review false. Heading '1. General' is clearly visible on p160, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0066. The heading '1. General' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folios LU-2 (p160) and LU-3 (p161) are consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios LU-2 (p160) and LU-3 (p161) are consistent with offset 0. The heading of sec_0066 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0103 (p161) holds both drawings: the engine oil-flow view and the valve-train view with call-outs (1)-(7), (a), (b). It is mapped to sec_0066. Page 160 has text only. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0103 (p161) holds both drawings: the engine oil-flow view and the valve-train view with call-outs (1)-(7), (a), (b). Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0066",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0103 (p161) holds both drawings: the engine oil-flow view and the valve-train view with call-outs (1)-(7), (a), (b). It is mapped to sec_0066. Page 160 has text only. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "1. General is printed as a level-4 heading on p168 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0073 has parent sec_0072 (SPEED CONTROL SYSTEM), which matches the chapter the page belongs to (running header on p168). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p168 the heading \"1. General\", the paragraph about the accelerator outer cable, the drawing and the legend (1)-(5) are in sec_0073 (#/texts/2520-2535). Next sec_0074 IGNITION starts on p169. Range p168: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../SPEED CONTROL SYSTEM/1. General lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p168.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p168 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0073 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0073. The heading '1. General' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folio SP-2 on p168 is consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio SP-2 on p168 is consistent with offset 0. The heading of sec_0073 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0109 (p168, origin vector) is the accelerator cable and pedal drawing with call-outs (1)-(5). It is mapped to sec_0073 and the crop is complete. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0109 (p168, origin vector) is the accelerator cable and pedal drawing with call-outs (1)-(5). Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 168,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0109 (p168, origin vector) is the accelerator cable and pedal drawing with call-outs (1)-(5). It is mapped to sec_0073 and the crop is complete. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "2. Spark Plug is printed as a level-4 heading on p175 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0079 has parent sec_0077 (IGNITION), which matches the chapter the page belongs to (running header on p175). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p175 the heading \"2. Spark Plug\", the paragraph, the plug drawing and the gap legend are in sec_0079. Page 176 is a MEMO page (IG-4) and also belongs here. Range p175-176: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../IGNITION/2. Spark Plug lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p175.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p175 the gap legend '(1) Gap: 1.0 - 1.1 mm ... *1' and '0.7 - 0.8 mm ... *2' is in sec_0079 twice. Nodes #/texts/2606 and #/texts/2608 have the same text and bbox, as do #/texts/2607 and #/texts/2609. The page shows this legend once.",
+   "notes": "Old FAIL (no BUG id, v2.11): still present. Probably the legend text was read twice by the extractor. The content is in the right section and nothing is lost, so Low.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0079 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0079. The heading '2. Spark Plug' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folios IG-3 (p175) and IG-4 (p176) are consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios IG-3 (p175) and IG-4 (p176) are consistent with offset 0. The heading of sec_0079 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0115 (p175, origin vector) is the spark plug drawing with the gap mark (1). It is mapped to sec_0079 and the crop is complete. Page 176 is a MEMO page. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0115 (p175, origin vector) is the spark plug drawing with the gap mark (1). Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 175,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0115 (p175, origin vector) is the spark plug drawing with the gap mark (1). It is mapped to sec_0079 and the crop is complete. Page 176 is a MEMO page. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "FUEL INJECTION (FUEL SYSTEM) is printed as a level-3 heading on p181 and tree.json has hierarchy_level 3. It is a chapter-level title under the manual section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0084 has parent sec_0002 (NEW CAR INFORMATION SECTION), which matches the chapter the page belongs to (running header on p181). Its children (numbered subsections) follow the contents list in order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p181 the chapter cover shows the title, \"FU (H6)\" and a six-line contents list. The sec_0084 own nodes (#/texts/2688, #/texts/2689, #/tables/48) are all from this cover. The six children sec_0085-sec_0090 cover p182-216 without a gap. Range p181-216: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../FUEL INJECTION (FUEL SYSTEM) lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p181.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p181-216 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0084 has flagged_for_review false. The chapter title is clearly visible on the p181 cover, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0084. The heading 'FUEL INJECTION (FUEL SYSTEM)' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. The cover page has no folio. Physical p181 is used with offset 0. The contents page numbers (2, 3, 6, 19, 28, 36) are printed FU folios and match children p182, 183, 186, 199, 208, 216 with offset 0 for the folio base.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The cover page has no folio. Physical p181 is used with offset 0. The contents page numbers (2, 3, 6, 19, 28, 36) are printed FU folios and match children p182, 183, 186, 199, 208, 216 with offset 0 for the folio base. The heading of sec_0084 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/48 on p181 is the contents with 6 rows. All titles and page numbers (2, 3, 6, 19, 28, 36) are present and in order. In rows 4 and 5 the numbers 19 and 28 sit in the title cell and the Page cell is empty. In row 6 the dots and 36 are split from the title.",
+   "notes": "Old FAIL (no BUG id, v2.11): still present. This table did not change in v2.12. Page-number digits moved between cells. Values and order are kept, so Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for sec_0084 and p181 shows none: only the title, \"FU (H6)\", a rule, the contents list and a black tab at the right edge. The figures of p182-216 belong to the child sections. No meaningful figure is missing. The black tab at the page edge is decoration.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for sec_0084. The title rule and the black tab on p181 are decorative and were not kept as images.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 181,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for sec_0084 and p181 shows none: only the title, \"FU (H6)\", a rule, the contents list and a black tab at the right edge. The figures of p182-216 belong to the child sections. Nothing is mapped, and nothing needs mapping.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "3. Fuel Line is printed as a level-4 heading on p188 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0087 has parent sec_0084 (FUEL INJECTION), which matches the chapter the page belongs to (running header on p188). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts with \"3. Fuel Line\" on p186 and ends with F: SUB-COMPARTMENT FUEL LEVEL SENSOR on p198 (FU-18). Sec_0088 starts on p199 with \"4. Sensors and Switches\". Range p186-198: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../FUEL INJECTION (FUEL SYSTEM)/3. Fuel Line lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p188.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p186-198 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0087 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0087. The heading '3. Fuel Line' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folios FU-6 (p186) to FU-18 (p198) are consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios FU-6 (p186) to FU-18 (p198) are consistent with offset 0. The heading of sec_0087 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p188 image img_0124 shows the pressure regulator drawing with the arrows A, B, C. It is mapped to sec_0087 and the crop is complete. Other sec_0087 images (img_0123 p187, img_0125 p191, img_0126 p192, img_0127 p193, img_0128 p194, img_0129 p196, img_0130 p197, img_0131 p198) are all in the same section; p189 (MEMO), p190 and p195 have no figure. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p188 image img_0124 shows the pressure regulator drawing with the arrows A, B, C. Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 188,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p188 image img_0124 shows the pressure regulator drawing with the arrows A, B, C. It is mapped to sec_0087 and the crop is complete. Other sec_0087 images (img_0123 p187, img_0125 p191, img_0126 p192, img_0127 p193, img_0128 p194, img_0129 p196, img_0130 p197, img_0131 p198) are all in the same section; p189 (MEMO), p190 and p195 have no figure. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "4. Sensors and Switches is printed as a level-4 heading on p201 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0088 has parent sec_0084 (FUEL INJECTION), which matches the chapter the page belongs to (running header on p201). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts with \"4. Sensors and Switches\" on p199 and runs to G: VEHICLE SPEED SENSOR on p207 (FU-27). Sec_0089 starts on p208. Range p199-207: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../FUEL INJECTION (FUEL SYSTEM)/4. Sensors and Switches lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p201.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p199-207 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0088 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0088. The heading '4. Sensors and Switches' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folios FU-19 (p199) to FU-27 (p207) are consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios FU-19 (p199) to FU-27 (p207) are consistent with offset 0. The heading of sec_0088 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p201 image img_0134 (origin vector) shows the rear oxygen sensor with call-outs (1)-(6) and the code B2H4156B. It is mapped to sec_0088 and the crop is complete. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p201 image img_0134 (origin vector) shows the rear oxygen sensor with call-outs (1)-(6) and the code B2H4156B. Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 201,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p201 image img_0134 (origin vector) shows the rear oxygen sensor with call-outs (1)-(6) and the code B2H4156B. It is mapped to sec_0088 and the crop is complete. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "2. Cooling Circuits is printed as a level-4 heading on p153 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0060 has parent sec_0058 (COOLING), which matches the chapter the page belongs to (running header on p153). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p153 the heading \"2. Cooling Circuits\", the three phase paragraphs and the circuit diagram are all in sec_0060 (#/texts/2361-2374). Previous sec_0059 is p152 and next sec_0061 is p154. Range p153: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../COOLING/2. Cooling Circuits lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p153.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p153 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0060 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0060. The heading '2. Cooling Circuits' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folio CO-3 on p153 is consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio CO-3 on p153 is consistent with offset 0. The heading of sec_0060 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0098 (p153) is the cooling circuit diagram (Radiator, Water pump, Cylinder head RH/LH, Throttle body, Heater core). It is mapped to sec_0060 and the crop is complete. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0098 (p153) is the cooling circuit diagram (Radiator, Water pump, Cylinder head RH/LH, Throttle body, Heater core). Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0060",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0098 (p153) is the cooling circuit diagram (Radiator, Water pump, Cylinder head RH/LH, Throttle body, Heater core). It is mapped to sec_0060 and the crop is complete. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "2. Air Line is printed as a level-4 heading on p185 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has parent sec_0084 (FUEL INJECTION), which matches the chapter the page belongs to (running header on p185). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p185 the F: INTAKE AIR TEMPERATURE SENSOR and G: INDUCTION CONTROL SYSTEM subsections, both figures and their legends are in sec_0086 (#/texts/2727-2756). The section starts with \"2. Air Line\" on p183 and sec_0087 starts on p186. Range p183-185: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../FUEL INJECTION (FUEL SYSTEM)/2. Air Line lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p185.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p183-185 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0086 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0086. The heading '2. Air Line' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folio FU-5 on p185 is consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio FU-5 on p185 is consistent with offset 0. The heading of sec_0086 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_0118 (p183), img_0119 and img_0120 (p184), img_0121 (sensor and resistance curve) and img_0122 (p185, origin vector, induction valve drawings) are mapped to sec_0086. On p185 both figures are present and complete; text labels stay as text nodes. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_0118 (p183), img_0119 and img_0120 (p184), img_0121 (sensor and resistance curve) and img_0122 (p185, origin vector, induction valve drawings) are mapped to sec_0086. Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 185,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_0118 (p183), img_0119 and img_0120 (p184), img_0121 (sensor and resistance curve) and img_0122 (p185, origin vector, induction valve drawings) are mapped to sec_0086. On p185 both figures are present and complete; text labels stay as text nodes. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "3. Fuel Line is printed as a level-4 heading on p193 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0087 has parent sec_0084 (FUEL INJECTION), which matches the chapter the page belongs to (running header on p193). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts with \"3. Fuel Line\" on p186 and ends with F: SUB-COMPARTMENT FUEL LEVEL SENSOR on p198 (FU-18). Sec_0088 starts on p199 with \"4. Sensors and Switches\". Range p186-198: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../FUEL INJECTION (FUEL SYSTEM)/3. Fuel Line lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p193.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p186-198 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0087 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0087. The heading '3. Fuel Line' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folios FU-6 (p186) to FU-18 (p198) are consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios FU-6 (p186) to FU-18 (p198) are consistent with offset 0. The heading of sec_0087 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p193 image img_0127 shows the fuel tank with hold-down bands and the cushion/steel detail. It is mapped to sec_0087 and the crop is complete. Labels (1)-(3) and the legend stay as text nodes. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p193 image img_0127 shows the fuel tank with hold-down bands and the cushion/steel detail. Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 193,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p193 image img_0127 shows the fuel tank with hold-down bands and the cushion/steel detail. It is mapped to sec_0087 and the crop is complete. Labels (1)-(3) and the legend stay as text nodes. Each figure is under the heading of its own section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "4. Sensors and Switches is printed as a level-4 heading on p200 and tree.json has hierarchy_level 4. It is a numbered subsection under its chapter, like its siblings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0088 has parent sec_0084 (FUEL INJECTION), which matches the chapter the page belongs to (running header on p200). It has no children, and the page shows no deeper numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts with \"4. Sensors and Switches\" on p199 and runs to G: VEHICLE SPEED SENSOR on p207 (FU-27). Sec_0089 starts on p208. Range p199-207: first and last page agree with the headings and no neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path .../FUEL INJECTION (FUEL SYSTEM)/4. Sensors and Switches lists the manual, the NEW CAR INFORMATION SECTION, the chapter and the section in the right order, as seen in the running header and heading on p200.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous and next sections touch p199-207 with no gap and no overlap. No node is repeated in the node list for this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0088 has flagged_for_review false and verification_score 100. The heading is visible on its start page, so no uncertainty is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0088. The heading '4. Sensors and Switches' is printed on its start page, so the bookmark is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The pages use arabic section numbers and folios. Printed folios FU-19 (p199) to FU-27 (p207) are consistent with offset 0.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios FU-19 (p199) to FU-27 (p207) are consistent with offset 0. The heading of sec_0088 is on the expected physical page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p200 image img_0133 shows the oxygen sensor cross-section and the output current graph (B2H2006B). It is mapped to sec_0088. The crop holds both parts. Axis and part labels are kept as text nodes (#/texts/2978, #/texts/2979). No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p200 image img_0133 shows the oxygen sensor cross-section and the output current graph (B2H2006B). Every extracted image is a real figure. No rule, logo, black tab or page-number box was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 200,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p200 image img_0133 shows the oxygen sensor cross-section and the output current graph (B2H2006B). It is mapped to sec_0088. The crop holds both parts. Axis and part labels are kept as text nodes (#/texts/2978, #/texts/2979). It sits under sec_0088 only.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}

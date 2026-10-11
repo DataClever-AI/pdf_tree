@@ -1,0 +1,1124 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p303 the heading 'Levels of Event Surveillance' looks like a section heading below 'Event Surveillance'. It fits hierarchy_level 2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0583 has parent_section_id sec_0582 ('Event Surveillance'). It has no children, which fits.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p303 the heading 'Levels of Event Surveillance' starts the section. But page_end is 303, while #/tables/103 and header nodes #/texts/5555 and #/texts/5556 are on p304. The table is the one the text on p303 announces, so it is correctly owned.",
+   "notes": "page_end is probably one page short. All nodes have the right owner. Medium by the Sprint table.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Event Surveillance/Levels of Event Surveillance' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p303 the six nodes from the heading to the last bullet appear once in sec_0583. The chapter title and intro above it belong to sec_0582. The table on p304 is only in sec_0583.",
+   "notes": "The p304 table is the page_end issue, not a duplicate.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'Levels of Event Surveillance' is seen on p303, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Levels of Event Surveillance' is on p303, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p303 is 291 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Levels of Event Surveillance' is on physical p303, so the bookmark page is right. Printed folio 291 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "#/tables/103 has its row labels in the wrong place. 'Event groups', 'Measurements per group' and 'Triggers per measurement' appear at the end of rows, after their values. Values for the three options are mixed in single cells. p304 is not in my input, so this comes from the extracted text.",
+   "notes": "Values can no longer be tied to their column and row. Confidence is lower because I saw only p303.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I looked at p303 for figures or icons that could be dropped. None is clearly lost.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p303 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0583",
+   "page_sampled": 303,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped inside sec_0583 in the input. I checked p303 for visuals that belong to this section.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p320 the heading 'Event Summary Reports' looks like a section heading below 'Event Reports'. It fits hierarchy_level 4.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0612 has parent_section_id sec_0609 ('Event Reports'). It has no children, which fits.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The heading 'Event Summary Reports' is on p319 and its paragraph is under it. The folio '307' and blank-page folio '308' (#/texts/5921, 5922) are in the section. Nodes #/texts/5923 and 5924 are '25' on p321, which is the next chapter number. #/tables/108 is the p320 running header.",
+   "notes": "Only boilerplate crosses the boundary. The report printout itself is not text. No body text is absorbed.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Event Surveillance/Documenting Events/Event Reports/Event Summary Reports' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p319 the heading 'Event Summary Reports' and its paragraph appear once in sec_0612. 'Event Episode Reports' above belongs to sec_0611. No node is duplicated.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'Event Summary Reports' is seen on p320, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Event Summary Reports' is on p320, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p320 is 307 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Event Summary Reports' is on physical p320, so the bookmark page is right. Printed folio 307 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "#/tables/108 on p320 has only the header words '24 Event Surveillance | Documenting Events'. Rendered p320 shows a blue header bar and no table.",
+   "notes": "The header bar is wrongly detected as a table. This is a placeholder-type defect and does not change any content.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Blank p320 has no visual. On p319 both report printouts are large images. The verifier shows every raster is kept.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p320 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0612",
+   "page_sampled": 320,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sampled p320 is blank. On p319 the summary report printout sits under 'Event Summary Reports' and the episode printout under 'Event Episode Reports'. The input has no image list, so mapping cannot be confirmed.",
+   "notes": "Rasters are all kept per verifier. A human can check images_v1.json.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p321 the heading 'SSC Sepsis Protocol' looks like a section heading below 'ProtocolWatch'. It fits hierarchy_level 2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0614 has parent_section_id sec_0613 ('ProtocolWatch'). Its child sections lie inside its page range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p321 the heading 'SSC Sepsis Protocol' starts the section. Chapter intro text above it is not in the section. page_end 332 is the blank page at the end of the chapter, after the last child. p322 is not in my input.",
+   "notes": "Boilerplate check on p322 is by text only.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/ProtocolWatch/SSC Sepsis Protocol' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p321 the heading and paragraphs appear once. The children sec_0615 to sec_0633 keep their own headings. p322 text (WARNING, revision note) is probably still the SSC intro. p322 is not in my input.",
+   "notes": "",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'SSC Sepsis Protocol' is seen on p321, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'SSC Sepsis Protocol' is on p321, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p321 is 309 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'SSC Sepsis Protocol' is on physical p321, so the bookmark page is right. Printed folio 309 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I looked at p321 for figures or icons that could be dropped. None is clearly lost.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p321 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0614",
+   "page_sampled": 321,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped inside sec_0614 in the input. I checked p321 for visuals that belong to this section.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 'Recording' is a large chapter title with a chapter number. It fits hierarchy_level 1.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0634 is a top-level chapter with parent_section_id null. Its listed children start after the chapter intro.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 the chapter title 'Recording' and intro are in sec_0634. On p334 the top texts are 'MP20/MP30', 'Central Recording' and the recorder text. They are printed above the real heading 'Starting and Stopping Recordings'. The same title in the page header (#/texts/6336) is only a running header. So sec_0634 correctly holds them.",
+   "notes": "The earlier draft called this Critical. That was wrong. The real heading is lower on p334, so the child sec_0635 correctly owns the two pop-up key tables.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Recording' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p334 the recorder text and 'Central Recording' text come before the real heading 'Starting and Stopping Recordings'. They belong to the chapter sec_0634 (p333-342). The two pop-up key tables under the real heading are in sec_0635. No node is duplicated or lost.",
+   "notes": "Earlier draft was wrong: the page header text looked like a heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'Recording' is seen on p333, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Recording' is on p333, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p333 is 321 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Recording' is on physical p333, so the bookmark page is right. Printed folio 321 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 the recorder picture is meaningful. The verifier shows every raster is kept. The callout text is also in the nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 the M1116B recorder picture sits under the chapter intro of 'Recording'. It belongs to sec_0634. On p334 the 127x159 recorder picture is also in sec_0634, which is right because it is above the real heading.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p343 the heading 'Starting Report Printouts' looks like a section heading below 'Printing Patient Reports'. It fits hierarchy_level 2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0652 has parent_section_id sec_0651 ('Printing Patient Reports'). It has no children, which fits.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p343 the heading 'Starting Report Printouts' starts the section. page_end is 343, but #/tables/115 and header nodes #/texts/6500 and #/texts/6501 are on p344. The table lists how to start printing reports, so it fits this section.",
+   "notes": "page_end is probably one page short. Owners look right. p344 is not in my input.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Printing Patient Reports/Starting Report Printouts' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p343 the heading and all body nodes appear once in sec_0652. The chapter title above belongs to sec_0651. Table #/tables/115 is only in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'Starting Report Printouts' is seen on p343, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Starting Report Printouts' is on p343, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p343 is 331 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Starting Report Printouts' is on physical p343, so the bookmark page is right. Printed folio 331 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "#/tables/115 has empty first cells and merged cells. For example 'Graphic Trends Report In the Graphic Trends window, select Print' is one cell. The report names and steps stay in reading order. p344 is not in my input.",
+   "notes": "Cells are merged but values are kept. Confidence is lower because I saw only the text.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I looked at p343 for figures or icons that could be dropped. None is clearly lost.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p343 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0652",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped inside sec_0652 in the input. I checked p343 for visuals that belong to this section.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 the heading 'ECG Reports' looks like a section heading below 'Sample Report Printouts'. It fits hierarchy_level 3.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0671 has parent_section_id sec_0667 ('Sample Report Printouts'). It has no children, which fits.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'ECG Reports' is at the top of p354. Nodes end with the ECG report table. 'Other Reports' below it is not in this section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Printing Patient Reports/Sample Report Printouts/ECG Reports' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node id is repeated in sec_0671 and no visible block is missing on p354.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'ECG Reports' is seen on p354, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'ECG Reports' is on p354, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p354 is 342 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'ECG Reports' is on physical p354, so the bookmark page is right. Printed folio 342 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 the table has 3 columns and 8 rows of formats. #/tables/118 has the same values in the same order, for example '12X1 (2P) landscape | A4, letter (2 pages)'.",
+   "notes": "Row-spanning labels are written once; values are kept.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 the large ECG printout is a meaningful figure. It was kept in the image output (909x1400). The mapping problem is in the mapping row.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p354 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0671",
+   "page_sampled": 354,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p354 the 909x1400 ECG report sample is printed directly under the heading 'ECG Reports' (labels 'Patient information', 'Numeric block', 'Wave area'). In v2.3 images_v1.json it is mapped to sec_0670 (Cardiac Output Report, p353). It should be in sec_0671.",
+   "notes": "Regression from the BUG-003 fix (fa0bc0b): in v2 it was sec_0671. Probably the nearest same-column text above the image is the running header, which sec_0670 owns. Image goes to the wrong sibling: Medium.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p355 the heading 'Accessing the Drug Calculator' looks like a section heading below 'Using the Drug Calculator'. It fits hierarchy_level 2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0674 has parent_section_id sec_0673 ('Using the Drug Calculator'). It has no children, which fits.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p355 the heading 'Accessing the Drug Calculator' and its step are correct. Nodes #/texts/6681 ('28 Using the Drug Calculator') and #/texts/6682 ('Performing Drug Calculations') are on p356 and are only running header text.",
+   "notes": "Only boilerplate crosses the page. No body text is absorbed.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Using the Drug Calculator/Accessing the Drug Calculator' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p355 the heading and the step appear once. The chapter title, definitions table and WARNING above it belong to sec_0673 and are not in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'Accessing the Drug Calculator' is seen on p355, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Accessing the Drug Calculator' is on p355, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p355 is 343 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Accessing the Drug Calculator' is on physical p355, so the bookmark page is right. Printed folio 343 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p355 a small Drug Calculator icon (about 36x24 pt) is next to the step 'To access the Drug Calculator'. The verifier shows a small raster of this size was dropped. The step text names the Drug Calculator SmartKey.",
+   "notes": "A small icon was dropped. Its meaning is stated in the text.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p355 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0674",
+   "page_sampled": 355,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped inside sec_0674 in the input. I checked p355 for visuals that belong to this section.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p371 the heading 'Viewing Loops' looks like a section heading below 'Respiratory Loops'. It fits hierarchy_level 2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0712 has parent_section_id sec_0711 ('Respiratory Loops'). It has no children, which fits.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p371 'Viewing Loops' starts sec_0712. page_end is 371. On p372 the text 'To open the Loops window...' and the Loops window labels are printed above the real heading 'Capturing and Deleting Loops'. So they continue sec_0712. The top text 'Capturing and Deleting Loops' is a running header. The nodes are owned correctly.",
+   "notes": "page_end is probably one page short (should be 372). All nodes have the right owner. Medium by the Sprint table. The earlier Critical was wrong.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Respiratory Loops/Viewing Loops' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p372 the 'To open the Loops window...' text and the Loops window labels are above the real heading 'Capturing and Deleting Loops'. They correctly stay in sec_0712. No node is missing or repeated.",
+   "notes": "The earlier Critical came from a running header seen as a heading. The short page_end is in the page_start_end row.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'Viewing Loops' is seen on p371, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Viewing Loops' is on p371, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p371 is 359 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Viewing Loops' is on physical p371, so the bookmark page is right. Printed folio 359 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I looked at p371 for figures or icons that could be dropped. None is clearly lost.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p371 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0712",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p372 the 574x344 Loops window picture is in sec_0712. It is above the real heading 'Capturing and Deleting Loops', so this is right.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p381 'Using Batteries' is a large chapter title with a chapter number. It fits hierarchy_level 1.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0731 is a top-level chapter with parent_section_id null. Its listed children start after the chapter intro.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p382 the battery compartment figure and its text are above the real heading 'Battery Power Indicators'. The same words at the top are only a running header. So they correctly stay in the chapter sec_0731.",
+   "notes": "The earlier Critical was wrong. The child sec_0732 does not lose content.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Using Batteries' lists the ancestors in the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p382 the battery figure and the text 'The MP60/MP70/MP80/MP90 monitors cannot be powered by battery' come before the real heading 'Battery Power Indicators'. They belong to sec_0731. No node is missing or repeated.",
+   "notes": "Earlier draft was wrong: the running header looked like a heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence is 1.0 and verification_score is 100. The heading 'Using Batteries' is seen on p381, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'Using Batteries' is on p381, where the bookmark points.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p381 is 369 (arabic). numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'Using Batteries' is on physical p381, so the bookmark page is right. Printed folio 369 is only the book number.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p381 the battery compartment picture is meaningful. The verifier shows every raster is kept.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p381 no decorative image (chapter colour bar, header bar, rule) is seen as extracted content in the section nodes.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p381 the battery compartment picture sits under 'Using Batteries'. On p382 the 512x480 picture is above the real heading 'Battery Power Indicators'. Both belong to sec_0731.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+  "model": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+  "load_seconds": 1.5187054579982942,
+  "max_rss_bytes": 5379817472,
+  "cases": [
+    {
+      "section_id": "sec_0004",
+      "kind": "known_defect",
+      "image_count": 1,
+      "elapsed_seconds": 22.244990291997965,
+      "prompt_tokens": 2940,
+      "generation_tokens": 272,
+      "generation_tps": 38.945007428341775,
+      "peak_memory_gb": 4.431952852,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"sec_0004\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El encabezado '1.2.1 HemoSphere Advanced Monitor with HemoSphere Swan-Ganz Module' está correctamente indentado como nivel 3 en la jerarquía.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El contenido visible en la página 17, incluyendo el encabezado y el texto que sigue, pertenece exclusivamente a esta sección y no se comparte con otras secciones.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla con el contenido 'Intended Purpose of this Manual ... 17 | Indications For Use ...' es un elemento de contenido real en la página, no un placeholder.\",\n      \"notes\": \"\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0015",
+      "kind": "known_defect",
+      "image_count": 2,
+      "elapsed_seconds": 38.8557124580002,
+      "prompt_tokens": 5226,
+      "generation_tokens": 326,
+      "generation_tps": 34.06488456641242,
+      "peak_memory_gb": 4.877668458,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"sec_0015\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-parent_child\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El encabezado '1.7 Abbreviations Found in This Manual' está visualmente en la página 26, y el contenido de la tabla que comienza con LVSWI y MAP está en la página 27, lo que corresponde a la estructura jerárquica del encabezado.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla que comienza con A/D en la página 26 y la tabla que comienza con LVSWI en la página 27 están correctamente asignadas a sus respectivos encabezados y no hay contenido cruzado entre las páginas.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla en la página 27 con encabezados 'Abbreviation' y 'Definition' y contenido real como 'LVSWI', 'MAP', 'MPAP', 'OR', 'PA' es un objeto de tabla genuino con contenido estructurado.\",\n      \"notes\": \"\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0279",
+      "kind": "known_defect",
+      "image_count": 7,
+      "elapsed_seconds": 147.3951007919968,
+      "prompt_tokens": 16835,
+      "generation_tokens": 585,
+      "generation_tps": 20.74859509412906,
+      "peak_memory_gb": 7.054389464,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"G.3.6 European Union R&TTE Statements\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección G.3.6 comienza en la página 231 y termina en la página 232, según el contenido visible en las imágenes 231 y 232. No hay contenido visual que pertenezca a esta sección en las páginas 233, 236, 237, 238 ni 240.\",\n      \"notes\": \"La sección G.3.6 se inicia en la página 231 y termina en la página 232, según el contenido visible en las imágenes 231 y 232. No hay contenido visual que pertenezca a esta sección en las páginas 233, 236, 237, 238 ni 240.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-gaps_duplicates\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"No hay brechas ni duplicaciones visibles en el contenido de la sección G.3.6. La sección se inicia en la página 231 y termina en la página 232, y no hay contenido visual que pertenezca a esta sección en las páginas 233, 236, 237, 238 ni 240.\",\n      \"notes\": \"No hay brechas ni duplicaciones visibles en el contenido de la sección G.3.6. La sección se inicia en la página 231 y termina en la página 232, y no hay contenido visual que pertenezca a esta sección en las páginas 233, 236, 237, 238 ni 240.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"No hay tablas en la sección G.3.6. La sección G.3.6 no contiene tablas, por lo tanto, no hay contenido tabular para validar.\",\n      \"notes\": \"No hay tablas en la sección G.3.6. La sección G.3.6 no contiene tablas, por lo tanto, no hay contenido tabular para validar.\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0025",
+      "kind": "clean_control",
+      "image_count": 1,
+      "elapsed_seconds": 21.254095291998965,
+      "prompt_tokens": 2845,
+      "generation_tokens": 257,
+      "generation_tps": 38.85498761316849,
+      "peak_memory_gb": 7.054389464,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"2.6 Applicable Standards\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El encabezado '2.6 Applicable Standards' está correctamente nivelado como nivel 2 en la jerarquía.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El contenido de la sección '2.6 Applicable Standards' incluye el título y la tabla, y no hay contenido visual que pertenezca a una sección adyacente.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla 'Table 2-3 Applicable standards' contiene datos estructurados en dos columnas: 'Standard' y 'Title', con cinco filas de entrada válida.\",\n      \"notes\": \"\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0066",
+      "kind": "clean_control",
+      "image_count": 2,
+      "elapsed_seconds": 39.19100270800118,
+      "prompt_tokens": 5208,
+      "generation_tokens": 356,
+      "generation_tps": 36.34120167402559,
+      "peak_memory_gb": 7.054389464,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"sec_0061\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-parent_child\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección 5.3.2 'Graphical Trend Monitoring View' está claramente vinculada a la sección 5.3 'Monitor Views' en la página 69, y el contenido visual corresponde a esta sección sin errores de jerarquía.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección 5.3.2 comienza en la página 69 y termina en la página 71, y el contenido visual de ambas páginas está dentro de este rango. No hay contenido visual que pertenezca a esta sección que esté asignado a una sección adyacente.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.4-hierarchy_path\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La ruta de jerarquía '/Navigating the HemoSphere Advanced Monitor/5.3 Monitor Views/5.3.2 Graphical Trend Monitoring View' es coherente con el contenido visual. La sección 5.3.2 aparece como subsección de 5.3, y el contenido visual corresponde a esta estructura.\",\n      \"notes\": \"\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0243",
+      "kind": "clean_control",
+      "image_count": 2,
+      "elapsed_seconds": 32.38417079100327,
+      "prompt_tokens": 5161,
+      "generation_tokens": 290,
+      "generation_tps": 39.95488289662754,
+      "peak_memory_gb": 7.054389464,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"Equations for Calculated Patient Parameters\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El título 'Equations for Calculated Patient Parameters' aparece en la página 200 como un encabezado principal con nivel de jerarquía 1.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección comienza en la página 200 y termina en la página 205, y el contenido visible en estas páginas corresponde exclusivamente a esta sección, incluyendo la tabla C-1 y su continuación.\",\n      \"notes\": \"\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla C-1 'Cardiac and oxygenation profile equations' y su continuación en la página 205 contienen contenido estructurado con fórmulas y definiciones reales, no es un placeholder.\",\n      \"notes\": \"\"\n    }\n  ]\n}"
+    }
+  ]
+}

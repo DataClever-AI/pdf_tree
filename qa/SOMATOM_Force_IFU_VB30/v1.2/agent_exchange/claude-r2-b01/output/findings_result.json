@@ -1,0 +1,244 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p11, heading 2.1 General safety information is a level-2 heading under chapter 2 Safety information. sec_0005 has hierarchy_level 2, which matches.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p11, 2.1 sits under chapter 2 (sec_0004, which lists sec_0005). sec_0005 lists 18 level-3 children, sec_0006 to sec_0051, and their parent_section_id is sec_0005. The last child, sec_0051 Disposal of the system, is the 2.1.18 heading seen on p28.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Numbers are right: the 2.1 heading (#/texts/79) and its paragraph (#/texts/80) are on p11, and p28 shows heading 2.1.18 Disposal of the system (sec_0051), the last child. page_end 28 is correct and not one page too long. The defect is noise: #/texts/81 (':$51,1*') and #/texts/82 ('&$87,21') on p11 are garbled WARNING and CAUTION badge labels from the chapter legend table. They are not body text of 2.1.",
+   "notes": "Low by the boilerplate rule. verify_claims finds no deterministic boundary signal (UNSUPPORTED), because the garbling is a text-quality issue; the facts are in sections.json (#/texts/81 and 82) and on the p11 rendering. The legend is already in #/tables/7 of sec_0004, so no information is lost. Headers and footers #/texts/83 to 86 also sit in the node list, but they are boilerplate inside the range. Same grading as earlier drafts.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Safety information/General safety information. On p11, the running header reads 2 Safety information and the heading reads 2.1 General safety information. Order and titles match.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p11, #/texts/81 and #/texts/82 are garbled badge labels that repeat the WARNING and CAUTION legend already stored once in #/tables/7 (sec_0004). They are duplicate noise in sec_0005. The 2.1 heading and paragraph appear once, and the 18 children follow without gaps.",
+   "notes": "Low: the information survives in #/tables/7. Same grading as earlier drafts for this root cause (garbled badge duplicates).",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The p11 and p28 renderings show no boundary or title doubt, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc, not inferred. The title and level match the printed 2.1 heading on p11, and sec_0051 matches 2.1.18 on p28.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on p11 is arabic (11) and the headings use arabic numbers (2, 2.1). numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p11 is 11 and on p28 it is 28, equal to the physical pages. offset_applied is 0, like the parent sec_0004 and the children.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p11 has only small warning and info icons, and their meaning is written in the text. Lead evidence: p16 (inside range 11-28) has three photos, img_0002, img_0003 and img_0004, and all are extracted. No relevant figure is missing. I checked p11 and p28 myself; the p16 facts come from the lead.",
+   "notes": "Lead evidence used for p16; p16 is not in input/.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images in this range (img_0002, img_0003, img_0004 on p16, per lead) are real photos of the gantry and control box. No rule, logo or icon was kept as an image. On p11 and p28 I see no decorative image extracted.",
+   "notes": "Based on lead evidence for p16.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On physical p16 (inside sec_0005), img_0004 (555x444) is the control box photo with a red arrow to the STOP key. It is printed beside the heading 'At the control box' (sec_0021) but it is mapped to sec_0020 'At the rear of the gantry'. Wrong sibling on a shared page. img_0002 goes to sec_0019 and img_0003 goes to sec_0020, and both are correct.",
+   "notes": "BUG-003 (image mapped to the wrong sibling on a shared page). Lead evidence from p16 and images_v1.json; p16 is not in input/. Medium by the Sprint table.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p124, heading 3.5.4 Control box is a three-part number, so level 3. sec_0213 has hierarchy_level 3, and its children sec_0214 to sec_0216 are level 4.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0209 (syngo Acquisition Workplace), which lists sec_0213. The children sec_0214 Operating elements (p125), sec_0215 Control box keys (p126) and sec_0216 On/Off keys (p126-127) point back to sec_0213.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "sec_0213 starts on p124 at heading 3.5.4 (#/texts/2622) and page_end 127 is right, because the last child sec_0216 ends on p127. The only defect is node #/texts/2633, the running header '3 System description' printed at the top of p125. It is kept in sec_0213 but p125 belongs to the child sec_0214. The info box above the heading on p124 correctly stays with sec_0212.",
+   "notes": "Boilerplate only (running header), so Low by the Sprint table. verify_claims flags the same node. No body text is misplaced.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System description/syngo Acquisition Workplace/Control box. The running header on p124 reads 3 System description, and the heading is 3.5.4 Control box. The path is ordered correctly.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 3.5.4 heading and its paragraphs (#/texts/2622 to 2629) appear once on p124. The children cover p125, p126 and p126-127 with no gap, and sec_0212 ends at 124 before this section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100. The p124 and p127 renderings show no doubt about the boundary or title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title Control box and its level match the printed 3.5.4 heading on p124.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios on p124 and p127 are arabic (124, 127), and headings use arabic numbers (3.5.4). numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios on p124 and p127 equal the physical pages. offset_applied is 0, the same as the parent sec_0209 and sibling sec_0212.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p124 has only small info icons, and the text states the meaning. Lead evidence: p125 has the large control box diagram with callouts 1 to 19, img_0054, and p126 has a System On photo, img_0055. On p127 (seen by me) both photos, Computer On (img_0056) and System Off (img_0057), are extracted. No relevant figure is missing.",
+   "notes": "p125 and p126 facts are lead evidence; I checked p124 and p127 and input/images.json.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images are img_0054 (control box diagram), img_0055 and img_0056 and img_0057 (key photos). All are content. I see no rule, logo or decorative icon kept as an image on p124 or p127.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0213",
+   "page_sampled": 124,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Lead evidence: on p125 img_0054 (1150x888) is mapped to sec_0214 Operating elements, and on p126 img_0055 (555x444) is mapped to sec_0216 On/Off keys, both right. On p127 img_0056 (Computer On) and img_0057 (System Off) sit under the On/Off keys text and are mapped to sec_0216. All are correct.",
+   "notes": "Lead evidence for p125 and p126.",
+   "confidence": 0.88
+  }
+ ]
+}

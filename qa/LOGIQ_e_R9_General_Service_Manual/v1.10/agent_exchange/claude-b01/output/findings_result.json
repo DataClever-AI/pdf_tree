@@ -1,0 +1,1694 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0003 'Manual Overview' has hierarchy_level 2. On the page, the Manual Overview chapter title on p31 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0001 Introduction (p29-68), which lists sec_0003 in child_sections. sec_0003 has no children and no sub-sections start inside p31-37.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p31-37. The first node is the Manual Overview chapter title on p31. The last nodes are the General Caution page (p37). Previous section is sec_0002 (p30) and next is sec_0004 (p38), so no neighbour content is absorbed. Page sampled: p36.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Introduction/Manual Overview. This matches the parent sec_0001 Introduction (p29-68) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p31-37 follow sec_0002 (p30) and run into sec_0004 (p38) with no gap and no overlap. sec_0003 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0003 has flagged_for_review false and verification_score 100. The render of p36 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'Manual Overview' is a bookmark at the start page p31, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p36 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p31 shows the title of sec_0003. The bookmark pages equal physical pages, so no shift is needed. The sampled p36 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 1-4 (#/tables/14) has 13 model columns and 15 probe rows. I compared every row with the render. All X and N values sit in the right model column, for example 4C-RS has N under Xe Pro and He Performance. The note row \"Note:X:Support ;N:Not Applicable\" below the table is not in the extracted text. The cell values are correct, but the legend for X and N is missing from the table text. The sister table on p35 keeps its \"Note:O:Option\" row.",
+   "notes": "Footnote row under the table is dropped. Probably the note spans all columns. Impact is small because the cells are intact.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture or figure is on p36. The page has only Table 1-4. No image is mapped to this page in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p36. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture or figure is on p36. The page has only Table 1-4. No image is mapped to this page in images.json. The images belong to sec_0003, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 'Product icons' has hierarchy_level 2. On the page, the Product icons title on p42 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0001 Introduction (p29-68), which lists sec_0005 in child_sections. sec_0005 has no children and no sub-sections start inside p42-50.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p42-50. The first node is the Product icons title on p42. The last nodes are Table 1-7 continued on p50. Previous section is sec_0004 (p38-41) and next is sec_0006 (p51), so no neighbour content is absorbed. Page sampled: p42.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Introduction/Product icons. This matches the parent sec_0001 Introduction (p29-68) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p42-50 follow sec_0004 (p38-41) and run into sec_0006 (p51) with no gap and no overlap. sec_0005 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 has flagged_for_review false and verification_score 100. The render of p42 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'Product icons' is a bookmark at the start page p42, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p42 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p42 shows the title of sec_0005. The bookmark pages equal physical pages, so no shift is needed. The sampled p42 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is on p42. The page has only Figure 1-2 and a numbered label list. So there is no table content to compare for this page.",
+   "notes": "Not applicable on this page. Table checks are done on pages with tables.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 1-2 on p42 is the label location photo. It is extracted as img_0043 (1558x789) and mapped to sec_0005.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0043 is the label location figure. It is real content. No logo or rule is kept as an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 1-2 on p42 is the label location photo. It is extracted as img_0043 (1558x789) and mapped to sec_0005. The images belong to sec_0005, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0011 'Customer assistance' has hierarchy_level 2. On the page, the Customer assistance title on p67 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0001 Introduction (p29-68), which lists sec_0011 in child_sections. sec_0011 has no children and no sub-sections start inside p67-68.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p67-68. The first node is the Customer assistance title on p67. The last nodes are Table 1-8 and Factory Site on p68. Previous section is sec_0010 (p65-66) and next is sec_0012 (p69), so no neighbour content is absorbed. Page sampled: p68.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Introduction/Customer assistance. This matches the parent sec_0001 Introduction (p29-68) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p67-68 follow sec_0010 (p65-66) and run into sec_0012 (p69) with no gap and no overlap. sec_0011 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0011 has flagged_for_review false and verification_score 100. The render of p68 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'Customer assistance' is a bookmark at the start page p67, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p68 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p67 shows the title of sec_0011. The bookmark pages equal physical pages, so no shift is needed. The sampled p68 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 1-8 (#/tables/23) matches the render. Location, phone label and number are in the right columns. Empty cells for Canada and the merged USA, Europe and Asia rows are kept. Examples: \"Service: On-site | 1-800-437-1171\" and Japan \"Phone: Fax: | 81-426-48-2940 81-426-48-2905\".",
+   "notes": "Cells merged inside one cell (Phone: Fax:) but values and order are kept.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p68. It has Table 1-8 and two text blocks. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p68. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p68. It has Table 1-8 and two text blocks. No image is mapped to this page. The images belong to sec_0011, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 'General requirements' has hierarchy_level 2. On the page, the General requirements title on p71 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0012 Site Preparations (p69-88), which lists sec_0014 in child_sections. sec_0014 has no children and no sub-sections start inside p71-79.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p71-79. The first node is the General requirements title on p71. The last nodes are Table 2-8 on p79. Previous section is sec_0013 (p70) and next is sec_0015 (p80), so no neighbour content is absorbed. Page sampled: p78.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Site Preparations/General requirements. This matches the parent sec_0012 Site Preparations (p69-88) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p71-79 follow sec_0013 (p70) and run into sec_0015 (p80) with no gap and no overlap. sec_0014 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 has flagged_for_review false and verification_score 100. The render of p78 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'General requirements' is a bookmark at the start page p71, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p78 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p71 shows the title of sec_0014. The bookmark pages equal physical pages, so no shift is needed. The sampled p78 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 2-7 (#/tables/30) has 8 EMI rule rows. Each rule is in the EMI RULE column and its text is in DETAILS. Bullets of rows 1 and 3 are kept in order. The text matches the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p78. The page has only Table 2-7. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p78. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p78. The page has only Table 2-7. No image is mapped to this page. The images belong to sec_0014, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p116.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p116 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p116 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p116 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The four pin tables (#/tables/38 to #/tables/41) match the render cell by cell. Table 3-5 DC input has 1 +20V, 2 +20V, 3 GND, 4 GND. Tables 3-6, 3-7 and 3-8 (USB1 to USB3) each have 1 +5VDC, 2 DATA-, 3 DATA+, 4 GND. Pin No. and Signal pairs are in the right columns and the tables are not mixed.",
+   "notes": "The four tables follow the page order.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p116. It has four pin tables and headings. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p116. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 116,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p116. It has four pin tables and headings. No image is mapped to this page. The images belong to sec_0023, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0025 'Peripherals Installation' has hierarchy_level 2. On the page, the Peripherals Installation title on p126 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0025 in child_sections. sec_0025 has no children and no sub-sections start inside p126-162.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Declared pages are p126-162, but the last node #/texts/1628 is the heading 'Chapter 4' on p163. That page starts the next chapter (sec_0026, p163). The section content on p126-162 is correct, and the p162 table and footer are the true end. Page sampled: p129.",
+   "notes": "Only boilerplate (the chapter number label of the next chapter title page) crosses the boundary, so Low by the contract. The verify_claims Medium (page_end short) does not apply, because no body content of sec_0026 is absorbed.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System Setup/Peripherals Installation. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p126-162 follow sec_0024 (p125) and run into sec_0026 (p163) with no gap and no overlap. sec_0025 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0025 has flagged_for_review false and verification_score 100. The render of p129 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'Peripherals Installation' is a bookmark at the start page p126, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p129 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p126 shows the title of sec_0025. The bookmark pages equal physical pages, so no shift is needed. The sampled p129 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables 3-16, 3-17 and 3-18 (#/tables/50, 51, 52) each have the header Item | Description | Quantity | Note and one row. Values match the render: 1 | Wireless Adapter | 1, 1 | Footswitch | 1, 1 | Barcode Scanner | 1. The Note cell is empty in both the page and the text.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p129. The page has three small tables and bullet headings. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p129. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 129,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p129. The page has three small tables and bullet headings. No image is mapped to this page. The images belong to sec_0025, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 'Product icons' has hierarchy_level 2. On the page, the Product icons title on p42 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0001 Introduction (p29-68), which lists sec_0005 in child_sections. sec_0005 has no children and no sub-sections start inside p42-50.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p42-50. The first node is the Product icons title on p42. The last nodes are Table 1-7 continued on p50. Previous section is sec_0004 (p38-41) and next is sec_0006 (p51), so no neighbour content is absorbed. Page sampled: p43.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Introduction/Product icons. This matches the parent sec_0001 Introduction (p29-68) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p42-50 follow sec_0004 (p38-41) and run into sec_0006 (p51) with no gap and no overlap. sec_0005 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 has flagged_for_review false and verification_score 100. The render of p43 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'Product icons' is a bookmark at the start page p42, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p43 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p42 shows the title of sec_0005. The bookmark pages equal physical pages, so no shift is needed. The sampled p43 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table 1-7 (#/tables/15) has the header Label/Icon | Purpose/Meaning | Location | Reference. In every row the extracted cells start with the Purpose text, so every value is under the wrong header and can no longer be attributed to its column by position. The empty Label/Icon cell is moved to the end of the row. For row 1, the label text \"Identification and Rating Plate\" ends up in the Reference column. In the render it is under Label/Icon, next to the rating plate icon.",
+   "notes": "The icon column is rotated to the end of each row. Values are attributed to the wrong column, so Medium. Order of the other three values is kept. Probably the empty icon cell is not kept at the front.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p43, Table 1-7 shows about 10 icons or label graphics (REF, SN, DC symbol, INPUT, DESC., MODEL, the small \"Only for use with LOGIQ e series\" label, OUTPUT, date of manufacture). Only the factory icon is extracted (img_0044, 79x78). The other icons are not in images.json.",
+   "notes": "Small icons dropped. Their meaning is in the Purpose column text, so Low. Probably the size filter removes them (maybe BUG-020).",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0044 is the factory symbol of the label table. It is real content, not noise.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The one extracted image on p43 (img_0044, factory symbol) is mapped to sec_0005, which owns this page. The dropped icons are covered in the discarding row.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 'General requirements' has hierarchy_level 2. On the page, the General requirements title on p71 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0012 Site Preparations (p69-88), which lists sec_0014 in child_sections. sec_0014 has no children and no sub-sections start inside p71-79.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p71-79. The first node is the General requirements title on p71. The last nodes are Table 2-8 on p79. Previous section is sec_0013 (p70) and next is sec_0015 (p80), so no neighbour content is absorbed. Page sampled: p77.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /Site Preparations/General requirements. This matches the parent sec_0012 Site Preparations (p69-88) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p71-79 follow sec_0013 (p70) and run into sec_0015 (p80) with no gap and no overlap. sec_0014 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 has flagged_for_review false and verification_score 100. The render of p77 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'General requirements' is a bookmark at the start page p71, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p77 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p71 shows the title of sec_0014. The bookmark pages equal physical pages, so no shift is needed. The sampled p77 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is on p77. The page has the EMI limitations text and a bullet list only. So there is no table content to compare for this page.",
+   "notes": "Not applicable on this page. Table checks are done on pages with tables.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p77. It has only text and a bullet list. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p77. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p77. It has only text and a bullet list. No image is mapped to this page. The images belong to sec_0014, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p119.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p119 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p119 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p119 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 3-10 continued (#/tables/44) has No. | Steps | Corresponding Graphic. Steps 4 to 7 (Color Printer, ECG, Barcode Reader, HDMI) match the render, including the Sony UP-D899MD note in step 4. Each step number is with its own text. The Corresponding Graphic cells are empty because they hold photos only.",
+   "notes": "Graphic cells have no text. The four photos are kept as images img_0102 to img_0105 in the same section. Low confidence in cell-to-photo pairing, since it is not stored in the table.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Four photos on p119 (printer, ECG, barcode reader, HDMI monitor) are extracted as img_0102 to img_0105 and mapped to sec_0023. They are in the same order as steps 4 to 7. No photo is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0102 to img_0105 are real product photos, not noise.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 119,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Four photos on p119 (printer, ECG, barcode reader, HDMI monitor) are extracted as img_0102 to img_0105 and mapped to sec_0023. They are in the same order as steps 4 to 7. No photo is missing. The images belong to sec_0023, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p120.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p120 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p120 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p120 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is on p120. The page has only the Available probes text with the supported probe list. So there is no table content to compare for this page.",
+   "notes": "Not applicable on this page. Table checks are done on pages with tables.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p120. The page has only the Available probes text. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p120. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p120. The page has only the Available probes text. No image is mapped to this page. The images belong to sec_0023, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p121.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p121 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p121 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p121 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 3-11 (#/tables/45) has 5 columns: Probe Name, Material of Headshell, TYPE, Catalog Number, Part Number. All 17 rows match the render in column order. Examples: C1-5-RS NORYL CONVEX H40462LA 5384875, 6Tc-RS VALOX SECTOR H45551ZE KN100106, L4-20t-RS VALOX LINEAR H48062AJ 5843289. No value moved to another column.",
+   "notes": "Column order is kept. The note below the table is in a text node.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p121. The page has only Table 3-11 and a note. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p121. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p121. The page has only Table 3-11 and a note. No image is mapped to this page. The images belong to sec_0023, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 'System Configuration' has hierarchy_level 2. On the page, the System Configuration title on p111 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0023 in child_sections. sec_0023 has no children and no sub-sections start inside p111-124.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages are p111-124. The first node is the System Configuration title on p111. The last nodes are RSVP Agent Configuration on p124. Previous section is sec_0022 (p102-110) and next is sec_0024 (p125), so no neighbour content is absorbed. Page sampled: p124.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System Setup/System Configuration. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p111-124 follow sec_0022 (p102-110) and run into sec_0024 (p125) with no gap and no overlap. sec_0023 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 has flagged_for_review false and verification_score 100. The render of p124 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'System Configuration' is a bookmark at the start page p111, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p124 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p111 shows the title of sec_0023. The bookmark pages equal physical pages, so no shift is needed. The sampled p124 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is on p124. The page has the RSVP Agent Configuration steps and Figure 3-17. So there is no table content to compare for this page.",
+   "notes": "Not applicable on this page. Table checks are done on pages with tables.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 3-17 on p124 is a dark screenshot of the Agent Configuration page. It is extracted as img_0107 (1920x1080) and mapped to sec_0023.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0107 is the Figure 3-17 screenshot. It is real content, not noise.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 124,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 3-17 on p124 is a dark screenshot of the Agent Configuration page. It is extracted as img_0107 (1920x1080) and mapped to sec_0023. The images belong to sec_0023, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0025 'Peripherals Installation' has hierarchy_level 2. On the page, the Peripherals Installation title on p126 is a chapter-level or section title under its parent chapter. The level agrees with the TOC nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0017 System Setup (p89-162), which lists sec_0025 in child_sections. sec_0025 has no children and no sub-sections start inside p126-162.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Declared pages are p126-162, but the last node #/texts/1628 is the heading 'Chapter 4' on p163. That page starts the next chapter (sec_0026, p163). The section content on p126-162 is correct, and the p162 table and footer are the true end. Page sampled: p161.",
+   "notes": "Only boilerplate (the chapter number label of the next chapter title page) crosses the boundary, so Low by the contract. The verify_claims Medium (page_end short) does not apply, because no body content of sec_0026 is absorbed.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /System Setup/Peripherals Installation. This matches the parent sec_0017 System Setup (p89-162) and the section title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages p126-162 follow sec_0024 (p125) and run into sec_0026 (p163) with no gap and no overlap. sec_0025 appears once in the tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0025 has flagged_for_review false and verification_score 100. The render of p161 shows no sign of an error, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 'Peripherals Installation' is a bookmark at the start page p126, and the page shows the same title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on p161 use chapter-page numbers like 1-8 or 3-28, which are arabic digits. No roman folios are in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Physical p126 shows the title of sec_0025. The bookmark pages equal physical pages, so no shift is needed. The sampled p161 is inside the declared range.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 3-19 (#/tables/53) is the ECG lead table. The two-level header (Lead, Patient Cable Marking over AHA and IEC, Position on Patient) is split into two rows. The three data rows keep their columns: I | RA (White) | R (Red) | Right Arm, II | LA (Black) | L (Yellow) | Left Arm, III | RL (Green) | N (Black) | Right Leg.",
+   "notes": "Merged header cells are shown as an empty cell plus a second row. Values are correct.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p161. The page has text and Table 3-19. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative image, rule or logo is kept as an image on p161. No image is mapped to this page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture is on p161. The page has text and Table 3-19. No image is mapped to this page. The images belong to sec_0025, which owns this page.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

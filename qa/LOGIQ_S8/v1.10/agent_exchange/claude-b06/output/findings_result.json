@@ -1,0 +1,514 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 802,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p802 #/tables/358 (items 20-23) matches the page. Two defects are on other pages of the section. On p798 (Table 9-7) #/tables/354 has the Qty column empty for items 4-7. The Qty value '1' sits in the Description cell for items 4, 6 and 7. Row 5 reads 'SOM, without HDD 1'. The label 'Midprocessor without' above the photo of item 5 is not in the node. On p806 #/tables/362 now has all words: 'Kit including DVD SATA signal cable and power cable, as well as Printer USB cable, dual printer power cable'. But '35.' sits in the Part Name cell with the name, the No. cell is empty, and Qty '1' is at the end of the Description cell.",
+   "notes": "CASE: still wrong. p798 still has Qty under the wrong column (BUG-008, probably a Docling cell split; same as round one). CASE: back to original on p806. The lost words of round one are back, but the cells are shifted. Medium because the Qty values are under the wrong column on p798 and p806. Round one was also Medium.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 809,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p809 #/tables/365 (Table 9-8) has the header No., Part Name, Part Number, Description, Qty and items 1-4 with the right part names, part numbers and Qty (3, 1, 1, 1). Item 4 'Caster Total Lock N9' has an empty Description cell in the node. The PDF Description of item 4 has one sentence of text and a photo. The sentence is 'except swivel lock caster (3 per console)' above the photo.",
+   "notes": "The same sentence is in the node for item 1 in the same table. One cell lost a repeated sentence, and the other cells are correct. Low. verify_claims expects Medium (lost cell words); I keep Low because the exact sentence is kept in item 1 of the same table and in the same section (rule: Medium only if the words are nowhere else). Probably the text is lost with the photo in the cell. No round-one draft for this row.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0124",
+   "page_sampled": 816,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p816 #/tables/372 (Table 9-9) has items 5-12 and matches the render. Names, part numbers (6020740, 5488347/ 5488347-2, 6020741, 5491354, 5692044, 5692045, 5418137, 5341188), descriptions and Qty 1 are in the right columns. Photos are not text. Items 11 and 12 have an empty Description, as in the PDF.",
+   "notes": "Same as round one (PASS). Only p816 was compared again here.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0125",
+   "page_sampled": 823,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p823 #/tables/379 (Table 9-10, Printers) has items 1-4 with part names, part numbers (5160458, 5599030, H44642LW, 5555266) and the Description 'Digital B/W Video Printer, USB-Port.' or 'Digital Color Printer, USB-Port.'. The Qty '-' is kept. All values match the render and are in the right columns.",
+   "notes": "No round-one draft for this row.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0127",
+   "page_sampled": 830,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p830 #/tables/386 (Table 9-13, items 1-5) matches the render. On p832 #/tables/388 has only three headers: No., Part Name, Description. The headers 'Part Number' and 'Qty' are not in the node. The part number and Qty are joined in the Description cell (for example '2388982 1', '5399665 1'). For items 13-16 the number is in the Part Name cell ('13. Power Cord for Brazil') and the No. cell is empty.",
+   "notes": "CASE: back to original on p832 (BUG-008). The values and the order are kept, but part numbers and Qty sit under the Description header and cannot be tied to their column. Medium. verify_claims suggests Low (merged cells, values kept). I keep Medium because the Part Number and Qty headers are missing on p832, so those values cannot be tied to their columns. The human may choose Low.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p837 #/tables/392 matches the render. Header and all rows from Covers 5405167 to OPIO 6020703 are in the right columns. The only small error is the Parts Group of 5756412/6756412: row 6756412 has an empty Parts Group and row 6756412-2 shows 'OPIO OPIO'. On p838 #/tables/393 has all the words of the page, but the cells are merged. The header cells are mixed ('Replace with R1.5 R2 Upg R2 R3'). Most rows have group, number, description and Y/N values in the Part Number or Part Description cells. 'Option 5756406 Fibroscan Probe Holder Active N N N N N' sits inside the cell of row 5409146. 'Option 5405177 Drawer Active Y Y Y Y Y' sits in the R3 Upg cell of row 5380960-2. In the rows 6020710-6020712 the text '5480205 and' is out of place.",
+   "notes": "CASE: back to original. The round-one lost words are back on p838 (BUG-008). Values are under the wrong cells and two rows are inside other rows, so Medium. Round one was also Medium.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p873 #/tables/427 (Contents of Chapter 10) matches the render. The 10 rows are 10-1 Overview 10-1, 10-2 Warnings 10-2, 10-3 Why do maintenance 10-2, 10-4 10-3, 10-5 10-6, 10-6 10-7, 10-7 10-16, 10-8 10-17, 10-9 10-35 and the Ultrasound INSPECTION CERTIFICATE 10-37. Page numbers are in the last cell.",
+   "notes": "Same as round one (PASS). Dot leaders stay in the cell text. They are noise only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'Section 10-6 System maintenance' (p879) is a section under Chapter 10 (sec_0129), so level 2 is right. p880 opens with sub-headings '10-6-2 Functional checks' and '10-6-2-1 System functional checks', kept as heading nodes.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0129 (Chapter 10) and child_sections is empty. The neighbours sec_0134 (10-5 Tools required, p878) and sec_0136 (10-7 Using a Phantom, p888) are siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p879 starts with the heading 'Section 10-6' and p887 ends with the probe cleaning cautions and folio '10 - 15'. sec_0136 starts at p888. The p880 content (10-6-2, Table 10-4, the NOTE) is owned by sec_0135, and no node of its 112 belongs to a neighbour.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Chapter 10/Section 10-6 System maintenance'. It matches the nesting of the bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap: sec_0134 ends at p878, sec_0135 covers p879-p887 and sec_0136 starts at p888. Tables 10-3 to 10-10 and Figures 10-1 to 10-5 each appear once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is on p879, the first page of the range.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark matches the 'Section 10-6' heading on p879 and the range ends right before sec_0136 at p888.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios '10 - 7' to '10 - 15' (p879-p887) are chapter-page numbers of arabic digits. The label 'arabic' is acceptable.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The 'Section 10-6' heading is on physical p879 = page_start. No wrong shift is seen on p880 (folio '10 - 8').",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p880 #/tables/433 (Table 10-4) has the header Check, Step, Description and 15 rows. Each Step name is in the Step cell, for example row 7 'Basic Measurements' and row 15 'Monitor'. Each Description is in the Description cell. Two-line descriptions are joined. All text matches the render.",
+   "notes": "CASE: still fixed. In v1.8 rows 7, 10, 11, 12, 14 and 15 had the Step merged into Description (FAIL Low). Now the Step column is separate in all rows. Same as round one.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p880 has no picture. On p886 and p887 the Figure 10-5 icon strip and the three probe icons (hands, NEVER, OK) are extracted, and the photos of Figures 10-1 to 10-4 (p883-p884, img_1390-img_1393) are kept. The small warning triangles beside CAUTION and NOTICE are not extracted, but their meaning is written in the text.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Pages 886 and 887. On p886 the vector image img_1394 (870x618) is the Figure 10-5 icon strip plus page text. Its top edge has a cut body line ('equipment damage. Failure to properly handle or maintain a probe may also void its warra...'). Below the icons it has the caption 'Figure 10-5 Probe handling icons' and two body lines ('Any evidence of wear...', 'Do a visual check...'). About half of the image is empty white. On p887 img_1396 (436x263) has a cut line 'NOTICE Disinfect a defective probe befo...' with the warning triangles and 'CAUTION' labels around the hands icon. The figures themselves are complete.",
+   "notes": "Extra page text kept inside a figure image. The same text is in the paragraph nodes 10179-10184, so the content is not affected. Low by contract (noise kept as image): not Critical (nothing is dropped) and not Medium (the section mapping is right). Graded once for the section. Probably the vector crop box is too large.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All images (img_1390-img_1397) are on p883-p887 inside sec_0135 (p879-p887). sec_0134 ends at p878 and sec_0136 starts at p888, so no page is shared. The captions Figure 10-1 to 10-5 match the images on the same pages.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'Section 10-8 Electrical Safety Tests' (p889) is a section under Chapter 10 (sec_0129), so level 2 is right. p895 shows '10-8-6 Data sheet for enclosure/chassis leakage current' with Table 10-15. The 10-8-x headings are kept as heading nodes of sec_0137.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0129 (Chapter 10) and child_sections is empty. The neighbours sec_0136 (10-7 Using a Phantom, p888) and sec_0138 (10-9 Too Much Leakage Current, p907-p910) are siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section opens on p889 with 'Section 10-8 Electrical Safety Tests'. The last page p906 has 10-8-13 and Table 10-19, then sec_0138 starts at p907. p895 (10-8-6 text, Table 10-15 caption, NOTEs) matches nodes 81-90 and is owned by this section. No neighbour content is inside the 256 nodes.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Chapter 10/Section 10-8 Electrical Safety Tests'. It matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap: sec_0136 ends at p888, sec_0137 covers p889-p906 and sec_0138 starts at p907. Tables 10-15 and 10-19 and Figures 10-6 to 10-15 each appear once. The 'Table 10-17' mention in text on p898 is probably a source typo.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 'Section 10-8' heading is on p889, the first page of the range.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark matches the heading on p889 and the range ends before sec_0138 at p907.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios '10 - 17' to '10 - 34' (p889-p906) are chapter-page numbers of arabic digits. The label 'arabic' is acceptable.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The 'Section 10-8' heading is on physical p889 = page_start, and p906 (folio '10 - 34') is the last page. No wrong shift is seen.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p895 #/tables/445 (Table 10-15) matches the render. Row 1 has 'Unit under test___' and 'Date of test:___' in the wide header. Row 2 has 'Test Conditions' and 'Measurement/Test Point Location'. Row 3 has System Power, Grounding/PE, Rear Panel, Lower Frame, Probe Connector, Main Handle in separate cells. The four rows Off/Closed, Off/Open, On/Closed, On/Open have separate cells. The measurement cells are empty, as in the PDF.",
+   "notes": "CASE: still fixed. In v1.8 'System Power' and 'Grounding/PE' were merged in one cell and 'Off Closed' too (FAIL Low). Now they are separate. Spanned headers are written once with blank neighbour cells, which is normal.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p895 has no picture. In the section, the figures of 10-6 to 10-15 are extracted (img_1398-img_1409), including the drawing on p893 (img_1401). The small warning triangles beside CAUTION are not extracted, but their meaning is in the text.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I checked all four edges of the vector image img_1401 (p893, 397x311). It holds only the grounding test drawing (plug, ohmmeter, device, labels 1-4), with no body text or caption. The other images are real figures (outlet tester, circuit diagrams, BF label, TEE test). No decorative strip is kept.",
+   "notes": "Hidden text nodes like '!! CAUTION:' (p905) and '!! DANGER:' (p906) are text, not images, so they are not graded here.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 12 images (img_1398-img_1409, p891-p905) map to sec_0137 (p889-p906). sec_0136 is only p888 and sec_0138 starts at p907, so no page is shared. The captions match the nearby images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p910 #/tables/451 has the header Electrical Test Performed, Max Value Allowed, Value Measured, OK?, Comments and 14 rows from 'Outlet (correct ground &wiring config.)' to 'Peripheral 3Ground Continuity'. #/tables/452 has the header Probe Number (from previous page), Max Value Allowed, Max Value Measured, OK?, Comments and Probe 1 to Probe 9. The word PROBES is a separate node. Empty cells are in the right places.",
+   "notes": "Same as round one (PASS).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 827,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p826 #/tables/382 the Feature of probe C2-9-D ends with 'Volume Navigation,' and the word 'Biopsy' sits in the Feature cell of the row '5488219 C2-9VN-D'. In the PDF 'Biopsy' ends the C2-9-D feature list. Also on p826 some rows put the part name and the application in one cell, for example '5397669 3CRF-D Abdomen'. On p827 #/tables/383 part number and name are in one cell (for example '5271060 ML6-15-D') and '5394466 6S-D Cardiac, OB, Pediatrics, Neonatal' is in one cell. On p828 #/tables/384 and p829 #/tables/385 similar merges appear. Their values and order are kept.",
+   "notes": "CASE: still wrong. The p826 'Biopsy' value is under the wrong probe, same as round one (BUG-008, probably a spanning cell split). CASE: back to original on p827-p829, which are merged-cell Low issues only. Medium because of the p826 value. verify_claims suggests Low because it reads the merged-cell wording; the Medium grade is for the moved word 'Biopsy' (a value under the wrong row), which is not merged-cell only.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p840 #/tables/395 has the header 'Parts Group, Part Number, Part Description, Parts staus, Replace with, R1.5, R1.5. 6, R2 Upg, R2, R3 Upg, R3' and all rows from Covers 5405167 to Power Cord 5182235. Values such as 'Y *', 'Active', 'Replace with 6736105-3' and 'N' match the render and sit in the right columns.",
+   "notes": "No round-one draft for this row.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p849 #/tables/404 has the header 'Parts Group, Part Number, Part Description, Parts staus, Replace with, R4 Upg, R4, R4.2.5x Upg, R4.2.5 x'. The rows from Covers 5405167 to Option 5460247-2 match the render, including 'Replaced' with '5480205 and 5480206' and the Y/N cells.",
+   "notes": "Same as round one (PASS). The typo 'staus' is in the PDF.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'Section 10-8 Electrical Safety Tests' (p889) is a section under Chapter 10 (sec_0129), so level 2 is right. p894 shows '10-8-5 Chassis leakage current test' with its sub-headings and numbered steps. The 10-8-x headings are kept as heading nodes of sec_0137.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0129 (Chapter 10) and child_sections is empty. The neighbours sec_0136 (10-7 Using a Phantom, p888) and sec_0138 (10-9 Too Much Leakage Current, p907-p910) are siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p894 (10-8-5 Chassis leakage current test, with 10-8-5-1 Definition and 10-8-5-2 Generic Procedure) matches nodes 52-80 in order. It is inside p889-p906 and belongs to this section. The section ends at p906 and sec_0138 starts at p907.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Chapter 10/Section 10-8 Electrical Safety Tests'. It matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p894 each heading and step appears once (10-8-5, 10-8-5-1, 10-8-5-2, steps 1.) to 5.)). The section range p889-p906 touches sec_0136 (p888) and sec_0138 (p907) with no gap or overlap.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 'Section 10-8' heading is on p889, the first page of the range.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark matches the heading on p889 and the range ends before sec_0138 at p907.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios '10 - 17' to '10 - 34' (p889-p906) are chapter-page numbers of arabic digits. The label 'arabic' is acceptable.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The 'Section 10-8' heading is on physical p889 = page_start, and p906 (folio '10 - 34') is the last page. No wrong shift is seen.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no table node on p894 and the render shows none. The table nodes of this section on other pages were not rechecked for this row. The p895 table is judged on the p895 row.",
+   "notes": "Same as base_approved (PASS). The text is shorter because the tables of p895 are judged on that row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p894 has no picture, only text with warning triangles. In the section, the figures of 10-6 to 10-15 are extracted (img_1398-img_1409), including the drawing on p893 (img_1401). The small warning triangles beside CAUTION are not extracted, but their meaning is in the text.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "I checked all four edges of the vector image img_1401 (p893, 397x311). It holds only the grounding test drawing (plug, ohmmeter, device, labels 1-4), with no body text or caption. The other images are real figures (outlet tester, circuit diagrams, BF label, TEE test). No decorative strip is kept.",
+   "notes": "Hidden text nodes like '!! CAUTION:' (p905) and '!! DANGER:' (p906) are text, not images, so they are not graded here.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 12 images (img_1398-img_1409, p891-p905) map to sec_0137 (p889-p906). sec_0136 is only p888 and sec_0138 starts at p907, so no page is shared. The captions match the nearby images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p909 #/tables/450 has the header Functional Check (if applicable), OK? or N/A, Physical Inspection and Cleaning (if applicable), Inspect, Clean. The rows B-Mode Function to Measurement Accuracy match the render. The right side lists Console, Monitor, a blank, Air Filter, Probe Holders, External I/O, Wheels Brakes & Swivel Locks, Cables and Connectors, Approved Peripherals.",
+   "notes": "Same as round one (PASS). The top grid (Customer Name, Probe 1-9) is not a table node. It is paragraph text.",
+   "confidence": 0.9
+  }
+ ]
+}

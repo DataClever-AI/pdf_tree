@@ -1,0 +1,1004 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p171 '13.1 On Screen Help' is a numbered sub-heading under the chapter title 'Troubleshooting'. hierarchy_level 2 fits (chapter is level 1).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0208 'Troubleshooting' lists sec_0209 as a child. The page contents list shows 'On Screen Help' as the first sub-topic. No children, and none are needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p171 the section starts at the '13.1 On Screen Help' heading and ends after step 6, so page_start and page_end 171 are right. But nodes #/texts/2645 and #/texts/2646 are the running header of p172 ('HemoSphere Advanced Monitor', '13 Troubleshooting'). The chapter number '13' (#/texts/2643) and folio '171' are also in this section. All content nodes belong here.",
+   "notes": "Only boilerplate crosses the boundary (p172 header). No body text is lost or absorbed. Low by the Sprint table.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Troubleshooting/13.1 On Screen Help' matches the chapter title and the sub-heading on p171.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p171 the intro text and steps 1 to 6 appear once in sec_0209 (#/texts/2636 to 2642). The chapter title and Contents list belong to sec_0208. No gap or duplicate seen.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100. The heading '13.1 On Screen Help' is clearly visible on p171, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading matches the printed Contents entry 'On Screen Help ... 171' on p171.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio '171' and the section numbers are Arabic. numbering_scheme 'arabic' is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p171 is 171 and the section sits on physical p171. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p171 step 1 has a small purple settings icon inline ('Touch the settings icon'). The claims tool reports a 64x64 px raster (25x25 pt) that was dropped by the filters. No node in sec_0209 represents it.",
+   "notes": "Small icon dropped, and its meaning is fully stated in the text of step 1. Low by the Sprint table.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p171 the red footer line is the only decoration. The image map shows a 2800x200 px image on p171 mapped to sec_0209. It is the red footer divider and it was kept as an image. The owner is the same as in v1.",
+   "notes": "Known bug BUG-004 (footer divider passes the image filter). Cosmetic only, so Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0209",
+   "page_sampled": 171,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only visual on p171 is the small settings icon in step 1, which is inside 13.1. It was dropped by a filter (see filters_discarding), so there is nothing to map wrongly. No other visual is on the page. The image map shows only the 2800x200 px footer divider mapped to this section. It is not a figure.",
+   "notes": "Divider noise is graded in filters_passing_noise (BUG-004). Owner is unchanged from v1 for this page.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p180 '13.5.4 SVR Faults/Alerts' is a three-part number under 13.5. hierarchy_level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0216 is '13.5 HemoSphere Swan-Ganz Module Error Messages'. The 13.5.4 heading is a sub-heading of 13.5 on p180. No children.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p180 the heading 13.5.4 is mid-page, below the end of Table 13-9. Below the heading are the Table 13-10 caption (#/texts/2707), the folio and table #/tables/97, which are correct. Nodes #/texts/2709 and #/texts/2710 are the running header of p181 and are boilerplate only.",
+   "notes": "Only boilerplate crosses the boundary. The continued Table 13-9 at the top of p180 is not here, so it should belong to sec_0219 (not in my input, not checked).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Troubleshooting/13.5 HemoSphere Swan-Ganz Module Error Messages/13.5.4 SVR Faults/Alerts' matches the numbering on p180.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 13.5.4 caption and its table appear once in sec_0220. The top-of-page iCO table is not duplicated here. I could not check sec_0219 for it, since it is not in my input.",
+   "notes": "Small doubt: I did not verify where Table 13-9 continued went.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The heading is clear on p180.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading text on p180 matches the title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio '180' is Arabic and the section number is Arabic. numbering_scheme 'arabic' is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 180 is on physical p180. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/97 has the header Message, Possible causes, Suggested actions and 2 rows: 'SVR - Slaved-In Pressures Signal Loss' and 'SVR - Configure Analog Inputs'. Cells match the rendering on p180 in column order. Line breaks inside cells are flattened only.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p180 has no figure or icon, only tables and text. Nothing meaningful can be missing.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p180 the red footer line is the only decoration. The image map shows a 2800x200 px image on p180 mapped to sec_0220. It is the red footer divider and it was kept as an image. The owner is the same as in v1.",
+   "notes": "Known bug BUG-004 (footer divider passes the image filter). Cosmetic only, so Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p180 has no images, so none need to map to sec_0220. The image map shows only the 2800x200 px footer divider mapped to this section. It is not a figure.",
+   "notes": "Divider noise is graded in filters_passing_noise (BUG-004). Owner is unchanged from v1 for this page.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p191 'A.1 Essential Performance Characteristics' is a numbered sub-heading under the Appendix A title 'Specifications'. hierarchy_level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0232 'Specifications' lists A.1 first. The Contents list on p191 shows A.1 as the first entry. No children.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "The section has page_end 191, but it holds nodes on p192: table #/tables/114 (Swan-Ganz module, pressure cable, oximetry cable rows), the caption #/texts/2775 and the p192 header. Table A-1 continues on p192 above A.2, so the nodes look correctly owned. Only page_end looks one page short. Nodes #/texts/2770 'A' and #/texts/2771 'Appendix' (chapter tab) are boilerplate.",
+   "notes": "Probably page_end should be 192. I did not get a render of p192, so this uses node data and the 'continued' caption. Confidence is lower. verify_claims suggests Critical because of the 'Appendix' node (#/texts/2771) above the heading. I read it as the chapter tab (chapter-number boilerplate, Low by the Sprint table), not body content, so the Medium for page_end stays.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Specifications/A.1 Essential Performance Characteristics' matches the Appendix A title and the A.1 heading on p191.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The intro text and Table A-1 caption appear once. The caption repeats on p192 as a 'continued' caption (#/texts/2775), which is normal. No gap seen.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The A.1 heading is clear on p191.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title matches 'Essential Performance Characteristics ... 191' in the p191 Contents list.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio '191' and section number A.1 are used. The appendix number is alphanumeric, but the page folios are Arabic, and numbering_scheme 'arabic' matches the folios.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 191 is on physical p191. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p191 the first row of Table A-1 has the label 'General: all monitoring modes and parameters' across the Module and Parameter columns. In #/tables/113 this label is placed in the third column before the performance text. The first two cells are empty. The values and reading order are kept.",
+   "notes": "Merged cell moved into the wrong column. The meaning is still readable, so Low. Table #/tables/114 on p192 looks column-correct in text but I did not see its render.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p191 has no figure. The only graphics are the Edwards logo and the red footer line, which are decoration.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p191 the red footer line is the only decoration. The image map shows a 2800x200 px image on p191 mapped to sec_0233. It is the red footer divider and it was kept as an image. The owner is the same as in v1.",
+   "notes": "Known bug BUG-004 (footer divider passes the image filter). Cosmetic only, so Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p191 has no relevant images, so nothing needs to map to sec_0233. The image map shows only the 2800x200 px footer divider mapped to this section. It is not a figure.",
+   "notes": "Divider noise is graded in filters_passing_noise (BUG-004). Owner is unchanged from v1 for this page.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p206 'D.1 Patient Data Input Range' is a sub-heading under the Appendix D title. hierarchy_level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0244 'Monitor Settings and Defaults'. D.1 is first, and D.2 (sec_0246) follows on the same page. Structure fits.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p206 D.1 has its heading, the Table D-1 caption and table #/tables/140 in sec_0245. Table D-2 below belongs to D.2 and is not in this section. page_start and page_end 206 are right and no other page's content is here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Monitor Settings and Defaults/D.1 Patient Data Input Range' matches p206.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading, caption and table appear once. D.2 content is not duplicated in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The D.1 heading is clear on p206.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading matches the bookmark title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio '206' is Arabic. numbering_scheme 'arabic' matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 206 is on physical p206. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p206 Table D-1 has columns Parameter, Minimum, Maximum, Available units. In #/tables/140 the header merges 'Minimum  Maximum' in one cell. Row labels move: 'Age', 'Height', 'Weight', 'BSA' appear in the last column, and the first column is empty. Min and Max values are joined in one cell, for example '2 120 years'.",
+   "notes": "Table structure was read wrongly, so values cannot be tied to their columns. Content is in the right section. Medium by the Sprint table.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p206 has no figures, only tables and text. Nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p206 the red footer line and Edwards logo are decoration. The 2800x200 px divider on p206 is mapped to sibling sec_0246 in v1.1, not to sec_0245. No image is kept in sec_0245.",
+   "notes": "Owner changed from v1 (sec_0245) to v1.1 (sec_0246). The divider is still BUG-004 noise, but it is counted on sec_0246.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p206 has no real figure, only Tables D-1 and D-2. The image map has no real image on p206. Only the footer divider is there, and it is mapped to sec_0246.",
+   "notes": "Nothing to map for sec_0245. Divider owner changed from sec_0245 in v1 to sec_0246 in v1.1.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p214 'F.1 General Maintenance' is a sub-heading under the Appendix F title. hierarchy_level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0253 'System Care, Service and Support'. The p214 Contents list shows General Maintenance first. No children.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p214 F.1 has the intro, a WARNING and a CAUTION ('Clean and store...'). The section has page_end 214, but nodes #/texts/2951 (CAUTION heading) and #/texts/2952 (ESD caution text) are on p215, after the p215 header. They come before the F.2 heading in reading order, so they look like F.1 content. Only page_end looks one page short.",
+   "notes": "Probably page_end should be 215. I did not get a render of p215, so I cannot rule out that the caution belongs to F.2. Lower confidence.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/System Care, Service and Support/F.1 General Maintenance' matches p214.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The intro, WARNING and CAUTION on p214 appear once in sec_0254. Nothing is duplicated in the next section as far as the input shows.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The F.1 heading is clear on p214.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title matches 'General Maintenance ... 214' in the p214 Contents list.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio '214' is Arabic. numbering_scheme 'arabic' matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 214 is on physical p214. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p214 has no figure. The WARNING and CAUTION boxes are text with rules only.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p214 the red footer line is the only decoration. The image map shows a 2800x200 px image on p214 mapped to sec_0254. It is the red footer divider and it was kept as an image. In v1 the p215 divider went to sec_0255 and now goes to sec_0256; p214 is unchanged.",
+   "notes": "Known bug BUG-004 (footer divider passes the image filter). Cosmetic only, so Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p214 has no relevant images to map. The image map shows only the 2800x200 px footer divider mapped to this section. It is not a figure.",
+   "notes": "Divider noise is graded in filters_passing_noise (BUG-004). On p215 the divider owner changed from sec_0255 to sec_0256; that is outside this section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p221 'G.1 Electromagnetic Compatibility' is a sub-heading under the Appendix G title. hierarchy_level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0270 'Guidance and Manufacturer's Declaration'. The p221 Contents list shows G.1 first, then G.2 and G.3. No children.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p221 G.1 has two Reference lines and one intro paragraph (#/texts/3145 to 3147). These are all its content and the section ends on p221. Nodes #/texts/3149 and #/texts/3150 are the running header of p222 ('HemoSphere Advanced Monitor', 'G Guidance and Manufacturer's Declaration').",
+   "notes": "Only boilerplate crosses the boundary. No body text is lost. Low by the Sprint table.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Guidance and Manufacturer's Declaration/G.1 Electromagnetic Compatibility' matches p221.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The reference lines and intro appear once. G.2 starts on p222 in sec_0272. No gap seen.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The G.1 heading is clear on p221.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title matches 'Electromagnetic Compatibility ... 221' in the Contents list.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio '221' is Arabic. numbering_scheme 'arabic' matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 221 is on physical p221. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p221 has no figure, only text. Nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p221 the red footer line is the only decoration. The image map shows a 2800x200 px image on p221 mapped to sec_0271. It is the red footer divider and it was kept as an image. The owner is the same as in v1.",
+   "notes": "Known bug BUG-004 (footer divider passes the image filter). Cosmetic only, so Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0271",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p221 has no relevant images to map. The image map shows only the 2800x200 px footer divider mapped to this section. It is not a figure.",
+   "notes": "Divider noise is graded in filters_passing_noise (BUG-004). Owner is unchanged from v1 for this page.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p230 'G.3.2 Wireless Security Measures' is a three-part number under G.3. hierarchy_level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0273 is 'G.3 Wireless Technology Information'. G.3.2 sits between G.3.1 (p229) and G.3.3 (p230). Structure fits.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p230 G.3.2 is the top heading and has one paragraph (#/texts/3216) about wireless security. G.3.3 and G.3.4 start below on the same page and are in other sections. page_start and page_end 230 are right, with no absorbed neighbours.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Guidance and Manufacturer's Declaration/G.3 Wireless Technology Information/G.3.2 Wireless Security Measures' matches p230.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The G.3.2 heading and paragraph appear once (2 nodes). The paragraph on p230 is complete and does not overlap G.3.3.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. The G.3.2 heading is clear on p230.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading text matches the bookmark title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio '230' is Arabic. numbering_scheme 'arabic' matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 230 is on physical p230. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p230 has no figure. It has text, a note box and a numbered list only.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p230 the red footer line is decoration. The 2800x200 px divider on p230 is mapped to sec_0277 in v1.1, not to sec_0275. No image is kept in sec_0275.",
+   "notes": "Owner changed from v1 (sec_0275) to v1.1 (sec_0277). The divider is still BUG-004 noise, but it is counted on the other section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0275",
+   "page_sampled": 230,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p230 has no real figure, only text, a note box and a list. The image map has only the footer divider on p230, mapped to sec_0277.",
+   "notes": "Nothing to map for sec_0275. Divider owner changed from sec_0275 in v1 to sec_0277 in v1.1.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "G.3.6 'European Union R&TTE Statements' is a three-part number under G.3, on p231. hierarchy_level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0273 'G.3 Wireless Technology Information' is right for G.3.6, and it follows G.3.5 (sec_0278, p231). Note that the parent range 227-240 is also too long because of this child.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The section starts correctly on p231 at the G.3.6 heading. Real G.3.6 text ends on p232 (the 'Hereby, Edwards...' paragraph, #/texts/3269). But page_end is 240 and node_count is 161. The section also holds the Glossary (p233 to 235), the Index (p236 to 239, tables #/tables/162 and 163) and the p240 back cover legal notices (#/texts/3402 to 3406). p240 has only legal text and the Edwards logo, no G.3.6 content.",
+   "notes": "Unbookmarked back-matter (Appendix H Glossary, Index, back cover) is absorbed into the last section. Glossary terms will be retrieved as G.3.6 content.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Guidance and Manufacturer's Declaration/G.3 Wireless Technology Information/G.3.6 European Union R&TTE Statements' matches the heading on p231.",
+   "notes": "The path is right, but the section content is not (see page_start_end).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The Glossary (#/texts/3176 'Glossary' to 3294) and Index (#/texts/3295 to 3306) are separate top-level parts of the manual but have no section. They are kept inside sec_0279 as nodes 3271 to 3406. So structural coverage has a missing sections and the back-matter is not separated from G.3.6.",
+   "notes": "Same root cause as page_start_end: the Glossary/Index have no bookmark. Counted here for the missing sections.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100, because the G.3.6 heading on p231 is verified. The error is at the end of the range, not at the title. So the flag is not wrong on its own.",
+   "notes": "The flag missed the problem, but flag state alone is not a failure.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The G.3.6 heading on p231 matches the bookmark title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 231 to 239 are Arabic. numbering_scheme 'arabic' matches. The back cover on p240 has no folio.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p231 is 231 and it is the physical p231. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "The section has two index tables, #/tables/162 (p237) and #/tables/163 (p238). Their text mixes index entries and page numbers in cells, with stray letters like 'g', 'py', 'gg' and joined numbers like '2324' and '167168'. Entries and page references cannot be tied together. p240 (sampled) has no table, and I did not see renders of p237 and p238.",
+   "notes": "Index columns were read as a table with shifted cells. These tables should be outside G.3.6 anyway. Lower confidence, since p237 and p238 were not rendered. verify_claims suggests Low (merged cells, values kept). I keep Medium because the entries and page numbers cannot be tied to each other and stray letters were added.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p231 has no figure, only text and bullets. p240 has only legal text and a logo. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The image map shows nine 2800x200 px footer dividers mapped to sec_0279, on p231 to p239. The red footer divider is visible on p231. These are decoration kept as images.",
+   "notes": "Known bug BUG-004. In v1 the p231 divider went to sec_0278. Now it goes to sec_0279. Cosmetic only, so Low.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0279",
+   "page_sampled": 240,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image map has only footer dividers for p231 to p239, all mapped to sec_0279. No real figure is listed. p231 and p240 show no figure. The p240 logo has no image mapped.",
+   "notes": "Dividers are graded in filters_passing_noise (BUG-004). On p231 the divider owner changed from sec_0278 to sec_0279. I did not see p232 to p239 renderings, so confidence is lower.",
+   "confidence": 0.75
+  }
+ ]
+}

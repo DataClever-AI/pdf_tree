@@ -1,0 +1,1354 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p118 the heading '9.1 Connecting the HemoSphere Swan-Ganz Module' is a bold sans-serif section heading under the big chapter title and Contents list. The tree has hierarchy_level 2, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0136 (chapter 9, HemoSphere Swan-Ganz Module Monitoring). The numbering and the printed heading order match this nesting. Its child sec_0138 (9.1.1) is printed under it.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p118 the big chapter number '9' at the top right is node #/texts/1727 and it is stored in sec_0137 (9.1). It belongs to the chapter title in sec_0136. The 9.1 heading and its text start below the Contents list. All other nodes (heading, paragraph, WARNING) belong to 9.1.",
+   "notes": "BUG-022 (chapter number kept in the first subsection). Not a regression. Only boilerplate crosses the boundary, so Low. Impact: one stray digit in the 9.1 text. verify_claims shows UNSUPPORTED because it probably does not test a lone digit.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.1 Connecting the HemoSphere Swan-Ganz Module' under sec_0136 (chapter 9, HemoSphere Swan-Ganz Module Monitoring). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 9.1 content from p118 to p120 appears once, in sec_0137 (#/texts/1722-1753, #/tables/63). No node of 9.1 is in sec_0136 or sec_0138. The chapter number '9' is only boilerplate and is graded under page_start_end.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0137 has flagged_for_review false. The heading is clear on p118 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.1 Connecting the HemoSphere Swan-Ganz Module' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p118 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p118 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 9-1 on p120 (#/tables/63) has 3 columns and 4 data rows. CO, iCO, EDV/RVEF (SV) and SVR each keep their 'Required connection' and 'See' cells, including the '*HR slaved-in' and '*MAP and CVP slaved-in' lines. No line is lost or duplicated.",
+   "notes": "Table is not in the changed-table list for v1.13.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p118 has no figure or meaningful icon in 9.1. The Edwards logo at the bottom right is decorative. Figure 9-1 on p119 is extracted as img_0079 and shows the numbered connection diagram.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json lists only img_0079 for sec_0137. It is Figure 9-1, a real figure. The Edwards logo and the red footer rule are not kept as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 118,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 9-1 (img_0079, p119) is printed under 9.1 and is mapped to sec_0137. Figure 9-2 on p121 is mapped to sec_0138, which is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p126 the heading '9.3.2.1 Select Injectate Volume' is an italic bold sans-serif heading, one level below the 9.3.2 heading. The tree has hierarchy_level 4, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0147 (9.3.2 Configuration Settings). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p126 part of sec_0148 is the 9.3.2.1 heading, the intro sentence, three bullets (10 mL, 5 mL, 3 mL) and the closing sentence. The figure, CAUTION and NOTE above the heading belong to 9.3.2 (sec_0147). 9.3.2.2 below is sec_0149.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.3.2.1 Select Injectate Volume' under sec_0147 (9.3.2 Configuration Settings). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All four volume lines and the closing sentence appear once in sec_0148 (#/texts/1852-1857). Nothing is in sec_0147 or sec_0149 twice.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0148 has flagged_for_review false. The heading is clear on p126 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.3.2.1 Select Injectate Volume' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p126 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p126 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 9.3.2.1 text on p126 has no icon or figure. The clinical actions and iCO icons at the top of the page belong to sec_0147, not to this section.",
+   "notes": "verify_claims shows a page-level small raster (64x64) signal. It is probably one of the sec_0147 top-of-page icons, so it is graded in sec_0147 and not here.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0148. No logo, rule or other noise is kept as an image on p126.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0148",
+   "page_sampled": 126,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 9-5 (img_0083) is printed above the 9.3.2.1 heading, so it belongs to 9.3.2 and is mapped to sec_0147. That is correct. The crop shows the full iCO screen.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p133 the heading '9.4.4 Active EDV Monitoring' is a bold sans-serif sub-subsection heading in the lower half of p132. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0154 (9.4 EDV/RVEF Monitoring). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0158 covers p132 (9.4.4 heading, two alert lines with text) and p133 (NOTE boxes, pacer bullets, stop-icon paragraphs, resumed-monitoring paragraph). 9.4.5 starts later on p133 in sec_0159. 9.4.3 content above on p132 is in sec_0157.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.4.4 Active EDV Monitoring' under sec_0154 (9.4 EDV/RVEF Monitoring). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 9.4.4 text from #/texts/1976 to #/texts/1995 appears once. The three bullets are present. 9.4.5 is not duplicated in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0158 has flagged_for_review false. The heading is clear on p133 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.4.4 Active EDV Monitoring' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p133 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p133 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p133 two paragraphs mention the stop monitoring icon. A red stop icon with '0:54' is printed in the text and again in the NOTE box. Neither icon is extracted. images.json lists no image for sec_0158.",
+   "notes": "Small inline icons dropped by the size filter (probably BUG-017). The icon name is in the text, so no information is lost.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0158, so no noise is kept. The footer rule and folio on p133 are not images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0158",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure is printed in 9.4.4. The only visuals are the stop icons, graded under filters_discarding. No image is mapped to a wrong section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p134 the heading '10.1 Pressure Cable Overview' is a bold sans-serif section heading under the big chapter title and Contents list. The tree has hierarchy_level 2, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0161 (chapter 10, Monitoring with the HemoSphere Pressure Cable). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0162 starts at the 10.1 heading (#/texts/2004) below the Contents list on p134. The big chapter number '10' is not in this section. The p136 NOTE, WARNING and CAUTION boxes are 10.1 content. 10.2 starts later on p136 in sec_0163.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '10.1 Pressure Cable Overview' under sec_0161 (chapter 10, Monitoring with the HemoSphere Pressure Cable). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 10.1 intro, color list, Figure 10-1 labels, Table 10-1 and the three p136 boxes appear once in sec_0162. Nothing is in sec_0161 or sec_0163.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0162 has flagged_for_review false. The heading is clear on p134 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '10.1 Pressure Cable Overview' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p134 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p134 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 10-1 (#/tables/66) has 7 columns and 12 parameter rows. Each bullet sits under a column header (for example MPAP only under TruWave DPT connected to pulmonary artery catheter). The p135 page render is not in this batch, so the check uses the page 135 text and the table layout only.",
+   "notes": "Lower confidence because p135 was not rendered in the batch.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 10-1 on p135 is extracted as the vector image img_0088 with all four numbered callouts and the legend. The Edwards logo on p134 is decorative. No meaningful visual is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only img_0088 (Figure 10-1) is kept for sec_0162. The Edwards logo and the red footer rule on p134 are not kept as images. The crop holds only the figure and its legend.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 10-1 (img_0088, p135) is printed under 10.1 and is mapped to sec_0162.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p114 the heading '8.2.1 Restore Factory Defaults' is a bold sans-serif sub-subsection heading, smaller than the 8.2 heading above it. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0127 (8.2 Clear Data and Settings). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0128 holds the 8.2.1 heading, intro and CAUTION box on p113 and steps 1-7 on p114 (#/texts/1655-1667). The 8.1 text above the heading and the 8.3 heading below step 7 are in other sections. The p113 folio and p114 running header are inside the body, not across a boundary.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '8.2.1 Restore Factory Defaults' under sec_0127 (8.2 Clear Data and Settings). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Steps 1-7 and the CAUTION box appear once in sec_0128. 8.3 Wireless Settings and its table are in sec_0129 only.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0128 has flagged_for_review false. The heading is clear on p114 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '8.2.1 Restore Factory Defaults' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p114 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p114 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p114 step 1 has a small inline settings icon after 'Touch the settings icon'. It has no image entry in images.json. The text names the icon.",
+   "notes": "BUG-017: small icons are probably dropped by the pixel-size filter. The meaning is stated in the text, so impact is small.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0128. The footer rule and folio on p113 and p114 are not kept as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 114,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The visuals in 8.2.1 are only inline icons. The Wi-Fi table icons on p114 belong to 8.3. No image is mapped to a wrong section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p120 the heading '9.1.1 Patient CCO Cable Test' is a bold sans-serif sub-subsection heading, smaller than the 9.1 heading. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0137 (9.1 Connecting the HemoSphere Swan-Ganz Module). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p120 part of sec_0138 is the 9.1.1 heading (#/texts/1754) and one paragraph (#/texts/1755), below step 5. The Table 9-1, NOTE and step 5 above it belong to 9.1 and are in sec_0137. The p121 part ends at step 5 before the 9.2 heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.1.1 Patient CCO Cable Test' under sec_0137 (9.1 Connecting the HemoSphere Swan-Ganz Module). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p120 the 9.1.1 heading and its paragraph appear once, in sec_0138. Table 9-1 is in sec_0137 only. Nothing of 9.1.1 is in sec_0137 or sec_0139.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0138 has flagged_for_review false. The heading is clear on p120 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.1.1 Patient CCO Cable Test' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p120 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p120 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p120 part of 9.1.1 is plain text with no icon or figure. The Table 9-1 icon-free cells are in sec_0137. Nothing meaningful is dropped here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for the p120 part of sec_0138. The footer rule and folio are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 120,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no figure in the p120 part of 9.1.1. Figure 9-2 (img_0080) is on p121 and is mapped to sec_0138.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p121 the heading '9.1.1 Patient CCO Cable Test' is a bold sans-serif sub-subsection heading, smaller than the 9.1 heading. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0137 (9.1 Connecting the HemoSphere Swan-Ganz Module). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p121 the nodes #/texts/1757-1767 (access text, Figure 9-2 caption, steps 1-5) are 9.1.1 content. The 9.2 heading and 9.2.1 step 1 below them are not in sec_0138. Only the running header and the p120 folio are boilerplate inside the section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.1.1 Patient CCO Cable Test' under sec_0137 (9.1 Connecting the HemoSphere Swan-Ganz Module). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Steps 1-5 on p121 appear once, in sec_0138. The 9.2 text below is in sec_0139. No overlap or missing text found.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0138 has flagged_for_review false. The heading is clear on p121 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.1.1 Patient CCO Cable Test' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p121 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p121 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p121 the first paragraph has 3 inline icons (clinical actions, More, Patient CCO Cable Test) and step 5 has an enter icon. None of them is extracted. Figure 9-2 is extracted as img_0080.",
+   "notes": "Small inline icons dropped by the size filter (probably BUG-017). Their names are written in the text, so no information is lost.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Only img_0080 (Figure 9-2, the cable test diagram) is kept for sec_0138. It is a real figure, not noise. No logo or rule is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 121,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 9-2 on p121 sits under 9.1.1 and img_0080 is mapped to sec_0138. The crop shows the three numbered ports and the cable fully.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p123 the heading '9.2.3 Thermal Signal Conditions' is a bold sans-serif sub-subsection heading in the 9.2 section. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0139 (9.2 Continuous Cardiac Output). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p123 part of sec_0142 starts at the 9.2.3 heading (#/texts/1795) and ends with the sentence about resuming monitoring (#/texts/1799). The NOTE above it belongs to 9.2.2. The 9.2.4 heading and text below are not in sec_0142.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.2.3 Thermal Signal Conditions' under sec_0139 (9.2 Continuous Cardiac Output). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 9.2.3 intro, Table 9-2 caption, table and fault paragraph appear once, in sec_0142. Nothing is repeated in sec_0141 or sec_0143.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0142 has flagged_for_review false. The heading is clear on p123 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.2.3 Thermal Signal Conditions' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p123 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p123 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 9-2 (#/tables/64) on p123 has the 4 time values per row under the right columns (3\u00bd / 6 / 15 / 30 minutes and 5 seconds / na / 6 / 20 minutes). The header 'Alert CO' spans two columns, so a blank header cell appears, but values keep their column. Table is not in the changed-table list.",
+   "notes": "Merged header cells only. Values and order are kept.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p123 the text 'touching the start monitoring icon' is followed by a green start monitoring icon (#/texts/1799). It is not extracted. There is no figure on this page for sec_0142. images.json lists no image for it.",
+   "notes": "Small inline icon dropped by the size filter (probably BUG-017). The name is in the text, so no information is lost.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0142. The p123 page has no logo or rule extracted as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0142",
+   "page_sampled": 123,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no figure in 9.2.3 on p123 and images.json lists none for sec_0142. The only visuals are inline icons, graded under filters_discarding.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p131 the heading '9.4.2 Connecting the ECG Interface Cable' is a bold sans-serif sub-subsection heading at the bottom of p130. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0154 (9.4 EDV/RVEF Monitoring). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0156 holds the 9.4.2 heading and a sentence on p130 and the cable text with IMPORTANT NOTE, WARNING and NOTE boxes on p131 (#/texts/1942-1959). 9.4.3 starts on p132 in sec_0157. The NOTE heading (#/texts/1958) comes after its body text, but both are in the same section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.4.2 Connecting the ECG Interface Cable' under sec_0154 (9.4 EDV/RVEF Monitoring). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p131 boxes appear once in sec_0156. Nothing from 9.4.2 is in sec_0155 or sec_0157.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0156 has flagged_for_review false. The heading is clear on p131 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.4.2 Connecting the ECG Interface Cable' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p131 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p131 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The p130 part of sec_0156 ends with a tiny 'ECG' pictogram with an arrow after 'rear panel of the HemoSphere advanced monitor'. It has no image entry in images.json. p131 has no icon.",
+   "notes": "Small pictogram dropped by the size filter (probably BUG-017). Not a lost figure, so Low, not Critical. The text already says 'ECG monitor input', so the meaning is kept. Lower confidence because the pictogram is tiny and sits on p130, not the sampled page.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0156. No logo or rule is kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0156",
+   "page_sampled": 131,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 9-7 on p130 is printed under 9.4.1 and img_0087 is mapped to sec_0155. That is correct. p131 has no figure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p133 the heading '9.4.5 STAT EDV and RVEF' is a bold sans-serif sub-subsection heading in the lower half of p133. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0154 (9.4 EDV/RVEF Monitoring). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0159 holds only the 9.4.5 heading (#/texts/1996) and its paragraph (#/texts/1997) on p133. The 9.4.4 text above and the 9.5 SVR heading below are in other sections.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '9.4.5 STAT EDV and RVEF' under sec_0154 (9.4 EDV/RVEF Monitoring). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 9.4.5 paragraph appears once in sec_0159. The section is not empty. Nothing is duplicated in sec_0158 or sec_0160.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0159 has flagged_for_review false. The heading is clear on p133 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '9.4.5 STAT EDV and RVEF' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p133 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p133 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 9.4.5 text on p133 has no icon or figure. The stop icons above it belong to 9.4.4.",
+   "notes": "verify_claims shows a page-level small raster (63x63) signal. It is the stop icon of 9.4.4 (sec_0158), graded there as Low.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0159. No noise is kept on p133.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0159",
+   "page_sampled": 133,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no figure in 9.4.5 and no image is mapped to sec_0159.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p140 the heading '10.3.3 Zero Arterial Pressure' is a bold sans-serif sub-subsection heading on p139. The tree has hierarchy_level 3, which fits its numbering depth and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0164 (10.3 FloTrac Sensor Monitoring). The numbering and the printed heading order match this nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0167 holds the 10.3.3 heading and steps 1-9 on p139 and the closing paragraph (#/texts/2111) at the top of p140. The 10.3.4 heading below it is in sec_0168. The two lines at the top of p139 (step 5 of 10.3.2) belong to sec_0166.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends in '10.3.3 Zero Arterial Pressure' under sec_0164 (10.3 FloTrac Sensor Monitoring). This is the same chain of headings printed in the document.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The steps and the p140 paragraph appear once in sec_0167. Nothing is duplicated in sec_0166 or sec_0168.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0167 has flagged_for_review false. The heading is clear on p140 and its title matches the TOC entry, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The printed heading '10.3.3 Zero Arterial Pressure' on the render matches the bookmark title, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p140 is an arabic number and the section numbers use dotted arabic digits. The numbering_scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p140 equals the physical page number, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The p140 part of sec_0167 is one paragraph with no icon. The p139 steps have inline icons: Zero & Waveform icon, two '-0-' zero buttons, a '-0-' screen button and a home icon. None is extracted. images.json lists no image for sec_0167.",
+   "notes": "Small inline icons dropped by the size filter (probably BUG-017). Their names are written in the steps, so no information is lost.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0167. No noise is kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0167",
+   "page_sampled": 140,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no figure in 10.3.3. Only inline icons appear, graded under filters_discarding. No image is mapped to a wrong section.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

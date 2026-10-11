@@ -1,0 +1,1274 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'Intended Use' on p413 uses the large section heading style below the chapter title.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0799 'Installation and Specifications' is correct; next sibling 'Manufacturer's Information' (p414-416).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Nodes are owned correctly (p413 intended-use text and environments; then the WARNING and indications at the top of p414 before 'Manufacturer's Information'), but page_end=413 although the section continues onto p414. Deterministic check (verify_claims.py): content continues past page_end: [\"p414 'The monitor is indicated for use by health care pr'\", \"p414 'The monitors are not intended for use in an MRI en'\"].",
+      "notes": "Root cause PH-A: when the next section starts part-way down a page, this section's page_end is set to the page before, although its content continues onto that shared page. The nodes themselves are assigned correctly; only the page range understates the section (citations would miss the last page). Regraded FAIL Low -> FAIL Medium with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/Intended Use' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No duplicated nodes with its parent or next sibling.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Intended Use' is found at page_start p413, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Intended Use' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p413 carries the printed arabic folio '401' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Intended Use' is rendered on physical p413, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p413 has no raster image XObjects; its visual elements are only text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p413; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0800",
+      "page_sampled": 413,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p413 contains no figure (only text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: 'MP40/MP50' on p420 uses the small bold style, like its siblings 'MP20/MP30' and 'MP60/MP70'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0805 'Connectors' is correct; siblings 'MP20/MP30' (p418-419) and 'MP60/MP70' (p421-422).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Owns its heading, the 'Rear of monitor' caption, callouts and legend 1-14 on p420, but ends with p421's running header ('Installation Safety Information', '38 Installation and Specifications'). Deterministic check (verify_claims.py): 3 node(s) printed before the next heading 'MP60/MP70' on p421 are owned by sec_0808: 'MP40/MP50 Left side of monitor'.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section. Regraded FAIL Low -> FAIL Critical with the Sprint severity scale (verification-contract.md). Deterministic signal confirmed on the rendered page.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/Installation Safety Information/Connectors/MP40/MP50' lists the ancestors in order. A title in the path contains '/', so splitting on '/' would create false levels.",
+      "notes": "",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No page overlap with its siblings.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'MP40/MP50' is found at page_start p420, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'MP40/MP50' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p420 carries the printed arabic folio '408' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'MP40/MP50' is rendered on physical p420, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p420 has 2 raster figure(s) (the MP40/MP50 rear-of-monitor photo and the IntelliVue Instrument Telemetry adapter photo) and images_v1.json keeps 2 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p420 is the technical figure (the MP40/MP50 rear-of-monitor photo and the IntelliVue Instrument Telemetry adapter photo), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0807",
+      "page_sampled": 420,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Both p420 photos (rear of monitor, callouts 1-10; telemetry adapter, callouts 11-14) belong to the MP40/MP50 connector description and are mapped to sec_0807.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: 'Environmental Specifications' on p428 uses the large bold style of the specification sub-sections, like 'Physical Specifications'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0814 'EMC And Radio Regulatory Compliance' matches the bookmark outline; next section is the level-2 'Monitor Performance Specifications' (p431).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The section's first table is the product weight/dimensions table (M1014A ... M1116B) printed at the top of p428 above the 'Environmental Specifications' heading, which belongs to 'Physical Specifications' (sec_0815). In addition, three of this section's own environmental tables (M1116B humidity, Remote SpeedPoint M8026A, Remote Alarm Device M8025A) at the top of p431 are assigned to the next section sec_0817. Deterministic check (verify_claims.py): 3 node(s) printed before the next heading 'Monitor Performance Specifications' on p431 are owned by sec_0817: 'Thermal Array Recorder Module M1116B |  | \nItem | '; 1 content node(s) printed above its own heading on p428: [\"'Product | Max Weight W x H x D |  | Comments\\nM1014'\"].",
+      "notes": "Root cause TBLMAP (hypothesis): table nodes on a page shared by several sections are not placed by their position relative to the headings, so a table printed under one heading can be assigned to a neighbouring section (same family as the known sibling image/table mismapping, BUG-003). Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/EMC And Radio Regulatory Compliance/Environmental Specifications' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Page ranges do not overlap; the table ownership errors are reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Environmental Specifications' is found at page_start p428, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Environmental Specifications' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p428 carries the printed arabic folio '416' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Environmental Specifications' is rendered on physical p428, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The p428 product table keeps every product, weight, dimension and comment, but its header is merged ('Product | Max Weight W x H x D | | Comments') and later cells shift by one column.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p428 has no raster image XObjects; its visual elements are a bordered product table, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p428; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0816",
+      "page_sampled": 428,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p428 contains no figure (a bordered product table), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'Monitor Performance Specifications' (p431) uses the large section heading style of the chapter.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0799 is correct; next sibling 'M4605A Battery Specifications' (p440).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "p435's five specification tables are owned correctly, but the section starts with three environmental tables (Thermal Array Recorder M1116B humidity, Remote SpeedPoint M8026A, Remote Alarm Device M8025A) printed at the top of p431 above its heading, which belong to the previous section 'Environmental Specifications'. It also ends with p440's running header. Deterministic check (verify_claims.py): 1 node(s) printed before the next heading 'M4605A Battery Specifications' on p440 are owned by sec_0818: 'Compatible Devices |  | \nIntelliVue Instrument Tel'; 3 content node(s) printed above its own heading on p431: [\"'Thermal Array Recorder Module M1116B |  | \\nItem | '\", \"'Remote SpeedPoint M8026A |  | \\nItem | Condition | '\"].",
+      "notes": "Root cause TBLMAP (hypothesis): table nodes on a page shared by several sections are not placed by their position relative to the headings, so a table printed under one heading can be assigned to a neighbouring section (same family as the known sibling image/table mismapping, BUG-003). Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md). Deterministic signal confirmed on the rendered page.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/Monitor Performance Specifications' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Page ranges do not overlap; the table ownership error is reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Monitor Performance Specifications' is found at page_start p431, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Monitor Performance Specifications' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p435 carries the printed arabic folio '423' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Monitor Performance Specifications' is rendered on physical p431, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The five p435 tables (M8023A External Power Supply, MMS M3001A, D80 Intelligent Display, Docking Station M8045A, Monitor Interface Specifications) are extracted with their row labels and values in order (e.g. 'Power consumption | <12 W average <30 W peak', 'Connector | DB-25', 'Current to attached patient monitor | max. 3.5 A').",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p435 has no raster image XObjects; its visual elements are bordered specification tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p435; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0817",
+      "page_sampled": 435,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p435 contains no figure (bordered specification tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: 'ECG/Arrhythmia/ST/QT' on p441 uses the measurement sub-section heading style.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0819 'Measurement Specifications' is correct; next sibling 'Respiration' (p443-444).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Owns its heading, compliance note and all ECG/Arrhythmia/ST/QT tables on p441-442, but ends with p443's running header. Deterministic check (verify_claims.py): 1 node(s) printed before the next heading 'Respiration' on p443 are owned by sec_0821: 'ECG/Arrhythmia/ST Supplemental Information as requ'.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section. Regraded FAIL Low -> FAIL Critical with the Sprint severity scale (verification-contract.md). Deterministic signal confirmed on the rendered page.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/Measurement Specifications/ECG/Arrhythmia/ST/QT' lists the ancestors in order. A title in the path contains '/', so splitting on '/' would create false levels.",
+      "notes": "",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No page overlap with its siblings.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'ECG/Arrhythmia/ST/QT' is found at page_start p441, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'ECG/Arrhythmia/ST/QT' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p442 carries the printed arabic folio '430' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'ECG/Arrhythmia/ST/QT' is rendered on physical p441, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The p442 tables keep their values (bandwidth modes, input impedance, CMRR, HR alarm range and steps, Extreme Tachy/Brady, Run PVCs, excitation waveform), but the multi-line row label 'Bandwidth when the ECG is transmitted from a telemetry device via short range radio' is split and interleaved with the mode rows.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p442 has no raster image XObjects; its visual elements are bordered specification tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p442; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0820",
+      "page_sampled": 442,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p442 contains no figure (bordered specification tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: 'NBP' (p447) uses the measurement sub-section heading style.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0819 is correct; siblings 'SpO2' (p445-446) and 'Invasive Pressure and Pulse' (p450).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "p449's NBP alarm and overpressure tables are owned correctly, but the section's first two tables are 'SpO2 Performance Specifications' and 'SpO2 Alarm Specifications', printed at the top of p447 above the 'NBP' heading and belonging to the previous section 'SpO2'. It also ends with p450's running header. Deterministic check (verify_claims.py): 2 content node(s) printed above its own heading on p447: [\"'SpO2 Performance Specifications |  | \\nPulse | Rang'\", \"'SpO2 Alarm  Specifications | Range | Adjustment | '\"].",
+      "notes": "Root cause TBLMAP (hypothesis): table nodes on a page shared by several sections are not placed by their position relative to the headings, so a table printed under one heading can be assigned to a neighbouring section (same family as the known sibling image/table mismapping, BUG-003). Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/Measurement Specifications/NBP' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Page ranges do not overlap; the table ownership error is reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'NBP' is found at page_start p447, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'NBP' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p449 carries the printed arabic folio '437' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'NBP' is rendered on physical p447, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The p449 NBP alarm table keeps all Systolic/Diastolic/Mean ranges for Adult/Pedi/Neo, but the Adjustment text '>30 mmHg: 5 mmHg (1 kPa)' is merged into the Pedi systolic range cell, and the overpressure table loses its title row.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p449 has no raster image XObjects; its visual elements are two bordered tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p449; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0823",
+      "page_sampled": 449,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p449 contains no figure (two bordered tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: the heading on p457 uses the measurement sub-section style, like 'tcGas' below it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0819 is correct; next sibling 'tcGas' (p457).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The section owns its heading, compliance note and both C.O./CCO tables, but also the 'tcGas Performance Specifications' table printed below the 'tcGas' heading on p457, which belongs to the next section sec_0830 (that section keeps only its heading, compliance note and folio). Deterministic check (verify_claims.py): table #/tables/243 on p457 ('tcGas Performance Specifications |  | \ntcpO2 |  | ') sits under the heading of sec_0830 'tcGas'.",
+      "notes": "Root cause TBLMAP (hypothesis): table nodes on a page shared by several sections are not placed by their position relative to the headings, so a table printed under one heading can be assigned to a neighbouring section (same family as the known sibling image/table mismapping, BUG-003). Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/Measurement Specifications/Cardiac Output / Continuous Cardiac Output' lists the ancestors in order. A title in the path contains '/', so splitting on '/' would create false levels.",
+      "notes": "",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "It shares p457 with 'tcGas'; the table ownership error is reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Cardiac Output / Continuous Cardiac Output' is found at page_start p457, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Cardiac Output / Continuous Cardiac Output' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p457 carries the printed arabic folio '445' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Cardiac Output / Continuous Cardiac Output' is rendered on physical p457, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The C.O./CCO performance table (right-heart and transpulmonary C.O., EVLW, ITBV, CCO, blood/injectate temperature ranges and accuracies) and alarm table (TBlood, CCO ranges, steps, delays) are extracted with their values in order and match the rendering.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p457 has no raster image XObjects; its visual elements are bordered specification tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p457; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0829",
+      "page_sampled": 457,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p457 contains no figure (bordered specification tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: 'Restart time' (p463) uses the small bold style, like its sibling 'Fast Transients/Bursts'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0841 is correct; it is the chapter's last section (next is the level-1 'Default Settings Appendix' at p465).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading and sentence on p463 and the blank p464, but its last two nodes are the chapter number '39' printed at the top of p465.",
+      "notes": "Root cause PH-C: the large chapter number printed at the top of the next chapter's first page (e.g. '2', '3') is extracted as a paragraph and appended to the last section of the previous chapter.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Installation and Specifications/Safety and Performance Tests/Recommended separation distances from portable and mobile RF communication equipment/Restart time' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with its sibling or the appendix.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Restart time' is found at page_start p463, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Restart time' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p464 carries the printed arabic folio '452' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Restart time' is rendered on physical p463, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p464 has no raster image XObjects; its visual elements are nothing but the running header and folio (blank page), which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p464; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0844",
+      "page_sampled": 464,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p464 contains no figure (nothing but the running header and folio (blank page)), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: the heading on p465 uses the large section heading style below the appendix title.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0845 'Default Settings Appendix' is correct; next sibling 'Alarm and Measurement Default Settings' (p471).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading, intro sentence and the country tables on p465-470 (the appendix introduction above stays with sec_0845), but ends with p471's running header.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Default Settings Appendix/Country-Specific Default Settings' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No page overlap with its siblings.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Country-Specific Default Settings' is found at page_start p465, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Country-Specific Default Settings' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p465 carries the printed arabic folio '453' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Country-Specific Default Settings' is rendered on physical p465, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Every country row keeps its line frequency, weight unit, height unit and ECG cable colour in order (e.g. 'Afghanistan 50 kg cm AAMI', 'American Samoa 60 lb in AAMI'), but the header is scrambled ('... ECG Cable Color | Units Height 50/60 [Hz] kg, lb IEC, AAMI | in, cm') and rows are packed several per cell instead of one row per country.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p465 has no raster image XObjects; its visual elements are a bordered country table, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p465; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0846",
+      "page_sampled": 465,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p465 contains no figure (a bordered country table), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: the heading (p472) uses the large section heading style of the appendix.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0845 is correct; siblings 'Alarm Default Settings' (p471) and 'Pulse Default Settings' (p475).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading and the ECG, Arrhythmia, ST and QT settings tables on p472-474, but ends with p475's running header.",
+      "notes": "Root cause PH-D (same as 2002-C): the running header of the next page, when a new section starts at the top of that page, is assigned to the preceding section.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Default Settings Appendix/ECG, Arrhythmia, ST and QT Default Settings' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No page overlap with its siblings.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'ECG, Arrhythmia, ST and QT Default Settings' is found at page_start p472, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'ECG, Arrhythmia, ST and QT Default Settings' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p473 carries the printed arabic folio '461' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'ECG, Arrhythmia, ST and QT Default Settings' is rendered on physical p472, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "In the p473 Arrhythmia Settings table, the Adult/Pedi/Neo factory values are packed into the row-label cell ('VTach HR 100 120 150 | | | |', 'Pause Threshold 2.0 sec 1.5 sec'), and the H30 deviation values ('Off') sit in an ambiguous column. Which default applies to which patient category and to H30 can no longer be read by column.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p473 has no raster image XObjects; its visual elements are bordered default-settings tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p473; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0849",
+      "page_sampled": 473,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p473 contains no figure (bordered default-settings tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    }
+  ]
+}

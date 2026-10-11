@@ -1,0 +1,634 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p237, 'Monitoring Airway Flow, Volume and Pressure' looks like a level-1 heading and the node has hierarchy_level 1. Size and style match its siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent and children match the document: chapter 15 heading with intro, children sec_0422 to sec_0429 start on p238.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0421 runs p237 to p244. p237 holds the chapter title and intro text, and p244 ends the last child sec_0429. No text of the next chapter is inside.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0421 follows the visible heading chain, in the right order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes of sec_0421 are in reading order. No duplicate or missing node was seen on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is visible on p237, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'Monitoring Airway Flow, Volume and Pressure' is on the rendered page, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed page numbers are arabic and numbering_scheme is arabic. p237 shows an arabic folio.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start is the physical page. The printed folio is 12 lower than the physical page for the whole chapter, so the bookmark pages are already physical.",
+   "notes": "Same folio gap on all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p238 flow sensor drawings (two small tables with sensor pictures) are inside vector image img_0257. No picture on p237 or p238 was dropped. Note p237 itself has no figure.",
+   "notes": "The drawings are only inside a full-page image. See filters_passing_noise.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Vector image img_0257 (1218x1405 px, p238) is the whole rendered page. It shows the page header bar, the title, the CAUTION text, the steps and the page number 226, not only the sensor pictures. It is a page frame and text, not a figure.",
+   "notes": "BUG-010: the vector crop probably takes the whole page because the table lines and sensor drawings span it. The text is already in nodes, so the harm is small.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0257 is on p238 and is mapped to sec_0421. The p238 heading 'Attaching the Flow Sensor' starts sec_0422 (pages 238 to 240). The image belongs to sec_0422, not to its parent sec_0421.",
+   "notes": "Chapter parent got the image of its first child. Probably the mapping uses the chapter page range. Related to BUG-010 vector mapping.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p245, 'Identifying tcGas Module Components' looks like a level-2 heading and the node has hierarchy_level 2. Size and style match its siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent and children match the document: level-2 heading under sec_0440 'Monitoring tcGas' on p245.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page range of sec_0441 matches the printed headings. No neighbour text is inside it and none of its own text is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0441 follows the visible heading chain, in the right order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes of sec_0441 are in reading order. No duplicate or missing node was seen on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is visible on p245, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'Identifying tcGas Module Components' is on the rendered page, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed page numbers are arabic and numbering_scheme is arabic. p245 shows an arabic folio.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start is the physical page. The printed folio is 12 lower than the physical page for the whole chapter, so the bookmark pages are already physical.",
+   "notes": "Same folio gap on all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector image img_0259 (331x326 px, p245) is the full tcGas module drawing. The panel, 'tcGas M1018A', the O2/CO2 and CAL keys, the knob and the connector are all visible and sharp. Before BUG-010 this drawing was missing.",
+   "notes": "The leader lines are cut at the left edge and the numbers 1 to 4 are outside the crop. The numbers and legend are in nodes #/texts/4403 to #/texts/4412.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only vector image in sec_0441 is img_0259, the module drawing. It is not a border, a logo or a text box. No other vector image is on p245.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0259 is on p245 under the heading 'Identifying tcGas Module Components'. It is mapped to sec_0441, the right section. The chapter title text above belongs to sec_0440.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p359, 'IntelliBridge EC10 Module' looks like a level-1 heading and the node has hierarchy_level 1. Size and style match its siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent and children match the document: chapter 29 heading on p359.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page range of sec_0682 matches the printed headings. No neighbour text is inside it and none of its own text is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0682 follows the visible heading chain, in the right order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes of sec_0682 are in reading order. No duplicate or missing node was seen on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is visible on p359, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'IntelliBridge EC10 Module' is on the rendered page, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed page numbers are arabic and numbering_scheme is arabic. p359 shows an arabic folio.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start is the physical page. The printed folio is 12 lower than the physical page for the whole chapter, so the bookmark pages are already physical.",
+   "notes": "Same folio gap on all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The legend table #/tables/120 on p359 has the five lines a to e: module name, setup indicator LED, setup/data viewing key, connection status LED, external device cable connector. They match the rendered table.",
+   "notes": "Each line repeats its letter once (for example 'a  a module name'). The meaning is the same.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector image img_0265 (262x313 px, p359) shows the whole EC10 module with the title, LED, key and RJ45 connector. Nothing is cut off. Before BUG-010 it was missing.",
+   "notes": "The arrow tails and letters a to e are outside the crop. They are in nodes #/texts/6823 to #/texts/6829.",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0265 is the only vector image on p359. It is the module drawing, not a border, logo or text box. No raster copy exists.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0265 is on p359 under the chapter heading 'IntelliBridge EC10 Module' and is mapped to sec_0682. This is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p363, 'VueLink Modules' looks like a level-1 heading and the node has hierarchy_level 1. Size and style match its siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent and children match the document: chapter 30 heading on p363.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page range of sec_0690 matches the printed headings. No neighbour text is inside it and none of its own text is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0690 follows the visible heading chain, in the right order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes of sec_0690 are in reading order. No duplicate or missing node was seen on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is visible on p363, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'VueLink Modules' is on the rendered page, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed page numbers are arabic and numbering_scheme is arabic. p363 shows an arabic folio.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start is the physical page. The printed folio is 12 lower than the physical page for the whole chapter, so the bookmark pages are already physical.",
+   "notes": "Same folio gap on all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table #/tables/122 on p363 merges columns. Rendered rows show Type A, Max Wave 1, Max numeric 2. The extract has 'Auxiliary A | 12'. Type is joined to Module and the two numbers are joined (12, 26). Values lose their column.",
+   "notes": "Table cells are probably merged by the table model. Legend table #/tables/123 is fine. Not a BUG-010 issue. Medium, not Low: values changed meaning, not only merged cells ('12' and '26' replace two separate numbers).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector image img_0266 (369x297 px, p363) shows the whole VueLink module: title, ventilator label, keys, LED and round connector. It is complete and readable. Before BUG-010 it was missing.",
+   "notes": "Arrow tails and letters a to g are outside the crop. They are in nodes #/texts/6926 to #/texts/6932.",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0266 is the only vector image on p363. It is the module drawing, not a table grid or a border. The module table above it was not turned into an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0266 is on p363 under 'VueLink Modules' and is mapped to sec_0690. This is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p315, 'Event Review Recordings' looks like a level-4 heading and the node has hierarchy_level 4. Size and style match its siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent and children match the document: level-4 heading under sec_0606 'Event Recordings' on p315.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page range of sec_0607 matches the printed headings. No neighbour text is inside it and none of its own text is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0607 follows the visible heading chain, in the right order.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes of sec_0607 are in reading order. No duplicate or missing node was seen on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is visible on p315, so the flag is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'Event Review Recordings' is on the rendered page, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed page numbers are arabic and numbering_scheme is arabic. p315 shows an arabic folio.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start is the physical page. The printed folio is 12 lower than the physical page for the whole chapter, so the bookmark pages are already physical.",
+   "notes": "Same folio gap on all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table #/tables/106 (rendered on p316) shifts cells. Row 1 puts 'Neuro Resp BIS LOW 51<60' under Parameter 1 and leaves Group empty. Row 4 has 'Manual' in column 3. Row 5 splits 'SpO2 LOW 95<96'. Values lose their column.",
+   "notes": "Probably a table-model split on the monospace text. Not a BUG-010 issue. The sampled page is p315 but the table is on p316 inside sec_0607. Medium, not Low: values changed meaning, not only merged cells (values sit under the wrong column heading).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Raster img_0162 (757x403 px, p315) is the graphic recording strip. Vector img_0263 (605x357 px, p315) is the strip header printout. Both pictures on p315 were kept.",
+   "notes": "The p315 text box content is also in nodes, so nothing is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Vector image img_0263 (605x357 px, p315) is the framed text box with the '90MIN Green, Sarah' printout. It is a text box outline with text already in nodes #/texts/5823 to #/texts/5833. The crop also cuts the callout labels: 'record no.' is clipped at the top and 'n' at the left. It is not a copy of raster img_0162, which is the wave strip.",
+   "notes": "BUG-010: probably a text box outline was taken as a vector figure. Low because the text survives in nodes. It could also be seen as a figure, so check by hand.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0162 and img_0263 are both on p315 under 'Event Review Recordings' and are mapped to sec_0607. The next section sec_0608 starts on p316 with its own raster img_0163.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

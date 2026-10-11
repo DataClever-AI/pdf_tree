@@ -1,0 +1,114 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0219",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p180, #/tables/96 (Table 13-9 continued) has 5 rows from 'Alert: iCO - Unstable Baseline' to 'Alert: iCO - Warm Injectate'. I compared each row with the render. Every message, cause and action is in the right column, including the 3 bullet items and 'within 8 °C of blood temperature'. Only change: en dash became '-'.",
+   "notes": "Values, order and columns are kept. Cause and action lines are joined with spaces. This is cosmetic. Same text as round one.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0231",
+   "page_sampled": 190,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p190, #/tables/111 (Table 13-19) has a header and 3 rows with 3 columns each. All messages, causes and actions match the render in order. Cause and action lines are joined in one cell. The long dash is shown as '-'.",
+   "notes": "Cosmetic only. Same text as round one.",
+   "confidence": 0.94
+  },
+  {
+   "section_id": "sec_0233",
+   "page_sampled": 191,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p191, #/tables/113 (Table A-1) has 3 columns and one row. The 'General: all monitoring modes and parameters' cell spans two columns in the print, so the Parameter cell is empty. All 4 paragraphs of Essential Performance are in order. I also checked #/tables/114 on p192: 5 rows with the right module, parameter and performance text. The blank Module cell for the iCO row matches the merged cell in the print.",
+   "notes": "Paragraph breaks inside cells become spaces. No value is in the wrong column. Same text as round one.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 200,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p200, #/tables/134 (Table C-1) has the header, the BSA row and the CaO 2 row. Parameter, Description and Units are in the right columns. The formulas and the 'where' lines are in the same order as the print. Subscripts get spaces, for example 'CaO 2' and 'm 2'.",
+   "notes": "Spacing in subscripts is cosmetic. Same text as round one. The changed table #/tables/139 on p205 is graded in the p202 row of this section.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0245",
+   "page_sampled": 206,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p206, #/tables/140 (Table D-1) has values in the wrong columns. The print has Parameter, Minimum, Maximum and Available units. The Age row is ' | 2 | 120 years | Age': the label 'Age' is in the last column and 'years' is joined to Maximum. The Height and Weight rows also end with their label, for example '12 in / 30 cm | 98 in / 250 cm | inches (in) or cm | Height'. The BSA row is '0.08 |  | 5.02 m 2 | BSA'. The ID row is 'ID | 0 digits | 40 characters None | '. Only the Gender row is correct.",
+   "notes": "CASE: still wrong. Table structure is shifted in the Age to ID rows (BUG-008). The values are present but cannot be tied to their columns. Medium, not Low: this is not a simple cell merge. Values sit under the wrong column (Age label under 'Available units', 'years' under Maximum), so the checker's Low signal is wrong here. Same text as round one.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0217",
+   "page_sampled": 177,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p177, #/tables/91 (Table 13-7) has a header and 7 rows with 3 columns. I compared each row with the render, from 'Fault: CO - Blood Temp Out of Range' to 'Fault: CO - Check Thermal Filament Position'. Messages, causes and actions are in the right columns. The 3 bullet items and the '<31 °C or >41 °C' values are kept. Only the en dash became '-'.",
+   "notes": "Cause and action lines are joined with spaces. Cosmetic only. Same text as round one.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0220",
+   "page_sampled": 180,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p180, #/tables/97 (Table 13-10) has the header and 2 rows. 'Alert: SVR - Slaved-In Pressures Signal Loss' has 4 causes and 5 actions in the right columns. 'Alert: SVR - Configure Analog Inputs for SVR Monitoring' has 1 cause and 1 action. The text equals the render. Only the en dash became '-'.",
+   "notes": "Values, order and columns are kept. Same text as round one.",
+   "confidence": 0.94
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 198,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p198, #/tables/131 (left part) and #/tables/132 (right part) of Table B-1 match the render. All Description and Model number cells are right, including group rows with empty model cells and the '*', '**' and '***' values. #/tables/133 on p199 has the two last rows ('service manual' with '***', and 'quick start guide' with 'HEMQG1000'), also right. The footnote text under the table is kept in text nodes.",
+   "notes": "One table split into three nodes follows the page layout. Same text as round one.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0243",
+   "page_sampled": 202,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p202, #/tables/136 has 7 rows (Ea dyn, EDV, EDVI, ESV, ESVI, LVSWI, O2EI) and each matches the render. But the table checked on p205, #/tables/139, is wrong. In the print, 'VO2Ie' is the Parameter and 'VQI' is the Parameter of the next row. In the node, the Ie is moved into the Description column ('VO 2 | Ie Estimated Oxygen...'). The VQI row has an empty Parameter cell and 'VQI' at the start of the Description. The VQI fraction is garbled: a stray '22' appears, and one line reads '{138 G16113(10 (SO/100)) (00031 O)}' while the print has '{1.38 x HGB SI x 1.611344 x (1.0 - (SvO2/100)) + ...}'.",
+   "notes": "CASE: back to original. Round one read #/tables/139 correctly ('VO 2 Ie' and 'VQI' in the Parameter column); the guard now keeps the original text, so the Parameter labels are in the wrong column again (BUG-008). The p202 table #/tables/136 is fine. Medium because a parameter name sits in the wrong column and formula text is garbled, but the formula words are mostly still present.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0252",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p214, the page shows the Appendix F opening: the title, a Contents list as plain text and 'F.1 General Maintenance' with a WARNING and a CAUTION box. No data table is drawn on this page. The only table nodes of sec_0252 are #/tables/148 (p212) and #/tables/149 (p213).",
+   "notes": "No table issue on this page itself. The text of #/tables/149 on p213 is a separate row and looks wrong. Same decision as round one.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0261",
+   "page_sampled": 218,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p218, #/tables/151 (address list under 'F.5 Edwards Lifesciences Regional Headquarters') loses text. The India entry ends with 'Goregaon west-Mumbai 400062 India'. The print has 'Phone +91.022.66935701 04' below 'India'. The number '66935701' is not in the section JSON. The other entries (USA, China, Switzerland, Japan, Australia, Brazil) match the print, and their phone numbers are kept.",
+   "notes": "CASE: still wrong. A phone number is lost from one cell. It is probably a line-break or small-text issue in the table reader (BUG-008). Same text as round one.",
+   "confidence": 0.9
+  }
+ ]
+}

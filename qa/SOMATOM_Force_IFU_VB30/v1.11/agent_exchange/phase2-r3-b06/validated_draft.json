@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "provider": "claude/opus (lead regrade, corrected rule 6i)",
+  "validated_at": "2026-10-08T05:02:35.877176+00:00",
+  "findings": [
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0280",
+      "page_sampled": "159",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p159 the black 'i' note icon next to 'In some countries, the foot switch is only supplied with the second monitor.' (#/texts/3326) is not in the image output. The foot switch photo on p158 was extracted (img_0142).",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0284",
+      "page_sampled": "160",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p161 the black 'i' icon next to 'Full operability is reached when both the gantry operator panels and the LED...' (#/texts/3357) is not extracted. The control box image (img_0143) was kept.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0343",
+      "page_sampled": "174",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p174 the black 'i' icon next to 'After you have pressed a STOP key, you must restore system readiness with System > Continue.' (#/texts/3704) is not extracted. The gantry key images (img_0159) and the two STOP key images (img_0160) were kept.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0350",
+      "page_sampled": "175",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p175 the black 'i' icon next to 'Only routine scan protocols are available for the Customer CTDI service function...' (#/texts/3746) is not extracted.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0353",
+      "page_sampled": "177",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p177 the black 'i' icon next to 'Make sure that the CARE Dose4D is disabled.' (#/texts/3790) is not extracted.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0355",
+      "page_sampled": "178",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p178 three small items are not extracted: the '>>' icon next to 'If no protocol could be loaded...' (#/texts/3819), the black 'i' icon next to 'The images are overwritten...' (#/texts/3833) and the black 'Go' button picture next to step 6. The yellow radiation button (img_0164), the Quality menu (img_0163) and the Home Menu screenshot (img_0162) were kept.",
+      "notes": "Still Low because a meaningful icon is missing: the black 'Go' button picture next to step 6. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    }
+  ]
+}

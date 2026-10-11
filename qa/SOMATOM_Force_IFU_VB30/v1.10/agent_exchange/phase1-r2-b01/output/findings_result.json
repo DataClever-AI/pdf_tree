@@ -1,0 +1,1104 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p11 '2.1 General safety information' (#/texts/79) is a numbered sub-heading under chapter 2 'Safety information'. hierarchy_level 2 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0004 is chapter 2 'Safety information'. The 18 children (sec_0006 Residual risk ... sec_0051) are 2.1.x subsections. Structure is coherent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p11 the section starts correctly at '2.1 General safety information' (#/texts/79) and its text (#/texts/80). It also holds #/texts/81 ':$51,1*' and #/texts/82 '&$87,21'. These are the WARNING and CAUTION badge labels in the legend table higher on p11, and the glyphs are garbled. The end p28 is right: 2.2 starts on p28.",
+   "notes": "Probably a font-encoding problem in the badge labels. The legend belongs to the chapter intro (sec_0004), not to 2.1. Graded Low because the labels are unreadable and the legend text says WARNING and CAUTION. The owner is not sampled. No deterministic boundary signal exists because the nodes are inside the page range; the finding is visual (badges on the p11 render).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'General safety information' under sec_0004 Safety information and matches the visible nesting of the headings on the page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 2.1 content on p11 (#/texts/79-80) is in sec_0005 once. Children start on p12 with 2.1.1 Residual risk. The two garbled badge labels are graded on the page_start_end row, so they are not counted twice.",
+   "notes": "The unreadable badge labels are graded once, Low, on 5.4-page_start_end.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (11), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p11).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p11 has only small icons: the 'i' note icon, two WARNING/CAUTION badges and the triangle in the CAUTION example box. They are in the chapter intro above 2.1 and their meaning is written in the text. No figure is lost.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0005 on p11, so no decorative image was kept. The garbled labels #/texts/81-82 are text nodes and are graded on page_start_end.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0005 and p11 shows no figure inside the 2.1 text (only small badges/icons). Nothing is mapped to a wrong section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p195 '5.1.7 Sinogram Affirmed Iterative Reconstruction (SAFIRE) / Advanced Modeled Iterative Reconstruction (ADMIRE)' (#/texts/4168) is a numbered sub-heading of 5.1. Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0384 'Dose optimization features' (5.1) is correct. Siblings are sec_0394 HandCARE (5.1.6) before and sec_0396 Neuro BestContrast (5.1.8) after.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The section starts too early. On p195 the nodes #/texts/4161-4167 are the body of '5.1.6 HandCARE' (two paragraphs, the clock-position labels 10:00/12:00/2:00 o'clock, the reference line and the i-Fluoro note). They sit in sec_0395 before the 5.1.7 heading #/texts/4168 and belong to sec_0394. The HandCARE figure img_0196 is also here.",
+   "notes": "Probably a same-page heading transition problem (BUG-023: content before the heading on the same page goes to the next section). Content in the wrong section is Critical. The owner sec_0394 is not in this batch, so the missing-content row is on this section too. The claims tool shows no boundary signal because the nodes are inside the page range; the finding is visual and by reading order (p195 render).",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'SAFIRE / ADMIRE' under sec_0384 Dose optimization features and matches the visible nesting of the headings on the page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Owner side of the same fault. sec_0394 'HandCARE' (p195) lacks its body: text #/texts/4161-4167 and figure img_0196 are in sec_0395. On p195 the HandCARE heading is followed by this text and the three-circle figure before 5.1.7 starts. sec_0394 is not sampled, so the missing-content row is placed here.",
+   "notes": "BUG-023 probably. Same defect as the page_start_end row, graded Critical on the owner side by the project rule.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (196), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p196).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both figures of p195-196 were extracted: the HandCARE circles img_0196 and the SAFIRE/ADMIRE cycle img_0197. Only the small 'i' note icon is not an image and its note text is kept.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0196 (three sector circles) and img_0197 (reconstruction cycle diagram) are real figures. The crop of img_0196 holds the (1)(2)(3) markers, and the legend text is in the tree as nodes, not in the image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0395",
+   "page_sampled": 196,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0196 (p195, 1110x820) is the HandCARE sector figure (three circles marked (1) 10:00, (2) 12:00, (3) 2:00 o'clock). It is mapped to sec_0395 but belongs to sec_0394 HandCARE, which is above the 5.1.7 heading. img_0197 (p196 SAFIRE/ADMIRE cycle) is correct in sec_0395.",
+   "notes": "Same root cause as the page_start_end row (BUG-023). Image on the wrong sibling is Medium.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p301 'Automated table zeroing at the RT Laser' is a margin sub-heading in the Radiotherapy functions section. Level 4 under the level-3 parent is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0622 'Radiotherapy functions' (p299-303) is right. Previous sibling sec_0623 is 'Automated table zeroing at the CT Laser' and next sibling is sec_0625.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The section starts too early. On p301 the nodes #/texts/6513-6515 are step 5 'Press and hold the Move key ... saved position at the RT Laser', its result line, and the note about Automatic table zeroing. They are printed above the margin heading 'Automated table zeroing at the RT Laser' and belong to the previous section sec_0623 (CT Laser). They come first in sec_0624. The split heading (#/texts/6511-6512) and steps 1-4 on p302 are correct.",
+   "notes": "Probably BUG-029 (margin heading merge: the heading is read after the text above it). Content in the wrong section is Critical. The owner sec_0623 is not in this batch. The claims tool shows no boundary signal because the nodes are inside the page range; the finding is visual (p301 render: step 5 is above the margin heading).",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Positioning the patient/Radiotherapy functions/Automated table zeroing at the RT Laser matches the page nesting.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Owner side of the same fault. sec_0623 'Automated table zeroing at the CT Laser' (p299-300) lacks its last step 5, its result line and the note, because #/texts/6513-6515 on p301 are in sec_0624. sec_0623 is not sampled, so the missing-content row is placed here.",
+   "notes": "BUG-029 probably. Same defect as the page_start_end row, graded Critical on the owner side by the project rule.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (302), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p302).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Small icons are not extracted. On p301 the Save at RT Laser icon beside step 1 is missing, and on p302 the Move to RT Laser icon beside step 3 is missing. Only the larger pictures were kept (img_0303, img_0304, img_0305). The text names each icon ('Tap the Save at RT Laser icon').",
+   "notes": "Small icons whose meaning is in the text are Low. Probably the 80 px minimum size filter or the same-image-drawn-twice issue (BUG-033).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0302-0305 are real keys and screen pictures. They are not decoration. img_0302 and img_0305 are the same Move key image and are graded on the mapping row.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0624",
+   "page_sampled": 302,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0302 (p301, Move key 177x177) is printed beside step 5 at the top of p301. That step belongs to sec_0623, but img_0302 is mapped to sec_0624. img_0303 (positioning screen), img_0304 (Table In/Out keys) and img_0305 (Move key beside step 4) are correct. img_0306 on p302 is correctly in sec_0625.",
+   "notes": "Same root cause as the page_start_end row (BUG-029 probably). Image on the wrong sibling is Medium.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p329 'State of Reconstruction' is a margin heading in the same style as 'Starting reconstruction' above it. The tree makes it level 5 under sec_0672, following the bookmark nesting.",
+   "notes": "Visually the two margin headings look equal. I could only check the bookmark order from the tree, not from the PDF outline. Please confirm the bookmark nesting.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0672 'Starting reconstruction' (p329-330) holds this child, as in the bookmarks. The page shows two margin headings in the same style, so the nesting cannot be checked visually.",
+   "notes": "Low confidence only because the page shows equal margin headings. The tree follows the bookmarks.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p329 at the margin heading 'State of Reconstruction' (#/texts/7112) and the intro paragraph (#/texts/7116). It ends on p330 with the last table row, shown as loose paragraphs #/texts/7123-7127. 'Performing retrospective reconstruction' on p330 starts sec_0674 and is not included. The 'Starting reconstruction' steps above are not included.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with Starting reconstruction/State of Reconstruction. This follows the tree nesting; the page shows equal margin headings.",
+   "notes": "",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The intro text, table #/tables/30 and the loose last-row paragraphs #/texts/7123-7127 cover the whole 'State of Reconstruction' block once. The p330 part has the right order.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (329), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p329).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p329 table #/tables/30 has 10 rows. The text column is complete and in page order ('A defined but not yet executed recon job.' ... 'Indicates that the recon job is queued.'). The left icon column has no content because the icons were not extracted. On p330 the last row is outside the table as paragraphs #/texts/7123-7127, in the same order.",
+   "notes": "BUG-008 (table extraction). Graded Low, not Medium: every text row is kept in the right order, so no value changes meaning. Only the icon column is empty and the last row is split. The claims tool SEVERITY hint to Medium is wrong for this case, because the rows are still in order.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The ten status icons in the p329 table (small grey, black and white squares, about 21 px) and the thumbnail icon in the p330 last row are not in images.json. Each icon is described by the text beside it, for example 'Indicates that the recon job is queued.'",
+   "notes": "Small icons whose meaning is in the text are Low. Probably the small-size filter. The same lost icons are the empty icon column on the 5.6-table_content row, so this is one root cause counted on two rows.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0673. The icons in the p329 table are small status icons. None was kept as decoration.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0673. p329-330 show only table icons, and p330 also has the Reconstruction icon beside step 2 of sec_0674. Nothing is mapped to a wrong section.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p350 '7.2.1 Activating the coupled mode' (#/texts/7570) is a numbered sub-heading under CARE Contrast CT (7.2). Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0709 'CARE Contrast CT' is right. Children sec_0711 (p351-352) and sec_0712 'Setting the coupled mode' (p352-353) are subsections of the coupled mode text.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p350 the section starts at 7.2.1 (#/texts/7570). The intro and the six note boxes above it belong to the parent and are not in sec_0710. Own nodes end on p351 (#/texts/7579 and the two tables). page_end 353 is the end of child sec_0712 on p353, before 7.2.2. p351 was not given as a render, so the p351 part is checked from the node text.",
+   "notes": "Confidence is lower because p351 is not in the page renders.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'Activating the coupled mode' under sec_0709 CARE Contrast CT and matches the visible nesting of the headings on the page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 7.2.1 intro (#/texts/7571-7573), the save-protocol paragraphs (#/texts/7578-7579) and both icon tables are in sec_0710 once. Steps on p352-353 are in children.",
+   "notes": "",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (350), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p350).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Tables #/tables/32 (status-bar icons, 4 rows) and #/tables/33 (scan-range icons, 5 rows) have 'Icon | Meaning' headers. The Icon column is empty in every row. Every Meaning row is kept in order, e.g. 'Bolus injector coupling rejected' ... 'Coupled scanned scan range with FAST Bolus'. The page p351 render was not given, so the layout is checked from the extracted text and the p350 lead-in line.",
+   "notes": "BUG-008 (table extraction). Graded Low, not Medium: every Meaning row is kept in order, so no value changes meaning. Only the icon cells are empty. The claims tool SEVERITY hint to Medium is wrong here, because the rows are in order.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The status-bar icons and the scan-range icons that belong to tables #/tables/32 and #/tables/33 (p351) are not in images.json; the Icon cells are empty. Each meaning is written in the text next to it, for example 'Bolus injector ready'. The p350 render has only 'i' note icons, whose notes are kept.",
+   "notes": "Small icons whose meaning is in the text are Low. Same root cause as 5.6-table_content (probably the small-size filter). p351 render was not in the batch, so confidence is lower.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0710, so no decorative picture is kept.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0710. The pages in the batch show only 'i' icons and table icons, so no image can be mapped to a wrong section.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p21 'SOMATOM Force / Force Velo (side view)' is a bold figure title above a figure. It is a bookmarked level-4 entry under 'Radiation protection', so level 4 matches the bookmark.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0026 'Radiation protection' (p19-21) holds the top-view and side-view figure entries (sec_0027, sec_0028). sec_0028 has no children and none are needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts and ends on p21. It has the title heading #/texts/286 and the figure under it. The text of '2.1.14 Radiation protection equipment' below the figure is not in this section (it is sec_0029).",
+   "notes": "The claims tool says the section has no body, but the body of this figure entry is the vector figure img_0008, which is extracted and mapped to sec_0028. So PASS is kept.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Safety information/General safety information/Radiation protection/SOMATOM Force / Force Velo (side view) matches the bookmark order of the figure entries.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 content above 2.1.14 is only the title and the side-view dose figure. Both are in sec_0028. No gap and no duplicate.",
+   "notes": "The claims tool says the section has no body, but the body of this figure entry is the vector figure img_0008, which is extracted and mapped to sec_0028. So PASS is kept.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (21), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p21).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0008 (origin vector, 886x494) is the whole side-view dose map on p21. The crop shows axes, all value labels and the table drawing. Nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0008 has the title 'SOMATOM Force / Force Velo (side view)' inside the crop. The title is part of the figure on the page, so it is not noise. The same words are also in heading #/texts/286.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0008 is on p21 directly under the heading of sec_0028 and is mapped to sec_0028. It is not the 2.1.14 text below it, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p110 'Labels' is a margin sub-heading in the Patient table section. It is a level-4 bookmark under the level-3 table section. Level 4 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0187 'Patient table with 2000 mm scan range' (p109-112) is correct. sec_0188 and its next sibling sec_0189 'Material' both sit under it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p110 at the 'Labels' margin heading (#/texts/2390) and the Type B applied part label (#/texts/2391-2394). It ends on p111 after the 'Caution, leg injuries' text (#/texts/2402-2403). 'Material' on p111 starts sec_0189. The table photo and the (1)-(9) list on p110 are not in this section (they belong to sec_0187).",
+   "notes": "Node #/texts/2390 joins the margin heading 'Labels' with the first sentence (BUG-029 style merge). The text is kept, so it is not a defect here.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'Labels' under sec_0187 Patient table with 2000 mm scan range and matches the visible nesting of the headings on the page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All label text on p110-111 appears once: Type B label (#/texts/2391-2394) and leg-injury label (#/texts/2402-2403). Nothing is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (110), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p110).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both label pictures on p110-111 were extracted: img_0065 (Type B person symbol) and img_0066 (leg-injury sign). No figure is lost. The page-110 table photo is img_0064 in sec_0187.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0065 and img_0066 are real label symbols that the text describes. Neither is a rule, logo or footer decoration.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0188",
+   "page_sampled": 110,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0066 (p111, 508x255) is mapped to the right section sec_0188, but the PNG is stored upside down. On the page the arrow points down and the triangle is at the lower right. In img_0066 the arrow points up and the triangle is at the upper right (180 degree turn).",
+   "notes": "BUG-013 (rotated image). The picture is in the right section and complete, but a reader or model gets a wrong sign. img_0065 on p110 is upright.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p183 'Moving the table top vertically' is a margin sub-heading under '4.3.3 Moving the patient table using the gantry operator panel'. Level 4 under a level-3 parent is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0372 is 4.3.3 (p183-186). Its next child sec_0374 'Moving the table top horizontally' starts on p184. The parent-child link is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p183 at the margin heading (#/texts/3953) with its two paragraphs (#/texts/3961-3962). It ends on p184 with the 'new vertical position' line (#/texts/3976). The 'Moving the table top horizontally' heading, the hand-injury WARNING and Table in/out steps on p184 are not in this section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'Moving the table top vertically' under sec_0372 Moving the patient table using the gantry operator panel and matches the visible nesting of the headings on the page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p183 text under the margin heading and p184 text from 'Caution, leg injuries' to the Table up/down line are all in sec_0373 once. Nothing is missing from the vertical-movement text.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (184), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p184).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p184 pictures of this section were extracted: leg-injury sign img_0181 and the Table up/down keys img_0178. The small 'i' note icons are not images but their text is kept. No figure is lost.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0178 (keys) and img_0181 (warning sign) are meaningful pictures. Neither is decoration.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0373",
+   "page_sampled": 184,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "img_0181 (p184, 508x255) is mapped to the right section sec_0373, but the PNG is stored upside down. On p184 the arrow points down and the triangle is lower right. In img_0181 the arrow points up and the triangle is upper right. img_0178 (Table up/down keys) is upright and correct.",
+   "notes": "BUG-013 (rotated image), same fault as img_0066 in sec_0188. The lead also named img_0172; it is not in images.json for this batch (img_0172 is not listed), so only img_0181 is graded.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p445 '9.3.8 Performing the pixel noise test' (#/texts/9534) is a numbered sub-heading under 9.3 Constancy test. Level 3 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0915 'Constancy test' is right. Siblings sec_0925 (9.3.7) and sec_0927 (9.3.9) are next to it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p445 at 9.3.8 below the end of the homogeneity test (sec_0925). It ends on p446 with the 'status and error message area' line (#/texts/9548) before '9.3.9 Performing Image Inspection' (sec_0927).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'Performing the pixel noise test' under sec_0915 Constancy test and matches the visible nesting of the headings on the page.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Text #/texts/9534-9548 covers 9.3.8 from p445 to p446 once. The two pictures on p446 are mapped here (img_0481, img_0482). Nothing is missing except the icon on the filters row.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is not flagged and its title is found where the bookmark points (verification_score is high), so the missing flag is not a defect.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the section title is a bookmark title that is visible in the PDF page layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on the rendered page is plain arabic (446), and the section has numbering_scheme arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the printed folio equals the physical page number on the sampled page (p446).",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p445 two radiation key icons are drawn, one by the 9.3.7 Start step and one by the 9.3.8 Start step. Only one was extracted (img_0479, mapped to sec_0925). The second icon beside '9.3.8 ... Press the Start key on the control box' is not in images.json. The Start step text is in #/texts/9536-9537.",
+   "notes": "Probably BUG-033 (same image drawn twice on a page: only one copy kept). Small icon whose meaning is in the text is Low.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0481 (pixel-noise image) and img_0482 (Result table screenshot) are real pictures that the text refers to. They are not decoration.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0926",
+   "page_sampled": 446,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p446 the gray noise image (img_0481, 169x168) and the Result screenshot (img_0482, 478x218) are under the 9.3.8 text and are mapped to sec_0926. Both match the page. The homogeneity picture img_0480 on p445 is correctly in sec_0925.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}

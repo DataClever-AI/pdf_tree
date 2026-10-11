@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)",
+  "validated_at": "2026-10-08T04:38:18.962246+00:00",
+  "findings": [
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p138 'Flat cushions' is a run-in side heading at the same style as 'Wedge shaped cushions'. Both are under 'Cushions'. Level 5 under level 4 sec_0243 is right.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0244 has parent sec_0243 'Cushions' and no children. sec_0243 lists sec_0244, sec_0245 and sec_0246 as children. On p138 the three cushion types match this.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 'Flat cushions' heading, its intro text and the two captions (1) and (2) are all on p138. Nodes #/texts/2921 to #/texts/2936 stay in sec_0244. The next heading 'Wedge shaped cushions' starts sec_0245 lower on the page. page_start and page_end 138 are right.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /System description/Accessories/Positioning aids/Cushions/Flat cushions agrees with the p138 header '3 System description' and the heading order.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0244 (orders 2923-2926) sits between sec_0243 (ends 2922) and sec_0245 (starts 2927). No gap and no overlap. The text appears once on p138.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading is clearly visible on p138, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The title 'Flat cushions' is visible on p138, so the bookmark is supported.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The footer of p138 shows page number 138 in arabic digits. Scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio on p138 is 138 and the physical page is 138. offset_applied 0 is right and matches sec_0243 and sec_0245.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p138 two small circled callouts '1' and '2' on the 'Wedge shaped cushions' figure are not in img_0112. The WARNING triangle at the top of p138 is also not an image. img_0111 (sec_0244) keeps its own callouts, so the Flat cushions figure is complete.",
+      "notes": "The dropped callouts belong to sec_0245, not to sec_0244. The WARNING triangle belongs to the warning box, which is outside sec_0244 (sec_0243 area). The meaning is in the captions '(1) Head cushion 15' and '(2) Head cushion 25'. Probably small-icon filter, BUG-017. Impact on sec_0244 is small. Same grade as the approved v1.10.",
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only img_0111 and img_0112 are extracted on p138. Both are real product pictures. No logo, rule or icon is kept as an image.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0111 (1150x436) shows the two flat cushions and sits under the 'Flat cushions' heading in sec_0244. img_0112 shows the two wedge cushions and is mapped to sec_0245. Both are on the correct section.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    }
+  ]
+}

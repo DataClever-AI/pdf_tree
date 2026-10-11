@@ -1,0 +1,1294 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 9-16' under Chapter 9. The 9-16-1, 9-16-2 and 9-16-3 headings on p834, p854 and p864 are text inside the section, not bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0112 (Chapter 9) lists sec_0128 as its last child. sec_0128 has no children. This fits the PDF, where Section 9-16 is the last section of Chapter 9.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p833-p872. p833 starts with the 'Section 9-16' heading (#/texts/9484). p872 is an empty table-end page with the footer '9 - 106'. p873 starts Chapter 10 in sec_0129. Sampled p837 is inside the range.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 9/Section 9-16 LOGIQ S8/E8/S7 XDclear2.0 Master FRU List Compatibility Chart' matches the heading on p833 and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. The previous section sec_0127 ends on p832 and sec_0128 starts on p833. The next section is Chapter 10 on p873. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The render shows no title or boundary doubt, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading 'Section 9-16' on p833.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p837 uses chapter-page style (9 - nn), which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Nodes of p837 have page_no 837, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p837 #/tables/392 matches the render. Header and rows from Covers 5405167 to OPIO 6020703 are in the right columns. Small error: row 6756412 has an empty Parts Group and row 6756412-2 shows 'OPIO OPIO'. On p838 #/tables/393 (same section) has all words but cells are merged. The header reads 'Replace with R1.5 R2 Upg R2 R3'. Many rows put group, number, description and Y/N values in one cell. Two rows are inside other rows (Option 5380960-2 with Option 5405177 Drawer).",
+   "notes": "OLD FAIL STILL PRESENT: the p837 table is now almost clean, but the p838 table #/tables/393 still has merged cells and values under the wrong cells (BUG-008). The p838 render was not in this batch, so this part is judged from the text only. Medium, not Low: on p838 the header is mixed and rows share cells, so Y/N values cannot be tied to their columns (verify_claims expects Low because p837 alone is clean). Round-one grade was also Medium.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p837 shows only a parts table and no figure or icon. images.json has no image for sec_0128, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0128, so no decorative or page-text image was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 837,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p837 has no image to map. images.json has no entry for sec_0128, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 10-1 Overview' under Chapter 10. The printed heading on p873 is 'Section 10-1 Overview'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0129 (Chapter 10) lists sec_0130 as its first child. sec_0130 has no children. The 10-1-1, 10-1-2 and 10-1-3 headings are text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p873-p873. All 9 nodes (#/texts/9618-9625 and #/tables/427) have page_no 873. The Chapter 10 title and page header stay in sec_0129. The next section sec_0131 starts on p874.",
+   "notes": "OLD FAIL FIXED: the old row had #/texts/9626 and 9627 (header of p874) inside sec_0130. They are no longer here. No boilerplate crosses the page_end now.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 10/Section 10-1 Overview' matches the bookmark and the heading on p873.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. It follows the Chapter 10 root on p873 and sec_0131 starts on p874. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The heading on p873 matches, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed 'Section 10-1 Overview'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio '10 - 1' is chapter-page style, which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The nodes have page_no 873, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p873 #/tables/427 is the 10-1-3 'Contents in this chapter' list. All 10 entries (10-1 to 10-9 and Ultrasound INSPECTION CERTIFICATE) and page numbers 10-1 to 10-37 match the render. The title cells keep leader dots ('Overview. . . . . .').",
+   "notes": "Possible regression: this row was not in the old FAIL list. Leader-dot noise in a Contents table is Low by the agreed rule (BUG-008). Values and order are right, so retrieval is not affected.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p873 has no figure or icon. images.json has no image for sec_0130, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0130, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0130",
+   "page_sampled": 873,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p873 has no image to map. images.json has no entry for sec_0130, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 10-6 System maintenance' under Chapter 10. The 10-6-1 to 10-6-5 headings are text nodes inside it.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0129 (Chapter 10) lists sec_0135 as a child, between sec_0134 and sec_0136. sec_0135 has no children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p879-p887. p879 starts with 'Section 10-6' (#/texts/9673). p887 ends with folio '10 - 15' after 10-6-5-3. Section 10-7 starts on p888 in sec_0136. Sampled p880 holds 10-6-2 and Table 10-4 and is inside the range.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 10/Section 10-6 System maintenance' matches the heading on p879.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. sec_0134 comes before p879 and sec_0136 starts on p888. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The renders of p879, p880 and p887 show no boundary doubt.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed 'Section 10-6 System maintenance'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios '10 - 7', '10 - 8' and '10 - 15' are chapter-page style, which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Table #/tables/433 has page_no 880 and the render of p880 shows the same table.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p880 #/tables/433 (Table 10-4 System Functional Checks) matches the render. Header Check/Step/Description and all 15 rows are in the right columns. On p879 #/tables/432 (Table 10-3) also matches, with 7 rows.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p887 the three probe figures are all extracted: img_1398 (hands, vector), img_1397 (NEVER place a probe on its scan head) and img_1399 (OK, vector). On p886 img_1396 holds the full Figure 10-5 icon strip. The small yellow warning triangles are not extracted, but CAUTION and NOTICE are in the text.",
+   "notes": "Triangle icons dropped; their meaning is in the text (Low case, not graded as FAIL).",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p886 the vector image img_1396 (870x618) is the Figure 10-5 icon strip plus page text. Its top edge has a cut body line ('...equipment damage. Failure to properly handle or maintain a probe may also void its warra...'). Below the icons it has the caption 'Figure 10-5 Probe handling icons' and two body lines. About half of the image is empty white. On p887 img_1398 (436x263) is the hands figure with a cut 'NOTICE Disinfect a defective probe bef...' line.",
+   "notes": "OLD FAIL STILL PRESENT: extra page text is still kept inside vector figure crops (BUG-010). The same text is in nodes #/texts/9748-9754 and #/texts/9763, so no content is lost. Low by agreed rule.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0135",
+   "page_sampled": 880,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images img_1392-img_1399 (p883-p887) are mapped to sec_0135. The p887 renders show the three figures under 10-6-5-3 in sec_0135, and p886 holds Figure 10-5 in sec_0135. No sibling shares these pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 10-7 Using a Phantom' under Chapter 10. The heading on p888 is 'Section 10-7'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0129 (Chapter 10) lists sec_0136. sec_0136 has no children, and the page has no subheading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p888-p888. The 6 nodes (#/texts/9775-9780) are the page header, heading, two paragraphs and the folio '10 - 16'. p889 starts Section 10-8 in sec_0137. Nothing is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 10/Section 10-7 Using a Phantom' matches the heading on p888.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. sec_0135 ends on p887 and sec_0137 starts on p889. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The one-page section is clear on the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed 'Section 10-7 Using a Phantom'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio '10 - 16' is chapter-page style, which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The nodes have page_no 888, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p888 has two text paragraphs and no figure or icon. images.json has no image for sec_0136.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0136, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0136",
+   "page_sampled": 888,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p888 has no image to map. images.json has no entry for sec_0136, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 10-8 Electrical Safety Tests' under Chapter 10. The 10-8-x headings are text nodes inside it.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0129 (Chapter 10) lists sec_0137 between sec_0136 and sec_0138. sec_0137 has no children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p889-p906. p889 starts with 'Section 10-8' (#/texts/9783). p906 ends with 10-8-13-1, Table 10-19 and the folio '10 - 34'. sec_0138 starts on p907. p895 holds 10-8-6 and Table 10-15.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 10/Section 10-8 Electrical Safety Tests' matches the heading on p889.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. sec_0136 ends on p888 and sec_0138 starts on p907. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The renders of p889, p894, p895 and p906 show no boundary doubt.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed 'Section 10-8 Electrical Safety Tests'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios '10 - 22' and '10 - 23' are chapter-page style, which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Nodes of p895 have page_no 895, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p895 #/tables/445 (Table 10-15) matches the render. The header row, 'Test Conditions' and 'Measurement/Test Point Location' groups, the four column names and the four rows Off/Closed, Off/Open, On/Closed, On/Open are kept. The blank data cells are empty in the PDF too.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p895 has no figure. Only the yellow table header and text appear. images.json has no image on p895.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p895. No decorative or page-text image is kept for this page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 895,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p895 has no image to map. The images of sec_0137 are on p891-p905 and none is on p895, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 10-9 When There's Too Much Leakage Current...' under Chapter 10.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0129 (Chapter 10) lists sec_0138 as its last child. sec_0138 has no children, and its nodes stop at p910.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p907-p910. On p910 the last nodes are ELECTRICAL SAFETY, PROBES, Final Check, 'Accepted by' and folio '10 - 38' (#/texts/10081-10087). The highest node page_no is 910. No Index node follows.",
+   "notes": "OLD FAIL FIXED: the old page_end of 916 is now 910.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 10/Section 10-9 When There's Too Much Leakage Current...' matches the heading on p907.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. sec_0137 ends on p906 and sec_0138 covers p907-p910. No gap or overlap inside the chapter. Unbookmarked back matter after p910 is outside the section.",
+   "notes": "The same point as p909: Index is not in the tree. Judged as accepted exclusion of back matter.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False. Content on p910 is correct and the range ends at p910. verification_score is 98.11 with an empty reason, which is a small drop only.",
+   "notes": "Score drop is probably from the apostrophe in the title.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed 'Section 10-9' heading on p907.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p910 ('10 - 38') is chapter-page style, which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Nodes of p910 have page_no 910, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p910 #/tables/451 (Electrical Test Performed, 14 rows) and #/tables/452 (Probe Number, Probe 1 to Probe 9) match the render. Headers 'Max Value Allowed', 'Value Measured'/'Max Value Measured', 'OK?' and 'Comments' are in the right columns. The blank cells are empty in the PDF too.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p910 is a form with tables and text, with no figure or icon. images.json has no image for sec_0138.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0138, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 910,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p910 has no image to map. images.json has no entry for sec_0138, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 9-16' under Chapter 9. The 9-16-1, 9-16-2 and 9-16-3 headings on p834, p854 and p864 are text inside the section, not bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0112 (Chapter 9) lists sec_0128 as its last child. sec_0128 has no children. This fits the PDF, where Section 9-16 is the last section of Chapter 9.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p833-p872. p833 starts with the 'Section 9-16' heading (#/texts/9484). p872 is an empty table-end page with the footer '9 - 106'. p873 starts Chapter 10 in sec_0129. Sampled p840 is inside the range.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 9/Section 9-16 LOGIQ S8/E8/S7 XDclear2.0 Master FRU List Compatibility Chart' matches the heading on p833 and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. The previous section sec_0127 ends on p832 and sec_0128 starts on p833. The next section is Chapter 10 on p873. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The render shows no title or boundary doubt, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading 'Section 9-16' on p833.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p840 uses chapter-page style (9 - nn), which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Nodes of p840 have page_no 840, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p840 #/tables/395 matches the render. The header, all rows from Covers 5405167 to Power Cord 5182235 and the Y/N/'Y *' values are in the right columns. Replace-with values such as '6736114-3 and 5669995' are kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p840 shows only a parts table and no figure or icon. images.json has no image for sec_0128, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0128, so no decorative or page-text image was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 840,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p840 has no image to map. images.json has no entry for sec_0128, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 9-16' under Chapter 9. The 9-16-1, 9-16-2 and 9-16-3 headings on p834, p854 and p864 are text inside the section, not bookmarks.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0112 (Chapter 9) lists sec_0128 as its last child. sec_0128 has no children. This fits the PDF, where Section 9-16 is the last section of Chapter 9.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p833-p872. p833 starts with the 'Section 9-16' heading (#/texts/9484). p872 is an empty table-end page with the footer '9 - 106'. p873 starts Chapter 10 in sec_0129. Sampled p849 is inside the range.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 9/Section 9-16 LOGIQ S8/E8/S7 XDclear2.0 Master FRU List Compatibility Chart' matches the heading on p833 and its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. The previous section sec_0127 ends on p832 and sec_0128 starts on p833. The next section is Chapter 10 on p873. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The render shows no title or boundary doubt, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading 'Section 9-16' on p833.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p849 uses chapter-page style (9 - nn), which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Nodes of p849 have page_no 849, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p849 #/tables/404 matches the render. Header (R4 Upg, R4, R4.2.5x Upg, R4.2.5 x) and all rows from Covers 5405167 to Option 5460247-2 are in the right columns. Replace-with '5480205 and 5480206' is kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p849 shows only a parts table and no figure or icon. images.json has no image for sec_0128, so nothing was dropped.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0128, so no decorative or page-text image was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 849,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p849 has no image to map. images.json has no entry for sec_0128, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 10-8 Electrical Safety Tests' under Chapter 10. The 10-8-x headings are text nodes inside it.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0129 (Chapter 10) lists sec_0137 between sec_0136 and sec_0138. sec_0137 has no children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p889-p906. p889 starts with 'Section 10-8' (#/texts/9783). p906 ends with 10-8-13-1, Table 10-19 and the folio '10 - 34'. sec_0138 starts on p907. p894 holds 10-8-5 Chassis leakage current test.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 10/Section 10-8 Electrical Safety Tests' matches the heading on p889.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once. sec_0136 ends on p888 and sec_0138 starts on p907. No gap or overlap.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The renders of p889, p894, p895 and p906 show no boundary doubt.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed 'Section 10-8 Electrical Safety Tests'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios '10 - 22' and '10 - 23' are chapter-page style, which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Nodes of p894 have page_no 894, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p894 has no table, and no table node has page_no 894. Nothing to compare. The table of this section on p895 (#/tables/445) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p894 has two small yellow CAUTION triangles but no figure. They are not extracted, and the CAUTION text is in #/texts/9836-9837.",
+   "notes": "Triangle icons dropped; meaning is in the text (Low case, not graded as FAIL).",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p894. No decorative or page-text image is kept for this page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0137",
+   "page_sampled": 894,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p894 has no image to map. The images of sec_0137 are on p891-p905 and none is on p894, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Level 2 matches the bookmark 'Section 10-9 When There's Too Much Leakage Current...' under Chapter 10.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0129 (Chapter 10) lists sec_0138 as its last child, after sec_0137. sec_0138 has no children. Its page range no longer includes the Index or the back cover, so the old wrong nesting is gone.",
+   "notes": "OLD FAIL FIXED: the old row said the Index (p911-p914) and the legal page (p915-p916) sat under Section 10-9. They are no longer in sec_0138 (BUG-002).",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range is p907-p910. p907 starts with 'Section 10-9' (#/texts/10029). p909 has the ULTRASOUND INSPECTION CERTIFICATE with folio '10 - 37'. p910 ends with 'Accepted by' and folio '10 - 38'. The highest node page_no is 910. No Index or back-cover node is in the section.",
+   "notes": "OLD FAIL FIXED: page_end was 916 and the Index and back matter were absorbed. Now page_end is 910 (BUG-002).",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 10/Section 10-9 When There's Too Much Leakage Current...' matches the heading on p907.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section appears once and its range stops at p910 where the chapter content ends. The Index (p911 on) and the back cover are not in this section or in any other section. They have no bookmark, so they are unbookmarked back matter left outside the tree, not overlap or duplicate.",
+   "notes": "OLD FAIL FIXED: the old FAIL was the Index absorbed with no own section. It is no longer inside Section 10-9. Please decide if leaving the Index out of the tree is accepted. I did not see p911-p916 in this batch.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False. The section boundary is now correct on p907-p910, so the flag is not hiding a wrong section. verification_score is 98.11 with an empty reason.",
+   "notes": "OLD FAIL FIXED: the old FAIL was a missed flag for an absorbed Index. The absorption is gone. The score of 98.11 is probably from the apostrophe in the title (curly in the bookmark, straight in the heading).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed 'Section 10-9' heading on p907.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p909 ('10 - 37') is chapter-page style, which is arabic.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Nodes of p909 have page_no 909, the same physical page as the render.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p909 #/tables/450 (Functional Check and Physical Inspection) matches the render, with 10 rows in the right columns. But the certificate header grid (Customer Name, System ID, Probe 1-9 with Frequency, Scan Format, Model Number, Serial Number) is not a table. It is flat paragraphs #/texts/10061-10072. The label 'Warranty/Contract/HBS' moves to the 'System Type' line.",
+   "notes": "Possible regression: this row was not in the old FAIL list. A flattened table with text in order is Low by the agreed rule (BUG-008). The blank form fields keep no value, so retrieval is not affected.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of p909 is a form with tables and text, with no figure or icon. images.json has no image for sec_0138.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0138, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0138",
+   "page_sampled": 909,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p909 has no image to map. images.json has no entry for sec_0138, which matches the render.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}

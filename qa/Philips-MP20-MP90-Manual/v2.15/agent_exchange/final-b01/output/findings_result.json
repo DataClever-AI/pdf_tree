@@ -1,0 +1,1324 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p13 'Basic Operation' is the big chapter title with the number 1. It matches hierarchy_level 1.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0001 is a root (parent null). Its first child sec_0002 starts on the same p13 under 'Introducing the IntelliVue Family'. This is coherent.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0001 starts on p13 with the chapter title (#/texts/22). Its 11 nodes #/texts/20-30 are the title and intro text above 'Introducing the IntelliVue Family'. The last child sec_0092 ends on p56, and p56 is a half-empty last page, so page_end 56 is right.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation' is correct for a chapter at the root.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The intro text on p13 appears once in sec_0001. The heading 'Introducing the IntelliVue Family' and its paragraph are in sec_0002. No gap or duplicate seen.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0001 is not flagged and verification_score is 100.0. The chapter title is on p13 as expected.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The chapter title is on the bookmark page p13.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The folio on p13 is the arabic '1', and p56 shows '44'. This is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The chapter title is on the bookmark page p13, so this is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p13 has no photo or diagram, only text and a blue rule. No image was extracted and none is missing. p56 also has no figure.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0001. The blue rule under the chapter number was not kept as an image.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 13,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image belongs to sec_0001 on p13. The pages have no figures, so there is nothing to map.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p13 'Introducing the IntelliVue Family' is a section heading below the chapter title. It matches hierarchy_level 2.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0001 is the chapter 'Basic Operation'. Its 11 children sec_0003-sec_0013 are the monitor topics that follow. This is coherent.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0002 starts on p13 at the heading (#/texts/31) and its paragraph (#/texts/32). The last child sec_0013 ends on p21 with the docking legend list 1-5. The next heading 'Devices for Acquiring Measurements' starts on p21, so page_end 21 is right.",
+      "notes": "Old problem (BUG-023, v2.4, seen on sec_0013): now fixed. The p20 and p21 content is in the right children now. See sec_0013 rows.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Introducing the IntelliVue Family' is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p13 text is in sec_0002 once. The page folio '1' (#/texts/33) is in sec_0002, which is boilerplate on its own page. The children sec_0003-sec_0013 follow in order without gaps.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0002 is not flagged and verification_score is 100.0. The heading is on p13 as expected.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading is on the bookmark page p13.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as sec_0001. The heading is on the bookmark page p13, so this is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p13 has no figure under this heading. The photos in the children (for example p19 and p20) are extracted and mapped to the children.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped directly to sec_0002. No logo or rule was kept as an image.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 13,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image on p13 belongs to sec_0002. The p21 FMS photo (img_0014) is in sec_0015, which is the correct deepest section.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p20 the heading 'Remote Alarm Device' is styled as a level 3 heading. It matches hierarchy_level 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0012 has parent sec_0002 ('Introducing the IntelliVue Family') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading is at the bottom of p19 and the photo with legend 1-5 is at the top of p20. sec_0012 holds #/texts/195-199 (legend) and the callout digits #/texts/180-184. The 'Docking Station' heading on p20 starts sec_0013. page_start 19 and page_end 20 are right.",
+      "notes": "Old problem (BUG-023, v2.4, seen on sec_0013): now fixed. The Remote Alarm Device legend is in sec_0012.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Introducing the IntelliVue Family/Remote Alarm Device' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The legend lines 1 to 5 (#/texts/195-199) appear once, in sec_0012. They are not repeated in sec_0013. No gap or duplicate seen.",
+      "notes": "Old problem (BUG-023, v2.4, seen on sec_0013): now fixed. The legend moved from sec_0013 to sec_0012.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0012 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Remote Alarm Device' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'Remote Alarm Device' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The Remote Alarm Device picture with callouts 1-5 on p20 is extracted as img_0013 (origin vector, 316x428). The figure is complete.",
+      "notes": "verify_claims flags a raster photo (257x397 px) on p20 as not in images_v1.json. I checked img_0013: it is a render of that page region and shows the whole photo with callouts 1-5. So the figure is not lost; the signal is a false alarm.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only img_0013 (the alarm device picture) is mapped here. No logo or rule is kept. The PHILIPS text on the device is part of the picture.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0012",
+      "page_sampled": 20,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0013 is the picture under the 'Remote Alarm Device' heading and it is mapped to sec_0012. This is correct. The docking photo img_0012 is in sec_0013.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p27 the heading 'X2 Left Side' is styled as a level 4 heading. It matches hierarchy_level 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0022 has parent sec_0018 ('X2 Multi-Measurement Module (M3002A)') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p27 'X2 Left Side' (#/texts/389) is at the top. sec_0022 holds the digits, legend 1-2 and the paragraph 'Depending on the monitor model...' (#/texts/390-394). The heading 'MMS Extensions' below starts sec_0023. page_start 27 and page_end 27 are right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Devices for Acquiring Measurements/X2 Multi-Measurement Module (M3002A)/X2 Left Side' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The legend lines 1 and 2 and the paragraph appear once in sec_0022. The MMS Extensions text is in sec_0023. No gap or duplicate seen.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0022 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'X2 Left Side' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'X2 Left Side' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Both photos on p27 are extracted: the X2 left side (img_0028, 315x354) and the monitor with the mounted module (img_0027, 167x271). Nothing is missing.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only the two photos are kept for sec_0022. No logo or rule was kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0022",
+      "page_sampled": 27,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0027 and img_0028 are above the 'MMS Extensions' heading and are mapped to sec_0022. This is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p20 the heading 'Docking Station' is styled as a level 3 heading. It matches hierarchy_level 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0013 has parent sec_0002 ('Introducing the IntelliVue Family') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p20 the heading 'Docking Station' (#/texts/185) comes after the alarm device legend. sec_0013 starts with its own text #/texts/185-189 and the callout digits #/texts/190-194. The alarm legend #/texts/195-199 is no longer here.",
+      "notes": "Old problem (BUG-023, v2.4): now fixed. Alarm legend moved to sec_0012.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Introducing the IntelliVue Family/Docking Station' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p20 the docking text, the WARNING (#/texts/187-188) and the digits 1-5 are in sec_0013 once. The alarm legend is in sec_0012 only. No wrong owner or duplicate.",
+      "notes": "Old problem (BUG-023, v2.4): now fixed. The legend is no longer stored in sec_0013.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0013 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Docking Station' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'Docking Station' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The docking station photo on p20 is extracted as img_0012 (512x321). No figure is missing.",
+      "notes": "verify_claims flags a raster photo (257x397 px) on p20. It is the Remote Alarm Device photo, which is in sec_0012 as img_0013 (vector render, checked visually). Not lost.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only the docking photo is kept for sec_0013. No logo, rule or icon was kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 20,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0012 is the docking photo under the 'Docking Station' heading and it is mapped to sec_0013. This is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p21 the heading 'Docking Station' is styled as a level 3 heading. It matches hierarchy_level 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0013 has parent sec_0002 ('Introducing the IntelliVue Family') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "At the top of p21 sec_0013 holds the legend 1-5 'Open position' to 'Locked Position' (#/texts/204-208) and the running header #/texts/201-202. This legend explains the docking photo. The WARNING label #/texts/203 is no longer in sec_0013. The big heading 'Devices for Acquiring Measurements' starts sec_0014.",
+      "notes": "Old problem (BUG-023, v2.4): now fixed. The WARNING node of sec_0014 is not in sec_0013 any more.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Introducing the IntelliVue Family/Docking Station' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p21 the legend list 1-5 is in sec_0013 once. The WARNING box is under 'Devices for Acquiring Measurements', not here. No wrong owner or duplicate seen.",
+      "notes": "Old problem (BUG-023, v2.4): now fixed.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0013 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Docking Station' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'Docking Station' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The top of p21 has only the legend text, no picture. The FMS photo lower on the page is extracted as img_0014. Nothing is missing for sec_0013.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image on p21 is mapped to sec_0013. No logo or rule was kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0013",
+      "page_sampled": 21,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p21 FMS photo (img_0014) is under 'Flexible Module Rack (M8048A)' and is mapped to sec_0015. This is correct. sec_0013 has no image on p21.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p22 the heading 'Measurement Modules' is styled as a level 3 heading. It matches hierarchy_level 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0016 has parent sec_0014 ('Devices for Acquiring Measurements') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p22 starts with the heading 'Measurement Modules' (#/texts/228) and ends with the 'Example Module (Pressure)' legend and figure (#/texts/246-259). The next heading X1 starts on p23. page_start 22 and page_end 22 are right. The running header #/texts/226-227 is only boilerplate on its own page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Devices for Acquiring Measurements/Measurement Modules' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 13 module list lines, the 3 paragraphs and the legend 1-5 each appear once in sec_0016. No gap or duplicate seen.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0016 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'Measurement Modules' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'Measurement Modules' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 'Example Module (Pressure)' drawing with callouts 1-5 is extracted as img_0015 (origin vector, 295x306). The figure is complete.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only the module drawing is kept. The words PRESS, Press and 80x80 (#/texts/252, 258-259) are text inside the drawing, not extra images.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0016",
+      "page_sampled": 22,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0015 is under 'Example Module (Pressure)' on p22 and is mapped to sec_0016. This is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p25 the heading 'X2 Overview' is styled as a level 4 heading. It matches hierarchy_level 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 has parent sec_0018 ('X2 Multi-Measurement Module (M3002A)') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p25 'X2 Overview' (#/texts/311) starts below the X2 intro text, which is in sec_0018. sec_0019 holds the callout digits and legend 1-8 (#/texts/326-333) and the folio. The next heading 'X2 Controls and Indicators' starts on p26. page_start 25 and page_end 25 are right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Devices for Acquiring Measurements/X2 Multi-Measurement Module (M3002A)/X2 Overview' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The legend 1 to 8 appears once in sec_0019. The digits 1-8 of the callouts are present. No gap or duplicate seen.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0019 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'X2 Overview' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'X2 Overview' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The X2 photo on p25 is extracted as img_0020 (443x342). The callout digits are text nodes. No figure is missing.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only the X2 photo is kept for sec_0019. No logo or rule was kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0019",
+      "page_sampled": 25,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0020 is under 'X2 Overview' and is mapped to sec_0019. This is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p26 the heading 'X2 Controls and Indicators' is styled as a level 4 heading. It matches hierarchy_level 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0020 has parent sec_0018 ('X2 Multi-Measurement Module (M3002A)') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p26 the right column has a legend 1-11 ('On/Standby switch' to 'Main Screen key') next to the X2 controls figure. sec_0020 has only the running header, the heading and 11 digit nodes (#/texts/335-348). The legend text is not in sec_0020.",
+      "notes": "Lead check: the legend nodes #/texts/368-378 are in sec_0021, confirmed in tree.json. So sec_0020 keeps only its heading and the digits. Cause: BUG-023 (the right-column legend is read after the next heading). Sprint table: body text in another section = Critical.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Devices for Acquiring Measurements/X2 Multi-Measurement Module (M3002A)/X2 Controls and Indicators' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The legend 1-11 for 'X2 Controls and Indicators' is missing from sec_0020, which keeps only the digits 1-11. The text is probably stored in sec_0021 'X2 Patient Connectors, Right Side'.",
+      "notes": "Same cause as the 5.4-page_start_end row (BUG-023). Lead check: the legend 1-11 is in sec_0021 (#/texts/368-378). Both rows are Critical by the Sprint table.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0020 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'X2 Controls and Indicators' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'X2 Controls and Indicators' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The controls figure with callouts 1-11 is extracted as img_0026 (origin vector, 603x675). The five connector photos on the page are separate images in sec_0021. Nothing is lost.",
+      "notes": "verify_claims flags small raster insets on p26 as not in images_v1.json. I checked img_0026: the render includes all the insets (LED close-ups, keys, power switch). So they are not lost; the signal is a false alarm.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0026 is the only image kept for sec_0020, and it is a real figure. No logo or rule was kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0020",
+      "page_sampled": 26,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0026 sits under 'X2 Controls and Indicators' and is mapped to sec_0020. The connector photos img_0021-img_0025 are under the next heading and are mapped to sec_0021. This is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p28 the heading 'M3014A, M3015A and M3016A Capnography MMS Extensions' is styled as a level 4 heading. It matches hierarchy_level 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0024 has parent sec_0023 ('MMS Extensions') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p28 the heading (#/texts/404) and two paragraphs (#/texts/405-406) are in sec_0024. On p29 the nodes #/texts/408-433 are the figure labels and legends of the three extensions. The next heading 'M3012A' starts on p30. page_start 28 and page_end 29 are right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Devices for Acquiring Measurements/MMS Extensions/M3014A, M3015A and M3016A Capnography MMS Extensions' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p28 paragraphs and the p29 legends 1-7 appear once in sec_0024. No gap or duplicate seen.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0024 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'M3014A, M3015A and M3016A Capnography MMS Extensions' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'M3014A, M3015A and M3016A Capnography MMS Extensions' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p28 has a hands photo (img_0029) and p29 has three extension photos (img_0030-img_0032). All four are extracted. Nothing is missing.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only real photos are kept. No logo, rule or icon was kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0024",
+      "page_sampled": 28,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "At the top of p28, above the heading 'M3014A, M3015A and M3016A...', there is a hands photo of separating an extension (img_0029). It is mapped to sec_0024. It belongs to sec_0023 'MMS Extensions', because the sentence 'To separate an extension from the MMS...' is at the end of p27.",
+      "notes": "Probably a page-based image mapping issue; the photo is above the sec_0024 heading. The photo is kept, but the owner is wrong (Medium per Sprint table).",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p30 the heading 'M3012A Hemodynamic MMS Extension' is styled as a level 4 heading. It matches hierarchy_level 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0025 has parent sec_0023 ('MMS Extensions') and no children. This matches the heading nesting on the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p30 starts with the heading 'M3012A Hemodynamic MMS Extension' (#/texts/436). sec_0025 holds the digits, legend 1-4 and two paragraphs (#/texts/437-446). The next chapter part 'Operating and Navigating' starts on p31. page_start 30 and page_end 30 are right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path '/Basic Operation/Devices for Acquiring Measurements/MMS Extensions/M3012A Hemodynamic MMS Extension' follows the real heading order.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The legend 1-4 and both paragraphs appear once in sec_0025. No gap or duplicate seen.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0025 is not flagged (verification_score 100.0). The heading is on the expected page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The heading 'M3012A Hemodynamic MMS Extension' is on the page of its bookmark.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folio on this page is a plain arabic number, so this is correct.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0, the same as the neighbours. The heading 'M3012A Hemodynamic MMS Extension' is on the bookmark page, so the offset is plausible.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The M3012A photo on p30 is extracted as img_0033 (472x437). Nothing is missing.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only the M3012A photo is kept. No logo or rule was kept.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0033 is under the M3012A heading and is mapped to sec_0025. This is correct.",
+      "notes": "",
+      "confidence": 0.93
+    }
+  ]
+}

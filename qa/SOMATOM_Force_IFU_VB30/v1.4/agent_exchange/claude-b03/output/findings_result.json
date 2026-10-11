@@ -1,0 +1,974 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 2 shows \"Legend\" as a large orange title at the top, the same style as other chapter titles. It is node #/texts/11, level 1, path /Legend, no parent. Level 1 fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Legend is a top-level page title with no sub-headings on pages 2-3. The JSON shows parent null and no children. The next section sec_0002 Introduction starts on p10.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts at the Legend title on p2 (#/texts/11) and ends on p3 with the WARNING row (#/texts/31 is the p3 folio). The TOC pages p4-9 are in no section, as expected in this version, so nothing is absorbed. All visible Legend content on p2-3 is in the section.",
+   "notes": "Index/TOC pages outside every section are intentional in v1.4. This is not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Legend has one level, matching the single orange title on p2. No ancestor is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 2-3 are covered once by sec_0001 and no other section claims them. Pages 4-9 are the Table of contents and are in no section by design. No duplicate or missing real content seen.",
+   "notes": "TOC gap is intentional (mitigation version).",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. The page is a simple symbol table and two hazard rows with no ambiguity, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The Legend title is visible on p2, and the next printed chapter Introduction starts on p10, so the boundary is plausible. I could not see the PDF bookmark tree, only the rendered pages.",
+   "notes": "Uncertain because the bookmark outline was not inspected.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio at bottom right of p2 is 2 and p3 is 3, plain arabic numbers. numbering_scheme arabic is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 2 shows printed folio 2 and p3 shows 3. offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p2 the legend table has a left column with symbols and style samples (info icon, solution icon, square, check mark, diamond, 1 2 3, Italic, arrow, Bold, Orange, Courier, Menu > Menu Item, <variable>). Node #/texts/... #/tables/0 text has only the right-column descriptions (\"Indicates a hint\", \"Indicates a list item\", \"Is used to identify inputs you need to provide\"). The left column is missing, so each description cannot be linked to its symbol or style name.",
+   "notes": "Text and order are kept but the key column is lost. Also the table is last in reading order (order 22) although it is first on the page. Medium: values can no longer be attributed to their column.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The p2 legend shows icon pictures (hint \"i\" icon, solution double-arrow icon, yellow CAUTION badge) and p3 shows an orange WARNING badge. images.json lists no image for sec_0001, so they were dropped. The descriptions and the words CAUTION/WARNING survive in text, so the meaning is kept.",
+   "notes": "Low: small icons dropped whose meaning is stated in the text. The missing symbol key is graded under 5.6-table_content.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p3, heading node #/texts/22 has the garbled text \":$51,1*\" just before the real heading #/texts/23 \"WARNING\". It is a badge label read with a broken font encoding and it duplicates the next heading. It looks as the nonsense text in the page. Running header \"Legend\" (#/texts/21) and footers are also kept as paragraphs.",
+   "notes": "Garbled duplicate heading is noise that does not hide any real content. Low.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0001 and none for p2-3. The page icons are small badges and symbols, and none is mapped to a wrong section.",
+   "notes": "Dropped icons are reported in 5.5-filters_discarding.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p32 the heading \"2.3 Safety information on patient transport and positioning\" is a numbered second-level heading under chapter 2 (top bar \"2 Safety information\"). Node #/texts/575 is level 2. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0004 Safety information (chapter 2) is correct for 2.3. The printed TOC on p4 lists 2.3.1 Patient table p33, 2.3.2 Accessories p36, 2.3.3 Laser lightmarker p48, 2.3.4 3D camera p48, 2.3.5 During system movements p48, 2.3.6 Turbo Flash mode p51. These match children sec_0059, 0067, 0086, 0087, 0088, 0092.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p32 the CAUTION box at the top (Auto Delete Configuration) is above the 2.3 heading and belongs to the previous section sec_0057; sec_0058 starts at heading #/texts/575. The intro sentence and two WARNING boxes (#/texts/576-589) follow. On p33 the section continues with the WARNING boxes and the info text about maximum loads (#/texts/593-610), up to just before heading 2.3.1 Patient table. Pages up to p52 are held by its children.",
+   "notes": "The top of p32 is not absorbed. Start and end are right.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Safety information/Safety information on patient transport and positioning matches chapter 2 and section 2.3 on the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 32 text splits cleanly: CAUTION box to sec_0057, 2.3 content to sec_0058. Page 33 content before 2.3.1 is in sec_0058 and the table-top WARNING after 2.3.1 is for sec_0059. No missing or doubled content seen.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. Heading and boundaries are clear on p32, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The printed TOC on p4 lists \"2.3 Safety information on patient transport and positioning\" at p32, the same as page_start 32.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 32 at the bottom right of p32 is an arabic number. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical p32 shows printed folio 32, so offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p32 has a yellow CAUTION bar and two orange WARNING bars with a warning triangle, but no photo or diagram. The words CAUTION and WARNING are in the text nodes (#/texts/577, #/texts/585). No meaningful figure was lost.",
+   "notes": "Triangle icons are decoration for text labels.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json lists no image for sec_0058. The footer and header text (#/texts/590-592) is kept as paragraphs but no decorative image was kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0058",
+   "page_sampled": 32,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p32 has no photo or diagram, and images.json has no image for sec_0058, so nothing is mapped to a wrong section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p393 \"Scrolling through the image stack\" is a bold side heading in the left margin, smaller than a numbered section heading. It is the first procedure under Operating the syngo software. Level 6 is consistent with the deep path.",
+   "notes": "Heading level could only be judged from layout, not from a numbered heading.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0806 Operating the syngo software holds sec_0807 to sec_0812. The page shows several procedures in the same style (Scrolling, Controlling the syngo software, Toggling between image segments, Toggling between window settings), so sec_0807 is a sibling of those procedures.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at the side heading #/texts/8493 and includes the two check-mark prerequisites and steps 1 and 2 with the LED text (#/texts/8499-8504). The figure with Table joystick (1) and Mouse joystick (2) is above the heading and belongs to the parent sec_0806. The next side heading \"Controlling the syngo software\" starts sec_0808, so nothing is absorbed or lost.",
+   "notes": "The left margin heading kept the right text; no margin heading defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with \"Scrolling through the image stack\" and its parent chain is Operating the syngo software, Operating the system using i-Control, Using i-Control, Adaptive 3D Intervention, Enhanced examination. The page top bar shows chapter \"7 Enhanced examination\". The deeper levels cannot be seen on this page.",
+   "notes": "Only the chapter and last level can be checked from the page.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All five visible lines of the Scrolling procedure are in sec_0807, and the Controlling procedure lines are in sec_0808. No duplicate or missing text.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100. The side-heading layout on p393 is clean and the text next to each heading is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading text on p393 matches the title exactly and starts at page 393.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 393 is at the bottom right of p393, arabic. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical p393 shows printed folio 393, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Next to step 1 of this procedure p393 shows a small picture of the Cursor / Navigation key with an LED. images.json has only the big joystick figure img_0210 for p393, so this key picture was dropped. The text names the \"Cursor / Navigation key\" and the LED, so the meaning is kept.",
+   "notes": "Low: small icon dropped whose meaning is in the text. Same for the other small key pictures in the neighbour procedures.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image on p393 is img_0210, the joystick figure with callouts 1 and 2. It is real content, not decoration.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0210 (1150x669, table joystick (1) and mouse joystick (2)) is above all side headings and is mapped to the parent sec_0806. That is right because it is shared by all procedures of the parent. No image is wrongly mapped to sec_0807.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading \"9.3.9 Performing Image Inspection\" on p446 is a three-number heading under 9.3 Constancy test, so level 3 is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0915 Constancy test (9.3) is correct for 9.3.9. The section has no children, which matches the page, since 9.3.10 on p447 is a sibling (sec_0928).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p446 the content above the heading (ROI list, grey image, Result table, hint, status message) is the end of 9.3.8 pixel noise test, which is sec_0926. sec_0927 starts at #/texts/9549 and takes the heading, the intro and two prerequisites (#/texts/9550-9553). Nothing from above is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Quality assurance/Constancy test/Performing Image Inspection matches chapter 9 (top bar \"9 Quality assurance\"), 9.3 and 9.3.9.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The p446 text above 9.3.9 stays in sec_0926 and 9.3.9 text goes to sec_0927. Prerequisite lines at the bottom of p446 continue on p447 in the same section. No gap or duplicate.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and the boundary on p446 is a clear numbered heading, so the flag state is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and the heading 9.3.9 is visible on p446, so page_start 446 matches.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 446 on p446 is arabic. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical p446 shows printed folio 446, so offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p446 shows two screenshots (grey noise image and Result table for System A and B) and the images were extracted as img_0252 and img_0253. The hint \"i\" icon is small decoration. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0252 (169x168) and img_0253 (478x218) match the grey image and the Result table screenshot, which are real content. No decorative image was kept.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 446,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both p446 images are above heading 9.3.9 and are mapped to sec_0926 (pixel noise test). That is right. sec_0927 has no figure of its own, and none is wrongly mapped to it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p447 sec_0927 content is a continuation of 9.3.9, and the following headings 9.3.10 and 9.3.11 are same-level numbers. Level 3 is consistent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "9.3.10 Performing the MTF test on p447 is the next sibling (sec_0928) under the same parent sec_0915. sec_0927 has no child, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p447 sec_0927 holds the top part up to \"A report is generated that contains the study and series names of the inspected images\" (#/texts/9557-9560). The heading 9.3.10 Performing the MTF test starts below it and belongs to sec_0928. page_end 447 is right and nothing from 9.3.10 is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Quality assurance/Constancy test/Performing Image Inspection is right for 9.3.9 under 9 Quality assurance.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The four lines at the top of p447 continue the prerequisite and steps of 9.3.9 and are in sec_0927. 9.3.10 and 9.3.11 text is not in this section. No gap or duplicate.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and the end boundary on p447 is a clear numbered heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "toc source is plausible. The next heading 9.3.10 appears on p447, which fits the end page 447.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 447 on p447 is arabic. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical p447 shows printed folio 447, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p447 has a yellow radiation button icon and \"i\" hint icons, all in 9.3.10 (sec_0928) and small. The sec_0927 part (top 4 items) has no figure. Nothing meaningful is missing for this section.",
+   "notes": "verify_claims flags a dropped 213x170 px raster on p447. It is the yellow radiation button icon beside the Start key step of 9.3.10 (sec_0928), not sec_0927 content, so this row stays PASS. The icon belongs to the next section; its text names the Start key.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p447 and none for sec_0927, so no decorative image was kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0927",
+   "page_sampled": 447,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p447 shows no figure inside the sec_0927 part, and images.json lists none for sec_0927 or p447. No wrong mapping.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading \"9.6.5 Performing the biannual metrological tests\" is on p461; p462 continues it. A three-number heading under 9.6 is level 3, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0944 Constancy test of the monitor (9.6) is right. Its children are 9.6.1-9.6.5 and sec_0951 is the last one. sec_0951 has no children, which matches p461-462.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p462 holds only two callout boxes, \"The test result shows deviations up to 20%\" and \"...30% or more\" (#/texts/9839-9845 with header and footer). They follow step 5 on p461 and are the end of 9.6.5. Section ends on p462 as expected: the Index p463-466 and the back cover p467 are in no section. All real content of p461-462 is kept.",
+   "notes": "No real content lost. Index and back cover outside are intended.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Quality assurance/Constancy test of the monitor/Performing the biannual metrological tests matches chapter 9 (top bar \"9 Quality assurance\"), 9.6 and 9.6.5.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p461 top has the Biannually testing the color effect part (img_0267 and a deviations box), which belongs to sec_0950. 9.6.5 starts below it, and p462 follows. Index and back cover are outside by design. No gap or duplicate in the real content.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false. The end of the manual is now clean on p462 with the index outside, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc and heading 9.6.5 is visible on p461, matching page_start 461.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 462 on p462 is arabic. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical p462 shows printed folio 462, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p462 has two \">>\" solution icons beside the callout boxes. They are small and the sentences are in the text nodes (#/texts/9840-9843). No figure is lost.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p462, so no decorative image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 462,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p462 has no figure. img_0267 on p461 is above heading 9.6.5 and is mapped to sec_0950, which is right. Nothing is wrongly mapped to sec_0951.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 465 is Index (top bar \"Index\", entries N to S). It is in no section, as intended in v1.4. sec_0951 has no node on p463-467, so the index was not absorbed. hierarchy_level 3 is right for 9.6.5 on p461-462.",
+   "notes": "Out-of-section index page is not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 465 is Index (top bar \"Index\", entries N to S). It is in no section, as intended in v1.4. sec_0951 has no node on p463-467, so the index was not absorbed. Parent sec_0944 and no children are right for 9.6.5.",
+   "notes": "Out-of-section index page is not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 465 is Index (top bar \"Index\", entries N to S). It is in no section, as intended in v1.4. sec_0951 has no node on p463-467, so the index was not absorbed. The section ends on p462 with the last callout box, so the end boundary is right.",
+   "notes": "Index outside the section is intentional, not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 465 is Index (top bar \"Index\", entries N to S). It is in no section, as intended in v1.4. sec_0951 has no node on p463-467, so the index was not absorbed. The path is right for 9.6.5 on p461-462.",
+   "notes": "Out-of-section index page is not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 465 is Index (top bar \"Index\", entries N to S). It is in no section, as intended in v1.4. sec_0951 has no node on p463-467, so the index was not absorbed. It is not an uncovered real-content gap and not duplicated in another section.",
+   "notes": "Index outside every section is intentional.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 465 is Index (top bar \"Index\", entries N to S). It is in no section, as intended in v1.4. sec_0951 has no node on p463-467, so the index was not absorbed. flagged_for_review false is right; the index is not part of this section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 465 is Index (top bar \"Index\", entries N to S). It is in no section, as intended in v1.4. sec_0951 has no node on p463-467, so the index was not absorbed. The toc source covers pages 461-462 only, which fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 465 at the bottom right of p465 is arabic, the same scheme as the rest of the manual. No roman numbering seen.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical p465 shows printed folio 465, offset 0 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p465 is an index with text only. No figure on the page, so none was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p465 has no image and images.json has none for p465 or in sec_0951 beyond p462. No decorative image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 465,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p465 is an index of text with no figure. images.json has no image on p465, so none is mapped to sec_0951.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 is the back cover (legal text, Siemens Healthineers Headquarters and Manufacturer addresses, publisher line). It is in no section, as intended in v1.4. sec_0951 has no node on p467. hierarchy_level 3 stays right for 9.6.5.",
+   "notes": "Out-of-section back cover is not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 is the back cover (legal text, Siemens Healthineers Headquarters and Manufacturer addresses, publisher line). It is in no section, as intended in v1.4. sec_0951 has no node on p467. Parent sec_0944 and no children are right.",
+   "notes": "Out-of-section back cover is not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 is the back cover (legal text, Siemens Healthineers Headquarters and Manufacturer addresses, publisher line). It is in no section, as intended in v1.4. sec_0951 has no node on p467. The section ends on p462 and the back cover was not absorbed.",
+   "notes": "Back cover outside the section is intentional.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 is the back cover (legal text, Siemens Healthineers Headquarters and Manufacturer addresses, publisher line). It is in no section, as intended in v1.4. sec_0951 has no node on p467. The path is right for 9.6.5.",
+   "notes": "Out-of-section back cover is not content loss.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 is the back cover (legal text, Siemens Healthineers Headquarters and Manufacturer addresses, publisher line). It is in no section, as intended in v1.4. sec_0951 has no node on p467. It is not duplicated in any section and not real section content.",
+   "notes": "Back cover outside every section is intentional.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 is the back cover (legal text, Siemens Healthineers Headquarters and Manufacturer addresses, publisher line). It is in no section, as intended in v1.4. sec_0951 has no node on p467. flagged_for_review false is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 467 is the back cover (legal text, Siemens Healthineers Headquarters and Manufacturer addresses, publisher line). It is in no section, as intended in v1.4. sec_0951 has no node on p467. The toc source covers pages 461-462 only, which fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The back cover p467 has no printed folio. The index p465 shows arabic folios, so numbering_scheme arabic is right.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p467 has no folio, but p462 shows folio 462 and p465 shows 465, so offset 0 holds up to the last numbered pages.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p467 has text and a thin rule only, no figure or logo image, so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p467 has no image and none is in images.json, so no decorative element was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0951",
+   "page_sampled": 467,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p467 has no figure and images.json has none for p467, so nothing is mapped to sec_0951.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

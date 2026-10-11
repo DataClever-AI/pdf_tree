@@ -1,0 +1,1604 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p208 shows heading '5. Control System' and 'A: GENERAL' with the ECM paragraph, seven bullets and notes *1 and *2, then folio FU-28. The title '5. Control System' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0084 (FUEL INJECTION (FUEL SYSTEM), level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0088 and next is sec_0090 (starts p216).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0089 covers p208-p215 with 139 nodes. p208 starts with heading #/texts/3106 '5. Control System' and ends with folio FU-28 (#/texts/3119). p215 ends with the fuel pump table (#/tables/50) and folio FU-35. sec_0090 starts on p216. No neighbour content is absorbed. The running header lines on p208 are boilerplate only.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '5. Control System' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0088, sec_0089 and sec_0090 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0089 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0089 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '5. Control System' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is FU-28 to FU-35, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p208-p215), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p209 the table #/tables/49 (input and output signals) is rendered with merged cells 'Input signals' and 'Output signals' in the first column. In the node text all 31 rows with Unit and Function are present and in the right order. But the labels 'Input signals' and 'Output signals' sit in the middle of the row list, so the first nine input rows and the first output row are listed before their group label. Each row still has its own Unit and Function text. There is no table on p208 itself. #/tables/50 on p215 (fuel pump relay) is complete.",
+   "notes": "Old FAIL (BUG-008, v2.11): still present. Only the merged label cells are misplaced. Order and values stay readable, so Low. Not changed by v2.12 (#/tables/49 text is the same). Kept Low as in approved v2.11: the group is still clear from the order and every value stays with its signal name. Impact: low.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p208 has no figure. The figures on p212-p215 were all extracted: img_0141, img_0142, img_0143 (vector) and img_0144 (vector). On p214 and p215 the rendered figures match the images and nothing is cut. The bullet marks on p208 are text, not icons.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The four images of sec_0089 (img_0141 to img_0144) are block diagrams and a timing chart. None is a rule, logo or footer divider. p208 has no decorative image kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 208,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0141 (p212), img_0142 (p213), img_0143 (p214) and img_0144 (p215) are all mapped to sec_0089 and each page lies in the section range p208-p215. p208 itself has no figure, only bullets and notes, and none was extracted. On p214 and p215 the figures match the images (B2H3914B and B2H3915A).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p221 shows only the two-column legend (1)-(49) of the schematic and folio EC-5; the diagram itself is on p220. The title '2. Schematic Diagrams' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0091 (EMISSION CONTROL, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0092 and next is sec_0094 (starts p222).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0093 covers p220-p221 with 78 nodes. p221 shows only the two-column legend (1)-(49) of the schematic and folio EC-5; the diagram itself is on p220. The section starts at its own heading and ends before sec_0094 (starts p222). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '2. Schematic Diagrams' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0092, sec_0093 and sec_0094 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0093 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0093 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Schematic Diagrams' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is EC-4 and EC-5, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p220-p221), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only figure of sec_0093 is the wiring schematic on p220. It was extracted as img_0145 (vector) with all labelled parts (1)-(49) visible and not cut. p221 is a text legend with no figure. Nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0093 (img_0145 (p220, vector)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 221,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0145 (p220, vector) is the full schematic B2H4215A with numbers (1)-(49) and is mapped to sec_0093. p221 has only the text legend and no image, which is correct. The legend list (nodes #/texts/3321-3345) is in the same section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p228 shows 'B: FUEL CUT VALVE' with a figure (B2H3342D) and 'C: FUEL TANK CAP' with a figure (B2H0395C), then folio EC-12. The title '8. Evaporative Emission Control System' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0091 (EMISSION CONTROL, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0098 and next is sec_0100 (starts p230).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0099 covers p227-p229 with 68 nodes. p228 shows 'B: FUEL CUT VALVE' with a figure (B2H3342D) and 'C: FUEL TANK CAP' with a figure (B2H0395C), then folio EC-12. The section starts at its own heading and ends before sec_0100 (starts p230). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '8. Evaporative Emission Control System' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0098, sec_0099 and sec_0100 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0099 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0099 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '8. Evaporative Emission Control System' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is EC-11 to EC-13, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p227-p229), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p228 has two figures: the fuel cut valve (B2H3342D) and the fuel tank cap (B2H0395C). Both were extracted: img_0151 (vector) and img_0150 (raster). Both are complete. The part numbers in img_0150 are kept as text nodes #/texts/3482-3489. Nothing meaningful is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0099 (img_0149 (p227, vector), img_0150 (p228), img_0151 (p228, vector), img_0152 (p229), img_0153 (p229, vector)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 228,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0150 and img_0151 are on p228 and mapped to sec_0099. The valve figure sits under 'B: FUEL CUT VALVE' and the cap figure under 'C: FUEL TANK CAP', both inside sec_0099. img_0149 (p227) and img_0152, img_0153 (p229) are also in sec_0099 and match their pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p235 shows heading '2. Timing Chains', two bullet paragraphs, the chain figure B2H3895A with parts (1)-(17), then folio ME-3. The title '2. Timing Chains' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0103 (MECHANICAL, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0104 and next is sec_0106 (starts p236).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0105 covers p235 only with 14 nodes. p235 shows heading '2. Timing Chains', two bullet paragraphs, the chain figure B2H3895A with parts (1)-(17), then folio ME-3. The section starts at its own heading and ends before sec_0106 (starts p236). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '2. Timing Chains' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0104, sec_0105 and sec_0106 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0105 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0105 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Timing Chains' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is ME-3, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p235 only), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Extracted images for sec_0105: img_0157 (p235). p235 shows heading '2. Timing Chains', two bullet paragraphs, the chain figure B2H3895A with parts (1)-(17), then folio ME-3. No meaningful figure on the sampled page is missing from the image output.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0105 (img_0157 (p235)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0105",
+   "page_sampled": 235,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images of sec_0105: img_0157 (p235). Each image sits on a page and under a heading of sec_0105. p235 shows heading '2. Timing Chains', two bullet paragraphs, the chain figure B2H3895A with parts (1)-(17), then folio ME-3.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p241 shows heading '8. Crankshaft', one paragraph, the crankshaft and bearings figure B2H3900A, then folio ME-9. The title '8. Crankshaft' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0103 (MECHANICAL, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0110 and next is sec_0112 (starts p242).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0111 covers p241 only with 6 nodes. p241 shows heading '8. Crankshaft', one paragraph, the crankshaft and bearings figure B2H3900A, then folio ME-9. The section starts at its own heading and ends before sec_0112 (starts p242). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '8. Crankshaft' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0110, sec_0111 and sec_0112 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0111 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0111 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '8. Crankshaft' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is ME-9, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p241 only), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Extracted images for sec_0111: img_0163 (p241). p241 shows heading '8. Crankshaft', one paragraph, the crankshaft and bearings figure B2H3900A, then folio ME-9. No meaningful figure on the sampled page is missing from the image output.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0111 (img_0163 (p241)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0111",
+   "page_sampled": 241,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images of sec_0111: img_0163 (p241). Each image sits on a page and under a heading of sec_0111. p241 shows heading '8. Crankshaft', one paragraph, the crankshaft and bearings figure B2H3900A, then folio ME-9.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p248 shows heading '1. General' with three bullets and no figure, then folio CO-2. The title '1. General' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0116 (COOLING, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0116 (its parent, which ends the cover page before) and next is sec_0118 (starts p249).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0117 covers p248 only with 7 nodes. p248 shows heading '1. General' with three bullets and no figure, then folio CO-2. The section starts at its own heading and ends before sec_0118 (starts p249). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '1. General' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0116, sec_0117 and sec_0118 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0117 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0117 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '1. General' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is CO-2, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p248 only), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Extracted images for sec_0117: none. p248 shows heading '1. General' with three bullets and no figure, then folio CO-2. No meaningful figure on the sampled page is missing from the image output.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0117 (none) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0117",
+   "page_sampled": 248,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images of sec_0117: none. Each image sits on a page and under a heading of sec_0117. p248 shows heading '1. General' with three bullets and no figure, then folio CO-2.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p255 is not rendered here. The title 'LUBRICATION' is the chapter heading of a chapter cover and its six numbered children are level 4. hierarchy_level 3 fits, the same as COOLING (sec_0116) and MECHANICAL (sec_0103).",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002 (NEW CAR INFORMATION SECTION, level 2). Children are sec_0124 to sec_0129, and they match the six rows of the contents table #/tables/56 in order. Previous is sec_0122 and next is sec_0124.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0123 covers p255-p262. It has only 3 nodes: heading 'LUBRICATION' (#/texts/3810), 'LU (H6)' (#/texts/3811) and the contents table #/tables/56. The six child sections sec_0124-sec_0129 own the body pages p256-p262. The cover content belongs to the chapter itself. Nothing from children or from sec_0122 is absorbed.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with 'LUBRICATION' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0122 ends on p254 and sec_0123 starts on p255. Its children sec_0124-sec_0129 run from p256 to p262 with no gap. The chapter is listed once and its contents table appears once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False and verification_score is 100. The title matches the chapter heading 'LUBRICATION' in node #/texts/3810. The page render is not in this batch.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading 'LUBRICATION' is in node #/texts/3810 on p255 and the contents table lists the same six children as the bookmarks.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The chapter cover p255 has no printed folio in the node list (LU pages are numbered LU-2 and up on the child pages). numbering_scheme 'arabic' matches the LU-n folios seen on the children, for example LU-5 and LU-7.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The chapter heading 'LUBRICATION' (#/texts/3810) is on p255, as the section start says. Child pages show LU-5 on p259 and LU-7 on p261, which fits a cover on p255 with no shift.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/56 on p255 lists six sections: 1. General (page 2), 2. Engine Oil Flow (4), 3. Oil Pump and Relief Valve (5), 4. Oil Filter (6), 5. Oil Pan and Oil Strainer (7), 6. Oil Pressure Switch (8). The numbers are in one column and the names with dot leaders in the next. All rows and page numbers are present. The page render is not in this batch, so I judged from the node text and the children titles.",
+   "notes": "Lower confidence because p255 was not rendered.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The chapter cover node list has no figure, and no image is mapped to sec_0123 itself. The figures of its children (img_0175 p259, img_0177 p261 and others) are mapped to the child sections. The p255 render is not in this batch, so I judged from the node and image lists.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0123, so no decorative element is kept as an image on the chapter cover. The p255 render is not in this batch.",
+   "notes": "",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0123. Images on p259 (img_0175) and p261 (img_0177) are mapped to children sec_0126 and sec_0128. The p255 render is not in this batch, so absence of a figure on the cover is judged from the node list only.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p261 holds the oil pan figure (img_0177) and parts list; the page render is not in this batch, so I judged from nodes #/texts/3940-3956 and the image. The title '5. Oil Pan and Oil Strainer' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0123 (LUBRICATION, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0127 and next is sec_0129 (starts p262).",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0128 covers p261 only with 17 nodes. p261 holds the oil pan figure (img_0177) and parts list; the page render is not in this batch, so I judged from nodes #/texts/3940-3956 and the image. The section starts at its own heading and ends before sec_0129 (starts p262). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '5. Oil Pan and Oil Strainer' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0127, sec_0128 and sec_0129 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0128 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0128 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '5. Oil Pan and Oil Strainer' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is LU-7, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p261 only), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p261 holds the oil pan figure (img_0177) and parts list; the page render is not in this batch, so I judged from nodes #/texts/3940-3956 and the image. The figure is complete in img_0177 (p261) and its part numbers (1)-(8) or (1)-(5) are kept as text nodes. No second figure is listed for this page.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0128 (img_0177 (p261)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0177 (p261) is mapped to sec_0128 and lies on its only page. The figure matches the heading '5. Oil Pan and Oil Strainer'. No neighbour image is assigned here.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p214 shows the ignition timing paragraphs, the crank-angle pulse diagram (B2H3914B) with legend (1)-(4), then folio FU-34. The title '5. Control System' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0084 (FUEL INJECTION (FUEL SYSTEM), level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0088 and next is sec_0090 (starts p216).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0089 covers p208-p215 with 139 nodes. p214 shows the ignition timing paragraphs, the crank-angle pulse diagram (B2H3914B) with legend (1)-(4), then folio FU-34. The section starts at its own heading and ends before sec_0090 (starts p216). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '5. Control System' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0088, sec_0089 and sec_0090 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0089 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0089 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '5. Control System' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is FU-28 to FU-35, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p208-p215), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p214 has no table. The tables of sec_0089 are on p209 (#/tables/49) and p215 (#/tables/50). I checked #/tables/50 on p215: four rows and three columns match the render. The p209 table is graded on the p208 row.",
+   "notes": "No table on the sampled page, so PASS. See the p208 row for BUG-008 on #/tables/49.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p214 has one diagram, the crank-angle pulse chart B2H3914B. It was extracted as img_0143 (origin vector). The image shows the full chart with (1) to (4), #1 to #6 and A/B/C. The text legend (1)-(4) below stays in text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0089 (img_0141 (p212), img_0142 (p213), img_0143 (p214, vector), img_0144 (p215, vector)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0089",
+   "page_sampled": 214,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0143 is the B2H3914B chart on p214 and is mapped to sec_0089. The page is inside p208-p215 and under heading 'D: IGNITION SYSTEM CONTROL' of the same section. No other figure is on p214.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p229 shows 'D: CANISTER' with figure B2H4209B and 'E: PURGE CONTROL SOLENOID VALVE' with figure B2H4155B, then folio EC-13. The title '8. Evaporative Emission Control System' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0091 (EMISSION CONTROL, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0098 and next is sec_0100 (starts p230).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0099 covers p227-p229 with 68 nodes. p229 shows 'D: CANISTER' with figure B2H4209B and 'E: PURGE CONTROL SOLENOID VALVE' with figure B2H4155B, then folio EC-13. The section starts at its own heading and ends before sec_0100 (starts p230). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '8. Evaporative Emission Control System' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0098, sec_0099 and sec_0100 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0099 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0099 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '8. Evaporative Emission Control System' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is EC-11 to EC-13, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p227-p229), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p229 has two figures: the canister (B2H4209B) and the purge control solenoid valve (B2H4155B). Both were extracted: img_0152 (raster) and img_0153 (vector). Both are complete. Letters A, B, C are in the images and in text nodes.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0099 (img_0149 (p227, vector), img_0150 (p228), img_0151 (p228, vector), img_0152 (p229), img_0153 (p229, vector)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0099",
+   "page_sampled": 229,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0152 (canister) and img_0153 (purge valve) are on p229 and mapped to sec_0099. They sit under 'D: CANISTER' and 'E: PURGE CONTROL SOLENOID VALVE', which are subsections of sec_0099. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p243 shows heading '10.Engine Mounts', one paragraph, two mount figures B2H3976A with legend (1)-(6), then folio ME-11. The title '10. Engine Mounts' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0103 (MECHANICAL, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0112 and next is sec_0114 EXHAUST (starts p245).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0113 covers p243-p244 with 15 nodes. p243 has the heading '10.Engine Mounts' and the figure. p244 has only the running headers, the 'MEMO' heading (#/texts/3701) and folio ME-12. That is a blank memo page of the same chapter, before EXHAUST starts on p245. Nothing is absorbed from a neighbour.",
+   "notes": "The blank MEMO page is only boilerplate and stays inside the bookmark range. Not a defect.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '10. Engine Mounts' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0112, sec_0113 and sec_0114 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0113 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0113 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '10. Engine Mounts' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is ME-11 and ME-12, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p243-p244), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p243 has two mount figures (B2H3976A). They were extracted as one image, img_0165, with both drawings complete. The numbers (4) and (6) are not in the crop but exist as text nodes #/texts/3695-3696, and the legend (1)-(6) is in text nodes. Nothing meaningful is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0113 (img_0165 (p243)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0113",
+   "page_sampled": 243,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images of sec_0113: img_0165 (p243). Each image sits on a page and under a heading of sec_0113. p243 shows heading '10.Engine Mounts', one paragraph, two mount figures B2H3976A with legend (1)-(6), then folio ME-11.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p253 shows heading '6. Radiator Fan', 'A: DESCRIPTION', one sentence, the fan figure B2H3893A with legend (1)-(14), then folio CO-7. The title '6. Radiator Fan' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0116 (COOLING, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0121 and next is sec_0123 LUBRICATION (starts p255).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0122 covers p253-p254 with 20 nodes. p253 starts with heading '6. Radiator Fan' and p254 ends with the fan table #/tables/55 and folio CO-8. The table is printed under 'B: FUNCTION' of the same section. sec_0123 starts on p255. Nothing is absorbed or lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '6. Radiator Fan' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0121, sec_0122 and sec_0123 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0122 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0122 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '6. Radiator Fan' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is CO-7 and CO-8, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p253-p254), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p254 the fan table is #/tables/55. All 12 data rows are present and none is duplicated. But cells are merged. One row reads 'Off Off Off Low-speed Low-speed Mid-speed Mid-speed' in one cell, so values cannot be tied to Main fan, Subfan or a temperature column. v2.12 recovered 'than 95\u00b0C' but it sits after the 'Between 95 and 99 \u00b0 C' text. The words 'Lower' and 'Engine coolant temperature' are still missing, and '(203 F)' stays alone.",
+   "notes": "Old FAIL (BUG-008, v2.11): still present. v2.12 added no duplicate row and put no text in a wrong row, so there is no regression. Merged cells and lost header words are out of scope for this fix. Impact: the fan speed cannot be read for a given temperature without the PDF.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p253 has one figure, the radiator fan assembly (B2H3893A) with parts (1)-(14). It was extracted as img_0172 and is complete. p254 has no figure, only the table. The legend is in text nodes #/texts/3797-3803. Nothing is missing.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0122 (img_0172 (p253)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Images of sec_0122: img_0172 (p253). Each image sits on a page and under a heading of sec_0122. p253 shows heading '6. Radiator Fan', 'A: DESCRIPTION', one sentence, the fan figure B2H3893A with legend (1)-(14), then folio CO-7.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p259 holds the oil pump figure (img_0175) and the parts list; the page render is not in this batch, so I judged from nodes #/texts/3905-3929 and the image. The title '3. Oil Pump and Relief Valve' is printed at the same size as its sibling headings. hierarchy_level 4 fits a numbered sub-chapter heading under its parent.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0123 (LUBRICATION, level 3), which matches the printed chapter header on the page. The section has no children and none are expected. Previous is sec_0125 and next is sec_0127 (starts p260).",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0126 covers p259 only with 25 nodes. p259 holds the oil pump figure (img_0175) and the parts list; the page render is not in this batch, so I judged from nodes #/texts/3905-3929 and the image. The section starts at its own heading and ends before sec_0127 (starts p260). No node from a neighbour is absorbed and no body text is missing.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path ends with '3. Oil Pump and Relief Valve' and its parent chain matches the printed chapter header seen on the page. The order from root to section is correct.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The page ranges of sec_0125, sec_0126 and sec_0127 follow one another with no gap and no overlap. Each heading appears once. No node of sec_0126 is repeated in another section.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is False for sec_0126 and the heading is clearly visible on the rendered content, so no uncertainty is hidden.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '3. Oil Pump and Relief Valve' matches the printed heading, so the bookmark origin is supported by the page.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The folio on these pages is LU-5, a chapter-prefixed Arabic number. numbering_scheme 'arabic' fits.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is found on the expected physical page (p259 only), so no shift is needed.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p259 holds the oil pump figure (img_0175) and the parts list; the page render is not in this batch, so I judged from nodes #/texts/3905-3929 and the image. The figure is complete in img_0175 (p259) and its part numbers (1)-(8) or (1)-(5) are kept as text nodes. No second figure is listed for this page.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images of sec_0126 (img_0175 (p259)) are real figures. No rule, logo or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0175 (p259) is mapped to sec_0126 and lies on its only page. The figure matches the heading '3. Oil Pump and Relief Valve'. No neighbour image is assigned here.",
+   "notes": "",
+   "confidence": 0.8
+  }
+ ]
+}

@@ -1,0 +1,1234 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p269 \"Monitoring BIS\" is the big chapter title with the number 19. The tree has level 1. This matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0497 has parent_section_id null and is a chapter. Its first child sec_0498 \"BIS Monitoring Setup\" starts on p270. The child list is coherent.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p269 the section nodes run from the chapter number and title to the last \"Bursts\" paragraph and the folio 257. No node from p270 is in sec_0497. Its first child sec_0498 starts with the p270 running header (#/texts/4813).",
+      "notes": "Old problem (BUG-022, v2): now fixed. The p270 running header is no longer in sec_0497. The page_end 276 matches the last child sec_0512.",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Monitoring BIS\" is correct for a top-level chapter on p269.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All 19 nodes (#/texts/4794 to 4812) are the p269 intro, the numeric definitions and the folio. Nothing is missing and nothing is repeated in sec_0498.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on the rendered p269, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The title \"Monitoring BIS\" is on p269 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The printed folio on p269 is 257, an arabic number.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The chapter title is on physical p269 and the bookmark points to p269. This matches the neighbour sections.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p269 has only text and the blue rule. No figure or screenshot is visible, and images.json lists none for this page.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0497. The blue rule under the chapter number is not kept as an image.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0497",
+      "page_sampled": 269,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0497, and p269 shows no figure. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p277 \"Indirect Connection - Manual Pairing\" is a small bold heading under the larger \"How Can You Combine Devices?\". The tree has level 3, and the bookmark has level 3.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0514 \"How Can You Combine Devices?\". The only child is sec_0516 \"Telemetry Data Window\". The bookmark list has the same nesting (level 4 after level 3).",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section starts at the heading on p277 and has text, steps 1-3 and the folio 265. On p278 it has the running header and the paragraph \"Pairing at the monitor is only possible...\". Then sec_0516 starts. page_end is 278.",
+      "notes": "Old problem (BUG-014, v2): now fixed. page_end is 278, so the p278 paragraph is inside the range.",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Assigning Two Devices to One Patient/How Can You Combine Devices?/Indirect Connection - Manual Pairing\" matches the bookmarks and the page.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Node #/texts/4983 is a lone \"WARNING\" label in sec_0515. The real warning box is lower on p278 under the telemetry image. Its text, with the word WARNING, is in sec_0516 (#/texts/5009). So the label is a duplicate in the wrong section.",
+      "notes": "Lead change: Low to Critical. An approved row in v2.4 (sec_0013 p21, #/texts/203) graded the same pattern Critical: one WARNING box label stored in another section. The label probably belongs to a WARNING box lower on p278 (sec_0516 or sec_0517). Probably BUG-023. The human may lower it, because only one word moved.",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clearly visible on p277. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p277 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p277 is 265.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p277, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p277 has no figure. On p278 the telemetry screenshot is extracted as img_0153. It is mapped to sec_0516, the section of its heading.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0515. The only image on p278, img_0153, is a real screenshot and not noise.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0515",
+      "page_sampled": 277,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0515 has no image. img_0153 on p278 sits below the heading \"Telemetry Data Window\", so sec_0516 is the right owner.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"Trends Pop-Up Keys\" on p283 is a small bold heading under \"Viewing Trends\". The tree has level 3. This matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0530 \"Viewing Trends\". Next sibling is sec_0532 \"Viewing Graphic Trends\". sec_0531 has no children, which is right.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading and one intro paragraph are at the bottom of p283, then the folio 271. On p284 the section has the running header and the pop-up keys table #/tables/98. The next heading \"Viewing Graphic Trends\" is below the table and belongs to sec_0532.",
+      "notes": "Old problem (BUG-019, v2): now fixed. The Viewing Trends intro is in sec_0530 and this section has its own body.",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Trends/Viewing Trends/Trends Pop-Up Keys\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Nodes #/texts/5112 to 5116 and #/tables/98 cover the p283 text and the p284 table. The sec_0530 body (SmartKey bullets) is in sec_0530, not here. No node is repeated.",
+      "notes": "Old problem (BUG-019, v2): now fixed.",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p283. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p283 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p283 is 271 and on p284 is 272.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p283, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The table #/tables/98 on p284 has a header and 11 rows. All row names and descriptions match the render. In rows 5 to 8 the first cell is empty because it holds an arrow icon. The icon text is not in the table.",
+      "notes": "The meaning of each row is kept in the description. The missing icons are graded in 5.5-filters_discarding. No extra table FAIL.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "p284 has four arrow-key icons in the first column of the table. They are not in images.json. Only img_0157 (the graph screenshot, mapped to sec_0532) is listed for p284. The text still says what each key does. The three SmartKey icons on p283 are now extracted as img_0154 to img_0156.",
+      "notes": "Old problem (BUG-020, v2.4): partly fixed. The 3 SmartKey icons on p283 are now extracted. The 4 table icons are still dropped. They are small and their meaning is in the text, so Low.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The kept images on these pages are img_0154 to img_0156 (SmartKey icons) and img_0157 (screenshot). They are real content, not noise.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": 283,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0154 to img_0156 sit beside the bullets of sec_0530 and are mapped to sec_0530. img_0157 is below the heading \"Viewing Graphic Trends\" and is mapped to sec_0532. sec_0531 has no own image extracted.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"Setting the Horizon\" on p294 is a small bold heading. The tree has level 4 and the bookmark list agrees.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0556 \"Changing the Screen Trend View\". Siblings sec_0559 before and sec_0561 after. It has no children, which is right.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p294 the section has its heading, the definition, steps 1 and 2 and the five options (Set High Horizon, Set Low Horizon, Auto Horizon, Auto All, Set Horizon). The next heading \"Setting the Horizon Trend Scale\" starts sec_0561, which keeps its own text.",
+      "notes": "Old problem (BUG-019, v2): now fixed. The body is in sec_0560 and no longer in sec_0561.",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Trends/Screen Trends/Changing the Screen Trend View/Setting the Horizon\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0560 has 11 nodes (#/texts/5349 to 5359). sec_0561 starts at #/texts/5360 with its own heading. No gap and no repeat.",
+      "notes": "Old problem (BUG-019, v2): now fixed. The section is no longer empty.",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p294. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p294 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p294 is 282.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p294, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p294 has no figure or icon. Only text is visible, and images.json lists no image for p294.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0560 on p294.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0560",
+      "page_sampled": 294,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0560 has no image and p294 shows no figure. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"BIS Safety Information\" on p275 is a large heading, like the other level 2 headings. The tree has level 2 and the bookmark agrees.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0497 \"Monitoring BIS\", and the parent lists sec_0512 as its last child. Next section sec_0513 is a new chapter. It has no children.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p275 has the full section: intro, \"Considerations for Use\", WARNING box, CAUTION box and the folio 263. p276 is a blank page with only the header bar and folio 264. page_end is 276, which is correct. No text of sec_0513 (starts p277) is inside.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Monitoring BIS/BIS Safety Information\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All p275 paragraphs are present once. The title also appears as the running header node #/texts/4943, which is boilerplate. The WARNING and CAUTION labels (#/texts/4956, 4957) are listed after their paragraphs. This is only an order problem.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p275. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p275 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folios on p275 and p276 are 263 and 264.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p275, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "p275 has no real table. #/tables/96 is on p276. It holds only \"19 Monitoring BIS | BIS Safety Information\", the text of the blue header bar. The p276 render is blank apart from that bar and the folio 264. The page has no other table text.",
+      "notes": "Old problem (BUG-021, v2.13): still present. A header bar is read as a table. Cosmetic only (header row misdetected as a table), so Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p275 and p276 have no figure or icon. Only text boxes (WARNING, CAUTION) and a blank page are visible. No image is listed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0512. The header bars were not kept as images.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0512",
+      "page_sampled": 275,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0512 has no image and the pages show no figure. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"Synchronized Settings\" on p281 is a small bold heading. The tree has level 3 and the bookmark list agrees.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0525 \"General Telemetry-related Functions\". Sibling sec_0526 is before it and sec_0528 follows. It has no children, which is right.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section starts at the heading on p281 and has the intro, table, footnotes, WARNING box and folio 269. On p282 it has the two paragraphs before the heading \"Use Models With Telemetry\". The p282 heading belongs to sec_0528.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Assigning Two Devices to One Patient/General Telemetry-related Functions/Synchronized Settings\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The nodes #/texts/5066 to 5077 and #/tables/97 cover all text from p281 and the top of p282. No node is missing or repeated. Running-header text \"Use Models With Telemetry\" is at the top of p282 and is boilerplate.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p281. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p281 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p281 is 269 and on p282 is 270.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p281, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The table #/tables/97 is on p281. It has 6 rows (Heart Rate, ECG, Arrhythmia, ST, QT, SpO2 T) and every setting list is present. Footnote marks show as plain \"1\" and \"2\" (Va Lead 1, QTc Formula 2). In the last row the two lines are joined: \"SpO 2 Alarm limits NBP Alarm Suppression On/Off\". Values and order are kept. p282 has no table.",
+      "notes": "Old problem (BUG-008 family, v2.13): still present. Two paragraphs of one cell are joined and footnote marks are digits. Cosmetic only, so Low.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p281 and p282 have no figure or icon. Only text and a table are visible, and images.json lists none for these pages.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0527 on p281 or p282.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0527",
+      "page_sampled": 282,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0527 has no image and the pages show no figure. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"Viewing Histogram Trends\" on p286 is a heading like its siblings \"Viewing Graphic Trends\" and \"Viewing Vital Signs Trends\". The tree has level 3 and the bookmark agrees.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0530 \"Viewing Trends\". Previous sibling is sec_0533. Next section sec_0535 \"Setting Up Trends\" is level 2. It has no children.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p286 shows the heading, the histogram, and seven paragraphs. All are in sec_0534 (#/texts/5153 to 5164). The heading \"Setting Up Trends\" below belongs to sec_0535 and is not in this section. The first two nodes are the running header.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Trends/Viewing Trends/Viewing Histogram Trends\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All seven paragraphs on p286 are present once. Text from the histogram image (title and \"rpm\") is also kept as nodes #/texts/5156 and 5157. Nothing is missing.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p286. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p286 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p286 is 274.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p286, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The one figure on p286 is the RR histogram. It is extracted as img_0159 (642x528) and shows all bars, axes and the percent scale. The title text is kept in nodes.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0159 is a real screenshot and not decoration. It has no logo or rule.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0534",
+      "page_sampled": 286,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0159 is mapped to sec_0534. It sits right under the heading \"Viewing Histogram Trends\", so the mapping is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"Expanded View\" on p287 is a small bold heading, smaller than \"Making Segment Settings\". The tree has level 4 and the bookmark agrees.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0536 \"Making Segment Settings\". Next section sec_0538 \"Trend Scales for Segment Measurements\" is a sibling. It has no children.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section starts at the heading on p287 and has the expand, highlight and return steps (#/texts/5175 to 5181). The next heading \"Trend Scales for Segment Measurements\" starts sec_0538. The intro bullet above the heading belongs to sec_0536.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Trends/Setting Up Trends/Making Segment Settings/Expanded View\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All text between the two headings on p287 is in sec_0537, once. No gap and no repeat.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p287. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p287 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p287 is 275.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p287, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p287 has no figure or icon. Only text with diamond bullets is visible. No image is listed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0537 on p287.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0537",
+      "page_sampled": 287,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0537 has no image and p287 shows no figure. Nothing needs mapping.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"Trending Multiple-Value Measurements\" on p291 is a small bold heading. The next heading \"Screen Trends\" is larger (level 2). The tree has level 3 and the bookmark agrees.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0549 \"Trends Databases\", which lists sec_0550 and sec_0551. The next section sec_0552 \"Screen Trends\" is a sibling of the parent. It has no children.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section has the running header, the heading and one paragraph on p291 (#/texts/5285 to 5288). The heading \"Screen Trends\" and the figure below belong to sec_0552. page_start and page_end are both 291.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Trends/Trends Databases/Trending Multiple-Value Measurements\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The only body paragraph on the page before \"Screen Trends\" is in sec_0551, once. Nothing is missing or repeated.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p291. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p291 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p291 is 279.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p291, as in the bookmark. Neighbour sections also use offset 0.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p291 has one large screenshot with labels and an enlarged ABP strip. It is extracted as img_0162 (vector origin, mapped to sec_0552) and the crop shows the labels, the arrows and the strip. Nothing is cut.",
+      "notes": "verify_claims flags a 709x485 px raster on p291 as missing. This is the monitor screenshot inside img_0162 (748x794 px, in images_v1.json for sec_0552). The figure is not lost, so PASS.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0162 is a real figure and not decoration. No logo or rule is kept.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0551",
+      "page_sampled": 291,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0162 sits under the heading \"Screen Trends\" and is mapped to sec_0552. It is not in sec_0551, which is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "\"Setting the Time Period for the Trend Indicator Arrow\" is a small bold heading on p294. The tree has level 4 and the bookmark agrees. The sampled page p295 is the next chapter.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0556 \"Changing the Screen Trend View\". Previous sibling is sec_0561. Next section sec_0563 \"Calculations\" is a new chapter. It has no children.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is on p294 and ends with the steps 1-3 and the folio 282 (#/texts/5367 to 5372). The sampled page p295 is the start of chapter 22 \"Calculations\". None of its text is in sec_0562. It belongs to sec_0563. page_end 294 is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path \"/Trends/Screen Trends/Changing the Screen Trend View/Setting the Time Period for the Trend Indicator Arrow\" is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0562 has only the p294 nodes. The p295 chapter title, text and table are in sec_0563 (#/texts/5373 onward). No node is shared or repeated.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the heading is clear on p294. No flag is needed.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is \"toc\". The heading is on p294 and matches the bookmark.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The numbering scheme is \"arabic\". The folio on p294 is 282 and on p295 is 283.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p294, as in the bookmark. The next chapter starts on p295 with the same offset.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p294 has no figure. The only small icon on the sampled p295 is the Calculations SmartKey. It is outside this section and belongs to chapter 22 (sec_0563 and its children).",
+      "notes": "Sampled page p295 is outside the section range. verify_claims flags a small 77x46 px icon dropped on p295. It sits under sec_0564 \"Viewing Calculations\", not in sec_0562, so it is not a defect of this section. Its meaning is in the text (\"Select the Calculations SmartKey\"). Judged on p294 and the p295 boundary only.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0562. The blue rule on p295 is not kept as an image.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0562",
+      "page_sampled": 295,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0562 has no image and p294 shows no figure. The p295 icon is not in this section.",
+      "notes": "",
+      "confidence": 0.95
+    }
+  ]
+}

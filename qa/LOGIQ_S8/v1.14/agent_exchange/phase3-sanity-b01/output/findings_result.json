@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "logs/run.log: fitz found 138 bookmarks and 916 pages. bookmark_sanity ran with no hard failure and no repair. The run finished and validation is PASS. The log says 'table lines recovered: 47 in 30 tables'. The tree diff vs v1.13 shows the same 30 tables changed.",
+      "notes": "validation_report.json: Coverage PASS (0 orphaned blocks, 343 front-matter blocks), Precision PASS, Structure PASS (138 sections). The cap of 60 does not apply. Same counts as v1.13; images_v1.json is identical to v1.13.",
+      "confidence": 0.95
+    }
+  ]
+}
