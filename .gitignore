@@ -37,9 +37,12 @@ qa/*/exports/
 qa/*/v*/exports/
 
 # QA — rendered page images for agent/VLM batches (heavy, regenerable from the source PDF)
-qa/*/v*/agent_exchange/*/input/pages/
-qa/*/v*/agent_exchange/*/input/images/
-qa/*/v*/agent_exchange/*/input/extra_pages/
+# The whole batch input (tree slice, templates, instructions, renders) is regenerable from
+# tree.json and the batch; the drafts (output/, validated_draft.json) stay versioned.
+qa/*/v*/agent_exchange/*/input/
+
+# QA — page 7 safety copies before bulk approvals (git history already keeps every version)
+qa/*/v*/findings/backups/
 
 # QA — pipeline work dir of create_mitigation_version.py
 qa/_scratch/
