@@ -1,0 +1,1384 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'LUBRICATION' is a chapter-divider bookmark at level 3 under sec_0002 (level 2). Its children sec_0124 to sec_0129 are level 4. The levels fit.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0002 NEW CAR INFORMATION SECTION (level 2). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p255 the section owns exactly three nodes: heading 'LUBRICATION' (#/texts/3810), the tab 'LU (H6)' (#/texts/3811) and the contents table #/tables/56. It no longer ends with p256 running-header text. The next section starts on p256.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The last nodes are the table on p255 and no 'Lubrication'/'GENERAL' header from p256 is attached. page_end 262 covers the child sections.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/LUBRICATION' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap. sec_0122 ends on p254. This section starts on p255. Children sec_0124 (p256) to sec_0129 (p262) follow without holes. The contents table appears once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title 'LUBRICATION' matches an embedded bookmark and is seen as a heading on p255.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading 'LUBRICATION' is seen on physical p255, equal to page_start=255, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The contents table #/tables/56 has 6 rows: General 2, Engine Oil Flow 4, Oil Pump and Relief Valve 5, Oil Filter 6, Oil Pan and Oil Strainer 7, Oil Pressure Switch 8. This matches the list on p255. The table belongs to this chapter-divider page.",
+   "notes": "The header row has an empty first cell. This does not change any value.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p255 has no figure. I checked the render. Only the title, the black round index tab at the right edge and the contents list are there. The tab is decoration, so not dropping it is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0123, so no noise image is kept. The black tab on p255 is not extracted as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0123",
+   "page_sampled": 255,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image should belong to sec_0123. The only image on p262 (img_0178, oil pressure switch) is mapped to the child sec_0129, which owns that page. This is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '5. Oil Pan and Oil Strainer' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0123 LUBRICATION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0123 LUBRICATION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section is only p261. Nodes run from the running header 'OIL PAN AND OIL STRAINER' and heading '5. Oil Pan and Oil Strainer' to the folio 'LU-7' (#/texts/3956). It no longer ends with the p262 running header. sec_0129 starts on p262.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The last node is 'LU-7' on p261. The p262 header ('Lubrication', 'OIL PRESSURE SWITCH') is not here.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/5. Oil Pan and Oil Strainer' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap with sec_0127 (p260) and sec_0129 (p262). Each text on p261 appears once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '5. Oil Pan and Oil Strainer' matches an embedded bookmark and is seen as a heading on p261.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading '5. Oil Pan and Oil Strainer' is seen on physical p261, equal to page_start=261, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p261 has one large exploded drawing (upper oil pan, O-ring, strainer, lower oil pan). It is extracted as img_0177 (2619x3780). I opened it. The full drawing is there, not cut.",
+   "notes": "The callouts (1)-(5) are not in the raster. They are text nodes #/texts/3945 to #/texts/3949.",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0177 holds only the drawing. The folio 'LU-7', the code 'B2H3890A' and the legend are outside the crop.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0128",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0177 (p261) is mapped to sec_0128 and sits under '5. Oil Pan and Oil Strainer'. No other section is on p261.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Spark Plug' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0132 IGNITION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0132 IGNITION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section covers p267-268. p267 has the heading '2. Spark Plug', text, figure callouts and folio 'IG-3'. p268 is a blank page with only 'MEMO' and folio 'IG-4'. sec_0135 starts on p269. Nothing from a neighbour is absorbed.",
+   "notes": "p268 has no content, only the running header and the word MEMO. It follows the section and belongs to it.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/2. Spark Plug' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap. sec_0133 ends on p266 and sec_0135 starts on p269. The p268 blank page is covered once, by this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Spark Plug' matches an embedded bookmark and is seen as a heading on p267.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading '2. Spark Plug' is seen on physical p267, equal to page_start=267, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sampled p268 is blank. The section's only figure, the platinum spark plug drawing on p267, is now extracted as vector image img_0181 (549x203). I opened it. The full plug with the gap marks (1) and (2) is inside.",
+   "notes": "Old FAIL (BUG-010, v2): now fixed. The vector figure is now in images_v1.json and mapped to sec_0134.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0181 holds only the spark plug drawing and its marks (1) and (2). No folio, code or legend text is inside.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0134",
+   "page_sampled": 268,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0181 is on p267 and is mapped to sec_0134, under '2. Spark Plug'. Sampled p268 has no figure.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Select Lever' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0139 CONTROL SYSTEM (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0139 CONTROL SYSTEM (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section is only p275. Nodes run from the running header 'SELECT LEVER' and heading '2. Select Lever' to the folio 'CS-3' (#/texts/4122). It no longer ends with the p276 running header. sec_0142 starts on p276.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The p276 header ('Control System', 'DUAL RANGE SELECTOR LEVER') is not in this section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/2. Select Lever' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap with sec_0140 (p274) and sec_0142 (p276). The bullets and legend appear once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Select Lever' matches an embedded bookmark and is seen as a heading on p275.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading '2. Select Lever' is seen on physical p275, equal to page_start=275, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p275 has one drawing (select lever, gate, cable, View A). It is extracted as img_0185 (1969x1481). I opened it. It is complete with the P R N D 3 2 1 marks, callouts (1)-(7) and 'View A'.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0185 holds only the drawing. The folio 'CS-3', the code 'B3H1501A' and the legend are outside the crop.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0141",
+   "page_sampled": 275,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0185 (p275) is mapped to sec_0141, under '2. Select Lever'. No other section is on p275.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '1. General' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0143 AUTOMATIC TRANSMISSION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0143 AUTOMATIC TRANSMISSION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section covers p278-282 (AT-2 to AT-6). It starts at heading '1. General' on p278. It ends with folio 'AT-6' (#/texts/4262) on p282. It no longer ends with the p283 running header. sec_0145 starts on p283.",
+   "notes": "Old FAIL (BUG-022, v2): now fixed. The p283 header ('ELECTROHYDRAULIC CONTROL SYSTEM', 'Automatic Transmission') is now in sec_0145.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/1. General' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap. sec_0143 is the parent. This section ends on p282 and sec_0145 starts on p283. The p281 and p282 legend lines appear once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '1. General' matches an embedded bookmark and is seen as a heading on p278.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading '1. General' is seen on physical p278, equal to page_start=278, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p281 has the MPT cross-section drawing. It is extracted as img_0187 (2835x1575). p282 has the VTD cross-section as img_0188 (2835x1754). I opened both. Both are complete with callouts (1)-(32/33) and the [1]-[4] spans.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0187 and img_0188 hold only the drawings, callouts and span marks. The folios 'AT-5', 'AT-6', the codes and the legend tables are outside the crops.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0144",
+   "page_sampled": 281,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0187 (p281) and img_0188 (p282) are both mapped to sec_0144. The MPT figure is under '1. MPT MODELS' on p281 and the VTD figure under '2. VTD MODELS' on p282. No other section shares these pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Electrohydraulic Control System' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0143 AUTOMATIC TRANSMISSION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0143 AUTOMATIC TRANSMISSION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section covers p283-297 (AT-7 to AT-21). It starts at heading '2. Electrohydraulic Control System' on p283 and ends with folio 'AT-21' (#/texts/4506) on p297. sec_0144 ends on p282 and sec_0146 starts on p298. Sampled p288 has its own heading and folio inside this range.",
+   "notes": "The p283 running header now belongs to this section, which is correct.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/2. Electrohydraulic Control System' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap with sec_0144 (ends p282) or sec_0146 (starts p298). Pages p283 to p297 are all covered once. Sampled p288 content appears once.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Electrohydraulic Control System' matches an embedded bookmark and is seen as a heading on p283.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Heading '2. Electrohydraulic Control System' is seen on physical p283 (folio AT-7), equal to page_start=283. Sampled p288 shows folio AT-12, so the mapping holds.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/61 on p288 (2. VTD MODELS) has the header and all 22 rows, including the AWD multi-plate clutch (LSD) rows: Start control, Slip control, Base brake control, 1 range control. The text matches the render.",
+   "notes": "The table nodes are listed after the text nodes in semantic_order. The owner is right and nothing is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered p288 has no figure, only the table. I opened all 17 images of the section (img_0189 to img_0205). The p283 and p284 block diagrams are complete. The photos and valve-body drawings are complete.",
+   "notes": "Raster photos look white on black. Some callout numbers are only in text nodes.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Vector img_0189 (p283, 1018x1093) contains the page folio 'AT-7' under the diagram. The folio is not part of the figure. The other vector image img_0190 (p284) has no folio. The diagram itself is complete. All other images (img_0191 to img_0205) have no folio or body text.",
+   "notes": "Old FAIL (BUG-010, v2.9): still present. Probably the vector crop box reaches the footer text. Boilerplate kept inside an image. Graded once for the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 288,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 17 images of this section are on p283-284 and p290-297 and are mapped to sec_0145 (img_0189 to img_0205). No neighbour shares these pages. On p290 the two photos img_0191 (MPT) and img_0192 (VTD) sit under 'G: REAR VEHICLE SPEED SENSOR'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '6. Radiator Fan' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0116 COOLING (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0116 COOLING (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Its 20 nodes run from the running header 'RADIATOR FAN' and heading '6. Radiator Fan' on p253 to the folio 'CO-8' and table #/tables/55 on p254. Previous sec_0121 ends on p252 and next sec_0123 starts on p255, so nothing is absorbed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/6. Radiator Fan' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap. sec_0121 covers p252, this section covers p253-254, sec_0123 starts on p255. Each text on p253 and p254 appears once in the section.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '6. Radiator Fan' matches an embedded bookmark and is seen as a heading on p253.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading '6. Radiator Fan' is seen on physical p253, equal to page_start=253, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p254 the fan-operation table is table #/tables/55. All 12 data rows are present. But cells are merged. One cell reads 'Off Off Off Low-speed Low-speed Mid-speed Mid-speed'. The header 'Lower than 95 C' is lost and only '(203 F)' stays. The values cannot be tied to Main fan/Subfan or to a temperature column.",
+   "notes": "Probably BUG-008 (table cells merge during extraction). No row is lost, so it is Medium, not Critical. The same table text is nowhere else in the tree.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p253 (the section's only figure) the exploded drawing of the radiator, fans, shrouds and reservoir tank is extracted as img_0172 (2625x1607). I opened it. It is complete with callouts (1) to (14). No text or folio is inside. Nothing meaningful is missing on p254 (table only).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0172 holds only the drawing and its callout numbers. The folio 'CO-7', the code 'B2H3893A' and the legend text are outside the crop.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0122",
+   "page_sampled": 253,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0172 (p253) is mapped to sec_0122. It sits under the heading '6. Radiator Fan' and shows the parts of the legend (1)-(14). No other section shares p253.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '3. Oil Pump and Relief Valve' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0123 LUBRICATION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0123 LUBRICATION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section is only p259. Nodes run from the running header 'OIL PUMP AND RELIEF VALVE' and heading '3. Oil Pump and Relief Valve' to the folio 'LU-5'. sec_0125 ends on p258 and sec_0127 starts on p260. Nothing is absorbed from neighbours.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/3. Oil Pump and Relief Valve' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap with sec_0125 (p258) and sec_0127 (p260). The two bullets, the legend text and the callouts (1)-(8) each appear once.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '3. Oil Pump and Relief Valve' matches an embedded bookmark and is seen as a heading on p259.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading '3. Oil Pump and Relief Valve' is seen on physical p259, equal to page_start=259, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p259 has one exploded drawing of the oil pump. It is extracted as img_0175 (2530x1941). I opened it. All parts are complete (rotors, pump cover, relief valve, spring, plug, gasket, bolt).",
+   "notes": "The callout numbers are not inside this raster crop. They are separate text nodes #/texts/3918 to #/texts/3927. The legend names are also text. In the text, the names and the numbers are in different orders, so the pairing is not obvious, but nothing is lost.",
+   "confidence": 0.87
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0175 holds only the drawing. The code 'B2H3889A', the folio 'LU-5' and the legend are outside the crop.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0126",
+   "page_sampled": 259,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0175 (p259) is mapped to sec_0126 and sits under '3. Oil Pump and Relief Valve'. No other section is on p259.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Electrohydraulic Control System' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0143 AUTOMATIC TRANSMISSION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0143 AUTOMATIC TRANSMISSION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section covers p283-297 (AT-7 to AT-21). It starts at heading '2. Electrohydraulic Control System' on p283 and ends with folio 'AT-21' (#/texts/4506) on p297. sec_0144 ends on p282 and sec_0146 starts on p298. Sampled p287 has its own heading and folio inside this range.",
+   "notes": "The p283 running header now belongs to this section, which is correct.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/2. Electrohydraulic Control System' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap with sec_0144 (ends p282) or sec_0146 (starts p298). Pages p283 to p297 are all covered once. Sampled p287 content appears once.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Electrohydraulic Control System' matches an embedded bookmark and is seen as a heading on p283.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Heading '2. Electrohydraulic Control System' is seen on physical p283 (folio AT-7), equal to page_start=283. Sampled p287 shows folio AT-11, so the mapping holds.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/60 on p287 (D: CONTROL ITEMS, MPT) has the header and all 20 rows. The text matches the render, for example 'Hold control' with 'With HOLD switch ON, vehicle starts in 2nd gear' and the AWD transfer clutch rows. Columns are kept.",
+   "notes": "The table nodes (#/tables/58 to #/tables/63) are listed after the text nodes in semantic_order (4566-4571) instead of at their page position. The owner is right and nothing is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered p287 has no figure, only the control-items table. Across the section, drawing codes (B3H2271A, B3H2262A, B3H0915C, H3H1818C, ...) match the extracted images. I opened all 17 images, img_0189 to img_0205. None is missing or cut.",
+   "notes": "Raster photos look white on black. Some callout numbers are only in text nodes.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p287 has no image. The only noise image in the section is the folio 'AT-7' inside img_0189 (p283). It is graded once on the p288 row.",
+   "notes": "Not repeated here to avoid double counting.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 287,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 17 images of this section are on p283-284 and p290-297 and are mapped to sec_0145 (img_0189 to img_0205). No neighbour shares these pages. On p290 the two photos img_0191 (MPT) and img_0192 (VTD) sit under 'G: REAR VEHICLE SPEED SENSOR'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Electrohydraulic Control System' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0143 AUTOMATIC TRANSMISSION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0143 AUTOMATIC TRANSMISSION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section covers p283-297 (AT-7 to AT-21). It starts at heading '2. Electrohydraulic Control System' on p283 and ends with folio 'AT-21' (#/texts/4506) on p297. sec_0144 ends on p282 and sec_0146 starts on p298. Sampled p290 has its own heading and folio inside this range.",
+   "notes": "The p283 running header now belongs to this section, which is correct.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/2. Electrohydraulic Control System' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p293 the pin table 'Range position / Pin No.' is in the section twice. Text nodes #/texts/4445 to #/texts/4458 repeat the same rows as table #/tables/63 (P (4)-(3) (12)-(11), R (4)-(2) (10)-(9), and so on). All other pages are covered once. No gap or overlap with neighbours.",
+   "notes": "Same table read twice (as paragraphs and as a table). Cause not confirmed, probably the text layer and the table detector both keep it. Content stays in the right section, so it is Low. This is a section-level finding placed on the p290 row.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Electrohydraulic Control System' matches an embedded bookmark and is seen as a heading on p283.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Heading '2. Electrohydraulic Control System' is seen on physical p283 (folio AT-7), equal to page_start=283. Sampled p290 shows folio AT-14, so the mapping holds.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered p290 has no table. I checked the section tables on the render instead: p285 (#/tables/58, 20 signal rows), p286 (#/tables/59, 12 rows), p287, p288 and p293 (#/tables/63, 7 pin rows). Text and columns match the pages.",
+   "notes": "p289 (#/tables/62) was not rendered by me. Its text has three columns and one data row and looks complete.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered p290 has two photos (B3H0915C, H3H1818C). They are extracted as img_0191 and img_0192. I opened both. The drawings are complete.",
+   "notes": "Raster photos look white on black. In img_0192 the callout '(1)' is not inside the crop. It is the text node #/texts/4408. The same is true on p291 (img_0194, #/texts/4422) and p297 (img_0205, #/texts/4503). The drawings are complete and the text nodes keep the label.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0191 and img_0192 (p290) hold only the drawing. The folio 'AT-14' and the codes are outside the crop. The one noise case is the folio 'AT-7' in img_0189 (p283), graded once on the p288 row.",
+   "notes": "Not repeated here to avoid double counting.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 290,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 17 images of this section are on p283-284 and p290-297 and are mapped to sec_0145 (img_0189 to img_0205). No neighbour shares these pages. On p290 the two photos img_0191 (MPT) and img_0192 (VTD) sit under 'G: REAR VEHICLE SPEED SENSOR'.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading '2. Electrohydraulic Control System' is a level-4 bookmark entry. It has the right hierarchy_level=4 under its parent sec_0143 AUTOMATIC TRANSMISSION (level 3).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0143 AUTOMATIC TRANSMISSION (level 3). The section has no child sections, and the printed document shows no sub-topic bookmarks under it. The neighbour sections are siblings at the same level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section covers p283-297 (AT-7 to AT-21). It starts at heading '2. Electrohydraulic Control System' on p283 and ends with folio 'AT-21' (#/texts/4506) on p297. sec_0144 ends on p282 and sec_0146 starts on p298. Sampled p296 has its own heading and folio inside this range.",
+   "notes": "The p283 running header now belongs to this section, which is correct.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with '/2. Electrohydraulic Control System' and the ancestors are in the right order (manual, NEW CAR INFORMATION SECTION, chapter).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No gap or overlap with sec_0144 (ends p282) or sec_0146 (starts p298). Pages p283 to p297 are all covered once. Sampled p296 content appears once.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The rendered heading is on the expected page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The title '2. Electrohydraulic Control System' matches an embedded bookmark and is seen as a heading on p283.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios are chapter-prefixed arabic numbers (for example on this section's pages). numbering_scheme 'arabic' fits, and no roman or other scheme appears here.",
+   "notes": "The manual uses chapter folios like CO-7, LU-5, AT-12. This is the same for the whole manual and was accepted in earlier versions.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Heading '2. Electrohydraulic Control System' is seen on physical p283 (folio AT-7), equal to page_start=283. Sampled p296 shows folio AT-20, so the mapping holds.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered p296 has no table, only two drawings with text. The section tables on p285, p286, p287, p288 and p293 match their renders (see p290 row). Nothing on p296 should be a table.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered p296 has two valve-body drawings (B3H0994N, B3H0994O). They are extracted as img_0202 and img_0203. I opened both. They are complete, with callout (1) inside.",
+   "notes": "Raster photos look white on black.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0202 and img_0203 (p296) hold only the drawing and the callout (1). The folio 'AT-20' and the codes are outside the crop. The one noise case is the folio 'AT-7' in img_0189 (p283), graded once on the p288 row.",
+   "notes": "Not repeated here to avoid double counting.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0145",
+   "page_sampled": 296,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 17 images of this section are on p283-284 and p290-297 and are mapped to sec_0145 (img_0189 to img_0205). No neighbour shares these pages. On p290 the two photos img_0191 (MPT) and img_0192 (VTD) sit under 'G: REAR VEHICLE SPEED SENSOR'.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

@@ -1,0 +1,494 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading \"5.1 HemoSphere Advanced Monitor Screen Appearance\" on p62 is a numbered sub-heading under the chapter 5 title. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0058 is the chapter \"Navigating the HemoSphere Advanced Monitor\". It lists sec_0059 as a child. sec_0059 has no children, and none are visible on p62-63.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 5.1 heading is on p62 and the next heading, 5.2 Navigation Bar (sec_0060), starts on p64. page_start 62 and page_end 63 are right. Nodes #/texts/743-756 are the 5.1 text, Figure 5-1 caption and its labels. Only the running header and folio cross the boundary.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Navigating the HemoSphere Advanced Monitor/5.1 HemoSphere Advanced Monitor Screen Appearance matches the chapter title and the 5.1 heading on p62.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 62-63 are covered once. The chapter contents table on p62 stays in the parent. The Figure 5-1 labels on p63 (#/texts/748-755) are in sec_0059. No duplicate or gap found.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false. Score is 100 and the source is toc. No sign of risk on p62-63, so the false flag is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title 5.1 appears in the p62 contents table and as the heading on p62. The toc source is supported.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 62 and 63 are Arabic numbers. numbering_scheme arabic is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 62 is on physical page 62 and folio 63 is on page 63. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p63, vector composite img_0020 (727x611) shows the monitor screen with the Navigation Bar and Main Window labels and arrows. The whole screen capture is visible and readable. But the right edge is cut. The arrows to Parameter Globe, Information Bar and Status Bar end at the edge, and their label text \"Parameter Globe (section 5.3.1)\", \"Information Bar (section 5.5)\" and \"Status Bar (section 5.6)\" is missing. The old raster 900x700 is replaced by this image. The graphs and text on the screen are still readable.",
+   "notes": "The composite probably stops about 125 pt from the left of the page region and misses the callout labels that are more than 15 pt outside the vector region. The labels survive as text nodes #/texts/750-755, so only the figure loses them. Medium: short labels cut. Justification for Medium (verify_claims expects Critical): the tool matches rasters by pixel size, so raster 900x700 replaced by composite img_0020 looks dropped. The screen capture is visible inside img_0020, so only short labels are cut.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image for p62-63 is img_0020 on p63. It is the Figure 5-1 screen capture, not a logo, rule or duplicate. The Edwards logo and red footer line on p62 are not kept as images. It is not a text block.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0059",
+   "page_sampled": 62,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0020 is on p63 under Figure 5-1 of 5.1. It is mapped to sec_0059, the only section on p62-63. The mapping is right.",
+   "notes": "",
+   "confidence": 0.96
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"5.3.1.3 Status Indicators\" is a four-part number on p68, under 5.3.1. hierarchy_level 4 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0062 (5.3.1 Parameter Globes, p67-69) is the right parent for 5.3.1.3. sec_0065 has no children, and none are visible.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 5.3.1.3 heading is at the top of p68. On p69 the NOTE about HPI (#/texts/879-880) ends 5.3.1.3, and the 5.3.2 heading starts below it (sec_0066). page_start 68 and page_end 69 are right. Figure 5-6 on p69 belongs to sec_0066, not here.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Navigating the HemoSphere Advanced Monitor/5.3 Monitor Views/5.3.1 Parameter Globes/5.3.1.3 Status Indicators matches the numbering on p68.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 text from the heading to the Target Status Indicators paragraph is in sec_0065 once. p69 NOTE is here once. The Figure 5-5 labels (#/texts/853-869) are in sec_0065. No gap or duplicate.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100, source toc. Nothing risky seen on p68-69. The false flag is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 5.3.1.3 is visible on p68. The toc source is supported.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 68 and 69 are Arabic. numbering_scheme arabic is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 68 is on physical p68, and 69 is on p69. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p68, vector composite img_0036 (448x382) shows the parameter globe (2.3, L/min/m2, CI, green lantern, alarm bell). The globe is complete and readable. But the figure is cut on both sides. On the left the callout labels are cut: \"Continuous % Change Indicator\", \"Target Status Indicator\", \"Parameter Value\", \"Units\" and \"Parameter Name\" show only their last letters. On the right and bottom \"Audible alarm indicator\" is cut to \"indi\". The \"Additional Symbols\" legend (SVV heart, SQI bar, alarm paused icons) to the right is not in any image, and the 7% / 38% examples are not either. The old raster 140x124 is replaced by img_0036 and is much clearer now.",
+   "notes": "The composite probably covers only the area of the raster and the arrows, not the label text, so label words are cut. The same words are text nodes #/texts/853-869, and the symbols are described in the paragraphs below. Medium: short labels cut. Justification for Medium (verify_claims expects Critical): raster 140x124 was replaced by composite img_0036, so the tool sees it as dropped. The globe is visible inside img_0036, so only short labels are cut.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0036 is the Figure 5-5 parameter globe, which the text describes. It is not a logo, rule, duplicate or text block. No decorative image from p68-69 was kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 69,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0036 (p68) is under 5.3.1.3 and is mapped to sec_0065. img_0037 on p69 is Figure 5-6 under the 5.3.2 heading and is mapped to sec_0066. Both mappings are right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"5.7.2 Navigation Icons\" is a three-part number at the top of p88. hierarchy_level 3 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0093 (5.7 Monitor Screen Navigation, p87-89) is right. Previous sibling is 5.7.1 on p87. sec_0095 has no children.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 5.7.2 heading is at the top of p88. The Keyboard paragraph and figure on p89 are the last content. The next section, User Interface Settings (sec_0096), starts on p90. page_start 88 and page_end 89 are right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Navigating the HemoSphere Advanced Monitor/5.7 Monitor Screen Navigation/5.7.2 Navigation Icons matches p88.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Text nodes #/texts/1184-1213 cover p88 and p89 once, including the keypad and keyboard labels. No gap or duplicate seen.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100, source toc. Nothing risky on p88-89.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 5.7.2 is visible on p88. The toc source is supported.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 88 and 89 are Arabic. numbering_scheme arabic is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 89 is on physical p89, and 88 on p88. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Keypad composite img_0062 (p88, 373x373): the keypad keys are complete and readable, but the label text on the right (backspace, cancel, enter, decimal) is cut. Only the four arrows are left, ending at the right edge. A text line \"the keys on the keypad to enter numeric d\" is cut into the top. Keyboard composite img_0063 (p89, 637x424): the keys are complete and readable. But \"cancel\" on the left and \"enter\" on the right are missing, with only arrows left. \"cursor left\" and \"cursor right\" are cut at the bottom edge. The old rasters 490x677 and 511x335 are visible inside the composites. In round one the four round icons (Home, Return, Enter, Cancel) and the Value button picture on p88 were also missing, and are still not in images.json.",
+   "notes": "Probably the vector region does not include label text more than 15 pt away, so labels are cut. Their words are in text nodes #/texts/1199-1202 and #/texts/1206-1212. The dropped Home/Return/Enter/Cancel icons would be Low alone, because the text names each one. Justification for Medium (verify_claims expects Critical): the tool matches rasters by pixel size, so raster 490x677 (img_0062) and 511x335 (img_0063) replaced by composites look dropped. The keypad and keyboard are visible and readable inside the composites, so only short labels are cut.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0060 (417x73, List button) and img_0061 (325x60, Toggle button) on p88 are UI pictures named in the text. img_0062 and img_0063 are the keypad and keyboard. None is a logo or rule. img_0062 and img_0063 each have one stray cut text line at the top, but they are still real figures, not text blocks.",
+   "notes": "The stray text line is probably a side effect of the region crop. It is small and is not a noise image.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 89,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0060, img_0061 and img_0062 (p88) and img_0063 (p89) are under the 5.7.2 paragraphs Keypad, List, Toggle and Keyboard. All are mapped to sec_0095, the only section on p88-89. The mapping is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"10.1 Pressure Cable Overview\" is a two-part number on p134, under chapter 10. hierarchy_level 2 is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0161 is the chapter \"Monitoring with the HemoSphere Pressure Cable\". sec_0162 has no children, and none are visible.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 10.1 heading is on p134. The NOTE, WARNING and CAUTION boxes at the top of p136 (#/texts/2031-2042) end 10.1. The 10.2 heading comes after them on p136 and is in sec_0163. page_start 134 and page_end 136 are right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Monitoring with the HemoSphere Pressure Cable/10.1 Pressure Cable Overview matches the chapter title and heading on p134.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p134 text, p135 figure labels and table 10-1, and p136 warnings are each in sec_0162 once. The 10.2 text starts in sec_0163. No gap or duplicate seen.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, score 100, source toc. Nothing risky seen on p134-136.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 10.1 is on p134 and in its contents table. The toc source is supported.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios 134, 135 and 136 are Arabic. numbering_scheme arabic is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 134 is on physical p134 and 135 on p135. offset_applied 0 is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p135, Table 10-1 has six pressure cable configuration columns and 11 parameter rows with bullets. The extracted table (#/tables/66) puts the bullets in merged cells. For CO/CI it gives \"\u2022\u2022\u2022\" in one column. For CVP it gives \"\u2022\u2022 \u2022\" in the third column, but the page has bullets in columns 2, 3 and 5. For DIA and MAP it gives \"\u2022\u2022\u2022\u2022\" in the second column, but the page has them in columns 1 to 4. The header cells are also shifted. The values cannot be tied to their columns.",
+   "notes": "Probably Docling merges columns of this table with narrow bullet cells. The row names are right, but the column of each bullet is lost, so the meaning changes. Medium per the contract: cells merged or shifted so values can not be attributed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p135, vector figure img_0085 (901x445) shows the whole pressure cable drawing with callouts 1-4 and the legend box. All four edges are complete: left circle 1, top connector arrow 4, right legend border and bottom Figure edge are inside. It is readable and not shifted. Raster 697x445 is replaced by this vector figure. The legend text is inside the image. Table 10-1 is a table and is not an image.",
+   "notes": "Composite is complete. verify_claims may show raster 697x445 as dropped, but the drawing is fully visible inside img_0085.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0085 is Figure 10-1, the pressure cable with its legend. It is a real figure, not a table or text block, not a duplicate, and not a logo. The Edwards logo on p134 was not kept as an image.",
+   "notes": "",
+   "confidence": 0.94
+  },
+  {
+   "section_id": "sec_0162",
+   "page_sampled": 134,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0085 is on p135 under the 10.1 section and is mapped to sec_0162. The text of 10.1 on p134 refers to figure 10-1. The mapping is right.",
+   "notes": "",
+   "confidence": 0.96
+  }
+ ]
+}

@@ -1,0 +1,1254 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=1: '2002 LEGACY SERVICE MANUAL' is the top-left document title on p1, visually above 'NEW CAR INFORMATION SECTION'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Root section (no parent) whose single child is sec_0002 'NEW CAR INFORMATION SECTION', matching the outline where every chapter nests under that part heading.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Range p1-642 spans the whole document as the root; its only node is the title line on p1, and all body content belongs to descendants.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL' is the single-element root path.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Validation structure: 251 bookmarks = 251 sections, one root, no orphans or cycles; the root does not duplicate descendant content.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '2002 LEGACY SERVICE MANUAL' is found at page_start p1, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '2002 LEGACY SERVICE MANUAL' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p1 is the unnumbered cover/quick-reference page (no folio, only the code 'W2290GE'); numbering_scheme='arabic' applies to the numbered body and there is no roman front matter, so no transition is missed.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '2002 LEGACY SERVICE MANUAL' is rendered on physical p1, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p1 has no raster image XObjects; its visual elements are the black tab bars of the quick reference index, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p1; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0001",
+      "page_sampled": 1,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p1 contains no figure (the black tab bars of the quick reference index), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'NEW CAR INFORMATION SECTION' is printed on p1 directly under the level-1 manual title and above 'FOREWORD'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0001 is correct; children are the chapter tabs of the quick reference index (Specifications, two Fuel Injection variants with/without OBD, Emission Control, ...), matching the outline.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Range p1-642 as the part container; its own 18 nodes are the p1 heading, FOREWORD text and the quick reference index on p1-4, which belong to this part and not to any chapter.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION' matches its ancestry.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with siblings (it is the only child of the root); chapter content starts in sec_0003 at p5.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'NEW CAR INFORMATION SECTION' is found at page_start p1, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'NEW CAR INFORMATION SECTION' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p1 is unnumbered front matter (cover/quick reference index); the body uses chapter-prefixed arabic folios (e.g. 'SPC-4', 'FU-2'), consistent with 'arabic'.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'NEW CAR INFORMATION SECTION' is rendered on physical p1, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The quick reference index on p1 is extracted as a table whose text lists 'Specifications SPC', 'Fuel Injection (Fuel System) FU', 'FU (w/o OBD)', 'Emission Control ... EC', matching the rendered tab labels and codes.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p1 has no raster image XObjects; its visual elements are the black tab bars of the quick reference index, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p1; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0002",
+      "page_sampled": 1,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p1 contains no figure (the black tab bars of the quick reference index), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '1. Legacy' is a numbered subsection of the level-3 chapter 'SPECIFICATIONS', parallel to '2. OUTBACK'; p8 continues it under the running header 'LEGACY'.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0003 'SPECIFICATIONS' (p5-20) and sibling sec_0005 '2. OUTBACK' match the printed structure; no children.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Range p6-13 is correct and p8 (E: STEERING to I: CAPACITY) is fully owned, but the section's last nodes are p14's running header 'Specifications' and 'OUTBACK', which belong to the next section sec_0005 '2. OUTBACK'.",
+      "notes": "Running-header bleed into the preceding section; no body content lost.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SPECIFICATIONS/1. Legacy' is ordered and complete.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Contiguous with siblings: sec_0004 p6-13 and sec_0005 p14-20 with no overlapping page range and no duplicated table.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '1. Legacy' is found at page_start p6, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. Legacy' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p8 is 'SPC-4', a chapter-prefixed arabic page number, with no roman/arabic transition inside p6-13.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '1. Legacy' is rendered on physical p6, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The five tables on p8 are extracted with their values: 'Rack and Pinion', 'Turns, lock to lock 3.1', 'Macpherson strut type', 'Ventilated disc brake', tire sizes '185/70R14 195/60R15 205/50R16' and capacity rows, matching the rendering.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p8 has no raster image XObjects; its visual elements are bordered specification tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p8; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0004",
+      "page_sampled": 8,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p8 contains no figure (bordered specification tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '2. OUTBACK' on p14 has the same numbered style as '1. Legacy' under 'SPECIFICATIONS'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0003 'SPECIFICATIONS' is correct; no children; the next section is the new chapter 'FUEL INJECTION (FUEL SYSTEM)'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Starts correctly with its own heading '2. OUTBACK' on p14, but its trailing nodes are the invisible print-job slug of p21 ('W2290GE_02_FU.fm 1 ページ' and a Japanese timestamp), i.e. text from the next chapter's first page.",
+      "notes": "Root cause 2002-B: invisible print-job slug text ('W2290GE_xx_FU.fm N ページ' plus a Japanese timestamp) exists in the PDF text layer on every page, is not visible in the rendering, and is extracted as paragraph nodes (144 nodes document-wide).",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SPECIFICATIONS/2. OUTBACK' is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0004 (p6-13) or the next chapter (p21); no duplicated tables.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '2. OUTBACK' is found at page_start p14, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '2. OUTBACK' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p14 is 'SPC-10', a chapter-prefixed arabic page number, with no roman/arabic transition inside p14-20.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '2. OUTBACK' is rendered on physical p14, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p14 tables are extracted faithfully: 'Overall length mm (in) 4,720 (185.8)', 'Overall width 1,745 (68.7)', and the engine table with '2.5 L 3.0 L' and 'Horizontally opposed, liquid cooled' match the rendering.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p14 has no raster image XObjects; its visual elements are bordered specification tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p14; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0005",
+      "page_sampled": 14,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p14 contains no figure (bordered specification tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: the large 'FUEL INJECTION (FUEL SYSTEM) FU' chapter banner on p21 is a chapter under the level-2 part.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0002 is correct; children '1. General' to '6. On-board Diagnosis System' match the six entries of the chapter contents list on p21.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Own content on p21 (banner and contents list) is correct, but the section also holds the heading '1. General' from p22, which belongs to its child sec_0007, plus p22's running header and print slug.",
+      "notes": "Root cause 2002-A (6/251 sections, all in the FU chapters): when the first body element after a section heading is a bullet glyph that Docling labels as a section_header ('!'), the matcher anchors the section at that glyph and the real heading line stays with the preceding section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)' is correct; a second chapter with the same title (w/o OBD variant, p59-92) is a separate sibling.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Children cover p22-58 contiguously (22, 23-27, 28-38, 39-49, 50-57, 58) with no page overlap between siblings.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'FUEL INJECTION (FUEL SYSTEM)' is found at page_start p21, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'FUEL INJECTION (FUEL SYSTEM)' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p21 is an unnumbered chapter title page; the chapter body uses 'FU-n' folios (FU-2 on p22), consistent with the arabic scheme.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'FUEL INJECTION (FUEL SYSTEM)' is rendered on physical p21, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The p21 contents list is extracted with all six entries and page numbers ('1. General ... 2' as a paragraph, '2. Air Line ... 3' to '6. On-board Diagnosis System ... 38' as a table); the text is complete although split across two nodes.",
+      "notes": "Split of one visual list into paragraph + table is cosmetic.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p21 has no raster image XObjects; its visual elements are the chapter title, the 'FU' tab and the dotted-leader contents list, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p21; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0006",
+      "page_sampled": 21,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p21 contains no figure (the chapter title, the 'FU' tab and the dotted-leader contents list), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '1. General' on p22 uses the same numbered subsection style as '3. Fuel Line' under the chapter banner.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0006 'FUEL INJECTION (FUEL SYSTEM)' is correct after the repair; no children; next sibling '2. Air Line' starts on p23.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Range p22-22 is correct, but the heading '1. General' is not in this section (it was assigned to the parent sec_0006); the section starts at the bullet glyph '!'. It also ends with p23's print slug ('W2290GE_02_FU.fm 3 ページ' and a timestamp), which is invisible noise from the next page.",
+      "notes": "Root cause 2002-A (6/251 sections, all in the FU chapters): when the first body element after a section heading is a bullet glyph that Docling labels as a section_header ('!'), the matcher anchors the section at that glyph and the real heading line stays with the preceding section. Root cause 2002-B: invisible print-job slug text ('W2290GE_xx_FU.fm N ページ' plus a Japanese timestamp) exists in the PDF text layer on every page, is not visible in the rendering, and is extracted as paragraph nodes (144 nodes document-wide).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/.../FUEL INJECTION (FUEL SYSTEM)/1. General' matches the repaired ancestry.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No duplicate '1. General' section in this chapter and no overlap with '2. Air Line' (p23-27); the earlier broken p3 target no longer creates a gap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=True because this bookmark was relocated by the bookmark repair (its named destination pointed to p3); the heading '1. General' is visibly at the top of p22, so the relocated page is correct and the flag correctly marks a repaired entry for review.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. General' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p22 is 'FU-2', a chapter-prefixed arabic page number, with no roman/arabic transition inside p22-22.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0 after the repair relocated the bookmark from p3 to p22; the heading is rendered on physical p22 with folio FU-2, matching the chapter contents entry '1. General ... 2'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p22 has no raster image XObjects; its visual elements are only text and bullet points, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p22; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0007",
+      "page_sampled": 22,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p22 contains no figure (only text and bullet points), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '3. Fuel Line' on p28 is a numbered subsection above its own 'A: GENERAL' sub-heading.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0006 is correct; siblings '2. Air Line' (p23-27) and '4. Sensors and Switches' (p39-49) are ordered.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Range p28-38 is correct, but the heading '3. Fuel Line' and its first sub-heading 'A: GENERAL' on p28 are assigned to the previous section sec_0008 '2. Air Line'; this section starts at the '!' bullet. It also ends with p39's running header 'SENSORS AND SWITCHES' and print slug.",
+      "notes": "Root cause 2002-A (6/251 sections, all in the FU chapters): when the first body element after a section heading is a bullet glyph that Docling labels as a section_header ('!'), the matcher anchors the section at that glyph and the real heading line stays with the preceding section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/.../FUEL INJECTION (FUEL SYSTEM)/3. Fuel Line' is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Page ranges of sec_0008 (p23-27), sec_0009 (p28-38) and sec_0010 (p39-49) do not overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '3. Fuel Line' is found at page_start p28, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '3. Fuel Line' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p28 is 'FU-8', a chapter-prefixed arabic page number, with no roman/arabic transition inside p28-38.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '3. Fuel Line' is rendered on physical p28, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p28 has 1 raster figure(s) (the fuel system schematic B2H2907B) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p28 is the technical figure (the fuel system schematic B2H2907B), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0009",
+      "page_sampled": 28,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p28 (the fuel system schematic B2H2907B) sits in the body of '3. Fuel Line' and is mapped to sec_0009.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4 for '4. Sensors and Switches'; p41 shows its lettered sub-topic 'B: REAR OXYGEN SENSOR', one level below.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0006 is correct; lettered sub-topics (A:, B:, ...) are not bookmarks and are kept as content.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Starts with its own title '4. Sensors and Switches' on p39 and ends with p49 folio 'FU-29'; p41 content (rear oxygen sensor text and figure) is all owned by this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/.../FUEL INJECTION (FUEL SYSTEM)/4. Sensors and Switches' is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0009 (ends p38) or sec_0011 (starts p50).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '4. Sensors and Switches' is found at page_start p39, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '4. Sensors and Switches' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p41 is 'FU-21', a chapter-prefixed arabic page number, with no roman/arabic transition inside p39-49.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '4. Sensors and Switches' is rendered on physical p39, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p41 has 1 raster figure(s) (the rear oxygen sensor cutaway B2H3810C) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p41 is the technical figure (the rear oxygen sensor cutaway B2H3810C), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0010",
+      "page_sampled": 41,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p41 (the rear oxygen sensor cutaway B2H3810C) sits in the body of '4. Sensors and Switches' and is mapped to sec_0010.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4 for '5. Control System'; p54 shows its numbered sub-items '3. AIR-FUEL RATIO FEEDBACK FACTOR' and '4. LEARNING FEATURE' as content.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0006 is correct; next sibling '6. On-board Diagnosis System' (p58).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "p54 content is correctly owned, but the section also holds 6 nodes from p58: the next section's heading '6. On-board Diagnosis System', its first sub-heading 'A: GENERAL', the running header and the print slug. The following section sec_0012 therefore starts at the '!' bullet.",
+      "notes": "Root cause 2002-A (6/251 sections, all in the FU chapters): when the first body element after a section heading is a bullet glyph that Docling labels as a section_header ('!'), the matcher anchors the section at that glyph and the real heading line stays with the preceding section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/.../FUEL INJECTION (FUEL SYSTEM)/5. Control System' is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Page ranges p50-57 and p58 do not overlap; the issue is node ownership at the boundary (reported under page_start_end), not a structural gap.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '5. Control System' is found at page_start p50, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '5. Control System' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p54 is 'FU-34', a chapter-prefixed arabic page number, with no roman/arabic transition inside p50-57.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '5. Control System' is rendered on physical p50, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "There is no table on sampled p54 (the two-column lists are figure legends, correctly kept as text); the section's tables are on p51 and p57.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p54 has 1 raster figure(s) (the air-fuel feedback diagram B2H0989B) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p54 is the technical figure (the air-fuel feedback diagram B2H0989B), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0011",
+      "page_sampled": 54,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p54 (the air-fuel feedback diagram B2H0989B) sits in the body of '5. Control System' and is mapped to sec_0011.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '2. Air Line' on p61 is a numbered subsection above 'A: GENERAL'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0013 is the second 'FUEL INJECTION (FUEL SYSTEM)' chapter (w/o OBD, p59-92), which is correct for p61.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Starts correctly with '2. Air Line' on p61, but ends with the first sub-heading 'A: GENERAL' of the next section '3. Fuel Line' on p64, plus p64's running header and print slug.",
+      "notes": "Root cause 2002-A (6/251 sections, all in the FU chapters): when the first body element after a section heading is a bullet glyph that Docling labels as a section_header ('!'), the matcher anchors the section at that glyph and the real heading line stays with the preceding section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Path '/.../FUEL INJECTION (FUEL SYSTEM)/2. Air Line' is correct but indistinguishable from the first FU chapter's '2. Air Line' because both chapters have the same title.",
+      "notes": "Identical sibling chapter titles make paths ambiguous; consider adding the '(w/o OBD)' qualifier (not printed in the bookmark).",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No page overlap with sec_0014 (p60) or sec_0016 (p64-73).",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '2. Air Line' is found at page_start p61, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '2. Air Line' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; p61 carries folio 'FU-3' because this is the second Fuel Injection chapter (w/o OBD), whose chapter-prefixed arabic folios restart; no scheme change.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; the heading '2. Air Line' is rendered on physical p61, the bookmark's physical target.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p61 has 1 raster figure(s) (the pressure/temperature sensor drawing H2H2825B) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p61 is the technical figure (the pressure/temperature sensor drawing H2H2825B), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0015",
+      "page_sampled": 61,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p61 (the pressure/temperature sensor drawing H2H2825B) sits in the body of '2. Air Line' and is mapped to sec_0015.",
+      "notes": "",
+      "confidence": 0.85
+    }
+  ]
+}

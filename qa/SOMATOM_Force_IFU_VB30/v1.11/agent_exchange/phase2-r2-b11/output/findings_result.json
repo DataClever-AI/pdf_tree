@@ -1,0 +1,134 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p350 the heading '7.2.1 Activating the coupled mode' (#/texts/7570) is a third-level number under chapter 7 and 7.2 (CARE Contrast CT, sec_0709, level 2). Level 3 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0710 has parent sec_0709 (CARE Contrast CT). Its children sec_0711 (Start/Stop behavior, p351) and sec_0712 (Setting the coupled mode, p352) are real sub-headings on p351-p352. Links are consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The heading and body on p350 and the two tables and two paragraphs on p351 are correctly owned by sec_0710. Only boilerplate crosses the boundary: the p350 footers (#/texts/7574, #/texts/7575) and the p351 running header '7 Enhanced examination' (#/texts/7576). The page_end 353 comes from the children sec_0711 and sec_0712.",
+   "notes": "Only page furniture is in the node list, so retrieval of real content is not affected. The checker sees no boundary signal, but the header and footer nodes are real. Probably the same header and footer filter gap as other sections (see BUG-004).",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path '/Enhanced examination/CARE Contrast CT/Activating the coupled mode' matches chapter 7, section 7.2 and heading 7.2.1 on p350.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 7.2.1 appears once at p350 (#/texts/7570). Its intro, two notes, and both icon tables on p351 are present once. The sibling sections sec_0711 and sec_0714 start right after, with no gap or overlap.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title on p350 matches the heading '7.2.1 Activating the coupled mode', so there is nothing to correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' (embedded bookmark). The bookmark title and page match the visible heading 7.2.1 on p350, so no extra check is needed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed numbers are Arabic (7.2.1 on p350, page numbers 350, 351, 353). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio on p350 is 350, on p351 is 351 and on p353 is 353, equal to the physical pages. The offset is correct and the same as in neighbour sections.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p351 both icon tables (#/tables/32 and #/tables/33) lose the Icon column. Every Icon cell is empty. All Meaning rows are kept in order. Table 32 has 4 rows (coupling rejected, available, ready, local procedure active). Table 33 has 5 rows (the five scan range types). No row is lost and no value moved to another column. Same output as the v1.10 Low grade.",
+   "notes": "Severity kept Low (not Medium): the checker flags empty cells, but values are not shifted or merged and every Meaning row is in order, as the human reviewer approved in v1.10. Cause: BUG-008 (icon cells are images, so the cell text is empty). The icon meaning survives in the Meaning text, so impact is low. Also, in reading order, #/tables/32 comes after the two paragraphs (7628, 7629) although it is printed at the top of p351. Content is still in the right section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "No images are extracted (images.json is empty). Small icons were not extracted: the 'i' note icons on p350 and p351, and the status and scan range icons in the two p351 tables (#/tables/32, #/tables/33). The meaning of each status icon is written in the Meaning column.",
+   "notes": "Small icons not extracted are Low because their meaning is in the text. No diagram or screenshot is lost on p350 or p351. Checker says Critical, but it only sees empty icon cells; the icons are small and their meaning is in the text, so Low by the reviewer rule.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is extracted for sec_0710 (images.json is empty). So no logo, rule, or decorative 'i' icon on p350 or p351 is kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There are no extracted images to map. The p350 and p351 areas of sec_0710 show only note icons and the table icons, which belong to this section and are not assigned to any sibling.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}

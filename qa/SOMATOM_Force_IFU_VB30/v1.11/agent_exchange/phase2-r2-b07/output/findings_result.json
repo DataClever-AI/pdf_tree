@@ -1,0 +1,244 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0395 has hierarchy_level 3. Its parent sec_0384 'Dose optimization features' has level 2. On p195 the heading 5.1.7 is a sub-heading of chapter 5, the same level as 5.1.6 HandCARE and 5.1.8 Neuro BestContrast on p196.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0395 has parent_section_id sec_0384 and no children. sec_0384 lists sec_0395 in child_sections between sec_0394 (HandCARE) and sec_0396 (Neuro BestContrast). This matches the order 5.1.6, 5.1.7, 5.1.8 in the PDF.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p195 the 5.1.6 HandCARE text is in sec_0395, not in the section HandCARE. Nodes #/texts/4161 to #/texts/4167 (two intro paragraphs, the labels '10:00, 12:00, 2:00 o'clock', the page reference and the note about the slower frame rate) are in sec_0395. The real heading 5.1.7 starts only at #/texts/4168 (y=291). On p196 the section ends correctly before 5.1.8 Neuro BestContrast.",
+      "notes": "verify_claims shows UNSUPPORTED because its signals see no boundary problem. The p195 render and the node ids #/texts/4161 to 4167 show it clearly. Cause: heading not found as anchor (garbled heading text), probably. The 5.1.7 heading text is garbled ('() g'). Not BUG-023 and not BUG-029. Content is unchanged from v1.10, where the human reviewer approved Critical for this row and for 5.4-gaps_duplicates. Owner sec_0394 is not sampled, so the owner-side row is recorded on this section.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path is /Dose management and optimization/Dose optimization features/<title>. It matches the page header '5 Dose management and optimization' and the heading numbers 5.1.x. The title itself contains ' / ', so the path looks ambiguous, but the ancestry is correct.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The HandCARE text (5.1.6, owner sec_0394) is in sec_0395 on p195: #/texts/4161 to #/texts/4167. So sec_0394 lacks its body, and sec_0395 has text that is not its own.",
+      "notes": "Same case as the 5.4-page_start_end row. Grade kept as Critical, as the human reviewer approved in v1.10. Owner sec_0394 is not sampled, so the owner-side row is recorded on this section. Cause: heading not found as anchor (garbled heading text), probably. Not BUG-023 and not BUG-029. Known open item.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The sampled page p196 shows the SAFIRE / ADMIRE diagram and the labels, then the 5.1.8 heading. The flag value is right for a TOC section, but see the boundary FAIL on p195.",
+      "notes": "The unflagged state hides the p195 problem. This is not a flag error by itself.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Sinogram Affirmed Iterative Reconstruction (SAFIRE) / Advanced Modeled Iterative Reconstruction (ADMIRE)' is printed as heading 5.1.7 on p195. The embedded bookmark is supported by the page.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folios 195 (p195) and 196 (p196) are arabic numbers.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p195 is 195 and the printed folio on p196 is 196, the same as the physical pages. The neighbours sec_0394 and sec_0396 also have offset 0.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p195 the 'i' note icon (black square with 'i') next to 'The use of HandCARE results in a slower frame rate...' has no image output. The SAFIRE diagram on p196 (img_0197) is extracted whole. The diagram on p195 is extracted as img_0196. The note text is in the nodes.",
+      "notes": "Small decorative 'i' note icons with no image output are Low (decision 6i). The icon belongs to the HandCARE note, which is mis-assigned to sec_0395. No meaningful figure is lost.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only two images are mapped to sec_0395: img_0196 (p195, three circle diagrams) and img_0197 (p196, SAFIRE diagram). Both are meaningful figures. No logo, rule or footer divider was kept as an image.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0395",
+      "page_sampled": 196,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "img_0197 on p196 is the SAFIRE / ADMIRE diagram. It is complete and upright, and it is in the right section sec_0395. But img_0196 on p195 (three circles '(1) (2) (3)' for the 10:00, 12:00, 2:00 positions) belongs to 5.1.6 HandCARE (sec_0394). It sits under the HandCARE text and above the 5.1.7 heading, but it is mapped to sec_0395.",
+      "notes": "Image is in a sibling section on a page shared by two sections (Medium). Same root cause as the HandCARE text: heading not found as anchor (garbled heading text), probably. Not BUG-023 and not BUG-029.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0373 has hierarchy_level 4. On p183 the label 'Moving the table top vertically' is a margin sub-topic of 4.3.3 'Moving the patient table using the gantry operator panel' (level 3). Level 4 is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0372 (4.3.3, p183) lists sec_0373 as its first child, then sec_0374 'Moving the table top horizontally'. On p183 the list under 4.3.3 gives the same order. sec_0373 has no children.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0373 starts on p183 at the margin label 'Moving the table top vertically' (#/texts/3953) with its text and note. It ends on p184 with 'The new vertical table top position (in mm) is displayed.' (#/texts/3976, y=466). The next label 'Moving the table top horizontally' on p184 starts sec_0374. No content from a neighbour is absorbed.",
+      "notes": "The p183 footer nodes (#/texts/3963, 3964) and the p184 running header (#/texts/3965) are page boilerplate inside the text flow. Not a boundary defect.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path is /System operation/Operation of the patient table/Moving the patient table using the gantry operator panel/Moving the table top vertically. It matches the chapter '4 System operation' in the p184 header and heading 4.3.3 on p183.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All visible text of the topic is in sec_0373: the intro and the note on p183, and on p184 the 'Caution, leg injuries' heading, the caution text, the WARNING box and the Table up / Table down step. Nothing of it is in sec_0374, and sec_0374 text is not here. No duplicates.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading text 'Moving the table top vertically' is on p183 where the section starts, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The bookmark title matches the margin label on p183. No inferred structure is used.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folios 183 and 184 on the two pages are arabic numbers.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio on p184 is 184, the same as the physical page. The parent sec_0372 and the next section sec_0374 also have offset 0.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p184 the warning triangle icon next to the word WARNING (black triangle with '!') has no image output. On p183 the 'i' note icon next to 'Before you lower the patient table to a minimum height...' has no image output either. All figures of the topic are extracted: img_0181 (caution picture) and img_0178 (Table up/down keys). Their meaning is stated in the text.",
+      "notes": "Small icons without image output, including decorative 'i' and warning triangles, are Low (decision 6i).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The two images mapped to sec_0373 are img_0181 (caution picture, p184) and img_0178 (Table up / Table down key picture, p184). Both are meaningful. No logo, rule or footer divider was kept as an image.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0373",
+      "page_sampled": 184,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Both images are in the right section and complete. But img_0181 (the 'Caution, leg injuries' picture at the top of p184) is stored upside down. On the page the arrow points down and the table stub hangs down at the top right. In the PNG the arrow points up and the stub is at the bottom right. img_0178 (Table up above Table down) matches the page and is upright. Checked also img_0177, 0179 and 0180 (sec_0374): they are upright and in the right section.",
+      "notes": "Probably BUG-013 (image stored with a vertical flip). The image is in the right section and complete, so Medium. The verify_claims signal about a 294x235 image at y=640 is a false positive. The raster at y=640 is img_0180 (the Table in fast / Table out fast keys, below the label 'Moving the table top horizontally'). It belongs to sec_0374, not to sec_0373, and its mapping is correct. verify_claims matches images by pixel size only. img_0178 and img_0180 are both 294x235, so it picked img_0178 (sec_0373). img_0178 has the same size but sits higher on the page.",
+      "confidence": 0.88
+    }
+  ]
+}

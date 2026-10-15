@@ -1,0 +1,23 @@
+{
+  "model": "mlx-community/Kimi-VL-A3B-Thinking-4bit",
+  "max_tokens": 1800,
+  "eos_tokens": [
+    163594
+  ],
+  "load_seconds": 2.8489881249988684,
+  "max_rss_bytes": 10357473280,
+  "cases": [
+    {
+      "section_id": "sec_0004",
+      "kind": "known_defect",
+      "image_count": 1,
+      "elapsed_seconds": 27.044193916997756,
+      "prompt_tokens": 1638,
+      "generation_tokens": 526,
+      "generation_tps": 25.246233823566193,
+      "peak_memory_gb": 12.191471092,
+      "finish_reason": "stop",
+      "raw_output": "◁think▷Okay, let's go through each checklist item step by step.\n\nFirst, check 5.4-hierarchy_level. The section in question is 1.2.1, which is under 1.2 Indications For Use, which is under 1.2. So the hierarchy is correct. The hierarchy_level is 3, which matches the tree.json entry. So this check passes.\n\nNext, 5.4-page_start_end. The section starts at page 17 and ends at 17. The table node is on page 17, which is within the page range. The visible content here includes the table and the text around it. No other sections are mentioned in the visible content, so this check passes.\n\nFor 5.6-table_content, the table node has real content like \"Intended Purpose of this Manual...\" and \"Indications For Use\". The table is properly placed within the section and isn't a placeholder. So this check passes.\n\nNo gaps or duplicates are present in the visible content. All visible sections are accounted for in the tree.json. So all checks pass.◁/think▷{\n  \"section_id\": \"sec_0004\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"The section 1.2.1 is nested under 1.2 Indications For Use, which is under 1.2. The hierarchy_level is 3, matching the tree.json entry.\",\n      \"notes\": \"All levels are correctly nested as per the tree structure.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"The table node is on page 17, which matches the page range (17-17) in the tree.json. No visible content outside this range is present.\",\n      \"notes\": \"All visible content within the section is accounted for in the tree.json.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"The table contains meaningful text ('Intended Purpose of this Manual...') and is not a placeholder. It is placed within the correct page range.\",\n      \"notes\": \"The table has structured content and is not a placeholder.\"\n    }\n  ]\n}"
+    }
+  ]
+}

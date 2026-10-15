@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)",
+  "validated_at": "2026-10-08T04:36:52.273137+00:00",
+  "findings": [
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading 'Automated table zeroing at the RT Laser' on p301 is a sub-heading in the margin, same style as the sibling heading on p302. Level 4 under sec_0622 (level 3) is correct.",
+      "notes": "",
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0624 has parent sec_0622 (Radiotherapy functions). sec_0622 lists sec_0623, sec_0624 and sec_0625 as children. The three siblings are consecutive in the document. sec_0624 has no children, which is correct.",
+      "notes": "",
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p301 step 5 ('Press and hold the Move key... saved position at the RT Laser'), the line 'The marks on the patient...' and the 'Automatic table zeroing' note are in sec_0624 (#/texts/6513, 6514, 6515). They sit above the heading 'Automated table zeroing at the RT Laser' on p301. They finish the CT Laser procedure of sec_0623.",
+      "notes": "Probably BUG-029 (two-line margin heading; known open item). Same content as v1.10, where the human reviewer graded this Critical on both rows. Owner sec_0623 is not sampled, so the owner-side row is recorded here. verify_claims shows no boundary signal because the text nodes are on valid pages; the defect is semantic ownership, seen on the p301 render.",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is /Examination/Positioning the patient/Radiotherapy functions/Automated table zeroing at the RT Laser. It matches the chapter 6 nesting and the parent sec_0622.",
+      "notes": "",
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Content of sec_0623 is also placed here: #/texts/6513, 6514 and 6515 on p301 (step 5, result line and the 'Automatic table zeroing' note) are in sec_0624 but belong to the CT Laser procedure. The owner sec_0623 therefore lacks its final step.",
+      "notes": "Probably BUG-029 (two-line margin heading; known open item). Same content as v1.10, where the human reviewer graded this Critical on both rows. Owner sec_0623 is not sampled, so the owner-side row is recorded here. verify_claims shows no boundary signal because the text nodes are on valid pages; the defect is semantic ownership, seen on the p301 render.",
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title 'Automated table zeroing at the RT Laser' matches the margin heading on p301. The flag state is not a failure.",
+      "notes": "The wrong ownership is reported in the page_start_end and gaps_duplicates rows.",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc', not inferred. The title matches the printed margin heading on p301, so the bookmark provenance is supported.",
+      "notes": "",
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folios 301 and 302 are arabic and match the declared numbering_scheme 'arabic'. The running header '6 Examination' is also consistent.",
+      "notes": "",
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The printed folio 301 is on physical page 301 and 302 on 302, same as the neighbours sec_0623 and sec_0625.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Small icons are not extracted. On p301, the blue 'Save at RT Laser' icon next to step 1 and the black 'i' note icon are missing from images. On p302, the 'Move to RT Laser' icon next to step 3 is missing. The large screenshot (img_0303), the Move key buttons (img_0302, img_0305) and the keys picture (img_0304) are present.",
+      "notes": "Small icons only. Their meaning is fully written in the text ('Save at RT Laser icon', 'Move to RT Laser icon').",
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The extracted images img_0302, img_0303, img_0304 and img_0305 all show real content: Move key buttons, the patient table screenshot and the gantry keys. No logo, rule or footer divider was kept as an image.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0624",
+      "page_sampled": "302",
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "img_0302 (round Move key button) on p301 sits next to step 5, which belongs to the CT Laser procedure of sec_0623, but it is mapped to sec_0624. The other images are correct: img_0303 (p301 screenshot), img_0304 and img_0305 (p302 steps 2 and 4) belong to sec_0624. The p302 screenshot img_0306 is correctly in sec_0625.",
+      "notes": "Image follows the misplaced step 5. Probably BUG-029. Image on the wrong sibling, graded Medium.",
+      "confidence": 0.8,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead claude/opus checked)"
+    }
+  ]
+}

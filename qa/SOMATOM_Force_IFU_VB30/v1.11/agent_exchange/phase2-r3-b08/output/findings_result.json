@@ -1,0 +1,44 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0488",
+      "page_sampled": "234",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p234 two 'i' note icons are in this section: one beside 'It is recommended to keep CARE kV activated.' and one beside 'If CARE kV is activated, scanning is performed with a constant kV value'. images.json has no image for sec_0488. Both icons were dropped.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0489",
+      "page_sampled": "234",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p234 three 'i' note icons are in this section: beside 'For patients weighing more than 80 kg, select 120 kV', beside the 150 kV note, and beside 'adapt the Quality Ref. mAs'. images.json has no image for sec_0489, so all three were dropped.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0530",
+      "page_sampled": "255",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p254 an 'i' note icon is beside 'You can only import scan protocols that have been exported from an equivalent CT system'. images.json has no image for it. Only the step 2 button (img_0239) was extracted from p254.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0531",
+      "page_sampled": "255",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p255 two icons are not extracted for this section: the step 3 button beside '5 Click the step 3 button', and the 'i' note icon beside 'If the Scan Protocol Assistant detects incompatible protocols'. Only the step 2 button (img_0240) is in images.json for sec_0531.",
+      "notes": "Still Low because a meaningful icon is missing: the step 3 button icon. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.88
+    }
+  ]
+}

@@ -1,0 +1,2064 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p572 the footer reads 'Section 8-19' (folio 8 - 196). The title is a Section under Chapter 8. sec_0087 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0087 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-19-3 Removal Procedure stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p572-p574. It starts on p572 with #/texts/7231 and the section title, and the last node is on p574. The sampled p572 shows the title \"Section 8-19\" (#/texts/7233), headings 8-19-1 to 8-19-3 (#/texts/7234-7238) and table #/tables/222. All of it belongs to sec_0087. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-19 Replacement of CSI and Fan'. The p572 footer names Section 8-19 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0086 ends on p571 and sec_0087 starts on p572. sec_0087 ends on p574 and the next section starts on p575. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p572, the declared start page. The sampled p572 shows the title \"Section 8-19\" (#/texts/7233), headings 8-19-1 to 8-19-3 (#/texts/7234-7238) and table #/tables/222, so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-19' is a bookmark and is printed on p572, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p572 reads '8 - 196' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (572). The folio 8 - 196 on physical p572 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Table #/tables/222 on p572 has steps 1 to 3 with the printed Step and Illustration columns. The step texts match the render. The photo cells are empty as text, which is expected.",
+      "notes": "Same as v1.13. Seen now, unchanged since v1.13: the step 4 table on p573 is read as loose paragraphs #/texts/7242-7247. p573 is not sampled here.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The photos of steps 2 and 3 are kept as img_0702, img_0703 and img_0704. In the render each photo has yellow circles on the screws. The circles are not in the extracted images.",
+      "notes": "Same as v1.13. Probably the yellow marks are drawn over the photo and are not merged (BUG-010 rule). The text says \"Unscrew 4 screws\", so Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0702-img_0704 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0087",
+      "page_sampled": 572,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0702-img_0704 are on p572 and mapped to sec_0087. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p578 the footer reads 'Section 8-20' (folio 8 - 202). The title is a Section under Chapter 8. sec_0088 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0088 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-20-3 Instruction stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p575-p580. It starts on p575 with #/texts/7261 and the section title, and the last node is on p580. The sampled p578 shows the continued Table 8-41 with steps 6 and 7 (#/texts/7289-7298). All of it belongs to sec_0088. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-20 Replacement of Small Battery'. The p578 footer names Section 8-20 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0087 ends on p574 and sec_0088 starts on p575. sec_0088 ends on p580 and the next section starts on p581. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p575, the declared start page. The sampled p578 shows the continued Table 8-41 with steps 6 and 7 (#/texts/7289-7298), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-20' is a bookmark and is printed on p575, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p578 reads '8 - 202' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (575). The folio 8 - 202 on physical p578 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p578 Table 8-41 shows steps 6 and 7 with photos. No table node has page_no 578. The cells are loose paragraphs: \"6\" and its text (#/texts/7290-7292), \"7\" and its text (#/texts/7293-7295). The Step, Instruction and Illustration headers are loose too (#/texts/7296-7298).",
+      "notes": "Same as v1.13. The continued table is still flattened. Step numbers, text and order are kept, so Low. Probably Docling did not detect the table (BUG-008).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Step 6 has two photos with red circles on the screws. They are kept as img_0719 (one image), but the red circles are not in it. Step 7 photos img_0720 and img_0721 keep their circles.",
+      "notes": "Same as v1.13. Probably the red marks are not merged for step 6 (BUG-010 rule). The text keeps the step, so Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0719-img_0721 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 578,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0719-img_0721 are on p578 and mapped to sec_0088. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p585 the footer reads 'Section 8-23' (folio 8 - 209). The title is a Section under Chapter 8. sec_0091 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0091 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-23-4 Note on SOM Replacement stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p585-p595. It starts on p585 with #/texts/7372 and the section title, and the last node is on p595. The sampled p585 shows the title \"Section 8-23\" (#/texts/7374), headings 8-23-1 to 8-23-3 and Figure 8-117 (#/texts/7395). All of it belongs to sec_0091. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-23 Replacement of the SOM, HDD and DVR'. The p585 footer names Section 8-23 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0090 ends on p584 and sec_0091 starts on p585. sec_0091 ends on p595 and the next section starts on p596. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p585, the declared start page. The sampled p585 shows the title \"Section 8-23\" (#/texts/7374), headings 8-23-1 to 8-23-3 and Figure 8-117 (#/texts/7395), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-23' is a bookmark and is printed on p585, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p585 reads '8 - 209' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (585). The folio 8 - 209 on physical p585 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No table is drawn on p585. The page has the title, headings 8-23-1 to 8-23-3, step 1 and Figure 8-117.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Figure 8-117 on p585 is kept as vector crop img_0735 (903x709). The two board photos, the yellow circle, the dashed boxes and the colour call-outs are all inside it.",
+      "notes": "Same as v1.13. verify_claims says CONTRADICTED (Critical) because it sees two raster photos not listed in images_v1.json. Those two photos are inside the vector crop img_0735, which covers the whole figure. So I keep PASS.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0735 is the Figure 8-117 drawing. The call-out words are part of the drawing. No page text, header or footer is inside it.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 585,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0735 are on p585 and mapped to sec_0091. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p598 the footer reads 'Section 8-24' (folio 8 - 222). The title is a Section under Chapter 8. sec_0092 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0092 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-24-2-5 Removal Procedure stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The section is declared p596-p611. It ends on p611 with heading 8-24-5-5 Functional Check. It also holds three p612 nodes: #/texts/7667 \"GE Healthcare\", #/texts/7668 the running header and #/texts/7669 \"Section 8-25\". On p612 these are the page header and the first line of the next title. No body text is absorbed. The sampled p598 (Figure 8-134) is owned correctly.",
+      "notes": "Same as v1.13. Only boilerplate and the first title line cross the boundary. page_end stays 611. Probably the next title is split at the section edge (BUG-023). Low, as in the approved precedent.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-24 Replacement of Cables'. The p598 footer names Section 8-24 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0091 ends on p595 and sec_0092 starts on p596. sec_0092 ends on p611 and the next section starts on p612. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p596, the declared start page. The sampled p598 shows only Figure 8-134 and its caption (#/texts/7554), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-24' is a bookmark and is printed on p596, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p598 reads '8 - 222' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (596). The folio 8 - 222 on physical p598 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No table is drawn on p598. The page has only Figure 8-134 and its caption. No table node has page_no 598.",
+      "notes": "Same as v1.13. Seen now, unchanged since v1.13: the Contents table #/tables/233 on p596 keeps leader dots in its cells. This is Low noise and p596 is not sampled here.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Figure 8-134 on p598 shows the monitor arm with number circles 1 to 5. img_0768 has the photo but not the five number circles. The numbers are loose text nodes #/texts/7555-7559 without position.",
+      "notes": "Same as v1.13. Probably the overlay marks are not merged (BUG-010 rule). Low as in the approved precedent. The loss is the place of each number on the arm.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0768 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0092",
+      "page_sampled": 598,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0768 are on p598 and mapped to sec_0092. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p612 the footer reads 'Section 8-25' (folio 8 - 236). The title is a Section under Chapter 8. sec_0093 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0093 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-25-3 Removal Procedure - Probe Holder stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p612-p614. It starts on p612 with heading #/texts/7670 and ends with the p614 footer #/texts/7699. The p612 page header and the first title line \"Section 8-25\" are in sec_0092 (#/texts/7667-7669). The body and Table 8-49 on p612 belong to sec_0093.",
+      "notes": "Same as v1.13. The title split is graded once, on the sec_0092 row. No body text is lost here. Lower confidence because the title line is outside the section.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-25 Replacement of the Probe Holder (Kit), Cable Hook, and Extended probe holder'. The p612 footer names Section 8-25 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0092 ends on p611 and sec_0093 starts on p612. sec_0093 ends on p614 and the next section starts on p615. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p612, the declared start page. The sampled p612 shows heading #/texts/7670, 8-25-1 to 8-25-3 and Table 8-49 (#/tables/243), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-25' is a bookmark and is printed on p612, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p612 reads '8 - 236' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (612). The folio 8 - 236 on physical p612 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Table #/tables/243 on p612 has the header, step 1 and \"Simply pull out Probe Holder from its location.\" The cell Illustration holds \"Small Probe Cup Probe Holder\". This matches the render.",
+      "notes": "Same as v1.13. Seen now, unchanged since v1.13: the third label \"Probe Holder Removed\" is only a loose node (#/texts/7678). \"Probe Holder\" and \"Small Probe Cup\" are also loose nodes (#/texts/7679-7680), so they appear twice. Text is not lost, so PASS.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The step 1 photos are kept as img_0801 and img_0802. In the render the first photo has a white up arrow. It is not in img_0801. The labels are text in the table.",
+      "notes": "Same as v1.13. Probably the overlay arrow is not merged (BUG-010 rule). The text says to pull the probe holder out, so Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p613 the vector crop img_0807 (94x296) is a thin strip of white circles and a red arrow. The photos img_0803 to img_0806 have no marks. The strip repeats part of the photos and is not a figure of its own.",
+      "notes": "Same as v1.13. Probably the BUG-010 rule for marks drawn across overlapping photos. Accepted Low (decision 6c). Impact: one extra image.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0093",
+      "page_sampled": 612,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0801 and img_0802 are on p612 and mapped to sec_0093. The page is shared only with sec_0092 boilerplate, not with its images.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p618 the footer reads 'Section 8-27' (folio 8 - 242). The title is a Section under Chapter 8. sec_0095 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0095 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-27-3 DVD drive stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p617-p632. It starts on p617 with #/texts/7721 and the section title, and the last node is on p632. The sampled p618 shows Table 8-53 continued (#/tables/249), steps 2 to 4. All of it belongs to sec_0095. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-27 Replacement of DVD Drive, Printers and Drawer'. The p618 footer names Section 8-27 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0094 ends on p616 and sec_0095 starts on p617. sec_0095 ends on p632 and the next section starts on p633. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p617, the declared start page. The sampled p618 shows Table 8-53 continued (#/tables/249), steps 2 to 4, so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-27' is a bookmark and is printed on p617, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p618 reads '8 - 242' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (617). The folio 8 - 242 on physical p618 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "On p618 table 8-53 (#/tables/249), row 4 is split wrongly. One cell reads \"Remove the DVD cable connectors from the DVD\". The next cell reads \"drive as necessary.\" and sits in the Illustration column.",
+      "notes": "Same as v1.13. This table is unchanged. The step 4 instruction is cut in two and part of it is under the wrong column. Probably a Docling cell split (BUG-008). CHANGED-TABLE CHECK for sec_0095 (BUG-030): #/tables/248 p617, #/tables/251 p620, #/tables/256 p628 and #/tables/257 p632 each have a new first row with \"LOGIQ S8: Remove top cover\" in the Illustration column. #/tables/253 p624 has new rows \"UP-D897\" (before step 2) and \"UP-D898\" (between steps 2 and 3). I checked each page render: the text is printed in that table, at the top of the cell, once only. It is not repeated in another node and the column is right. All five are FIXED vs v1.13. Small point: the new row has no step number.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Steps 2, 3 and 4 have photos kept as img_0816 to img_0819. In the render they have yellow circles and arrows. The circles on img_0816 and img_0817 and the arrow on img_0818 are missing. img_0819 keeps a thin arrow, not the two thick arrows of the page.",
+      "notes": "Same as v1.13. Probably overlay marks are not merged (BUG-010 rule). The text keeps the step, so Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0816-img_0819 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 618,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0816-img_0819 are on p618 and mapped to sec_0095. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p639 the footer reads 'Section 8-29' (folio 8 - 263). The title is a Section under Chapter 8. sec_0097 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0097 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-29-3 LOGIQ S8 Removal Procedure stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p639-p656. It starts on p639 with #/texts/7911 and the section title, and the last node is on p656. The sampled p639 shows the title \"Section 8-29\" (#/texts/7911), headings 8-29-1 to 8-29-3 and table #/tables/262. All of it belongs to sec_0097. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-29 On-Board UVC'. The p639 footer names Section 8-29 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0096 ends on p638 and sec_0097 starts on p639. sec_0097 ends on p656 and the next section starts on p657. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p639, the declared start page. The sampled p639 shows the title \"Section 8-29\" (#/texts/7911), headings 8-29-1 to 8-29-3 and table #/tables/262, so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-29' is a bookmark and is printed on p639, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p639 reads '8 - 263' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (639). The folio 8 - 263 on physical p639 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Table #/tables/262 on p639 has step 1 and \"Remove HDMI CABLE from console.\" It matches the render.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "The p639 step 1 photo is kept as img_0863. The render shows a white circle and a white arrow on the HDMI port. They are not in img_0863.",
+      "notes": "Same as v1.13. Probably the BUG-010 rule does not catch these marks. The text says what to remove, so Low. Seen again: the p642 step 9 photo img_0870 also has no marks (accepted Low, decision 6c).",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0863 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0097",
+      "page_sampled": 639,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0863 are on p639 and mapped to sec_0097. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p659 the footer reads 'Section 8-31' (folio 8 - 283). The title is a Section under Chapter 8. sec_0099 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0099 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-31-3 Removal Procedure stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p659-p663. It starts on p659 with #/texts/8137 and the section title, and the last node is on p663. The sampled p659 shows the 8-31 heading (#/texts/8137), headings 8-31-1 to 8-31-3 and the step table (steps 1 and 2, read as loose nodes #/texts/8143-8148). All of it belongs to sec_0099. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-31 Replacement of the 19” and 23” Monitor Arm'. The p659 footer names Section 8-31 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Headings 8-31-1 to 8-31-5 are each present once, in order, from p659 to p663. No missing or repeated block is seen on p659.",
+      "notes": "Same as v1.13. Seen now, unchanged since v1.13: the step table of p659-p662 is read as loose nodes, and a lone label \"WARNING WARNING\" (#/texts/8180) sits at the end of p663. p663 is not sampled and this template has no table row for sec_0099.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 96.4. The title is on p659, the declared start page. The sampled p659 shows the 8-31 heading (#/texts/8137), headings 8-31-1 to 8-31-3 and the step table (steps 1 and 2, read as loose nodes #/texts/8143-8148), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-31' is a bookmark and is printed on p659, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p659 reads '8 - 283' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (659). The folio 8 - 283 on physical p659 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "p659 has two step photos, kept as img_0917 (456x475) and img_0918 (960x540). In the render, the step 2 photo has a yellow circle around the screw. The circle is not in img_0918.",
+      "notes": "Same as v1.13 (annotation mark missing, photo kept, rule P2). The step 2 text says \"Loosen 1 screw\", so Low. Probably the marks are drawn paths that are not merged into the photo (BUG-010). verify_claims says Critical, but both photos are kept. Only the circle is missing.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0917 and img_0918 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0099",
+      "page_sampled": 659,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0917 and img_0918 are on p659 and mapped to sec_0099. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p665 the footer reads 'Section 8-32' (folio 8 - 289). The title is a Section under Chapter 8. sec_0100 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0100 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-32-3 Removal Procedure stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p664-p666. It starts on p664 with #/texts/8184 and the section title, and the last node is on p666. The sampled p665 shows the continued step table (steps 4 to 7), table #/tables/271. All of it belongs to sec_0100. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-32 Replacement of the 22” Monitor Arm'. The p665 footer names Section 8-32 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0099 ends on p663 and sec_0100 starts on p664. sec_0100 ends on p666 and the next section starts on p667. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 97.9. The title is on p664, the declared start page. The sampled p665 shows the continued step table (steps 4 to 7), table #/tables/271, so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-32' is a bookmark and is printed on p664, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p665 reads '8 - 289' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (664). The folio 8 - 289 on physical p665 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p665 table #/tables/271 has steps 4 to 7 in order. The step text matches the render (\"Loosen 2 screws, then remove the 2nd arm cover.\" to \"Loosen 1 screw and remove cable guide bracket.\"). The graphic cells are empty because the pictures are images.",
+      "notes": "Same as v1.13. The printed header has only Step and Illustration, and the table has the same two header words.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p665 has 8 photos. They are kept as img_0932 to img_0935 (some are joined crops). The red circles of step 4, the yellow circles of steps 5 and 7 are inside the images. The step 6 photos have no marks in the PDF.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0932-img_0935 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0100",
+      "page_sampled": 665,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0932-img_0935 are on p665 and mapped to sec_0100. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p672 the footer reads 'Section 8-34' (folio 8 - 296). The title is a Section under Chapter 8. sec_0102 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0102 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-34-3 Removal Procedure stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p671-p672. It starts on p671 with #/texts/8234 and the section title, and the last node is on p672. The sampled p672 shows only headings 8-34-4 (#/texts/8248) and 8-34-5 (#/texts/8250) with one short line each. All of it belongs to sec_0102. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-34 Replacement of SW DVD/USB flash drive set'. The p672 footer names Section 8-34 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0101 ends on p670 and sec_0102 starts on p671. sec_0102 ends on p672 and the next section starts on p673. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p671, the declared start page. The sampled p672 shows only headings 8-34-4 (#/texts/8248) and 8-34-5 (#/texts/8250) with one short line each, so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-34' is a bookmark and is printed on p671, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p672 reads '8 - 296' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (671). The folio 8 - 296 on physical p672 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No picture is drawn on p672. It has only two headings and two short lines. Nothing was dropped. On p671 the two pocket photos are kept as img_0944 and img_0945.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to p672, so no icon, rule or text crop was kept as an image on this page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0102",
+      "page_sampled": 672,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to p672 and none is expected. On p671, img_0944 and img_0945 are mapped to sec_0102, the only section on that page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p679 the footer reads 'Section 8-35' (folio 8 - 303). The title is a Section under Chapter 8. sec_0103 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0103 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-35-3 For R1 - R3 System stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p673-p684. It starts on p673 with #/texts/8255 and the section title, and the last node is on p684. The sampled p679 shows heading 8-35-5-2 Static IP Setting (#/texts/8317), a note and Table 8-66 (#/tables/277). All of it belongs to sec_0103. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-35 Replacement of Wireless LAN Option'. The p679 footer names Section 8-35 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0102 ends on p672 and sec_0103 starts on p673. sec_0103 ends on p684 and the next section starts on p685. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p673, the declared start page. The sampled p679 shows heading 8-35-5-2 Static IP Setting (#/texts/8317), a note and Table 8-66 (#/tables/277), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-35' is a bookmark and is printed on p673, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p679 reads '8 - 303' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (673). The folio 8 - 303 on physical p679 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p679 table #/tables/277 (Table 8-66) has steps 1 to 7 in order. Step text, bold words and step numbers match the render. The graphic cells are empty because the screenshots are images.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "p679 has 4 screenshots (steps 2 to 5), kept as img_0960 to img_0963. In the render, the step 5 TCP/IP window has a red box around \"Enable DHCP\". The red box is not in img_0963.",
+      "notes": "Same as v1.13 (annotation mark missing, screenshot kept, rule P2). The step 5 text says \"UNCHECK Enable DHCP\", so Low. Probably the box is a drawn path that is not merged into the screenshot (BUG-010). verify_claims says Critical, but all four screenshots are kept. Only the red box is missing.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0960-img_0963 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 679,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0960-img_0963 are on p679 and mapped to sec_0103. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p576 the footer reads 'Section 8-20' (folio 8 - 200). The title is a Section under Chapter 8. sec_0088 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0088 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-20-3 Instruction stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p575-p580. It starts on p575 with #/texts/7261 and the section title, and the last node is on p580. The sampled p576 shows heading 8-20-3 Instruction (#/texts/7274) and Table 8-41 (#/tables/223). All of it belongs to sec_0088. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-20 Replacement of Small Battery'. The p576 footer names Section 8-20 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0087 ends on p574 and sec_0088 starts on p575. sec_0088 ends on p580 and the next section starts on p581. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p575, the declared start page. The sampled p576 shows heading 8-20-3 Instruction (#/texts/7274) and Table 8-41 (#/tables/223), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-20' is a bookmark and is printed on p575, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p576 reads '8 - 200' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (575). The folio 8 - 200 on physical p576 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Table #/tables/223 on p576 has the header Step, Instruction, Illustration and steps 1 to 3. The texts match the render (\"Loosen 5 screws and remove the Rear Cover.\" and the other two).",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Step 1 has a rear-view drawing with red arrows. Step 3 has a photo with two blue circles and one white circle. They are kept as img_0713 and img_0715, but the arrows and circles are not in them. Step 2 photo img_0714 keeps its yellow circles.",
+      "notes": "Same as v1.13. Probably the marks are not merged (BUG-010 rule). The text gives the screw count and the part names, so Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0713-img_0715 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0088",
+      "page_sampled": 576,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0713-img_0715 are on p576 and mapped to sec_0088. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p588 the footer reads 'Section 8-23' (folio 8 - 212). The title is a Section under Chapter 8. sec_0091 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0091 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-23-4 Note on SOM Replacement stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p585-p595. It starts on p585 with #/texts/7372 and the section title, and the last node is on p595. The sampled p588 shows heading 8-23-4 Note on SOM Replacement (#/texts/7422), 8-23-4-1, 8-23-4-2 and Table 8-42 (#/tables/229). All of it belongs to sec_0091. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-23 Replacement of the SOM, HDD and DVR'. The p588 footer names Section 8-23 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0090 ends on p584 and sec_0091 starts on p585. sec_0091 ends on p595 and the next section starts on p596. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p585, the declared start page. The sampled p588 shows heading 8-23-4 Note on SOM Replacement (#/texts/7422), 8-23-4-1, 8-23-4-2 and Table 8-42 (#/tables/229), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-23' is a bookmark and is printed on p585, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p588 reads '8 - 212' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (585). The folio 8 - 212 on physical p588 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Table 8-42 on p588 (#/tables/229) has the header TAB and top menu, then \"Main\" with \"System Time\" and a blank cell with \"System Date\". This matches the render.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No picture or icon is drawn on p588. It has only text and Table 8-42. Nothing was dropped.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to p588, so no icon, rule or text crop was kept as an image on this page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0091",
+      "page_sampled": 588,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to p588 and none is expected.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p627 the footer reads 'Section 8-27' (folio 8 - 251). The title is a Section under Chapter 8. sec_0095 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0095 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-27-3 DVD drive stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p617-p632. It starts on p617 with #/texts/7721 and the section title, and the last node is on p632. The sampled p627 shows headings 8-27-6-2 (#/texts/7804) and 8-27-6-3 (#/texts/7806) with short text. All of it belongs to sec_0095. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-27 Replacement of DVD Drive, Printers and Drawer'. The p627 footer names Section 8-27 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0094 ends on p616 and sec_0095 starts on p617. sec_0095 ends on p632 and the next section starts on p633. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p617, the declared start page. The sampled p627 shows headings 8-27-6-2 (#/texts/7804) and 8-27-6-3 (#/texts/7806) with short text, so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-27' is a bookmark and is printed on p617, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p627 reads '8 - 251' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (617). The folio 8 - 251 on physical p627 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No table is drawn on p627. It has only headings 8-27-6-2 and 8-27-6-3 and short text. Table 8-56 ended on p626.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No picture is drawn on p627. It has only headings 8-27-6-2 and 8-27-6-3 and short text. Nothing was dropped.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to p627, so no icon, rule or text crop was kept as an image on this page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 627,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to p627 and none is expected.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p629 the footer reads 'Section 8-27' (folio 8 - 253). The title is a Section under Chapter 8. sec_0095 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0095 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-27-3 DVD drive stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p617-p632. It starts on p617 with #/texts/7721 and the section title, and the last node is on p632. The sampled p629 shows Table 8-57 continued, steps 2 and 3 (#/texts/7819-7824). All of it belongs to sec_0095. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-27 Replacement of DVD Drive, Printers and Drawer'. The p629 footer names Section 8-27 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0094 ends on p616 and sec_0095 starts on p617. sec_0095 ends on p632 and the next section starts on p633. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p617, the declared start page. The sampled p629 shows Table 8-57 continued, steps 2 and 3 (#/texts/7819-7824), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-27' is a bookmark and is printed on p617, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p629 reads '8 - 253' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (617). The folio 8 - 253 on physical p629 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Table 8-57 on p629 is not a table node. Its cells are loose paragraphs #/texts/7820-7824. The step numbers \"2.\" and \"3.\" are missing. Step, Instruction and Illustration come after the step text.",
+      "notes": "Same as v1.13. Step text and order are kept, only the grid and step numbers are not kept. Probably a Docling table miss (BUG-008). verify_claims says Medium because step numbers are missing. I keep Low: text and order are kept, and v1.12 and v1.13 approved Low for this table.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Table 8-57 on p629 has two photos with yellow circles and an arrow. They are all inside the vector crop img_0842. Nothing visible is dropped.",
+      "notes": "Same as v1.13. verify_claims says CONTRADICTED (Critical) because it sees raster photos not listed in images_v1.json. The photos are inside the vector crop img_0842 (1092x1051), which covers the whole table. So I keep PASS. The crop also holds the table text, which is graded in the passing_noise row.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "img_0842 (1092x1051, vector) is the whole Table 8-57. It has the header row, the step numbers and the step text, not only the photos. This is page text inside a crop.",
+      "notes": "Same as v1.13. Probably a table with photos was treated as a vector figure (BUG-010 rule). The text is also in the tree. Impact: duplicate content.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0095",
+      "page_sampled": 629,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0842 are on p629 and mapped to sec_0095. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p677 the footer reads 'Section 8-35' (folio 8 - 301). The title is a Section under Chapter 8. sec_0103 has hierarchy_level 2 and parent sec_0068 (Chapter 8, level 1). This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0103 has parent_section_id sec_0068 (Chapter 8) and is listed in its child_sections. It has no children. The PDF has no deeper bookmarks, so sub-headings like 8-35-3 For R1 - R3 System stay inside the section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The section is declared p673-p684. It starts on p673 with #/texts/8255 and the section title, and the last node is on p684. The sampled p677 shows steps 5 to 8 and Figures 8-151 to 8-153 (#/texts/8296-8302). All of it belongs to sec_0103. No node of a neighbour is on the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is '/Chapter 8/Section 8-35 Replacement of Wireless LAN Option'. The p677 footer names Section 8-35 and the manual is Chapter 8. The order Chapter then Section is correct.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The previous section sec_0102 ends on p672 and sec_0103 starts on p673. sec_0103 ends on p684 and the next section starts on p685. No page gap and no repeated node.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The title is on p673, the declared start page. The sampled p677 shows steps 5 to 8 and Figures 8-151 to 8-153 (#/texts/8296-8302), so the section looks right and no flag is needed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Section 8-35' is a bookmark and is printed on p673, the declared start. The TOC source is supported.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The folio on p677 reads '8 - 301' (chapter-page style, Arabic digits). numbering_scheme is 'arabic'. This matches.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The bookmark page and the physical page are the same (673). The folio 8 - 301 on physical p677 is only a chapter-page print number, not a shift. This is consistent with neighbours.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "There is no table on p677, so there is nothing to compare on this page. The tables of this section are #/tables/276 (p673), #/tables/277 (p679) and #/tables/278 (p681).",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The three figures of p677 are kept as img_0956, img_0957 and img_0958. The red arrow of Figure 8-151 and the yellow circles of Figure 8-152 are inside the images.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0956-img_0958 are plain photos or screenshots. No table text, header or footer is inside them.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0103",
+      "page_sampled": 677,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0956-img_0958 are on p677 and mapped to sec_0103. No sibling shares the page.",
+      "notes": "Same as v1.13.",
+      "confidence": 0.93
+    }
+  ]
+}

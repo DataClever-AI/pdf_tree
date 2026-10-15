@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)",
+  "validated_at": "2026-10-08T08:04:20.514346+00:00",
+  "findings": [
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p14 the heading '2. OUTBACK' (#/texts/74) is the second Specifications entry, next to '1. Legacy' (sec_0004). Level 4 under sec_0003 (level 3) fits.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0005 has parent sec_0003, and sec_0003 lists sec_0004 and sec_0005 as children. sec_0005 has no children. p14 to p20 show only lettered topics A to J, not child sections.",
+      "notes": "",
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p14 opens with '2. OUTBACK' (#/texts/74). The last page, p20, has only 'MEMO' (#/texts/119) on a blank page. All nodes on p14 to p20 belong to this section. No node of sec_0004 or sec_0006 is absorbed.",
+      "notes": "Only running headers and SPC folios cross pages, as on every page.",
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SPECIFICATIONS/2. OUTBACK. It matches the parent chain and the page header 'Specifications' on p14.",
+      "notes": "",
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0005 covers p14 to p20 once. sec_0004 ends on p13 and sec_0006 starts on p21. No gap or overlap. Table nodes #/tables/18 to #/tables/30 each sit once on their own page.",
+      "notes": "",
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false, with verification_score 100. The title '2. OUTBACK' is visible at the top of p14, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc', not inferred. The heading '2. OUTBACK' on p14 agrees with the TOC entry.",
+      "notes": "",
+      "confidence": 0.95,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folios SPC-10 on p14 to SPC-16 on p20 form one consecutive run. The scheme 'arabic' is a fair label for the physical pages.",
+      "notes": "The SPC- prefix is not modelled, but it does not break retrieval.",
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The physical page equals the PDF page on all renders p14 to p20. Folios run SPC-10 to SPC-16 without a jump. The offset is the same as sec_0004.",
+      "notes": "",
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "p14 #/tables/18, #/tables/19, p15 #/tables/20, p16 #/tables/22 to #/tables/26 and p19 #/tables/29, #/tables/30 match their renders. #/tables/21 (p15) has merged cells, for example 'Transmission type 5MT 4AT 4AT' in one cell. On p17 #/tables/27 the EC grid (second grid) has two defects. 'Air conditioner' is now recovered in a new row between 'Option Side airbag' and 'Cruise control', at the right height. But it is in the 3rd column while the other option labels are in the 2nd. The label 'Audio' of the EC grid and the row label '4WD' are still missing. The dash rows are shifted by one row. The circle marks (vector drawings) are in no cell in the whole table. #/tables/28 (p18) has the same dash shift.",
+      "notes": "Old FAIL (BUG-008, v2.9): still present. v2.11 graded it Low from text only, before p15 to p18 were rendered. Now p17 shows more. BUG-030 is partly fixed: 'Air conditioner' came back in the wrong column (Medium). 'Audio' (5 letters) is under the 6-character threshold, so it is still lost (BUG-030, not new). Dash shifts are BUG-008. Impact: the Audio row of the EC grid cannot be identified, and circles (which options are fitted) are lost, so option values lose their column. I chose Medium; a reviewer could argue for Critical for the lost 'Audio' label.",
+      "confidence": 0.72,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json is empty for sec_0005. p14 to p20 show no figure, photo or diagram. They show only tables, headings and text. The circle marks in the p17 and p18 option rows are table symbols, not figures.",
+      "notes": "The circle marks are lost as table content, graded under 5.6-table_content. The black bullet before 'LHD Vehicle' on p17 and 'RHD Vehicle' on p18 is decorative.",
+      "confidence": 0.82,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "images.json lists no image for sec_0005, so no logo, rule or icon was kept. The header rule and the black bullets on p14, p17 and p18 are not in the image output.",
+      "notes": "",
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    },
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "sec_0005",
+      "page_sampled": "14",
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0005, and p14 to p20 have no figure to map. The check for absence is done on all seven rendered pages.",
+      "notes": "",
+      "confidence": 0.92,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer; lead check claude/opus)"
+    }
+  ]
+}

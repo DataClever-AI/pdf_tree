@@ -1,0 +1,744 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 22 the large bold heading \"1. General\" (node #/texts/127) sits under the running header \"Fuel Injection (Fuel System)\" and above bullet text; it is a numbered chapter-subsection, consistent with level 4 (root / NEW CAR INFORMATION SECTION / FUEL INJECTION / 1. General).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0006 FUEL INJECTION (FUEL SYSTEM) spans pages 21-58 and contains this numbered subsection; sec_0007 has no children and page 22 shows no lettered sub-headings, so an empty child list is coherent. Siblings sec_0008 \"2. Air Line\" starts on 23.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section is the single page 22 (FU-2). The heading and all 16 nodes (#/texts/127-142) are the heading, MFI paragraphs, bullet list and running header/footer shown on the page; the next section 2. Air Line starts at page 23, so nothing is absorbed or lost.",
+   "notes": "verify_claims flags the short caps label GENERAL (node #/texts/142) as foreign boilerplate; the render shows it is this page's own running title printed at the top of page 22 (above heading 1. General), so it belongs to the section and PASS is kept.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path \"/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)/1. General\" matches the parent chain sec_0006 and the page heading \"1. General\" with running head \"Fuel Injection (Fuel System)\".",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Previous section is parent sec_0006 (starts 21) and next sibling sec_0008 starts at 23; page 22 is covered exactly once by sec_0007 with no overlap or gap among siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is flagged_for_review true, yet verification_score is 100.0 with an empty verification_reason. Page 22 shows the heading exactly where the page range says, so the flag is not backed by a defect; the flag alone is not a failure.",
+   "notes": "Flag appears unexplained (score 100, no reason); worth a human glance but content is correct.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\" and the hierarchy (4 levels, parent sec_0006, heading on page 22 = page_start) agrees with the rendered page, so TOC provenance is supported by observable evidence.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio at the bottom of page 22 reads \"FU-2\": arabic numerals with the chapter prefix FU; section heading uses arabic \"1.\"; numbering_scheme \"arabic\" is appropriate.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and the heading \"1. General\" is visibly on physical page 22 = page_start (printed folio FU-2, chapter-relative numbering), so no offset correction is needed and the mapping is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered page 22 contains only text (bullet paragraphs); there is no drawing, photo or table, and images.json lists no image for sec_0007, so nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is retained for sec_0007 and none is expected; the page has only a text rule under the header, so no decorative noise was passed as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 22,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Verified by rendering page 22: no figure exists and images.json maps no image to sec_0007, so mapping is correctly empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 28 shows heading \"3. Fuel Line\" in the large numbered style followed by smaller \"A: GENERAL\" lettered sub-heading; \"3. Fuel Line\" is the level-4 numbered subsection under FUEL INJECTION (level 3).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0006 (pp. 21-58) is the FUEL INJECTION chapter; siblings 2. Air Line (23-27) precedes and 4. Sensors and Switches (39-49) follows. The lettered A-F blocks (A: GENERAL ... F: SUB-COMPARTMENT FUEL LEVEL SENSOR) are headings inside this node and child_sections is empty, which is coherent for this tree.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 28 (FU-8) opens with \"3. Fuel Line\" (node #/texts/224) and page 38 (FU-18) closes with \"F: SUB-COMPARTMENT FUEL LEVEL SENSOR\" plus legend (nodes #/texts/432-443); previous section ends 27 and next starts 39, so start and end are semantically correct and no neighbouring content appears.",
+   "notes": "verify_claims flags the caps label FUEL LINE on page 28 as foreign boilerplate; the render shows it is the running page title at the top of this section's own first page, so PASS is kept.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \".../FUEL INJECTION (FUEL SYSTEM)/3. Fuel Line\" matches the parent sec_0006 and the heading \"3. Fuel Line\" under running head \"Fuel Injection (Fuel System)\" on page 28.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sibling ranges 23-27, 28-38, 39-49 are contiguous without overlap, and sec_0009 pp. 28-38 contain the FU-8..FU-18 sequence once each in the node list.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100.0 and empty reason; the heading on page 28 is exactly at page_start, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source \"toc\"; heading text and page 28 start agree with the TOC-based parent/path, supporting that provenance.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios on pages 28 and 38 read \"FU-8\" and \"FU-18\" (arabic numerals with chapter prefix) and the heading is \"3.\"; numbering_scheme \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0: heading \"3. Fuel Line\" is on physical page 28 = page_start, and page 38 (FU-18) is the last Fuel Line page, so the physical range matches the content with no shift.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 28 contains the fuel-line system diagram (B2H2907B, items 1-18) and it is extracted as img_0005 (2433x1374, page 28); page 38 sub-compartment sensor drawing B2H2912B is img_0013. Neither meaningful figure was dropped; the legends are also in the text nodes.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nine retained images (img_0005-0013, pages 28-38) have the aspect ratios of full technical drawings (e.g. 2433x1374 for the page-28 diagram, 1065x1252 for page 38); none is a header rule, logo or divider.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0009",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0005 on page 28 and img_0013 on page 38 are both drawn under headings of \"3. Fuel Line\" and are mapped to sec_0009, as are img_0006-0012 on pages 29-37 inside the same page range; none belongs to a neighbouring section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 50 (FU-30) shows \"5. Control System\" as the large numbered heading with \"A: GENERAL\" below it; page 54 holds only numbered 3./4. subheads in smaller type. Level 4 under FUEL INJECTION is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0006 FUEL INJECTION (pp. 21-58) is correct; previous sibling is 4. Sensors and Switches (39-49) and next is 6. On-board Diagnosis System (58). The A-F lettered blocks on pages 50-57 are sub-headings inside this node (no child sections).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 50 with \"5. Control System\" (node #/texts/613) and ends on page 57 (FU-37) with \"F: FUEL PUMP CONTROL\" and its table; sampled page 54 (FU-34) contains only section content (3. Air-fuel ratio feedback factor, 4. Learning feature). Next section starts at 58, so boundaries are correct.",
+   "notes": "verify_claims flags the short caps label CONTROL SYSTEM on page 50 as foreign boilerplate; the render shows it is the running page title at the top of this section's own first page, so PASS is kept.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \".../FUEL INJECTION (FUEL SYSTEM)/5. Control System\" matches the parent sec_0006 and the heading seen on page 50.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Title \"5. Control System\" also appears in sec_0018 (pp. 83-90) but under a different parent sec_0013 (a second FUEL INJECTION chapter, pp. 59-92, whose pages say \"w/o OBD\"/catalytic-converter variants), so it is a legitimate separate chapter rather than a duplicate; sibling ranges 39-49, 50-57, 58 are contiguous.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, verification_score 100.0; heading found on page 50 as stated, no defect to flag.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source \"toc\"; page 50 heading and parent chain agree with the TOC-derived hierarchy.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios on pages 50 and 54 read \"FU-30\" and \"FU-34\": arabic with chapter prefix; headings use arabic 1-4. \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0; \"5. Control System\" is on physical page 50 = page_start (folio FU-30), so no offset correction is required.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table #/tables/32 (page 51, Input and Output Signals, Signal/Unit/Function) is extracted as flat text with no column delimiters: rows are run together (for example \"Throttle position sensor Detects the throttle valve position. Front oxygen (A/F) sensor Detects ...\" and \"Fuel Injector Activates an injector. Ignition signal Turns ...\"), and its first row is outside the table in paragraph #/texts/646. On page 57, table #/tables/33 (fuel pump relay) lost its header row \"Ignition switch ON / Fuel pump relay / Fuel pump\" and the first data row, which sit in paragraph nodes #/texts/768-769, leaving ON/Operates values without column labels.",
+   "notes": "Page 51 is not rendered in this batch (page 54, which is the sampled page, has no table), so the table #/tables/32 judgement is based on the text nodes; the page 57 rendering confirms the column loss. Medium: values can no longer be attributed to columns in the table node itself.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 54 has the air-fuel feedback block diagram (B2H0989B, items 1-6, A-F) extracted as img_0025 (2431x954, page 54); page 57 idle-air diagram B2H3450C is img_0028. No meaningful figure from the sampled pages is missing.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Retained images img_0025-0028 are full-width technical diagrams (2431x954, 2560x1522, 2161x1382, 2333x1205), not rules, logos or icons; nothing decorative was kept.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 54,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0025 (page 54) sits under heading 3. AIR-FUEL RATIO FEEDBACK FACTOR and img_0028 (page 57) under E: IDLE AIR CONTROL, both inside pages 50-57 of \"5. Control System\"; no image from a sibling is mapped here.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 83 (FU-25) shows \"5. Control System\" as large numbered heading over \"A: GENERAL\"; page 88 begins with \"D: IGNITION SYSTEM CONTROL\" in the lettered sub-heading style. Level 4 under FUEL INJECTION (level 3) is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0013 FUEL INJECTION (pp. 59-92) is a different chapter instance from sec_0006; previous sibling 4. Sensors and Switches (74-82) and next 6. On-board Diagnosis System (91) are in the same parent, so parent/child links are coherent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts at page 83 with \"5. Control System\" (#/texts/1231) and ends on page 90 (FU-32) with F: FUEL PUMP CONTROL; sampled page 88 (FU-30) holds D: IGNITION SYSTEM CONTROL and its block diagram, content of this section. Next section starts at 91, so no neighbouring content is absorbed.",
+   "notes": "verify_claims flags the caps label CONTROL SYSTEM on page 83 as foreign boilerplate; the render shows it is the running page title at the top of this section's own first page, so PASS is kept.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \".../FUEL INJECTION (FUEL SYSTEM)/5. Control System\" is consistent with parent sec_0013 and the heading on page 83.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Same title as sec_0011 but under a separate parent chapter (sec_0013, pages 59-92; page 83 footnote references \"EC (w/o OBD)\", a different variant), so not a duplicate; sibling ranges 74-82, 83-90, 91 are contiguous.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false and verification_score 100.0; the heading appears exactly on page 83, no flag needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source \"toc\"; the page 83 heading position and parent chain agree with TOC-derived hierarchy.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios on pages 83, 88 and 90 read FU-25, FU-30 and FU-32 (arabic with chapter prefix); headings use arabic numbering. \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0; heading \"5. Control System\" is on physical page 83 = page_start (folio FU-25). Offsets between physical and printed folios are chapter-relative and consistent in the range (83 to FU-25, 88 to FU-30, 90 to FU-32).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table #/tables/35 (page 84, Input and Output Signals) is flattened: several signal/function rows are merged on one line (e.g. \"Diagnostics of AT-ECU Detects ... A/C switch Detects ...\", \"Malfunction indicator lamp Indicates ... Purge control solenoid valve Controls ...\"), and the group label \"Output signals\" appears after the footnote \"*: With catalytic converter\" instead of at the head of the output rows. On the rendered page 90, table #/tables/36 (fuel pump relay table) lost its header row \"Ignition switch ON / Fuel pump relay / Fuel pump\" and first row \"A certain period of time after ignition switch is turned ON\", which are outside the table in paragraph nodes.",
+   "notes": "Sampled page 88 has no table; page 84 is not rendered, so #/tables/35 is judged from text nodes and the page 90 rendering confirms the column loss. Medium: values lose their column attribution inside the table node.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 88 shows the ignition control block diagram (B2H3827B) and it is extracted as img_0051 (2545x1513, page 88); other figures on pages 87, 89, 90 are img_0050, img_0052, img_0053. No meaningful figure is missing on the sampled pages.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The four retained images img_0050-0053 (2431x954, 2545x1513, 2161x1382, 2333x1205) are full technical diagrams; none is a rule, logo or small icon.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 88,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0051 (page 88) is the diagram printed under D: IGNITION SYSTEM CONTROL, within pages 83-90 of this section; img_0050/0052/0053 are on pages 87/89/90, also inside range. No sibling content is mapped.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 534 shows the large heading \"1. Airbag System\" followed by \"A: INSTALLATION\"; page 535 shows \"B: FUNCTION\" and \"1. FRONT AIRBAGS\" in smaller type. The numbered chapter-subsection is level 4 under AIRBAG SYSTEM (level 3).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0205 AIRBAG SYSTEM (pp. 533-546) and sibling \"2. Construction\" starting on 537 are consistent; the A/B lettered blocks on pages 534-536 are internal headings and child_sections is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 534 (AB-2) with \"1. Airbag System\" / \"A: INSTALLATION\" and ends on page 536 (AB-4) with \"2. SIDE AIRBAGS\" and diagram B5H0505B; sampled page 535 (AB-3) holds B: FUNCTION / 1. FRONT AIRBAGS. Next sibling starts on 537, so boundaries are correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \".../NEW CAR INFORMATION SECTION/AIRBAG SYSTEM/1. Airbag System\" matches parent sec_0205 and the heading at the top of page 534.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 534-536 are covered once; the parent starts on 533 and the next sibling on 537, with no gap or overlap seen in the page sequence AB-2, AB-3, AB-4.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, verification_score 100.0 and empty reason; heading is visible on page 534 as claimed, so no defect.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source \"toc\"; heading and parent agree with a TOC-derived structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios read \"AB-2\", \"AB-3\", \"AB-4\" (arabic with chapter prefix) and the headings are arabic; \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0; \"1. Airbag System\" is on physical page 534 = page_start (folio AB-2), so no offset is required.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 534, 535, 536 each carry one large drawing (B5H0840C installation, B5H0504B front airbags, B5H0505B side airbags) and images.json holds img_0326, img_0327, img_0328 for exactly those pages; the sampled page 535 figure is extracted.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The retained images are 2398x2481, 2857x2531 and 2777x2505 full-page technical drawings; none is a divider, logo or decorative element.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0206",
+   "page_sampled": 535,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0327 (page 535) is the front-airbag sequence under \"B: FUNCTION / 1. FRONT AIRBAGS\" and belongs to sec_0206; img_0326 and img_0328 are on pages 534 and 536 in the same section range, and no neighbouring section shares those pages.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 606 (SE-2) shows \"1. Front Seat\" as the large numbered heading; page 609 shows only \"C: SEAT HEATER\" in the smaller lettered style. Level 4 under SEATS (level 3) is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0234 SEATS (pp. 605-612) with sibling \"2. Rear Seat\" at 611-612 is consistent; A-D lettered blocks are internal headings and child_sections is empty.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on page 606 (SE-2) with \"1. Front Seat\" and ends on page 610 (SE-6) with \"D: LUMBAR SUPPORT\"; sampled page 609 (SE-5) holds only C: SEAT HEATER with its drawing G5H0503. Next sibling starts at 611, so boundaries are correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \".../NEW CAR INFORMATION SECTION/SEATS/1. Front Seat\" matches parent sec_0234 and the heading on page 606.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 606-610 (SE-2 to SE-6) are contiguous within the section and the sibling starts at 611, so there is no gap or overlap.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review false, verification_score 100.0 and no reason; heading is where stated.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source \"toc\"; heading and parent agree with TOC-derived structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios read SE-2, SE-5 and SE-6 (arabic with chapter prefix) and headings are arabic; \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0; \"1. Front Seat\" is on physical page 606 = page_start (folio SE-2), so no correction is needed.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 610 (SE-6, D: LUMBAR SUPPORT) the render shows a large three-part drawing B5H1193A with callouts (1)-(7), A and a legend (Driven gear plate, Lumbar support plate, Torsion bar, Pinion gear, Stepless adjustable range, Lumbar support lever, Bearing with built-in pinion gear). images.json lists images for pages 606-609 (img_0382-0385) but none for page 610, so the figure was dropped. The text nodes #/texts/8400-8416 keep only the legend and callout numbers, so the mechanism layout is lost.",
+   "notes": "Sampled page is 609, whose figure (img_0385) is extracted; the defect is on page 610 of the same section. Critical per contract: meaningful vector or raster figure missing whose information is not in the text.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Retained images img_0382-0385 (2520x1384, 1947x1366, 2199x3141, 944x1112) are the seat drawings of pages 606-609; none is a rule, logo or icon. Page 609 img_0385 is the seat-heater drawing with \"Thermostat\" callouts.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0235",
+   "page_sampled": 609,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 609, the single drawing G5H0503 under \"C: SEAT HEATER\" is img_0385 mapped to sec_0235, and pages 606-608 images are in range; the only gap is the missing page 610 figure, reported under 5.5-filters_discarding, not a mis-mapping.",
+   "notes": "",
+   "confidence": 0.85
+  }
+ ]
+}

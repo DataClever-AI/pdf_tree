@@ -1,0 +1,264 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'Cardiac Output Default Settings' on p480 uses the large section heading style, like 'CO2 Default Settings' below it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0845 'Default Settings Appendix' is correct; next sibling 'CO2 Default Settings' (p480).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The section owns its heading and the C.O. and CCO/CCI settings tables, but also the 'CO2 Settings' table printed below the 'CO2 Default Settings' heading on p480. The next section sec_0857 is left with only its heading and folio. Deterministic check (verify_claims.py): table #/tables/282 on p480 (' | Factory defaults H10 / H20 / H40 |  |  | H30 (d') sits under the heading of sec_0857 'CO2 Default Settings'.",
+      "notes": "Root cause TBLMAP (hypothesis): table nodes on a page shared by several sections are not placed by their position relative to the headings, so a table printed under one heading can be assigned to a neighbouring section (same family as the known sibling image/table mismapping, BUG-003). Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Default Settings Appendix/Cardiac Output Default Settings' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "It shares p480 with 'CO2 Default Settings' without duplicated nodes; the table ownership error is reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'Cardiac Output Default Settings' is found at page_start p480, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'Cardiac Output Default Settings' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; physical p480 carries the printed arabic folio '468' (12 lower than the physical page), with no scheme transition in this section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'Cardiac Output Default Settings' is rendered on physical p480, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "The C.O. and CCO/CCI tables keep their settings and values (Auto-Calibration On, Tblood High Limit 39.0 °C, CCO High Limit 8.5/3.7/1.3 l/min, CCI Low Limit 2.0/2.6/1.2 l/min/m2), but the C.O. table's row header 'C.O. Settings' is lost, and values that span Adult/Pedi/Neo appear once with empty sibling cells, so their scope is implicit.",
+      "notes": "Root cause TBL (known table-structure family, BUG-007/008): Docling merges adjacent columns or shifts cell fragments between columns; row order is kept. Regraded FAIL Low -> FAIL Medium with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p480 has no raster image XObjects; its visual elements are three bordered default-settings tables, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p480; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0856",
+      "page_sampled": 480,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p480 contains no figure (three bordered default-settings tables), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=2: 'VueLink Default Settings' on p484 uses the large section heading style of the appendix.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0845 'Default Settings Appendix' is correct for the VueLink settings; it is the last bookmarked section of the document.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The section's real content is one page (p484: the VueLink settings table and device alarm colour), but its range runs to p496 and it contains the entire alphabetical Index (p485-496; e.g. p488 'display ... ECG ... event snapshots 293'), including an index heading '#' and index columns extracted as tables. Retrieval for any index term would return 'VueLink Default Settings'.",
+      "notes": "Known BUG-002 (back-matter silently absorbed past the last bookmark): the Index has no bookmark, so the last section's page_end defaults to the last page of the PDF.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/Default Settings Appendix/VueLink Default Settings' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "The book's alphabetical Index (p485-496) has no section of its own; it exists only inside 'VueLink Default Settings', so the Index is missing as a structural unit. Deterministic check (verify_claims.py): index-like back-matter pages absorbed: p485-p495 (11 pages).",
+      "notes": "Same root cause as this section's page_start_end row. Known BUG-002 (back-matter silently absorbed past the last bookmark): the Index has no bookmark, so the last section's page_end defaults to the last page of the PDF. Regraded FAIL Medium -> FAIL Critical with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'VueLink Default Settings' is found at page_start p484, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'VueLink Default Settings' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "The section is labelled 'arabic', but sampled p488 carries the roman index folio 'iv' (the Index is numbered i, ii, iii, ...). The arabic-to-roman transition is not represented, because the Index pages are absorbed into this section.",
+      "notes": "Known BUG-002 (back-matter silently absorbed past the last bookmark): the Index has no bookmark, so the last section's page_end defaults to the last page of the PDF. Regraded FAIL Low -> FAIL Medium with the Sprint severity scale (verification-contract.md).",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; the bookmark targets physical p484, where the heading 'VueLink Default Settings' is rendered (folio 472).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Sampled p488 has no table; its index columns are extracted as paragraphs. Other index pages (p486, p487, p489) are extracted as pseudo-tables, which is part of the back-matter absorption reported under page_start_end.",
+      "notes": "",
+      "confidence": 0.7
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p488 has no raster image XObjects; its visual elements are only the three-column alphabetical index text, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p488; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0865",
+      "page_sampled": 488,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p488 contains no figure (only the three-column alphabetical index text), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    }
+  ]
+}

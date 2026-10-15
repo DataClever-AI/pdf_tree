@@ -1,0 +1,1744 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p29 'Chapter 1 Introduction' (#/texts/75) is the large blue chapter title. sec_0001 has hierarchy_level 1 and no parent. This fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0001 has parent_section_id null and child_sections sec_0002 to sec_0011. On p29 the section sits at hierarchy_level 1 under no parent (it is a chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0001 starts on p29 with the chapter title #/texts/75, the intro paragraph #/texts/76 and the footer #/texts/77. Its page_end 68 equals the end of its last child sec_0011. Chapter 2 (sec_0012) starts on p69.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0001 is '/Introduction'. It matches the chapter and title order seen around p29.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p29 has only the title, one intro paragraph and the footer. All three are nodes of sec_0001 once each. No node is missing or repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0001 has flagged_for_review false and verification_score 100. p29 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0001. The title 'Introduction' and page range 29-68 agree with what is printed (p29 has folio 1-1), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p29 prints the folio 1-1 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 29 is the physical page where the section is printed. p29 shows folio 1-1, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p29 has text and a blue top rule only. images.json has no image for sec_0001 on p29. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, logo or footer image is kept for sec_0001 on p29. The blue top rule and the footer are not in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p29 has text and a blue top rule only. images.json has no image for sec_0001 on p29. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The running header on p36 is 'Introduction'. The heading 'Difference between different models (continued)' (#/texts/130) is a sub-heading inside sec_0003 'Manual Overview'. hierarchy_level 2 under Chapter 1 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0003 has parent_section_id sec_0001 and child_sections none. On p36 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0003 covers p31-p37. On p36 the heading #/texts/130, the caption #/texts/131, the footer #/texts/132 and #/tables/14 all belong to it. sec_0004 starts on p38. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0003 is '/Introduction/Manual Overview'. It matches the chapter and title order seen around p36.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 shows a heading, Table 1-4 and a footer. Each one has a node in sec_0003 and none is repeated. The legend row of the table is not in any node. This is graded under 5.6-table_content.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0003 has flagged_for_review false and verification_score 100. p36 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0003. The title 'Manual Overview' and page range 31-37 agree with what is printed (p36 has folio 1-8), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 prints the folio 1-8 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 31 is the physical page where the section is printed. p36 shows folio 1-8, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Table 1-4 on p36 (#/tables/14) has 13 model columns and 15 probe rows. I compared every row with the render. All X and N values are in the right column, for example 6Tc-rs has N for the first four models and for LOGIQ Xe Performance. The last row of the table, 'Note:X:Support ;N:Not Applicable', is visible on p36 but is not in #/tables/14. It is in no other node of sec_0003.",
+   "notes": "Old FAIL (v1.11, Medium) is still present. The legend row is lost and its text is nowhere else in sec_0003, so it is Critical by the rule agreed for this run (lost table row). Probably the full-width note row is dropped by the table reader (BUG-008 area, not confirmed). The cell values are intact. The legend explains X and N. verify_claims expects Medium because it checks column shift only. Critical is kept because a whole table row is lost.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 has no figure, icon or photo. images.json has no image for sec_0003 on p36 (img_0039 is on p37). Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, logo or footer image is kept for sec_0003 on p36. The blue top rule and the footer are not in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0003",
+   "page_sampled": 36,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p36 has no figure, icon or photo. images.json has no image for sec_0003 on p36 (img_0039 is on p37). Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p42 'Product icons' is the large blue title with the sub-heading 'Label Locations' below. sec_0005 has hierarchy_level 2 under Chapter 1. This fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 has parent_section_id sec_0001 and child_sections none. On p42 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 starts on p42 with the title #/texts/196, the sub-heading 'Label Locations', the figure text and the NOTE. Its page_end 50 is the last Table 1-7 page and sec_0006 starts on p51. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0005 is '/Introduction/Product icons'. It matches the chapter and title order seen around p42.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 nodes #/texts/188-198 are all in sec_0005 and appear once. The caption, the four label names and the NOTE are all there. No node is missing.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 has flagged_for_review false and verification_score 100. p42 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0005. The title 'Product icons' and page range 42-50 agree with what is printed (p42 has folio 1-14), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 prints the folio 1-14 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 42 is the physical page where the section is printed. p42 shows folio 1-14, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 has no table. Table 1-7 begins on p43 (#/tables/15), so there is nothing to compare on this page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 has Figure 1-2, a photo of the unit bottom with label call-outs 1 to 4. It is extracted as img_0043 (1558x789) with all four call-outs visible. Nothing is cut or dropped.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0043 is the real Figure 1-2 and not noise. No rule or logo is kept as an image on p42.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0043 is mapped to sec_0005 on p42, under its own heading 'Product icons'. This is correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The running header on p55 is 'Safety considerations'. 'Mechanical safety (continued)' is a sub-heading inside sec_0006. hierarchy_level 2 under Chapter 1 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0006 has parent_section_id sec_0001 and child_sections none. On p55 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p55 nodes #/texts/292-313 are the sub-heading, the CAUTION and WARNING notes and the ALWAYS list. All belong to sec_0006 (p51-p61). sec_0007 starts on p62. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0006 is '/Introduction/Safety considerations'. It matches the chapter and title order seen around p55.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every text block on p55 has a node in sec_0006 and appears once. One small flaw: #/texts/298 starts with the extra word 'Do', which is not in the render. It does not change section ownership.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0006 has flagged_for_review false and verification_score 100. p55 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0006. The title 'Safety considerations' and page range 51-61 agree with what is printed (p55 has folio 1-27), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p55 prints the folio 1-27 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 51 is the physical page where the section is printed. p55 shows folio 1-27, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p55 shows six small yellow CAUTION or WARNING triangles. None of the small ones is in images.json. The check finds small rasters of 137x118 px (0.3% of the page) dropped. Each signal word and message stays in the text.",
+   "notes": "Low: small icons dropped, and their meaning is stated in the text. Probably the minimum-area image filter (BUG-020).",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0006 on p55, so no decorative element is retained. The blue top rule is not an image.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 55,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0006 on p55 and the page has no figure. Nothing needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p62 'Dangerous procedure warnings' is the large blue title, in the same style as other level-2 titles. sec_0007 has hierarchy_level 2 under Chapter 1. This fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0007 has parent_section_id sec_0001 and child_sections none. On p62 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0007 is only p62. Its nodes #/texts/408-423 are the title, the intro text, the five warning boxes and the footer. sec_0006 ends on p61 and sec_0008 starts on p63. Start and end are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0007 is '/Introduction/Dangerous procedure warnings'. It matches the chapter and title order seen around p62.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every block on p62 has a node in sec_0007 once. The five signal words and messages are all there. No node is missing or repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0007 has flagged_for_review false and verification_score 100. p62 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0007. The title 'Dangerous procedure warnings' and page range 62-62 agree with what is printed (p62 has folio 1-34), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p62 prints the folio 1-34 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 62 is the physical page where the section is printed. p62 shows folio 1-34, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p62 shows five small yellow DANGER or WARNING triangles (besides the big lightning triangle img_0076). None of the small ones is in images.json. The check finds small rasters of 137x118 px (0.3% of the page) dropped. Each signal word and message stays in the text.",
+   "notes": "Low: small icons dropped, and their meaning is stated in the text. Probably the minimum-area image filter (BUG-020).",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0076 is a real hazard symbol and not noise. No rule or logo is kept as an image on p62.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0007",
+   "page_sampled": 62,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0076 is the lightning triangle printed on p62 next to the DANGEROUS VOLTAGES text. It is mapped to sec_0007, which owns this page. This is correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p68 the running header is 'Introduction'. 'Phone numbers for Customer Assistance', 'System manufacturer' and 'Factory Site' are sub-headings inside sec_0011 'Customer assistance'. hierarchy_level 2 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0011 has parent_section_id sec_0001 and child_sections none. On p68 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0011 covers p67-p68. On p68 the heading, the caption 'Table 1-8', #/tables/23, and the two short sections are all in it. sec_0010 ends on p66 and sec_0012 starts on p69. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0011 is '/Introduction/Customer assistance'. It matches the chapter and title order seen around p68.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every block on p68 has a node in sec_0011 once. The heading 'Factory Site' (#/texts/503) is listed after its paragraph #/texts/502, a small order issue only. Nothing is missing.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0011 has flagged_for_review false and verification_score 100. p68 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0011. The title 'Customer assistance' and page range 67-68 agree with what is printed (p68 has folio 1-40), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 prints the folio 1-40 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 67 is the physical page where the section is printed. p68 shows folio 1-40, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 1-8 on p68 (#/tables/23) has 8 location blocks. I checked each against the render. USA service, parts and application numbers, Canada, Latin America, Europe phone and fax, Asia tel and fax and Japan phone and fax are all in the right cell. The blank first cell of the rows below USA is only a merged cell in the print.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 has text and one table only. images.json has no image for sec_0011 on p68. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, logo or footer image is kept for sec_0011 on p68. The blue top rule and the footer are not in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0011",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p68 has text and one table only. images.json has no image for sec_0011 on p68. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p69 'Chapter 2 Site Preparations' is the large blue chapter title. sec_0012 has hierarchy_level 1 and no parent. This fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0012 has parent_section_id null and child_sections sec_0013 to sec_0016. On p69 the section sits at hierarchy_level 1 under no parent (it is a chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0012 starts on p69 with the chapter title #/texts/505, the intro paragraph #/texts/506 and the footer #/texts/507. sec_0011 ends on p68. Its page_end 88 matches the last child. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0012 is '/Site Preparations'. It matches the chapter and title order seen around p69.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p69 has only the title, one intro paragraph and the footer. All three are nodes of sec_0012 once each. No node is missing or repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0012 has flagged_for_review false and verification_score 100. p69 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0012. The title 'Site Preparations' and page range 69-88 agree with what is printed (p69 has folio 2-1), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p69 prints the folio 2-1 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 69 is the physical page where the section is printed. p69 shows folio 2-1, which fits the physical position in Chapter 2.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p69 has text and a blue top rule only. images.json has no image for sec_0012 on p69. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, logo or footer image is kept for sec_0012 on p69. The blue top rule and the footer are not in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0012",
+   "page_sampled": 69,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p69 has text and a blue top rule only. images.json has no image for sec_0012 on p69. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p78 the running header is 'Site Preparations' and 'EMI prevention/abatement' is a sub-heading inside sec_0014. hierarchy_level 2 under Chapter 2 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 has parent_section_id sec_0012 and child_sections none. On p78 the section sits at hierarchy_level 2 under sec_0012 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p78 holds the heading #/texts/610, the caption 'Table 2-7', the footer and #/tables/30. All belong to sec_0014 (p71-p79). sec_0015 starts on p80. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0014 is '/Site Preparations/General requirements'. It matches the chapter and title order seen around p78.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p78 has a heading, a caption, a table and a footer. Each has a node in sec_0014 once. No node is missing or repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 has flagged_for_review false and verification_score 100. p78 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0014. The title 'General requirements' and page range 71-79 agree with what is printed (p78 has folio 2-10), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p78 prints the folio 2-10 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 71 is the physical page where the section is printed. p78 shows folio 2-10, which fits the physical position in Chapter 2.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 2-7 on p78 (#/tables/30) has 7 EMI rules with their details. I compared every row with the render. Each rule is in the first column and its text is in DETAILS. The bullets inside the cells are kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p78 has one table and text only. images.json has no image for sec_0014 on p78. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, logo or footer image is kept for sec_0014 on p78. The blue top rule and the footer are not in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 78,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p78 has one table and text only. images.json has no image for sec_0014 on p78. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 is the first page after sec_0004. Its title is 'Product icons', which is a separate level-2 section (sec_0005). sec_0004 'Important conventions' keeps hierarchy_level 2, the same as its siblings sec_0003 and sec_0005.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0004 has parent_section_id sec_0001 and child_sections none. On p42 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0004 ends on p41. Its last node #/texts/187 is the p41 footer (1-13). p42 starts with the title 'Product icons' (sec_0005). So page_end 41 is right and no p42 content is in sec_0004.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0004 is '/Introduction/Important conventions'. It matches the chapter and title order seen around p42.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 ends sec_0004 and p42 starts sec_0005. The p42 nodes #/texts/188-198 are all in sec_0005. There is no overlap and no p42 node is in sec_0004.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0004 has flagged_for_review false and verification_score 100. p42 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0004. The title 'Important conventions' and page range 38-41 agree with what is printed (p42 has folio 1-14), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 prints the folio 1-14 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 38 is the physical page where the section is printed. p42 shows folio 1-14, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 has one figure, Figure 1-2 (label locations). It is extracted as img_0043 and mapped to sec_0005, not sec_0004. Nothing was dropped.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0004 on p42, so no noise is kept.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figure 1-2 on p42 sits under the heading 'Product icons'. images.json maps img_0043 to sec_0005 and not to sec_0004. This is correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p43 the running header is 'Product icons' and 'Label Icon Description' is a sub-heading inside sec_0005. hierarchy_level 2 for sec_0005 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 has parent_section_id sec_0001 and child_sections none. On p43 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p43 holds the sub-heading #/texts/200, the intro text, the caption 'Table 1-7: Label Icons', the footer and #/tables/15. All belong to sec_0005 (p42-p50). Boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0005 is '/Introduction/Product icons'. It matches the chapter and title order seen around p43.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p43 shows one table with ten rows, a caption and text. Each has a node in sec_0005 once. The table node is #/tables/15. No node is repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0005 has flagged_for_review false and verification_score 100. p43 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0005. The title 'Product icons' and page range 42-50 agree with what is printed (p43 has folio 1-15), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p43 prints the folio 1-15 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 42 is the physical page where the section is printed. p43 shows folio 1-15, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table 1-7 (#/tables/15) on p43 has the header Label/Icon | Purpose/Meaning | Location | Reference. In row 1 the render shows 'Identification and Rating Plate' under Label/Icon. In the node it is in the last column, after 'EN ISO 15223-1:2021'. In rows 2 to 10 the empty icon cell is dropped. 'Date of manufacture...' then sits under Label/Icon and the Reference cell is empty.",
+   "notes": "Old FAIL (v1.11, Medium) is still present. Values are under the wrong headers (BUG-008, probably the empty icon cell is not kept). The text is complete and can be recovered, so Medium and not Critical.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table 1-7 on p43 shows ten icon cells in the Label/Icon column. Only the factory icon is extracted (img_0044). The icons for date of manufacture, REF, SN, direct current, INPUT, DESC., MODEL, the small-print 'Only for use with LOGIQ e series' label and OUTPUT are not in images.json.",
+   "notes": "Low: small icons dropped. Their meaning is also written in the Purpose/Meaning text, for example 'Serial number'. The pictures themselves are lost. Probably the image size filter (BUG-020).",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0044 is a real label icon from row 1 and not noise. No rule or logo is kept as an image on p43.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0044 is the factory icon of row 1 on p43. It is mapped to sec_0005, which owns this page. This is correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The running header on p56 is 'Introduction'. 'Mechanical safety (continued)', 'Electrical safety' and 'Safe practices' are sub-headings inside sec_0006. hierarchy_level 2 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0006 has parent_section_id sec_0001 and child_sections none. On p56 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p56 nodes #/texts/314-328 are the NOTE, bullet lists, the headings 'Electrical safety' and 'Safe practices', and the WARNING. All belong to sec_0006 (p51-p61). Ownership is right. The two headings come after their body nodes in the list, which is only an order issue.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0006 is '/Introduction/Safety considerations'. It matches the chapter and title order seen around p56.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Each block on p56 has a node in sec_0006 once. The headings #/texts/325-326 are listed after the paragraphs #/texts/319-324 that they introduce. That is a reading-order slip (probably BUG-029), not a missing or double node.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0006 has flagged_for_review false and verification_score 100. p56 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0006. The title 'Safety considerations' and page range 51-61 agree with what is printed (p56 has folio 1-28), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p56 prints the folio 1-28 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 51 is the physical page where the section is printed. p56 shows folio 1-28, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p56 shows one small yellow WARNING triangle. None of the small ones is in images.json. The check finds small rasters of 137x118 px (0.3% of the page) dropped. Each signal word and message stays in the text.",
+   "notes": "Low: small icons dropped, and their meaning is stated in the text. Probably the minimum-area image filter (BUG-020).",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0006 on p56, so no decorative element is retained.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 56,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0006 on p56 and the page has no figure. Nothing needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The running header on p60 is 'Introduction'. 'Battery Safety (continued)' is a sub-heading inside sec_0006. hierarchy_level 2 under Chapter 1 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0006 has parent_section_id sec_0001 and child_sections none. On p60 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p60 nodes #/texts/377-394 are the sub-heading, the CAUTION list, the NOTE and three WARNING notes. All belong to sec_0006 (p51-p61). sec_0007 starts on p62. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0006 is '/Introduction/Safety considerations'. It matches the chapter and title order seen around p60.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every block on p60 has a node in sec_0006 once. The three WARNING boxes match the nodes #/texts/388, #/texts/390 and #/texts/391. No node is missing or repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0006 has flagged_for_review false and verification_score 100. p60 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0006. The title 'Safety considerations' and page range 51-61 agree with what is printed (p60 has folio 1-32), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p60 prints the folio 1-32 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 51 is the physical page where the section is printed. p60 shows folio 1-32, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p60 shows four small yellow CAUTION or WARNING triangles. None of the small ones is in images.json. The check finds small rasters of 137x118 px (0.3% of the page) dropped. Each signal word and message stays in the text.",
+   "notes": "Low: small icons dropped, and their meaning is stated in the text. Probably the minimum-area image filter (BUG-020).",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0006 on p60, so no decorative element is retained.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0006",
+   "page_sampled": 60,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0006 on p60 and the page has no figure. Nothing needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p65 'EMC, EMI and ESD' is the large blue title. 'What is EMC?' and 'CE Compliance' are sub-headings inside it. sec_0010 has hierarchy_level 2 under Chapter 1. This fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0010 has parent_section_id sec_0001 and child_sections none. On p65 the section sits at hierarchy_level 2 under sec_0001 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0010 covers p65-p66. On p65 the title, the contents list, the EMC text, the CE Compliance text and the NOTE are all in sec_0010. sec_0009 ends on p64 and sec_0011 starts on p67. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0010 is '/Introduction/EMC, EMI and ESD'. It matches the chapter and title order seen around p65.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every block on p65 has a node in sec_0010 once. The sub-headings #/texts/467-468 are listed after the body paragraphs they introduce. That is an order issue only (probably BUG-029). Nothing is missing or doubled.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0010 has flagged_for_review false and verification_score 100. p65 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0010. The title 'EMC, EMI and ESD' and page range 65-66 agree with what is printed (p65 has folio 1-37), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p65 prints the folio 1-37 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 65 is the physical page where the section is printed. p65 shows folio 1-37, which fits the physical position in Chapter 1.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p65 has text only. images.json has no image for sec_0010 on p65. The ESD triangle on p66 is img_0078, mapped to sec_0010. Nothing was dropped on p65.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, logo or footer image is kept for sec_0010 on p65. The blue top rule and the footer are not in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0010",
+   "page_sampled": 65,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p65 has text only. images.json has no image for sec_0010 on p65. The ESD triangle on p66 is img_0078, mapped to sec_0010. Nothing was dropped on p65.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p77 the running header is 'General requirements' and 'EMI limitations' is a sub-heading inside sec_0014. hierarchy_level 2 under Chapter 2 fits.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 has parent_section_id sec_0012 and child_sections none. On p77 the section sits at hierarchy_level 2 under sec_0012 (the chapter). This is coherent with the printed structure.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 covers p71-p79. On p77 the heading #/texts/587, the EMI text, the 15 bullets and the 'See' line (#/texts/588-607) are all in it. sec_0015 starts on p80. The boundaries are right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0014 is '/Site Preparations/General requirements'. It matches the chapter and title order seen around p77.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every block on p77 has a node in sec_0014 once. The 15 bullets from 'medical lasers' to 'general AC/DC adapters' are all there. No node is missing or repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0014 has flagged_for_review false and verification_score 100. p77 shows no sign of doubt about the section, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' for sec_0014. The title 'General requirements' and page range 71-79 agree with what is printed (p77 has folio 2-9), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p77 prints the folio 2-9 (chapter-page, digits only). The tree says 'arabic'. There are no roman or letter pages here, so this is acceptable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 71 is the physical page where the section is printed. p77 shows folio 2-9, which fits the physical position in Chapter 2.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p77 has no table. The nearest tables of sec_0014 are on p76 and p78, so there is nothing to compare on this page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p77 has text only. images.json has no image for sec_0014 on p77. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, logo or footer image is kept for sec_0014 on p77. The blue top rule and the footer are not in images.json.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0014",
+   "page_sampled": 77,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p77 has text only. images.json has no image for sec_0014 on p77. Nothing was dropped or needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  }
+ ]
+}

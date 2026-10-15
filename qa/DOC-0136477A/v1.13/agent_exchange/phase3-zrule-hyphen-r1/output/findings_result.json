@@ -1,0 +1,290 @@
+{
+ "findings": [
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0219 '13.5.3 iCO Faults/Alerts' has hierarchy_level 3. The heading on the p179-p180 render is at the matching size and nesting for this level.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id of sec_0219 is sec_0216 13.5 HemoSphere Swan-Ganz Module Error Messages, which is the correct parent in the document. sec_0219 has no child_sections, and the next sibling is a section of the same level.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p179 sec_0219 starts at the heading 13.5.3 with Table 13-9 (#/tables/95). The Table 13-8 (continued) rows above it on p179 are not in sec_0219. On p180 Table 13-9 (continued) (#/tables/96) is at the top and is now in sec_0219. The section ends before the heading 13.5.4. The old Critical from v1 is fixed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path of sec_0219 ends with '13.5.3 iCO Faults/Alerts' under sec_0216 13.5 HemoSphere Swan-Ganz Module Error Messages. The order of ancestors matches the printed headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 13-9 is in #/tables/95 (p179) and #/tables/96 (p180), once each. The continued rows are no longer in the wrong section. No gap or duplicate.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0219 has flagged_for_review false and verification_score 100. The title '13.5.3 iCO Faults/Alerts' is printed on the page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0219 is toc. The heading '13.5.3 iCO Faults/Alerts' is a real bookmark and is printed on the page, so the source is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic for sec_0219. The folio printed on p180 is an arabic number.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 for sec_0219. The printed folio on p180 equals the physical page, so the offset is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Line-break hyphen kept in a table cell: 'place- ment' in #/tables/95 on p179 (3 cases in the tables of this row). Exact search for the whole word fails. On p179 #/tables/95 (5 iCO fault rows) and on p180 #/tables/96 (5 alert rows) match the render in all 3 columns. Bullet steps are kept in the Suggested actions cell. Text order is the same as the page.",
+   "notes": "Low by the reviewer rule of 2026-10-08 (line-break hyphens in cells). Fix planned in Phase 4 (text normalization).",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The rendered p179 and p180 has only text and tables in this section. No figure, screenshot or meaningful icon is printed, so nothing was discarded. images.json has no image for sec_0219.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0219. The red footer rule on p179-p180 is not kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0219",
+   "page_sampled": "180",
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is printed in 13.5.3 on p179-p180 and none is mapped to sec_0219. Correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0217 '13.5.1 CO Faults/Alerts' has hierarchy_level 3. The heading on the p177-p178 render is at the matching size and nesting for this level.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id of sec_0217 is sec_0216 13.5 HemoSphere Swan-Ganz Module Error Messages, which is the correct parent in the document. sec_0217 has no child_sections, and the next sibling is a section of the same level.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p177 the heading 13.5.1 (#/texts/2688) and Table 13-7 (#/tables/91) start the section. On p178 Table 13-7 continues (#/tables/92) and ends with the footnote row. The heading 13.5.2 and Table 13-8 below it are not in sec_0217. Page range p177-p178 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The hierarchy_path of sec_0217 ends with '13.5.1 CO Faults/Alerts' under sec_0216 13.5 HemoSphere Swan-Ganz Module Error Messages. The order of ancestors matches the printed headings.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 13-7 is in #/tables/91 (p177) and #/tables/92 (p178), once each. The footnote row '* These latching faults...' is now in #/tables/92, so no table text is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0217 has flagged_for_review false and verification_score 100. The title '13.5.1 CO Faults/Alerts' is printed on the page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0217 is toc. The heading '13.5.1 CO Faults/Alerts' is a real bookmark and is printed on the page, so the source is supported.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic for sec_0217. The folio printed on p177 is an arabic number.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 for sec_0217. The printed folio on p177 equals the physical page, so the offset is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Line-break hyphen kept in a table cell: 'place- ment' in #/tables/91 on p177 (4 cases in the tables of this row). Exact search for the whole word fails. The 12 CO rows of Table 13-7 on p177 (#/tables/91) and p178 (#/tables/92) match the render, including the * marks. The footnote row '* These latching faults. Touch the silence icon to silence. To clear, restart monitoring.' is now in #/tables/92 as its own row with complete text. In #/tables/91 the last step 'Use Bolus CO mode' of 'Check Thermal Filament Connection' is a new row with empty first and second cells.",
+   "notes": "Low by the reviewer rule of 2026-10-08 (line-break hyphens in cells). Fix planned in Phase 4 (text normalization).",
+   "confidence": 0.7
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The rendered p177 and p178 has only text and tables in this section. No figure, screenshot or meaningful icon is printed, so nothing was discarded. images.json has no image for sec_0217.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0217. The red footer rule on p177-p178 is not kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "manual_id": "DOC-0136477A",
+   "section_id": "sec_0217",
+   "page_sampled": "177",
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is printed in 13.5.1 on p177-p178 and none is mapped to sec_0217. Correct.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

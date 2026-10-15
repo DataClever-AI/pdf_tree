@@ -1,0 +1,1234 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '7. Sealer Application' (p570) matches its numbered siblings under BODY STRUCTURE.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0216 'BODY STRUCTURE' (p563-584) is correct; siblings '6. Anti Chipping Coat (ACC) Application' (p569) and '8. Anti-rust Wax (Bitumen Wax) Application' (p576-577).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns p570-574 figures and the p575 MEMO page (BS-13), but ends with p576's running header 'Body Structure' and 'ANTI-RUST WAX (BITUMEN WAX) APPLICATION'.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/BODY STRUCTURE/7. Sealer Application' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0222 or sec_0224.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '7. Sealer Application' is found at page_start p570, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '7. Sealer Application' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p575 is 'BS-13', a chapter-prefixed arabic page number, with no roman/arabic transition inside p570-575.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '7. Sealer Application' is rendered on physical p570, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p575 has no raster image XObjects; its visual elements are only the word 'MEMO' on an otherwise blank page, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p575; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0223",
+      "page_sampled": 575,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Sampled p575 has no figure; the section's nine sealer figures on p570-574 are all mapped to sec_0223.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '12.Galvanized Sheet Metal Application' on p582 matches its numbered siblings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0216 is correct; siblings '11. Rustproof Parts' (p581) and '13. Ventilation' (p583).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All 6 nodes are on p582 (running header, heading, legend ': Galvanized on both sides', figure code, folio BS-20); nothing from p583 is absorbed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/BODY STRUCTURE/12. Galvanized Sheet Metal Application' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "One-page ranges p581, p582 and p583 do not overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=97.4: the printed heading is '12.Galvanized Sheet Metal Application' (no space after the number), a near-exact match for the bookmark, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '12. Galvanized Sheet Metal Application' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p582 is 'BS-20', a chapter-prefixed arabic page number, with no roman/arabic transition inside p582-582.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '12. Galvanized Sheet Metal Application' is rendered on physical p582, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p582 has 1 raster figure(s) (the galvanized body panel drawing B5H0838B) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p582 is the technical figure (the galvanized body panel drawing B5H0838B), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0228",
+      "page_sampled": 582,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p582 (the galvanized body panel drawing B5H0838B) sits in the body of '12. Galvanized Sheet Metal Application' and is mapped to sec_0228.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '1. Combination Meter' (p586) is the first numbered subsection of INSTRUMENTATION/DRIVER INFO.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0231 'INSTRUMENTATION/DRIVER INFO' (p585-604) is correct; next sibling '2. Outside Air Temperature Display' (p602-604).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns p586-601 including the p589 light list and table, but ends with p602's running header 'Instrumentation/Driver Info' and 'OUTSIDE AIR TEMPERATURE DISPLAY'.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/INSTRUMENTATION/DRIVER INFO/1. Combination Meter' lists the ancestors in order. The chapter title itself contains '/', so splitting the path on '/' would create false levels.",
+      "notes": "Path separator collides with a chapter title that contains '/'.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0233.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '1. Combination Meter' is found at page_start p586, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. Combination Meter' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p589 is 'IDI-5', a chapter-prefixed arabic page number, with no roman/arabic transition inside p586-601.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '1. Combination Meter' is rendered on physical p586, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "All nine rows and their values are present in the p589 warning/indicator table (e.g. '(1) AIR BAG OFF *1 *1 *1', '(2) Brake fluid level / parking brake OFF ON ON *3', '(9) POWER OFF ON ON *2'), but the four ignition-position columns (LOCK/ACC, ON, ST, While engine is running) are collapsed into one cell per row, so the per-column mapping must be inferred from word order.",
+      "notes": "Column merge keeps reading order; values are complete.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p589 has no raster image XObjects; its visual elements are a numbered light list and a bordered ON/OFF table, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p589; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0232",
+      "page_sampled": 589,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p589 contains no figure (a numbered light list and a bordered ON/OFF table), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '2. Outside Air Temperature Display' on p602 sits above 'A: CONSTRUCTION'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0231 is correct; the next section is the SEATS chapter (p605).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Starts with its heading on p602 and ends with its own closing 'MEMO' page p604 (IDI-20); p602 text and legend are owned, and nothing from SEATS is absorbed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/INSTRUMENTATION/DRIVER INFO/2. Outside Air Temperature Display' lists the ancestors in order. The chapter title itself contains '/', so splitting the path on '/' would create false levels.",
+      "notes": "Path separator collides with a chapter title that contains '/'.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Range p602-604 ends before p605; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '2. Outside Air Temperature Display' is found at page_start p602, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '2. Outside Air Temperature Display' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p602 is 'IDI-18', a chapter-prefixed arabic page number, with no roman/arabic transition inside p602-604.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '2. Outside Air Temperature Display' is rendered on physical p602, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "p602 shows figure B6H1611A (ambient sensor location and the 'OUT.T 23°C' meter display) with a 2-item legend, but the page has no raster image (35 vector drawing operations only), so the figure is missing from images_v1.json. The section's one mapped image is a different figure on p603.",
+      "notes": "Root cause VEC (known BUG-010 family): the image extractor only captures raster XObjects; figures drawn with PDF vector paths are not extracted.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is kept from p602, so no decorative element was retained.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0233",
+      "page_sampled": 602,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p602 is mapped to any section; the p603 image is correctly mapped to sec_0233. The missing vector figure is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4; p609 shows its lettered topic 'C: SEAT HEATER' as content.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0234 'SEATS' (p605-612) is correct; next sibling '2. Rear Seat' (p611-612).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns p606-610 including the p609 seat heater text and figure, but ends with p611's running header 'REAR SEAT' and 'Seats'.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SEATS/1. Front Seat' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No overlap with sec_0236.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '1. Front Seat' is found at page_start p606, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. Front Seat' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p609 is 'SE-5', a chapter-prefixed arabic page number, with no roman/arabic transition inside p606-610.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '1. Front Seat' is rendered on physical p606, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p609 has 1 raster figure(s) (the seat heater drawing G5H0503) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p609 is the technical figure (the seat heater drawing G5H0503), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0235",
+      "page_sampled": 609,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p609 (the seat heater drawing G5H0503) sits in the body of '1. Front Seat' and is mapped to sec_0235.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '2. Power Door Lock' on p615 matches its numbered siblings.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0237 'SECURITY AND LOCKS' (p613-618) is correct; siblings '1. Ignition Switch' (p614) and '3. Keyless Entry System' (p616).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns its heading, bullets, circuit diagram labels and 11-item legend on p615, but ends with p616's running header 'Security and Locks' and 'KEYLESS ENTRY SYSTEM'.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SECURITY AND LOCKS/2. Power Door Lock' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "One-page ranges p614, p615 and p616 do not overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '2. Power Door Lock' is found at page_start p615, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '2. Power Door Lock' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p615 is 'SL-3', a chapter-prefixed arabic page number, with no roman/arabic transition inside p615-615.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '2. Power Door Lock' is rendered on physical p615, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "p615's 'B: CIRCUIT DIAGRAM' (B6H1651A: control module, lock/unlock outputs, five door lock actuators) has 59 vector drawing operations and no raster image, so it is missing from images_v1.json. Only its callouts and legend survive as text.",
+      "notes": "Root cause VEC (known BUG-010 family): the image extractor only captures raster XObjects; figures drawn with PDF vector paths are not extracted.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is kept from p615, so no decorative element was retained.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0239",
+      "page_sampled": 615,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p615 is mapped to any section; the missing vector diagram is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4; p622 shows its lettered topic 'B: WAGON' and sub-item '1. DESCRIPTION' as content.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0242 'SUNROOF/T-TOP/CONVERTIBLE TOP' (p619-624) is correct; the next section is the EXTERIOR BODY PANELS chapter (p625).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Starts with '1. Sunroof' on p620 and ends with its own closing 'MEMO' page p624 (SR-6); p622's figure, legend and bullets are owned, and nothing from p625 is absorbed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SUNROOF/T-TOP/CONVERTIBLE TOP/1. Sunroof' lists the ancestors in order. The chapter title itself contains '/', so splitting the path on '/' would create false levels.",
+      "notes": "Path separator collides with a chapter title that contains '/'.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Range p620-624 ends before p625; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '1. Sunroof' is found at page_start p620, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. Sunroof' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p622 is 'SR-4', a chapter-prefixed arabic page number, with no roman/arabic transition inside p620-624.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '1. Sunroof' is rendered on physical p620, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p622 has 1 raster figure(s) (the wagon twin sunroof drawing B5H0629A) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p622 is the technical figure (the wagon twin sunroof drawing B5H0629A), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0243",
+      "page_sampled": 622,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p622 (the wagon twin sunroof drawing B5H0629A) sits in the body of '1. Sunroof' and is mapped to sec_0243.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=3: the 'CRUISE CONTROL SYSTEM CC' banner on p629 is a chapter under the part (typed as a paragraph, but the level is correct).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0002 is correct; its single child '1. Cruise Control' (p630-638) matches the contents list.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Owns the banner and contents line on p629, but its last two nodes are p630's running header ('Cruise Control System', 'CRUISE CONTROL'), which belongs to the child.",
+      "notes": "Root cause 2002-C: the running header lines at the top of a section's first page (e.g. chapter name and topic header) are assigned to the preceding section, so each such section ends with 1-3 boilerplate nodes from the next page. No body content moves.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/CRUISE CONTROL SYSTEM' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The child covers p630-638; the next chapter starts at p639.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title 'CRUISE CONTROL SYSTEM' is found at page_start p629, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and 'CRUISE CONTROL SYSTEM' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p629 is an unnumbered chapter title page; the chapter body uses 'CC-n' folios, consistent with the arabic scheme.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading 'CRUISE CONTROL SYSTEM' is rendered on physical p629, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p629 has no raster image XObjects; its visual elements are the chapter banner, the 'CC' tab and a one-line contents list, which are text or vector rules rather than figures, so nothing meaningful was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p629; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0247",
+      "page_sampled": 629,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Verified absence: p629 contains no figure (the chapter banner, the 'CC' tab and a one-line contents list), and images_v1.json maps no image from this page to any section.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4; p635 shows its lettered topics 'H: CANCEL SIGNALS', 'I: VEHICLE SPEED SENSOR' and 'J: ENGINE THROTTLE' as content.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0247 is correct; the next section is the EXTERIOR/INTERIOR TRIM chapter (p639).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Starts with '1. Cruise Control' on p630 and ends with its own closing 'MEMO' page p638 (CC-10); p635 text and figure are owned, and nothing from p639 is absorbed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/CRUISE CONTROL SYSTEM/1. Cruise Control' lists the ancestors in order.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Range p630-638 ends before p639; no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '1. Cruise Control' is found at page_start p630, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '1. Cruise Control' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p635 is 'CC-7', a chapter-prefixed arabic page number, with no roman/arabic transition inside p630-638.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '1. Cruise Control' is rendered on physical p630, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "There is no table on sampled p635 (bullets and one figure); the section's only table is on p631.",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p635 has 1 raster figure(s) (the throttle cam and cable drawing B6H1300A) and images_v1.json keeps 1 from this page; no meaningful figure was discarded.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The image kept from p635 is the technical figure (the throttle cam and cable drawing B6H1300A), not a logo, rule or footer decoration.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0248",
+      "page_sampled": 635,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The figure on p635 (the throttle cam and cable drawing B6H1300A) sits in the body of '1. Cruise Control' and is mapped to sec_0248.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_level=4: '2. Trailer Lights Connector' (p641) matches its sibling '1. Instrument Panel'.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0249 'EXTERIOR/INTERIOR TRIM' (p639-642) is correct; this is the last section of the document.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Sampled p642 is the section's closing 'MEMO' page (EI-4, the document's last page); its nodes are owned by this section and nothing from any other section (it is the final section) is absorbed.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path='/2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EXTERIOR/INTERIOR TRIM/2. Trailer Lights Connector' lists the ancestors in order. The chapter title itself contains '/', so splitting the path on '/' would create false levels.",
+      "notes": "Path separator collides with a chapter title that contains '/'.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "It ends at the last page p642; nothing follows, so there is no overlap.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review=False with verification_score=100: the title '2. Trailer Lights Connector' is found at page_start p641, so the absence of a flag is justified.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source='toc': the PDF has an embedded outline and '2. Trailer Lights Connector' is one of its bookmarks; no inferred headers were used for this section.",
+      "notes": "",
+      "confidence": 0.95
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme='arabic'; the printed folio on physical p642 is 'EI-4', a chapter-prefixed arabic page number, with no roman/arabic transition inside p641-642.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied=0; bookmark targets are physical pages and the heading '2. Trailer Lights Connector' is rendered on physical p641, so no offset is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "Sampled p642 has no table, but the section's only table node (p641) is the empty placeholder '[Table 0x0]': Docling detected the connector pin grid (1)-(10) as a table with no cells. The pin-to-signal legend survives as text, but with some pin numbers dropped (e.g. 'Tail light (6) Rear fog light' has lost '(1)').",
+      "notes": "",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "Sampled p642 is blank, but on p641 the connector face drawing B6H1434A is a raster image (xref 2262, 119x52 pt). It was dropped by the 2%-of-page area filter in _extract_embedded_images (it covers about 1.3% of the page), so images_v1.json has no image for this section even though the drawing is the only pin-layout reference.",
+      "notes": "Same family as the known over-aggressive image filter bug (BUG-017).",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped from p642; no decorative logo, rule or footer graphic was retained as an image.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0251",
+      "page_sampled": 642,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image from p641-642 is mapped to any section; the filtered connector drawing is reported under 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.8
+    }
+  ]
+}

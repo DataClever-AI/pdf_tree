@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "provider": "claude/opus (lead, run.log check)",
+  "validated_at": "2026-10-07T21:29:14.556287+00:00",
+  "findings": [
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "bookmark_sanity ran with no hard failure and no repair (953 bookmarks, 467 pages). The run finished. toc_classification excluded 2 bookmarks (index, table_of_contents). Coverage, Precision and Structure are PASS.",
+      "notes": "Checked in logs/run.log of this version. The counts agree with the artifacts: 951 sections, 1 flagged section, 502 images, 9920 matched blocks + 169 front matter = 10089 blocks (9982 texts + 39 tables + 68 split -tail nodes). The log does not list the 68 split margin headings (BUG-029); that is only missing detail, not a defect.",
+      "confidence": 0.95,
+      "provider": "claude/opus (lead, run.log check)"
+    }
+  ]
+}

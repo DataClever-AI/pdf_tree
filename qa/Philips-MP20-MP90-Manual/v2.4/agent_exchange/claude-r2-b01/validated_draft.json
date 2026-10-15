@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus",
+  "validated_at": "2026-09-30T23:19:48.738976+00:00",
+  "findings": [
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p321 'SSC Sepsis Protocol' is a large bold heading under the chapter 25 'ProtocolWatch' title. It is one level below the chapter. Level 2 fits (#/texts/5931).",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p321 the chapter 25 'ProtocolWatch' title is above the 'SSC Sepsis Protocol' heading. The parent sec_0613 (ProtocolWatch) fits. The heading is followed by its own body text (#/texts/5932-5938).",
+      "notes": "",
+      "confidence": 0.85,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p333, the chapter 26 'Recording' opener page, the left-margin label 'MP40/MP50/MP60/MP70/MP90' sits beside the first paragraph 'The M1116B plug-in recorder records numerics...'. Node #/texts/6321 holds this label, and it belongs to sec_0633 inside sec_0614 (page_end 333). Nodes #/texts/6320 and #/texts/6322 ('26') also belong to sec_0633. The chapter 26 heading and text belong to sec_0634, so the label crosses the boundary. The start on p321 is correct: the heading #/texts/5931 opens the section.",
+      "notes": "Root cause: BUG-014 (page_end extension), page_end grew from 332 to 333 in v2.4. Which grade fits: Critical or Low? The label #/texts/6321 is not a running header or a folio. It tells the reader which monitors chapter 26 covers. That is body content of chapter 26, so it is content in the wrong section. Only the two '26' nodes (#/texts/6320, #/texts/6322) are pure boilerplate and would be Low alone. I use Critical because the most severe row applies. Probably Critical, not fully sure. Human should confirm. The earlier draft said nothing is absorbed. That was wrong. verify_claims says UNSUPPORTED because it finds no boundary signal. The tool does not see the margin label: its own section nodes have page 321-322 only, and the label is stored in descendant sec_0633. The evidence is visual, on p333, and the lead confirmed node ownership.",
+      "confidence": 0.78,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /ProtocolWatch/SSC Sepsis Protocol matches p321: chapter title 'ProtocolWatch' above, then the heading 'SSC Sepsis Protocol'.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p333, the label #/texts/6321 is owned by sec_0633, a descendant of sec_0614, but it is printed next to the first paragraph of chapter 26 (sec_0634). The chapter number '26' nodes #/texts/6320 and #/texts/6322 are also owned by sec_0633. So sec_0634 lacks its scope label and sec_0614 has extra content. Image img_0134 on p333 is correctly mapped to sec_0634.",
+      "notes": "Root cause: BUG-014 (page_end extension), page_end grew from 332 to 333 in v2.4. Which grade fits: Critical or Low? The label #/texts/6321 is not a running header or a folio. It tells the reader which monitors chapter 26 covers. That is body content of chapter 26, so it is content in the wrong section. Only the two '26' nodes (#/texts/6320, #/texts/6322) are pure boilerplate and would be Low alone. I use Critical because the most severe row applies. Probably Critical, not fully sure. Human should confirm. The earlier draft said nothing is absorbed. That was wrong. Same root cause as the page_start_end row.",
+      "confidence": 0.78,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and the score is 100. On p321 the heading and body are clear. The flag is not the problem; the boundary error on p333 is a separate row.",
+      "notes": "",
+      "confidence": 0.85,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The p321 heading 'SSC Sepsis Protocol' starts at the TOC page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.85,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The printed folio on p321 is '309', an arabic number. numbering_scheme arabic is correct.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Physical page 321 shows printed folio 309. The section starts on physical 321 and the heading is there. offset_applied 0 means the section page is already physical.",
+      "notes": "The 12-page gap between folio and physical page is constant front matter. Not treated as an error.",
+      "confidence": 0.8,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p321 shows no figure. images.json lists no image for p321. The only image of sec_0614 is img_0123 on p322. Nothing meaningful is visibly lost on p321.",
+      "notes": "",
+      "confidence": 0.85,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p321 the bottom-right folio '309' is kept as paragraph node #/texts/5939 in sec_0614 body. A page number is noise, not content. The same boilerplate also appears as '26' nodes #/texts/6320 and #/texts/6322 on p333.",
+      "notes": "Only boilerplate is retained, so Low. The margin label #/texts/6321 is not noise; it is graded Critical in the page_start_end row.",
+      "confidence": 0.75,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    },
+    {
+      "manual_id": "Philips-MP20-MP90-Manual",
+      "section_id": "sec_0614",
+      "page_sampled": "321",
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p321 has no figure. On p333 the recorder picture (img_0134) is mapped to sec_0634, the chapter 26 section, which is correct. img_0123 on p322 is mapped to sec_0614.",
+      "notes": "",
+      "confidence": 0.85,
+      "provider": "claude-sonnet (pdf-tree-qa-reviewer); lead claude-opus"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "model": "mlx-community/Qwen3-VL-4B-Instruct-4bit",
+  "total_seconds": 275.26104229099656,
+  "avg_seconds": 45.87684038183276,
+  "peak_memory_gb": 7.054389464,
+  "valid_json": 6,
+  "exact_section_id": 2,
+  "exact_check_order": 6,
+  "result_accuracy": 0.7222222222222222,
+  "severity_accuracy": 0.7222222222222222,
+  "pass_severity_blank": 13,
+  "pass_count": 13,
+  "defect_sections_detected": 0,
+  "defect_sections_total": 3,
+  "clean_false_positive_sections": 0,
+  "details": [
+    {
+      "section_id": "sec_0004",
+      "overall_status": "PASS",
+      "rows": [
+        {
+          "ref": "5.4-hierarchy_level",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "El encabezado '1.2.1 HemoSphere Advanced Monitor with HemoSphere Swan-Ganz Module' está correctamente indentado como nivel 3 en la jerarquía."
+        },
+        {
+          "ref": "5.4-page_start_end",
+          "expected": "FAIL",
+          "got": "PASS",
+          "expected_severity": "Critical",
+          "got_severity": "",
+          "evidence": "El contenido visible en la página 17, incluyendo el encabezado y el texto que sigue, pertenece exclusivamente a esta sección y no se comparte con otras secciones."
+        },
+        {
+          "ref": "5.6-table_content",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La tabla con el contenido 'Intended Purpose of this Manual ... 17 | Indications For Use ...' es un elemento de contenido real en la página, no un placeholder."
+        }
+      ]
+    },
+    {
+      "section_id": "sec_0015",
+      "overall_status": "PASS",
+      "rows": [
+        {
+          "ref": "5.4-parent_child",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "El encabezado '1.7 Abbreviations Found in This Manual' está visualmente en la página 26, y el contenido de la tabla que comienza con LVSWI y MAP está en la página 27, lo que corresponde a la estructura jerárquica del encabezado."
+        },
+        {
+          "ref": "5.4-page_start_end",
+          "expected": "FAIL",
+          "got": "PASS",
+          "expected_severity": "Critical",
+          "got_severity": "",
+          "evidence": "La tabla que comienza con A/D en la página 26 y la tabla que comienza con LVSWI en la página 27 están correctamente asignadas a sus respectivos encabezados y no hay contenido cruzado entre las páginas."
+        },
+        {
+          "ref": "5.6-table_content",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La tabla en la página 27 con encabezados 'Abbreviation' y 'Definition' y contenido real como 'LVSWI', 'MAP', 'MPAP', 'OR', 'PA' es un objeto de tabla genuino con contenido estructurado."
+        }
+      ]
+    },
+    {
+      "section_id": "sec_0279",
+      "overall_status": "PASS",
+      "rows": [
+        {
+          "ref": "5.4-page_start_end",
+          "expected": "FAIL",
+          "got": "PASS",
+          "expected_severity": "Critical",
+          "got_severity": "",
+          "evidence": "La sección G.3.6 comienza en la página 231 y termina en la página 232, según el contenido visible en las imágenes 231 y 232. No hay contenido visual que pertenezca a esta sección en las páginas 233, 236, 237, 238 ni 240."
+        },
+        {
+          "ref": "5.4-gaps_duplicates",
+          "expected": "FAIL",
+          "got": "PASS",
+          "expected_severity": "Medium",
+          "got_severity": "",
+          "evidence": "No hay brechas ni duplicaciones visibles en el contenido de la sección G.3.6. La sección se inicia en la página 231 y termina en la página 232, y no hay contenido visual que pertenezca a esta sección en las páginas 233, 236, 237, 238 ni 240."
+        },
+        {
+          "ref": "5.6-table_content",
+          "expected": "FAIL",
+          "got": "PASS",
+          "expected_severity": "Medium",
+          "got_severity": "",
+          "evidence": "No hay tablas en la sección G.3.6. La sección G.3.6 no contiene tablas, por lo tanto, no hay contenido tabular para validar."
+        }
+      ]
+    },
+    {
+      "section_id": "sec_0025",
+      "overall_status": "PASS",
+      "rows": [
+        {
+          "ref": "5.4-hierarchy_level",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "El encabezado '2.6 Applicable Standards' está correctamente nivelado como nivel 2 en la jerarquía."
+        },
+        {
+          "ref": "5.4-page_start_end",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "El contenido de la sección '2.6 Applicable Standards' incluye el título y la tabla, y no hay contenido visual que pertenezca a una sección adyacente."
+        },
+        {
+          "ref": "5.6-table_content",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La tabla 'Table 2-3 Applicable standards' contiene datos estructurados en dos columnas: 'Standard' y 'Title', con cinco filas de entrada válida."
+        }
+      ]
+    },
+    {
+      "section_id": "sec_0066",
+      "overall_status": "PASS",
+      "rows": [
+        {
+          "ref": "5.4-parent_child",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La sección 5.3.2 'Graphical Trend Monitoring View' está claramente vinculada a la sección 5.3 'Monitor Views' en la página 69, y el contenido visual corresponde a esta sección sin errores de jerarquía."
+        },
+        {
+          "ref": "5.4-page_start_end",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La sección 5.3.2 comienza en la página 69 y termina en la página 71, y el contenido visual de ambas páginas está dentro de este rango. No hay contenido visual que pertenezca a esta sección que esté asignado a una sección adyacente."
+        },
+        {
+          "ref": "5.4-hierarchy_path",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La ruta de jerarquía '/Navigating the HemoSphere Advanced Monitor/5.3 Monitor Views/5.3.2 Graphical Trend Monitoring View' es coherente con el contenido visual. La sección 5.3.2 aparece como subsección de 5.3, y el contenido visual corresponde a esta estructura."
+        }
+      ]
+    },
+    {
+      "section_id": "sec_0243",
+      "overall_status": "PASS",
+      "rows": [
+        {
+          "ref": "5.4-hierarchy_level",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "El título 'Equations for Calculated Patient Parameters' aparece en la página 200 como un encabezado principal con nivel de jerarquía 1."
+        },
+        {
+          "ref": "5.4-page_start_end",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La sección comienza en la página 200 y termina en la página 205, y el contenido visible en estas páginas corresponde exclusivamente a esta sección, incluyendo la tabla C-1 y su continuación."
+        },
+        {
+          "ref": "5.6-table_content",
+          "expected": "PASS",
+          "got": "PASS",
+          "expected_severity": "",
+          "got_severity": "",
+          "evidence": "La tabla C-1 'Cardiac and oxygenation profile equations' y su continuación en la página 205 contienen contenido estructurado con fórmulas y definiciones reales, no es un placeholder."
+        }
+      ]
+    }
+  ]
+}

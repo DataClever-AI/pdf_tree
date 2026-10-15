@@ -1,0 +1,1344 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p34 the heading 'Permanent Keys' is drawn at the size of a level 4 heading. hierarchy_level is 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Using Keys (sec_0035). The page shows 'Permanent Keys' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading (#/texts/524) and its intro (#/texts/525) are at the bottom of p34. The four key descriptions (#/texts/530-533: Pause Alarms, Silence, Main Screen, Main Setup) are at the top of p35. The SmartKeys heading (#/texts/529) below them is in sec_0037.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Permanent Keys'. Its ancestors match the running header on p34 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Permanent Keys' appears once. The intro on p34 and the four key descriptions on p35 are present once. No node repeats in a neighbour.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Permanent Keys' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Permanent Keys' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p34 is 22, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Permanent Keys' is on its declared physical page. Printed folio 22 on p34 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p35 four permanent key icons (Pause Alarms, Silence, Main Screen, Main Setup) sit left of #/texts/530-533. None is in images.json. Each icon is named in its text line.",
+      "notes": "Probably BUG-017/BUG-020 (small image filters drop small icons). The key name is in the text, so only the icon picture is lost. Same grade as v2.16.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Permanent Keys'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 34,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0036. The four key icons on p35 are not extracted at all, which is graded in 5.5-filters_discarding. The Navigation Point photo img_0037 on p34 is in sec_0032, which is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p42 the heading 'Connecting Additional Displays to the Monitor' is drawn at the size of a level 2 heading. hierarchy_level is 2.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Basic Operation (sec_0001). The page shows 'Connecting Additional Displays to the Monitor' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "On p41 node #/texts/670 'Change Screen' is in sec_0047. It is the title of the menu figure printed at the top of p41 (y 708), above the heading (y 402). The figure img_0040 belongs to sec_0046. The rest of sec_0047 is correct.",
+      "notes": "Probably BUG-023 (text read after a heading but printed above it). It is one lone label, so Medium and not Critical. The checker may expect Critical. The owner sec_0046 is outside this batch. Same as v2.16.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Connecting Additional Displays to the Monitor'. The running header on p42 shows the same section name and heading sizes agree.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "In sec_0047 no body paragraph of p41 or p42 is missing and none repeats. The misplaced label #/texts/670 is graded in 5.4-page_start_end. Its owner sec_0046 is outside this batch.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Connecting Additional Displays to the Monitor' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Connecting Additional Displays to the Monitor' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p42 is 30, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Connecting Additional Displays to the Monitor' is on its declared physical page. Printed folio 30 on p42 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No picture of sec_0047 is missing on p41 or p42. The menu figure above the heading is kept as img_0040. The p42 part has no picture.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Connecting Additional Displays to the Monitor'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0047",
+      "page_sampled": 42,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The Change Screen menu picture img_0040 (227x293, p41) is mapped to sec_0046, not sec_0047. It is printed above the sec_0047 heading, so the mapping is right.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p30 the heading 'M3012A Hemodynamic MMS Extension' is drawn at the size of a level 4 heading. hierarchy_level is 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is MMS Extensions (sec_0023). The page shows 'M3012A Hemodynamic MMS Extension' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p30 the heading (#/texts/436), callouts 1-4 (#/texts/437-440), legend (#/texts/441-444) and two paragraphs (#/texts/445-446) are all in sec_0025. The next heading is on p31. No node of a neighbour is inside.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'M3012A Hemodynamic MMS Extension'. Its ancestors match the running header on p30 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'M3012A Hemodynamic MMS Extension' appears once. The legend 1-4 and both paragraphs on p30 are present and not repeated elsewhere.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'M3012A Hemodynamic MMS Extension' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'M3012A Hemodynamic MMS Extension' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p30 is 18, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'M3012A Hemodynamic MMS Extension' is on its declared physical page. Printed folio 18 on p30 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The only picture on p30 is the M3012A photo and img_0033 holds it. Callout numbers 1-4 are kept as text nodes #/texts/437-440, and the legend names each connector.",
+      "notes": "The leader lines and numbers drawn on the photo are not in img_0033, as in sec_0026. Kept as PASS like v2.16 because the legend names each part. A reviewer may grade this Low or Medium.",
+      "confidence": 0.75
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'M3012A Hemodynamic MMS Extension'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0025",
+      "page_sampled": 30,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0033 (472x437) on p30 is the M3012A photo. It is mapped to sec_0025, which owns the heading above it.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p31 the heading 'Operating and Navigating' is drawn at the size of a level 2 heading. hierarchy_level is 2.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Basic Operation (sec_0001). The page shows 'Operating and Navigating' as one of its topics. The child_sections list matches the headings seen on the pages. The children sec_0027-sec_0041 cover p32-38 and match the headings there.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p31 the heading (#/texts/450), two intro paragraphs (#/texts/451-452), callout numbers 1-18 and tables/12 are in sec_0026. The page_end 38 comes from the last child (sec_0041, the calculator on p38). Its own content stops on p31.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Operating and Navigating'. Its ancestors match the running header on p31 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Operating and Navigating' appears once. The intro text and tables/12 are present and not repeated. Its subsections (sec_0027-sec_0041) hold the rest.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Operating and Navigating' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Operating and Navigating' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p31 is 19, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Operating and Navigating' is on its declared physical page. Printed folio 19 on p31 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p31 tables/12 has 18 numbered entries in two column pairs. Items 1-9 and 10-18 match the printed table, including the long text of items 17 and 18. No row is lost or shifted.",
+      "notes": "Table text unchanged by the v2.17 recovery step. Same as v2.16.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Medium",
+      "evidence": "On p31 img_0034 is only the monitor screenshot (1024x800). The callout numbers 1-18 and their leader lines drawn on top of it are not in the image. The numbers are only loose text nodes in sec_0026.",
+      "notes": "Probably BUG-010 (vector callouts not in the raster crop). Unique information is lost: which screen element has which number. Same grade as v2.16. The figure itself is kept (img_0034), so this is not a lost figure: Medium, not Critical, and the numbers survive as text.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Operating and Navigating'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0026",
+      "page_sampled": 31,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0034 (1024x800) on p31 is the monitor screen figure. It is mapped to sec_0026, which owns the heading above it.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p33 the heading 'Using the SpeedPoint' is drawn at the size of a level 3 heading. hierarchy_level is 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Operating and Navigating (sec_0026). The page shows 'Using the SpeedPoint' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p33 the heading (#/texts/487), callouts 1-7, the caption (#/texts/495), tables/14 and two closing paragraphs (#/texts/496-497) are all in sec_0031. The next heading is on p34.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Using the SpeedPoint'. Its ancestors match the running header on p33 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Using the SpeedPoint' appears once. The caption, tables/14 and both paragraphs are present once and not repeated elsewhere.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Using the SpeedPoint' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Using the SpeedPoint' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p33 is 21, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Using the SpeedPoint' is on its declared physical page. Printed folio 21 on p33 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.6-table_content",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p33 tables/14 has 7 numbered rows (Silence to On/standby key). Number and text of each row match the printed table. No row is lost or shifted.",
+      "notes": "Table text unchanged by the v2.17 recovery step. Same as v2.16.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p33 two figures are kept: img_0036 (vector crop of the key photo with numbers 1-7) and img_0035 (remote SpeedPoint photo). The dashed lines from 6 and 7 to the remote are not in the crops. Legend rows 6 and 7 name those keys.",
+      "notes": "Same as v2.16. A reviewer may grade the lost dashed lines Low. The raster check may flag the left photo, but it is inside img_0036, so the figure is not lost. The 113x222 px raster is the left key photo, visible inside img_0036 (353x348), so PASS is correct.",
+      "confidence": 0.82
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Both images kept on p33 (img_0035, img_0036) are real figures. No rule, logo or footer divider is kept as an image.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0031",
+      "page_sampled": 33,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p33 img_0035 (128x128, remote SpeedPoint photo) and img_0036 (353x348, vector crop of the integrated SpeedPoint) are both mapped to sec_0031, which owns the heading above them.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p35 the heading 'Permanent Keys' is drawn at the size of a level 4 heading. hierarchy_level is 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Using Keys (sec_0035). The page shows 'Permanent Keys' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading (#/texts/524) and its intro (#/texts/525) are at the bottom of p34. The four key descriptions (#/texts/530-533: Pause Alarms, Silence, Main Screen, Main Setup) are at the top of p35. The SmartKeys heading (#/texts/529) below them is in sec_0037.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Permanent Keys'. Its ancestors match the running header on p35 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Permanent Keys' appears once. The intro on p34 and the four key descriptions on p35 are present once. No node repeats in a neighbour.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Permanent Keys' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Permanent Keys' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p35 is 23, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Permanent Keys' is on its declared physical page. Printed folio 23 on p35 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p35 the four permanent key icons (Pause Alarms, Silence, Main Screen, Main Setup) left of #/texts/530-533 are not in images.json. Each icon is named in its text line.",
+      "notes": "Lead change: FAIL Low to PASS. This is the same defect as the sec_0036 p34 5.5-filters_discarding row (FAIL Low, BUG-017/BUG-020), which already grades these icons. One defect is graded once per section, as in the approved v2.16 rows.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Permanent Keys'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0036",
+      "page_sampled": 35,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0036. The four key icons on p35 are not extracted, which is graded in 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p36 the heading 'SmartKeys' is drawn at the size of a level 4 heading. hierarchy_level is 4.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Using Keys (sec_0035). The page shows 'SmartKeys' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading (#/texts/529) is on p35 at y 537, below the four permanent key rows. The key descriptions run on p36 (#/texts/552-572) and end on p37 with 'open unit conversion window' (#/texts/591). The Hardkeys heading below it on p37 is not in sec_0037.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'SmartKeys'. Its ancestors match the running header on p36 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'SmartKeys' appears once. The intro, all icon descriptions on p35, p36 and p37 and the last row of p37 are present once. No node repeats in a neighbour.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'SmartKeys' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'SmartKeys' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p36 is 24, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'SmartKeys' is on its declared physical page. Printed folio 24 on p36 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p35, p36 and p37 about 70 SmartKey icons sit left of each description. None is in images.json. Every icon has a text label, for example #/texts/535 and #/texts/591.",
+      "notes": "Probably BUG-017/BUG-020 (small image filters drop small icons). The text label keeps the meaning, so only the icon picture is lost. Same grade as v2.16.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'SmartKeys'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0037",
+      "page_sampled": 36,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0037. The SmartKey icons on p35-37 are not extracted at all, which is graded in 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p39 the heading 'Standby Mode' is drawn at the size of a level 3 heading. hierarchy_level is 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Operating Modes (sec_0042). The page shows 'Standby Mode' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading (#/texts/622) is on p39 under the Operating Modes text. It continues to p40 with the last bullet (#/texts/633) and the X2/MP5 paragraph (#/texts/634). The Understanding Screens heading below it on p40 is not in it.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Standby Mode'. Its ancestors match the running header on p39 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Standby Mode' appears once. Its intro, steps and 'To resume monitoring,' (#/texts/629) on p39 and the bullet on p40 are present once.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Standby Mode' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Standby Mode' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p39 is 27, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Standby Mode' is on its declared physical page. Printed folio 27 on p39 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Standby Mode on p39 and p40 has no picture of its own. The Config box above it is kept as img_0039 in sec_0042. The small Change Screen icon on p40 belongs to a later section.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Standby Mode'. The Config box img_0039 sits in sec_0042 and is a screen element, not a rule or logo.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0043",
+      "page_sampled": 39,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The grey Config box on p39 is img_0039 (111x28). It is mapped to sec_0042 Operating Modes. That is right because it is printed in the Operating Modes text, above the Standby Mode heading.",
+      "notes": "The extracted box shows no 'Config' word, but the word is only an example label.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p42 the heading 'Using the XDS Remote Display' is drawn at the size of a level 2 heading. hierarchy_level is 2.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Basic Operation (sec_0001). The page shows 'Using the XDS Remote Display' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p42 the heading (#/texts/685) and three paragraphs (#/texts/686-688) are in sec_0048. The text above the heading belongs to sec_0047. The Visitor Screen heading below is not inside.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Using the XDS Remote Display'. Its ancestors match the running header on p42 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Using the XDS Remote Display' appears once. All three paragraphs are present once and not repeated in a neighbour.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Using the XDS Remote Display' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Using the XDS Remote Display' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p42 is 30, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Using the XDS Remote Display' is on its declared physical page. Printed folio 30 on p42 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No picture is on p42 in this section. Nothing is dropped that is not already in the text.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Using the XDS Remote Display'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0048",
+      "page_sampled": 42,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0048 and none is needed. The only extracted image on p41, img_0040, is in sec_0046.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p45 the heading 'Changing Measurement Settings' is drawn at the size of a level 3 heading. hierarchy_level is 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Understanding Settings (sec_0055). The page shows 'Changing Measurement Settings' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p45 the heading (#/texts/750), the intro (#/texts/751) and the four bullets plus closing paragraph (#/texts/752-756) are in sec_0056. The next heading 'Switching a Measurement On and Off' is not inside.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Changing Measurement Settings'. Its ancestors match the running header on p45 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Changing Measurement Settings' appears once. The intro, four bullets and closing paragraph are present once and not repeated elsewhere.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Changing Measurement Settings' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Changing Measurement Settings' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p45 is 33, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Changing Measurement Settings' is on its declared physical page. Printed folio 33 on p45 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No picture is on p45. Nothing is dropped that is not already in the text.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Changing Measurement Settings'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0056",
+      "page_sampled": 45,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0056 and none is needed. p45 has no figure.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p47 the heading 'Freezing All Waves' is drawn at the size of a level 3 heading. hierarchy_level is 3.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The parent is Freezing Waves (sec_0063). The page shows 'Freezing All Waves' as one of its topics. The child_sections list matches the headings seen on the pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The heading (#/texts/794) and 'To freeze all waves on the screen,' (#/texts/795) are at the bottom of p46. Step 1 and the result sentence (#/texts/799-800) are at the top of p47. The next heading 'Measuring Frozen Waves' is not inside.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The hierarchy_path ends with 'Freezing All Waves'. Its ancestors match the running header on p47 and the heading sizes.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "'Freezing All Waves' appears once. The intro on p46 and step 1 with its result on p47 are present once. No node is repeated in a neighbour.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Freezing All Waves' is on the declared page, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Freezing All Waves' is on its bookmarked page, so the TOC source is supported.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is arabic. The printed folio on p47 is 35, an arabic number.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0 and 'Freezing All Waves' is on its declared physical page. Printed folio 35 on p47 differs from the physical page by a constant 12 on every page seen.",
+      "notes": "The constant folio shift comes from the front matter, not from an offset error.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p47 the grey Freeze Waves SmartKey icon sits at the top right of step 1 (#/texts/799). It is not in images.json. The step text names the Freeze Waves SmartKey.",
+      "notes": "Probably BUG-017/BUG-020 (small image filters drop small icons). The text names the key, so the impact is low. Same grade as v2.16.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image is kept for 'Freezing All Waves'. No rule, logo or footer divider appears in the extracted images of these pages.",
+      "notes": "",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0065",
+      "page_sampled": 47,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0065. The one icon on p47 is not extracted, which is graded in 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.93
+    }
+  ]
+}

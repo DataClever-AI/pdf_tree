@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "provider": "claude/opus (lead regrade, corrected rule 6i)",
+  "validated_at": "2026-10-08T05:02:35.875481+00:00",
+  "findings": [
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0171",
+      "page_sampled": "102",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p102 both 'i' note icons (next to the screen saver note and the earlier laser note area) were not extracted. The notes are fully in the text. The Touch Panel screenshot (img_0049) was kept.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0202",
+      "page_sampled": "116",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The 'i' note icon next to 'For instructions using accessories see the instruction for use of the manufacturer' on p116 was not extracted. The two table-top photos were kept (img_0077, img_0078).",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0208",
+      "page_sampled": "121",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p121 five 'i' note icons beside the infrared, laser, view, infants and manufacturer notes were not extracted. The 3D camera room picture (img_0084) was kept.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0212",
+      "page_sampled": "124",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. The 'i' note icon at the top of p124 (Computer On/Off key note) was not extracted. The workplace computer photo on p123 was kept as img_0087.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    },
+    {
+      "manual_id": "SOMATOM_Force_IFU_VB30",
+      "section_id": "sec_0170",
+      "page_sampled": "102",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p101 the small laser lightmarker key icon next to 'This key turns on and off the laser lightmarkers' was not extracted. The 'i' note icon on p102 was not extracted either. The text states what the key does.",
+      "notes": "Still Low because a meaningful icon is missing: the Laser lightmarker key icon on p101. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.9,
+      "provider": "claude/opus (lead regrade, corrected rule 6i)"
+    }
+  ]
+}

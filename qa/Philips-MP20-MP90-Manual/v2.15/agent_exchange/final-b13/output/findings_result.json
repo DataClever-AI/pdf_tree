@@ -1,0 +1,1224 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p355 'Accessing the Drug Calculator' is a heading under sec_0673 'Using the Drug Calculator'. hierarchy_level 2 fits the bookmark nesting and the heading size.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0673 'Using the Drug Calculator', which matches the document structure. It has no child sections and none are printed on its page.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p355 sec_0674 owns the heading 'Accessing the Drug Calculator' (#/texts/6678), the access instruction (#/texts/6679) and the folio '343'. The Term/Definition/Units table (#/tables/119) printed above the heading is now in sec_0673, with its intro, the 'mcg' note and the WARNING.",
+      "notes": "Old problem (BUG-003, v2): now fixed. Checked sec_0673 in tree.json, which now owns table #/tables/119.",
+      "confidence": 0.93
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'Accessing the Drug Calculator' and the ancestors match the printed outline for p355.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p355 the chapter intro, the Term table (#/tables/119), the 'mcg' note and the WARNING are in sec_0673 only. sec_0674 has only its own heading and instruction. No node is repeated or missing.",
+      "notes": "Old table-placement problem (BUG-003, v2): now fixed.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Accessing the Drug Calculator' is visible on p355, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Accessing the Drug Calculator' is a PDF bookmark and the heading is found on p355.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p355 are arabic numbers (for example 343), which fits.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 355 is the physical page where the heading 'Accessing the Drug Calculator' is rendered (the printed folio is 343, so the bookmark already uses physical pages).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p355 a small Drug Calculator SmartKey icon is printed to the right of the access instruction (#/texts/6679) under the heading of sec_0674. It is not in images.json and no image is mapped to sec_0674. The key name 'Drug Calculator SmartKey' is in the text.",
+      "notes": "Old problem (BUG-020, v2): still present. Small icon dropped by the minimum-area image filter. Meaning is kept in text, so Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative element or noise image is kept for sec_0674 on p355. No image is mapped to it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0674",
+      "page_sampled": 355,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0674. The only visual in its area is the small SmartKey icon on p355, which was not extracted (see 5.5-filters_discarding). No image is wrongly mapped to this section.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p359 'IntelliBridge EC10 Module' is a heading under none (chapter level). hierarchy_level 1 fits the bookmark nesting and the heading size.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives none (chapter level), which matches the document structure. Its child sections (sub-headings on the following pages) are listed in child_sections and all point back to it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0682 owns the chapter title, the intro, the legend table #/tables/120 and the figure labels on p359, all printed before the first sub-heading. page_end 362 is the end of its children. No neighbour content is absorbed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'IntelliBridge EC10 Module' and the ancestors match the printed outline for p359.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Each text block of 'IntelliBridge EC10 Module' on p359 is in one section only. No block is missing and none is repeated in a neighbour.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'IntelliBridge EC10 Module' is visible on p359, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'IntelliBridge EC10 Module' is a PDF bookmark and the heading is found on p359.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p359 are arabic numbers (for example 347), which fits.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 359 is the physical page where the heading 'IntelliBridge EC10 Module' is rendered (the printed folio is 347, so the bookmark already uses physical pages).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p359 the legend table #/tables/120 prints 'a a module name' in row 1. The page shows 'a module name' (bold a plus text). Rows b to e are correct and every value stays with its letter.",
+      "notes": "The first letter is repeated. Probably a cell-reading artefact. Meaning and order are kept, so Low.",
+      "confidence": 0.82
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p359 the module figure was kept as img_0219 (origin vector, 292x313 px). The crop shows the full module and the arrows a to e. No figure is lost.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The only image for sec_0682, img_0219, is a real figure (module drawing with a to e labels). The labels are part of the drawing. No decorative noise is kept.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0682",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p359 the vector figure img_0219 (IntelliBridge EC10 module with arrows a to e) is mapped to sec_0682. This is the right owner, because the figure sits under the chapter title and intro.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p363 'VueLink Modules' is a heading under none (chapter level). hierarchy_level 1 fits the bookmark nesting and the heading size.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives none (chapter level), which matches the document structure. Its child sections (sub-headings on the following pages) are listed in child_sections and all point back to it.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0690 owns the heading, two intro paragraphs, tables #/tables/122 and #/tables/123 and the figure labels, all on p363. page_end 366 is the end of its child sections (sec_0691 to sec_0697). The p366 bullet belongs to sec_0697. No neighbour content is absorbed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'VueLink Modules' and the ancestors match the printed outline for p363.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Each text block of 'VueLink Modules' on p363 is in one section only. No block is missing and none is repeated in a neighbour.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'VueLink Modules' is visible on p363, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'VueLink Modules' is a PDF bookmark and the heading is found on p363.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p363 are arabic numbers (for example 351), which fits.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 363 is the physical page where the heading 'VueLink Modules' is rendered (the printed folio is 351, so the bookmark already uses physical pages).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p363 the legend table #/tables/123 prints 'a a module name' and 'c c selection LED'. The page shows 'a module name' and 'c selection LED'. The other rows (b, d to g) are correct. Table #/tables/122 (module types) matches the page in all 5 rows and 5 columns.",
+      "notes": "The letter is repeated in two rows. Probably a cell-reading artefact. Meaning and order are kept, so Low.",
+      "confidence": 0.82
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p363 the module figure was kept as img_0222 (origin vector, 428x305 px). The crop shows the whole module and the labels a to g. No figure is lost.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The only image for sec_0690, img_0222, is a real figure (VueLink module with labels). No decorative noise is kept.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p363 the vector figure img_0222 (VueLink module with labels a to g) is mapped to sec_0690. This is the right owner, because the figure sits under the chapter heading.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p367 'Timer Types' is a heading under sec_0699 'Viewing Timers'. hierarchy_level 3 fits the bookmark nesting and the heading size.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0699 'Viewing Timers', which matches the document structure. It has no child sections and none are printed on its page.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section sec_0700 owns #/texts/6996 heading, #/texts/6997 and #/texts/6998 paragraphs on p367. The heading starts the section. The text stops before the next heading, and no neighbour content is absorbed or missing.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'Timer Types' and the ancestors match the printed outline for p367.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Each text block of 'Timer Types' on p367 is in one section only. No block is missing and none is repeated in a neighbour.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Timer Types' is visible on p367, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Timer Types' is a PDF bookmark and the heading is found on p367.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p367 are arabic numbers (for example 355), which fits.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 367 is the physical page where the heading 'Timer Types' is rendered (the printed folio is 355, so the bookmark already uses physical pages).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p367 a small round timer icon is printed beside the 'Select the Timer SmartKey' bullet. It is not in images.json and no image is extracted for this page. The text 'Timer SmartKey' states the meaning.",
+      "notes": "Old problem (BUG-020, v2): still present. The icon is above the heading of sec_0700 and probably belongs to sec_0699 'Viewing Timers', but it is dropped from the whole tree. Low because the text has the meaning.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, rule or logo is kept as an image for 'Timer Types'. No image is mapped to sec_0700.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0700. The timer icon on p367 sits above the 'Timer Types' heading, next to the SmartKey bullet of 'Viewing Timers', so it is not part of this section. Its loss is graded in 5.5-filters_discarding.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p354 'Other Reports' is a heading under sec_0667 'Sample Report Printouts'. hierarchy_level 3 fits the bookmark nesting and the heading size. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0667 'Sample Report Printouts', which matches the document structure. It has no child sections and none are printed on its page. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section sec_0672 owns #/texts/6667 heading, #/texts/6668 paragraph and the folio #/texts/6669 ('342') on p354. The heading starts the section. The text stops before the next heading, and no neighbour content is absorbed or missing. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'Other Reports' and the ancestors match the printed outline for p354. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p354 the heading 'Other Reports' and its one sentence are in sec_0672. The ECG table above it is in the neighbour sec_0671. Nothing is repeated or missing. Sampled p355 is the chapter 28 opener.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Other Reports' is visible on p354, so no flag is needed. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Other Reports' is a PDF bookmark and the heading is found on p354. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p354 are arabic numbers (for example 342), which fits. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 354 is the physical page where the heading 'Other Reports' is rendered (the printed folio is 342, so the bookmark already uses physical pages). Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Sec_0672 has no figure on p354. The p355 sampled page is the chapter 28 opener; its only visual loss is the small SmartKey icon, which sits under sec_0674.",
+      "notes": "verify_claims flags a dropped 36x24 raster on p355. That icon belongs to sec_0674 and is graded there (FAIL Low, BUG-020), so it is not counted twice here.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, rule or logo is kept as an image for 'Other Reports'. No image is mapped to sec_0672. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0672",
+      "page_sampled": 355,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0672 and no figure is printed in its area on p354. Nearby images are mapped to their own sections. Sampled page 355 is the chapter 28 opener and is outside this section, so the content was judged on p354.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p356 'About the Rule of Six' is a heading under sec_0675 'Performing Drug Calculations'. hierarchy_level 3 fits the bookmark nesting and the heading size.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0675 'Performing Drug Calculations', which matches the document structure. It has no child sections and none are printed on its page.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section sec_0676 owns #/texts/6687 to #/texts/6693 (heading, intro, CAUTION box, formula text, two bullets) on p356. The heading starts the section. The text stops before the next heading, and no neighbour content is absorbed or missing.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'About the Rule of Six' and the ancestors match the printed outline for p356.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Each text block of 'About the Rule of Six' on p356 is in one section only. No block is missing and none is repeated in a neighbour.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'About the Rule of Six' is visible on p356, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'About the Rule of Six' is a PDF bookmark and the heading is found on p356.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p356 are arabic numbers (for example 344), which fits.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 356 is the physical page where the heading 'About the Rule of Six' is rendered (the printed folio is 344, so the bookmark already uses physical pages).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No meaningful figure is lost on p356 for this section. Nothing visual in the section area is missing from images.json.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, rule or logo is kept as an image for 'About the Rule of Six'. No image is mapped to sec_0676.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0676",
+      "page_sampled": 356,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p356 the Drug Calculator screenshot (img_0215) is printed under 'Performing Calculations for a Non-Specific Drug' and is mapped to sec_0677. That is the right owner. No image belongs to sec_0676.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p358 'Documenting Drug Calculations' is a heading under sec_0673 'Using the Drug Calculator'. hierarchy_level 2 fits the bookmark nesting and the heading size. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0673 'Using the Drug Calculator', which matches the document structure. It has no child sections and none are printed on its page. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "On p358 the text inside the Titration Table screenshot (Lidocaine, Titration Table, Rate, Dose, mg/min, ml/hour and more; #/texts/6790 to #/texts/6816) is stored in sec_0681. That screenshot sits under 'Using the Titration Table' (sec_0680). sec_0681 should own only its heading and three bullets (#/texts/6786 to #/texts/6789).",
+      "notes": "Lead check of p358: the Titration Table screenshot is printed beside the sec_0680 text. Its labels #/texts/6790-6816 are read after the 'Documenting Drug Calculations' heading, so they land in sec_0681. Probably BUG-023 (same as sec_0047 p41). Critical by the Sprint table. The nodes are screenshot text only, so the human may weigh this lower.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'Documenting Drug Calculations' and the ancestors match the printed outline for p358. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "FAIL",
+      "severity": "Critical",
+      "evidence": "Nodes #/texts/6790 to #/texts/6816 (text of the Titration Table screenshot on p358) belong to sec_0680 but are in sec_0681. sec_0680 has the image img_0218 but none of its text. The Drip Table screenshot text is correctly kept in sec_0679.",
+      "notes": "Lead check of p358: the Titration Table screenshot is printed beside the sec_0680 text. Its labels #/texts/6790-6816 are read after the 'Documenting Drug Calculations' heading, so they land in sec_0681. Probably BUG-023 (same as sec_0047 p41). Critical by the Sprint table. The nodes are screenshot text only, so the human may weigh this lower.",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Documenting Drug Calculations' is visible on p358, so no flag is needed. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Documenting Drug Calculations' is a PDF bookmark and the heading is found on p358. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p358 are arabic numbers (for example 346), which fits. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 358 is the physical page where the heading 'Documenting Drug Calculations' is rendered (the printed folio is 346, so the bookmark already uses physical pages). Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No meaningful figure is lost on p358 for this section. Nothing visual in the section area is missing from images.json. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, rule or logo is kept as an image for 'Documenting Drug Calculations'. No image is mapped to sec_0681. Sampled page 359 is the chapter 29 opener and is outside this section, so the content was judged on p358.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0681",
+      "page_sampled": 359,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p358 the Drip Table and Titration Table screenshots are mapped to sec_0679 (img_0217) and sec_0680 (img_0218). Each sits under its own heading. No image belongs to sec_0681.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p362 'Language Conflict with External Device Drivers' is a heading under sec_0682 'IntelliBridge EC10 Module'. hierarchy_level 2 fits the bookmark nesting and the heading size. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0682 'IntelliBridge EC10 Module', which matches the document structure. It has no child sections and none are printed on its page. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section sec_0689 owns #/texts/6905 heading, #/texts/6906 intro, two bullets and the folio #/texts/6909 ('350') on p362. The heading starts the section. The text stops before the next heading, and no neighbour content is absorbed or missing. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'Language Conflict with External Device Drivers' and the ancestors match the printed outline for p362. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p362 the INOP table is in the previous section (sec_0688). sec_0689 has its heading, the intro and two bullets only. Nothing is repeated or missing. The last VueLink bullet on p366 belongs to sec_0697, not here.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Language Conflict with External Device Drivers' is visible on p362, so no flag is needed. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Language Conflict with External Device Drivers' is a PDF bookmark and the heading is found on p362. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p362 are arabic numbers (for example 350), which fits. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 362 is the physical page where the heading 'Language Conflict with External Device Drivers' is rendered (the printed folio is 350, so the bookmark already uses physical pages). Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No meaningful figure is lost on p362 for this section. Nothing visual in the section area is missing from images.json. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, rule or logo is kept as an image for 'Language Conflict with External Device Drivers'. No image is mapped to sec_0689. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0689 and no figure is printed in its area on p362. Nearby images are mapped to their own sections. Sampled page 363 is the chapter 30 opener (sec_0690) and is outside this section, so the content was judged on p362.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p369 'Notification' is a heading under sec_0702 'Setting Up Timers'. hierarchy_level 3 fits the bookmark nesting and the heading size.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0702 'Setting Up Timers', which matches the document structure. It has no child sections and none are printed on its page.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p369 the first two nodes of sec_0706 are the running header '#/texts/7028 Displaying a Timer On The Main Screen' and '#/texts/7029 31 Using Timers' (y 754, above the heading at y 721). They are page boilerplate, not part of 'Notification'. All body nodes #/texts/7030 to #/texts/7039 are correct.",
+      "notes": "Probably BUG-022 (running headers kept as section nodes). Only boilerplate is wrong, so Low. verify_claims shows no boundary signal for this row, but the two header nodes are in sec_0706 in sections.json and the p369 render shows them as the running header bar, so I keep FAIL Low.",
+      "confidence": 0.88
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'Notification' and the ancestors match the printed outline for p369.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Each text block of 'Notification' on p369 is in one section only. No block is missing and none is repeated in a neighbour.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Notification' is visible on p369, so no flag is needed.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Notification' is a PDF bookmark and the heading is found on p369.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p369 are arabic numbers (for example 357), which fits.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 369 is the physical page where the heading 'Notification' is rendered (the printed folio is 357, so the bookmark already uses physical pages).",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No meaningful figure is lost on p369 for this section. Nothing visual in the section area is missing from images.json.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, rule or logo is kept as an image for 'Notification'. No image is mapped to sec_0706.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p369 the black timer screenshot img_0225 is under 'Displaying a Timer On The Main Screen' and is mapped to sec_0708. That is the right owner. No image belongs to sec_0706.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p370 'Displaying A Clock On The Main Screen' is a heading under sec_0698 'Using Timers'. hierarchy_level 2 fits the bookmark nesting and the heading size. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "parent_section_id gives sec_0698 'Using Timers', which matches the document structure. It has no child sections and none are printed on its page. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section sec_0710 owns #/texts/7058 heading, #/texts/7059 to #/texts/7064 body text and the folio #/texts/7065 ('358') on p370. The heading starts the section. The text stops before the next heading, and no neighbour content is absorbed or missing. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path ends with 'Displaying A Clock On The Main Screen' and the ancestors match the printed outline for p370. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Each text block of 'Displaying A Clock On The Main Screen' on p370 is in one section only. No block is missing and none is repeated in a neighbour. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Displaying A Clock On The Main Screen' is visible on p370, so no flag is needed. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The title 'Displaying A Clock On The Main Screen' is a PDF bookmark and the heading is found on p370. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "numbering_scheme is 'arabic'. The printed folios on p370 are arabic numbers (for example 358), which fits. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. page_start 370 is the physical page where the heading 'Displaying A Clock On The Main Screen' is rendered (the printed folio is 358, so the bookmark already uses physical pages). Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No meaningful figure is lost on p370 for this section. Nothing visual in the section area is missing from images.json. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative image, rule or logo is kept as an image for 'Displaying A Clock On The Main Screen'. No image is mapped to sec_0710. Sampled page 371 is the chapter 32 opener and is outside this section, so the content was judged on p370.",
+      "notes": "",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p370 no figure is printed. The timer screenshot img_0225 is on p369 and is mapped to sec_0708, not here. No image belongs to sec_0710.",
+      "notes": "",
+      "confidence": 0.9
+    }
+  ]
+}

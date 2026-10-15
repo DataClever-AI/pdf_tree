@@ -1,0 +1,25 @@
+INFO     | pdf_tree.pipeline | fitz: 22 bookmarks, 166 pages
+INFO     | pdf_tree.pipeline | fitz                      0.004s
+INFO     | pdf_tree.pipeline | bookmark_sanity           0.000s
+INFO     | pdf_tree.pipeline | 2 windows for 166 pages
+INFO     | pdf_tree.pipeline | window 1/2 pages 1-120
+INFO     | pdf_tree.pipeline | window 2/2 pages 115-166
+INFO     | pdf_tree.pipeline | merged texts=38702 tables=10 pages=166
+INFO     | pdf_tree.pipeline | tables re-read with docling-parse: 10 of 10 replaced, 0 kept because text was lost
+INFO     | pdf_tree.pipeline | table lines recovered: 10 in 4 tables
+INFO     | pdf_tree.pipeline | docling: 38702 blocks, 10 tables, 166 pages
+INFO     | pdf_tree.pipeline | docling_extract           46.038s
+INFO     | pdf_tree.pipeline | toc_path                  0.000s
+INFO     | pdf_tree.pipeline | toc_classification        0.000s
+INFO     | pdf_tree.pipeline | toc_resolution: scheme=arabic global_offset=0 (match_rate=0.00, accepted=False) 22/22 bookmarks flagged_for_review
+WARNING  | pdf_tree.pipeline | toc_resolution: no offset (global or per-cluster) cleared the match-rate threshold — document flagged for manual review
+INFO     | pdf_tree.pipeline | toc_resolution            0.008s
+INFO     | pdf_tree.pipeline | section_matcher: 22 sections
+INFO     | pdf_tree.pipeline | section_matcher           0.159s
+INFO     | pdf_tree.pipeline | tree_export: 22 sections
+INFO     | pdf_tree.pipeline | tree_export               0.020s
+INFO     | pdf_tree.pipeline | validation: PASS
+INFO     | pdf_tree.pipeline | validation                0.466s
+INFO     | pdf_tree.pipeline | images: 64 vector figures rendered, 0 rasters inside them replaced
+INFO     | pdf_tree.pipeline | images: 170 extracted
+INFO     | pdf_tree.pipeline | image_extraction          0.000s

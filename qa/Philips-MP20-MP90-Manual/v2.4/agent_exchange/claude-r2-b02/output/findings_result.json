@@ -1,0 +1,244 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p333 the title 'Recording' is the large chapter heading under the big number 26. Node #/texts/6323 is level 1, which is correct for a chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sec_0634 is a top-level chapter with no parent. Its children sec_0635 to sec_0650 are the chapter subsections. Sec_0650 holds only the chapter 27 opener on p343, so the child list is the same as the page order.",
+   "notes": "The sec_0650 issue is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Start, p333: the left-margin label 'MP40/MP50/ MP60/MP70/ MP90' is next to the intro paragraph #/texts/6324. The label is node #/texts/6321 and it is stored in sec_0633, not in sec_0634. The chapter number '26' nodes #/texts/6320 and #/texts/6322 are also in sec_0633. End, p343: sec_0650 owns only #/texts/6484 and #/texts/6485 '27', which is the chapter 27 opener. Section page_end is 343 (BUG-014 fix, it was 342 in v2.3).",
+   "notes": "The margin label tells the reader which models the intro text is for. It is content, not boilerplate, so it fits 'body nodes assigned to another section' (Critical), not 'only boilerplate crosses a boundary' (Low). Both patterns fit the label, so I use the more severe one. The '26' and '27' chapter numbers alone would be Low. The end side on p343 is only the number '27', so it is Low and does not raise the grade. Ownership is the same in v2.3; only page_end grew (BUG-014). Probably Critical; some reviewers may call a margin label Low. Tool note: verify_claims reports UNSUPPORTED because the misplaced nodes are in neighbour sections, which are not in this batch input. The node ids and ownership come from the lead's tree.json facts, and I checked the labels on the rendered pages.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Recording' is right for a level 1 chapter. The heading on p333 shows no parent chapter above it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The margin label on p333 (node #/texts/6321, 'MP40/MP50/ MP60/MP70/ MP90') is missing from the coverage of sec_0634 because it is stored in sec_0633. The text and images of the page are otherwise not duplicated in the sampled nodes.",
+   "notes": "Same root cause as the page_start_end row, counted here as a gap in the coverage of sec_0634. The contract lists both rows for this Critical pattern. Probably Critical; I am less sure than for the page_start_end row.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sec_0634 has flagged_for_review false and score 100. Nothing on p333 is unclear, so the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is 'toc'. The p333 heading 'Recording' matches a chapter TOC entry, so this source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p333 is '321', an arabic number, and the chapter number '26' is arabic. The scheme 'arabic' is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 333 shows printed folio 321. The heading 'Recording' is on physical page 333 and page_start is 333, so the stored range follows physical pages.",
+   "notes": "offset_applied is 0 while the folio difference is 12. I treat page_start as a physical page, which matches the render, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 333 has one photo of the M1116B recorder. It was extracted as img_0134. The callout arrows and text are also in the nodes. No meaningful image is lost.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0134 is the recorder photo, which is real content. It is not a rule, logo or decoration. The blue bar under '26' was not kept as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0634",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0134 on p333 is the M1116B recorder photo and is mapped to sec_0634. This is the correct section, because the intro text and figure caption of p333 are in sec_0634.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p381 the title 'Using Batteries' is the large chapter heading under the big number 35. Node #/texts/7267 is level 1, which is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sec_0731 is a top-level chapter with no parent. Its children sec_0732 to sec_0747 cover the chapter subsections. Sec_0747 holds the chapter 36 opener on p389, which is an end boundary issue.",
+   "notes": "The sec_0747 issue is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Start, p381: the left-margin label 'IntelliVue MP20/MP30/ MP40/MP50' is next to the intro paragraph #/texts/7268. The label is node #/texts/7265 and it is stored in sec_0730. The chapter number '35' nodes #/texts/7264 and #/texts/7266 are also in sec_0730. End, p389: sec_0747 owns #/texts/7435 '36', #/texts/7436 'WARNING' and #/texts/7437 '36'. The 'WARNING' label sits in the red warning box on p389, and the box text #/texts/7439 is in sec_0748. Section page_end is 389 (BUG-014 fix, it was 388 in v2.3).",
+   "notes": "The start margin label tells which monitor models the text is for. It is content, so it fits 'body nodes assigned to another section' (Critical), not boilerplate (Low). The 'WARNING' label is also not boilerplate: it is the safety class of the box, and it is split from its body in sec_0748. It is probably Critical too, but it is only one word and a reviewer could grade it Low; this is why confidence is lower. The '36' numbers alone would be Low. Where both patterns fit, I use the more severe one. Ownership is the same in v2.3; only page_end grew (BUG-014). Tool note: verify_claims reports UNSUPPORTED because the misplaced nodes are in neighbour sections, which are not in this batch input. The node ids and ownership come from the lead's tree.json facts, and I checked the labels on the rendered pages.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Using Batteries' is right for a level 1 chapter. The p381 heading has no parent above it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Two gaps on the edges of sec_0731. On p381 the margin label (node #/texts/7265, 'IntelliVue MP20/MP30/ MP40/MP50') is stored in sec_0730. On p389 the 'WARNING' label (#/texts/7436) is split from its box text (#/texts/7439 in sec_0748).",
+   "notes": "Same root cause as the page_start_end row. The contract lists both rows for this Critical pattern. Probably Critical; I am less sure than for the page_start_end row, and least sure about the one-word WARNING label.",
+   "confidence": 0.68
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Sec_0731 has flagged_for_review false and score 100. Nothing on p381 is unclear, so the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is 'toc'. The p381 heading 'Using Batteries' matches a chapter TOC entry, so this source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p381 is '369', an arabic number, and the chapter number '35' is arabic. The scheme 'arabic' is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page 381 shows printed folio 369. The heading 'Using Batteries' is on physical page 381 and page_start is 381, so the stored range follows physical pages.",
+   "notes": "offset_applied is 0 while the folio difference is 12. I treat page_start as a physical page, which matches the render, so this is not a defect.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 381 has one figure, the rear view of the monitor with the 'Battery compartment' label. It was extracted as img_0151. No meaningful image is lost.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0151 is the rear view of the monitor, which is real content. It is not a rule, logo or decoration.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0731",
+   "page_sampled": 381,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Image img_0151 on p381 is the monitor rear view and is mapped to sec_0731. The figure sits between two paragraphs of sec_0731, so the mapping is correct.",
+   "notes": "",
+   "confidence": 0.92
+  }
+ ]
+}

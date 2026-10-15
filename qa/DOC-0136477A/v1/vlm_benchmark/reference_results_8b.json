@@ -1,0 +1,79 @@
+{
+  "model": "mlx-community/Qwen3-VL-8B-Instruct-4bit",
+  "load_seconds": 2.37574904199937,
+  "max_rss_bytes": 8869904384,
+  "cases": [
+    {
+      "section_id": "sec_0004",
+      "kind": "known_defect",
+      "image_count": 1,
+      "elapsed_seconds": 42.0137403339977,
+      "prompt_tokens": 2940,
+      "generation_tokens": 545,
+      "generation_tps": 27.223803554734953,
+      "peak_memory_gb": 7.059478962,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"sec_0004\",\n  \"overall_status\": \"FAIL\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"FAIL\",\n      \"severity\": \"High\",\n      \"evidence\": \"La sección 1.2.1 se muestra como nivel 3, pero en el documento, el encabezado '1.2.1 HemoSphere Advanced Monitor with HemoSphere Swan-Ganz Module' es un subencabezado de nivel 3 bajo '1.2 Indications For Use', lo cual es correcto. Sin embargo, el documento visual muestra que '1.2.1' es un subencabezado de nivel 3, lo cual es consistente. Por lo tanto, no hay un error en el nivel de jerarquía.\",\n      \"notes\": \"No hay discrepancia en el nivel de jerarquía. El documento visual y la estructura del árbol coinciden en que '1.2.1' es un subencabezado de nivel 3 bajo '1.2'.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"FAIL\",\n      \"severity\": \"High\",\n      \"evidence\": \"La sección 1.2.1 comienza en la página 17 y termina en la página 17, lo cual es correcto. Sin embargo, el contenido visible en la página 17 está asignado a la sección 1.2.1, pero también se asigna a la sección 1.2.1. Por lo tanto, no hay un error en la asignación de páginas.\",\n      \"notes\": \"No hay discrepancia en la asignación de páginas. El contenido visible en la página 17 está asignado correctamente a la sección 1.2.1.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"FAIL\",\n      \"severity\": \"High\",\n      \"evidence\": \"El documento visual no contiene una tabla. La sección 1.2.1 no tiene una tabla. Por lo tanto, no hay una tabla real en el documento, lo cual es un error en la asignación de contenido.\",\n      \"notes\": \"No hay una tabla real en el documento. La sección 1.2.1 no tiene una tabla, por lo que no se puede asignar contenido de tabla a esta sección.\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0015",
+      "kind": "known_defect",
+      "image_count": 2,
+      "elapsed_seconds": 57.37715370799924,
+      "prompt_tokens": 5226,
+      "generation_tokens": 342,
+      "generation_tps": 22.48943723953628,
+      "peak_memory_gb": 7.46302215,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"sec_0015\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-parent_child\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección 1.7 se define como hijo de 'Introduction' (nivel 2) y su tabla se encuentra en la página 27, lo cual es coherente con la estructura de árbol.\",\n      \"notes\": \"La relación padre-hijo se mantiene correctamente en la estructura del árbol.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección 1.7 abarca visualmente las páginas 26 y 27, y su tabla se encuentra en la página 27, lo cual es consistente con el rango asignado.\",\n      \"notes\": \"El contenido de la sección se encuentra dentro de su rango de página asignado.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla de la sección 1.7 en la página 27 comienza con LVSWI, MAP, MPAP, OR, PA, lo cual es coherente con el contenido visual del documento.\",\n      \"notes\": \"La tabla tiene contenido real y no es un marcador de posición.\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0279",
+      "kind": "known_defect",
+      "image_count": 7,
+      "elapsed_seconds": 228.20316291699783,
+      "prompt_tokens": 16835,
+      "generation_tokens": 721,
+      "generation_tps": 15.574079694225881,
+      "peak_memory_gb": 10.017926854,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"G.3.6 European Union R&TTE Statements\",\n  \"overall_status\": \"FAIL\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"FAIL\",\n      \"severity\": \"Critical\",\n      \"evidence\": \"La sección G.3.6 comienza en la página 231 y termina en la 232, según las imágenes. Sin embargo, el árbol JSON asigna una página final de 240, lo que es incorrecto. Además, el contenido de las páginas 233 a 238 (como el Glosario y el Índice) no pertenece a G.3.6, lo cual viola la regla de que solo el contenido visualmente perteneciente a la sección debe estar asignado a ella.\",\n      \"notes\": \"El rango de páginas del árbol no coincide con el contenido visual. La sección G.3.6 termina en la página 232, no en 240. Las páginas 233-238 son claramente secciones distintas (Glosario, Índice) y no deben estar asignadas a G.3.6.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-gaps_duplicates\",\n      \"result\": \"FAIL\",\n      \"severity\": \"Critical\",\n      \"evidence\": \"El árbol JSON no contiene secciones para Glosario (página 233) ni para Índice (páginas 236-238), pero las imágenes muestran claramente estas secciones. Esto es una duplicación de contenido visual no asignado al árbol, lo cual es un error estructural. Además, el árbol no tiene una sección 'Glosario' ni 'Índice' en su estructura, lo cual es una omisión.\",\n      \"notes\": \"El árbol no refleja la presencia de las secciones Glosario e Índice en las imágenes. Esto es una omisión crítica, ya que estas secciones son visibles y deben estar representadas en el árbol.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"REVIEW\",\n      \"severity\": \"\",\n      \"evidence\": \"Las imágenes de las páginas 237 y 238 muestran una estructura de lista alfabética con referencias de página, lo que sugiere una tabla de índices. Sin embargo, el árbol JSON no tiene un nodo de tabla para estas secciones. La pregunta es si se considera una lista alfabética con referencias de página como una 'tabla' en el contexto del documento. Dado que el árbol no tiene un nodo de tabla, se considera una omisión, pero no un error de contenido de tabla en sí mismo.\",\n      \"notes\": \"La estructura de las páginas 237 y 238 es una lista alfabética, no una tabla en el sentido estricto. Por lo tanto, no se considera un error de contenido de tabla, pero sí una omisión en la estructura del árbol.\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0025",
+      "kind": "clean_control",
+      "image_count": 1,
+      "elapsed_seconds": 39.149623666999105,
+      "prompt_tokens": 2845,
+      "generation_tokens": 329,
+      "generation_tps": 23.726131428398748,
+      "peak_memory_gb": 10.017926854,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"2.6 Applicable Standards\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El encabezado '2.6 Applicable Standards' se muestra en la página 41 con un nivel de jerarquía numérico 2, como se indica en el árbol.\",\n      \"notes\": \"El nivel de jerarquía se corresponde con la estructura visual del documento.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"El contenido de la sección, que incluye el encabezado, la tabla y el texto de la sección 2.7, se encuentra exclusivamente en la página 41.\",\n      \"notes\": \"No hay contenido de esta sección en páginas adyacentes.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La tabla 'Table 2-3 Applicable standards' se muestra en la página 41 con una estructura real de columnas 'Standard' y 'Title', y contiene los datos especificados.\",\n      \"notes\": \"La tabla tiene contenido real y se alinea con la estructura del árbol.\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0066",
+      "kind": "clean_control",
+      "image_count": 2,
+      "elapsed_seconds": 76.2372371249985,
+      "prompt_tokens": 5208,
+      "generation_tokens": 599,
+      "generation_tps": 21.629805352313465,
+      "peak_memory_gb": 10.017926854,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"sec_0061\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-parent_child\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección 5.3.2 se describe en la página 69. La página 71 contiene instrucciones sobre edición de intervenciones, que son secuencias de pasos, no contenido de la sección 5.3.2. Por lo tanto, la relación de padre e hijo es correcta: la sección 5.3.2 (en la página 69) es el padre de los contenidos de la página 69, y la página 71 es una sección diferente.\",\n      \"notes\": \"La sección 5.3.2 se define en la página 69. La página 71 contiene contenido sobre edición de intervenciones, que es una sección diferente. La relación de padre e hijo se mantiene correctamente.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La sección 5.3.2 se inicia en la página 69, que contiene la figura 5-6 y la descripción de la pantalla de tendencia gráfica. La página 71 es la siguiente página, pero no contiene contenido de la sección 5.3.2. Por lo tanto, el rango de páginas es correcto: la sección 5.3.2 se limita a la página 69.\",\n      \"notes\": \"El rango de páginas se define correctamente. La sección 5.3.2 se inicia en la página 69 y termina en la página 69, ya que la página 71 es una sección diferente.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-hierarchy_path\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La ruta de jerarquía se define como: /Navigating the HemoSphere Advanced Monitor/5.3 Monitor Views/5.3.2 Graphical Trend Monitoring View. La página 69 contiene la sección 5.3.2, que es la sección secundaria de 5.3 Monitor Views. Por lo tanto, la ruta de jerarquía es correcta.\",\n      \"notes\": \"La ruta de jerarquía se mantiene correctamente. La sección 5.3.2 se encuentra en la página 69, que es la sección secundaria de 5.3 Monitor Views.\"\n    }\n  ]\n}"
+    },
+    {
+      "section_id": "sec_0243",
+      "kind": "clean_control",
+      "image_count": 2,
+      "elapsed_seconds": 66.48371766599666,
+      "prompt_tokens": 5161,
+      "generation_tokens": 397,
+      "generation_tps": 21.87381021762232,
+      "peak_memory_gb": 10.017926854,
+      "finish_reason": "stop",
+      "raw_output": "{\n  \"section_id\": \"Equations for Calculated Patient Parameters\",\n  \"overall_status\": \"PASS\",\n  \"checks\": [\n    {\n      \"checklist_ref\": \"5.4-hierarchy_level\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La imagen de la página 200 muestra un encabezado principal 'Appendix C Equations for Calculated Patient Parameters' con un nivel de jerarquía 1, lo cual coincide con la especificación del árbol.\",\n      \"notes\": \"El nivel de jerarquía se corresponde con el encabezado principal visible en la página 200.\"\n    },\n    {\n      \"checklist_ref\": \"5.4-page_start_end\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La página 200 contiene el encabezado y el inicio de la tabla C-1. La página 205 contiene la continuación de la tabla C-1, lo que indica que el rango de páginas 200-205 es coherente con el contenido visible.\",\n      \"notes\": \"El contenido de ambas páginas está dentro del rango especificado y se corresponde con la tabla C-1.\"\n    },\n    {\n      \"checklist_ref\": \"5.6-table_content\",\n      \"result\": \"PASS\",\n      \"severity\": \"\",\n      \"evidence\": \"La página 200 muestra una tabla con encabezados y contenido real, y la página 205 continúa con la misma tabla, mostrando fórmulas y definiciones estructuradas. No hay duplicados ni ausencias visibles.\",\n      \"notes\": \"Las tablas en ambas páginas tienen contenido real y se corresponden con la estructura del árbol.\"\n    }\n  ]\n}"
+    }
+  ]
+}
