@@ -1,0 +1,1174 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p95 'Section 3-3 Receiving and unpacking the equipment' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0018 (Chapter 3, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0018 is Chapter 3, which contains this section by page range. child_sections is empty. The sub-headings 3-3-1 to 3-3-4 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Declared page_end is 99, but sec_0021 also owns nodes on p100: the Table 3-5 caption, the Note about the filling and #/tables/56 (steps 7 onward). That is the end of the Unpacking Procedure table of 3-3-4. It is correctly owned, but p100 is outside the range. On p98 the section is correct.",
+   "notes": "page_end is one page short while all nodes are correctly owned, so Medium. Section 3-4 also starts on p100.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 3/Section 3-3 Receiving and unpacking the equipment' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0020 (3-2, p92-94) and next is sec_0022 (3-4, p100). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p95, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 3 - 8 on p98). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p95, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table is printed on p98. The tables of this section (#/tables/53 to 56, p96-100) carry the STEP/TASK rows and were not the sampled page.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p98 three raster label graphics (Figure 3-2, 3-3, 3-4) sit under heading 3-3-3 Transportation Box Label.",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p98 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 98,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p98 three raster label graphics (Figure 3-2, 3-3, 3-4) sit under heading 3-3-3 Transportation Box Label. All of it sits inside this section on p98.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p189 'Section 4-1 Overview' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0035 (Chapter 4, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0035 is Chapter 4, which contains this section by page range. child_sections is empty. The sub-headings 4-1-1 and 4-1-2 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On p189 the NOTICE box (warning icon, text 'Most of the information ... Basic User Manual') is printed under the 4-1-2 Contents list, above the heading Section 4-2. The tree gives sec_0036 only the label '!! NOTICE:' (#/texts/2303). The body text is in sec_0037.",
+   "notes": "Body text of the 4-1 NOTICE is in the next section, sec_0037. Probably the same reading-order split at a heading on the same page.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 4/Section 4-1 Overview' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0035 (Chapter 4 heading) and next is sec_0037 (4-2, p189). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p189, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 4 - 1 on p189). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p189, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/76 holds the 4-1-2 Contents list (4-1 Overview ... 4-7 Site Log). This matches the printed list.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p189 shows no picture except the small NOTICE warning triangle icon.",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p189 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 189,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p189 shows no picture except the small NOTICE warning triangle icon. All of it sits inside this section on p189.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p239 'Section 5-1 Overview' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0043 (Chapter 5, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0043 is Chapter 5, which contains this section by page range. child_sections is empty. The sub-headings 5-1-1 and 5-1-2 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Declared page range is p239 only, which is right for the content: the heading, 5-1-1 text and 5-1-2 Contents are all on p239. The last two nodes, #/texts/3221 and #/texts/3222, are the running header 'GE Healthcare / Direction 5394227' of p240.",
+   "notes": "Only boilerplate from the next page crosses the boundary. No real content is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 5/Section 5-1 Overview' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0043 (Chapter 5 heading) and next is sec_0045 (5-2, p240-248). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p239, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 5 - 1 on p239). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p239, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p239 the 5-1-1 heading, its paragraph, the italic NOTE and the 5-1-2 Contents list are all read as one table, #/tables/87. Text is kept, but 5-1-1 and 5-1-2 are not heading nodes.",
+   "notes": "Non-table content was detected as a table. The text survives and is still retrievable, so Low.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p239 shows no picture or icon.",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p239 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0044",
+   "page_sampled": 239,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p239 shows no picture or icon. All of it sits inside this section on p239.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p377 'Section 8-1 Overview' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0068 (Chapter 8, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0068 is Chapter 8, which contains this section by page range. child_sections is empty. The sub-headings 8-1-1 (with 8-1-1-1 and 8-1-1-2) and 8-1-2 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section starts on p377 with its own heading and its last content is on p378. No neighbouring section content is absorbed.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 8/Section 8-1 Overview' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0068 (Chapter 8 heading) and next is sec_0070 (8-2, p379-382). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p377, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 8 - 1 on p377). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p377, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p377 has no table. #/tables/140 on p378 is the 8-1-2 Contents list and matches the printed list.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p377 a small Tag and Lockout picture sits at the left of the four power-off steps. It is not in the image output; a raster of about 59x97 px (0.6% of the page) was dropped. The steps beside it state the same information.",
+   "notes": "Small picture dropped, meaning fully stated in the text next to it.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p377 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0069",
+   "page_sampled": 377,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p377 shows a NOTICE triangle icon (twice) and a Tag and Lockout picture next to the power-off steps. All of it sits inside this section on p377.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p477 'Section 8-11 Side Cover Replacement' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0068 (Chapter 8, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0068 is Chapter 8, which contains this section by page range. child_sections is empty. The sub-headings 8-11-1 to 8-11-6 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The real content ends on p482 with 8-11-6 Functional Check, which matches page_end 482. The last two nodes of sec_0079 are the running header 'GE Healthcare / Direction 5394227' of p483, which belongs to sec_0080.",
+   "notes": "Only boilerplate from the next page crosses the boundary. No real content is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 8/Section 8-11 Side Cover Replacement' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0078 (8-10, p475-476) and next is sec_0080 (8-12, p483-484). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p477, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 8 - 102 on p478). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p477, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p478 the Step/Illustration table (step 4, Pull out Side Cover (L)) has no #/tables node. Its text is in loose paragraphs (Step, Pull out Side Cover (L)..., Illustration). The text is complete and in order. #/tables/198 covers only p477.",
+   "notes": "Table not detected as a table, but the values survive in the right section, so Low.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p478 shows step 4 of Side Cover (L) with one large photo and two small inset photos with yellow hook marks.",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p478 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0079",
+   "page_sampled": 478,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p478 shows step 4 of Side Cover (L) with one large photo and two small inset photos with yellow hook marks. All of it sits inside this section on p478.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p483 'Section 8-12 Rear Cover Replacement' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0068 (Chapter 8, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0068 is Chapter 8, which contains this section by page range. child_sections is empty. The sub-headings 8-12-1 to 8-12-5 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The real content ends on p484 with the 'Rear Cover Replacement (cont'd)' note and picture, which matches page_end 484. The last two nodes of sec_0080 are the running header 'GE Healthcare / Direction 5394227' of p485, which belongs to sec_0081.",
+   "notes": "Only boilerplate from the next page crosses the boundary. No real content is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 8/Section 8-12 Rear Cover Replacement' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0079 (8-11, p477-482) and next is sec_0081 (8-13, p485-486). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p483, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 8 - 108 on p484). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p483, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p484 has no table. The only table of the section, #/tables/200 (p483, step 1 remove 5 screws), matches the printed row.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p484 shows one large picture: a rear view of the console with a zoomed Russian caution label.",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p484 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0080",
+   "page_sampled": 484,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p484 shows one large picture: a rear view of the console with a zoomed Russian caution label. All of it sits inside this section on p484.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p552 'Section 8-18 Replacement around ACQ Box' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0068 (Chapter 8, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0068 is Chapter 8, which contains this section by page range. child_sections is empty. The sub-headings 8-18-1 to 8-18-9 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The real content ends on p571 with 8-18-9 Installation Procedure, which matches page_end 571. The last two nodes of sec_0086 are the running header 'GE Healthcare / Direction 5394227' of p572, which belongs to sec_0087.",
+   "notes": "Only boilerplate from the next page crosses the boundary. No real content is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 8/Section 8-18 Replacement around ACQ Box' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0085 (8-17, p532-551) and next is sec_0087 (8-19, p572-574). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p552, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 8 - 182 on p558). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p552, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p558 the Step/Illustration table (step 4, Separate BF192 and PID) is not a table node. Its text is in loose paragraphs ('4.', 'Separate BF192 and PID.', 'Step', 'Illustration'). Text is complete and in the right section.",
+   "notes": "Table not detected as a table, but the values survive, so Low. Steps 1 to 3 of 8-18-4-2 on p556-557 show the same pattern.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p558 shows step 4 with one photo of BF192 and PID being separated.",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p558 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p558 shows step 4 with one photo of BF192 and PID being separated. All of it sits inside this section on p558.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p572 'Section 8-19 Replacement of CSI and Fan' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0068 (Chapter 8, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0068 is Chapter 8, which contains this section by page range. child_sections is empty. The sub-headings 8-19-1 to 8-19-5 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The real content ends on p574 with 8-19-5 Functional Check, which matches page_end 574. The last two nodes of sec_0087 are the running header 'GE Healthcare / Direction 5394227' of p575, which belongs to sec_0088.",
+   "notes": "Only boilerplate from the next page crosses the boundary. No real content is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 8/Section 8-19 Replacement of CSI and Fan' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0086 (8-18, p552-571) and next is sec_0088 (8-20, p575-580). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p572, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 8 - 198 on p574). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p572, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p574 has no table. The removal table, #/tables/222 (p572, steps 1 to 3), matches the printed steps.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p574 shows one photo, Figure 8-109 Air flow direction, with a yellow arrow.",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p574 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p574 shows one photo, Figure 8-109 Air flow direction, with a yellow arrow. All of it sits inside this section on p574.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p612 'Section 8-25 Replacement of the Probe Holder (Kit), Cable Hook, and Extended probe holder' is printed as a section heading, one step below the chapter heading. hierarchy_level 2 with parent sec_0068 (Chapter 8, level 1) is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0068 is Chapter 8, which contains this section by page range. child_sections is empty. The sub-headings 8-25-1 to 8-25-7 are nodes of this section, not separate bookmarks.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The real content ends on p614 with 8-25-7 Functional Check, which matches page_end 614. The last two nodes of sec_0093 are the running header 'GE Healthcare / Direction 5394227' of p615, which belongs to sec_0094.",
+   "notes": "Only boilerplate from the next page crosses the boundary. No real content is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '/Chapter 8/Section 8-25 Replacement of the Probe Holder (Kit), Cable Hook, and Extended probe holder' lists chapter then section, in the same order as the printed headings. The ancestry has no missing level.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once. Previous is sec_0092 (8-24, p596-611) and next is sec_0094 (8-26, p615-616). Page ranges join with no gap and no repeated section.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification_reason. The visible headings agree with the declared title and page, so no flag was needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The bookmark title matches the printed heading on p612, so the toc source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folios use chapter-page numbers (for example 8 - 236 on p612). numbering_scheme arabic is accepted for this format.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading printed for this section is on physical p612, the same as page_start, so no offset is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "#/tables/243 (p612) has the Step, Instruction, Illustration columns with step 1 Simply pull out Probe Holder. This matches the printed row.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p612 shows two photos in Table 8-49 (probe holder location, and Probe Holder / Small Probe Cup / Probe Holder Removed).",
+   "notes": "No image record was provided in input/. Discard status is not proven from these files.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative rule, footer divider or logo is visible on p612 that would need to be filtered. Running headers and footers are text, not images.",
+   "notes": "No image record was provided in input/.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p612 shows two photos in Table 8-49 (probe holder location, and Probe Holder / Small Probe Cup / Probe Holder Removed). All of it sits inside this section on p612.",
+   "notes": "No image record was provided in input/. Mapping is judged from the page only.",
+   "confidence": 0.6
+  }
+ ]
+}

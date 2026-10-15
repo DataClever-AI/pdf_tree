@@ -11,16 +11,26 @@ Algorithm:
      block on that page to whichever section sorts first, starving the rest
      (node_count=0). Reading order — Docling's global sequential block index —
      pins each section's true start regardless of page-sharing.
-  4. Assign tables by page_no (Docling doesn't give tables a reading_order,
-     so this is a known coarser fallback — acceptable since tables are a
-     small fraction of content and rarely collide within a shared page).
+  4. Assign tables by their position on the page: a table gets the reading
+     order of the nearest text block printed above it (Docling doesn't give
+     tables a reading_order). A table at the top of a page continues the
+     previous content. Tables without a bbox, or whose position points to a
+     section more than one page away from its page range (reading order out
+     of sync, BUG-005), fall back to page_no (deepest section on the page).
+     Chapter 'Contents' boxes and tables on pages shared by sibling sections
+     depend on this (BUG-001, BUG-003).
+  5. Extend page_end by one page when the section owns body content (not page
+     furniture) on the page where the next section starts (BUG-014).
 """
 from __future__ import annotations
 
+import math
 import re
-from dataclasses import dataclass, field
+from collections.abc import Callable
+from dataclasses import dataclass, field, replace
 
-from src.models.extraction import DoclingDocument, DoclingTable, DoclingTextBlock
+from src.models.extraction import BoundingBox, DoclingDocument, DoclingTable, DoclingTextBlock
+from src.tree_builder.fitz_toc import Word
 from src.tree_builder.title_verification import TitleVerification
 
 
@@ -49,6 +59,10 @@ class MatchedSection:
     offset_applied: int = 0
 
 
+def _section_id(index: int) -> str:
+    return f"sec_{index + 1:04d}"
+
+
 def _compute_page_ranges(
     bookmarks: list[tuple[int, str, int]],
     total_pages: int,
@@ -75,8 +89,7 @@ def _compute_page_ranges(
                 page_end = max(page_start, next_page - 1)
                 break
 
-        section_id = f"sec_{i + 1:04d}"
-        result.append((section_id, title, level, page_start, page_end))
+        result.append((_section_id(i), title, level, page_start, page_end))
 
     return result
 
@@ -116,33 +129,89 @@ def _normalize_heading(text: str) -> str:
     return " ".join(text.split())
 
 
+def _strip_numbering(norm: str) -> str:
+    """Drop leading numbering tokens ('12 engine' -> 'engine') from a normalized heading."""
+    tokens = norm.split()
+    while len(tokens) > 1 and any(char.isdigit() for char in tokens[0]):
+        tokens.pop(0)
+    return " ".join(tokens)
+
+
+# A partial match is accepted only when the heading text covers most of the
+# title (or the reverse). Short or glyph-only headings never anchor a section:
+# '!' normalizes to '' and 'Trends' is contained in 'Viewing Trends' (BUG-019).
+_MIN_PARTIAL_CHARS = 3
+_MIN_PARTIAL_RATIO = 0.8
+
+
+def _is_partial_match(norm_title: str, norm_text: str) -> bool:
+    shorter, longer = sorted((norm_title, norm_text), key=len)
+    if len(shorter) < _MIN_PARTIAL_CHARS or shorter not in longer:
+        return False
+    return len(shorter) / len(longer) >= _MIN_PARTIAL_RATIO
+
+
 def _find_heading_anchor(
     title: str,
     page_no: int,
     blocks_by_page: dict[int, list[DoclingTextBlock]],
+    after: int = -1,
+    margin: frozenset[str] = frozenset(),
 ) -> int | None:
     """
     Find the reading_order of the text block that IS this bookmark's own
     heading, by matching normalized text among blocks on the bookmark's page.
-    Prefers blocks Docling classified as "section_header"; falls back to any
-    block with matching text (headings are sometimes mislabeled as body text).
+
+    Only blocks after ``after`` (the previous section's anchor) are candidates,
+    so two bookmarks never anchor on the same heading. Match tiers, first hit
+    wins: exact text on a "section_header" block (also with spaces removed, for
+    subscripts); then the first
+    "section_header" in reading order that matches without leading numbering,
+    starts with the title (Docling merges a heading with its sub-heading) or
+    covers most of it; then exact text on any block (headings are sometimes
+    mislabeled as body text); then any non-furniture block that starts with the title. Figure
+    labels can repeat a title later in reading order, so the near-match tier keeps
+    reading order, not match type. On a page with margin headings, a margin heading
+    with the exact title wins first: a list item or a figure legend in the body can
+    repeat the title as a "section_header" (SOMATOM p131, p138) (BUG-019).
     """
     norm_title = _normalize_heading(title)
     if not norm_title:
         return None
-    candidates = blocks_by_page.get(page_no, [])
+    core_title = _strip_numbering(norm_title)
+    candidates = [
+        (block, _normalize_heading(block.text))
+        for block in blocks_by_page.get(page_no, [])
+        if block.reading_order > after
+    ]
+    headers = [(block, text) for block, text in candidates if block.label == "section_header"]
+    content = [(block, text) for block, text in candidates if block.label not in _FURNITURE_LABELS]
+    def near_match(text: str) -> bool:
+        if not text:
+            return False
+        return (
+            _strip_numbering(text) == core_title
+            or text.startswith(norm_title + " ")
+            or _is_partial_match(norm_title, text)
+        )
 
-    for block in candidates:
-        if block.label != "section_header":
-            continue
-        norm_text = _normalize_heading(block.text)
-        if norm_text == norm_title or norm_title in norm_text or norm_text in norm_title:
-            return block.reading_order
-
-    for block in candidates:
-        if _normalize_heading(block.text) == norm_title:
-            return block.reading_order
-
+    # A subscript is read as a separate token: 'SO2' is printed 'SO 2' (Philips p482).
+    compact_title = norm_title.replace(" ", "")
+    side = [(block, text) for block, text in candidates if block.block_id in margin]
+    tiers = (
+        (side, lambda text: text == norm_title),
+        (headers, lambda text: text == norm_title),
+        (headers, lambda text: text.replace(" ", "") == compact_title),
+        (headers, near_match),
+        (candidates, lambda text: text == norm_title),
+        # A margin heading merged with the note below it (SOMATOM p295) (BUG-029);
+        # running headers and footers repeat titles too (LOGIQ_S8 p379).
+        (content, lambda text: text.startswith(norm_title + " ")),
+    )
+    for blocks, matches in tiers:
+        for block, text in blocks:
+            if matches(text):
+                return block.reading_order
     return None
 
 
@@ -150,7 +219,9 @@ def _compute_reading_order_ranges(
     bookmarks: list[tuple[int, str, int]],
     page_ranges: list[tuple[str, str, int, int, int]],
     doc: DoclingDocument,
-) -> list[tuple[int, int]]:
+    boundaries: list[bool] | None = None,
+    margin: frozenset[str] = frozenset(),
+) -> tuple[list[tuple[int, int]], frozenset[int]]:
     """
     Compute (reading_order_start, reading_order_end) per bookmark.
 
@@ -159,6 +230,9 @@ def _compute_reading_order_ranges(
     page, or — if the page has no content at all — the previous section's
     anchor + 1. The max() clamp keeps anchors monotonic non-decreasing so
     ranges never invert even if a heading match lands out of expected order.
+    A boundary (an excluded Index or Table of contents) starts on a page of its
+    own, so it anchors on the first block of its page: its title can come late
+    in reading order (LOGIQ_e p563, after the index columns).
     """
     blocks_by_page: dict[int, list[DoclingTextBlock]] = {}
     for b in doc.text_blocks:
@@ -167,13 +241,23 @@ def _compute_reading_order_ranges(
         page_blocks.sort(key=lambda b: b.reading_order)
 
     anchors: list[int] = []
+    heading_anchors: set[int] = set()
     prev_anchor = -1
-    for _section_id, title, _level, page_start, _page_end in page_ranges:
-        anchor = _find_heading_anchor(title, page_start, blocks_by_page)
+    for i, (_section_id, title, _level, page_start, _page_end) in enumerate(page_ranges):
+        found = (
+            None
+            if boundaries and boundaries[i]
+            else _find_heading_anchor(
+                title, page_start, blocks_by_page, after=prev_anchor, margin=margin
+            )
+        )
+        anchor = found
         if anchor is None:
             page_blocks = blocks_by_page.get(page_start, [])
             anchor = page_blocks[0].reading_order if page_blocks else prev_anchor + 1
         anchor = max(anchor, prev_anchor + 1)
+        if anchor == found:
+            heading_anchors.add(anchor)
         anchors.append(anchor)
         prev_anchor = anchor
 
@@ -189,20 +273,94 @@ def _compute_reading_order_ranges(
                 break
         ranges.append((anchors[i], max(anchors[i], end)))
 
-    return ranges
+    return ranges, frozenset(heading_anchors)
+
+
+# A block counts as "above" a table or image when its bottom is at most this many
+# points below the table's top edge (bboxes of adjacent items can touch or overlap).
+_ABOVE_TOLERANCE = 2.0
+# A heading counts as "above" when its top is at most this many points below the item's
+# top edge: side headings in the left margin start level with their content (SOMATOM).
+_SIDE_HEADING_TOLERANCE = 12.0
+
+
+def vertical_span(bbox: BoundingBox) -> tuple[float, float]:
+    """
+    (top, bottom) of a bbox, with larger values higher on the page for either origin.
+
+    Only bboxes in the same coordinate frame can be compared.
+    """
+    if bbox.coordinate_origin == "bottomleft":
+        return max(bbox.y0, bbox.y1), min(bbox.y0, bbox.y1)
+    return -min(bbox.y0, bbox.y1), -max(bbox.y0, bbox.y1)
+
+
+def nearest_above[T](
+    target: BoundingBox, items: list[tuple[BoundingBox, bool, T]]
+) -> T | None:
+    """
+    Payload of the item printed closest above ``target`` on the same page.
+
+    Items are ``(bbox, is_heading, payload)``. Items that overlap the target horizontally
+    win over items in another column. A heading reaches to the right edge of the page
+    and also counts when it starts level with the target: content under a left-aligned
+    or margin heading is often indented or in a column to its right (LOGIQ_S8 part
+    photos, SOMATOM side headings); otherwise a full-width running header above the
+    heading counts as "same column" and wins. None when nothing is above the target.
+    """
+    top, _bottom = vertical_span(target)
+    above: list[tuple[bool, float, T]] = []
+    for bbox, is_heading, payload in items:
+        item_top, item_bottom = vertical_span(bbox)
+        beside = is_heading and item_top >= top - _SIDE_HEADING_TOLERANCE
+        if item_bottom < top - _ABOVE_TOLERANCE and not beside:
+            continue
+        right = math.inf if is_heading else bbox.x1
+        overlaps = min(right, target.x1) > max(bbox.x0, target.x0)
+        above.append((overlaps, item_bottom - top, payload))
+    if not above:
+        return None
+    same_column = [item for item in above if item[0]] or above
+    return min(same_column, key=lambda item: item[1])[2]
+
+
+def _table_position(
+    table: DoclingTable, blocks_by_page: dict[int, list[DoclingTextBlock]]
+) -> int | None:
+    """
+    Reading order of the text block the table follows, or None when it can't be placed.
+
+    That is the nearest block above the table; for a table above every block of its
+    page, the block just before the page (the table continues the previous content).
+    """
+    page_blocks = blocks_by_page.get(table.page_no, [])
+    if table.bbox is None or not page_blocks:
+        return None
+    placed = [
+        (block.bbox, block.label == "section_header", block)
+        for block in page_blocks
+        if block.bbox is not None
+    ]
+    block = nearest_above(table.bbox, placed)
+    if block is not None:
+        return block.reading_order
+    previous = page_blocks[0].reading_order - 1
+    return previous if previous >= 0 else None
 
 
 def _assign_content(
     sections: list[MatchedSection],
     reading_order_ranges: dict[str, tuple[int, int]],
     doc: DoclingDocument,
+    heading_anchors: frozenset[int] = frozenset(),
 ) -> None:
     """
     Assign text_blocks by reading-order interval containment (the section
     with the tightest/most specific containing interval wins — equivalent
     to "deepest" without relying on level matching exactly).
 
-    Assign tables by page_no (see module docstring — known coarser fallback).
+    Assign tables by their position on the page (see module docstring); tables
+    without a bbox fall back to the deepest section on their page.
     """
     def _tightest(containing: list[MatchedSection]) -> MatchedSection:
         return min(
@@ -211,16 +369,49 @@ def _assign_content(
             - reading_order_ranges[s.section_id][0],
         )
 
-    for block in doc.text_blocks:
+    def _owner(position: int) -> MatchedSection | None:
         containing = [
             s
             for s in sections
             if reading_order_ranges[s.section_id][0]
-            <= block.reading_order
+            <= position
             <= reading_order_ranges[s.section_id][1]
         ]
-        if containing:
-            _tightest(containing).text_blocks.append(block)
+        return _tightest(containing) if containing else None
+
+    blocks_by_page: dict[int, list[DoclingTextBlock]] = {}
+    for block in doc.text_blocks:
+        blocks_by_page.setdefault(block.page_no, []).append(block)
+    owners: dict[str, MatchedSection | None] = {}
+    # Running headers, print slugs and chapter numbers at the top of a page belong to
+    # the section that owns the page's first content (BUG-022): its first other text
+    # block, or a table printed above that block (assigned below).
+    # Per page: the leading furniture, and the top of the content that owns it.
+    leading_by_page: dict[int, tuple[list[DoclingTextBlock], float | None]] = {}
+    for page_no, page_blocks in blocks_by_page.items():
+        page_blocks.sort(key=lambda b: b.reading_order)
+        leading: list[DoclingTextBlock] = []
+        first: DoclingTextBlock | None = None
+        for block in page_blocks:
+            owners[block.block_id] = _owner(block.reading_order)
+            if first is not None:
+                continue
+            if _is_page_furniture(block, doc):
+                leading.append(block)
+            else:
+                first = block
+                for furniture in leading:
+                    owners[furniture.block_id] = owners[block.block_id]
+        if leading:
+            first_top = (
+                vertical_span(first.bbox)[0] if first is not None and first.bbox else None
+            )
+            leading_by_page[page_no] = (leading, first_top)
+
+    anchors = frozenset(start for start, _end in reading_order_ranges.values())
+    moved = _place_text_read_after_its_heading(
+        heading_anchors, anchors, blocks_by_page, owners, doc
+    )
 
     page_sections: dict[int, list[MatchedSection]] = {}
     for sec in sections:
@@ -230,9 +421,617 @@ def _assign_content(
         page_sections[p].sort(key=lambda s: s.level, reverse=True)
 
     for table in doc.tables:
-        candidates = page_sections.get(table.page_no, [])
-        if candidates:
-            candidates[0].tables.append(table)
+        position = _table_position(table, blocks_by_page)
+        # A table under a block moved by position follows that block's new owner.
+        owner = (
+            moved.get(position) or _owner(position) if position is not None else None
+        )
+        # Reading order can be out of sync with the pages (BUG-005): only trust an
+        # owner whose page range contains the table or ends on the page before it
+        # (a table continued at the top of the next page).
+        if owner is None or not owner.page_start <= table.page_no <= owner.page_end + 1:
+            candidates = page_sections.get(table.page_no, [])
+            owner = candidates[0] if candidates else None
+        if owner is not None:
+            owner.tables.append(table)
+            _give_furniture_to_table_above(table, owner, leading_by_page, owners)
+
+    for block in doc.text_blocks:
+        text_owner = owners[block.block_id]
+        if text_owner is not None:
+            text_owner.text_blocks.append(block)
+
+
+# A single text line is at most this tall; two blocks with tops and bottoms this close
+# are pieces of one printed line (a step split by an inline icon, DOC p144).
+_MAX_LINE_HEIGHT = 14.0
+_SAME_LINE_TOLERANCE = 3.0
+
+
+def _same_line(
+    block: DoclingTextBlock, content: list[DoclingTextBlock], skip: set[str]
+) -> DoclingTextBlock | None:
+    """The nearest other block on the same printed line as a one-line ``block``."""
+    assert block.bbox is not None
+    top, bottom = vertical_span(block.bbox)
+    if top - bottom > _MAX_LINE_HEIGHT:
+        return None
+    line = [
+        other
+        for other in content
+        if other.block_id not in skip
+        and abs(vertical_span(other.bbox)[0] - top) <= _SAME_LINE_TOLERANCE  # type: ignore[arg-type]
+        and abs(vertical_span(other.bbox)[1] - bottom) <= _SAME_LINE_TOLERANCE  # type: ignore[arg-type]
+    ]
+    return min(
+        line,
+        key=lambda other: abs(other.bbox.x0 - block.bbox.x0),  # type: ignore[union-attr]
+        default=None,
+    )
+
+
+def _place_text_read_after_its_heading(
+    heading_anchors: frozenset[int],
+    anchors: frozenset[int],
+    blocks_by_page: dict[int, list[DoclingTextBlock]],
+    owners: dict[str, MatchedSection | None],
+    doc: DoclingDocument,
+) -> dict[int, MatchedSection]:
+    """
+    Docling reads the text of a figure or screenshot last on the page, after a heading
+    printed below it (Philips p41: the 'Change Screen' dialog labels; DOC p144: the end
+    of a step), so reading order gives that text to the heading's section (BUG-023).
+    A text block printed above a section heading on the same page but read after it
+    goes with the nearest content block printed above it, like a table (see
+    _table_position). Short labels move too (they are figure text). Running headers,
+    footers and headings keep their owner, and so does a block with only page
+    furniture above it: the top of a right-hand text column continues the new section.
+    A one-line block with nothing above it follows the block on its printed line (DOC
+    p144: the end of step 4, after an inline icon).
+
+    Only headings found by their title count (not a fallback anchor), and only when
+    earlier content is printed above them: on a page that opens a chapter, the labels
+    above the heading (2002 tab codes 'FU', DOC 'Appendix B') belong to the chapter.
+    Returns the new owner of each moved block, by reading order.
+    """
+
+    def is_furniture(block: DoclingTextBlock) -> bool:
+        return block.label in _FURNITURE_LABELS or _in_furniture_band(block, doc)
+
+    moved: dict[int, MatchedSection] = {}
+    for page_blocks in blocks_by_page.values():
+        content = [b for b in page_blocks if b.bbox is not None and not is_furniture(b)]
+        heading_tops = [
+            (heading.reading_order, vertical_span(heading.bbox)[0])
+            for heading in content
+            if heading.reading_order in heading_anchors
+        ]
+        heading_tops = [
+            (order, top)
+            for order, top in heading_tops
+            if any(
+                other.reading_order < order
+                and vertical_span(other.bbox)[0] > top + _SIDE_HEADING_TOLERANCE  # type: ignore[arg-type]
+                for other in content
+            )
+        ]
+        if not heading_tops:
+            continue
+        late = [
+            block
+            for block in content
+            if block.reading_order not in anchors
+            and any(
+                block.reading_order > order
+                and vertical_span(block.bbox)[0] > top + _SIDE_HEADING_TOLERANCE  # type: ignore[arg-type]
+                for order, top in heading_tops
+            )
+        ]
+        late_ids = {block.block_id for block in late}
+        placed = [
+            (block.bbox, block.label == "section_header", block)
+            for block in content
+            if block.block_id not in late_ids
+        ]
+        for block in late:
+            assert block.bbox is not None
+            above = nearest_above(block.bbox, placed) or _same_line(block, content, late_ids)
+            owner = owners[above.block_id] if above is not None else None
+            if owner is not None:
+                owners[block.block_id] = owner
+                moved[block.reading_order] = owner
+    return moved
+
+
+def _give_furniture_to_table_above(
+    table: DoclingTable,
+    owner: MatchedSection,
+    leading_by_page: dict[int, tuple[list[DoclingTextBlock], float | None]],
+    owners: dict[str, MatchedSection | None],
+) -> None:
+    """A table printed above a page's first text block is the page's first content
+    (Philips p428: the previous section's weights table), so the page's leading
+    furniture goes with it. The topmost such table wins."""
+    leading, first_top = leading_by_page.get(table.page_no, ([], None))
+    if not leading or table.bbox is None:
+        return
+    top = vertical_span(table.bbox)[0]
+    if first_top is not None and top <= first_top + _ABOVE_TOLERANCE:
+        return
+    for furniture in leading:
+        owners[furniture.block_id] = owner
+    leading_by_page[table.page_no] = (leading, top)
+
+
+# Docling labels for page furniture, and the top/bottom band of a page where running
+# headers, footers, folios and chapter tabs sit when Docling labels them as body text.
+_FURNITURE_LABELS = frozenset({"page_header", "page_footer"})
+_FURNITURE_BAND = 0.08
+# Body text needs at least this many alphabetic words: chapter-tab numbers ('25'),
+# margin labels ('MP40/MP50/ MP60') and lone 'WARNING' labels on the next chapter's
+# opening page are not content that continues there (Philips v2.4).
+_MIN_BODY_WORDS = 3
+_WORD = re.compile(r"^[^\W\d_][^\W\d_'\u2019-]*[.,:;!?)]?$")
+
+
+def _is_body_on_page(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
+    """
+    True unless the block is page furniture (label, or fully inside the top/bottom band),
+    a heading, or shorter than three words. A heading alone on the next page is usually
+    the first part of the next section's split title ('Section 1-9' +
+    'Electromagnetic Compatibility', LOGIQ_S8).
+    """
+    if block.label in _FURNITURE_LABELS or block.label == "section_header":
+        return False
+    if _word_count(block) < _MIN_BODY_WORDS:
+        return False
+    return not _in_furniture_band(block, doc)
+
+
+def _word_count(block: DoclingTextBlock) -> int:
+    return sum(1 for token in block.text.split() if _WORD.match(token.strip("(\"'")))
+
+
+def _in_furniture_band(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
+    """Fully inside the top or bottom band of the page, or outside the page (2002's
+    invisible print-job slugs)."""
+    page = doc.pages.get(block.page_no)
+    if block.bbox is None or page is None or page.height <= 0:
+        return False
+    top, bottom = vertical_span(block.bbox)
+    if block.bbox.coordinate_origin != "bottomleft":
+        top, bottom = page.height + top, page.height + bottom
+    band = page.height * _FURNITURE_BAND
+    return bottom >= page.height - band or top <= band
+
+
+def _is_page_furniture(block: DoclingTextBlock, doc: DoclingDocument) -> bool:
+    """Running header or footer, a block in the furniture band, or a short label
+    (chapter-tab numbers like '39', 'MP40/MP50', margin 'DANGER' on LOGIQ_e p457).
+    Headings and list items are never furniture: a short list item at the top of a
+    page continues the previous page's list (SOMATOM p393 'Table joystick')."""
+    if block.label in _FURNITURE_LABELS:
+        return True
+    if block.label in {"section_header", "list_item"}:
+        return False
+    return _in_furniture_band(block, doc) or _word_count(block) < _MIN_BODY_WORDS
+
+
+def _extend_page_ends(sections: list[MatchedSection], doc: DoclingDocument) -> None:
+    """
+    Extend page_end by one page when the section owns body content on that page.
+
+    page_end comes from the next bookmark's page, so a section whose content runs onto
+    the page where the next section starts mid-page ended one page short (BUG-014,
+    H-15). Positional table placement (BUG-001/003) makes this more common: a table
+    continued at the top of the next page stays with its section. Only one page is
+    added, so content far away (reading order out of sync, BUG-005) never stretches a
+    range. Parents are then widened to contain their children.
+    """
+    for section in sections:
+        next_page = section.page_end + 1
+        owns_body = any(table.page_no == next_page for table in section.tables) or any(
+            block.page_no == next_page and _is_body_on_page(block, doc)
+            for block in section.text_blocks
+        )
+        if owns_body:
+            section.page_end = next_page
+    by_id = {section.section_id: section for section in sections}
+    for section in reversed(sections):
+        parent = by_id.get(section.parent_id) if section.parent_id else None
+        if parent is not None and parent.page_end < section.page_end:
+            parent.page_end = section.page_end
+
+
+# A margin heading sits in a narrow left column (SOMATOM: x1 = 184 of 595 pt) with the
+# body to its right. A two-column body has a left column of about half the page.
+_MARGIN_COLUMN_SHARE = 0.35
+
+
+def _is_margin_heading(
+    block: DoclingTextBlock, width: float, titles: set[str], body_x0: float
+) -> bool:
+    """A heading (or a text block that starts with a bookmark title of the page) in a
+    narrow left column, with the page's main column starting right of it."""
+    if block.bbox is None or block.bbox.x1 > width * _MARGIN_COLUMN_SHARE:
+        return False
+    # The main column (blocks reaching past the margin column) starts right of it;
+    # margin notes inside the column do not count.
+    if body_x0 < block.bbox.x1 - _ABOVE_TOLERANCE:
+        return False
+    text = _normalize_heading(block.text)
+    return block.label == "section_header" or any(
+        text == title or text.startswith(title + " ") for title in titles
+    )
+
+
+def _read_out_of_place(page_blocks: list[DoclingTextBlock], margin: set[str]) -> bool:
+    """The signature of BUG-029: Docling read a margin heading before body text printed
+    above it (SOMATOM p393), or after body text printed below it (p308, p315). Pages read
+    in order (most layouts) are left alone."""
+    body = [
+        block
+        for block in page_blocks
+        if block.block_id not in margin and block.label not in _FURNITURE_LABELS
+    ]
+    for heading in page_blocks:
+        if heading.block_id not in margin:
+            continue
+        assert heading.bbox is not None
+        top = vertical_span(heading.bbox)[0]
+        for block in body:
+            assert block.bbox is not None
+            block_top = vertical_span(block.bbox)[0]
+            above = block_top > top + _SIDE_HEADING_TOLERANCE
+            below = block_top < top - _SIDE_HEADING_TOLERANCE
+            read_after = block.reading_order > heading.reading_order
+            if (above and read_after) or (below and not read_after):
+                return True
+    return False
+
+
+def _top_down_key(block: DoclingTextBlock, margin: set[str]) -> tuple[float, int, float]:
+    assert block.bbox is not None
+    top = vertical_span(block.bbox)[0]
+    if block.block_id in margin:
+        return (-(top + _ABOVE_TOLERANCE), 0, block.bbox.x0)
+    return (-top, 1, block.bbox.x0)
+
+
+def _title_first(
+    page_blocks: list[DoclingTextBlock], titles: set[str]
+) -> list[DoclingTextBlock] | None:
+    """
+    The page's title read last (LOGIQ_e p100, p111, p500): the topmost block of the page
+    (furniture aside) is the heading of a section that starts on this page, but Docling
+    read it after blocks printed below it. Return the page in reading order with that
+    heading moved before the page's other content, or None when the page is fine.
+    """
+    content = [block for block in page_blocks if block.label not in _FURNITURE_LABELS]
+    if not content:
+        return None
+    title = max(content, key=lambda block: vertical_span(block.bbox)[0])  # type: ignore[arg-type]
+    if title.label != "section_header" or _normalize_heading(title.text) not in titles:
+        return None
+    in_order = sorted(page_blocks, key=lambda block: block.reading_order)
+    first_content = next(block for block in in_order if block.label not in _FURNITURE_LABELS)
+    if first_content is title:
+        return None
+    in_order.remove(title)
+    in_order.insert(in_order.index(first_content), title)
+    return in_order
+
+
+def _titles_by_page(page_ranges: list[tuple[str, str, int, int, int]]) -> dict[int, set[str]]:
+    titles: dict[int, set[str]] = {}
+    for _section_id, title, _level, page_start, _page_end in page_ranges:
+        titles.setdefault(page_start, set()).add(_normalize_heading(title))
+    return titles
+
+
+def _margin_headings(
+    doc: DoclingDocument, page_ranges: list[tuple[str, str, int, int, int]]
+) -> dict[int, set[str]]:
+    """Block ids of the margin headings of each page (see _is_margin_heading)."""
+    titles = _titles_by_page(page_ranges)
+    by_page: dict[int, list[DoclingTextBlock]] = {}
+    for block in doc.text_blocks:
+        by_page.setdefault(block.page_no, []).append(block)
+    result: dict[int, set[str]] = {}
+    for page_no, page_blocks in by_page.items():
+        page = doc.pages.get(page_no)
+        if page is None or page.width <= 0 or any(b.bbox is None for b in page_blocks):
+            continue
+        body_x0 = min(
+            (
+                block.bbox.x0
+                for block in page_blocks
+                if block.bbox is not None
+                and block.bbox.x1 > page.width * _MARGIN_COLUMN_SHARE
+                and _is_body_on_page(block, doc)
+            ),
+            default=0.0,
+        )
+        # A running header can repeat the section title at the page's left edge
+        # (Philips p273 'BIS Window'); it is never a margin heading.
+        margin = {
+            block.block_id
+            for block in page_blocks
+            if not _in_furniture_band(block, doc)
+            and _is_margin_heading(block, page.width, titles.get(page_no, set()), body_x0)
+        }
+        if margin:
+            result[page_no] = margin
+    return result
+
+
+# A merged block's tail is searched in the PDF text layer by its first tokens; a shorter
+# key could match a running footer or a repeated label.
+_TAIL_KEY_TOKENS = 6
+_TAIL_MIN_TOKENS = 3
+# Words whose centre is this close to the heading's bbox belong to the heading.
+_WORD_TOLERANCE = 2.0
+
+
+def _tokens(text: str) -> list[str]:
+    return [token for token in (re.sub(r"\W", "", word).lower() for word in text.split()) if token]
+
+
+def _top_left(bbox: BoundingBox, page_height: float) -> tuple[float, float, float, float]:
+    if bbox.coordinate_origin == "bottomleft":
+        return bbox.x0, page_height - max(bbox.y0, bbox.y1), bbox.x1, page_height - min(
+            bbox.y0, bbox.y1
+        )
+    return bbox.x0, min(bbox.y0, bbox.y1), bbox.x1, max(bbox.y0, bbox.y1)
+
+
+def _split_merged_block(
+    block: DoclingTextBlock,
+    words: list[Word],
+    page_height: float,
+    other_boxes: list[tuple[float, float, float, float]],
+) -> tuple[DoclingTextBlock, DoclingTextBlock] | None:
+    """(heading, tail) when the block's text is its margin heading plus text printed
+    elsewhere on the page; None when the tail cannot be found in the text layer.
+    ``other_boxes`` are the top-left bboxes of the page's other Docling blocks."""
+    assert block.bbox is not None
+    x0, top, x1, bottom = _top_left(block.bbox, page_height)
+    tol = _WORD_TOLERANCE
+
+    def inside(word: Word) -> bool:
+        cx, cy = (word[0] + word[2]) / 2, (word[1] + word[3]) / 2
+        return x0 - tol <= cx <= x1 + tol and top - tol <= cy <= bottom + tol
+
+    heading_words = [word for word in words if inside(word)]
+    heading_tokens = _tokens(" ".join(word[4] for word in heading_words))
+    raw = block.text.split()
+    tokens = _tokens(block.text)
+    if not heading_tokens or tokens[: len(heading_tokens)] != heading_tokens:
+        return None
+    if len(tokens) == len(heading_tokens):
+        return None
+    # Raw words of the heading: the first words that hold its tokens.
+    count, cut = 0, 0
+    while cut < len(raw) and count < len(heading_tokens):
+        count += len(_tokens(raw[cut]))
+        cut += 1
+    tail_text = " ".join(raw[cut:])
+    tail_tokens = _tokens(tail_text)
+    if len(tail_tokens) < _TAIL_MIN_TOKENS:
+        return None
+    others = [word for word in words if not inside(word)]
+    flat = [(index, token) for index, word in enumerate(others) for token in _tokens(word[4])]
+    key = tail_tokens[:_TAIL_KEY_TOKENS]
+
+    def run_end(start: int) -> int:
+        # The tail's words follow in the text layer until the first token that differs,
+        # so its bbox never stretches over unrelated text in another column.
+        end = start
+        while (
+            end + 1 < len(flat)
+            and end + 1 - start < len(tail_tokens)
+            and flat[end + 1][1] == tail_tokens[end + 1 - start]
+        ):
+            end += 1
+        return end
+
+    def in_other_block(start: int) -> bool:
+        wx0, wy0, wx1, wy1, _text = others[flat[start][0]]
+        cx, cy = (wx0 + wx1) / 2, (wy0 + wy1) / 2
+        return any(bx0 <= cx <= bx1 and by0 <= cy <= by1 for bx0, by0, bx1, by1 in other_boxes)
+
+    # The tail is text Docling kept in no block of its own, so a copy inside another
+    # block is a repeat of the sentence (SOMATOM p209, p321). Among the rest, the
+    # longest match wins (p36: two sentences start with the same six words), then the
+    # copy nearest the heading.
+    starts = [
+        i
+        for i in range(len(flat) - len(key) + 1)
+        if [token for _index, token in flat[i : i + len(key)]] == key and not in_other_block(i)
+    ]
+    if not starts:
+        return None
+    start = min(starts, key=lambda i: (-run_end(i), abs(others[flat[i][0]][1] - top)))
+    end = run_end(start)
+    tail_words = others[flat[start][0] : flat[end][0] + 1]
+    tx0 = min(word[0] for word in tail_words)
+    ty0 = min(word[1] for word in tail_words)
+    tx1 = max(word[2] for word in tail_words)
+    ty1 = max(word[3] for word in tail_words)
+    if block.bbox.coordinate_origin == "bottomleft":
+        tail_bbox = replace(block.bbox, x0=tx0, y0=page_height - ty0, x1=tx1, y1=page_height - ty1)
+    else:
+        tail_bbox = replace(block.bbox, x0=tx0, y0=ty0, x1=tx1, y1=ty1)
+    heading = replace(block, text=" ".join(raw[:cut]))
+    tail = replace(
+        block,
+        block_id=f"{block.block_id}-tail",
+        text=tail_text,
+        label="text",
+        bbox=tail_bbox,
+        provenance=replace(block.provenance, bbox=tail_bbox),
+    )
+    return heading, tail
+
+
+def _split_merged_margin_headings(
+    doc: DoclingDocument,
+    page_ranges: list[tuple[str, str, int, int, int]],
+    page_words: Callable[[int], list[Word]],
+) -> DoclingDocument:
+    """
+    Docling can merge a margin heading with text printed far from it, often the last
+    paragraph of the section before, at the top of the page (SOMATOM p102: 'Touch Panel
+    The laser lightmarkers are ...'). The block keeps only the heading's bbox, so the
+    text went to the next section (BUG-029). Split such a block into the heading and a
+    tail placed where the text layer prints it. A tail printed above the heading keeps
+    Docling's reading position and the heading comes right after it; a tail level with
+    or below the heading comes after it. _place_margin_headings then orders the page by
+    position. reading_order values are renumbered 0, 1, 2, ...: an anchor fallback steps
+    to the next block with ``prev_anchor + 1``.
+    """
+    titles = _titles_by_page(page_ranges)
+    # The two parts of each split block, in reading order.
+    splits: dict[str, tuple[DoclingTextBlock, DoclingTextBlock]] = {}
+    for block in doc.text_blocks:
+        page = doc.pages.get(block.page_no)
+        page_titles = titles.get(block.page_no)
+        if (
+            not page_titles
+            or page is None
+            or page.width <= 0
+            or block.bbox is None
+            or block.bbox.x1 > page.width * _MARGIN_COLUMN_SHARE
+        ):
+            continue
+        text = _normalize_heading(block.text)
+        if not any(text.startswith(title + " ") for title in page_titles):
+            continue
+        other_boxes = [
+            _top_left(other.bbox, page.height)
+            for other in doc.text_blocks
+            if other.page_no == block.page_no
+            and other.bbox is not None
+            and other.block_id != block.block_id
+        ]
+        split = _split_merged_block(block, page_words(block.page_no), page.height, other_boxes)
+        if split is not None:
+            heading, tail = split
+            assert heading.bbox is not None and tail.bbox is not None
+            # A tail level with the heading is the heading's own first line (SOMATOM
+            # p152): it comes after the heading. A tail printed above it comes before.
+            above = (
+                vertical_span(tail.bbox)[0]
+                > vertical_span(heading.bbox)[0] + _SIDE_HEADING_TOLERANCE
+            )
+            splits[block.block_id] = (tail, heading) if above else (heading, tail)
+    if not splits:
+        return doc
+    in_order: list[DoclingTextBlock] = []
+    for block in sorted(doc.text_blocks, key=lambda b: b.reading_order):
+        in_order.extend(splits.get(block.block_id, (block,)))
+    order = {block.block_id: n for n, block in enumerate(in_order)}
+    blocks = [
+        replace(part, reading_order=order[part.block_id])
+        for block in doc.text_blocks
+        for part in splits.get(block.block_id, (block,))
+    ]
+    return replace(doc, text_blocks=blocks)
+
+
+def _place_margin_headings(
+    doc: DoclingDocument,
+    page_ranges: list[tuple[str, str, int, int, int]],
+    margins: dict[int, set[str]],
+) -> DoclingDocument:
+    """
+    Docling reads the left margin column of a page first: every side heading of the
+    page, then the whole body (SOMATOM p393). On a page with margin headings, put the
+    blocks in top-to-bottom order so each heading comes right before the text beside
+    and below it; a heading goes first among blocks level with it (BUG-029). A page
+    whose title is read last gets the title first (see _title_first). Other pages
+    keep Docling's order. The page keeps its own set of reading_order values.
+    """
+    titles = _titles_by_page(page_ranges)
+    by_page: dict[int, list[DoclingTextBlock]] = {}
+    for block in doc.text_blocks:
+        by_page.setdefault(block.page_no, []).append(block)
+
+    new_order: dict[str, int] = {}
+    for page_no, page_blocks in by_page.items():
+        page = doc.pages.get(page_no)
+        if page is None or page.width <= 0 or any(b.bbox is None for b in page_blocks):
+            continue
+        margin = margins.get(page_no, set())
+        orders = sorted(block.reading_order for block in page_blocks)
+        in_order: list[DoclingTextBlock] | None
+        if margin and _read_out_of_place(page_blocks, margin):
+            in_order = sorted(page_blocks, key=lambda block: _top_down_key(block, margin))
+        else:
+            in_order = _title_first(page_blocks, titles.get(page_no, set()))
+        if in_order is None:
+            continue
+        for order, block in zip(orders, in_order, strict=True):
+            new_order[block.block_id] = order
+    if not new_order:
+        return doc
+    blocks = [
+        replace(block, reading_order=new_order[block.block_id])
+        if block.block_id in new_order
+        else block
+        for block in doc.text_blocks
+    ]
+    return replace(doc, text_blocks=blocks)
+
+
+# An index page has an index marker (an 'Index' or '#' heading, letter headings, or an
+# 'Index - 2' running header or footer) and many page references among its words.
+_INDEX_HEADINGS = frozenset({"index", "#"})
+_INDEX_FURNITURE = re.compile(r"^index\b", re.IGNORECASE)
+_PAGE_REF = re.compile(r"^\(?(?:[ivxlc]+[-\u2013])?\d{1,4}(?:[-\u2013]\d{1,4})?[,;.)]?$", re.I)
+_LETTERS = re.compile(r"[A-Za-z]{2,}")
+_INDEX_MIN_WORDS = 30
+_INDEX_MIN_REF_SHARE = 0.25
+
+
+def find_unbookmarked_index(doc: DoclingDocument, after_page: int) -> int | None:
+    """
+    First page of an alphabetical index at the end of the document that has no
+    bookmark (Philips p485, LOGIQ_S8 p911), or None (BUG-002).
+
+    Walks back from the last page while pages are index pages or have almost no
+    text (blank pages, the back cover), and stops at the first page of real text.
+    The index starts at the earliest index page of that run with an index marker,
+    and must start after ``after_page`` (the last bookmark's page).
+    """
+    words: dict[int, list[str]] = {}
+    marked: set[int] = set()
+    for block in doc.text_blocks:
+        text = block.text.strip()
+        if block.label in _FURNITURE_LABELS:
+            if _INDEX_FURNITURE.match(text):
+                marked.add(block.page_no)
+            continue
+        if block.label in {"section_header", "title"} and (
+            text.lower() in _INDEX_HEADINGS or (len(text) == 1 and text.isalpha())
+        ):
+            marked.add(block.page_no)
+        words.setdefault(block.page_no, []).extend(text.split())
+
+    start = None
+    for page in sorted(words, reverse=True):
+        if page <= after_page:
+            break
+        tokens = words[page]
+        word_count = sum(1 for token in tokens if _LETTERS.search(token))
+        if word_count < _INDEX_MIN_WORDS:
+            continue
+        refs = sum(1 for token in tokens if _PAGE_REF.match(token))
+        if refs / word_count < _INDEX_MIN_REF_SHARE:
+            break
+        if page in marked:
+            start = page
+    return start
 
 
 def match_content_to_sections(
@@ -242,6 +1041,8 @@ def match_content_to_sections(
     verifications: list[TitleVerification] | None = None,
     numbering_schemes: list[str] | None = None,
     offsets_applied: list[int] | None = None,
+    boundaries: list[bool] | None = None,
+    page_words: Callable[[int], list[Word]] | None = None,
 ) -> list[MatchedSection]:
     """
     Match docling content blocks to bookmark sections.
@@ -261,22 +1062,37 @@ def match_content_to_sections(
             bookmarks — see toc_resolution.ResolvedBookmark.numbering_scheme.
         offsets_applied: optional per-bookmark offset (global or per-cluster)
             that was applied to resolve this bookmark's page.
+        boundaries: optional flags, same order as bookmarks. A flagged entry (an
+            excluded Index or Table of contents bookmark) ends the sections before
+            it but builds no section, so its pages stay outside the tree (BUG-002).
+            verifications, numbering_schemes and offsets_applied list only the
+            entries that are not flagged.
+        page_words: optional `page_no -> words` reader over the PDF text layer
+            (fitz_toc.page_words_reader), used to split margin headings merged with
+            text printed elsewhere on the page (BUG-029).
 
     Returns:
-        list of MatchedSection, one per bookmark, with content assigned.
+        list of MatchedSection, one per bookmark that is not a boundary, with
+        content assigned.
     """
     if not bookmarks:
         return []
 
-    ranges = _compute_page_ranges(bookmarks, total_pages)
-    hierarchy = _build_hierarchy(ranges)
-    reading_order_ranges = dict(
-        zip(
-            (section_id for section_id, *_ in ranges),
-            _compute_reading_order_ranges(bookmarks, ranges, doc),
-            strict=True,
-        )
+    all_ranges = _compute_page_ranges(bookmarks, total_pages)
+    if page_words is not None:
+        doc = _split_merged_margin_headings(doc, all_ranges, page_words)
+    margins = _margin_headings(doc, all_ranges)
+    doc = _place_margin_headings(doc, all_ranges, margins)
+    margin = frozenset(block_id for ids in margins.values() for block_id in ids)
+    all_reading_order, heading_anchors = _compute_reading_order_ranges(
+        bookmarks, all_ranges, doc, boundaries, margin=margin
     )
+    kept = [i for i in range(len(bookmarks)) if not (boundaries and boundaries[i])]
+    ranges = [(_section_id(n), *all_ranges[i][1:]) for n, i in enumerate(kept)]
+    hierarchy = _build_hierarchy(ranges)
+    reading_order_ranges = {
+        ranges[n][0]: all_reading_order[i] for n, i in enumerate(kept)
+    }
 
     sections: list[MatchedSection] = []
     for i, (section_id, title, level, page_start, page_end) in enumerate(ranges):
@@ -301,6 +1117,7 @@ def match_content_to_sections(
             )
         )
 
-    _assign_content(sections, reading_order_ranges, doc)
+    _assign_content(sections, reading_order_ranges, doc, heading_anchors)
+    _extend_page_ends(sections, doc)
 
     return sections

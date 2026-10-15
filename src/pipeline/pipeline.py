@@ -25,15 +25,30 @@ Merge path: pipeline.py is the only file that needs to integrate into mvp_v2/src
 from __future__ import annotations
 
 import logging
+import re
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
-from src.models.extraction import DoclingDocument
-from src.tree_builder.bookmark_sanity import BookmarkSanityReport, check_bookmark_sanity
-from src.tree_builder.fitz_toc import get_embedded_toc, page_count
-from src.tree_builder.section_matcher import MatchedSection, match_content_to_sections
+from src.models.extraction import BoundingBox, DoclingDocument
+from src.tree_builder.bookmark_sanity import (
+    BookmarkSanityReport,
+    check_bookmark_sanity,
+    repair_bookmarks,
+)
+from src.tree_builder.fitz_toc import (
+    get_embedded_toc,
+    page_count,
+    page_text_reader,
+    page_words_reader,
+)
+from src.tree_builder.section_matcher import (
+    MatchedSection,
+    find_unbookmarked_index,
+    match_content_to_sections,
+    nearest_above,
+)
 from src.tree_builder.synthetic_toc import synthesize_toc
 from src.tree_builder.toc_classification import ExcludedTocEntry, filter_toc_entries
 from src.tree_builder.toc_resolution import NumberingReport, resolve_toc_pages
@@ -49,7 +64,9 @@ class EmbeddedImage:
     page_no: int
     width_px: int
     height_px: int
-    section_id: str | None = None  # assigned after pipeline via page_no → section map
+    section_id: str | None = None  # assigned after pipeline by position on the page
+    bbox: BoundingBox | None = None  # bottom-left origin, same frame as Docling bboxes
+    origin: str = "raster"  # "vector": a figure drawn with paths, rendered (BUG-010)
 
 
 @dataclass
@@ -122,13 +139,32 @@ class PipelineResult:
         return {s["section_id"]: s for s in self.sections}
 
 
+def _node_bbox(node: dict[str, Any]) -> BoundingBox | None:
+    raw = node.get("bbox")
+    if not raw:
+        return None
+    return BoundingBox(
+        x0=raw["x0"],
+        y0=raw["y0"],
+        x1=raw["x1"],
+        y1=raw["y1"],
+        page_no=node.get("page_no", 0),
+        coordinate_origin="bottomleft",
+    )
+
+
 def _map_images_to_sections(
     images: list[EmbeddedImage],
     sections: list[dict[str, Any]],
 ) -> list[EmbeddedImage]:
     """
-    Assign section_id to each image by matching image.page_no to section page ranges.
-    Assigns the deepest (highest hierarchy_level) section that contains the page.
+    Assign section_id to each image by its position on the page.
+
+    The image goes to the section of the nearest text node printed above it; an image
+    above every text node of its page continues the previous page's content (BUG-003).
+    Images without a bbox, on pages without placed text, or placed in a section more
+    than one page away from its page range (reading order out of sync, BUG-005), fall
+    back to the deepest section on the page.
     """
     if not images or not sections:
         return images
@@ -141,18 +177,311 @@ def _map_images_to_sections(
     for pg in page_sections:
         page_sections[pg].sort(key=lambda s: s.get("hierarchy_level", 0), reverse=True)
 
+    by_id = {sec["section_id"]: sec for sec in sections}
+    # Text nodes in document order, and the placed ones per page.
+    ordered: list[tuple[int, str]] = []
+    page_nodes: dict[int, list[tuple[BoundingBox, bool, tuple[int, str]]]] = {}
+    for sec in sections:
+        for node in sec.get("semantic_nodes", []):
+            if node.get("node_type") == "table":
+                continue
+            key = (node.get("semantic_order", 0), sec["section_id"])
+            ordered.append(key)
+            bbox = _node_bbox(node)
+            if bbox is not None:
+                heading = node.get("node_type") == "heading"
+                page_nodes.setdefault(node.get("page_no", 0), []).append((bbox, heading, key))
+    ordered.sort()
+    position = {key: index for index, key in enumerate(ordered)}
+
+    def _by_position(img: EmbeddedImage) -> str | None:
+        nodes = page_nodes.get(img.page_no)
+        if img.bbox is None or not nodes:
+            return None
+        key = nearest_above(img.bbox, nodes)
+        if key is not None:
+            return key[1]
+        first = position[min(key for _bbox, _heading, key in nodes)]
+        return ordered[first - 1][1] if first > 0 else None
+
     result: list[EmbeddedImage] = []
     for img in images:
-        candidates = page_sections.get(img.page_no, [])
-        section_id = candidates[0]["section_id"] if candidates else None
-        result.append(EmbeddedImage(
-            image_bytes=img.image_bytes,
-            page_no=img.page_no,
-            width_px=img.width_px,
-            height_px=img.height_px,
-            section_id=section_id,
-        ))
+        section_id = _by_position(img)
+        # Reading order can be out of sync with the pages (BUG-005): only trust a
+        # section whose page range contains the image or ends on the page before it.
+        if section_id is None or not (
+            by_id[section_id].get("page_start", 0)
+            <= img.page_no
+            <= by_id[section_id].get("page_end", 0) + 1
+        ):
+            candidates = page_sections.get(img.page_no, [])
+            section_id = candidates[0]["section_id"] if candidates else None
+        result.append(replace(img, section_id=section_id))
     return result
+
+
+def _with_excluded_boundaries(
+    bookmarks: list[tuple[int, str, int]],
+    excluded: list[ExcludedTocEntry],
+    raw_toc_size: int,
+) -> tuple[list[tuple[int, str, int]], list[bool]]:
+    """
+    Put the excluded top-level TOC entries (Index, Table of contents, Glossary) back
+    in TOC order as boundaries, so the section before them ends where they start
+    instead of absorbing their pages (BUG-002). Deeper excluded entries (Philips
+    'Symbols' inside a chapter) are left out as before. fitz bookmark pages are
+    physical pages, so an excluded entry's page needs no resolution.
+    """
+    top_level = min(
+        [level for level, _, _ in bookmarks] + [e.level for e in excluded], default=1
+    )
+    by_position = {e.position: e for e in excluded}
+    kept = iter(bookmarks)
+    entries: list[tuple[int, str, int]] = []
+    boundaries: list[bool] = []
+    for position in range(raw_toc_size):
+        entry = by_position.get(position)
+        if entry is None:
+            entries.append(next(kept))
+            boundaries.append(False)
+        elif entry.level == top_level and isinstance(entry.page, int):
+            entries.append((entry.level, entry.title, entry.page))
+            boundaries.append(True)
+    return entries, boundaries
+
+
+# Vector figures (BUG-010): drawing paths are grouped when they lie within _VECTOR_GAP
+# points of each other; a group with enough path segments and area is a figure.
+_VECTOR_GAP = 12.0
+_VECTOR_MIN_SEGMENTS = 40
+_VECTOR_MIN_AREA_FRAC = 0.01
+_VECTOR_BAND = 0.08            # running header/footer rules
+_VECTOR_DPI = 150
+_VECTOR_LABEL_GAP = 15.0       # callout labels just outside the paths
+# A callout label is a short text block (DOC p88 'backspace', LOGIQ_S8 p106 'Release'); body
+# sentences and figure captions next to the drawing are not labels.
+_VECTOR_LABEL_WORDS = 6
+_VECTOR_LABEL_LINES = 3
+_VECTOR_LABEL_WIDTH = 1.5      # a table header row above a photo is not a label (LOGIQ_S8 p608)
+_VECTOR_CAPTION = re.compile(r"^(Figure|Fig\.|Table)\s", re.IGNORECASE)
+_VECTOR_FULL_PAGE = 0.75       # a drawing over most of the page is the page (AUTOMATIC plates)
+_VECTOR_NESTED = 0.9           # a figure mostly inside another figure is a duplicate
+# Text blocks and photo tables are not figures: a region with many words (more than 3
+# letters) that is mostly text (Philips p238 steps, p404 order table), or that holds
+# several photos (LOGIQ_S8 'Step | Illustration' tables), is left to the text and rasters.
+_VECTOR_MANY_WORDS = 25
+_VECTOR_TEXT_COVER = 0.2
+
+
+def _label_blocks(blocks: list[dict[str, Any]], fitz: Any) -> list[Any]:
+    """
+    Return the rects of the short text blocks that can be callout labels. A label has at
+    most _VECTOR_LABEL_WORDS words and _VECTOR_LABEL_LINES lines, is not a caption, and its
+    font is not larger than the body text, so a heading next to a figure (Philips p216
+    'Setting Up the PiCCO C.O. Measurement') is not one. A callout of up to 3 characters
+    may use a larger font.
+    """
+    sizes: dict[float, int] = {}
+    texts = []
+    for block in blocks:
+        if block.get("type") != 0:
+            continue
+        spans = [span for line in block["lines"] for span in line["spans"]]
+        for span in spans:
+            size = round(span["size"], 1)
+            sizes[size] = sizes.get(size, 0) + len(span["text"].strip())
+        text = "\n".join("".join(span["text"] for span in line["spans"]) for line in block["lines"])
+        texts.append((block, spans, text))
+    if not sizes:
+        return []
+    body = max(sizes, key=lambda size: sizes[size])
+    return [
+        fitz.Rect(block["bbox"])
+        for block, spans, text in texts
+        if len(text.split()) <= _VECTOR_LABEL_WORDS
+        and len(block["lines"]) <= _VECTOR_LABEL_LINES
+        and not _VECTOR_CAPTION.match(text.strip())
+        and (
+            max((span["size"] for span in spans), default=0.0) <= body + 0.5
+            or len(text.strip()) <= 3  # big callout numbers (LOGIQ_S8 p502 '1'..'6')
+        )
+    ]
+
+
+def _extract_vector_figures(
+    pdf_path: Path,
+    n_pages: int,
+    doc: DoclingDocument,
+    rasters: list[EmbeddedImage],
+    logger: logging.Logger,
+) -> list[EmbeddedImage]:
+    """
+    Render figures drawn with vector paths (2002 schematics, LOGIQ_e flowcharts, Philips
+    module drawings) that the raster extraction cannot see, and return them with the
+    raster images. A figure that contains raster images (a photo with drawn arrows, a
+    wiring drawing with an icon) is rendered whole and replaces those rasters.
+
+    Coordinates follow the displayed page: get_drawings() is in unrotated space, so paths
+    are mapped with the page's rotation matrix (AUTOMATIC pages have /Rotate 180).
+    Skipped: paths in the header/footer band, page frames, Docling table grids, thin
+    caution/warning bars, straight-line grids around photos, and text blocks or photo
+    tables (many words with dense text or several photos). A figure over most of the page
+    is rendered as the whole page so its title and drawing number are kept, and a figure
+    mostly inside a larger one is dropped.
+    """
+    try:
+        import pymupdf as fitz
+    except ImportError:
+        import fitz  # type: ignore[no-redef]
+
+    tables_by_page: dict[int, list[Any]] = {}
+    for table in doc.tables:
+        if table.bbox is not None:
+            tables_by_page.setdefault(table.page_no, []).append(table.bbox)
+    rasters_by_page: dict[int, list[EmbeddedImage]] = {}
+    for image in rasters:
+        rasters_by_page.setdefault(image.page_no, []).append(image)
+
+    figures: list[EmbeddedImage] = []
+    absorbed: set[int] = set()
+    pdf = fitz.open(str(pdf_path))
+    for page_no in range(1, n_pages + 1):
+        page = pdf[page_no - 1]
+        width, height = page.rect.width, page.rect.height
+        to_page = page.rotation_matrix
+        tables = [
+            fitz.Rect(b.x0, height - b.y0, b.x1, height - b.y1)
+            for b in tables_by_page.get(page_no, [])
+        ]
+        paths = []
+        for drawing in page.get_drawings():
+            rect = fitz.Rect(drawing["rect"]) * to_page
+            if rect.y1 < height * _VECTOR_BAND or rect.y0 > height * (1 - _VECTOR_BAND):
+                continue
+            if rect.width > width * 0.85 and rect.height > height * 0.85:
+                continue  # page frame or background
+            items = drawing["items"]
+            straight = sum(
+                1
+                for item in items
+                if item[0] == "re"
+                or (
+                    item[0] == "l"
+                    and (abs(item[1].x - item[2].x) < 0.5 or abs(item[1].y - item[2].y) < 0.5)
+                )
+            )
+            edge = fitz.Rect(rect.x0 - 1, rect.y0 - 1, rect.x1 + 1, rect.y1 + 1)
+            if straight == len(items) and any(table.intersects(edge) for table in tables):
+                continue  # table grid; a drawing in a table cell is kept (LOGIQ_S8 p502)
+            paths.append((rect, len(items), straight))
+        if not paths:
+            continue
+
+        groups: list[list[Any]] = []  # [rect, segments, straight segments]
+        for rect, segments, straight in sorted(paths, key=lambda p: (p[0].y0, p[0].x0)):
+            reach = fitz.Rect(rect.x0 - _VECTOR_GAP, rect.y0 - _VECTOR_GAP,
+                              rect.x1 + _VECTOR_GAP, rect.y1 + _VECTOR_GAP)
+            hits = [group for group in groups if group[0].intersects(reach)]
+            if not hits:
+                groups.append([fitz.Rect(rect), segments, straight])
+                continue
+            first = hits[0]
+            first[0] |= rect
+            first[1] += segments
+            first[2] += straight
+            for group in hits[1:]:
+                first[0] |= group[0]
+                first[1] += group[1]
+                first[2] += group[2]
+                groups.remove(group)
+
+        page_rasters = [
+            (id(image), fitz.Rect(image.bbox.x0, height - image.bbox.y0,
+                                  image.bbox.x1, height - image.bbox.y1))
+            for image in rasters_by_page.get(page_no, [])
+            if image.bbox is not None
+        ]
+        words = [
+            (fitz.Rect(word[:4]), word[4]) for word in page.get_text("words")
+        ]
+        labels = _label_blocks(page.get_text("dict")["blocks"], fitz)
+        boxes: list[tuple[Any, list[int]]] = []
+        for box, segments, straight in groups:
+            box = box & page.rect
+            if segments < _VECTOR_MIN_SEGMENTS:
+                continue
+            if box.get_area() < _VECTOR_MIN_AREA_FRAC * width * height:
+                continue
+            if box.height < 25 and box.width > 8 * box.height:
+                continue  # caution/warning bar (SOMATOM)
+            inside = [
+                (key, rect) for key, rect in page_rasters
+                if (box & rect).get_area() >= 0.5 * rect.get_area()
+            ]
+            if inside and straight >= 0.8 * segments:
+                continue  # step-table grid around photos (LOGIQ_S8)
+            host = max(
+                (item for item in page_rasters if item not in inside),
+                key=lambda item: (box & item[1]).get_area(),
+                default=None,
+            )
+            if host is not None and (box & host[1]).get_area() >= 0.8 * box.get_area():
+                box |= host[1]  # circles and arrows drawn on a photo (LOGIQ_S8 p608)
+                inside.append(host)
+            reach = fitz.Rect(box.x0 - _VECTOR_LABEL_GAP, box.y0 - _VECTOR_LABEL_GAP,
+                              box.x1 + _VECTOR_LABEL_GAP, box.y1 + _VECTOR_LABEL_GAP)
+            for rect in labels:
+                if rect.intersects(reach) and rect.width <= _VECTOR_LABEL_WIDTH * box.width:
+                    box |= rect  # callout labels cut at the edge (Philips p245, DOC p88)
+            for _key, rect in inside:
+                box |= rect
+            box &= page.rect
+            in_box = [rect for rect, text in words if rect.intersects(box) and len(text) > 3]
+            if len(in_box) >= _VECTOR_MANY_WORDS:
+                text_area = sum((rect & box).get_area() for rect, _text in words)
+                if text_area >= _VECTOR_TEXT_COVER * box.get_area() or len(inside) >= 2:
+                    continue  # a text block or a photo table, not a figure
+            if box.get_area() >= _VECTOR_FULL_PAGE * width * height:
+                box = fitz.Rect(page.rect)
+            boxes.append((box, [key for key, _rect in inside]))
+        for index, (box, keys) in enumerate(boxes):
+            absorbed.update(keys)
+            if any(
+                (other.get_area(), j) > (box.get_area(), index)
+                and (other & box).get_area() >= _VECTOR_NESTED * box.get_area()
+                for j, (other, _keys) in enumerate(boxes)
+            ):
+                continue  # nested duplicate (LOGIQ_S8 p794): the larger figure shows it
+            pixmap = page.get_pixmap(clip=box, dpi=_VECTOR_DPI)
+            figures.append(EmbeddedImage(
+                image_bytes=pixmap.tobytes("png"),
+                page_no=page_no,
+                width_px=pixmap.width,
+                height_px=pixmap.height,
+                bbox=BoundingBox(
+                    x0=box.x0, y0=height - box.y0, x1=box.x1, y1=height - box.y1,
+                    page_no=page_no, coordinate_origin="bottomleft",
+                ),
+                origin="vector",
+            ))
+    pdf.close()
+    logger.info(
+        "images: %d vector figures rendered, %d rasters inside them replaced",
+        len(figures), len(absorbed),
+    )
+    kept = [image for image in rasters if id(image) not in absorbed]
+    return sorted(kept + figures, key=lambda image: image.page_no)
+
+
+def _flag_relocated_sections(sections: list[dict[str, Any]], sanity: BookmarkSanityReport) -> None:
+    """Force flagged_for_review on sections built from a relocated bookmark."""
+    for repair in sanity.repairs:
+        if repair.kind != "relocated":
+            continue
+        for section in sections:
+            same_title = section.get("title") == repair.title
+            if same_title and section.get("page_start") == repair.new_page:
+                section["flagged_for_review"] = True
 
 
 def run_pipeline(
@@ -178,7 +507,7 @@ def run_pipeline(
         window_size: Docling batch size in pages.
         window_overlap: Docling page overlap between batches.
         extract_images: Whether to extract embedded images from PDF pages.
-        min_image_px: Minimum image dimension to keep (filters decorative icons).
+        min_image_px: Minimum image width and height in pixels (filters tiny decoration).
         include_back_matter: Whether Bibliography/References/Appendix/Index
             entries are kept in the main hierarchy (see toc_classification.py).
             Default False — they're set aside in excluded_toc_entries instead.
@@ -210,6 +539,18 @@ def run_pipeline(
 
         # ── Step 2: bookmark sanity ───────────────────────────────────────────
         sanity = check_bookmark_sanity(bookmarks, n_pages)
+        if sanity.has_hard_failures:
+            repaired, repairs = repair_bookmarks(
+                bookmarks, n_pages, page_text_reader(pdf_path)
+            )
+            if repairs:
+                original_issues = sanity.issues
+                sanity = check_bookmark_sanity(repaired, n_pages)
+                sanity.repairs = repairs
+                sanity.original_issues = original_issues
+                bookmarks = repaired
+                for repair in repairs:
+                    logger.warning("bookmark_sanity repair [%s]: %s", repair.kind, repair.detail)
         if sanity.has_hard_failures:
             logger.error(
                 "bookmark_sanity: %d hard failures — aborting",
@@ -296,6 +637,7 @@ def run_pipeline(
         # aside back-matter (Bibliography, Appendix, ...) BEFORE toc_resolution
         # runs its offset calibration — noise entries are often among the
         # first few bookmarks, exactly where calibration samples from.
+        raw_toc_size = len(bookmarks)
         content_bookmarks, excluded_toc_entries = filter_toc_entries(
             bookmarks, include_back_matter=include_back_matter
         )
@@ -358,17 +700,28 @@ def run_pipeline(
         ts = _lap("toc_resolution", ts)
 
         # ── Step 7: section matcher ───────────────────────────────────────────
+        entries, boundaries = _with_excluded_boundaries(
+            bookmarks, excluded_toc_entries, raw_toc_size
+        )
+        index_page = find_unbookmarked_index(doc, after_page=max(p for _, _, p in entries))
+        if index_page is not None:
+            logger.info("section_matcher: unbookmarked index from page %d", index_page)
+            entries.append((min(level for level, _, _ in entries), "Index", index_page))
+            boundaries.append(True)
         matched: list[MatchedSection] = match_content_to_sections(
-            bookmarks, doc, n_pages,
+            entries, doc, n_pages,
             verifications=verifications,
             numbering_schemes=numbering_schemes,
             offsets_applied=offsets_applied,
+            boundaries=boundaries,
+            page_words=page_words_reader(pdf_path),
         )
         logger.info("section_matcher: %d sections", len(matched))
         ts = _lap("section_matcher", ts)
 
         # ── Step 8: tree export ───────────────────────────────────────────────
         sections = build_tree_json(matched, structural_source=structural_source)
+        _flag_relocated_sections(sections, sanity)
         logger.info("tree_export: %d sections", len(sections))
         ts = _lap("tree_export", ts)
 
@@ -380,12 +733,12 @@ def run_pipeline(
         with open(tree_json_path, "w") as f:
             json.dump(sections, f, indent=2, ensure_ascii=False)
 
-        first_bm_page = bookmarks[0][2] if bookmarks else 1
-        expected_front_matter = (
-            sum(1 for b in doc.text_blocks if b.page_no < first_bm_page)
-            + sum(1 for t in doc.tables if t.page_no < first_bm_page)
-        ) if doc else 0
-        total_blocks = len(doc.text_blocks) + len(doc.tables) if doc else 0
+        expected_front_matter = _front_matter_count(doc, matched) if doc else 0
+        # The matcher splits some merged margin headings into two blocks (BUG-029); the
+        # extra tail blocks count as blocks of the document too.
+        total_blocks = (
+            len(doc.text_blocks) + len(doc.tables) + _split_tail_count(doc, matched) if doc else 0
+        )
         validation = validate_tree(
             tree_json_path=tree_json_path,
             bookmarks=bookmarks,
@@ -402,6 +755,7 @@ def run_pipeline(
         if extract_images:
             try:
                 images = _extract_embedded_images(pdf_path, n_pages, min_image_px, logger)
+                images = _extract_vector_figures(pdf_path, n_pages, doc, images, logger)
                 images = _map_images_to_sections(images, sections)
                 logger.info("images: %d extracted", len(images))
             except Exception as exc:
@@ -441,6 +795,35 @@ def run_pipeline(
         )
 
 
+def _front_matter_count(doc: DoclingDocument, matched: list[MatchedSection]) -> int:
+    """Blocks that are correctly outside the tree, so they are not coverage gaps.
+
+    These are blocks on pages no section covers (cover, the manual's own TOC, an excluded
+    Index) and text read before the first section's first block, such as a cover title
+    on the page where the first section starts (LOGIQ_S8 p1). The first heading is only
+    searched on that start page, so only text above it there is counted. Tables have no
+    reading order and keep the page rule.
+    """
+    covered = {p for s in matched for p in range(s.page_start, s.page_end + 1)}
+    # The matcher can renumber reading orders, so compare Docling's own values.
+    order = {b.block_id: b.reading_order for b in doc.text_blocks}
+    first_order = min(
+        (order[b.block_id] for s in matched for b in s.text_blocks if b.block_id in order),
+        default=None,
+    )
+    return sum(
+        1
+        for b in doc.text_blocks
+        if b.page_no not in covered or (first_order is not None and b.reading_order < first_order)
+    ) + sum(1 for t in doc.tables if t.page_no not in covered)
+
+
+def _split_tail_count(doc: DoclingDocument, matched: list[MatchedSection]) -> int:
+    """Blocks the matcher added by splitting merged margin headings (not in Docling's list)."""
+    known = {b.block_id for b in doc.text_blocks}
+    return sum(1 for s in matched for b in s.text_blocks if b.block_id not in known)
+
+
 def _extract_embedded_images(
     pdf_path: Path,
     n_pages: int,
@@ -458,14 +841,27 @@ def _extract_embedded_images(
     except ImportError:
         _pil_available = False
 
-    _MIN_PX        = max(min_image_px, 80)  # enforce floor
-    _MIN_AREA_FRAC = 0.02                   # bbox must cover ≥2% of page area
+    _MIN_PX        = min_image_px           # UI icons of 48-80 px are content (BUG-017)
+    _MIN_AREA_FRAC = 0.003                  # bbox must cover ≥0.3% of page area (BUG-020)
     _HEADER_FRAC   = 0.05                   # skip images fully in top 5%
     _FOOTER_FRAC   = 0.95                   # skip images fully in bottom 5%
-    _MAX_ASPECT    = 15.0                   # skip ultra-wide/tall strips
+    # Ultra-wide/tall strips are rules and nav bars when repeated or tiny; a unique strip
+    # covering 1%+ of the page is a thin screenshot (LOGIQ_S8 p679, 231x79 px).
+    _MAX_ASPECT    = 15.0
+    _STRIP_MIN_AREA_FRAC = 0.01
+    _STRIP_MIN_PX  = 20                     # a unique strip may be under _MIN_PX on its short side
+    # An image shown on many pages in the top/bottom 10% band is page decoration (BUG-004:
+    # DOC's footer divider on 210 pages). A repeated key picture or icon inside the page
+    # body is content (SOMATOM's Move key on 8 pages).
+    _REPEAT_PAGES  = 5
+    _REPEAT_BAND   = 0.10
 
     result: list[EmbeddedImage] = []
     doc = fitz.open(str(pdf_path))
+    pages_of: dict[int, set[int]] = {}
+    for page_no in range(1, n_pages + 1):
+        for img_info in doc[page_no - 1].get_images(full=True):
+            pages_of.setdefault(img_info[0], set()).add(page_no)
 
     for page_no in range(1, n_pages + 1):
         page = doc[page_no - 1]
@@ -484,26 +880,46 @@ def _extract_embedded_images(
             w = base_image.get("width", 0)
             h = base_image.get("height", 0)
 
-            # filter 1: pixel dimensions
-            if w < _MIN_PX or h < _MIN_PX:
+            strip = max(w, h) / max(min(w, h), 1) > _MAX_ASPECT
+            # A wide but short picture (a cable or probe drawing, 203x42 px) is content;
+            # only an image small in both sides is an icon or decoration (BUG-011).
+            if w < _MIN_PX and h < _MIN_PX:
+                continue  # filter 1: pixel dimensions (no rect lookup for tiny images)
+            # A short picture repeated on many pages is a pictogram or rule, even in the
+            # page body; a repeated key picture of 48 px or more is content (SOMATOM).
+            if min(w, h) < _MIN_PX and len(pages_of.get(xref, ())) >= _REPEAT_PAGES:
                 continue
-
-            # filter 5: aspect ratio (thin decorative rules, nav bars)
-            if max(w, h) / max(min(w, h), 1) > _MAX_ASPECT:
-                continue
-
-            # filters 2-4: page-coordinate bbox checks
             try:
                 rects = page.get_image_rects(xref)
             except Exception:
                 rects = []
-            if rects:
-                bbox = rects[0]
+            bbox = rects[0] if rects else None
+            # filter 5: aspect ratio. A strip is a rule or nav bar unless it is shown once
+            # and covers 1%+ of the page: then it is a thin screenshot (LOGIQ_e p274, p417).
+            unique_strip = (
+                strip
+                and bbox is not None
+                and len(pages_of.get(xref, ())) == 1
+                and page_area > 0
+                and (bbox.width * bbox.height) / page_area >= _STRIP_MIN_AREA_FRAC
+                and min(w, h) >= _STRIP_MIN_PX
+            )
+            if strip and not unique_strip:
+                continue
+
+            # filters 2-4, 6: page-coordinate bbox checks
+            if bbox is not None:
                 # filter 2: area fraction
                 if page_area > 0 and (bbox.width * bbox.height) / page_area < _MIN_AREA_FRAC:
                     continue
                 # filters 3-4: header / footer zone
                 if bbox.y1 <= header_cut or bbox.y0 >= footer_cut:
+                    continue
+                # filter 6: repeated decoration in the top/bottom band
+                if len(pages_of.get(xref, ())) >= _REPEAT_PAGES and (
+                    bbox.y1 <= page_h * _REPEAT_BAND
+                    or bbox.y0 >= page_h * (1 - _REPEAT_BAND)
+                ):
                     continue
 
             raw_bytes = base_image.get("image")
@@ -529,6 +945,14 @@ def _extract_embedded_images(
                 page_no=page_no,
                 width_px=w,
                 height_px=h,
+                bbox=None if bbox is None else BoundingBox(
+                    x0=bbox.x0,
+                    y0=page_h - bbox.y0,
+                    x1=bbox.x1,
+                    y1=page_h - bbox.y1,
+                    page_no=page_no,
+                    coordinate_origin="bottomleft",
+                ),
             ))
 
     doc.close()

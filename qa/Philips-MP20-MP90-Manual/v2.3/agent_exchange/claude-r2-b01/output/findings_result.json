@@ -1,0 +1,1214 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p13 the heading 'Introducing the IntelliVue Family' is a real heading and hierarchy_level is 2. It sits under sec_0001 Basic Operation.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0002 has parent_section_id sec_0001. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p13 the heading 'Introducing the IntelliVue Family' starts sec_0002 and the chapter intro above it is left to sec_0001. The own text ends on p14 before sec_0003. page_end 20 matches the last child on p20.",
+   "notes": "The folio '1' (#/texts/33) and p14 running header (#/texts/34, #/texts/35) are inside the section page range, so no boundary is crossed.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0002 ends with 'Introducing the IntelliVue Family' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0002 appears once. Its 11 nodes run from the p13 heading to the p14 text before sec_0003. No gap or duplicate seen.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0002 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0002 is toc, not inferred. The heading 'Introducing the IntelliVue Family' is visible on p13, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p13 the printed folio is 1 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 1 is on physical page 13, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 13 shows only text and a blue rule, no figure. Nothing meaningful is missing.",
+   "notes": "The blue bar under the chapter number is decorative.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 13 has only a blue rule under the chapter number. No image node in sec_0002 is listed for it.",
+   "notes": "Image list not in the input.",
+   "confidence": 0.6
+  },
+  {
+   "section_id": "sec_0002",
+   "page_sampled": 13,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 13 has no figure, so there is nothing to map to sec_0002.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p20 the heading 'Docking Station' is a real heading and hierarchy_level is 3. It sits under sec_0002.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0013 has parent_section_id sec_0002. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On p20 the top photo and its legend (1 alarm lamps, 2 alarms off lamp, 3 speaker, 4 power switch, 5 power LED) are above the 'Docking Station' heading. They describe the alarm device. Nodes #/texts/195 to #/texts/199 with this text are in sec_0013.",
+   "notes": "These nodes probably belong to sec_0012 Remote Alarm Device (page_end 19). Also nodes #/texts/200 to #/texts/208 are on p21 but page_end is 20. Probably a reading-order problem; bug id not confirmed.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0013 ends with 'Docking Station' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Content of the previous section sec_0012 (alarm device legend on p20) sits in sec_0013. The p21 nodes #/texts/201 to #/texts/208 sit outside the declared p20 range.",
+   "notes": "Same root cause as the page_start_end row. Impact: a search on Remote Alarm Device would miss its legend.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0013 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0013 is toc, not inferred. The heading 'Docking Station' is visible on p20, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p20 the printed folio is 8 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 8 is on physical page 20, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Two photos are visible on p20, the alarm device and the docking station. Both show numbered parts. The input has no image list to compare.",
+   "notes": "Low confidence: images_v1.json is not in the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0013",
+   "page_sampled": 20,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p20 there are two photos. The top alarm-device photo is mapped to sec_0012. The docking-station photo under the 'Docking Station' heading is mapped to sec_0013.",
+   "notes": "Checked in v2.3 images_v1.json. Base v2 failed here (BUG-003). The BUG-003 fix now maps both photos correctly.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p27 the heading 'X2 Left Side' is a real heading and hierarchy_level is 4. It sits under sec_0018.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has parent_section_id sec_0018. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p27 the heading 'X2 Left Side' starts sec_0022. Its 6 nodes are figure labels, the 2-item legend and the paragraph about mounting the X2. All end before the 'MMS Extensions' heading. No running header included.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0022 ends with 'X2 Left Side' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 appears once in the tree. No visible gap or duplicate heading on p27.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0022 is toc, not inferred. The heading 'X2 Left Side' is visible on p27, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p27 the printed folio is 15 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 15 is on physical page 27, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Two photos are on p27, the X2 left side and the X2 mounted on a monitor. The input has no image list to compare.",
+   "notes": "Low confidence: images_v1.json is not in the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 27,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p27 the X2 Left Side photo (315x354) is printed right under the 'X2 Left Side' heading. In v2.3 it is mapped to sec_0021, not sec_0022. The small 167x271 photo stays in sec_0022.",
+   "notes": "Regression from the BUG-003 fix (fa0bc0b). Probably the nearest same-column text above the photo is the running header node, which sec_0021 owns. Image goes to the wrong sibling on a shared page.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p34 the heading 'Permanent Keys' is a real heading and hierarchy_level is 4. It sits under sec_0035 Using Keys.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0036 has parent_section_id sec_0035. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On p34 the heading 'Permanent Keys' and its paragraph are correct. On p35 four legend nodes before the heading 'SmartKeys' (starting 'Pause Alarms - pauses alarm indicators') are owned by sec_0037.",
+   "notes": "These nodes describe the permanent keys, so they belong to sec_0036. Nodes #/texts/526 to #/texts/528 in sec_0036 are only the folio and the p35 running header. Page 35 was not rendered; this uses the node text.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0036 ends with 'Permanent Keys' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Permanent key legend text on p35 sits in the next sibling sec_0037. sec_0036 holds only its heading and one paragraph, so it has a content gap.",
+   "notes": "Same root cause as the page_start_end row.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0036 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0036 is toc, not inferred. The heading 'Permanent Keys' is visible on p34, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p34 the printed folio is 22 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 22 is on physical page 34, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Rendered page checked for figures. The input has no image list, so extraction could not be compared.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0036",
+   "page_sampled": 34,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p34 the 180x399 image is mapped to sec_0032 (Navigation Point), where it is printed. No image is printed under 'Permanent Keys'.",
+   "notes": "Checked in v2.3 images_v1.json.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p49 the heading 'Resolving Label Conflicts' is a real heading and hierarchy_level is 3. It sits under sec_0070 Using Labels.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0073 has parent_section_id sec_0070. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Section starts at the heading on p48 and ends on p50 with the steps 'To resolve a label conflict'. Nodes #/texts/895 to #/texts/916 are on p50 but page_end is 49. All nodes are correctly owned.",
+   "notes": "page_end is probably one page short. Page 50 was not rendered, so this uses node page numbers.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0073 ends with 'Resolving Label Conflicts' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0073 appears once. Its heading is on p48 and text continues on p49 and p50 without visible gaps.",
+   "notes": "Many short nodes come from the Measurement Selection screenshots (for example SpO2, BIS). This is text noise but not a structure gap.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0073 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0073 is toc, not inferred. The heading 'Resolving Label Conflicts' is visible on p49, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p49 the printed folio is 37 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 37 is on physical page 49, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p49 the small key icon with three question marks (about 66x33 px) and a small icon in the text line were dropped. Their meaning is stated in the text.",
+   "notes": "Small icons only. The label conflict is explained in the surrounding paragraphs.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0073",
+   "page_sampled": 49,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p50 the 300x339 image is mapped to sec_0073 in v2.3 images_v1.json. This matches the section it is printed in.",
+   "notes": "Checked in v2.3 images_v1.json.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p136 the heading 'ECG Lead Fallback' is a real heading and hierarchy_level is 2. It sits under sec_0170.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0189 has parent_section_id sec_0170. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p136 the heading 'ECG Lead Fallback' and two short paragraphs are in sec_0189. The next heading 'ECG Lead Placements' and its electrode table are left to sec_0190. Boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0189 ends with 'ECG Lead Fallback' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0189 appears once in the tree. No visible gap or duplicate heading on p136.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0189 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0189 is toc, not inferred. The heading 'ECG Lead Fallback' is visible on p136, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p136 the printed folio is 124 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 124 is on physical page 136, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 136 has no figure. It has only text and the electrode table, which belongs to sec_0190.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 136 has no logo or decorative image apart from the header bar. Nothing to filter.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 136,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 136 has no figure, so there is nothing to map to sec_0189.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p158 the heading 'Understanding the ST Display' is a real heading and hierarchy_level is 2. It sits under sec_0170.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0241 has parent_section_id sec_0170. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p158 the heading 'Understanding the ST Display' starts sec_0241. On p159 nodes #/texts/2816 to #/texts/2842 are also in sec_0241 but page_end is 158. The top text 'Updating ST Baseline Snippets' on p159 is the running header. The real heading is near the bottom of p159.",
+   "notes": "The ST Snippets text, ST Baseline Window text and figure legend are printed above that heading, so sec_0241 correctly owns them. Only page_end is one page short. Nodes #/texts/2816 and #/texts/2817 are running header text. Cause not confirmed.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0241 ends with 'Understanding the ST Display' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p159 nodes #/texts/2818 to #/texts/2842 (ST Snippets, ST Baseline Window, figure legend) are printed above the real 'Updating ST Baseline Snippets' heading near the bottom. They continue sec_0241, so ownership is correct. sec_0242 holds its own heading and text.",
+   "notes": "The only issue is the short page_end, reported in 5.4-page_start_end. The top p159 line is a running header, not a heading.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0241 is not flagged and verification_score is 100. The title check passes, but the content is wrong (see page_start_end).",
+   "notes": "The flag does not catch nodes taken from the next section.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0241 is toc, not inferred. The heading 'Understanding the ST Display' is visible on p158, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p158 the printed folio is 146 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 146 is on physical page 158, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p158 there is a screenshot of the ST numerics with labels 1 to 3. The input has no image list to compare.",
+   "notes": "Low confidence: images_v1.json is not in the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0241",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p159 the 643x360 ST Baseline figure is printed above the real heading and is mapped to sec_0241 in v2.3 images_v1.json. This is correct.",
+   "notes": "Checked in v2.3 images_v1.json.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165 the heading 'Switching Between ST Map Views' is a real heading and hierarchy_level is 4. It sits under sec_0253.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 has parent_section_id sec_0253. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On p165 the heading 'Switching Between ST Map Views' is near the bottom. Nodes #/texts/2975 ('current ST values') and #/texts/2976 ('In this diagram, V4 was...') describe the ST Map figures at the top of the page. They are in sec_0254.",
+   "notes": "These two nodes belong to an earlier section, probably the one above 'Viewing an ST Map'. Also #/texts/2977 to #/texts/2979 on p166 are folio and running header (boilerplate). Probably a reading-order issue. Images on p165 are mapped correctly to sec_0251.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0254 ends with 'Switching Between ST Map Views' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Text nodes #/texts/2975 and #/texts/2976 belong to a figure above the 'Viewing an ST Map' heading, which is a different section. They are duplicated in ownership terms inside sec_0254.",
+   "notes": "Same root cause as the page_start_end row. Images on p165 are mapped correctly to sec_0251.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0254 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0254 is toc, not inferred. The heading 'Switching Between ST Map Views' is visible on p165, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165 the printed folio is 153 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 153 is on physical page 165, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165 two ST map figures are visible. The input has no image list to compare.",
+   "notes": "Low confidence: images_v1.json is not in the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0254",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165 the ST Map Trend image (306x173) and the small map (214x215) are above the 'Viewing an ST Map' heading. In v2.3 images_v1.json they are mapped to sec_0251 (Trend View, p164). None is mapped to sec_0254.",
+   "notes": "No image is printed under the 'Switching Between ST Map Views' heading, and none is mapped to it. Text nodes #/texts/2975 and #/texts/2976 are still wrongly owned (see 5.4 rows).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p283 the heading 'Trends Pop-Up Keys' is a real heading and hierarchy_level is 3. It sits under sec_0530 Viewing Trends.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0531 has parent_section_id sec_0530. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p283 the heading 'Trends Pop-Up Keys' and its intro text are correct. The table #/tables/98 (pop-up key list) is on p284 and belongs here, but page_end is 283.",
+   "notes": "page_end is probably one page short. Nodes #/texts/5114 to #/texts/5116 are also boilerplate (folio and running header). Page 284 was not rendered.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0531 ends with 'Trends Pop-Up Keys' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0531 appears once in the tree. No visible gap or duplicate heading on p283.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0531 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0531 is toc, not inferred. The heading 'Trends Pop-Up Keys' is visible on p283, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p283 the printed folio is 271 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 271 is on physical page 283, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/98 lists pop-up keys with their descriptions, for example Select Group, Select Interval, Print/Record. Several rows have an empty first cell, probably key icons.",
+   "notes": "Page 284 was not in the input, so I could not compare the table to the render. Confidence is low.",
+   "confidence": 0.4
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p283 three small SmartKey icons (Vitals Trend, Graph Trend, Histogram, about 90x64 px) are not kept as images.",
+   "notes": "Their meaning is in the bullet text. They sit above the heading, so they belong to sec_0530 by position.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0531",
+   "page_sampled": 283,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figures on the rendered page sit inside the section page range. The input has no image list.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p295 the heading 'Viewing Calculations' is a real heading and hierarchy_level is 2. It sits under sec_0563 Calculations.",
+   "notes": "Heading styles repeat across levels in this manual, so size alone cannot prove the level. The bookmark nesting was not visible in the input.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0564 has parent_section_id sec_0563. Its parent and child ids match the neighbouring sections and the printed structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p295 the heading 'Viewing Calculations' and its two bullets are correct. The chapter table above it belongs to sec_0563. Nodes #/texts/5383 and #/texts/5384 are only the p296 running header.",
+   "notes": "Only boilerplate crosses into p296. The children start on p296, so page_end 296 is acceptable.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0564 ends with 'Viewing Calculations' and lists its parents in order. This matches the page heading and the running header.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0564 appears once in the tree. No visible gap or duplicate heading on p295.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0564 is not flagged (flagged_for_review false, verification_score 100). There is no flagged boundary to confirm.",
+   "notes": "The flag only checks the title. Wrong content ownership is graded in the page_start_end row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source of sec_0564 is toc, not inferred. The heading 'Viewing Calculations' is visible on p295, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p295 the printed folio is 283 (arabic). The section numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 283 is on physical page 295, a constant gap of 12 pages in this manual because front matter is roman. The bookmark already points to the physical page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p295 the small Calculations SmartKey icon (about 77x46 px) beside the bullets is not kept as an image.",
+   "notes": "The bullet text already says 'Calculations SmartKey', so no information is lost.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative logo or rule is identified as a section image in the input. The extraction list was not available.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  },
+  {
+   "section_id": "sec_0564",
+   "page_sampled": 295,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Figures on the rendered page sit inside the section page range. The input has no image list.",
+   "notes": "Low confidence: images_v1.json is not part of the input.",
+   "confidence": 0.5
+  }
+ ]
+}

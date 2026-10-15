@@ -1,0 +1,1514 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p17 the big chapter title \"Introduction\" is the top heading. The section has hierarchy_level 1. The 1.x headings sit below it at level 2.",
+   "notes": "Level matches the chapter-level bookmark.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0001 has no parent. Its child_sections are sec_0002, 0003, 0007, 0008, 0009, 0014, 0015. These are 1.1 to 1.7, the same 7 entries as the Contents list on p17.",
+   "notes": "No missing or extra child.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p17 the heading #/texts/53, the \"Contents\" heading #/texts/54 and the Contents table #/tables/15 belong to the chapter and are in sec_0001. The 1.1 and 1.2 text is in sec_0002 to sec_0004. page_end 27 is the last page of chapter 1; chapter 2 starts on p28.",
+   "notes": "The chapter Contents table stays in sec_0001. No prior FAIL for this row.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Introduction. This is the top chapter title on p17.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 1 to 3 are in sec_0001. The next section sec_0002 starts at order 4, so there is no gap. The 7 Contents entries map to 7 child sections, each once.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title \"Introduction\" is visible on p17, so the flag is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The chapter title and its 7 sub-entries match the printed Contents on p17, so the TOC origin is supported.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p17 is the arabic \"17\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 17 equals physical page 17. offset_applied is 0, which is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/15 has 7 rows that match the 7 Contents lines on p17, in the same order, with page numbers 17, 17, 18, 18, 22, 26, 26. The dot leaders are kept as text.",
+   "notes": "Content is complete; the leader dots are harmless.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p17 there is no photo or diagram. Only the grey chapter number, the title rule and the small Edwards logo in the footer are drawn. No meaningful figure was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0001 or p17. The footer rule and the Edwards logo at the bottom of p17 were not kept as images.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p17 has no content image to map. images.json has no entry for sec_0001 or p17, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p17 the heading \"1.2.1 HemoSphere Advanced Monitor with HemoSphere Swan-Ganz Module\" is a third-level heading, under 1.2. hierarchy_level is 3.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0004 has parent sec_0003 (1.2 Indications For Use) and no children. 1.2.1 is a leaf, and sec_0003 lists it with sec_0005 and sec_0006.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p17 the heading #/texts/60 and the two paragraphs #/texts/61-62 belong to sec_0004. The node #/texts/63 is the big chapter number \"1\" at the top of p17. It is part of the chapter heading of sec_0001, but it is stored in sec_0004. #/texts/64 is the running folio \"17\".",
+   "notes": "BUG-022: chapter number stored in the first subsection. Present since v1.8; not a regression. Old FAIL (v1.2, BUG-001) is now fixed: the Contents table and the p18 running header nodes are no longer in sec_0004. Impact: only a chapter number is misplaced. verify_claims shows UNSUPPORTED (no numeric boundary signal); FAIL kept per lead ruling 1 because the chapter number is visible in the render.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Introduction/1.2 Indications For Use/1.2.1 HemoSphere Advanced Monitor with HemoSphere Swan-Ganz Module. It follows chapter 1, then 1.2, then 1.2.1 on p17.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 9 to 13 belong to sec_0004. The previous section sec_0003 ends at order 8 and sec_0005 starts at order 14. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is clearly visible on p17, so the flag is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 1.2.1 heading is printed on p17 as the embedded bookmark says.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p17 is the arabic \"17\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio 17 is also physical page 17. offset_applied is 0, which is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p17 has no figure or diagram in 1.2.1. Only text is above the footer. No meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0004. The red footer rule and the Edwards logo at the bottom of p17 are not kept as images.",
+   "notes": "Old FAIL (v1.2, BUG-004, Low) is now fixed: the footer strip is no longer in the image output.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 17,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no image to map on p17 in 1.2.1. images.json has no entry for sec_0004, which matches the page.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"1.7 Abbreviations Found in This Manual\" is a second-level heading in chapter 1 (heading on p26). hierarchy_level is 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0015 has parent sec_0001 (Introduction) and no children. 1.7 has only the abbreviation tables, so no children is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 26, page_end 27. On p26 the heading #/texts/157 and its two tables #/tables/25 (A/D to DPT) and #/tables/26 (Ea dyn to LED) are now in sec_0015. On p27 the continuation table #/tables/27 (LVSWI to VO 2 Ie) is also here. Chapter 2 starts on p28 in sec_0016.",
+   "notes": "Old FAIL (v1, BUG-001, Critical) is now fixed: the first two tables of 1.7 are no longer in a neighbour section.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Introduction/1.7 Abbreviations Found in This Manual. It matches the heading on p26.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 115 to 125 belong to sec_0015. sec_0014 ends at order 114 and sec_0016 starts at order 126. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is clear on p26, so the flag is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 1.7 heading on p26 matches the bookmark and the chapter Contents on p17.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p27 is the arabic \"27\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 27 equals physical page 27. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p27 the PDF has \"VO 2 | oxygen consumption\" and \"VO 2 I | oxygen consumption index\" as two rows. In #/tables/27 the row \"VO 2\" reads \"oxygen consumption oxygen consumption index\" and the row \"VO 2 I\" is empty. The other rows (LVSWI to VO 2 Ie) match the render. Tables 25 and 26 on p26 also match.",
+   "notes": "Old FAIL (v1, BUG-008, Medium) is still there. One definition is merged into the wrong row, so VO 2 I loses its definition. Probably a row-merge error of the table reader (BUG-008), not confirmed. verify_claims expects Low (merged cells); I grade Medium because VO 2 I loses its definition and VO 2 gets two.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p27 has only the continuation table and no figure. No meaningful visual was dropped on p27.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p27 or for sec_0015. The footer rule on p27 is not kept as an image.",
+   "notes": "Old FAIL (v1, BUG-004, Low) is now fixed: the 2800x200 footer strip is gone.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0015",
+   "page_sampled": 27,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p27 has no content image. On p26 two images (img_0006, img_0007) are mapped to sec_0014; they are the Review button and the Oximetry Calibration icon crop of 1.6, so that mapping is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p28 \"2.1.1 Warning\" is a third-level heading under 2.1. hierarchy_level is 3.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0018 has parent sec_0017 (2.1 Safety Signal Words Definitions) and no children. Its siblings 2.1.2 and 2.1.3 are sec_0019 and sec_0020.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p28 sec_0018 holds only the heading #/texts/168, the definition #/texts/169 and the WARNING sample box #/texts/170. The chapter Contents table above 2.1 is now in sec_0016 (orders 126 to 128), not here. 2.1.2 Caution starts in sec_0019.",
+   "notes": "Old FAIL (v1, BUG-001, Critical) is now fixed: the Contents table is no longer in sec_0018.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Safety and Symbols/2.1 Safety Signal Words Definitions/2.1.1 Warning. It matches chapter 2, then 2.1, then 2.1.1 on p28.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 130 to 132 belong to sec_0018. sec_0017 ends at order 129 and sec_0019 starts at order 133. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 2.1.1 heading is clear on p28.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 2.1.1 heading is printed on p28 as the bookmark says.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p28 is the arabic \"28\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 28 equals physical page 28. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p28 has no figure in 2.1.1. The orange rules around the WARNING box and the footer logo are decoration only. No meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0018 or p28. The footer rule and logo on p28 are not kept as images.",
+   "notes": "Old FAIL (v1, BUG-004, Low) is now fixed: the footer strip is no longer in the image output.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0018",
+   "page_sampled": 28,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p28 has no content image, and images.json has no entry for sec_0018 or p28, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"2.6 Applicable Standards\" is a second-level heading in chapter 2 on p41. hierarchy_level is 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0025 has parent sec_0016 (Safety and Symbols) and no children. 2.6 is only a table, so no children is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p41 sec_0025 has the heading #/texts/356, the caption #/texts/357 and Table 2-3 #/tables/37. The next heading \"2.7 HemoSphere Advanced Monitor Essential Performance\" and its paragraph are in sec_0026. page_start and page_end are both 41.",
+   "notes": "Boundary is right.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Safety and Symbols/2.6 Applicable Standards. It matches chapter 2 and the 2.6 heading on p41.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 324 to 328 belong to sec_0025. sec_0024 ends at order 323 and sec_0026 starts at order 329. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 2.6 heading is clear on p41.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 2.6 heading on p41 matches the bookmark and the chapter Contents on p28.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p41 is the arabic \"41\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 41 equals physical page 41. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/37 has the header and 5 rows (IEC 60601-1, 60601-1-2, 60601-2-34, 60601-2-49 and IEEE 802.11 b/g/n). Each standard is in the right row with its full title, matching the render on p41.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 has only the standards table and text. There is no figure, so no meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p41 or for sec_0025. The footer rule is not kept as an image.",
+   "notes": "Old FAIL (v1, BUG-004, Low) is now fixed: the footer strip is gone.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 41,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p41 has no content image, and images.json has no entry for sec_0025, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p42 \"3.1.1 Packaging Contents\" is a third-level heading under 3.1. hierarchy_level is 3.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0029 has parent sec_0028 (3.1 Unpacking) and no children. Its sibling 3.1.2 is sec_0030.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p42 the heading #/texts/365, the intro #/texts/366 and Table 3-1 text #/texts/367-376 belong to sec_0029. The node #/texts/377 is the big chapter number \"3\" at the top of p42. It is part of the chapter heading, not of 3.1.1. #/texts/378 is the running folio \"42\".",
+   "notes": "BUG-022: chapter number stored in the first subsection. Present since v1.8; not a regression. Old FAIL (v1, BUG-001, Critical) is now fixed: the Contents table is no longer in sec_0029. Impact: only a chapter number is misplaced. verify_claims shows UNSUPPORTED (no numeric boundary signal); FAIL kept per lead ruling 1 because the chapter number is visible in the render.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Installation and Setup/3.1 Unpacking/3.1.1 Packaging Contents. It matches chapter 3, then 3.1, then 3.1.1 on p42.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 337 to 350 belong to sec_0029. sec_0028 ends at order 336 and sec_0030 starts at order 351. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 3.1.1 heading is clear on p42.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 3.1.1 heading on p42 matches the bookmark.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p42 is the arabic \"42\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 42 equals physical page 42. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 has no photo or diagram. Table 3-1 is text bullets, and they are all in #/texts/368-376. The Edwards logo in the footer is decoration. No meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p42 or for sec_0029. The footer rule and the Edwards logo on p42 are not kept as images.",
+   "notes": "Old FAIL (v1, BUG-004, Low) is now fixed: the footer strip is gone.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0029",
+   "page_sampled": 42,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p42 has no content image, and images.json has no entry for sec_0029, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"1.4 Intended Use Statement\" is a second-level heading in chapter 1 (seen on p18). hierarchy_level is 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0008 has parent sec_0001 (Introduction) and no children. 1.4 has no sub-headings on p18 to p21, so an empty child list is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start is 18 and page_end is 21. On p18 the 1.4 heading #/texts/76 and two intro paragraphs are in sec_0008 below 1.3 (sec_0007). On p19 the text and Tables 1-1 and 1-2 belong to 1.4. The 1.5 heading starts on p22 in sec_0009.",
+   "notes": "Boundaries are right. No prior FAIL for this row.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Introduction/1.4 Intended Use Statement. It matches the chapter and the 1.4 heading on p18.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 25 to 57 belong to sec_0008. sec_0007 ends at order 24 and sec_0009 starts at order 58. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 1.4 heading is on p18, so the flag is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 1.4 heading at the bottom of p18 matches the bookmark.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio is arabic (19 on p19). numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 19 equals physical page 19. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p19 Table 1-1 (#/tables/16) has all 23 rows in order. In the PDF, \"adult only\" is one merged cell over rows CO to SVRI. In the extract it is only on the row \"HR avg\". Rows CO to sEDVI and LVSWI to SVRI have an empty population. \"adult and pediatric\" is correctly on iCO. Table 1-2 (#/tables/17) matches the render.",
+   "notes": "Old FAIL (v1.10, BUG-008) is still there. A reader would link \"adult only\" to HR avg alone. Probably the merged cell text assignment, not confirmed. The claims tool may expect Low for merged cells; I use Medium because the value sits on the wrong row.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p19 has only tables and text. There is no photo or diagram. images.json has no image for sec_0008. No meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0008. The p19 footer rule is not kept as an image.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 19,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p19 has no content image. images.json has no entry for sec_0008, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"1.4 Intended Use Statement\" is a second-level heading in chapter 1 (seen on p18). hierarchy_level is 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0008 has parent sec_0001 (Introduction) and no children. 1.4 has no sub-headings on p18 to p21, so an empty child list is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p21 Table 1-5 (#/tables/20) and the WARNING box (#/texts/99-102) are the last content of 1.4. Nothing on p21 belongs to 1.5, which starts on p22. page_end 21 is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Introduction/1.4 Intended Use Statement. It matches the chapter and the 1.4 heading on p18.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 25 to 57 belong to sec_0008. sec_0007 ends at order 24 and sec_0009 starts at order 58. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 1.4 heading is on p18, so the flag is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 1.4 heading at the bottom of p18 matches the bookmark.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio is arabic (21 on p21). numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 21 equals physical page 21. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p21 Table 1-5 (#/tables/20) has 6 rows, DO 2 to VO 2 Ie, in the PDF order. All definitions are right, including \"when ScvO 2 is being monitored\". The merged cells (technology, \"adult only\", hospital text) are written only in the first row (DO 2). The other 5 rows have empty cells.",
+   "notes": "Old FAIL (v1.10, Low) is still there. Values and order are kept, so only the merged cells are not repeated.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 has only tables and text. There is no photo or diagram. images.json has no image for sec_0008. No meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0008. The p21 footer rule is not kept as an image.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p21 has no content image. images.json has no entry for sec_0008, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"2.2 Warnings\" is a second-level heading in chapter 2 (heading on p29). hierarchy_level is 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent sec_0016 (Safety and Symbols) and no children. 2.2 is a flat list of warning bullets, so an empty child list is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 29, page_end 33. On p29 the heading #/texts/183 and the 15 warning bullets #/texts/185-199 are all in sec_0021 (the intro is #/texts/184). The p28 Contents table is not here.",
+   "notes": "Start boundary is right.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Safety and Symbols/2.2 Warnings. It matches chapter 2 and the 2.2 heading on p29.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 143 to 219 belong to sec_0021. sec_0020 ends at order 142 and sec_0022 starts at order 220. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 2.2 heading is clear on p29.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 2.2 heading on p29 matches the bookmark and the chapter Contents on p28.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p29 is the arabic \"29\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 29 equals physical page 29. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p29 has only warning bullets inside orange rules. There is no photo or diagram, so no meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0021. The orange rules and the footer line on p29 are not kept as images.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p29 has no content image, and images.json has no entry for sec_0021, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"2.2 Warnings\" is a second-level heading in chapter 2 (heading on p29). hierarchy_level is 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent sec_0016 (Safety and Symbols) and no children. 2.2 is a flat list of warning bullets, so an empty child list is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p32 the 14 bullets #/texts/237-250 match the 14 bullets in the render, in order. They are warnings of 2.2 and no heading of another section is on the page. 2.3 Cautions starts on p33 below the last warning.",
+   "notes": "Middle page is correct. The end of the section on p33 was also checked: the last warning is #/texts/257 and 2.3 starts in sec_0022.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Safety and Symbols/2.2 Warnings. It matches chapter 2 and the 2.2 heading on p29.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 143 to 219 belong to sec_0021. sec_0020 ends at order 142 and sec_0022 starts at order 220. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 2.2 heading is clear on p29.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 2.2 heading on p29 matches the bookmark and the chapter Contents on p28.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p32 is the arabic \"32\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 32 equals physical page 32. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p32 has only warning bullets inside orange rules. There is no photo or diagram, so no meaningful visual was dropped.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0021. The orange rules and the footer line on p32 are not kept as images.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 32,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p32 has no content image, and images.json has no entry for sec_0021, which is correct.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"2.5 Symbols on Product Labels\" is a second-level heading in chapter 2 on p39. hierarchy_level is 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0024 has parent sec_0016 (Safety and Symbols) and no children. 2.5 has only the symbol table and one note, so no children is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 39, page_end 40. On p39 the heading #/texts/333, the intro and Tables 2-2 (#/tables/33-34) are in sec_0024. On p40 the continuation tables #/tables/35-36 and the NOTE #/texts/346, #/texts/352 are also here. 2.6 starts on p41 in sec_0025.",
+   "notes": "Boundaries are right.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Safety and Symbols/2.5 Symbols on Product Labels. It matches chapter 2 and the 2.5 heading on p39.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 297 to 323 belong to sec_0024. sec_0023 ends at order 296 and sec_0025 starts at order 324. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 2.5 heading is clear on p39.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 2.5 heading on p39 matches the bookmark and the chapter Contents on p28.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p39 is the arabic \"39\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 39 equals physical page 39. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p39 and p40 the four tables (#/tables/33-36) keep all Description cells in the right order. The Symbol column keeps only some printed words: IPX1, IPX4, PN, Pb, ECG, 1, 2 and \"x y\". It loses other printed words such as \"Rx only\", LOT, REF, SN, \"EC REP\", HDMI and \"Li-ion\". PN, Pb, ECG, x and y also appear as loose paragraphs (#/texts/336-337, 344, 347-350).",
+   "notes": "Old FAIL (v1, Low) is still there. The Symbol column is mostly graphics and each meaning is in the Description, so retrieval is not harmed.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p39 and p40 almost all symbol icons of Table 2-2 are not in images.json (for example MR, CE, LOT, REF, SN, USB, HDMI, Fragile). Only img_0009 (Intertek ETL, p39) and img_0010 (vector crop on p40) were extracted. img_0010 shows 3 package symbols and cuts the 4th (temperature limits) at the bottom. It misses Fragile and This end up above it.",
+   "notes": "Old FAIL (v1, BUG-010, Low) is still there. Each icon meaning is also written in the Description column, so the information survives. Medium because img_0010 is a cut figure (agreed rule); the dropped icons alone would be Low. Probably the vector-figure crop is too coarse, not confirmed. verify_claims expects Low (small rasters dropped); I grade Medium because of the cut crop.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0009 is the Intertek ETL mark from the table and img_0010 is a package symbol crop. Both are real content. The footer rule is not kept as an image.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 39,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0009 (p39) and img_0010 (p40) are both mapped to sec_0024. Both are inside the 2.5 table, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p43 \"3.1.2 Required Accessories for Platform Modules and Cables\" is a third-level heading under 3.1. hierarchy_level is 3.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0030 has parent sec_0028 (3.1 Unpacking) and no children. Its sibling 3.1.1 is sec_0029.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 43, page_end 44. On p43 the heading #/texts/381, Tables 3-2 to 3-4 and their notes are in sec_0030. On p44 the WARNING and CAUTION boxes (#/texts/392-395) sit above the \"3.2\" heading and are the end of 3.1.2. 3.2 starts in sec_0031 on p44.",
+   "notes": "Boundaries are right.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path is /Installation and Setup/3.1 Unpacking/3.1.2 Required Accessories for Platform Modules and Cables. It matches chapter 3, then 3.1, then 3.1.2 on p43.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Semantic orders 351 to 370 belong to sec_0030. sec_0029 ends at order 350 and sec_0031 starts at order 371. No gap and no overlap.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The 3.1.2 heading is clear on p43.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The 3.1.2 heading on p43 matches the bookmark.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p43 is the arabic \"43\". numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 43 equals physical page 43. offset_applied is 0.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables #/tables/39, 40 and 41 match the render on p43. Table 3-2 has 7 rows with the right bullets per column. Table 3-3 has 3 rows and 9 columns, including the * marks for SVR. Table 3-4 has 2 rows with the dot under ScvO 2 or SvO 2.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p43 has only tables and notes, no figure. No meaningful visual was dropped on p43.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on p43 and none for sec_0030. The only image on p44, img_0011, is the real monitor front photo. No decoration was kept.",
+   "notes": "",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 43,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0011 (Figure 3-1, monitor front, p44) is mapped to sec_0032, which starts at the Monitor Front heading below 3.2. It is not in sec_0030, so the mapping is right. p43 has no image.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

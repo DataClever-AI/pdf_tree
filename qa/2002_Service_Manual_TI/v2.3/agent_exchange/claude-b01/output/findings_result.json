@@ -1,0 +1,754 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0004 '1. Legacy' (hierarchy_level 4) is a level-4 child of sec_0003 SPECIFICATIONS (level 3) under the manual root; the page 6 heading '1. Legacy' is the same size as the sibling '2. OUTBACK' heading on page 14.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0003 SPECIFICATIONS lists sec_0004 and sec_0005 as children; sec_0004 has no children, and the page 6/8 content (A: DIMENSIONS to J: WEIGHT lettered items) are body headings, not sub-bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numeric range is 6-13. Page 6 begins with the printed heading '1. Legacy / A: DIMENSIONS' (#/texts/20) and page 13 ends with the optional-parts weight tables and folio SPC-9; page 14 begins '2. OUTBACK' which belongs to sec_0005. Page 8 (sampled, SPC-4) holds E: STEERING to I: CAPACITY, all Legacy content. No neighbouring content absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SPECIFICATIONS/1. Legacy is ordered correctly and ends with the section title shown on page 6.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes #/texts/18-71 (order 22-75) and tables 3-17 cover pages 6-13 once; sec_0005 starts at order 91 on page 14, so no gap or overlap. Page 8 headings E-I and tables 7-11 each appear once.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100.0 and empty reason; the heading text of the section is visibly present on its first page, so the unflagged state is justified.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the section title appears verbatim as a heading on its start page, supporting the bookmark-derived structure.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios are printed as SPC-2..SPC-9 (section-prefixed) while the node says numbering_scheme arabic with bookmarks using physical numbers. Treated as acceptable because physical page numbers drive the tree.",
+   "notes": "Printed folios are section-prefixed (e.g. SPC-n, FU-n, EC-n) while numbering_scheme is arabic; reviewer should confirm whether this should be recorded as alphanumeric.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0: bookmark page_start 6 matches the physical page where '1. Legacy' appears (printed folio SPC-2); page 8 shows SPC-4, consistent with a constant +4 printed-to-physical shift.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On page 8 the I: CAPACITY table (#/tables/11) is mangled in extraction: the 5MT/4AT column attribution is lost, the automatic transmission fluid row reads '7.4 - 7.7)' before '8.4 - 8.7 (8.9 - 9.2,' so the range is split and out of order, and the four Engine coolant values (7.0, 6.9, 6.8, 6.7) sit in one cell, so values can no longer be attributed to their column. The steering, suspension, brake and tire tables (#/tables/7-10) keep their values but with columns merged into single cells.",
+   "notes": "Table ownership is correct (all tables on p8 belong to Legacy); defect is content fidelity only.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No raster image was extracted for sec_0004 (images.json has none for pages 6-13). Page 8 shows only text headings and ruled tables, no photographs or diagrams, so nothing meaningful was discarded.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images were retained for this section, so no decorative element (rule, logo, footer divider) was kept as an image. The header rule on page 8 is not in the image output.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 8,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 8 contains no figures; images.json lists none for sec_0004, consistent with the render. Nothing to map.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0005 '2. OUTBACK' (level 4) is a sibling of sec_0004 under SPECIFICATIONS (level 3); the page 14 heading '2. OUTBACK' has the same size as '1. Legacy' on page 6.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id sec_0003 SPECIFICATIONS includes sec_0005 as a child; no children of its own, as lettered A-J items are body headings.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numeric range 14-20. Page 14 starts with '2. OUTBACK / A: DIMENSIONS' (#/texts/74-75) right after the Legacy weight page 13; page 20 ends with MEMO and folio SPC-16, still within Outback specifications. No Legacy content leaks into this section and the next section (sec_0006, p21) starts after it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/SPECIFICATIONS/2. OUTBACK matches the nesting and the heading on page 14.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes #/texts/72-120 (order 91-139) and tables 18-30 are contiguous with sec_0004 ending at order 90; no overlap and no missing items visible on page 14 or page 20.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100.0 and empty reason; the heading text of the section is visibly present on its first page, so the unflagged state is justified.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the section title appears verbatim as a heading on its start page, supporting the bookmark-derived structure.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios SPC-10..SPC-16 differ from the physical page numbers; numbering_scheme is arabic. Accepted since physical pages are used, but section-prefixed folios are not represented.",
+   "notes": "Printed folios are section-prefixed (e.g. SPC-n, FU-n, EC-n) while numbering_scheme is arabic; reviewer should confirm whether this should be recorded as alphanumeric.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0: the bookmark start page 14 matches the physical page showing '2. OUTBACK' (folio SPC-10).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On page 14 the ENGINE table (#/tables/19) loses data: the Firing order row extracts as '1 - 3 - 2 - 4 1' while the render shows 2.5 L '1-3-2-4' and 3.0 L '1-6-3-2-5-4', so the 3.0 L sequence is truncated and its remaining digits are lost. Other rows (Displacement 'cm | 3 |') are also split across cells. The DIMENSIONS table (#/tables/18) has values in correct order though cell columns are shifted.",
+   "notes": "Content fidelity defect, ownership correct.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No raster image extracted for sec_0005; pages 14 (tables) and 20 (MEMO heading only) show no figures, so no meaningful visual was discarded.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images were kept for this section, so no logo, rule or divider was retained as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 14,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 14 and 20 contain no figures; images.json has no entry for sec_0005, matching the render.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0017 '4. Sensors and Switches' is a level-4 child of sec_0013 FUEL INJECTION (level 3); page 74 shows the bold 4. heading above the A: OXYGEN SENSOR subheading, consistent with level 4.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0013 FUEL INJECTION (FUEL SYSTEM) is correct (page 74 header reads 'Fuel Injection (Fuel System)'); sensors A-F are body subheadings, so empty child_sections is coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numeric range 74-82. Page 74 begins with '4. Sensors and Switches' and the oxygen sensor text; page 82 (sampled, FU-24) ends the AT VEHICLES vehicle speed sensor subsection with the diagram legend. Next section 5. Control System starts on page 83. No neighbouring content absorbed.",
+   "notes": "verify_claims flags 'SENSORS AND SWITCHES' on p74 as foreign boilerplate; it is this section's own running page title (the section is '4. Sensors and Switches', rendered at top of p74), so it is not a boundary leak. Japanese print-slug nodes (W2290GE_03_FU-.fm, date) are invisible slugs inside the section's own pages. Kept PASS.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/FUEL INJECTION (FUEL SYSTEM)/4. Sensors and Switches is correct and ordered.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes #/texts/1082-1229 (order 1118-1265) are contiguous across pages 74-82 with sec_0016 before and sec_0018 after; each of sensors A-F appears once, no gap seen.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100.0 and empty reason; the heading text of the section is visibly present on its first page, so the unflagged state is justified.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the section title appears verbatim as a heading on its start page, supporting the bookmark-derived structure.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios FU-16..FU-24 are section-prefixed while the node is arabic; physical page numbers are used consistently, accepted.",
+   "notes": "Printed folios are section-prefixed (e.g. SPC-n, FU-n, EC-n) while numbering_scheme is arabic; reviewer should confirm whether this should be recorded as alphanumeric.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0: the bookmark start page 74 matches the physical page of the '4. Sensors and Switches' heading (folio FU-16).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Each page 74-82 has one diagram and images.json lists img_0041-img_0049, one per page. Page 74 shows the oxygen sensor cross-section (extracted in img_0041) and page 82 the vehicle speed signal diagram (img_0049). Callout numbers are missing in the PNGs but are present in the text nodes, so no information is lost.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The extracted images (img_0041 sensor drawing, img_0049 signal block diagram) are technical figures; no logo, rule or footer divider was kept as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0017",
+   "page_sampled": 74,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 74-82 belong only to sec_0017 and every image maps to sec_0017 by page; img_0041 matches the page 74 oxygen sensor drawing and img_0049 the page 82 AT vehicle speed diagram. No sibling shares these pages.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0021 '1. System Overview' is a level-4 child of sec_0020 EMISSION CONTROL (level 3); page 94 shows the heading with the same style as sibling '5. A/F Control System' on page 101.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0020 EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES) matches the running header on pages 94-95; no children, coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numeric range 94-95. Page 94 starts at '1. System Overview' with the three-system list and overview table; page 95 holds only MEMO and folio EC-3 and belongs to this section. Next section (2. Schematic Diagrams) starts on page 96.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /2002 LEGACY SERVICE MANUAL/NEW CAR INFORMATION SECTION/EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/1. System Overview is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes #/texts/1413-1426 and table 38 (order 1452-1466) are contiguous with sec_0022 at page 96; no overlap or gap.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100.0 and empty reason; the heading text of the section is visibly present on its first page, so the unflagged state is justified.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the section title appears verbatim as a heading on its start page, supporting the bookmark-derived structure.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios EC-2/EC-3 differ from physical pages 94/95; scheme is arabic with physical numbers used, accepted.",
+   "notes": "Printed folios are section-prefixed (e.g. SPC-n, FU-n, EC-n) while numbering_scheme is arabic; reviewer should confirm whether this should be recorded as alphanumeric.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0: bookmark start page 94 matches the physical page of the '1. System Overview' heading (folio EC-2).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Page 94 overview table (#/tables/38) is extracted with cells merged: the 'Rear' catalyst row is empty, the Intake air temperature and pressure sensor functions are split across two rows ('Detects absolute pressure' printed before the sensor name finishes) and words are broken ('emis sion', 'igni tion'). Reading order and values remain recoverable.",
+   "notes": "Cells merged but reading order and values preserved; grade Low per Sprint scale.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No raster image extracted for sec_0021 and none is visible on pages 94 (text plus ruled table) or 95 (MEMO only), so nothing was discarded.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images retained for this section, so no decorative element was kept as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 94-95 contain no figures; images.json has no entry for sec_0021, matching the render.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0025 '5. A/F Control System' is a level-4 child of sec_0020 EMISSION CONTROL (level 3); page 101 heading style matches sibling level-4 headings.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0020 is correct (running header 'Emission Control (Aux. Emission Control Devices)'); previous sibling sec_0024 ends on page 100 and next sec_0026 begins page 102, with no children, coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range 101-101. Page 101 begins with '5. A/F Control System' followed by two bullet paragraphs and folio EC-9, then blank space; nothing from 4. Three-way Catalyst (p100) or 6. Ignition Control (p102) appears on it.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path .../EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/5. A/F Control System is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Six nodes #/texts/1535-1540 (order 1575-1580) cover the whole page; they are contiguous with neighbouring sections and none are duplicated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100.0 and empty reason; the heading text of the section is visibly present on its first page, so the unflagged state is justified.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the section title appears verbatim as a heading on its start page, supporting the bookmark-derived structure.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio EC-9 vs physical page 101; scheme arabic with physical numbering, accepted.",
+   "notes": "Printed folios are section-prefixed (e.g. SPC-n, FU-n, EC-n) while numbering_scheme is arabic; reviewer should confirm whether this should be recorded as alphanumeric.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0: bookmark start page 101 equals the physical page with the '5. A/F Control System' heading (folio EC-9).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 101 contains only the heading and two bullet paragraphs, with no figure; no image was extracted and none is missing.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image retained for this section, so none can be decorative noise.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0025",
+   "page_sampled": 101,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figures on page 101 and images.json lists none for sec_0025, matching the render.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0032 '3. Crankcase Emission Control System' is a level-4 child of sec_0029 EMISSION CONTROL (level 3); the heading on page 114 matches the level-4 style.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0029 (pages 109-124) is the second Emission Control group; the sibling sec_0031 precedes it and sec_0033 follows, with no children, coherent.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Range 114-115. Page 114 begins with '3. Crankcase Emission Control System' text; sampled page 115 (EC-7) carries the PCV system diagram with legend, part of this section. Next section 4. Three-way Catalyst starts on page 116.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path .../EMISSION CONTROL (AUX. EMISSION CONTROL DEVICES)/3. Crankcase Emission Control System is correct.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes #/texts/1768-1801 (order 1810-1843) are contiguous across pages 114-115 with no overlap with sec_0031 or sec_0033.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with verification_score 100.0 and empty reason; the heading text of the section is visibly present on its first page, so the unflagged state is justified.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc; the section title appears verbatim as a heading on its start page, supporting the bookmark-derived structure.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folios EC-6/EC-7 differ from physical pages 114/115; scheme arabic, accepted.",
+   "notes": "Printed folios are section-prefixed (e.g. SPC-n, FU-n, EC-n) while numbering_scheme is arabic; reviewer should confirm whether this should be recorded as alphanumeric.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied 0: bookmark start page 114 matches the physical page with the '3. Crankcase...' heading (folio EC-6).",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 115 holds one large diagram (A part-throttle and B wide-open-throttle crankcase diagrams plus the PCV valve detail); img_0062 captures it as a single raster, covering all three drawings. The (A), (B) and C/D/E legend labels are in the text nodes, so no information is lost.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0062 is the technical PCV diagram; no logo, rule or footer divider was retained as an image.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0032",
+   "page_sampled": 115,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0062 (page 115) maps to sec_0032, which is the only section on that page, and matches the rendered figure.",
+   "notes": "",
+   "confidence": 0.92
+  }
+ ]
+}

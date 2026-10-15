@@ -1,0 +1,1205 @@
+{
+ "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+ "findings": [
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p141 (AT-72) the page shows heading '11. AWD Transfer System' with 'A: MPT MODELS' and '1. OUTLINE' (nodes #/texts/38416-38418). sec_0021 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p141 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 runs p141-153. On p141 the section starts at the '11. AWD Transfer System' heading, and p153 (AT-84) is the blank MEMO page. Next section sec_0022 starts at p154. Sampled p141 nodes belong to this section.",
+   "notes": "No content from sec_0020 (ends p140) or sec_0022 is absorbed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0021 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p141 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has 144 nodes, semantic_order 38425-38568, with no gaps from the previous section. On p141 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p141. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p141). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p141 prints the folio AT-72 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p141 shows folio AT-72. offset_applied is 0, and the bookmark pages are physical, so page_start 141 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p141 there is no figure, table or icon, only text and the running header. Nothing meaningful was discarded and images.json has no image for this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for p141. The header rule and folio were not kept as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 141,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p141 there is no figure to map, and images.json lists none for this page in sec_0021. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p154 (AT-72) the page shows heading '11. AWD Transfer System' with 'A: MPT MODELS' and '1. OUTLINE' (#/texts/38560-38562). sec_0022 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p154 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 runs p154-166. It starts at the '11. AWD Transfer System' heading on p154. The last node is the MEMO heading and AT-84 folio on p166, the last PDF page. No index, glossary or cover follows. Sampled p154 nodes belong to this section.",
+   "notes": "End boundary checked: p166 is a blank MEMO page, so there is no back matter to absorb.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0022 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p154 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has 144 nodes, semantic_order 38569-38712, with no gaps from the previous section. On p154 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p154. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p154). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p154 prints the folio AT-72 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p154 shows folio AT-72. offset_applied is 0, and the bookmark pages are physical, so page_start 154 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p154 there is no figure, table or icon, only text and the running header. Nothing meaningful was discarded and images.json has no image for this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for p154. The header rule and folio were not kept as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 154,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p154 there is no figure to map, and images.json lists none for this page in sec_0022. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p143 (AT-74) the page shows heading '2. TRANSFER CLUTCH' (#/texts/38436). sec_0021 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p143 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 runs p141-153. On p141 the section starts at the '11. AWD Transfer System' heading, and p153 (AT-84) is the blank MEMO page. Next section sec_0022 starts at p154. Sampled p143 nodes belong to this section.",
+   "notes": "No content from sec_0020 (ends p140) or sec_0022 is absorbed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0021 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p143 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has 144 nodes, semantic_order 38425-38568, with no gaps from the previous section. On p143 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p143. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p141). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p143 prints the folio AT-74 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p143 shows folio AT-74. offset_applied is 0, and the bookmark pages are physical, so page_start 141 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p143 I see a figure with its callouts. The mapped image(s) img_0149 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0149 on p143 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 143,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p143 the figure(s) img_0149 are mapped to sec_0021. The page text before and after the figure is also in sec_0021, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 (AT-75) the page shows heading '3. TRANSFER HYDRAULIC PRESSURE CONTROL UNIT' (#/texts/38448). sec_0021 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p144 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 runs p141-153. On p141 the section starts at the '11. AWD Transfer System' heading, and p153 (AT-84) is the blank MEMO page. Next section sec_0022 starts at p154. Sampled p144 nodes belong to this section.",
+   "notes": "No content from sec_0020 (ends p140) or sec_0022 is absorbed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0021 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p144 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has 144 nodes, semantic_order 38425-38568, with no gaps from the previous section. On p144 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p144. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p141). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p144 prints the folio AT-75 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p144 shows folio AT-75. offset_applied is 0, and the bookmark pages are physical, so page_start 141 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 I see a figure with its callouts. The mapped image(s) img_0150 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0150 on p144 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 the figure(s) img_0150 are mapped to sec_0021. The page text before and after the figure is also in sec_0021, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p148 (AT-79) the page shows the 'Power flow' chart and the 2) torque formulas (#/texts/38493-38496). sec_0021 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p148 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 runs p141-153. On p141 the section starts at the '11. AWD Transfer System' heading, and p153 (AT-84) is the blank MEMO page. Next section sec_0022 starts at p154. Sampled p148 nodes belong to this section.",
+   "notes": "No content from sec_0020 (ends p140) or sec_0022 is absorbed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0021 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p148 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has 144 nodes, semantic_order 38425-38568, with no gaps from the previous section. On p148 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p148. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p141). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p148 prints the folio AT-79 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p148 shows folio AT-79. offset_applied is 0, and the bookmark pages are physical, so page_start 141 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p148 I see a figure with its callouts. The mapped image(s) img_0153, img_0154 and img_0155 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0153, img_0154 and img_0155 on p148 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 148,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p148 the figure(s) img_0153, img_0154 and img_0155 are mapped to sec_0021. The page text before and after the figure is also in sec_0021, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p151 (AT-82) the page shows heading '4. MULTI-PLATE CLUTCH (LSD)' (#/texts/38530). sec_0021 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p151 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 runs p141-153. On p141 the section starts at the '11. AWD Transfer System' heading, and p153 (AT-84) is the blank MEMO page. Next section sec_0022 starts at p154. Sampled p151 nodes belong to this section.",
+   "notes": "No content from sec_0020 (ends p140) or sec_0022 is absorbed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0021 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p151 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has 144 nodes, semantic_order 38425-38568, with no gaps from the previous section. On p151 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p151. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p141). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p151 prints the folio AT-82 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p151 shows folio AT-82. offset_applied is 0, and the bookmark pages are physical, so page_start 141 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p151 I see a figure with its callouts. The mapped image(s) img_0157 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0157 on p151 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 151,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p151 the figure(s) img_0157 are mapped to sec_0021. The page text before and after the figure is also in sec_0021, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p152 (AT-83) the page shows heading '5. TRANSFER HYDRAULIC PRESSURE CONTROL UNIT' (#/texts/38544). sec_0021 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p152 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 runs p141-153. On p141 the section starts at the '11. AWD Transfer System' heading, and p153 (AT-84) is the blank MEMO page. Next section sec_0022 starts at p154. Sampled p152 nodes belong to this section.",
+   "notes": "No content from sec_0020 (ends p140) or sec_0022 is absorbed.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0021 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p152 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has 144 nodes, semantic_order 38425-38568, with no gaps from the previous section. On p152 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p152. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0021 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p141). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p152 prints the folio AT-83 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p152 shows folio AT-83. offset_applied is 0, and the bookmark pages are physical, so page_start 141 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p152 I see a figure with its callouts. The mapped image(s) img_0158 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0158 on p152 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0021",
+   "page_sampled": 152,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p152 the figure(s) img_0158 are mapped to sec_0021. The page text before and after the figure is also in sec_0021, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 (AT-73) the page shows the exploded-view legend (1)-(18) (#/texts/38569-38577). sec_0022 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p155 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 runs p154-166. It starts at the '11. AWD Transfer System' heading on p154. The last node is the MEMO heading and AT-84 folio on p166, the last PDF page. No index, glossary or cover follows. Sampled p155 nodes belong to this section.",
+   "notes": "End boundary checked: p166 is a blank MEMO page, so there is no back matter to absorb.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0022 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p155 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has 144 nodes, semantic_order 38569-38712, with no gaps from the previous section. On p155 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p155. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p154). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p155 prints the folio AT-73 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p155 shows folio AT-73. offset_applied is 0, and the bookmark pages are physical, so page_start 154 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 I see a figure with its callouts. The mapped image(s) img_0159 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0159 on p155 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 the figure(s) img_0159 are mapped to sec_0022. The page text before and after the figure is also in sec_0022, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p159 (AT-77) the page shows the legend (1)-(9) of the hydraulic figure (#/texts/38614-38616). sec_0022 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p159 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 runs p154-166. It starts at the '11. AWD Transfer System' heading on p154. The last node is the MEMO heading and AT-84 folio on p166, the last PDF page. No index, glossary or cover follows. Sampled p159 nodes belong to this section.",
+   "notes": "End boundary checked: p166 is a blank MEMO page, so there is no back matter to absorb.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0022 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p159 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has 144 nodes, semantic_order 38569-38712, with no gaps from the previous section. On p159 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p159. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p154). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p159 prints the folio AT-77 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p159 shows folio AT-77. offset_applied is 0, and the bookmark pages are physical, so page_start 154 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p159 I see a figure with its callouts. The mapped image(s) img_0162 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0162 on p159 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 159,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p159 the figure(s) img_0162 are mapped to sec_0022. The page text before and after the figure is also in sec_0022, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165 (AT-83) the page shows heading '5. TRANSFER HYDRAULIC PRESSURE CONTROL UNIT' (#/texts/38688). sec_0022 is level 1 and follows the embedded bookmark list, where each section is a level-1 code.",
+   "notes": "The title is a bookmark code, so the heading text and the title differ. This is how the PDF bookmarks are built.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has parent_section_id null and no children. Its neighbours in the bookmark list are also top-level. The page p165 content (AWD transfer system) matches the section.",
+   "notes": "Flat structure comes from the PDF bookmarks. The sub-headings stay as heading nodes inside the section.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 runs p154-166. It starts at the '11. AWD Transfer System' heading on p154. The last node is the MEMO heading and AT-84 folio on p166, the last PDF page. No index, glossary or cover follows. Sampled p165 nodes belong to this section.",
+   "notes": "End boundary checked: p166 is a blank MEMO page, so there is no back matter to absorb.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path of sec_0022 is '/MSA5T0200A30121' for a level-1 section with no parent. This is consistent with the flat bookmark list. On p165 the visible content fits this section.",
+   "notes": "The path uses the bookmark code, not the printed heading.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has 144 nodes, semantic_order 38569-38712, with no gaps from the previous section. On p165 the nodes appear once.",
+   "notes": "The sibling section holds a copy of the same pages (two models). Identical content there matches the PDF, so it is not a duplicate defect.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 is flagged_for_review true. The reason is a title match score of 34.8 below 85, because the bookmark title is a code that is not printed on p165. The content and boundaries are correct, so the flag is a fair warning and not an error.",
+   "notes": "Flag is a review priority only.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0022 has structural_source 'toc'. The PDF has embedded bookmarks, and the section starts on the page where the bookmark points (p154). The page content agrees.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page p165 prints the folio AT-83 (chapter prefix AT- plus an arabic number). The section records numbering_scheme 'arabic'.",
+   "notes": "The prefix AT- is a chapter label and the number is arabic. Unsure if the alphanumeric prefix should be recorded.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Physical page p165 shows folio AT-83. offset_applied is 0, and the bookmark pages are physical, so page_start 154 lands on the right heading page. The page mapping is correct.",
+   "notes": "Folio numbers restart per chapter, so they are not used for the offset.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165 I see a figure with its callouts. The mapped image(s) img_0169 show the whole figure with the numbers, and nothing is cut.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The image(s) img_0169 on p165 are real technical figures, not rules, logos or footers. The running header and folio stay as text nodes only, not as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0022",
+   "page_sampled": 165,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p165 the figure(s) img_0169 are mapped to sec_0022. The page text before and after the figure is also in sec_0022, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

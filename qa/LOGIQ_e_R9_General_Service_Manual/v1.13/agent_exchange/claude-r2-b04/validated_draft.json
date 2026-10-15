@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)",
+  "validated_at": "2026-10-07T04:54:29.198303+00:00",
+  "findings": [
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p344 'eDelivery - Software update' (#/texts/3635) is a chapter-style page title under the running header 'Diagnostics/Troubleshooting'. It is level 2 under sec_0042 (level 1), like siblings sec_0047 and sec_0049.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0048 has parent sec_0042 'Diagnostics/Troubleshooting', which lists sec_0048 in child_sections. The page title sits below the parent header on p344. sec_0048 has no children, and p344-357 show no sub-title that needs one ('Introduction' and 'Reload the Software (continued)' are only headings).",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p344 starts with the title (#/texts/3635), 'Introduction' (#/texts/3634) and the intro text. p357 (7-93) holds the last nodes #/texts/3758-3765: the pop-up step, Figure 7-70 and the WARNING text. No sec_0048 node is on p358. p358 starts the next section, 'Network Configuration' (sec_0049, page_start 358).",
+      "notes": "The earlier verify_claims signal about two p358 nodes ('Contents in This Section' and the 7-94/7-96 links) does not apply. Those nodes sit in sec_0049's Contents box, read before the page title. I checked sections.json: sec_0048 has no p358 node.",
+      "confidence": 0.93,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "hierarchy_path is /Diagnostics/Troubleshooting/eDelivery - Software update. This matches the running header 'Diagnostics/Troubleshooting' and the page title on p344, and the parent sec_0042 path.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0047 ends on p343 and sec_0048 starts on p344. sec_0048 ends on p357 and sec_0049 starts on p358. The semantic order ranges (3656-3788, then 3789-3815) touch with no gap or overlap. The p344 and p357 nodes are not duplicated.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "flagged_for_review is false with verification_score 100.0 and an empty reason. The title 'eDelivery - Software update' is clearly visible on p344, so no uncertainty is needed.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is 'toc'. The section title matches a printed page title on p344 (printed folio 7-80). The same title is the running header on p357. This supports an embedded bookmark.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folios are arabic chapter-page style: '7-80' on p344 and '7-93' on p357. numbering_scheme is 'arabic', which is correct.",
+      "notes": "",
+      "confidence": 0.9,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "p344 shows printed folio 7-80 and p357 shows 7-93. That is 14 pages for physical p344-357, a constant step. offset_applied is 0 and page_start 344 matches the physical page of the title.",
+      "notes": "Printed folios have a chapter prefix, so offset 0 means the physical page is used. This is consistent across the section.",
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p357 the small yellow WARNING triangle icon next to 'WARNING' is not in images.json for sec_0048. The pop-up Figure 7-70 is extracted as img_0279 and shows its own small yellow icon. The text node #/texts/3763 'WARNING' and the warning text #/texts/3762 keep the meaning.",
+      "notes": "Small icon dropped, meaning fully stated in text. Low by the contract table. Other figures on p345-356 are extracted (img_0261-img_0278).",
+      "confidence": 0.72,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The images mapped to sec_0048 (img_0261-img_0279) are content figures. Checked img_0279: it is the complete Figure 7-70 pop-up with no extra text around it. No logo, rule or footer divider is kept as an image.",
+      "notes": "",
+      "confidence": 0.85,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    },
+    {
+      "manual_id": "LOGIQ_e_R9_General_Service_Manual",
+      "section_id": "sec_0048",
+      "page_sampled": "344",
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All images on p345-357 are mapped to sec_0048, which owns all of these pages. p344 has no figure, and none is mapped there. Figure 7-70 on p357 is img_0279 in sec_0048. No sibling shares these pages.",
+      "notes": "",
+      "confidence": 0.88,
+      "provider": "claude/sonnet (pdf-tree-qa-reviewer, lead opus)"
+    }
+  ]
+}

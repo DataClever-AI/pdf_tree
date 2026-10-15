@@ -1,0 +1,1474 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 the heading '10.6.2 Pressure-Out' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0173 (10.6 Zero & Waveform Screen, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 step 4 is whole in sec_0175: #/texts/2202 ('4 Touch the pressure signal icon') and #/texts/2208 ('to begin pressure signal output to the patient monitor.'). The heading 10.6.3 and its text are in sec_0176. Nothing is absorbed or lost.",
+   "notes": "The v1.12 Critical (BUG-023) is fixed: #/texts/2208 moved from sec_0176 to sec_0175. The checker flags running header #/texts/2201 as boilerplate of sec_0176. It is the first node on p144 and sits inside the page range of sec_0175 (pages 143-144). It does not cross a boundary, so PASS.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '10.6.2 Pressure-Out' under its parent is correct. The order matches the printed headings on p144.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p143-144 steps 1 to 4 of 10.6.2 are all in sec_0175 (#/texts/2192-2199, 2202, 2208). The fragment #/texts/2208 is not duplicated in sec_0176. No paragraph is missing.",
+   "notes": "Fixed since v1.12 (BUG-023).",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0175 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '10.6.2 Pressure-Out' is found on p144 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p144 is an arabic number and the section numbers are decimal (e.g. 10.6.2). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p144 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "In step 3 on p143 the '-0-' zero patient monitor icon is printed. In step 4 on p144 the pressure signal icon is printed. Neither is extracted. images.json has no image for sec_0175.",
+   "notes": "Probably BUG-017 (small inline icons dropped). The icon names are written in the step text, so the meaning is kept. Same as v1.12.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0175 on p144. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0175",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 no relevant visual is extracted for sec_0175, and none is printed in this section that should be. images.json lists no image for it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p145 the heading '11.1 Oximetry Cable Overview' is printed at the same size and style as the other level-2 headings. The stored hierarchy_level is 2, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0177 (Oximetry Monitoring, level 1). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p145. The section has the heading #/texts/2212 and one paragraph #/texts/2213 on p145. The next heading 11.2 is in sec_0179. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '11.1 Oximetry Cable Overview' under its parent is correct. The order matches the printed headings on p145.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p145 all printed text of '11.1 Oximetry Cable Overview' is in sec_0178. No node is duplicated in a neighbour and no paragraph is missing. The section has the heading #/texts/2212 and one paragraph #/texts/2213 on p145.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0178 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '11.1 Oximetry Cable Overview' is found on p145 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p145 is an arabic number and the section numbers are decimal (e.g. 11.1). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p145 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p145 the 11.1 section has only text. The Edwards logo at the bottom right is decorative. No meaningful figure is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0178 on p145. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0178",
+   "page_sampled": 145,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p145 no relevant visual is extracted for sec_0178, and none is printed in this section that should be. images.json lists no image for it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p153 the heading '12.1 Acumen Hypotension Prediction Index (HPI) Software Feature' is printed at the same size and style as the other level-2 headings. The stored hierarchy_level is 2, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0188 (Advanced Features, level 1). The 12.1 heading is printed under chapter 12 on p153. The child list (sec_0190 to sec_0200) follows the 12.1.x headings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p153-166 (own text p153-155, children to p166). The section starts at the 12.1 heading (#/texts/2373) on p153. Its own text, the Table 12-1 node #/tables/72 and the paragraph #/texts/2406 on p155 end before heading 12.1.1. The chapter number 12 and Contents list are not in this section. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '12.1 Acumen Hypotension Prediction Index (HPI) Software Feature' under its parent is correct. The order matches the printed headings on p153.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p153 all printed text of '12.1 Acumen Hypotension Prediction Index (HPI) Software Feature' is in sec_0189. No node is duplicated in a neighbour and no paragraph is missing. The section starts at the 12.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0189 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '12.1 Acumen Hypotension Prediction Index (HPI) Software Feature' is found on p153 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p153 is an arabic number and the section numbers are decimal (e.g. 12.1). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p153 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 12-1 (#/tables/72) is printed on p154, below p153. It has 4 rows and 3 columns: Display option, Audible and visual alarm, Alert popup. The extracted text has Key Parameter Yes/Yes, Information Bar No/Yes, Not displayed No/No. The structure is sensible. The p154 render was not in the batch, so this is checked from the tree data only.",
+   "notes": "Low confidence because p154 was not rendered.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful picture or icon of '12.1 Acumen Hypotension Prediction Index (HPI) Software Feature' is missing on p153. No image is needed or listed for this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0189 on p153. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0189",
+   "page_sampled": 153,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p153 no relevant visual is extracted for sec_0189, and none is printed in this section that should be. images.json lists no image for it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 the heading '12.1.8 Clinical Application' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0189 (12.1, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p161-162. The section starts at the 12.1.8 heading (#/texts/2498) on p161 and ends with the last bullet (#/texts/2514) on p162. Heading 12.1.9 is in sec_0198. The Figure 12-6 above the heading is in sec_0196. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '12.1.8 Clinical Application' under its parent is correct. The order matches the printed headings on p162.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 all printed text of '12.1.8 Clinical Application' is in sec_0197. No node is duplicated in a neighbour and no paragraph is missing. The section starts at the 12.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0197 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '12.1.8 Clinical Application' is found on p162 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p162 is an arabic number and the section numbers are decimal (e.g. 12.1.8). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p162 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 the 12.1.8 bullets have no picture or icon. Nothing meaningful is dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0197 on p162. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 the 12.1.8 bullets contain no picture. The heart figure (Preload, Contractility, Afterload) is under 12.1.9 and is mapped to sec_0198 as img_0099.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 the heading '10.6.3 Waveform Confirmation' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0173 (10.6 Zero & Waveform Screen, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 the section starts at the heading 10.6.3 (#/texts/2203) and has its two paragraphs, the bold PAP paragraph and the WARNING (#/texts/2204-2207). The old stray line #/texts/2208 (step 4 of 10.6.2) is no longer in sec_0176. The folio #/texts/2209 is boilerplate.",
+   "notes": "The v1.12 Critical (BUG-023) is fixed in v1.13.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '10.6.3 Waveform Confirmation' under its parent is correct. The order matches the printed headings on p144.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All printed text under 10.6.3 on p144 is in sec_0176 once. Step 4 is no longer duplicated or absorbed here; it is in sec_0175.",
+   "notes": "Fixed since v1.12 (BUG-023).",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0176 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '10.6.3 Waveform Confirmation' is found on p144 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p144 is an arabic number and the section numbers are decimal (e.g. 10.6.3). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p144 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p144 the blue '-0-' waveform icon at the right of the first paragraph is extracted as img_0090 (64x64) in sec_0176. The pressure signal icon in step 4 belongs to sec_0175 and is graded there.",
+   "notes": "The checker lists one small dropped raster (112x77 px) on p144. It is the grey pressure signal icon of step 4, which belongs to sec_0175 and is graded Low there (BUG-017). It is not in 10.6.3.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image of sec_0176 is img_0090, a content icon next to the Zero & Waveform text. It is not a rule, logo or footer line. The older noise FAIL is not present.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0176",
+   "page_sampled": 144,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0090 is the blue '-0-' icon printed beside the first paragraph of 10.6.3 on p144. It is mapped to sec_0176, which is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p146 the heading '11.2 Oximetry Setup' is printed at the same size and style as the other level-2 headings. The stored hierarchy_level is 2, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0177 (Oximetry Monitoring, level 1). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p145 the big chapter number '11' (node #/texts/2220) is stored in sec_0179. It belongs to the chapter root sec_0177. Section sec_0179 starts at the 11.2 heading and ends on p147 with the WARNING. Steps 2-4, Figure 11-1, NOTE and CAUTION on p146 are correct.",
+   "notes": "BUG-022 (chapter number kept in a section that is not the chapter root). Same as v1.12; not a regression. Running headers and folios are boilerplate and not graded. Impact: one stray chapter number. The checker reports no boundary signal because page numbers are right. This FAIL is from node ownership (lead ruling).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '11.2 Oximetry Setup' under its parent is correct. The order matches the printed headings on p146.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p146 all printed text of '11.2 Oximetry Setup' is in sec_0179. No node is duplicated in a neighbour and no paragraph is missing. The section starts at the 11.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0179 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '11.2 Oximetry Setup' is found on p146 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p146 is an arabic number and the section numbers are decimal (e.g. 11.2). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p146 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p146 Figure 11-1 (catheter, cable and monitor with numbered callouts) is extracted as img_0091 (2188x1063). The callout list is in the text nodes #/texts/2228-2235. Nothing meaningful is dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image in sec_0179 is img_0091, the real Figure 11-1. No rule, logo or footer divider is kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0179",
+   "page_sampled": 146,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0091 is Figure 11-1 on p146 and is mapped to sec_0179 (11.2 Oximetry Setup). The figure caption is in the same section. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p150 the heading '11.6 Recall Oximetry Data' is printed at the same size and style as the other level-2 headings. The stored hierarchy_level is 2, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0177 (Oximetry Monitoring, level 1). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p150-151. The section has the 11.6 heading on p150 and ends with the NOTE (#/texts/2339-2342) at the top of p151. Heading 11.7 HGB Update follows on p151 in the next section. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '11.6 Recall Oximetry Data' under its parent is correct. The order matches the printed headings on p150.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p150 all printed text of '11.6 Recall Oximetry Data' is in sec_0184. No node is duplicated in a neighbour and no paragraph is missing. The section has the 11.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0184 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '11.6 Recall Oximetry Data' is found on p150 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p150 is an arabic number and the section numbers are decimal (e.g. 11.6). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p150 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p150 the clinical actions icon and the Oximetry Calibration icon (step 4) and the settings icon (below step 7) are visible. None is in images.json. No image is mapped to sec_0184.",
+   "notes": "Probably BUG-017 (small inline icons dropped). Their names are in the text next to them, so the meaning is kept. Same as v1.12.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0184 on p150. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0184",
+   "page_sampled": 150,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p150 no relevant visual is extracted for sec_0184, and none is printed in this section that should be. images.json lists no image for it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 the heading '12.1.1 Acumen Hypotension Prediction Index (HPI)' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0189 (12.1, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p155-156. The section starts at the 12.1.1 heading (#/texts/2407) on p155. It has Table 12-2 (#/tables/73 on p155, #/tables/74 on p156) and the NOTE #/texts/2417 on p156. Heading 12.1.2 is in the next section. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '12.1.1 Acumen Hypotension Prediction Index (HPI)' under its parent is correct. The order matches the printed headings on p155.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 all printed text of '12.1.1 Acumen Hypotension Prediction Index (HPI)' is in sec_0190. No node is duplicated in a neighbour and no paragraph is missing. The section starts at the 12.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0190 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '12.1.1 Acumen Hypotension Prediction Index (HPI)' is found on p155 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p155 is an arabic number and the section numbers are decimal (e.g. 12.1.1). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p155 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 12-2 on p155 (#/tables/73) has 5 columns and 3 data rows. Header and all cells match the render: HPI <=85 White None, HPI >85 Red (flashing), and HPI >85 and persists for two continuous readings (40 seconds) with Popup. The 'Popup' line is joined in the cell with 'Red (flashing)'; the values and order are kept.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful picture or icon of '12.1.1 Acumen Hypotension Prediction Index (HPI)' is missing on p155. No image is needed or listed for this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0190 on p155. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 155,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p155 no relevant visual is extracted for sec_0190, and none is printed in this section that should be. images.json lists no image for it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p156 the heading '12.1.1 Acumen Hypotension Prediction Index (HPI)' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0189 (12.1, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p155-156. The section starts at the 12.1.1 heading (#/texts/2407) on p155. It has Table 12-2 (#/tables/73 on p155, #/tables/74 on p156) and the NOTE #/texts/2417 on p156. Heading 12.1.2 is in the next section. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '12.1.1 Acumen Hypotension Prediction Index (HPI)' under its parent is correct. The order matches the printed headings on p156.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p156 all printed text of '12.1.1 Acumen Hypotension Prediction Index (HPI)' is in sec_0190. No node is duplicated in a neighbour and no paragraph is missing. The section starts at the 12.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0190 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '12.1.1 Acumen Hypotension Prediction Index (HPI)' is found on p156 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p156 is an arabic number and the section numbers are decimal (e.g. 12.1.1). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p156 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p156 the continued Table 12-2 (#/tables/74) has the repeated header and one row 'HPI =100' with Red (flashing) Popup, High priority alarm tone, Patient is hypotensive, and the two action lines. All match the render. Table 12-3 below is in the next section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful picture or icon of '12.1.1 Acumen Hypotension Prediction Index (HPI)' is missing on p156. No image is needed or listed for this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0190 on p156. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0190",
+   "page_sampled": 156,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p156 no relevant visual is extracted for sec_0190, and none is printed in this section that should be. images.json lists no image for it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p161 the heading '12.1.8 Clinical Application' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0189 (12.1, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p161-162. The section starts at the 12.1.8 heading (#/texts/2498) on p161 and ends with the last bullet (#/texts/2514) on p162. Heading 12.1.9 is in sec_0198. The Figure 12-6 above the heading is in sec_0196. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '12.1.8 Clinical Application' under its parent is correct. The order matches the printed headings on p161.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p161 all printed text of '12.1.8 Clinical Application' is in sec_0197. No node is duplicated in a neighbour and no paragraph is missing. The section starts at the 12.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0197 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '12.1.8 Clinical Application' is found on p161 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p161 is an arabic number and the section numbers are decimal (e.g. 12.1.8). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p161 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p161 the 12.1.8 text has no picture or icon of its own. The figure and icons above the heading are extracted in sec_0196 (img_0097, img_0098).",
+   "notes": "The checker lists small dropped rasters on p161 (64x64 and 173x62 px). They are the inline icons in the bullets above heading 12.1.8, so they belong to sec_0196 and are graded there. None is in 12.1.8.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0197 on p161. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0197",
+   "page_sampled": 161,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p161 Figure 12-6 and the inline icons are printed above the 12.1.8 heading. Their images (img_0097, img_0098) are in sec_0196, which is correct. No image is mapped to sec_0197 and none is printed inside it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 the heading '12.1.9 Additional Parameters' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0189 (12.1, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p162-163. The section starts at the 12.1.9 heading (#/texts/2515) on p162 and ends with #/texts/2533 on p163. Heading 12.1.10 Clinical Validation follows in the next section. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '12.1.9 Additional Parameters' under its parent is correct. The order matches the printed headings on p162.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 all printed text of '12.1.9 Additional Parameters' is in sec_0198. No node is duplicated in a neighbour and no paragraph is missing. The section starts at the 12.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0198 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '12.1.9 Additional Parameters' is found on p162 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p162 is an arabic number and the section numbers are decimal (e.g. 12.1.9). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p162 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The three-heart figure on p162 is extracted as img_0099. The labels are also text node #/texts/2521. Nothing meaningful is dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image in sec_0198 is img_0099, the three-heart figure. It is content, not noise. The older noise FAIL is not present.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0198",
+   "page_sampled": 162,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p162 the figure with three hearts (Preload, Contractility, Afterload) sits below the 12.1.9 text. It is extracted as img_0099 (521x152) and mapped to sec_0198. Correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p166 the heading '12.1.11 References' is printed at the same size and style as the other level-3 headings. The stored hierarchy_level is 3, which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The parent is sec_0189 (12.1, level 2). The page shows the heading under that parent. The section has no child sections, so there is no child to check.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Declared pages p166. The section has the 12.1.11 heading (#/texts/2560) and the 10 references on p166 only. The next chapter section starts on p167. No neighbour content is absorbed and nothing of this section is lost.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The path '12.1.11 References' under its parent is correct. The order matches the printed headings on p166.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p166 all printed text of '12.1.11 References' is in sec_0200. No node is duplicated in a neighbour and no paragraph is missing. The section has the 12.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0200 is not flagged (flagged_for_review false, verification_score 100). The heading is on the expected page, so the unflagged state is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The heading '12.1.11 References' is found on p166 where the bookmark points, so the provenance is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p166 is an arabic number and the section numbers are decimal (e.g. 12.1.11). The scheme 'arabic' is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The folio printed on p166 equals the physical page number, so offset 0 is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No meaningful picture or icon of '12.1.11 References' is missing on p166. No image is needed or listed for this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No decorative element (rule, logo, footer line) is kept as an image for sec_0200 on p166. Only content images are listed in images.json.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0200",
+   "page_sampled": 166,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p166 no relevant visual is extracted for sec_0200, and none is printed in this section that should be. images.json lists no image for it.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

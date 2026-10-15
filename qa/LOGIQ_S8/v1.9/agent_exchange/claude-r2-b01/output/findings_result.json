@@ -1,0 +1,2214 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0001 'Service Manual' is level 1. The p1 cover shows the manual title, and Chapter 1 (sec_0002) is a level 1 sibling.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is null and child_sections is empty. Chapter 1 (sec_0002) is a sibling at level 1, not a child. This fits the front matter on p1-42.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 1 and page_end 42 are right. P1 is the cover with the title 'Service Manual'. At the end, p42 is a blank page with only header and footer; Chapter 1 (sec_0002) starts on p43. No neighbour content is absorbed.",
+   "notes": "Nodes #/texts/4 to #/texts/7 on p1 ('(OCTOBER 7', ',', '2019)', 'COVER.FM') are not visible on the render. They are probably print slugs. They stay inside this section, so there is no boundary problem.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Service Manual' matches the render: one level for a root bookmark.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 1-42 are one block with no gap or overlap: no previous section; next section sec_0002 starts on p43. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P1 is the cover with the title 'Service Manual', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p1), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "The section label is 'arabic'. But the folios on p3-p16 are roman ('- i', 'ii -', 'iv -', 'viii -', '- xi'). Arabic folios start on p17. The p1 cover has no folio. Only arabic is recorded for sec_0001.",
+   "notes": "Roman front-matter folios are not represented in the numbering scheme (Medium by the contract). Same nodes as the approved base. The first-page folios are not shown in the p1 render, so I rely on the node text for the roman folios.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section starts on physical p1 with the cover, so the numbers agree.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p1. The cover has only the title, the GE logo and the document number.",
+   "notes": "Contents tables of this section are on p15-41. The p24 table is checked in the other sampled row of sec_0001.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p1 shows only the GE logo as a picture. It was extracted as img_0000. No meaningful figure was dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0000 (vector, 164x161) is the GE logo on the cover. It is a brand mark and not content for retrieval.",
+   "notes": "Low: decorative logo kept as an image. It does not change any text content.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 1,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0000 is on p1 and is mapped to sec_0001. sec_0001 owns p1, so the mapping is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 3-1 Overview is level 2 under sec_0018 Chapter 3 (level 1). P91 shows the heading 'Section 3-1 Overview' under the 'Chapter 3 System Setup' title, as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0018 Chapter 3, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 91 and page_end 91 are right. P91 shows the heading 'Section 3-1 Overview' under the 'Chapter 3 System Setup' title. At the end, the section is only p91; Section 3-2 (sec_0020) starts on p92. No neighbour content is absorbed.",
+   "notes": "The 'Chapter 3 System Setup' title at the top of p91 belongs to the parent sec_0018. sec_0019 starts at its own heading.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 3/Section 3-1 Overview' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 91-91 are one block with no gap or overlap: sec_0018 (Chapter 3) shares p91 as the parent and next sec_0020 starts on p92. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P91 shows the heading 'Section 3-1 Overview' under the 'Chapter 3 System Setup' title, so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p91), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p91 is '3 - 1'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p91 shows the section start, so the bookmark page equals the physical page. The printed folio on p91 is '3 - 1'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The contents table #/tables/50 on p91 has 15 rows in 3 columns (section number, title, page). All section numbers, titles and page numbers (3-1 to 3-97) match the render, in the same order. Row 3-7 is also missing in the PDF. But the title cells keep leader dots ('Overview. . . .'), and every page cell has a leading dot ('. 3-1').",
+   "notes": "Low: values and order are kept. The dots are noise from the leader line. Same pattern as p24 in sec_0001.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p91 has a title, text and a contents table. There is no picture, and images.json has no image for sec_0019.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p91, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0019",
+   "page_sampled": 91,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p91 and none is listed for sec_0019. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 3-6 Completing the Set Up is level 2 under sec_0018 Chapter 3 (level 1). P102 starts with the heading 'Section 3-6 Completing the Set Up', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0018 Chapter 3, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 102 and page_end 106 are right. P102 starts with the heading 'Section 3-6 Completing the Set Up'. At the end, p106 ends with step 7 of 3-6-4-5; Section 3-7 (sec_0025) starts on p107. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 3/Section 3-6 Completing the Set Up' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 102-106 are one block with no gap or overlap: previous sec_0023 is p101 and next sec_0025 starts on p107. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P102 starts with the heading 'Section 3-6 Completing the Set Up', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p102), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p105 is '3 - 15'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p102 shows the section start, so the bookmark page equals the physical page. The printed folio on p105 is '3 - 15'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p105. It has Figure 3-7, a bullet list and numbered steps. The section tables are on p102-104.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p105 shows two photos of the probe ports (Figure 3-7), extracted as img_0074 and img_0075. The three yellow CAUTION triangle icons beside the warnings are missing from images.json.",
+   "notes": "Low: the icons are small and their meaning is stated in text. The CAUTION text is kept in nodes #/texts/1149, 1153 and 1154, so the meaning is not lost.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0074 and img_0075 are real parts of Figure 3-7. No decorative image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 105,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0074 and img_0075 are on p105 and are mapped to sec_0024. Both belong to 3-6-4-1 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 3-10 Printer Installation is level 2 under sec_0018 Chapter 3 (level 1). P139 starts with the heading 'Section 3-10 Printer Installation', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0018 Chapter 3, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 139 and page_end 155 are right. P139 starts with the heading 'Section 3-10 Printer Installation'. At the end, p155 ends with 3-10-5 PC printer setup; Section 3-11 (sec_0029) starts on p156. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 3/Section 3-10 Printer Installation' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 139-155 are one block with no gap or overlap: previous sec_0027 ends on p138 and next sec_0029 starts on p156. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P139 starts with the heading 'Section 3-10 Printer Installation', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p139), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p140 is '3 - 50'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p139 shows the section start, so the bookmark page equals the physical page. The printed folio on p140 is '3 - 50'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p140. It has only the heading 3-10-1-1 and Figure 3-37.",
+   "notes": "The only table in this section is #/tables/65 on p147 (Setup Summary). p147 is not in the rendered pages, so I could not check it cell by cell.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p140 Figure 3-37 was kept as img_0110 with both photos and arrows. But on p151 the NOTICE triangle icon (warning sign) next to the 'Settings for Paper Size MUST match...' text is not extracted as an image.",
+   "notes": "Low: the meaning of the NOTICE is fully written in the text next to the icon. Section-wide finding on p151, graded once on this first row, as in the approved base. verify_claims may mention two raster photos on p140; they are inside img_0110, so nothing is lost there. verify_claims expects Critical for two raster photos on p140. I looked at img_0110 and both photos are inside this vector crop, so I keep Low for the p151 icon only.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p140 img_0110 is the real figure. But on p149 img_0119 holds a heading at its top ('3-10-2-1 Connection Scheme: Color Printer') and the caption 'Figure 3-40' at its bottom. On p151 img_0121 holds a step line ('High Speed (check mark on)') above the dialog window.",
+   "notes": "Low: text nodes are kept inside images, but the information is still readable. Section-wide finding on p149 and p151, graded once on this row, as in the approved base.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 140,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0110 is on p140 and is mapped to sec_0028. Figure 3-37 belongs to 3-10-1-1 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 3-12 Configuring Connectivity is level 2 under sec_0018 Chapter 3 (level 1). P162 starts with the heading 'Section 3-12 Configuring Connectivity', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0018 Chapter 3, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 162 and page_end 171 are right. P162 starts with the heading 'Section 3-12 Configuring Connectivity'. At the end, p171 ends with step 5 of 3-12-8 and a screenshot; Section 3-13 (sec_0031) starts on p172. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 3/Section 3-12 Configuring Connectivity' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 162-171 are one block with no gap or overlap: previous sec_0029 ends on p161 and next sec_0031 starts on p172. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P162 starts with the heading 'Section 3-12 Configuring Connectivity', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p162), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p167 is '3 - 77'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p162 shows the section start, so the bookmark page equals the physical page. The printed folio on p167 is '3 - 77'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p167. It has two screenshots, a numbered list and the heading 3-12-7.",
+   "notes": "The tables of this section are on p162, 164-166 and 168. The p162 contents table (#/tables/67) matches the render but has leader dots and a leading dot in the page cells (Low, same as p24). p162 is not sampled, so not scored here.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p167 shows two screenshots (Figure 3-49 and Figure 3-50). They were extracted as img_0149 (591x324) and img_0150 (254x196).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0149 and img_0150 are real screenshots. No decorative image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0030",
+   "page_sampled": 167,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0149 and img_0150 are on p167 and are mapped to sec_0030. Both belong to 3-12-7.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 4-4 Functional Checks is level 2 under sec_0035 Chapter 4 (level 1). P206 starts with the heading 'Section 4-4 Functional Checks', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0035 Chapter 4, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 206 and page_end 235 are right. P206 starts with the heading 'Section 4-4 Functional Checks'. At the end, p235 ends with 4-4-23 FibroScan module; Section 4-5 (sec_0040) starts on p236. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 4/Section 4-4 Functional Checks' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 206-235 are one block with no gap or overlap: previous sec_0038 ends on p205 and next sec_0040 starts on p236. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P206 starts with the heading 'Section 4-4 Functional Checks', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p206), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p210 is '4 - 22'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p206 shows the section start, so the bookmark page equals the physical page. The printed folio on p210 is '4 - 22'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p210. It has text and Figure 4-19 (phantom drawing).",
+   "notes": "Tables of this section are on p206, 213, 225, 226, 229 and 230. None is on p210.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p210 shows the phantom drawing (Figure 4-19). It was extracted as vector image img_0198 (961x1343) with all its labels.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0198 is the real figure. I saw no logo or rule kept as an image.",
+   "notes": "The crop of img_0198 has a heading, cut text lines and footer. This is graded once as FAIL Low on the first sampled row of the section (p207).",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 210,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0198 is on p210 and is mapped to sec_0039. Figure 4-19 belongs to 4-4-5-1 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 5-2 General Information is level 2 under sec_0043 Chapter 5 (level 1). P240 starts with the heading 'Section 5-2 General Information', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0043 Chapter 5, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 240 and page_end 248 are right. P240 starts with the heading 'Section 5-2 General Information'. At the end, p248 ends with 5-2-4-4 AC Inlet; Section 5-3 (sec_0046) starts on p249. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 5/Section 5-2 General Information' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 240-248 are one block with no gap or overlap: previous sec_0044 is p239 and next sec_0046 starts on p249. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P240 starts with the heading 'Section 5-2 General Information', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p240), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p246 is '5 - 8'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p240 shows the section start, so the bookmark page equals the physical page. The printed folio on p246 is '5 - 8'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Three tables are on p246 (#/tables/88, 89, 90). Tables 5-2 and 5-3 match the render. In Table 5-1 (#/tables/88) the row 'Right side' loses a line. The render shows 'This port is capped with rubber cover.' as the third line. It is missing in the cell text and I did not find it in any other node of the section. All other Table 5-1 cells are in the right column.",
+   "notes": "Medium by rule 2: words of a cell are lost and are not anywhere else. Probably the small-font line is dropped when the cell text is read.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p246 has text, three tables and no picture. images.json has no image for p246.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p246, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 246,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p246 and none is listed for sec_0045 on this page. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 5-7 Hardware Options. is level 2 under sec_0043 Chapter 5 (level 1). P255 starts with the heading 'Section 5-7 Hardware Options.', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0043 Chapter 5, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 255 and page_end 262 are right. P255 starts with the heading 'Section 5-7 Hardware Options.'. At the end, p262 ends with 5-7-1-8 FibroScan Probe Calibration; Section 5-8 (sec_0051) starts on p263. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 5/Section 5-7 Hardware Options.' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 255-262 are one block with no gap or overlap: previous sec_0049 ends on p254 and next sec_0051 starts on p263. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P255 starts with the heading 'Section 5-7 Hardware Options.', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p255), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p261 is '5 - 23'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p255 shows the section start, so the bookmark page equals the physical page. The printed folio on p261 is '5 - 23'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The FibroScan touch panel table (#/tables/100) has 5 rows: M or XL, CAP, FibroScan Report, Delete, Measurement. Every parameter and description matches the render. The 'Note:' lines stay in the same cell.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p261 shows the touch panel screenshot (img_0241, 577x351) and the warning indicator figure (img_0242, 332x271 with the 3 red icons).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0241 and img_0242 are real figures. No decorative image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 261,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0241 and img_0242 are on p261 and are mapped to sec_0050. They belong to 5-7-1-6 and 5-7-1-7 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 7-6 Service Desktop (R4.2.5x and later) is level 2 under sec_0059 Chapter 7 (level 1). P328 starts with the heading 'Section 7-6 Service Desktop (R4.2.5x and later)', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0059 Chapter 7, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "page_start 328 is right, and the content on p333 belongs here. But page_end is 349 while three nodes from p350 are inside this section: #/texts/4640 'GE Healthcare', #/texts/4641 'Direction 5394227, 13 ...' and #/texts/4642 'Section 7-7'. They are the running header and the first words of the next section heading.",
+   "notes": "Low: only header text and a heading fragment cross the boundary. Section 7-7 (sec_0066) starts on p350. p350 is not in the rendered pages, so I did not see it; the node text is the evidence.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 7/Section 7-6 Service Desktop (R4.2.5x and later)' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 328-349 are one block with no gap or overlap: previous sec_0064 ends on p327 and next sec_0066 starts on p350. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P328 starts with the heading 'Section 7-6 Service Desktop (R4.2.5x and later)', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p328), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p333 is '7 - 51'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p328 shows the section start, so the bookmark page equals the physical page. The printed folio on p333 is '7 - 51'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 7-4 (#/tables/112) has 8 data rows: CRM Number, Agent Registered, Agent Quarantine, Agent CRM Verified, Model Number, Serial Number, System Type, Facility. Each description matches the render. The Yes, No and Not Available values stay in the right cell.",
+   "notes": "The bullets are joined into one line with '•' and the dash is a hyphen. This is cosmetic. Table 7-14 on p349 also matches the render.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p333 has text and Table 7-4 only. There is no picture and images.json has none for p333.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p333, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 333,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p333 and none is listed for sec_0065 on this page. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0001 'Service Manual' is level 1. The p1 cover shows the manual title, and Chapter 1 (sec_0002) is a level 1 sibling.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is null and child_sections is empty. Chapter 1 (sec_0002) is a sibling at level 1, not a child. This fits the front matter on p1-42.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 1 and page_end 42 are right. P1 is the cover with the title 'Service Manual'. At the end, p42 is a blank page with only header and footer; Chapter 1 (sec_0002) starts on p43. No neighbour content is absorbed.",
+   "notes": "Nodes #/texts/4 to #/texts/7 on p1 ('(OCTOBER 7', ',', '2019)', 'COVER.FM') are not visible on the render. They are probably print slugs. They stay inside this section, so there is no boundary problem.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Service Manual' matches the render: one level for a root bookmark.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 1-42 are one block with no gap or overlap: no previous section; next section sec_0002 starts on p43. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P1 is the cover with the title 'Service Manual', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p1), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p24 is '8 -', and it uses digits only.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p1 shows the section start, so the bookmark page equals the physical page. The printed folio on p24 is '8 -'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/9 on p24 has 8 rows. Titles, page numbers (4 - 46 to 4 - 49) and order match the render. Each value is in the right column. But each page cell starts with an extra dot (for example '.4 - 46'), and the title cells keep only a few leader dots. Other Contents tables of sec_0001 have more defects. On p19 the words 'and ANSI AAMI' are lost from the 'Patient Environment IEC60601-1 ...' title. On p27 and p28 some page numbers are cut ('7 - 4' became '7 | -', '7 - 82' became '7 -').",
+   "notes": "Low: this is a navigation (Contents) table. Lost leader dots or page digits are Low by rule 2. The lost words on p19 are part of a title line in a Contents table, so I keep Low. The p19, p27 and p28 renders were checked. Same dot pattern on p91 (sec_0019). verify_claims expects Medium. I keep Low because this is a Contents (navigation) table and the lead rule 2 says lost leader dots or page digits there are Low.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p24 is a contents list with no picture. No image was extracted and none is missing.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p24, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 24,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p24 and images.json lists none for p24. No mapping is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 1-2 Service manual overview is level 2 under sec_0002 Chapter 1 (level 1). P44 starts with the heading 'Section 1-2 Service manual overview', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0002 Chapter 1, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 44 and page_end 48 are right. P44 starts with the heading 'Section 1-2 Service manual overview'. At the end, p48 ends with the text of 1-2-4-1; Section 1-3 (sec_0005) starts on p49. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 1/Section 1-2 Service manual overview' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 44-48 are one block with no gap or overlap: previous sec_0003 is p43 and next sec_0005 starts on p49. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P44 starts with the heading 'Section 1-2 Service manual overview', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p44), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p46 is '1 - 4'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p44 shows the section start, so the bookmark page equals the physical page. The printed folio on p46 is '1 - 4'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 1-2 (#/tables/29) has 14 model rows and 7 columns. I checked each cell against the render. Model numbers 5418099 to 5808841 and the Y/U/U*/N values are in the right R1 to R4.2.5x columns. Table 1-3 (#/tables/30) has 4 rows and also matches.",
+   "notes": "Table 1-1 on p44 (#/tables/28) also matches in all 11 rows. The tables on p47 are not in the rendered pages, so I did not check them visually.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p46 shows only text and two tables. No picture is on the page and images.json has no image for sec_0004.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p46, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0004",
+   "page_sampled": 46,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p46 and none is listed for sec_0004. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 3-6 Completing the Set Up is level 2 under sec_0018 Chapter 3 (level 1). P102 starts with the heading 'Section 3-6 Completing the Set Up', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0018 Chapter 3, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 102 and page_end 106 are right. P102 starts with the heading 'Section 3-6 Completing the Set Up'. At the end, p106 ends with step 7 of 3-6-4-5; Section 3-7 (sec_0025) starts on p107. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 3/Section 3-6 Completing the Set Up' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 102-106 are one block with no gap or overlap: previous sec_0023 is p101 and next sec_0025 starts on p107. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P102 starts with the heading 'Section 3-6 Completing the Set Up', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p102), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p104 is '3 - 14'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p102 shows the section start, so the bookmark page equals the physical page. The printed folio on p104 is '3 - 14'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 3-11 (#/tables/62) has 4 data rows. Item 1 to 4, connector name (USB Port, HDMI Connector, Ethernet, AUDIO), section number (5-2-3-2, 5-2-4-1, 5-2-4-2, 5-2-4-3) and description all match the render. Each value is in its own column.",
+   "notes": "Table 3-6 on p102 (#/tables/57) puts the two lines of a cell in different rows, but each value stays in the right column. It is Low and p102 is not a sampled page, so it is not scored here.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p104 shows the rear panel photo (Figure 3-6). It was extracted as img_0073 (294x281) with labels 1 to 4.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0073 is the real Figure 3-6. No logo or rule was kept as an image on p104.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 104,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0073 is on p104 and is mapped to sec_0024. Figure 3-6 belongs to 3-6-3 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 4-4 Functional Checks is level 2 under sec_0035 Chapter 4 (level 1). P206 starts with the heading 'Section 4-4 Functional Checks', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0035 Chapter 4, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 206 and page_end 235 are right. P206 starts with the heading 'Section 4-4 Functional Checks'. At the end, p235 ends with 4-4-23 FibroScan module; Section 4-5 (sec_0040) starts on p236. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 4/Section 4-4 Functional Checks' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 206-235 are one block with no gap or overlap: previous sec_0038 ends on p205 and next sec_0040 starts on p236. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P206 starts with the heading 'Section 4-4 Functional Checks', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p206), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p207 is '4 - 19'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p206 shows the section start, so the bookmark page equals the physical page. The printed folio on p207 is '4 - 19'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p207. It has Figure 4-15 and the two-column key list 1 to 22.",
+   "notes": "The p206 contents table (#/tables/78, 23 rows) matches the render but has leader-dot noise (Low). p206 is not sampled, so not scored here.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p207 shows the control panel photo (Figure 4-15). It was extracted as img_0194 (472x347) with numbers 1 to 22.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p207 img_0194 is the real figure. But on p210 img_0198 (Figure 4-19) also holds the heading '4-4-5 Performance Tests', two cut text lines, the caption, and part of the footer line ('4 - 22').",
+   "notes": "Low: text and footer are kept inside an image, but the figure is complete. Section-wide finding on p210, graded once on this row, as in the approved base.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0039",
+   "page_sampled": 207,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0194 is on p207 and is mapped to sec_0039. Figure 4-15 belongs to 4-4-4-1 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 5-2 General Information is level 2 under sec_0043 Chapter 5 (level 1). P240 starts with the heading 'Section 5-2 General Information', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0043 Chapter 5, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 240 and page_end 248 are right. P240 starts with the heading 'Section 5-2 General Information'. At the end, p248 ends with 5-2-4-4 AC Inlet; Section 5-3 (sec_0046) starts on p249. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 5/Section 5-2 General Information' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 240-248 are one block with no gap or overlap: previous sec_0044 is p239 and next sec_0046 starts on p249. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P240 starts with the heading 'Section 5-2 General Information', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p240), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p243 is '5 - 5'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p240 shows the section start, so the bookmark page equals the physical page. The printed folio on p243 is '5 - 5'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p243. It has Figure 5-3 and Figure 5-4 with labels.",
+   "notes": "Tables of this section are on p246 and p247.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p243 shows two operator panel pictures (Figure 5-3 and Figure 5-4). They were extracted as vector images img_0224 and img_0225 with their red labels.",
+   "notes": "verify_claims says two raster photos on p243 are not in images_v1.json. This is because the pipeline saved each figure as a vector-origin crop (img_0224, img_0225). I looked at both crops and both photos are inside, so nothing is missing. I compared the render with img_0224 and img_0225: both photos and all red labels are present, so I reject the Critical signal.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0224 and img_0225 are real figures. No decorative image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 243,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0224 and img_0225 are on p243 and are mapped to sec_0045. Both belong to 5-2-1-3 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 5-2 General Information is level 2 under sec_0043 Chapter 5 (level 1). P240 starts with the heading 'Section 5-2 General Information', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0043 Chapter 5, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 240 and page_end 248 are right. P240 starts with the heading 'Section 5-2 General Information'. At the end, p248 ends with 5-2-4-4 AC Inlet; Section 5-3 (sec_0046) starts on p249. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 5/Section 5-2 General Information' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 240-248 are one block with no gap or overlap: previous sec_0044 is p239 and next sec_0046 starts on p249. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P240 starts with the heading 'Section 5-2 General Information', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p240), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p247 is '5 - 9'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p240 shows the section start, so the bookmark page equals the physical page. The printed folio on p247 is '5 - 9'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 5-4 (#/tables/91) has a header and one row: 'R4 | USB 3.0, 5 Gbps, 5V 900 mA'. It matches the render cell by cell.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p247 has one heading, one line of text and Table 5-4. There is no picture.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p247, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0045",
+   "page_sampled": 247,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p247 and none is listed. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 5-7 Hardware Options. is level 2 under sec_0043 Chapter 5 (level 1). P255 starts with the heading 'Section 5-7 Hardware Options.', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0043 Chapter 5, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "page_start 255 and page_end 262 are right. P255 starts with the heading 'Section 5-7 Hardware Options.'. At the end, p262 ends with 5-7-1-8 FibroScan Probe Calibration; Section 5-8 (sec_0051) starts on p263. No neighbour content is absorbed.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 5/Section 5-7 Hardware Options.' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 255-262 are one block with no gap or overlap: previous sec_0049 ends on p254 and next sec_0051 starts on p263. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P255 starts with the heading 'Section 5-7 Hardware Options.', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p255), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p258 is '5 - 20'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p255 shows the section start, so the bookmark page equals the physical page. The printed folio on p258 is '5 - 20'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table 5-6 continues on p258 (#/tables/99) with 2 data rows. 'LS8 UVC Off-board installation kit | - | Y | Y | Y | Y' and 'LS8 Off-Board UVC AC Adaptor * | - | Y | Y | Y | Y | * Japan model is different H-Cat' match the render. Each value is in the right R1 to R4.2.5x column. The header shows 'R4.2. 5x' with a space from the line break, and 'Description' is in the second header row. The meaning is still clear.",
+   "notes": "The p255 part of the table (#/tables/96) also matches the render in all visible rows.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p258 has only the table continuation. There is no picture and images.json has none for p258.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p258, so no noise image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0050",
+   "page_sampled": 258,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image on p258 and none is listed for sec_0050 on this page. This agrees with the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section 7-6 Service Desktop (R4.2.5x and later) is level 2 under sec_0059 Chapter 7 (level 1). P328 starts with the heading 'Section 7-6 Service Desktop (R4.2.5x and later)', as a section inside its chapter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id points to sec_0059 Chapter 7, and the heading shows it is a section of that chapter. child_sections is empty. The render shows only sub-numbers (like 3-x-y) inside the section, not new bookmarks.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "page_start 328 is right, and the content on p331 belongs here. But page_end is 349 while three nodes from p350 are inside this section: #/texts/4640 'GE Healthcare', #/texts/4641 'Direction 5394227, 13 ...' and #/texts/4642 'Section 7-7'. They are the running header and the first words of the next section heading.",
+   "notes": "Low: only header text and a heading fragment cross the boundary. Section 7-7 (sec_0066) starts on p350. p350 is not in the rendered pages, so I did not see it; the node text is the evidence.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Chapter 7/Section 7-6 Service Desktop (R4.2.5x and later)' matches the render: the chapter first, then the section title.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 328-349 are one block with no gap or overlap: previous sec_0064 ends on p327 and next sec_0066 starts on p350. No heading is repeated.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. P328 starts with the heading 'Section 7-6 Service Desktop (R4.2.5x and later)', so the title matches the page and the flag is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section title matches the heading printed on its first page (p328), so the bookmark source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The printed folio on p331 is '7 - 49'. It uses digits in a chapter-page style, so arabic is right.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The first page p328 shows the section start, so the bookmark page equals the physical page. The printed folio on p331 is '7 - 49'.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p331. It has Figure 7-49 and a list of links.",
+   "notes": "The p328 contents table (#/tables/111, 8 rows) matches the render but has leader dots and a leading dot in the page cells (Low). p328 is not sampled, so not scored here.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p331 shows the Service Desktop home screenshot (Figure 7-49). It was extracted as img_0312 (563x161).",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0312 is the real screenshot. No decorative image was kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0065",
+   "page_sampled": 331,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0312 is on p331 and is mapped to sec_0065. Figure 7-49 belongs to 7-6-5 in this section.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

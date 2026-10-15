@@ -14,6 +14,7 @@ import hashlib
 import logging
 import os
 import time
+from collections import Counter
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
@@ -29,6 +30,8 @@ from src.models.extraction import (
     DoclingTextBlock,
     ExtractionProvenance,
 )
+from src.tree_builder.fitz_toc import page_words_reader
+from src.tree_builder.table_lines import recover_table_lines
 
 try:
     from docling.backend.pypdfium2_backend import PyPdfiumDocumentBackend
@@ -68,7 +71,7 @@ def _render_table_markdown(data: dict[str, Any]) -> str:
 
     grid: list[list[str]] = [["" for _ in range(num_cols)] for _ in range(num_rows)]
     for cell in cells:
-        text = (cell.get("text") or "").strip()
+        text = " ".join((cell.get("text") or "").split())
         if not text:
             continue
         r = cell.get("start_row_offset_idx", 0)
@@ -129,8 +132,8 @@ def _build_pipeline_options() -> Any:
     opts.generate_picture_images = False
     opts.images_scale = 1.0
     opts.accelerator_options = AcceleratorOptions(
-        num_threads=4,
-        device=AcceleratorDevice.CPU,
+        num_threads=8,
+        device=AcceleratorDevice.AUTO,
     )
     # Numbering-based heading levels — used only by the synthetic-TOC fallback
     # (see synthetic_toc.py); no effect on the normal embedded-bookmark path,
@@ -152,6 +155,134 @@ def _build_converter() -> Any:
     )
 
 
+def _build_table_converter() -> Any:
+    """Converter with Docling's default PDF backend (docling-parse), used only for tables."""
+    return DocumentConverter(
+        format_options={
+            InputFormat.PDF: PdfFormatOption(pipeline_options=_build_pipeline_options())
+        }
+    )
+
+
+# Tables (BUG-008): the PyPdfium backend gives text as whole line runs, so TableFormer's cell
+# matching puts a run that crosses columns into one cell (Philips p363 '1' + '2' -> '12').
+# Pages with tables are converted again with docling-parse (word-level text) and each table
+# takes the cell data of the re-read table at the same place; the rest of the text is kept.
+# docling-parse can drop words at a cell edge, a column that spans many rows, or signs such
+# as '°' and '±' (2002 p209, p557). A re-read table is used only when it keeps every
+# letter, digit and _TABLE_SIGNS character of the original; otherwise the original stays.
+_TABLE_MATCH_IOU = 0.5
+_TABLE_SIGNS = frozenset("°±%<>=+√")
+_TABLE_BATCH = 120  # pages per re-read conversion
+_TableBox = tuple[int, float, float, float, float]  # page, left, bottom, right, top
+
+
+def _table_box(node: dict[str, Any]) -> _TableBox:
+    prov = (node.get("prov") or [{}])[0]
+    box = prov.get("bbox") or {}
+    top, bottom = float(box.get("t", 0)), float(box.get("b", 0))
+    return (
+        int(prov.get("page_no") or 0),
+        float(box.get("l", 0)),
+        min(top, bottom),
+        float(box.get("r", 0)),
+        max(top, bottom),
+    )
+
+
+def _iou(a: _TableBox, b: _TableBox) -> float:
+    if a[0] != b[0]:
+        return 0.0
+    width = min(a[3], b[3]) - max(a[1], b[1])
+    height = min(a[4], b[4]) - max(a[2], b[2])
+    if width <= 0 or height <= 0:
+        return 0.0
+    inter = width * height
+    union = (a[3] - a[1]) * (a[4] - a[2]) + (b[3] - b[1]) * (b[4] - b[2]) - inter
+    return inter / union if union > 0 else 0.0
+
+
+def _table_chars(data: dict[str, Any]) -> Counter[str]:
+    return Counter(
+        char
+        for cell in data.get("table_cells") or []
+        for char in cell.get("text") or ""
+        if char.isalnum() or char in _TABLE_SIGNS
+    )
+
+
+def _keeps_all_text(original: dict[str, Any], reread: dict[str, Any]) -> bool:
+    return not _table_chars(original) - _table_chars(reread)
+
+
+def _refill_tables(
+    merged: dict[str, Any],
+    convert_pages: Any,
+    logger: logging.Logger,
+) -> int:
+    """
+    Replace each table's cell data with the table re-read by ``convert_pages(pages)`` (a
+    docling-parse conversion of only those pages, in that order, returning the document
+    dict) at the same page and place. A table without a match (IoU below _TABLE_MATCH_IOU),
+    or whose match loses text, keeps its data. Returns the number of tables replaced.
+    """
+    tables = merged.get("tables") or []
+    if not tables:
+        return 0
+    pages = sorted({_table_box(node)[0] for node in tables})
+    reread: list[dict[str, Any]] = []
+    for index in range(0, len(pages), _TABLE_BATCH):
+        batch = pages[index:index + _TABLE_BATCH]
+        try:
+            found = convert_pages(batch).get("tables") or []
+        except Exception as exc:
+            logger.warning("table re-read failed for pages %d-%d - %s", batch[0], batch[-1], exc)
+            continue
+        for node in found:  # subset page n is original page batch[n - 1]
+            prov = (node.get("prov") or [{}])[0]
+            subset_page = int(prov.get("page_no") or 0)
+            if 1 <= subset_page <= len(batch):
+                prov["page_no"] = batch[subset_page - 1]
+                reread.append(node)
+    replaced = kept_for_text = 0
+    for node in tables:
+        box = _table_box(node)
+        best = max(reread, key=lambda other: _iou(box, _table_box(other)), default=None)
+        if best is None or _iou(box, _table_box(best)) < _TABLE_MATCH_IOU:
+            continue
+        if not _keeps_all_text(node.get("data") or {}, best.get("data") or {}):
+            kept_for_text += 1
+            continue
+        node["data"] = best.get("data") or node.get("data")
+        replaced += 1
+    logger.info(
+        "tables re-read with docling-parse: %d of %d replaced, %d kept because text was lost",
+        replaced, len(tables), kept_for_text,
+    )
+    return replaced
+
+
+def _convert_page_subset(converter: Any, pdf_path: Path, pages: list[int]) -> dict[str, Any]:
+    """Convert only ``pages`` (1-indexed) of the PDF, built in memory; nothing is written."""
+    from io import BytesIO
+
+    from docling.datamodel.base_models import DocumentStream
+
+    from src.tree_builder.fitz_toc import _open_pdf
+
+    source = _open_pdf(pdf_path)
+    subset = type(source)()
+    try:
+        for page in pages:
+            subset.insert_pdf(source, from_page=page - 1, to_page=page - 1)
+        stream = DocumentStream(name=pdf_path.name, stream=BytesIO(subset.tobytes()))
+    finally:
+        subset.close()
+        source.close()
+    result: dict[str, Any] = converter.convert(stream).document.export_to_dict()
+    return result
+
+
 def _generate_windows(
     total_pages: int,
     window_size: int,
@@ -167,6 +298,50 @@ def _generate_windows(
             break
         start = end - overlap + 1
     return windows
+
+
+def _in_reading_order(doc_dict: dict[str, Any]) -> dict[str, Any]:
+    """
+    Return a copy of one window's export with ``texts`` sorted into reading order.
+
+    reading_order is the position in the merged ``texts`` list (see
+    _build_typed_document), but Docling appends some texts at the end of that list:
+    headings inside list groups land after the last page of the window (SOMATOM
+    p131 'Equipotential bonding connector pin' at index 303 of 313). The real reading
+    order is the depth-first walk of ``body``. Texts the walk does not reach (e.g.
+    furniture) keep their place after the text that precedes them in the list.
+    $refs to texts are not rewritten; nothing reads them after the merge.
+    """
+    texts = doc_dict.get("texts") or []
+    rank: dict[int, int] = {}
+    stack: list[Any] = [{"$ref": "#/body"}]
+    while stack:
+        parts = str((stack.pop() or {}).get("$ref", "")).split("/")
+        if len(parts) == 2:
+            node = doc_dict.get(parts[1]) or {}
+        elif len(parts) == 3 and parts[2].isdigit():
+            collection, index = parts[1], int(parts[2])
+            items = doc_dict.get(collection) or []
+            if index >= len(items):
+                continue
+            node = items[index]
+            if collection == "texts":
+                rank.setdefault(index, len(rank))
+        else:
+            continue
+        stack.extend(reversed(node.get("children") or []))
+
+    keys: list[tuple[int, int, int]] = []
+    previous = -1
+    for index in range(len(texts)):
+        if index in rank:
+            previous = rank[index]
+            keys.append((previous, 0, index))
+        else:
+            keys.append((previous, 1, index))
+    ordered = dict(doc_dict)
+    ordered["texts"] = [texts[key[2]] for key in sorted(keys)]
+    return ordered
 
 
 def _trim_overlap_pages(doc_dict: dict[str, Any], min_page: int) -> dict[str, Any]:
@@ -340,6 +515,7 @@ class DoclingExtractionEngine:
 
     def __init__(self) -> None:
         self._converter: Any = None
+        self._table_converter: Any = None
 
     @property
     def is_available(self) -> bool:
@@ -363,9 +539,13 @@ class DoclingExtractionEngine:
         window_size: int = 60,
         window_overlap: int = 6,
         on_window_complete: Any | None = None,
+        refill_tables: bool = True,
     ) -> DoclingDocument:
         """
         Extract DoclingDocument from PDF via windowed batches.
+
+        With refill_tables, pages with tables are read again with docling-parse and the
+        table cells take that text (BUG-008).
 
         on_window_complete(window_idx, total_windows, elapsed_s) called after each.
         """
@@ -386,7 +566,7 @@ class DoclingExtractionEngine:
             logger.info("window %d/%d pages %d-%d", w_idx, len(windows), start, end)
             try:
                 result = converter.convert(str(pdf_path), page_range=(start, end))
-                doc_dict = result.document.export_to_dict()
+                doc_dict = _in_reading_order(result.document.export_to_dict())
                 if w_idx > 1:
                     prev_end = windows[w_idx - 2][1]
                     doc_dict = _trim_overlap_pages(doc_dict, min_page=prev_end + 1)
@@ -399,12 +579,22 @@ class DoclingExtractionEngine:
                 except Exception:
                     pass
 
-        elapsed_s = time.perf_counter() - t_start
-
         if not batch_dicts:
             raise RuntimeError("All extraction windows failed")
 
         merged = _merge_batch_dicts(batch_dicts, logger)
+        if refill_tables:
+            if self._table_converter is None:
+                self._table_converter = _build_table_converter()
+            table_converter = self._table_converter
+            _refill_tables(
+                merged,
+                lambda pages: _convert_page_subset(table_converter, pdf_path, pages),
+                logger,
+            )
+        if merged.get("tables"):
+            recover_table_lines(merged, page_words_reader(pdf_path), logger)
+        elapsed_s = time.perf_counter() - t_start
         document_id = hashlib.sha256(str(pdf_path.resolve()).encode()).hexdigest()[:24]
 
         return _build_typed_document(

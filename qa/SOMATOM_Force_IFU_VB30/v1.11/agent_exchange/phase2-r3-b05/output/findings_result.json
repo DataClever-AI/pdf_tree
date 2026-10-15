@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0213",
+      "page_sampled": "124",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p124 the black 'i' note icon next to 'It is within the responsibility of the personnel...' (belongs to sec_0213) was left out of the image output. No image of sec_0213 exists in images.json. The note text is in node #/texts/2628, so no information is lost.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0257",
+      "page_sampled": "145",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Only decorative box icons are missing; no figure or meaningful icon is lost. On p145 the black 'i' note icon next to 'For instructions using the trolley...' and the two warning triangles in the WARNING boxes (nodes #/texts/3057 and 3061) were left out of the image output. No image of sec_0257 is in images.json. All meaning is in the text, including the word WARNING.",
+      "notes": "Rule 6i (corrected 2026-10-07): an icon that only marks the box type ('i' note icon, '>>' solution icon, warning triangle next to WARNING or CAUTION) is noise. Not extracted is PASS. Regraded by the lead from FAIL Low.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0244",
+      "page_sampled": "138",
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p138 two small circled callouts '1' and '2' on the 'Wedge shaped cushions' figure are not in img_0112. The WARNING triangle at the top of p138 is also not an image. img_0111 (sec_0244) keeps its own callouts, so the Flat cushions figure is complete.",
+      "notes": "Still Low because a meaningful icon is missing: the circled callouts '1' and '2' on the 'Wedge shaped cushions' figure (owner sec_0245), dropped on the sampled page. Decorative box icons on the page ('i', '>>', warning triangles) are noise and do not count (rule 6i, corrected 2026-10-07). Probably BUG-017.",
+      "confidence": 0.88
+    }
+  ]
+}

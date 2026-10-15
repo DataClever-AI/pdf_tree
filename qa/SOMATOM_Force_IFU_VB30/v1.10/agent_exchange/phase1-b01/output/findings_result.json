@@ -1,0 +1,1214 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'Legend' is a chapter-title level heading on p2 (large orange title). hierarchy_level 1 is right.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0001 'Legend' is a top-level bookmark with no parent and no children. The page shows a single chapter heading and no sub-headings.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0001 holds the heading 'Legend' (#/texts/11), the symbol table #/tables/0, the CAUTION and WARNING explanations (#/texts/13-17, #/texts/24-28) and the page footers on p2 and p3. Both printed pages 2 and 3 are the Legend chapter. The next section sec_0002 starts on p10, so no neighbouring content is absorbed.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Legend' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The Legend appears once. All rows of the legend on p2 and p3 are in sec_0001 and nothing from it is in sec_0002. Pages 4-9 are contents pages, outside the sampled section.",
+   "notes": "The legend tags also exist as garbled nodes (#/texts/10, #/texts/22). They are noise, not a duplicate section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title 'Legend' is printed at the top of p2, so the unflagged state is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'Legend' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p2-p3), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p2 the legend table #/tables/0 keeps only the right column (15 description rows). The left column is lost: the icons 'i' and '>>', the symbols for list, prerequisite, one-step, steps and link. The entries 'Italic', 'Bold', 'Orange', 'Courier', 'Menu > Menu Item' and '<variable>' are separate paragraphs (#/texts/4-9), not in the table.",
+   "notes": "Probably BUG-009 (table read as separate text blocks). All description text is kept, so nothing is lost, but each description can no longer be matched to its symbol. Some pairs, such as 'Indicates a prerequisite', are split in two rows.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The legend on p2 and p3 is made of small icons: hint 'i', solution '>>', and the CAUTION and WARNING tags. None was extracted as an image (images.json has none for sec_0001). They are below the size filters.",
+   "notes": "The meaning of each icon is written in the description text, so no information is lost. Low because only the symbol is missing. The tags also appear as garbled nodes ('&$87,21' #/texts/10, ':$51,1*' #/texts/22) next to the clean 'CAUTION' and 'WARNING' headings.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was kept for sec_0001. The page header, footer and folio are text nodes, not images. No decorative image was passed through.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0001",
+   "page_sampled": 2,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0001. The pages have only small icons, which are covered in the 5.5-filters_discarding row.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0005 'General safety information' is stored at hierarchy_level 2. The page shows the heading with the matching style and nesting under sec_0004 'Safety information' (level 1).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0004 'Safety information' (level 1) is right. The 18 children (2.1.1 to 2.1.18, e.g. sec_0006 'Residual risk', sec_0008 'Statutory regulations') match the numbered headings on p12 and p28.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On p11 the nodes #/texts/81 ':$51,1*' and #/texts/82 '&$87,21' are in sec_0005. They are the garbled WARNING and CAUTION tags of the table 'WARNING and CAUTION are highlighted in the text' (p11, y about 435-490 px). That table is printed under chapter '2 Safety information', before the heading 2.1. The two tags come after the 2.1 intro text, so they land in the wrong section.",
+   "notes": "Probably BUG-029 or a related reading-order issue. Only a lone label is misplaced (the box and its description are probably in sec_0004), so Medium per the lone-label rule. The text is garbled, so it adds noise to sec_0005. verify_claims shows no numeric boundary signal because both nodes are on p11, inside the page range. The error is semantic ownership, seen on the rendered page.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Safety information/General safety information' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 2.1 and its intro text on p11 are in sec_0005 once. The WARNING box on p12 (#/texts/87-94) is present and not duplicated in sec_0006. Section sec_0005 itself is not missing any content.",
+   "notes": "The misplaced lone labels #/texts/81 and #/texts/82 are graded on 5.4-page_start_end here. The matching gaps_duplicates row belongs to sec_0004 (owner of the table), outside this batch.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading '2.1 General safety information' is printed on p11 where the section starts.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'General safety information' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Folio 11 equals physical page 11 where 2.1 starts. The end p28 holds heading 2.1.18 and the start of 2.2, matching the last child.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "p11 has only small callout icons (hint 'i', WARNING and CAUTION tags, warning triangle). No figure exists. The meaning of each icon is in the text next to it.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0023 'Remote access' is stored at hierarchy_level 3. The page shows the heading with the matching style and nesting under sec_0005 (level 2).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0005 (level 2). The printed heading sits inside that parent. sec_0023 has no child sections and none are visible on p17-p18.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 starts at '2.1.10 Remote access' on p17, below the hint note of 2.1.9. It ends with the hint note 'Only use remote access in high performance networks' (#/texts/247) on p18, above 2.1.11. All 26 nodes match.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Safety information/General safety information/Remote access' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0023 appears once. The visible text of Remote access is present in its nodes and no node is repeated in the neighbour sections.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Remote access' is visible on p17 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'Remote access' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p17-p18), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure or screenshot is visible on the sampled page. Only small callout icons (warning triangle, hint 'i') appear. Their meaning is written in the text next to them.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0023",
+   "page_sampled": 18,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The margin heading is level 5 under 'Equipment modifications' (level 4). The page shows margin headings in one style, so nesting comes from the bookmarks. It is plausible.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0044 'Equipment modifications' (level 4). The printed heading sits inside that parent. sec_0046 has no child sections and none are visible on p24-p25.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0046 starts with the margin heading #/texts/372 on p24 and the recommendation text with 3 bullets. It ends with the hint note #/texts/399 at the top of p25, which continues the same topic. 'Equipment of other manufacturers' (#/texts/397) starts sec_0047.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path ends with Operating conditions/Equipment modifications/Certificate of conformity from other manufacturers. The margin headings on p24 follow this order: Equipment modifications, Limitation of liability, Certificate.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0046 appears once. The visible text of Certificate of conformity from other manufacturers is present in its nodes and no node is repeated in the neighbour sections.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Certificate of conformity from other manufacturers' is visible on p24 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'Certificate of conformity from other manufacturers' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p24-p25), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure or screenshot is visible on the sampled page. Only small callout icons (warning triangle, hint 'i') appear. Their meaning is written in the text next to them.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0046",
+   "page_sampled": 25,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0008 'Statutory regulations' is stored at hierarchy_level 3. The page shows the heading with the matching style and nesting under sec_0005 '2.1 General safety information' (level 2).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0005 '2.1 General safety information' (level 2). The printed heading sits inside that parent. sec_0008 has no child sections and none are visible on p12-p13.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0008 starts at '2.1.3 Statutory regulations' on p12 and ends with the bullet 'Upgrades and additional documentation' (#/texts/121) at the top of p13. The heading '2.1.4 In the event of fire' is in sec_0009.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Safety information/General safety information/Statutory regulations' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0008 appears once. The visible text of Statutory regulations is present in its nodes and no node is repeated in the neighbour sections.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Statutory regulations' is visible on p12 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'Statutory regulations' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p12-p13), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure or screenshot is visible on the sampled page. Only small callout icons (warning triangle, hint 'i') appear. Their meaning is written in the text next to them.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0008",
+   "page_sampled": 13,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0024 'During scanning' is stored at hierarchy_level 3. The page shows the heading with the matching style and nesting under sec_0005 (level 2).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0005 (level 2). The printed heading sits inside that parent. sec_0024 has no child sections and none are visible on p18.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0024 starts at heading '2.1.11 During scanning' on p18 and ends with the bullet 'Take protective measures ... Radiation protection' (#/texts/256). The heading '2.1.12 Working at the console' below belongs to sec_0025.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Safety information/General safety information/During scanning' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0024 appears once. The visible text of During scanning is present in its nodes and no node is repeated in the neighbour sections.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'During scanning' is visible on p18 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'During scanning' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p18), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure or screenshot is visible on the sampled page. Only small callout icons (warning triangle, hint 'i') appear. Their meaning is written in the text next to them.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0024",
+   "page_sampled": 18,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0028 'SOMATOM Force / Force Velo (side view)' is stored at hierarchy_level 4. The page shows the heading with the matching style and nesting under sec_0026 'Radiation protection' (level 3).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0026 'Radiation protection' (level 3). The printed heading sits inside that parent. sec_0028 has no child sections and none are visible on p21.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0028 has the page header #/texts/285 and the heading #/texts/286 on p21. Its figure is img_0008. The 2.1.14 heading and text below the figure start sec_0029, so there is no absorbed content.",
+   "notes": "verify_claims flags 'no body of its own'. This is expected: the whole body of sec_0028 is the vector figure img_0008 (p21), which is mapped to it, and no body text exists on the page above the 2.1.14 heading. The section is not empty.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Safety information/General safety information/Radiation protection/SOMATOM Force / Force Velo (side view)' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The side-view figure appears once, in sec_0028. The top-view figure is in sec_0027 on p20. No node is duplicated.",
+   "notes": "verify_claims flags 'no body of its own'. This is expected: the whole body of sec_0028 is the vector figure img_0008 (p21), which is mapped to it, and no body text exists on the page above the 2.1.14 heading. The section is not empty.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'SOMATOM Force / Force Velo (side view)' is visible on p21 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'SOMATOM Force / Force Velo (side view)' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p21), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only figure on p21 is the dose table drawing for the side view. It was extracted as img_0008 and is complete (axis labels, all values, gantry drawing). The CAUTION box below belongs to sec_0029.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Image img_0008 (p21, vector, 886x494) also contains the title 'SOMATOM Force / Force Velo (side view)'. This title is already in the heading node #/texts/286, so the crop has extra text.",
+   "notes": "The figure itself is complete and readable. The extra title is small. Probably a side effect of the BUG-010 vector-figure crop.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0028",
+   "page_sampled": 21,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0008 sits directly under the heading 'SOMATOM Force / Force Velo (side view)' on p21 and is mapped to sec_0028. This is the right owner, not sec_0029 (2.1.14) below it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The margin heading is level 5 under 'Equipment modifications' (level 4), the same as sibling sec_0046. Margin headings share one style on p25, so level follows the bookmarks.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0044 'Equipment modifications' (level 4). The printed heading sits inside that parent. sec_0047 has no child sections and none are visible on p25.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0047 starts at the margin heading #/texts/397 on p25 and ends with the hint note #/texts/406 above 'Software manipulation' (sec_0048). All 8 nodes match the text between the two hint boxes.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '.../Equipment modifications/Equipment of other manufacturers' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The text from 'If you are planning to install equipment' to 'For further information, contact your local ...' is in sec_0047 once. The hint note at the top of p25 is in sec_0046, not repeated here.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Equipment of other manufacturers' is visible on p25 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'Equipment of other manufacturers' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p25), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure or screenshot is visible on the sampled page. Only small callout icons (warning triangle, hint 'i') appear. Their meaning is written in the text next to them.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0047",
+   "page_sampled": 25,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Section sec_0053 'Registering a patient' is stored at hierarchy_level 3. The page shows the heading with the matching style and nesting under sec_0052 '2.2 Safety information on working with patient data' (level 2).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0052 '2.2 Safety information on working with patient data' (level 2). The printed heading sits inside that parent. sec_0053 has no child sections and none are visible on p28-p29.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0053 starts with '2.2.1 Registering a patient' (#/texts/484) on p28 and ends with the second CAUTION box of p29 (#/texts/498-501). The heading '2.2.2 Updating patient data' on p29 belongs to sec_0054, so p29 is correctly split.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '/Safety information/Safety information on working with patient data/Registering a patient' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both CAUTION boxes of p29 above the 2.2.2 heading are in sec_0053 once. The CAUTION boxes below 2.2.2 are not in this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Registering a patient' is visible on p28 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'Registering a patient' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p28-p29), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure or screenshot is visible on the sampled page. Only small callout icons (warning triangle, hint 'i') appear. Their meaning is written in the text next to them.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0053",
+   "page_sampled": 29,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The margin heading 'Additional information on radiation therapy objects' is level 4 under 'Updating patient data' (level 3). The CAUTION box is its content, so the level follows the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent is sec_0054 'Updating patient data' (level 3). The printed heading sits inside that parent. sec_0055 has no child sections and none are visible on p30.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0055 has the margin heading #/texts/516 and the CAUTION box (#/texts/531-535) printed beside it on p30. The three CAUTION boxes above it and the '2.2.3 Searching patient data' box below it are outside this section, as they should be.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path '.../Updating patient data/Additional information on radiation therapy objects' matches the printed heading chain on the rendered page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0055 appears once. The visible text of Additional information on radiation therapy objects is present in its nodes and no node is repeated in the neighbour sections.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Additional information on radiation therapy objects' is visible on p30 and the boundary is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The bookmark title 'Additional information on radiation therapy objects' matches the printed heading, so no inferred structure needs extra checking.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. Printed folios on the rendered pages are arabic digits, so the scheme is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The printed folio equals the physical page (p30), and neighbouring sections also use 0.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No figure or screenshot is visible on the sampled page. Only small callout icons (warning triangle, hint 'i') appear. Their meaning is written in the text next to them.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image was extracted for this section, so no decorative image was kept. Nothing to remove on the sampled page.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0055",
+   "page_sampled": 30,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section and none is needed. The sampled page has no figure that belongs to it.",
+   "notes": "",
+   "confidence": 0.85
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "logs/run.log shows 22 bookmarks and 166 pages. bookmark_sanity ran with no hard failure and no repair. The run finished with validation PASS. Tables: 10 of 10 re-read with docling-parse, 10 table lines recovered in 4 tables. Note: toc_resolution flagged 22/22 bookmarks (match_rate 0.00).",
+      "notes": "Same result as v1.6. The 22/22 flags come from bookmark titles that are document codes, not printed headings. The 10 recovered lines match the 4 changed tables (p27, p31, p39, p61).",
+      "confidence": 0.95
+    }
+  ]
+}

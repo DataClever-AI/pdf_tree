@@ -1,0 +1,15 @@
+{
+  "findings": [
+    {
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "logs/run.log shows 85 bookmarks and 567 pages. bookmark_sanity ran with no hard failure and no repair. The run finished: 83 sections, validation PASS, 459 images. validation_report.json agrees: Coverage, Precision and Structure PASS, 0 orphans, 0 duplicates.",
+      "notes": "New log line for this version: 'table lines recovered: 21 in 7 tables' (BUG-030). Also 176 of 178 tables re-read with docling-parse, 2 kept (BUG-008). 2 bookmarks excluded (index, table_of_contents); 0 of 83 flagged_for_review.",
+      "confidence": 0.95,
+      "provider": "claude/opus (pdf-tree-qa-lead, run.log check)"
+    }
+  ]
+}

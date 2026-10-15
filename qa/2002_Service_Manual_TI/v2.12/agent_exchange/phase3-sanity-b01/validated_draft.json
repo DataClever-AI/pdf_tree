@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "provider": "claude/opus (lead, run.log check)",
+  "validated_at": "2026-10-08T07:57:57.424330+00:00",
+  "findings": [
+    {
+      "manual_id": "2002_Service_Manual_TI",
+      "section_id": "DOCUMENT-LEVEL",
+      "page_sampled": "",
+      "checklist_ref": "5.6-sanity_report",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "logs/run.log shows 251 bookmarks and 642 pages. bookmark_sanity has no hard failure. It repaired one known problem: '1. General' pointed to p3 and was moved to p22, where its title is (relocated). The run finished with validation PASS and 0/251 bookmarks flagged. Tables: 82 of 101 re-read with docling-parse. 10 table lines recovered in 4 tables. 487 images extracted.",
+      "notes": "Same as v2.11, plus one new log line for the recovered table lines. The 4 tables match the tree diff: p17 #/tables/27, p51 #/tables/32, p110 #/tables/40 and p254 #/tables/55 (BUG-030 fix).",
+      "confidence": 0.95,
+      "provider": "claude/opus (lead, run.log check)"
+    }
+  ]
+}

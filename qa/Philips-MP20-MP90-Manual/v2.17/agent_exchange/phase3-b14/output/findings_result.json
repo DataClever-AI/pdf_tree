@@ -1,0 +1,1334 @@
+{
+  "findings": [
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p363 the large title 'VueLink Modules' with the chapter number 30 is a chapter start. The hierarchy_level 1 in sections.json agrees.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is none (chapter 30 root). Its place under that parent matches the heading order on the rendered pages. 7 children sec_0691 to sec_0697 on p364 to p366.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p363 the heading #/texts/6912, both intro paragraphs, tables #/tables/122 and #/tables/123, the module drawing text and the closing paragraphs are in sec_0690. p363 is the chapter start. page_end 366 covers its children. The p366 bullet is the end of the last child.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /VueLink Modules is the correct ordered ancestry of the heading seen on p363.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All chapter 30 text on p363 is in sec_0690 once. The chapter number appears twice (#/texts/6910 and #/texts/6911), but it is only page furniture. No text is missing.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0690 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'VueLink Modules' is visible on p363, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 351 (p363). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p363 as bookmarked, so no offset is needed (folio 351 (p363)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-table_content",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p363 legend table #/tables/123 reads 'a a module name' and 'c c selection LED'. The letters a and c are repeated. Rows b, d, e, f and g are right. Table #/tables/122 matches the page: 5 module rows and all columns.",
+      "notes": "Same as v2.16 (no change in this batch). Probably the bold letter is read twice (BUG-008). All values stay in order, so the loss is small.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0230 (vector origin) is the VueLink module drawing on p363 and is mapped to sec_0690. I opened the crop. It shows the module with the lines and letters a to g. Nothing meaningful is lost on p363.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The drawing text (#/texts/6915 to #/texts/6932, letters a to g and device labels) is also kept as text nodes in sec_0690. The crop img_0230 is a real figure, not decoration. No rule or logo is kept as an image.",
+      "notes": "Probably Docling reads the drawing text and adds fragments. They stay in the same section.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0690",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0230 on p363 is the VueLink module drawing printed under the chapter 30 heading. It is mapped to sec_0690, which is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p367 the heading 'Timer Types' is printed as a small sub-heading. The hierarchy_level 3 in sections.json agrees with the render.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0699 'Viewing Timers' is the medium heading above on p367. 'Timer Types' is a small sub-heading under it. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p367 the heading #/texts/6996 and the two paragraphs #/texts/6997 and #/texts/6998 are in sec_0700. The text stops before 'Timer Setup Pop-up Keys', which is sec_0701.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Using Timers/Viewing Timers/Timer Types is the correct ordered ancestry of the heading seen on p367.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 3 nodes are the full body of 'Timer Types' on p367 (types paragraph and the configuration sentence). Nothing is missing or repeated.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0700 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Timer Types' is visible on p367, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 355 (p367). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p367 as bookmarked, so no offset is needed (folio 355 (p367)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p367 a small round timer icon is printed beside the 'Select the Timer SmartKey' bullet. It is not in images.json, so it is not extracted. The words 'Timer SmartKey' state its meaning.",
+      "notes": "Same grade as v2.16. Old issue (BUG-017/BUG-020). The icon is probably under sec_0699 on the page, but the approved row grades it here.",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative rule, logo or footer divider is kept as an image in sec_0700 on p367.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0700",
+      "page_sampled": 367,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0700 and none is printed under 'Timer Types'. The timer icon on p367 sits above, under 'Viewing Timers' (sec_0699).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p371 the heading 'Viewing Loops' is printed as a large section heading. The hierarchy_level 2 in sections.json agrees with the render.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0711 'Respiratory Loops' is the chapter 32 title on p371. Next sibling sec_0713 'Capturing and Deleting Loops' has its own heading on p372. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section starts at heading #/texts/7075 on p371. On p372 the text 'To open the Loops window' and the Loops screenshot come BEFORE the heading 'Capturing and Deleting Loops', so they still belong to 'Viewing Loops'. #/texts/7081 and #/texts/7082 are only the p372 running header.",
+      "notes": "The running header sits inside the pages owned by this section, so I keep PASS as in v2.16. It is boilerplate only (BUG-022 family).",
+      "confidence": 0.8
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Respiratory Loops/Viewing Loops is the correct ordered ancestry of the heading seen on p371.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 26 nodes cover the p371 body and the p372 text and screenshot labels before the next heading. Nothing is missing or repeated.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0712 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Viewing Loops' is visible on p371, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 359 (p371) and 360 (p372). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p371 as bookmarked, so no offset is needed (folio 359 (p371) and 360 (p372)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0234 (softkey bar) and img_0235 (Loops window) are on p372 above 'Capturing and Deleting Loops' and are mapped to sec_0712. I opened both crops. No meaningful figure is lost on p371 or p372. The red and green rectangles under 'Showing/Hiding Loops' belong to a later section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Screenshot words ('Loops: Ohmeda 7900', key names) are text nodes in sec_0712. The crops img_0234 and img_0235 hold the graphics only. No decoration is kept as an image.",
+      "notes": "Words are kept in the correct section.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0712",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0234 (softkey bar) and img_0235 (Loops window) are printed on p372 above 'Capturing and Deleting Loops' and are mapped to sec_0712. This is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p377 the heading 'General Points' is printed as a large section heading. The hierarchy_level 2 in sections.json agrees with the render.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0722 'Care and Cleaning' is the chapter 34 title on p377. Next sibling sec_0724 starts on p378. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/7215 and all body text down to the BIS sentence #/texts/7225 and folio 365 are in sec_0723. The two chapter intro paragraphs above the heading belong to sec_0722.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Care and Cleaning/General Points is the correct ordered ancestry of the heading seen on p377.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 13 nodes cover the body on p377 once. The WARNING label #/texts/7210 is typed as a heading but is kept with its text #/texts/7224 in this section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0723 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'General Points' is visible on p377, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 365 (p377). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p377 as bookmarked, so no offset is needed (folio 365 (p377)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No figure or icon is in this section. The orange WARNING box lines are decoration and no icon is drawn beside the label. Nothing meaningful is lost on p377.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative rule, logo or footer divider is kept as an image in sec_0723 on p377.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0723",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is in this section on p377. The WARNING box has only lines and text. No image is mapped here, which is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p381 'Using Batteries' is a chapter title with the large number 35. The hierarchy_level 1 agrees.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Chapter 35 root with no parent. Children sec_0732, sec_0739, sec_0740, sec_0741 and sec_0747 are the sub-topics on p382 to p388. I viewed p388 and it shows sub-topics such as 'Battery Safety Information'.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p381 heading #/texts/7267, the margin label, the MP20/MP30 and MP40/MP50 paragraphs and the figure label are in sec_0731. Nodes #/texts/7272 to #/texts/7279 are on p382, which was not rendered in this batch. Only the img_0240 crop was seen. They look like intro text before the first sub-heading.",
+      "notes": "Relies on the v2.16 lead check of the p382 render. I could not see p382 myself. Lead check on the p382 render: nodes #/texts/7272-7279 and the 512x480 photo are printed above the 'Battery Power Indicators' heading, so they belong to sec_0731.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Using Batteries is the correct ordered ancestry of the heading seen on p381.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All text of p381 is in sec_0731 once. The p382 intro nodes are counted once. p388, which I viewed, belongs to the children (Battery Safety Information).",
+      "notes": "Not seen: the p382 render. Same as v2.16 lead check. Lead check on the p382 render: nodes #/texts/7272-7279 and the 512x480 photo are printed above the 'Battery Power Indicators' heading, so they belong to sec_0731.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0731 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Using Batteries' is visible on p381, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 369 (p381). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p381 as bookmarked, so no offset is needed (folio 369 (p381)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p381 the rear-view photo is kept as img_0239. On the page a black box and a leader line mark the battery compartment. The crop shows neither the box nor the line. The label 'Battery compartment' is kept as text #/texts/7269.",
+      "notes": "Same as v2.16 (crop not changed). The drawn overlay was probably left out of the crop (BUG-010 family). The photo and label survive.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Crops img_0239 and img_0240 are product photos with a few printed letters, not decoration. No rule, logo or footer divider is kept as an image.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0731",
+      "page_sampled": 381,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0239 (p381) is the rear-view photo printed under the chapter title. img_0240 is on p382. Both are mapped to sec_0731, which owns the chapter intro.",
+      "notes": "p382 page not rendered here. The img_0240 crop is another rear-view photo and the v2.16 lead check placed it above the first sub-heading. Lead check on the p382 render: nodes #/texts/7272-7279 and the 512x480 photo are printed above the 'Battery Power Indicators' heading, so they belong to sec_0731.",
+      "confidence": 0.9
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Rendered p362 shows 'Language Conflict with External Device Drivers' as a large heading below the INOPS table. The hierarchy_level 2 under chapter 29 agrees. The sampled p363 is chapter 30 and holds none of this section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent is sec_0682 (chapter 29 IntelliBridge EC10 Module). Its place under that parent matches the heading order on the rendered pages. No children. The sampled page p363 is the start of chapter 30. The section itself is on p362, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p362 the heading #/texts/6905, intro #/texts/6906, two bullets #/texts/6907 and #/texts/6908 and folio 350 #/texts/6909 are in sec_0689. The INOPS table above the heading is sec_0688. Chapter 30 on p363 is sec_0690. Section page_end 362 is right.",
+      "notes": "Sampled page 363 has no sec_0689 content. I checked p362 as well.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /IntelliBridge EC10 Module/Language Conflict with External Device Drivers is the correct ordered ancestry of the heading seen on p362. The sampled page p363 is the start of chapter 30. The section itself is on p362, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 5 nodes cover the whole section text on p362 once, including the closing bullet 'alarm and INOP texts in the IntelliBridge module device driver language.' Nothing is missing here. The same bullet text on p366 belongs to the VueLink chapter.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0689 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right. The sampled page p363 is the next chapter; the section pages were viewed too.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Language Conflict with External Device Drivers' is visible on p362, so the bookmark source is supported. The sampled page p363 is the start of chapter 30. The section itself is on p362, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 350 (p362). These are plain arabic numbers, so numbering_scheme arabic is right. The sampled page p363 is the start of chapter 30. The section itself is on p362, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p362 as bookmarked, so no offset is needed (folio 350 (p362)). The sampled page p363 is the start of chapter 30. The section itself is on p362, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No figure, icon or screenshot is in this section on p362. The p363 drawing belongs to sec_0690. Nothing meaningful is lost for sec_0689.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative rule, logo or footer divider is kept as an image in sec_0689 on p363.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0689",
+      "page_sampled": 363,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0689 and none is printed under its heading on p362. The p363 VueLink drawing img_0230 is mapped to sec_0690, which is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p369 the heading 'Notification' is printed as a small sub-heading. The hierarchy_level 3 in sections.json agrees with the render.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0702 'Setting Up Timers' is right. The next sibling 'Timer Volume' is sec_0707 on the same p369. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "FAIL",
+      "severity": "Low",
+      "evidence": "On p369 the first two nodes of sec_0706 are the running header '#/texts/7028 Displaying a Timer On The Main Screen' and '#/texts/7029 31 Using Timers', printed above the heading. They are page boilerplate, not part of 'Notification'. Body nodes #/texts/7030 to #/texts/7039 are correct.",
+      "notes": "Same as v2.16. Probably BUG-022 (running headers kept as section nodes). Only boilerplate is wrong. verify_claims shows no boundary signal, but the header nodes are visible above the heading on the render, and v2.16 was approved as Low.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Using Timers/Setting Up Timers/Notification is the correct ordered ancestry of the heading seen on p369.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "All 12 nodes on p369 are in sec_0706 once. The list lines (Alarm, Sound, No Sound) and the two numbered steps are kept. 'Timer Volume' text is in sec_0707.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0706 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Notification' is visible on p369, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 357 (p369). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p369 as bookmarked, so no offset is needed (folio 357 (p369)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No figure is in this section. The TimerA screenshot img_0233 is under 'Displaying a Timer On The Main Screen' and I opened it. Nothing is lost for sec_0706 on p369.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative rule, logo or footer divider is kept as an image in sec_0706 on p369.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0706",
+      "page_sampled": 369,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No figure is under 'Notification'. The TimerA screenshot (img_0233) is below 'Displaying a Timer On The Main Screen' and is mapped to sec_0708, which is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Rendered p370 shows 'Displaying A Clock On The Main Screen' as a large heading. The hierarchy_level 2 under chapter 31 agrees. The sampled p371 is the start of chapter 32.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0698 'Using Timers' (chapter 31) is right. The previous sibling sec_0709 is the small heading above on p370. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p370 the heading #/texts/7058, intro, three steps, closing sentence and folio 358 are in sec_0710. Chapter 32 on p371 is not in this section. The pop-up keys table above the heading is sec_0709.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Using Timers/Displaying A Clock On The Main Screen is the correct ordered ancestry of the heading seen on p370. The sampled p371 is chapter 32; the section is on p370, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 8 nodes are the full body on p370 once. The pop-up keys table above the heading belongs to sec_0709.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0710 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right. The sampled page p371 is the next chapter; the section pages were viewed too.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Displaying A Clock On The Main Screen' is visible on p370, so the bookmark source is supported. The sampled p371 is chapter 32; the section is on p370, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 358 (p370). These are plain arabic numbers, so numbering_scheme arabic is right. The sampled p371 is chapter 32; the section is on p370, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p370 as bookmarked, so no offset is needed (folio 358 (p370)). The sampled p371 is chapter 32; the section is on p370, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No figure, icon or screenshot is in this section on p370. The p371 page has chapter 32 text only and none belongs here.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative rule, logo or footer divider is kept as an image in sec_0710 on p371.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0710",
+      "page_sampled": 371,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No image is mapped to sec_0710 and none is printed on p370 under its heading. p371 shows no image.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section 'Viewing Received Data': large heading on p375 under chapter 33. The hierarchy_level 2 agrees with the render of p375/p376.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0720 'Laboratory Data' is the chapter 33 title on p375. Next sibling sec_0722 starts on p377. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/7172 is on p375. The section ends on p376 with the '*' note #/texts/7207 and folio 364. Chapter 34 on p377 is not in this section. #/texts/7202 and #/texts/7203 are the p376 running header.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Laboratory Data/Viewing Received Data is the correct ordered ancestry of the heading seen on p375.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 37 nodes cover the body on p375 and p376 once. The bullets split at the page break (Enzymes/Markers, Coagulation, Urine Diagnostics) are kept in order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0721 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Viewing Received Data' is visible on p375, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 363 (p375) and 364 (p376). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p375 as bookmarked, so no offset is needed (folio 363 (p375) and 364 (p376)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0237 is the Lab Results window on p375 and is mapped to sec_0721. I opened the crop. It holds the values, ranges and timestamps. Nothing is lost on p376.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The screenshot labels (PCO2, PO2, units) are text nodes in sec_0721. The crop img_0237 holds only the values, ranges and timestamps. No decoration is kept as an image.",
+      "notes": "Both parts are in the right section.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 376,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0237 is the Lab Results window printed under 'Viewing Received Data' on p375. It is mapped to sec_0721, which is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Section 'Viewing Received Data': large heading on p375 under chapter 33. The hierarchy_level 2 agrees with the render of p375/p376. The sampled p377 is chapter 34 and holds none of this section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0720 'Laboratory Data' is the chapter 33 title on p375. Next sibling sec_0722 starts on p377. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/7172 is on p375. The section ends on p376 with the '*' note #/texts/7207 and folio 364. Chapter 34 on p377 is not in this section.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Laboratory Data/Viewing Received Data is the correct ordered ancestry of the heading seen on p375. The sampled p377 is chapter 34; the section is on p375 and p376, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 37 nodes cover the body on p375 and p376 once. The bullets split at the page break (Enzymes/Markers, Coagulation, Urine Diagnostics) are kept in order.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0721 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Viewing Received Data' is visible on p375, so the bookmark source is supported. The sampled p377 is chapter 34; the section is on p375 and p376, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 363 (p375) and 364 (p376). These are plain arabic numbers, so numbering_scheme arabic is right. The sampled p377 is chapter 34; the section is on p375 and p376, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p375 as bookmarked, so no offset is needed (folio 363 (p375) and 364 (p376)). The sampled p377 is chapter 34; the section is on p375 and p376, which I also viewed.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0237 is the Lab Results window on p375 and is mapped to sec_0721. I opened the crop. It holds the values, ranges and timestamps. Nothing is lost on p377.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The screenshot labels (PCO2, PO2, units) are text nodes in sec_0721. The crop img_0237 holds only the values, ranges and timestamps. No decoration is kept as an image.",
+      "notes": "Both parts are in the right section.",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0721",
+      "page_sampled": 377,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "img_0237 is the Lab Results window printed under 'Viewing Received Data' on p375. It is mapped to sec_0721, which is right. The sampled p377 has no image.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.4-hierarchy_level",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "On p380 the heading 'Cleaning Batteries and the Battery Compartment' is printed as a large section heading. The hierarchy_level 2 in sections.json agrees with the render.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.4-parent_child",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Parent sec_0722 'Care and Cleaning' is right. The previous sibling sec_0729 is on p379. No children.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.4-page_start_end",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Heading #/texts/7261, the paragraph #/texts/7262 and folio 368 are all of p380. #/texts/7259 and #/texts/7260 are the running header, which repeats this section's own title. Chapter 35 starts on p381 in sec_0731.",
+      "notes": "The header nodes are boilerplate but belong to this page, so no content crosses a boundary (BUG-022 family).",
+      "confidence": 0.82
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.4-hierarchy_path",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The path /Care and Cleaning/Cleaning Batteries and the Battery Compartment is the correct ordered ancestry of the heading seen on p380.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.4-gaps_duplicates",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "The 5 nodes are the full content of p380 once. The margin label 'MP20/MP30 MP40/MP50 Only' is joined with the paragraph text. The header title is repeated once as heading and once as header text, which is cosmetic.",
+      "notes": "",
+      "confidence": 0.85
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.4-flagged_for_review",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "sec_0730 has flagged_for_review false and verification_score 100. The render shows the heading where expected, so the unflagged state is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.4-structural_source",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "structural_source is toc. The heading 'Cleaning Batteries and the Battery Compartment' is visible on p380, so the bookmark source is supported.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.6-numbering_scheme",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "Printed folio is 368 (p380). These are plain arabic numbers, so numbering_scheme arabic is right.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.6-offset_applied",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "offset_applied is 0. The heading is on physical p380 as bookmarked, so no offset is needed (folio 368 (p380)).",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.5-filters_discarding",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No figure, icon or screenshot is on p380. Nothing meaningful is lost.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.5-filters_passing_noise",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No decorative rule, logo or footer divider is kept as an image in sec_0730 on p380.",
+      "notes": "",
+      "confidence": 0.92
+    },
+    {
+      "section_id": "sec_0730",
+      "page_sampled": 380,
+      "checklist_ref": "5.5-image_section_mapping",
+      "result": "PASS",
+      "severity": "",
+      "evidence": "No figure, icon or screenshot is on p380, and no image is mapped to sec_0730.",
+      "notes": "",
+      "confidence": 0.92
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+"""Per-bug registry under ``qa/bugs/``: one folder per root cause.
+
+Each ``qa/bugs/<bug_id>/`` holds:
+
+- ``bug.md``: the human record (status, description, root cause, what was done, fix,
+  verification). Created from a template only when missing; afterwards only the block
+  between the ``generated:occurrences`` markers is refreshed.
+- ``occurrences.csv``: every FAIL row classified to this bug (where it was seen),
+  regenerated on each run.
+
+``qa/bugs/README.md`` (index) and ``qa/bugs/triage.csv`` are fully regenerated.
+"""
+
+from __future__ import annotations
+
+import csv
+import re
+from dataclasses import dataclass
+from io import StringIO
+from pathlib import Path
+
+from .confidence import latest_versions, normalize_severity
+from .root_causes import (
+    SEVERITY_RANK,
+    RootCause,
+    RootCauseCatalogue,
+    classify,
+    load_version_rows,
+)
+from .storage import atomic_write_text
+
+GENERATED_START = "<!-- generated:occurrences:start -->"
+GENERATED_END = "<!-- generated:occurrences:end -->"
+STATUSES = (
+    "open",
+    "fix-proposed",
+    "in-progress",
+    "mitigated",
+    "fixed-pending-merge",
+    "fixed",
+    "accepted",
+    "wont-fix",
+)
+ATTEMPTS_HEADING = "## Attempts"
+ATTEMPTS_HEADER = (
+    "| Date | Manual | Version | Commit | Change | Before → After | Regressions | Decision |\n"
+    "|---|---|---|---|---|---|---|---|"
+)
+OCCURRENCE_COLUMNS = (
+    "source",
+    "manual_id",
+    "version",
+    "section_id",
+    "page_sampled",
+    "checklist_ref",
+    "severity",
+    "evidence",
+    "notes",
+)
+
+
+@dataclass(frozen=True)
+class Occurrence:
+    source: str
+    manual_id: str
+    version: str
+    section_id: str
+    page_sampled: str
+    checklist_ref: str
+    severity: str
+    evidence: str
+    notes: str
+
+    @property
+    def is_official(self) -> bool:
+        return self.source == "official"
+
+
+@dataclass(frozen=True)
+class Collected:
+    by_bug: dict[str, list[Occurrence]]
+    triage: list[Occurrence]
+
+
+def collect_occurrences(
+    qa_root: Path, catalogue: RootCauseCatalogue, include_drafts: bool = True
+) -> Collected:
+    """Classify every FAIL row of each manual's latest version (drafts fill unreviewed rows)."""
+    by_bug: dict[str, list[Occurrence]] = {bug_id: [] for bug_id in catalogue.bugs}
+    triage: list[Occurrence] = []
+    for manual_id, version in latest_versions(qa_root).items():
+        for row in load_version_rows(qa_root / manual_id / version, include_drafts):
+            if row.get("result", "").upper() != "FAIL":
+                continue
+            key = (manual_id, row.get("section_id", ""), row.get("checklist_ref", ""))
+            if key in catalogue.exclusions:
+                continue
+            occurrence = Occurrence(
+                row.get("_source", "official"),
+                manual_id,
+                version,
+                row.get("section_id", ""),
+                str(row.get("page_sampled", "")),
+                row.get("checklist_ref", ""),
+                normalize_severity(row.get("severity", "")),
+                row.get("evidence", ""),
+                row.get("notes", ""),
+            )
+            bug_id = classify(catalogue, manual_id, row)
+            (by_bug[bug_id] if bug_id else triage).append(occurrence)
+    return Collected(by_bug, triage)
+
+
+def parse_front_matter(text: str) -> dict[str, str]:
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return {}
+    fields: dict[str, str] = {}
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        key, _, value = line.partition(":")
+        if key.strip():
+            fields[key.strip()] = value.strip()
+    return fields
+
+
+def bug_template(cause: RootCause, today: str) -> str:
+    return f"""---
+bug_id: {cause.bug_id}
+status: open
+finding:
+fix_branch:
+fix_commit:
+updated: {today}
+---
+
+# {cause.bug_id} · {cause.title}
+
+**Suspected module:** {cause.suspected_module or "unknown"}
+
+## Description
+
+What fails, in one paragraph, as seen by a RAG consumer.
+
+## Root cause
+
+Confirmed in code or hypothesis; cite file and line.
+
+## What was done
+
+- {today}: registered.
+
+## Fix
+
+Proposed or applied change (branch, commit, tests).
+
+## Verification
+
+How the fix was checked (tests, re-run QA version, rows that no longer FAIL).
+
+{ATTEMPTS_HEADING}
+
+{ATTEMPTS_HEADER}
+
+{GENERATED_START}
+{GENERATED_END}
+"""
+
+
+def _top_severity(occurrences: list[Occurrence]) -> str:
+    severities = [item.severity for item in occurrences]
+    return sorted(severities, key=lambda value: SEVERITY_RANK.get(value, 99))[0]
+
+
+def _pages(items: list[Occurrence]) -> str:
+    return ", ".join(sorted({item.page_sampled for item in items}, key=_page_sort))
+
+
+def _page_sort(value: str) -> tuple[int, str]:
+    return (int(value), "") if value.isdigit() else (1_000_000, value)
+
+
+def occurrence_block(occurrences: list[Occurrence]) -> str:
+    lines = [
+        GENERATED_START,
+        "## Where it was seen",
+        "",
+        "_Generated by `qa/_scripts/build_bug_registry.py`; do not edit this block. "
+        "Full rows with evidence: [occurrences.csv](occurrences.csv). "
+        "`draft` rows are unapproved agent drafts._",
+        "",
+    ]
+    if not occurrences:
+        lines += [
+            "No QA FAIL rows are classified to this bug; "
+            "see the description for where it was seen.",
+            GENERATED_END,
+        ]
+        return "\n".join(lines)
+    lines += [
+        "| Manual | Version | Official FAIL | Draft FAIL | Top severity "
+        "| Sections (pages sampled) |",
+        "|---|---|---:|---:|---|---|",
+    ]
+    by_manual: dict[tuple[str, str], list[Occurrence]] = {}
+    for item in occurrences:
+        by_manual.setdefault((item.manual_id, item.version), []).append(item)
+    for (manual_id, version), items in sorted(by_manual.items()):
+        by_section: dict[str, list[Occurrence]] = {}
+        for item in items:
+            by_section.setdefault(item.section_id, []).append(item)
+        sections = ", ".join(
+            f"{section_id} (p{_pages(section_items)})"
+            for section_id, section_items in sorted(by_section.items())
+        )
+        official = sum(1 for item in items if item.is_official)
+        lines.append(
+            f"| `{manual_id}` | {version} | {official} | {len(items) - official} "
+            f"| {_top_severity(items)} | {sections} |"
+        )
+    lines.append(GENERATED_END)
+    return "\n".join(lines)
+
+
+@dataclass(frozen=True)
+class Attempt:
+    date: str
+    manual_id: str
+    version: str
+    commit: str
+    change: str
+    before: int
+    after: int
+    regressions: int
+    decision: str
+    reviewed: bool = True
+
+    def markdown_row(self) -> str:
+        def cell(value: str) -> str:
+            return " ".join(value.replace("|", "/").split())
+
+        counts = f"{self.before} → {self.after}" if self.reviewed else "not reviewed"
+        regressions = str(self.regressions) if self.reviewed else "—"
+        return (
+            f"| {self.date} | `{self.manual_id}` | {self.version} | {cell(self.commit)} "
+            f"| {cell(self.change)} | {counts} | {regressions} "
+            f"| {cell(self.decision)} |"
+        )
+
+
+def ensure_attempts_section(text: str) -> str:
+    """Insert an empty Attempts table before the generated block when it is missing."""
+    if ATTEMPTS_HEADING in text:
+        return text
+    section = f"{ATTEMPTS_HEADING}\n\n{ATTEMPTS_HEADER}\n\n"
+    start = text.find(GENERATED_START)
+    if start == -1:
+        return text.rstrip("\n") + "\n\n" + section
+    return text[:start] + section + text[start:]
+
+
+def append_attempt(text: str, attempt: Attempt) -> str:
+    """Add one row at the end of the Attempts table and refresh ``updated``."""
+    text = ensure_attempts_section(text)
+    start = text.index(ATTEMPTS_HEADING)
+    header_end = text.index(ATTEMPTS_HEADER, start) + len(ATTEMPTS_HEADER)
+    position = header_end
+    while True:
+        next_line_end = text.find("\n", position + 1)
+        line = text[position + 1 : next_line_end if next_line_end != -1 else len(text)]
+        if not line.startswith("|"):
+            break
+        position = next_line_end
+    text = text[:position] + "\n" + attempt.markdown_row() + text[position:]
+    return re.sub(r"^updated:.*$", f"updated: {attempt.date}", text, count=1, flags=re.MULTILINE)
+
+
+def set_front_matter_field(text: str, key: str, value: str) -> str:
+    return re.sub(rf"^{key}:.*$", f"{key}: {value}", text, count=1, flags=re.MULTILINE)
+
+
+def refresh_generated_block(text: str, block: str) -> str:
+    start = text.find(GENERATED_START)
+    end = text.find(GENERATED_END)
+    if start == -1 or end == -1 or end < start:
+        return text.rstrip("\n") + "\n\n" + block + "\n"
+    return text[:start] + block + text[end + len(GENERATED_END) :]
+
+
+def occurrences_csv(occurrences: list[Occurrence]) -> str:
+    output = StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(OCCURRENCE_COLUMNS)
+    ordered = sorted(
+        occurrences,
+        key=lambda item: (item.manual_id, item.section_id, _page_sort(item.page_sampled)),
+    )
+    for item in ordered:
+        writer.writerow([getattr(item, column) for column in OCCURRENCE_COLUMNS])
+    return output.getvalue()
+
+
+def last_attempt(text: str) -> str:
+    """``v2.1: 13 → 2`` from the last row of the Attempts table, or an empty string."""
+    if ATTEMPTS_HEADING not in text:
+        return ""
+    section = text[text.index(ATTEMPTS_HEADING) :].split(GENERATED_START)[0]
+    rows = [line for line in section.splitlines() if line.startswith("| 2")]
+    if not rows:
+        return ""
+    cells = [cell.strip() for cell in rows[-1].strip("|").split("|")]
+    return f"{cells[2]}: {cells[5]}" if len(cells) >= 6 else ""
+
+
+def index_markdown(
+    catalogue: RootCauseCatalogue,
+    collected: Collected,
+    front_matter: dict[str, dict[str, str]],
+    attempts: dict[str, str] | None = None,
+) -> str:
+    lines = [
+        "# PDF Tree bug registry",
+        "",
+        "One folder per bug. `bug.md` is the human record (what it is, what was done, how it "
+        "was fixed); `occurrences.csv` lists every FAIL row where it was seen. Matching rules "
+        "live in `../confidence_index/root_causes.json`.",
+        "",
+        "_This index is generated by `uv run python qa/_scripts/build_bug_registry.py`; edit "
+        "`bug.md` files, not this page._",
+        "",
+        f"Statuses: {', '.join(f'`{status}`' for status in STATUSES)}.",
+        "",
+        "| Bug | Title | Top severity | Status | Finding | Manuals | Official FAIL | Draft FAIL "
+        "| Last attempt |",
+        "|---|---|---|---|---|---|---:|---:|---|",
+    ]
+    for bug_id, cause in sorted(catalogue.bugs.items()):
+        items = collected.by_bug.get(bug_id, [])
+        meta = front_matter.get(bug_id, {})
+        official = sum(1 for item in items if item.is_official)
+        manuals = "; ".join(sorted({item.manual_id for item in items})) or "—"
+        severity = _top_severity(items) if items else meta.get("severity", "—")
+        lines.append(
+            f"| [{bug_id}]({bug_id}/bug.md) | {cause.title} | {severity} "
+            f"| {meta.get('status', 'open')} | {meta.get('finding') or '—'} | {manuals} "
+            f"| {official} | {len(items) - official} "
+            f"| {(attempts or {}).get(bug_id) or '—'} |"
+        )
+    if collected.triage:
+        lines += [
+            "",
+            f"**Triage:** {len(collected.triage)} FAIL row(s) not yet classified to a root cause "
+            "are listed in [triage.csv](triage.csv).",
+        ]
+    return "\n".join(lines) + "\n"
+
+
+def write_registry(
+    registry_root: Path, catalogue: RootCauseCatalogue, collected: Collected, today: str
+) -> list[Path]:
+    written: list[Path] = []
+    front_matter: dict[str, dict[str, str]] = {}
+    attempts: dict[str, str] = {}
+    for bug_id, cause in sorted(catalogue.bugs.items()):
+        bug_dir = registry_root / bug_id
+        bug_dir.mkdir(parents=True, exist_ok=True)
+        record = bug_dir / "bug.md"
+        text = record.read_text(encoding="utf-8") if record.exists() else bug_template(cause, today)
+        occurrences = collected.by_bug.get(bug_id, [])
+        refreshed = refresh_generated_block(
+            ensure_attempts_section(text), occurrence_block(occurrences)
+        )
+        if refreshed != text or not record.exists():
+            atomic_write_text(record, refreshed)
+            written.append(record)
+        front_matter[bug_id] = parse_front_matter(refreshed)
+        attempts[bug_id] = last_attempt(refreshed)
+        csv_path = bug_dir / "occurrences.csv"
+        atomic_write_text(csv_path, occurrences_csv(occurrences))
+        written.append(csv_path)
+    triage_path = registry_root / "triage.csv"
+    atomic_write_text(triage_path, occurrences_csv(collected.triage))
+    index = registry_root / "README.md"
+    atomic_write_text(index, index_markdown(catalogue, collected, front_matter, attempts))
+    return [*written, triage_path, index]

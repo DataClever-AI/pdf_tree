@@ -1,0 +1,874 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is a level-1 bookmark. On page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1) the heading style matches that level: a chapter title.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is null and children sec_0077 to sec_0083 all point back to sec_0076; the 498 contents list names its sections and Care & Maintenance and Diagnostics are real bookmarks.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 497 the section owns nodes up to page 498 and ends with the heading \"Introduction\" (node #/texts/5313, order 5382). That heading is the sub-heading of the Overview section (sec_0077, pages 498-499), which starts at order 5383, so a heading seems to sit in the parent instead of its child. Page 498 was not given as an image.",
+   "notes": "Uncertain: no render of page 498 was provided, so ownership is inferred from node order and the chapter contents list. Please check page 498 by eye.",
+   "confidence": 0.55
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /LOGIQ e Cart Setup; the running header on page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1) shows LOGIQ e Cart Setup or the section name, which agrees with the ancestry.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The nodes of sec_0076 run 5366 to 5382 and sec_0077 begins at 5383. The heading \"Introduction\" (5382) looks like it belongs to sec_0077 Overview, so a heading is placed in the wrong section. Page 497 itself (cover, folio 11-1) is correct.",
+   "notes": "Same root cause as the page_start_end row. Page 498 not rendered, so confidence is low.",
+   "confidence": 0.55
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1), the section has flagged_for_review false and verification_score 100; the render shows no sign of uncertainty, so the unflagged state is fair.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is toc. On page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1) the heading text and page match the bookmark entry, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1) the printed folio is chapter style (11-x) while the record says arabic. This is one manual-wide convention, and node page numbers equal the physical pages.",
+   "notes": "Chapter-prefixed folios (11-x) are not named in numbering_scheme. I treat this as a global style, not a section defect. Human may confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and node page_no values equal the physical PDF page for page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1); the printed folio follows the physical page in a steady way.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1) shows no figure or picture, so no meaningful visual was discarded.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is listed for page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1), so no decorative image (rule, logo, footer line) was kept as content. The blue header rule is not in images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0076",
+   "page_sampled": 497,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for page 497 (chapter cover \"Chapter 11 LOGIQ e Cart Setup\", folio 11-1); the render also shows no raster picture there, so nothing is mapped to the wrong section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is a level-2 bookmark. On page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40) the heading style matches that level: a big section title under chapter 11.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0076 (chapter 11) and child_sections is empty. The page shows no sub-bookmark level, so the structure is coherent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Start on page 536 is correct (title Diagnostics/Troubleshooting, node 5829). The end is wrong: sec_0082 also owns nodes 6097 to 6099 on page 546, which are the header \"LOGIQ e Cart Setup\", the heading \"Overview\" and the heading \"Purpose\". On the page 546 render these sit under the title \"Care & Maintenance\", so they belong to sec_0083.",
+   "notes": "Root cause: the Care & Maintenance title node 6100 is placed after its own sub-headings. Same cause as the sec_0083 p546 rows. Only this row is failed for sec_0082 so the count is not inflated. Verifier suggests Medium (page_end one page short) but the nodes are owned by the wrong section (real headings, not only boilerplate), so the Critical pattern applies.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /LOGIQ e Cart Setup/Diagnostics/Troubleshooting; the running header on page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40) shows LOGIQ e Cart Setup or the section name, which agrees with the ancestry.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "Overlap with the next section: nodes 6098 (\"Overview\") and 6099 (\"Purpose\") on page 546 belong to Care & Maintenance (sec_0083) but are counted in sec_0082, whose page_end is 545. sec_0083 starts at 6100 and so lacks these headings.",
+   "notes": "Same root cause as the page_start_end row.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40), the section has flagged_for_review false and verification_score 100; the render shows no sign of uncertainty, so the unflagged state is fair.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is toc. On page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40) the heading text and page match the bookmark entry, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40) the printed folio is chapter style (11-x) while the record says arabic. This is one manual-wide convention, and node page numbers equal the physical pages.",
+   "notes": "Chapter-prefixed folios (11-x) are not named in numbering_scheme. I treat this as a global style, not a section defect. Human may confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and node page_no values equal the physical PDF page for page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40); the printed folio follows the physical page in a steady way.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40) shows no figure or picture, so no meaningful visual was discarded.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is listed for page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40), so no decorative image (rule, logo, footer line) was kept as content. The blue header rule is not in images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 536,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for page 536 (big title \"Diagnostics/Troubleshooting\", folio 11-40); the render also shows no raster picture there, so nothing is mapped to the wrong section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is a level-2 bookmark. On page 549 (folio 11-53) the heading style matches that level: a big section title under chapter 11.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0076 (chapter 11) and child_sections is empty. The page shows no sub-bookmark level, so the structure is coherent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 549 the headings and text belong to Care & Maintenance and sit inside pages 546-562. The boundary problem is only on page 546.",
+   "notes": "Verifier says CONTRADICTED because the section-level boundary defect (headings missing from sec_0083, found on p546) is recorded once, on the p546 row. This row judges only the nodes on this page, which are correct.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /LOGIQ e Cart Setup/Care & Maintenance; the running header on page 549 (folio 11-53) shows LOGIQ e Cart Setup or the section name, which agrees with the ancestry.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node on page 549 (folio 11-53) is duplicated or missing within this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 549 (folio 11-53), the section has flagged_for_review false and verification_score 100; the render shows no sign of uncertainty, so the unflagged state is fair.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is toc. On page 549 (folio 11-53) the heading text and page match the bookmark entry, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 549 (folio 11-53) the printed folio is chapter style (11-x) while the record says arabic. This is one manual-wide convention, and node page numbers equal the physical pages.",
+   "notes": "Chapter-prefixed folios (11-x) are not named in numbering_scheme. I treat this as a global style, not a section defect. Human may confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and node page_no values equal the physical PDF page for page 549 (folio 11-53); the printed folio follows the physical page in a steady way.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of page 549 (folio 11-53) has no table, so there is no table text to compare. Not applicable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of page 549 (folio 11-53) shows no figure or picture, so no meaningful visual was discarded.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is listed for page 549 (folio 11-53), so no decorative image (rule, logo, footer line) was kept as content. The blue header rule is not in images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 549,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for page 549 (folio 11-53); the render also shows no raster picture there, so nothing is mapped to the wrong section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is a level-2 bookmark. On page 539 (Figure 11-13 flowchart, folio 11-43) the heading style matches that level: a big section title under chapter 11.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0076 (chapter 11) and child_sections is empty. The page shows no sub-bookmark level, so the structure is coherent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 539 the nodes owned by sec_0082 are the flowchart title and its box text, all inside the section. The boundary problem at page 546 is on another page.",
+   "notes": "Verifier says CONTRADICTED because the section-level boundary defect (nodes 6097-6099 on p546 owned by sec_0082) is recorded once, on the p536 row. This row judges only the nodes on this page, which are correct. Root cause is not repeated, to avoid inflated counts.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /LOGIQ e Cart Setup/Diagnostics/Troubleshooting; the running header on page 539 (Figure 11-13 flowchart, folio 11-43) shows LOGIQ e Cart Setup or the section name, which agrees with the ancestry.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node on page 539 (Figure 11-13 flowchart, folio 11-43) is duplicated or missing within this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 539 (Figure 11-13 flowchart, folio 11-43), the section has flagged_for_review false and verification_score 100; the render shows no sign of uncertainty, so the unflagged state is fair.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is toc. On page 539 (Figure 11-13 flowchart, folio 11-43) the heading text and page match the bookmark entry, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 539 (Figure 11-13 flowchart, folio 11-43) the printed folio is chapter style (11-x) while the record says arabic. This is one manual-wide convention, and node page numbers equal the physical pages.",
+   "notes": "Chapter-prefixed folios (11-x) are not named in numbering_scheme. I treat this as a global style, not a section defect. Human may confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and node page_no values equal the physical PDF page for page 539 (Figure 11-13 flowchart, folio 11-43); the printed folio follows the physical page in a steady way.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 539 there is a large flowchart, Figure 11-13 Can Not Power on the Peripherals, with about 20 decision and action boxes and Yes/No arrows. images.json has no image for page 539 (images exist only for 537 and 542-545), so the drawing was dropped. The box words survive as many paragraph nodes (106 on this page) but the arrows and branches do not.",
+   "notes": "Vector drawing missed by the extractor. The decision flow is lost even though some labels remain as text, so I used the pattern for a meaningful figure missing from image output. Human may lower to High/Medium if the labels are judged enough.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is listed for page 539 (Figure 11-13 flowchart, folio 11-43), so no decorative image (rule, logo, footer line) was kept as content. The blue header rule is not in images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 539,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for page 539 (Figure 11-13 flowchart, folio 11-43); the render also shows no raster picture there, so nothing is mapped to the wrong section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is a level-2 bookmark. On page 540 (Figure 11-14 flowchart, folio 11-44) the heading style matches that level: a big section title under chapter 11.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0076 (chapter 11) and child_sections is empty. The page shows no sub-bookmark level, so the structure is coherent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 540 the nodes owned by sec_0082 are the flowchart title and its box text, all inside the section. The boundary problem at page 546 is on another page.",
+   "notes": "Verifier says CONTRADICTED because the section-level boundary defect (nodes 6097-6099 on p546 owned by sec_0082) is recorded once, on the p536 row. This row judges only the nodes on this page, which are correct. Root cause is not repeated, to avoid inflated counts.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /LOGIQ e Cart Setup/Diagnostics/Troubleshooting; the running header on page 540 (Figure 11-14 flowchart, folio 11-44) shows LOGIQ e Cart Setup or the section name, which agrees with the ancestry.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node on page 540 (Figure 11-14 flowchart, folio 11-44) is duplicated or missing within this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 540 (Figure 11-14 flowchart, folio 11-44), the section has flagged_for_review false and verification_score 100; the render shows no sign of uncertainty, so the unflagged state is fair.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is toc. On page 540 (Figure 11-14 flowchart, folio 11-44) the heading text and page match the bookmark entry, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 540 (Figure 11-14 flowchart, folio 11-44) the printed folio is chapter style (11-x) while the record says arabic. This is one manual-wide convention, and node page numbers equal the physical pages.",
+   "notes": "Chapter-prefixed folios (11-x) are not named in numbering_scheme. I treat this as a global style, not a section defect. Human may confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and node page_no values equal the physical PDF page for page 540 (Figure 11-14 flowchart, folio 11-44); the printed folio follows the physical page in a steady way.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 540 Figure 11-14 External Speaker Does Not Work is a flowchart with four decisions and Yes/No branches. images.json lists no image for page 540. The box labels appear as text nodes, but the branch links between boxes are lost.",
+   "notes": "Same pattern and same reasoning as p539. Note that the same figure type on pages 542-545 was extracted, so the extraction is inconsistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is listed for page 540 (Figure 11-14 flowchart, folio 11-44), so no decorative image (rule, logo, footer line) was kept as content. The blue header rule is not in images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0082",
+   "page_sampled": 540,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for page 540 (Figure 11-14 flowchart, folio 11-44); the render also shows no raster picture there, so nothing is mapped to the wrong section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is a level-2 bookmark. On page 546 (big title \"Care & Maintenance\", folio 11-50) the heading style matches that level: a big section title under chapter 11.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0076 (chapter 11) and child_sections is empty. The page shows no sub-bookmark level, so the structure is coherent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 546 the render shows the title \"Care & Maintenance\" and, under it, the headings \"Overview\" and \"Purpose\" with their paragraph. sec_0083 starts at node 6100 (the title) and owns the paragraph, but the headings \"Overview\" (6098) and \"Purpose\" (6099) and the page header (6097) are in sec_0082, so the start boundary lost the headings.",
+   "notes": "Same root cause as sec_0082 p536 rows. Graded Critical per contract (heading nodes assigned to another section). Verifier suggests Low (boilerplate), but Overview and Purpose are real content headings, not boilerplate, so Critical is kept.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /LOGIQ e Cart Setup/Care & Maintenance; the running header on page 546 (big title \"Care & Maintenance\", folio 11-50) shows LOGIQ e Cart Setup or the section name, which agrees with the ancestry.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "The body paragraph \"This section describes Care & Maintenance...\" (6101) is in sec_0083 but its two sub-headings above it, \"Overview\" and \"Purpose\", are in sec_0082. The section content is split across the sibling boundary.",
+   "notes": "Same root cause as the page_start_end row.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 546 (big title \"Care & Maintenance\", folio 11-50), the section has flagged_for_review false and verification_score 100; the render shows no sign of uncertainty, so the unflagged state is fair.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is toc. On page 546 (big title \"Care & Maintenance\", folio 11-50) the heading text and page match the bookmark entry, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 546 (big title \"Care & Maintenance\", folio 11-50) the printed folio is chapter style (11-x) while the record says arabic. This is one manual-wide convention, and node page numbers equal the physical pages.",
+   "notes": "Chapter-prefixed folios (11-x) are not named in numbering_scheme. I treat this as a global style, not a section defect. Human may confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and node page_no values equal the physical PDF page for page 546 (big title \"Care & Maintenance\", folio 11-50); the printed folio follows the physical page in a steady way.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of page 546 (big title \"Care & Maintenance\", folio 11-50) has no table, so there is no table text to compare. Not applicable.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of page 546 (big title \"Care & Maintenance\", folio 11-50) shows no figure or picture, so no meaningful visual was discarded.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is listed for page 546 (big title \"Care & Maintenance\", folio 11-50), so no decorative image (rule, logo, footer line) was kept as content. The blue header rule is not in images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 546,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for page 546 (big title \"Care & Maintenance\", folio 11-50); the render also shows no raster picture there, so nothing is mapped to the wrong section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section is a level-2 bookmark. On page 554 (folio 11-58) the heading style matches that level: a big section title under chapter 11.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0076 (chapter 11) and child_sections is empty. The page shows no sub-bookmark level, so the structure is coherent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 554 the headings and text belong to Care & Maintenance and sit inside pages 546-562. The boundary problem is only on page 546.",
+   "notes": "Verifier says CONTRADICTED because the section-level boundary defect (headings missing from sec_0083, found on p546) is recorded once, on the p546 row. This row judges only the nodes on this page, which are correct.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is /LOGIQ e Cart Setup/Care & Maintenance; the running header on page 554 (folio 11-58) shows LOGIQ e Cart Setup or the section name, which agrees with the ancestry.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No node on page 554 (folio 11-58) is duplicated or missing within this section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 554 (folio 11-58), the section has flagged_for_review false and verification_score 100; the render shows no sign of uncertainty, so the unflagged state is fair.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Structural source is toc. On page 554 (folio 11-58) the heading text and page match the bookmark entry, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 554 (folio 11-58) the printed folio is chapter style (11-x) while the record says arabic. This is one manual-wide convention, and node page numbers equal the physical pages.",
+   "notes": "Chapter-prefixed folios (11-x) are not named in numbering_scheme. I treat this as a global style, not a section defect. Human may confirm.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and node page_no values equal the physical PDF page for page 554 (folio 11-58); the printed folio follows the physical page in a steady way.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "On page 554 the render shows Table 11-22 Physical Checks with three columns (Step, Item, Description). The extracted table (node 6242) puts step 1 and its item and description in one cell (\"1 Labeling Verify that...\") and rows 6, 7 and 8 also merge Step, Item and Description into one cell. Columns are shifted so values cannot be attributed to their column, while rows 2 to 5 and 9 are split better.",
+   "notes": "The reading order and words are kept, but column shift makes this Medium by the contract. Verifier suggests Low, but the Description text sits in the Step/Item cell for rows 1, 6, 7, 8 so values cannot be tied to their column (Medium). A related issue: the Probe 7-9 rows of the checklist on page 562 are plain paragraphs, not part of the table on 561.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The render of page 554 (folio 11-58) shows no figure or picture, so no meaningful visual was discarded.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image of this section is listed for page 554 (folio 11-58), so no decorative image (rule, logo, footer line) was kept as content. The blue header rule is not in images.json.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 554,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image on page 554, and the render shows none. For reference, the only image of this section is img_0348 on page 555 (Figure 11-20 ground test sketch), which is correctly under the Grounding continuity heading in sec_0083.",
+   "notes": "",
+   "confidence": 0.85
+  }
+ ]
+}

@@ -1,0 +1,724 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 11 shows \"2.1 General safety information\" as a numbered subsection heading under the chapter heading \"2 Safety information\". Node #/texts/79 has level 2 and parent sec_0004 (level 1), which matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0004 \"Safety information\" is the chapter 2 heading on page 11. The 18 children (sec_0006 ... sec_0051, for example 2.1.18 \"Disposal of the system\" on page 28) match the numbered 2.1.x headings seen in the render.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On page 11, nodes #/texts/81 (\":$51,1*\" = WARNING) and #/texts/82 (\"&$87,21\" = CAUTION) are in sec_0005, but they are the label cells of the WARNING/CAUTION legend table printed ABOVE the 2.1 heading. That table is part of the chapter 2 introduction (sec_0004), not of 2.1. The 2.1 heading starts lower on the page. Section end on page 28 is correct: 2.2 and 2.2.1 start there as siblings.",
+   "notes": "Two body nodes printed above the section heading are assigned to a child section instead of the chapter. Garbled font text (\":$51,1*\") means the labels are also unreadable. Graded Critical by the contract (nodes assigned to another section). verify_claims has no numeric boundary signal because the page range is right; this is visual-only evidence from page 11. The text itself is short, so a human may lower it.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/Safety information/General safety information\" matches the chapter heading \"2 Safety information\" and subsection heading \"2.1 General safety information\" on page 11.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "No node is duplicated, but the two legend label nodes #/texts/81 and #/texts/82 on page 11 (WARNING/CAUTION table cells above the 2.1 heading) are owned by sec_0005 and not by chapter section sec_0004. This is a misplaced-node overlap with the parent chapter introduction.",
+   "notes": "Same root cause as the 5.4-page_start_end row. Rest of coverage (page 12 warning box, children 2.1.1 to 2.1.18) has no visible gap.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and there is no verification reason. The only defect visible on page 11 is a node-ownership issue, which is reported in other rows, so the flag state itself is not wrong.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The heading \"2.1 General safety information\" is a printed heading on page 11 and appears in the table of contents, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio \"11\" is printed bottom right on page 11 and \"28\" on page 28 in Arabic numerals. numbering_scheme is \"arabic\".",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 11 equals physical page 11 and printed folio 28 equals physical page 28, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 11 has no figures. Only small icons exist: the info \"i\" icon, the orange WARNING and yellow CAUTION bars and the triangle icons. No image is mapped to sec_0005 in images.json. Their meaning (WARNING, CAUTION) stays in text, so no meaningful figure is lost.",
+   "notes": "Small icons under 80 px are dropped by design.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json lists no image for sec_0005 or pages 11 and 28, so no decorative element was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0005",
+   "page_sampled": 11,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No images are mapped to sec_0005 and none are visible as figures on pages 11 and 28 (only icons and warning boxes). Nothing can be mis-mapped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 343 shows \"7.1.1 Activating Bolus Tracking\" as a third-level numbered heading under \"7.1 CARE Bolus CT\". hierarchy_level 3 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0697 \"CARE Bolus CT\" is 7.1 on page 343. The section has no children, and 7.1.2 \"Performing a PreMonitoring Scan\" on page 344 is the next sibling sec_0699. This matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 7.1.1 heading (#/texts/7422) is at the right place on page 343 and the section holds its text and steps 1 and 2. On page 344 it holds only the figure legend (1) to (4) and ends before 7.1.2 \"Performing a PreMonitoring Scan\". Chapter 7 intro and 7.1 text above the heading stay in the parent.",
+   "notes": "Numeric end 344 is correct because the legend belongs to the 7.1.1 figure.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/Enhanced examination/CARE Bolus CT/Activating Bolus Tracking\" matches chapter 7, subsection 7.1 and subsection 7.1.1 seen on page 343.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Nodes run from the heading on page 343 to the legend on page 344 with no gap. Page 344 starts with the figure and legend (1) to (4), then 7.1.2 starts, so no overlap with sec_0699 is visible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. No structural uncertainty is visible on page 343 or 344.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The printed heading \"7.1.1 Activating Bolus Tracking\" on page 343 supports it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio \"343\" is printed in Arabic numerals on page 343 and \"344\" on page 344, and numbering_scheme is \"arabic\".",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 343 equals physical page 343, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The meaningful figure on page 344 (chronicle with PreMonitoring, Contrast, Monitoring, AbdFast) is kept as img_0233. Two small cursor icons below step 2 on page 344 are not extracted, but they belong to the next section sec_0699 and are small.",
+   "notes": "Small icons under 80 px are dropped by design. They are not part of sec_0698.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0233 (400x199 px) is the real chronicle screenshot with labels (1) to (4), not a rule, logo or decoration. No noise image is kept.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0233 on page 344 is the chronicle screenshot whose legend (1) to (4) is in sec_0698 nodes. It is mapped to sec_0698, which is correct. It is printed above the 7.1.2 heading.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 46 \"Monitor ceiling system\" is a bold left-margin heading beside the body text. It is level 5 under \"Furniture\" (level 4), consistent with a sibling list (Monitor cart, Monitor ceiling system, Accessory cart).",
+   "notes": "Margin heading on page 46 is matched to its body block at the same height (y 451).",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0082 \"Furniture\" owns this section. Previous sibling sec_0083 \"Monitor cart\" ends on page 46 and next sibling sec_0085 \"Accessory cart\" starts on page 47 (margin heading seen on page 47). No children are expected.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at the margin heading on page 46 below the Monitor cart total-weight labels (these stay in sec_0083). It ends on page 47 after the WARNING box \"Malfunction of the system\" and before the margin heading \"Accessory cart\", which starts sec_0085. The margin heading did not pull text from above or below.",
+   "notes": "Margin heading read order is correct here.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/Safety information/Safety information on patient transport and positioning/Accessories/Furniture/Monitor ceiling system\" is ordered from chapter to this section and ends with the margin heading seen on page 46.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 46 all boxes below the margin heading (2 WARNING and 1 CAUTION) are in the section. On page 47 the 2 CAUTION and 1 WARNING boxes are in it, and \"Accessory cart\" content is not. No gap or duplicate is visible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100, and the page layout shows no uncertainty beyond the usual margin heading style.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The heading text \"Monitor ceiling system\" is printed in the margin of page 46, so the source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios \"46\" and \"47\" are printed in Arabic numerals at the bottom right. The headings are unnumbered margin headings. numbering_scheme \"arabic\" is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 46 equals physical page 46 and folio 47 equals page 47, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Pages 46 and 47 show no figure in this section. Only warning triangle icons inside the boxes exist, and their meaning (WARNING, CAUTION) is in the text nodes.",
+   "notes": "Small icons under 80 px are dropped by design.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0084 in images.json, so no decorative element was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 46,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The two total-weight label pictures on page 46 (img_0017 and img_0018) are printed above the margin heading and are mapped to sec_0083 \"Monitor cart\". That is correct. sec_0084 has no figure of its own.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"Positioning the arm supports\" is a bold left-margin heading on page 282. Level 5 under parent \"Positioning the mattress\" (level 4) fits, and its previous sibling is a level 6 child of another section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0586 \"Positioning the mattress\" spans pages 280 to 283. The previous section sec_0590 (storage, top of page 282) and next section sec_0592 (Osteo mattress, page 283) are neighbours. The relation is plausible; sec_0590 is level 6 so it is a child of an earlier sibling.",
+   "notes": "Level jump 6 to 5 between neighbours is normal.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at the margin heading on page 282 (y 569), below the storage text and info box which belong to sec_0590. It contains the intro, CAUTION box, check item, steps 1 to 5 and the final info text, and ends on page 282. The margin heading matched the right body block.",
+   "notes": "Margin heading handling is correct on this page.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/Examination/Positioning the patient/Preparing the patient table/Positioning the mattress/Positioning the arm supports\" matches chapter 6 \"Examination\" in the page header and the nested structure.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All text from the margin heading to the last info box on page 282 is in the section (16 nodes including header and footer). The storage text above belongs to sec_0590. No gap or overlap is visible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. No uncertainty is visible on page 282.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The text \"Positioning the arm supports\" is printed as a margin heading on page 282, so the source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio \"282\" is printed in Arabic numerals on page 282 and numbering_scheme is \"arabic\".",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 282 equals physical page 282, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The two arm-support photos with steps 1 to 3 and 4 to 5 are extracted (img_0197 and img_0198, 528x425 px). Only small info \"i\" and caution icons are not extracted, and their meaning is in text.",
+   "notes": "Small icons under 80 px are dropped by design.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0197 and img_0198 show a patient on the table with the arm support, which is real instruction content. No rule, logo or decoration was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0591",
+   "page_sampled": 282,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page 282 has three pictures. The top picture (mattress in storage holder, img_0196) is mapped to sec_0590 and the two arm-support photos (img_0197, img_0198) are mapped to sec_0591. This matches the printed margin headings.",
+   "notes": "verify_claims flags img_0196 (y=457) as under sec_0591. I opened the image files: img_0196 shows the mattress in the wall storage holder (top of page, sec_0590) and img_0197/img_0198 show the arm supports. The pixels agree with the mapping, so I keep PASS. Please check the stored bbox of img_0196.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"Turbo Flash Spiral Chest Pain scan range\" is a bold left-margin heading on page 371. Level 4 under \"Turbo Flash Spiral Cardiac/Chest Pain\" (level 3), same level as sibling sec_0745 and sec_0747.",
+   "notes": "The heading node #/texts/8015 is typed as paragraph, not heading, but the section title and level are right.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0741 spans pages 368 to 373. Siblings sec_0745 (previous, ends on 371) and sec_0747 \"Acquiring a Turbo Flash Spiral Cardiac / Chest Pain\" (next, margin heading on page 372) match the layout.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at the margin heading on page 371 (y 436). The CAUTION box, first topogram (img_0240) and its legend above the heading stay in sec_0745. Page 372 adds the legend bullets of the second topogram and the notes, then ends before the margin heading \"Acquiring a Turbo Flash Spiral Cardiac / Chest Pain\". Owner and range are correct.",
+   "notes": "Margin heading was placed correctly with text printed above and below it.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/Enhanced examination/Turbo Flash Spiral Cardiac/Turbo Flash Spiral Cardiac/Chest Pain/...\" is shown in the data as /Enhanced examination/Cardiac CT/Turbo Flash Spiral Cardiac/Chest Pain/Turbo Flash Spiral Chest Pain scan range. It fits chapter 7 shown in the page header and nested structure.",
+   "notes": "Only the chapter name was checked visually; middle levels come from TOC.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Text from the margin heading on page 371 to \"You can adapt the scan range\" on page 372 is all in the section. The bullet list at the top of page 372 (blue, magenta, white boxes) is the legend of the second topogram, so it is correctly here.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. Page 371 and 372 show no structural doubt.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The margin heading text is printed on page 371, so the source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folios \"371\" and \"372\" are printed in Arabic numerals and numbering_scheme is \"arabic\".",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 371 equals physical page 371 and 372 equals page 372, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both topogram pictures on page 371 are extracted (img_0240 and img_0241). Only the small info icon is not extracted and its note is in text.",
+   "notes": "Small icons under 80 px are dropped by design. The FlashCheck button icon on page 372 belongs to sec_0747.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0241 (827x496 px) is the real topogram with the heart icon and range boxes. It is meaningful and not decoration.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0746",
+   "page_sampled": 371,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On page 371 the first topogram (img_0240) is under the CAUTION text and is mapped to sec_0745. The second topogram (img_0241) follows the \"recon job\" text of the Chest Pain margin heading and is mapped to sec_0746. Both are correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "\"Scrolling through the image stack\" is a bold left-margin heading on page 393, at the same level as \"Controlling the syngo software\" below it. hierarchy_level 6 under \"Operating the syngo software\" (level 5) is consistent.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0806 \"Operating the syngo software\" spans 392 to 394 and holds the joystick figure at the top of page 393. Next sibling sec_0808 \"Controlling the syngo software\" starts below on the same page. This matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at the margin heading (y 536) and holds the two check items, steps 1 and 2 and the result lines about the LED and joystick direction. It ends before the margin heading \"Controlling the syngo software\". The figure and legend above (Table joystick, Mouse joystick) stay in the parent.",
+   "notes": "Margin heading was matched to the body block beside it.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path \"/Enhanced examination/Adaptive 3D Intervention/Using i-Control/Operating the system using i-Control/Operating the syngo software/Scrolling through the image stack\" fits chapter 7 in the page header and the nested margin headings on page 393.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 7 content nodes from \"Image segment is selected\" to \"The joystick direction corresponds to the scroll bar\" are in the section, and the next margin-heading block is not. No gap or overlap is visible.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false with score 100. No uncertainty is visible on page 393.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is \"toc\". The text \"Scrolling through the image stack\" is printed as a margin heading on page 393, so the source is supported.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Folio \"393\" is printed in Arabic numerals and numbering_scheme is \"arabic\".",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Printed folio 393 equals physical page 393, so offset_applied 0 is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On page 393 the small key icon (Cursor / Navigation key with LED) beside step 1 of \"Scrolling through the image stack\" is not in images.json, so it was dropped. The icon shows the key that step 1 asks the user to press. Its name is stated in the text (\"Cursor / Navigation key\"), so the information survives.",
+   "notes": "Small icon under the 80 px filter. Low by the contract table: meaning is fully in the text. Same icon type is also dropped in the next sections on this page.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0807, so no decorative element is kept as an image. The joystick photo img_0256 is meaningful content.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0807",
+   "page_sampled": 393,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The joystick photo with labels (1) and (2) (img_0256, 1150x669 px) is printed above the margin headings and is mapped to sec_0806, the parent. That is correct, and sec_0807 owns no figure.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

@@ -1,0 +1,1224 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'State of Reconstruction' is a margin heading on p329. It is level 5 under 'Starting reconstruction' (level 4). This matches the bookmark nesting.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0672 'Starting reconstruction' is right. The section has no children and no sub-heading on p329 or p330.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading #/texts/7112 and the intro #/texts/7116 are on p329. The icon table and the last table row (#/texts/7123 to 7127) are on p329 and the top of p330. 'Performing retrospective reconstruction' starts below on p330 and is in sec_0674. Boundaries are correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Reconstruction/Performing a reconstruction/Starting reconstruction/State of Reconstruction is in the right order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The intro text, the ten table rows on p329 and the row at the top of p330 are all present once. Nothing is repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p329.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p329.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folio 329 is on p329.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 329 equals physical page 329.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/30 has the ten status rows from p329 with the right text. The table continues on p330, but its last row is outside the table. Its five bullets are loose paragraphs #/texts/7123 to 7127 and the bullet marks are missing. The table node comes after them in order. All words are kept.",
+   "notes": "Probably Docling split the table at the page break (BUG-008 area). Text and order are kept, so impact is small.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The left column of the table on p329 has about ten small status icons (grey square, 3D, RT and others). On p330 the last row has one more icon. No image file exists for them in images.json. The row texts say what each state means, but the icon shapes are lost.",
+   "notes": "Small icons dropped, meaning is in the row text. Probably the small-image filter (BUG-017). Could be Medium if the icon-to-text link is judged unique information.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section. No decoration was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0673",
+   "page_sampled": 329,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0673. The only visuals are the table icons, which are not extracted (see 5.5-filters_discarding). No image sits in a wrong section.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'Selecting a metal implant' is a margin heading on p335. It is level 4 under 'Performing a reconstruction with reduced metal artifacts (iMAR)' (level 3). This matches the bookmark.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0684 is right. The section has no children. 'Series descriptions' on p335 is a text sub-heading inside this section and has no bookmark.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts at heading #/texts/7240 on p335 and ends with the note #/texts/7262 about the iMAR suffix. The two info notes above the heading are not in this section. The next section starts on p336. page_start and page_end are both 335, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Reconstruction/Performing a reconstruction with reduced metal artifacts (iMAR)/Selecting a metal implant is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Steps 1 to 4, the 8 iMAR label lines and the Series descriptions text are all present once in #/texts/7243 to 7262.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p335.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p335.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folio 335 is on p335.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 335 equals physical page 335.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only picture on p335 is the Kernel Br38 selector beside step 1. It is extracted as img_0335. The 'i' note markers are small and their meaning is in the text. Nothing meaningful is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0335 (528x58) is a real screen element named in step 1. It is not decoration. It is not rotated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0685",
+   "page_sampled": 335,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0335 is next to step 1, below the heading 'Selecting a metal implant'. It is mapped to sec_0685, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'6.7.11 Optimizing the image display' is a numbered heading on p340. It is level 3 under 'Reconstruction' (level 2), like the other 6.7.x sections.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0665 'Reconstruction' is right. The section has no children and p340 to p342 show no sub-heading.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading #/texts/7379 is on p340 below the DE Composition notes, which belong to sec_0694. Steps 1 to 11 run to p341. Step 12 (#/texts/7410) is alone at the top of p342, and the rest of p342 is empty. Chapter 7 starts on p343 in sec_0696. The range 340 to 342 is correct.",
+   "notes": "Page 341 was not rendered in the input. It was checked from node text and image files only.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Reconstruction/Optimizing the image display is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Steps 1 to 12, the matrix list (512, 256, 768, 1024) and the non-square note are present once in #/texts/7380 to 7410. The p342 render shows only step 12, which is in the section.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p340.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p340.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folio 340 is on p340 and 342 on p342.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folios 340 and 342 equal the physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The tool-bar icons on p340 (Free Mode, Default Orientation) are extracted as img_0336 and img_0337. Five more icons on p341 are extracted as img_0339 to img_0343. The scale picture above the heading is in img_0338. No visual is lost that I can see.",
+   "notes": "Page 341 was not rendered; checked by image files and node text.",
+   "confidence": 0.78
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 58 px icon files are tool-bar icons named in steps 3 to 9. They are real content. None is rotated or upside down.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0695",
+   "page_sampled": 342,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0336 and img_0337 (p340) and img_0339 to img_0343 (p341) are mapped to sec_0695 and sit beside steps 3 to 9. img_0338 (scale 1 to 4, p340) is above the heading and is mapped to sec_0694, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'7.1.1 Activating Bolus Tracking' is a numbered heading on p343. It is level 3 under 'CARE Bolus CT' (7.1, level 2).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0697 'CARE Bolus CT' is right. The section has no children. 7.1.2 starts on p344 as sec_0699, a sibling.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading #/texts/7422 is on p343 below the 7.1 intro and two info notes (sec_0697). The steps end with #/texts/7428. On p344 the four legend lines (#/texts/7434 to 7437) still belong to step 2. Heading 7.1.2 follows on p344 and is in sec_0699. Range 343 to 344 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Bolus CT/Activating Bolus Tracking is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Intro text, steps 1 and 2 and the 4 legend lines are present once. No text is repeated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p343.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p343.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folio 343 is on p343.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 343 equals physical page 343.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The chronicle screenshot with labels (1) to (4) at the top of p344 is extracted as img_0345. The two icons lower on p344 are extracted too (img_0344). The 'i' note markers on p343 are small and explained in text. Nothing meaningful is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0345 is a real screenshot that the legend explains. It is not decoration. It is not rotated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0698",
+   "page_sampled": 343,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0345 is the figure for the four legend lines in sec_0698, and it is mapped there. The two icons img_0344 are under step 2 of 7.1.2 and are mapped to sec_0700, a section of the next topic, which is right.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'7.2.1 Activating the coupled mode' is a numbered heading on p350. It is level 3 under 'CARE Contrast CT' (7.2, level 2).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0709 is right. Children sec_0711 (p351 to 352) and sec_0712 (p352 to 353) are margin sub-topics of 7.2.1.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading #/texts/7570 is on p350. The 7.2 intro and info notes above it are not in this section. Its text and the two icon tables continue on p351. Page 351 and 352 were not rendered in the input, so the split with sec_0711 was checked by node ids only.",
+   "notes": "The range 350 to 353 is because of the children sec_0711 and sec_0712.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Contrast CT/Activating the coupled mode is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p350 the intro, the info note and the status-bar line (#/texts/7570 to 7573) are present once. On p351 two paragraphs and two icon tables follow without repeats.",
+   "notes": "",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p350.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p350.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folio 350 is on p350.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 350 equals physical page 350.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Tables #/tables/32 and #/tables/33 (p351) keep the header 'Icon | Meaning' and all 4 and 5 meaning rows, in order. The Icon cells are empty, because the icons are not extracted. That loss is graded in 5.5-filters_discarding.",
+   "notes": "Page 351 was not rendered in the input; checked from node text.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The two tables on p351 (#/tables/32, #/tables/33) list the injector status icons and the scan-range icons. All nine small icons are missing: the Icon column is empty and images.json has no file for them. The Meaning text is kept. The i note markers on p350 are not counted.",
+   "notes": "Small icons dropped, meaning is in the text. Probably the small-image filter (BUG-017). Page 351 was not rendered, so this uses the table text.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section. No decoration was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0710",
+   "page_sampled": 350,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0710. The only visuals are table icons, which are not extracted (see 5.5-filters_discarding). Nothing sits in a wrong section.",
+   "notes": "",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'Defining the start delay' is a margin heading on p355. It is level 4 under 'Checking the parameter settings' (7.2.2, level 3). This matches the bookmark.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0714 is right. The section has no children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The margin heading (#/texts/7641) and the TestBolus paragraph (#/texts/7656) are at the bottom of p355. The CAUTION box and the 'Enter the required scan delay time' step follow at the top of p356 (#/texts/7661 to 7666). Heading 7.2.3 starts below on p356 in sec_0716. Steps 1 to 7 above the heading on p355 are in sec_0714. Range 355 to 356 is correct.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Contrast CT/Checking the parameter settings/Defining the start delay is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The TestBolus paragraph, the CAUTION box text, the Delay step and the read-only line are all present once. No text is repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is visible on p355.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p355.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folios 355 and 356 follow the physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 355 equals physical page 355.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No picture belongs to this section. The CAUTION triangle on p356 is a note marker and its meaning is in the heading text. Nothing is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section. No decoration was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0715",
+   "page_sampled": 356,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0715, and none is visible in its area on p355 and p356. The 'Press START' picture on p356 is below heading 7.2.3 and is mapped to sec_0716.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p322 'Performing acquisition' is a margin heading. The bookmark has it at level 4 under 'Acquiring an Adaptive 4D spiral' (sec_0652, level 3). This matches the layout.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0652 is right. Child sec_0657 'Real Time Display reconstruction mode' starts at the top of p323 and is a sub-topic of this one.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading node #/texts/6945 is mid-page on p322. Steps 1 to 5 and the info notes (#/texts/6948 to 6961) follow it on p322. The three info notes above the heading are not in this section. p323 content is in sec_0657 and later siblings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Examination/Scan/Acquiring an Adaptive 4D spiral/Performing acquisition matches the bookmark order.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Every text block under the heading on p322 is present once: steps 1 to 5, the 'or' line, the progress note bullets and the RTD note. No text is repeated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is visible on p322, so the flag state is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The section comes from a real bookmark and the title is on p322.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. The printed folio 322 is on p322.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 322 equals physical page 322.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p322 two small pictures are not extracted: the round MOVE key picture beside step 2 and the yellow START key picture beside step 3. No image file exists for them. The step text names both keys, so the meaning is kept. The three screenshots are kept in img_0327.",
+   "notes": "Small icons dropped, meaning in text. Probably the small-image filter. The 'i' note markers are not counted.",
+   "confidence": 0.72
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image is img_0327 (three screenshots of the scan screen). It is real content, not decoration. It is not rotated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0656",
+   "page_sampled": 322,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0327 is on p322 below step 3 and above 'You can observe the progress'. This is inside Performing acquisition, so sec_0656 is the right owner.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'Autoranges in coupled mode' is a margin heading on p353. It is level 5 under 'Setting the coupled mode' (level 4). This matches the bookmark.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0712 'Setting the coupled mode' is right: the steps 1 to 4 above the heading belong to it. The section has no children.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The margin heading (#/texts/7599) and the two paragraphs #/texts/7614 and 7615 are all on p353. They sit between the info note and the heading 7.2.2 'Checking the parameter settings' (sec_0714). The CAUTION box and steps above are not in this section, which is right. Range 353 to 353 is correct.",
+   "notes": "The heading node is read before the steps (#/texts/7600 to 7613), but the pipeline keeps those steps out of this section.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Contrast CT/Activating the coupled mode/Setting the coupled mode/Autoranges in coupled mode is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both paragraphs under the margin heading are present once. Nothing from the neighbours was added.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The title is visible on p353.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p353.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folio 353 is on p353.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 353 equals physical page 353.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no picture inside this section on p353. The CAUTION triangle and the 'i' markers belong to the neighbours. Their meaning is in the text. Nothing is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section. No decoration was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0713",
+   "page_sampled": 353,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0713 and none is visible in the section area of p353.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'7.2.3 Performing a scan in coupled mode' is a numbered heading on p356. It is level 3 under 'CARE Contrast CT' (7.2, level 2).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0709 is right. The section has no children. Siblings sec_0714 and sec_0717 are at the same level.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading #/texts/7667 is on p356. The CAUTION box above it is in sec_0715. Steps 1 to 4 run to p357, where two info notes (#/texts/7685 to 7689) finish the section. Heading 7.2.4 is lower on p357 in sec_0717. Range 356 to 357 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Contrast CT/Performing a scan in coupled mode is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Intro, steps 1 to 4, the 'or' line and the notes on p356 and p357 are present once. The MPPS, Patient protocol and E-Logbook bullets are included.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p356.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p356.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folios 356 and 357 follow the physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 357 equals physical page 357.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The yellow 'Press START' bubble beside step 3 on p356 is extracted as img_0352. The 'i' markers are small and explained in the text. Nothing is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0352 (242x29) is a real screen message that step 3 names. It is not decoration. It is not rotated.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0716",
+   "page_sampled": 357,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0352 sits beside step 3 under heading 7.2.3 on p356. It is mapped to sec_0716, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'7.2.4 Canceling a scan in coupled mode' is a numbered heading on p357. It is level 3 under 'CARE Contrast CT' (7.2, level 2).",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Parent sec_0709 is right. The section has no children. Siblings are sec_0716 before it and sec_0718 after it.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Heading #/texts/7690 is on p357 below the two notes of 7.2.3 (sec_0716). The two CAUTION boxes and the Suspend step follow. On p358 the notes and the 'or' step at the top (#/texts/7710 to 7713) still belong to 7.2.4. Heading 7.2.5 follows in sec_0718. Range 357 to 358 is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Path /Enhanced examination/CARE Contrast CT/Canceling a scan in coupled mode is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Both CAUTION boxes with all their lines, the Suspend step and the four p358 blocks are present once in #/texts/7691 to 7713.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading is on p357.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The title is visible on p357.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Numbering is arabic. Folios 357 and 358 follow the physical pages.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. Printed folio 357 equals physical page 357.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "There is no figure in this section on p357 or p358. The CAUTION triangles and 'i' markers are note markers and the text carries their meaning. Nothing is lost.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to this section. No decoration was kept.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0717",
+   "page_sampled": 357,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0717, and none is visible in its area on p357 or p358.",
+   "notes": "",
+   "confidence": 0.93
+  }
+ ]
+}

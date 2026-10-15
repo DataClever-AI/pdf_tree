@@ -107,6 +107,15 @@ def render_telemetry(result: PipelineResult) -> None:
                     f"</div>",
                     unsafe_allow_html=True,
                 )
+    if sanity.repairs:
+        st.info(
+            f"{len(sanity.repairs)} bookmark repair(s) applied to recover from "
+            f"{sum(1 for i in sanity.original_issues if i.kind == 'out_of_order')} "
+            "hard failure(s). Relocated sections are flagged for review."
+        )
+        with st.expander(f"Bookmark repairs ({len(sanity.repairs)})", expanded=True):
+            for repair in sanity.repairs:
+                st.markdown(f"`[{repair.kind}]` {repair.detail}")
 
 
 def _tree_stats(result: PipelineResult) -> dict[str, Any]:

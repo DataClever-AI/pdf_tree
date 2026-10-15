@@ -1,0 +1,634 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p237 the heading 'Monitoring Airway Flow, Volume and Pressure' is drawn at the level of its sibling headings. The node has hierarchy_level 1.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0421 is the chapter 15 heading on p237 and has no parent. Its children sec_0422, sec_0423, sec_0424, sec_0427, sec_0428 and sec_0429 are the level-2 headings on p238 to p244 (for example 'Attaching the Flow Sensor' on p238, 'Zero Calibration' on p240).",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0421 has 26 nodes, all on p237: the chapter title, the intro text, the measurement lists and the WARNING. The range 237-244 ends with the last child on p244. Nodes #/texts/4245, #/texts/4247 and #/texts/4270 are only the chapter number '15' and folio '225'.",
+   "notes": "The two stray chapter numbers and the folio are boilerplate inside the right section, so they do not cross a boundary.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Monitoring Airway Flow, Volume and Pressure'. It matches the p237 chapter title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 26 nodes on p237 follow the reading order of the rendered page, from the title to the WARNING box. No node is duplicated and no text of the page is missing.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Monitoring Airway Flow, Volume and Pressure' is visible on p237, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'Monitoring Airway Flow, Volume and Pressure' is on the rendered p237, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p237 is 225, an arabic number. numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 237 is the physical page where the heading is drawn. The printed folio 225 is 12 lower than the physical page, as on the whole chapter run.",
+   "notes": "The gap is the same for all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p238 (extra page) is not a figure page. It is boxed steps and two tables, and the full-page image of round one is gone. The five small flow sensor drawings in the table cells (M2785A, M2786A, M2781A, M2783A, M2782A) are not extracted any more. p239 (img 866x301, sec_0422), p240 (341x223 and 333x216 vectors, 278x134 raster) and p244 hold no other figure that is missing. p237 has no figure.",
+   "notes": "In round one these drawings were only inside the full-page image. The model name, colour and size of each sensor stay in the text nodes, so the loss is small. Probably the cell drawings are too small to be selected as regions (BUG-010). Severity note: the tool expects Critical for a missing figure. I used Low because each drawing is a small product thumbnail and its meaning (model, colour, diameter, deadspace) is fully in the text rows. If the lead sees the thumbnails as meaningful, raise to Critical.",
+   "confidence": 0.65
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0421 now. The round-one full-page vector (img_0257, 1218x1405, p238) is gone. p237 shows only text and a WARNING box, so nothing noisy is kept.",
+   "notes": "The round-one noise FAIL is fixed. Tool note: sizes of old rasters on p240 were replaced by vector composites.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0421",
+   "page_sampled": 237,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is attached to the chapter parent sec_0421 and p237 has no figure. The p239 and p240 images are mapped to the children sec_0422 (heading 'Attaching the Flow Sensor' p238 to p240) and sec_0423 ('Zero Calibration' p240). The round-one wrong mapping of the p238 image to the parent is gone.",
+   "notes": "The p239 and p240 images are outside this batch. I checked them only by id, section and size, not by looking at the PNG.",
+   "confidence": 0.75
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p245 the heading 'Identifying tcGas Module Components' is drawn at the level of its sibling headings. The node has hierarchy_level 2.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p245 'Identifying tcGas Module Components' is a level-2 heading under the chapter 16 title 'Monitoring tcGas' (sec_0440). It has no children.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0441 is p245 only. Its 15 nodes (#/texts/4402 to #/texts/4416) are the heading, the legend lines 1 to 4, the module labels and the folio. The chapter intro above the heading is not inside it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Monitoring tcGas/Identifying tcGas Module Components'. It matches the p245 headings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 15 nodes follow the reading order of p245. The legend lines 1 to 4 and the drawing labels (1 to 4, O2/CO2, CAL) are each present once.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Identifying tcGas Module Components' is visible on p245, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'Identifying tcGas Module Components' is on the rendered p245, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p245 is 233, an arabic number. numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 245 is the physical page where the heading is drawn. The printed folio 233 is 12 lower than the physical page, as on the whole chapter run.",
+   "notes": "The gap is the same for all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector img_0131 (360x326, p245) shows the full tcGas module. The four edges are clean. The callout numbers 1, 2, 3 and 4 are inside the left edge with their leader lines. The panel top, the O2/CO2 and CAL keys, the knob, the connector and the base are visible. It matches the drawing on the rendered p245.",
+   "notes": "Round one cut the callouts (331x326). Now 29 px more are on the left and the labels are complete. No raster or other figure is on p245.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0131 is the only image of sec_0441. It is the module drawing with its callout numbers. It is not a border, logo, text block or duplicate.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0441",
+   "page_sampled": 245,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0131 is on p245 under the heading 'Identifying tcGas Module Components' next to its legend 1 to 4. It is mapped to sec_0441, which is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p359 the heading 'IntelliBridge EC10 Module' is drawn at the level of its sibling headings. The node has hierarchy_level 1.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p359 'IntelliBridge EC10 Module' is the chapter 29 heading and has no parent. Its children sec_0683 to sec_0689 are the later headings of the chapter.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0682 covers p359 to p362. p359 has the heading, two intro paragraphs, the module drawing labels a to e and the legend table. p362 (printed 350) ends with 'Language Conflict with External Device Drivers', a child section. Chapter 30 starts in sec_0690 on p363.",
+   "notes": "Chapter number 29 appears as stray nodes #/texts/6818 and #/texts/6819. This is only boilerplate inside the right section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/IntelliBridge EC10 Module'. It matches the p359 chapter title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 14 nodes follow the reading order of p359. The letters a to e of the drawing are each present once (#/texts/6823 to #/texts/6826 and #/texts/6829).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'IntelliBridge EC10 Module' is visible on p359, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'IntelliBridge EC10 Module' is on the rendered p359, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p359 is 347, an arabic number. numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 359 is the physical page where the heading is drawn. The printed folio 347 is 12 lower than the physical page, as on the whole chapter run.",
+   "notes": "The gap is the same for all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/120 on p359 has the five lines a to e: module name, setup indicator LED, setup/data viewing key, connection status LED, external device cable connector. The words match the rendered table in the same order.",
+   "notes": "The first lines repeat the letter (for example 'a  a module name'). The meaning stays the same, so this is not a defect.",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector img_0217 (292x313, p359) shows the whole EC10 module. The callout letters a, b, c, d and e are inside the left edge with their arrows. The top, the right outline and the RJ45 base are complete. It matches the rendered page.",
+   "notes": "Round one cut the letters (262x313). Now they are inside the crop. Nothing is missing on p359.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0217 is the only image on p359. It is the module drawing. It is not a border, a text block, a duplicate or a table.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0682",
+   "page_sampled": 359,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0217 is on p359 under the chapter heading 'IntelliBridge EC10 Module' and is mapped to sec_0682. This is right.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p363 the heading 'VueLink Modules' is drawn at the level of its sibling headings. The node has hierarchy_level 1.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p363 'VueLink Modules' is the chapter 30 heading and has no parent. Its children sec_0691 to sec_0697 are the later level-2 headings of the chapter.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0690 covers p363 to p366. p363 has the heading, the intro, the module table, the legend table and the drawing. p366 (printed 354) has only the last bullet of 'Language Conflict with External Device Drivers', which belongs to the chapter.",
+   "notes": "Chapter number 30 appears as stray nodes #/texts/6910 and #/texts/6911. This is boilerplate inside the right section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/VueLink Modules'. It matches the p363 chapter title.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The nodes follow the reading order of p363, from the intro to the tables and the drawing labels. The letters a to g are each present once (#/texts/6926 to #/texts/6932).",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'VueLink Modules' is visible on p363, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'VueLink Modules' is on the rendered p363, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p363 is 351, an arabic number. numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 363 is the physical page where the heading is drawn. The printed folio 351 is 12 lower than the physical page, as on the whole chapter run.",
+   "notes": "The gap is the same for all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table #/tables/122 on p363 joins columns. The rendered rows show Type A, Max Wave 1, Max numeric 2. The extract has 'Auxiliary A | 12'. Type stays with Module and the two numbers become one value, '12' or '26'. Legend table #/tables/123 matches the page.",
+   "notes": "Cells are probably merged by the table model. This is not a BUG-010 issue. Medium because the values change meaning (two numbers become one).",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector img_0220 (480x354, p363) shows the whole VueLink module. The callout letters a, b, c, d, e, f and g are inside the crop with their arrows. All four edges are clean: top title row, left letters, right g and f, and the round connector at the bottom. It matches the rendered page.",
+   "notes": "Round one cut the letters (369x297). The bottom of the crop also has half a text line, see filters_passing_noise.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "img_0220 (480x354, p363) has a stray strip of body text at its bottom edge: 'for which external devices the module is configured. The'. This is the end of a paragraph line below the drawing. It is not part of the figure.",
+   "notes": "The callout rule probably took in a text line that lies close to the region. The text is already in node #/texts/6933 and the drawing is complete, so the harm is small.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0690",
+   "page_sampled": 363,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0220 is on p363 under 'VueLink Modules' and is mapped to sec_0690. This is right. The module table above it was not turned into an image.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p315 the heading 'Event Review Recordings' is drawn at the level of its sibling headings. The node has hierarchy_level 4.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p315 'Event Review Recordings' is a level-4 heading under 'Event Recordings' (sec_0606). It has no children. The next sibling sec_0608 'Event Episode Recordings' starts on p316.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0607 covers p315 to p316. On p316 the tabular recording text and table #/tables/106 sit above the heading 'Event Episode Recordings', so they belong to sec_0607. Nodes after that heading (the '1.' printout and the waveform strip) are not in sec_0607.",
+   "notes": "Nodes #/texts/5858 and #/texts/5859 on p316 are only running headers. They are boilerplate inside the right section.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Event Surveillance/Documenting Events/Event Recordings/Event Review Recordings'. It matches the headings on p315 and the page header.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The 54 nodes follow the p315 reading order, from the heading to the printout labels, the graphic-recording text and the folio, then the p316 text and table. No node is duplicated.",
+   "notes": "",
+   "confidence": 0.82
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Event Review Recordings' is visible on p315, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is toc. The heading 'Event Review Recordings' is on the rendered p315, so the bookmark is supported.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The printed folio on p315 is 303, an arabic number. numbering_scheme is arabic.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0 and page_start 315 is the physical page where the heading is drawn. The printed folio 303 is 12 lower than the physical page, as on the whole chapter run.",
+   "notes": "The gap is the same for all sampled sections, so it is consistent.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "Table #/tables/106 on p316 shifts cells. Row 1 puts 'Neuro Resp BIS LOW 51<60' in the third cell and leaves Group empty. Row 4 puts 'Manual' next to ST-II. Row 5 splits 'SpO2 LOW 95<96' over two cells. Values lose their column.",
+   "notes": "Probably a table-model split on the monospace text. Not a BUG-010 issue. The table is on p316 inside sec_0607, not on the sampled p315. Medium because values sit under the wrong column. Severity note: the tool expects Low (merged cells). I kept Medium because the values do not stay in order: Group is empty in row 1 and 'Manual' and 'SpO2 LOW' land in the wrong columns, as in the Sprint Medium row.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Raster img_0175 (757x403, p315) is the graphic recording strip and is complete. The vector 605x357 of round one is gone. It was the '90MIN Green, Sarah' printout box. Its text and callout labels are in nodes #/texts/5823 to #/texts/5848. No other figure is on p315.",
+   "notes": "The skip is probably the new text-heavy rule. The callout arrows from label to field are lost, but the labels are text. Lead may decide if this is Low. Tool limit may show img_0175 only if it matches by size.",
+   "confidence": 0.7
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The only image on p315 is raster img_0175, the recording strip with grid and event bars. It is not a border, a logo or a table. The round-one noise vector (the printout box with cut labels) is no longer extracted.",
+   "notes": "The round-one noise FAIL is fixed.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0607",
+   "page_sampled": 315,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0175 is on p315 under 'Event Review Recordings' and is mapped to sec_0607. The next section sec_0608 starts on p316 and has its own raster img_0176 (957x405).",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

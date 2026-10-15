@@ -1,0 +1,444 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "'Section 8-15 Monitor and Monitor Arm Plastic Covers Replacement' is a section-level heading (hierarchy_level 2) printed under Chapter 8. Siblings sec_0082 and sec_0084 are also level 2. On p491 the running footer shows folio 8 - 115 and names this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0068 (Chapter 8, p377-766), which contains p491-p502. child_sections is empty. The numbered sub-headings on p491 are headings inside the section, not separate sections.",
+   "notes": "The bookmark list itself is not in the batch, so I judged nesting from the sibling levels and headings.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section starts on p491 with the heading 'Section 8-15 Monitor and Monitor Arm Plastic Covers Replacement' (#/texts/6336) and 8-15-1 Manpower. It ends on p502 with 8-15-7-3 Functional Checks and its table (#/tables/205). Section 8-16 starts on p503, so no foreign content is absorbed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Chapter 8/Section 8-15 Monitor and Monitor Arm Plastic Covers Replacement'. It lists Chapter 8 then the section title, in the right order and matching the printed headings.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The section appears once, with 160 nodes in one unbroken range of semantic_order, and no duplicate node ids. Every page from p491 to p502 has nodes. No other section overlaps.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, verification_score is 100 and confidence is 1.0. The heading is visible on declared p491, so there is no uncertainty to confirm.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc' (a real bookmark), not inferred. The bookmark title matches the heading printed on p491.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is arabic. The section uses chapter-page folios (p491 shows 8 - 115) and numbered headings. The scheme is the same as the neighbouring sections.",
+   "notes": "The printed folio is chapter-page style, but physical page and bookmark page agree, so no folio is lost.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0, like sec_0082 and sec_0084. The heading is on physical p491 as declared, so physical page equals bookmark page. Folio 8 - 115 on p491 agrees with the order of pages.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "p491 has two grids: 8-15-3-1 Preparations and 8-15-3-2 Remove Procedure. No table node has page_no 491, 492 or 493. The grids come out as paragraphs: 'Step', 'Illustration' (#/texts/6542-6543, 6548-6549), '1.' plus 'Lock the Monitor Arm to prevent hazard.', and 'Loosen 2 screws, then remove the Monitor rear panel.' The '1.' of the Remove row is not in the text. On p492 the numbers 2 and 3 are also missing.",
+   "notes": "Header rows are not recognised as a table. The step text and its order are kept, and the numbers are visible in the vector images img_0543 and img_0544. Impact: low. Compared with base v1.8: same. No table node on p491 to p493 in v1.10 either.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Critical",
+   "evidence": "On p502, Table 8-39 has a 'Corresponding Graphic' cell with a drawing of the arm covers and part numbers 1 to 6. images.json has no image on p502 (the last image is img_0564 on p501). Table #/tables/204 keeps only the loose text '3 2 4 5 6' in that cell. The drawing is a vector figure and was dropped.",
+   "notes": "Contract: a meaningful vector figure missing from the output, whose information is not in the text, is Critical. The step text names covers 1 to 5 but not the layout, and part 6 appears only in the drawing. Also on p491, the yellow circle and arrow around the lock lever in the first photo are not in the raster img_0542; the word 'Locked' stays as text (#/texts/6546). That second point is minor and not graded separately.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Heading, table header and step text are kept inside vector images of sec_0083. img_0543 (p491, 1094x446) has the heading '8-15-3-2 Remove Procedure' at the top edge, the Step and Illustration header cells, the step '1. Loosen 2 screws, then remove the Monitor rear panel.' and the table borders. img_0544 (p492, 1095x786) has the Step and Illustration header cells at the top edge, the texts of steps 2 and 3 and the table borders. img_0548 (p494) is a clean photo.",
+   "notes": "Graded once for the whole section. The photos and arrows in the crops are useful, but the table text is repeated in nodes #/texts/6347-6351 and 6354-6355. Probably the pipeline renders whole table rows as images. Impact: cosmetic. Contract: Low.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0083",
+   "page_sampled": 491,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 23 images (img_0542-img_0564) are mapped to sec_0083, and the section owns p491 to p502. On p491, img_0542 (lock arm photo) and img_0543 (rear panel row) belong to the 8-15-3 steps. No other section shares these pages.",
+   "notes": "The missing p502 drawing is graded once, in the discarding row.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 504,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p504. The parts-nesting diagram under 8-16-3 is a drawing with boxes and lines, not a table. No table node has page_no 504.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0085",
+   "page_sampled": 538,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p538. The page has Figure 8-76, steps 5 and 6 as paragraphs (#/texts/6898, #/texts/6899) and Figure 8-77. No table node has page_no 538.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 558,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p558 the page top shows a continued Step/Illustration table with one row, step 4 'Separate BF192 and PID.' and a photo. No table node exists for it. The cells are loose paragraphs: '4.' (#/texts/7104), 'Separate BF192 and PID.' (#/texts/7105), then 'Step' and 'Illustration' (#/texts/7106, #/texts/7107).",
+   "notes": "The grid is flattened to paragraphs and the repeated header comes after the row. The step number and text stay together and no value is in a wrong column, so Low. Probably the re-read does not apply because Docling made no table here. Probable cause: BUG-008.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0087",
+   "page_sampled": 572,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/222 on p572 has the header Step, (blank), Illustration and three rows: 1 'Remove the front cover.', 2 'Unscrew 4 screws and remove the Indicator Bracket.', 3 'Unscrew 4 screws and remove the Fan Bracket.' All steps and texts match the render and sit in the right cells. The Illustration cells hold photos, so they are blank in the text. The blank middle header is a normal spanned header.",
+   "notes": "Same text as round one (re-read kept).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0088",
+   "page_sampled": 578,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "On p578 the page shows Table 8-41 with rows 6 and 7 (screws and CPS-Cover-bracket, two harnesses from CPS2) and photos. No table node has page_no 578. The cells are loose paragraphs: '6', 'Remove screws securing CPS-Cover-bracket and' and 'open the cover-bracket.' (#/texts/7290 to #/texts/7292), '7' and its text (#/texts/7293 to #/texts/7295). 'Step', 'Instruction' and 'Illustration' come after them (#/texts/7296 to #/texts/7298).",
+   "notes": "The continued table is flattened to paragraphs. Step numbers, text and order are kept, so Low. Probably Docling did not detect the table on this page. Probable cause: BUG-008.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p585 the 'Section 8-23' heading is a section-level title under Chapter 8. sec_0091 has hierarchy_level 2 and parent sec_0068 (level 1). This matches the nesting.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0091 has parent_section_id sec_0068 (Chapter 8), which lists sec_0091 as a child. child_sections is empty. The 8-23-x items are plain headings inside the section, not TOC entries. The structure is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The heading 'Section 8-23' starts at the top of p585 (page footer 8-209). Node #/texts/7529 '8-23-6 Functional Check' and its table #/tables/232 end on p595 (footer 8-219). All sampled pages p585, p587, p591 and p595 show only 8-23 content. The next section sec_0092 starts on p596.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Chapter 8/Section 8-23 Replacement of the SOM, HDD and DVR'. This matches the p585 heading and its parent sec_0068 'Chapter 8'. The order is correct.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Page range 585-595 follows sec_0090 (p582-584) and precedes sec_0092 (p596), with no gap or overlap. The heading '8-23-5-2 Initializing EEPROM' repeats on p592 and p593 as '(cont'd)'. This is printed repetition, not a duplicated section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false, confidence 1.0, verification_score 100. The p585 heading matches the title and page, so no flag is needed.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The p585 heading text matches the bookmark title and sits at the declared page_start 585 with offset_applied 0. This supports the TOC source.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed footers are 8-209 on p585, 8-211 on p587, 8-215 on p591 and 8-219 on p595. This is the chapter-page arabic convention.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The section heading is on physical page 585 as declared in page_start. The printed folios 8-209 to 8-219 advance one per physical page from p585 to p595. The mapping is consistent.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p585. The page has the heading of Section 8-23, headings 8-23-1 to 8-23-3, step 1 and Figure 8-117 with callouts. The coloured boxes are drawing labels, not a table. No table node has page_no 585.",
+   "notes": "Base v1.8 PASS judged other pages (p591 and p595, text only for p588 and p589). This row only covers p585, so there is no change to compare.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Vector figures were kept: img_0725 is the full Figure 8-117 on p585, img_0736 is Figure 8-122 on p587 and img_0743 is Figure 8-127 on p591. Raster photos on p587 (img_0732 to img_0735, Figures 8-121 and 8-123) were kept. No missing figure was seen on the sampled pages.",
+   "notes": "verify_claims reports two raster photos on p585 (290x240 and 500x396 px) missing from images_v1.json as separate files. I checked img_0725 (vector, 903x709): it contains both board photos plus the screw callouts, so the figure is kept as one composite. Not a loss, but the two photos have no separate image entries. Rechecked in v1.10: I viewed img_0725 and both board photos are inside the vector render, so the claims warning is a false alarm.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All 24 images (img_0725 to img_0748) in sec_0091 are real figures or screenshots, such as the board photos, VPD Editor screens and the question dialog. The sampled pages show no logo, rule or footer divider kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 585,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "All images are mapped to sec_0091. They sit on p585-p595 and each belongs to the 8-23 procedure, for example Figure 8-117 on p585 and Figure 8-133 as img_0748 on p595. No sibling section shares these pages.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0092",
+   "page_sampled": 598,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p598. The page has only the photo Figure 8-134 with labels 1 to 5 and its caption. No table node has page_no 598.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0093",
+   "page_sampled": 612,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/243 on p612 has the headers Step, Instruction, Illustration and one row: 1 'Simply pull out Probe Holder from its location.' The text 'Small Probe Cup Probe Holder' in the Illustration cell comes from photo labels. 'Probe Holder Removed' is a third label that is not in the cell. The step text is in the right column.",
+   "notes": "Same text as round one (re-read kept). A lost photo label is not instruction text, so PASS.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 618,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Medium",
+   "evidence": "In #/tables/249 on p618, row 4 reads '4. | Remove the DVD cable connectors from the DVD | drive as necessary.' The words 'drive as necessary.' are in the Illustration column. On the page they end the Instruction cell 'Remove the DVD cable connectors from the DVD drive as necessary.' Rows 2 and 3 and the headers Step, Instruction, Illustration match the render.",
+   "notes": "CASE: still wrong. The row 4 wrap is still in the wrong cell after the re-read (BUG-008). Same as round one, so no regression and no fix. Medium: a value sits under the wrong column.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0097",
+   "page_sampled": 639,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/262 on p639 has the headers Step, Instruction, Illustration and one row: 1 'Remove HDMI CABLE from console.' The text matches the render and sits in the Instruction column. The Illustration cell is a photo.",
+   "notes": "Same text as round one (re-read kept).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0100",
+   "page_sampled": 665,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/271 on p665 has the headers Step, (blank), Illustration and rows 4 to 7: 'Loosen 2 screws, then remove the 2nd arm cover.', 'Remove 4 cable ties.', 'Loosen 1 screw and remove the 1st arm cover polaris.', 'Loosen 1 screw and remove cable guide bracket.' All match the render and the step numbers are in order. The blank middle header is a normal spanned header.",
+   "notes": "Same text as round one (re-read kept).",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0084",
+   "page_sampled": 513,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p513. The page shows five numbered steps and photo figures under 8-16-14. No table node has page_no 513.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0085",
+   "page_sampled": 549,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p549. The page has steps 6 to 8 with Figure 8-92, the heading 8-17-14-5 and steps 1 to 4 with Figure 8-93. No table node has page_no 549.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0085",
+   "page_sampled": 550,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p550. The page has steps 5 to 7, Figure 8-94, headings 8-17-15 and 8-17-15-1 and two method paragraphs. No table node has page_no 550.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 555,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p555. The page has heading 8-18-4-1, step 1, Figure 8-99 with five photos and one NOTE. No table node has page_no 555.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 563,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p563. The page has heading 8-18-4-7, two lists A and B, Figure 8-101 and Figure 8-102. The heading 'EEPROM must move' is a drawing label. No table node has page_no 563.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 566,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p566. The page has heading 8-18-5, notes, a DIP switch list, Figure 8-106 and Figure 8-107. No table node has page_no 566. Tables #/tables/217 to #/tables/219 are on p567, not on this page.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0086",
+   "page_sampled": 568,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p568. The page has heading 8-18-6 with seven numbered steps, Figure 8-108, heading 8-18-7 and a WARNING. No table node has page_no 568.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0095",
+   "page_sampled": 627,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No table on p627. The page has the headings 8-27-6-2 and 8-27-6-3 and short text. No table node has page_no 627.",
+   "notes": "",
+   "confidence": 0.9
+  }
+ ]
+}

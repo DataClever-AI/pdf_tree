@@ -1,0 +1,1434 @@
+{
+ "findings": [
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p55 'Remote Application Popup Keys' is a small bold heading under the larger 'Using Remote Applications' (p55). hierarchy_level=3 matches that step down.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0090 'Using Remote Applications' (L2, p55-56). It has no children. This matches p55 where the small heading sits below the big one.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/1028 is on p55, as declared. End: the table #/tables/15 and the closing paragraph about pop-up keys (#/texts/1029) are on p55. The top paragraph of p56 ('If you change the monitor Screen...', #/texts/1033) still belongs here. The next heading 'Using the X2 or MP5 with a Host Monitor' starts below it on p56 and is sec_0092.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Basic Operation/Using Remote Applications/Remote Application Popup Keys'. On the page the heading 'Remote Application Popup Keys' sits under 'Using Remote Applications', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0091 appears once. Previous and parent sec_0090 covers p55-56. Next sec_0092 starts on p56 after the paragraph owned by sec_0091. No node of sec_0092 is inside sec_0091 and nothing is missing.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Remote Application Popup Keys' is found on p55, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Remote Application Popup Keys' points to p55, and the heading is at the top or inside p55, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p56 is 44, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p55, equal to page_start 55. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The sampled page p56 has no table. The only table of sec_0091 is #/tables/15 on p55. I checked it cell by cell. Header 'Pop-Up Keys | Selecting this pop-up key lets you....' matches. The 4 rows Minimize, Keyboard, Refresh and Close each keep their own description. No cell is merged or shifted.",
+   "notes": "The node is placed after the p56 paragraph in semantic order, but it is still in the right section. Cell text fix (BUG-008) works here.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is listed for sec_0091 in images.json. On p55 and p56 the section has no figure. The small SmartKey icon next to step 1 on p55 is above the heading, so it belongs to sec_0090, not sec_0091.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for p55-p56, so no decorative element was kept as an image. The blue header bars and rules are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0091",
+   "page_sampled": 56,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0091. On p55-p56 the only visual in the range is a tiny SmartKey icon above the heading (sec_0090 area). Nothing in sec_0091 needs mapping.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p83 'Patient Alarm Messages' is a medium heading below the big chapter title '4 Patient Alarms and INOPs'. hierarchy_level=2 under L1 sec_0138 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0138 'Patient Alarms and INOPs' (L1, p83-112). It is the chapter title on p83. sec_0139 has no children and the next sibling sec_0140 starts on p89.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/1626 is on p83 below the chapter intro. The chapter intro text above it stays in sec_0138. End: the last table #/tables/27 ends on p88 with 'VueLink ALARM at Information Center'. The next heading starts on p89 (sec_0140). Nodes p84-p88 are only running headers, folios and tables.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Patient Alarms and INOPs/Patient Alarm Messages'. On the page the heading 'Patient Alarm Messages' sits under 'Patient Alarms and INOPs', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0139 appears once, p83-88. Previous is its parent sec_0138 and next is sec_0140 on p89, so there is no gap or overlap. The 6 tables (p83 to p88) follow one another with no repeated rows between pages.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Patient Alarm Messages' is found on p83, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Patient Alarm Messages' points to p83, and the heading is at the top or inside p83, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p83 is 71, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p83, equal to page_start 83. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/22 on p83 has 5 data rows. I checked all 4 columns of each row: */**AFIB, ***APNEA (3 forms), ***ASYSTOLE, **awRR HIGH, **awRR LOW. Alarm message, From, Condition and Indication match the page. 'CO 2' has an extra space but the value is the same.",
+   "notes": "Cell text fix (BUG-008) works here. No merged cells found.",
+   "confidence": 0.94
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0139. The pages p83-p88 only have text and tables, no figure or icon that was dropped. I looked at p83.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0139. The blue bars on the page tops are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 83,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0139 and none is visible on p83-p88, so there is nothing to map.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p89 'Technical Alarm Messages (INOPs)' has the same big size as 'Patient Alarm Messages' on p83, below chapter 4. hierarchy_level=2 under L1 sec_0138 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0138 (L1 chapter 4). sec_0140 has no children. Its previous sibling is sec_0139 (p83-88) and next is the L1 chapter sec_0141 'Managing Patients' on p113.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/1650 and two intro paragraphs are on p89 as declared. The pages p90-p111 hold the INOP tables with running headers. Page 112 is nearly blank (only the header bar and folio '100'), so page_end=112 is the last page before chapter 5 on p113. No content of another section is inside.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Patient Alarms and INOPs/Technical Alarm Messages (INOPs)'. On the page the heading 'Technical Alarm Messages (INOPs)' sits under 'Patient Alarms and INOPs', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0140 appears once, p89-112. It follows sec_0139 (ends p88) with no gap and ends before sec_0141 (p113). The INOP tables are one per page from p89 to p111 and do not repeat.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Technical Alarm Messages (INOPs)' is found on p89, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Technical Alarm Messages (INOPs)' points to p89, and the heading is at the top or inside p89, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p90 is 78, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p89, equal to page_start 89. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.6-table_content",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "Table #/tables/29 on p90 matches the page: 12 rows from 'BATTERIES INCOMP...' to 'BIS ENGINE DISCONN', 3 columns, each value in its right column. But the section also has #/tables/51 on p112. It holds only the running header text '4 Patient Alarms and INOPs | Technical Alarm Messages (INOPs)'. Page 112 has no real table, so this is a header misread as a table.",
+   "notes": "Low: values stay correct, only a false table. Probably the header bar on a blank page is read as a table. The other tables (p89, p91-p111) were not checked visually, only p90 and p94 were given.",
+   "confidence": 0.8
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0140. On p90, p89, p112 and the other pages of the range I saw only text and tables. No meaningful figure was dropped.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0140, so no decorative element passed. p112 shows only the blue header bar and folio, with no image extracted from it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 90,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0140 and none is visible on the pages I saw (p89, p90, p94, p112).",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p150 'Ectopic Status Messages' is a small bold heading, smaller than the L3 style and much smaller than 'Arrhythmia Relearning' below it. hierarchy_level=4 under L3 sec_0219 'Arrhythmia Status Messages' fits.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0219 (L3, p149-150). Its sibling sec_0220 'Rhythm Status Messages' is on p149. sec_0221 has no children. The next section sec_0222 'Arrhythmia Relearning' is a level-2 heading on p150.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start and end are both p150. Heading #/texts/2594, the intro line about B or E, and table #/tables/61 are all above the big heading 'Arrhythmia Relearning', which is sec_0222 and not in this section. The two header nodes at the page top are boilerplate.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/ECG, Arrhythmia, ST and QT Monitoring/Understanding the Arrhythmia Display/Arrhythmia Status Messages/Ectopic Status Messages'. On the page the heading 'Ectopic Status Messages' sits under 'Arrhythmia Status Messages', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0221 appears once on p150. Previous sibling sec_0220 ends p149 and next sec_0222 starts after the table on p150. No gap, no overlap. Its 5 nodes are heading, intro, table and two header strings.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Ectopic Status Messages' is found on p150, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Ectopic Status Messages' points to p150, and the heading is at the top or inside p150, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p150 is 138, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p150, equal to page_start 150. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/61 on p150 has 12 data rows. I checked all 3 columns. Examples: 'RUN PVCs | More than 2 consecutive PVCs within the last minute | E', 'PACER NOT CAPT | ... | B, E', '(No message displayed)' with an empty B or E cell. The long PAUSE explanation keeps its three lines in column 2 and 'E' in column 3.",
+   "notes": "Values stay in the right columns. The empty last cell of the first row is empty on the page too.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is listed for sec_0221. Page 150 shows only a heading, a line of text and the table. No figure or icon was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0221, so no decorative element passed the filter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0221",
+   "page_sampled": 150,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0221 and p150 has no figure in this section, so nothing needs mapping.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p157 'Selecting Leads for ST Analysis' is a small bold heading under the bigger 'Switching ST On and Off'. hierarchy_level=3 under L2 sec_0239 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0239 'Switching ST On and Off' (L2, p157-158). sec_0240 has no children. Next sibling sec_0241 'Understanding the ST Display' is a big L2 heading on p158.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/2779 is on p157. End: the last step on p158 ('Select the Sort Up or Sort Down key...', #/texts/2798) is just above the big heading 'Understanding the ST Display' (sec_0241). The p158 steps 2 to NOTE are the continuation of this section. Nothing of sec_0241 is inside.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/ECG, Arrhythmia, ST and QT Monitoring/Switching ST On and Off/Selecting Leads for ST Analysis'. On the page the heading 'Selecting Leads for ST Analysis' sits under 'Switching ST On and Off', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0240 appears once, p157-158. Parent sec_0239 and next sec_0241 (p158-159) do not overlap its nodes. The text on p158 above the sec_0241 heading is owned by sec_0240, so there is no gap.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Selecting Leads for ST Analysis' is found on p157, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Selecting Leads for ST Analysis' points to p157, and the heading is at the top or inside p157, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p158 is 146, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p157, equal to page_start 157. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The sampled page p158 has no table. The only table of sec_0240 is #/tables/63 on p157, text 'Add | Delete'. On p157 these are two pop-up key boxes labelled Add and Delete. Both labels are right and in the right order.",
+   "notes": "The key boxes are probably read as a one-row table. Values are kept. The node comes last in semantic order, after the p158 text, but it is in the right section.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0240. On p157 the Add and Delete key boxes are kept as text in #/tables/63. On p158 the only figure (ST numerics example, black screen with arrows 1-3) is below the sec_0241 heading, so it is not part of this section. That figure is kept as img_0075.",
+   "notes": "The claim check lists a 183x122 px raster on p158 that is not in images_v1.json. It is the black ST screenshot, and it is drawn inside the vector figure img_0075 (arrows and screenshot together), so the picture survives. It belongs to sec_0241, not sec_0240. PASS kept.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0240. The blue header bar and orange rules are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0240",
+   "page_sampled": 158,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0075 (vector figure, p158) is mapped to sec_0241. It sits under the heading 'Understanding the ST Display' on p158, so that mapping is right. No image belongs to sec_0240.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p31 'Operating and Navigating' is a big heading with the page tab '1 Basic Operation'. It has the same size as 'Using Remote Applications' (an L2 title). hierarchy_level=2 under L1 sec_0001 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0001 'Basic Operation' (L1, p13-56) and it lists sec_0026 as a child. The 11 children sec_0027 to sec_0041 (p32-38) all point back to sec_0026. For example sec_0041 'Using the On-Screen Calculator' is a smaller heading at the top of p38.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/450 is on p31. The 24 own nodes are all on p31: intro paragraphs, screen-callout numbers and table #/tables/12. Detail topics start on p32. End: page_end=38 matches the last child sec_0041, which holds the calculator figure on p38.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Basic Operation/Operating and Navigating'. On the page the heading 'Operating and Navigating' sits under 'Basic Operation', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0026 appears once, p31-38. Previous sec_0025 ends p30 and next sec_0027 starts p32, so there is no gap or overlap. The sections cover p32-38 as children, with no repeated nodes.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Operating and Navigating' is found on p31, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Operating and Navigating' points to p31, and the heading is at the top or inside p31, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p31 is 19, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p31, equal to page_start 31. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/12 on p31 has 18 numbered items in two groups. I checked all 18. Items 1-9 are under 'Monitor information line' (for example 2 'bed label', 8 'current screen name/enter change screen menu') and items 10-18 under 'Other screen elements' (for example 12 'close all open menus and windows...', 17 'Pause Alarms - ...', 18 'Silence - ...'). Every number stays with its own text. The two header cells that cover 2 columns each show an empty cell next to them.",
+   "notes": "Values and order are right. Bold words lose their bold only. Cell text fix (BUG-008) works here.",
+   "confidence": 0.94
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "The big screen picture on p31 is kept as img_0034 (1024x800) and mapped to sec_0026. The picture on p38 (calculator) is img_0038 and is kept under sec_0041. No figure of this section was dropped.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0034 is the real monitor screen picture with callouts 1-18, not decoration. No rule, logo or bar was kept as an image.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0026",
+   "page_sampled": 31,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0034 is on p31 under the heading of sec_0026 and is mapped to sec_0026. img_0038 (p38, calculator) is mapped to sec_0041 'Using the On-Screen Calculator', which is correct.",
+   "notes": "",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p68 'Visual Alarm Indicators' is a big heading, like 'Audible Alarm Indicators' on p69, below chapter 3 'Alarms'. hierarchy_level=2 under L1 sec_0102 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0102 'Alarms' (L1, p67-82). sec_0103 has no children. Its next sibling sec_0104 'Audible Alarm Indicators' starts on p69.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/1305 is on p68. The paragraph above it ('The monitor sounds an audible indicator...') is not in this section. End: two paragraphs at the top of p69 (#/texts/1320, 1321) continue the alarm lamp text. The big heading 'Audible Alarm Indicators' follows them and is sec_0104.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Alarms/Visual Alarm Indicators'. On the page the heading 'Visual Alarm Indicators' sits under 'Alarms', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0103 appears once, p68-69. The parent sec_0102 and next sec_0104 do not share nodes with it. The alarm-lamp text that flows to p69 is in sec_0103, so no gap.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Visual Alarm Indicators' is found on p68, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Visual Alarm Indicators' points to p68, and the heading is at the top or inside p68, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p68 is 56, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p68, equal to page_start 68. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/17 on p68 is the INOP lamp table. Values match: Yellow 1.0 seconds / 1.0 seconds and Red 0.25 seconds / 0.25 seconds under On and Off. The 2-row header shows as 'INOP Lamp | Modulation (...) |' and 'Color | On | Off'. The cell 'INOP Lamp Color' is split over two rows and the Modulation span has an empty cell.",
+   "notes": "No value moves to another column. The node is placed after the p69 text in semantic order, though the table is on p68.",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0103. The blue 'Companion Mode / No Alarm Display' bar inside the WARNING box on p68 is read as text (#/texts/1309), so its meaning is kept.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0103. The orange rules around the WARNING box and the header bar are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0103",
+   "page_sampled": 68,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0103. p68 and p69 have no real figure inside the section, only the text bar in the WARNING box.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p83 'Patient Alarm Messages' is a medium heading below the big chapter title '4 Patient Alarms and INOPs'. hierarchy_level=2 under L1 sec_0138 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0138 'Patient Alarms and INOPs' (L1, p83-112). It is the chapter title on p83. sec_0139 has no children and the next sibling sec_0140 starts on p89.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/1626 is on p83 below the chapter intro. The chapter intro text above it stays in sec_0138. End: the last table #/tables/27 ends on p88 with 'VueLink ALARM at Information Center'. The next heading starts on p89 (sec_0140). Nodes p84-p88 are only running headers, folios and tables.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Patient Alarms and INOPs/Patient Alarm Messages'. On the page the heading 'Patient Alarm Messages' sits under 'Patient Alarms and INOPs', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0139 appears once, p83-88. Previous is its parent sec_0138 and next is sec_0140 on p89, so there is no gap or overlap. The 6 tables (p83 to p88) follow one another with no repeated rows between pages.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Patient Alarm Messages' is found on p83, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Patient Alarm Messages' points to p83, and the heading is at the top or inside p83, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p87 is 75, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p83, equal to page_start 83. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/26 on p87 has 16 data rows from **RR LOW to **tcpO2 LOW/**tcpCO2 LOW. I checked the 4 columns of all rows. For example '**ST MULTI at Information Center' keeps 'ECG/ST' and '(on monitor) numeric flashes...' and '***TACHY/P xxx>yyy or ***TACHY xxx>yyy' keeps 'Press, SpO 2'. The repeated word in 'The the measured' is also in the printed page.",
+   "notes": "No cell is merged or moved to another column. Subscripts show as 'SO 2' with a space only.",
+   "confidence": 0.93
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0139. The pages p83-p88 only have text and tables, no figure or icon that was dropped. I looked at p87 and p88.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0139. The blue bars on the page tops are not extracted as images.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0139",
+   "page_sampled": 87,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0139 and none is visible on p83-p88, so there is nothing to map.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p89 'Technical Alarm Messages (INOPs)' has the same big size as 'Patient Alarm Messages' on p83, below chapter 4. hierarchy_level=2 under L1 sec_0138 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0138 (L1 chapter 4). sec_0140 has no children. Its previous sibling is sec_0139 (p83-88) and next is the L1 chapter sec_0141 'Managing Patients' on p113.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/1650 and two intro paragraphs are on p89 as declared. The pages p90-p111 hold the INOP tables with running headers. Page 112 is nearly blank (only the header bar and folio '100'), so page_end=112 is the last page before chapter 5 on p113. No content of another section is inside.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Patient Alarms and INOPs/Technical Alarm Messages (INOPs)'. On the page the heading 'Technical Alarm Messages (INOPs)' sits under 'Patient Alarms and INOPs', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0140 appears once, p89-112. It follows sec_0139 (ends p88) with no gap and ends before sec_0141 (p113). The INOP tables are one per page from p89 to p111 and do not repeat.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Technical Alarm Messages (INOPs)' is found on p89, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Technical Alarm Messages (INOPs)' points to p89, and the heading is at the top or inside p89, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p94 is 82, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p89, equal to page_start 89. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/33 on p94 has 16 rows from 'CENTRAL:TELE ONLY' to 'Check MSL Voltage'. I checked all 3 columns. The message and its 'INOP tone' line stay in column 1, Source (for example 'Monitor/ Multi- Measuremt Module') stays in column 2, and the advice stays in column 3. No cell is merged.",
+   "notes": "The false table on p112 (#/tables/51) is graded in the p90 row of this section, not repeated here.",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "images.json has no image for sec_0140. On p94, p112 and the other pages of the range I saw only text and tables. No meaningful figure was dropped.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0140, so no decorative element passed. p112 shows only the blue header bar and folio, with no image extracted from it.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0140",
+   "page_sampled": 94,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0140 and none is visible on the pages I saw (p89, p90, p94, p112).",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p123 'Understanding the Care Group Overview Bar' is a small bold heading, like 'Automatically Resolving Patient Mismatch', under the bigger 'Care Groups' title. hierarchy_level=3 under L2 sec_0163 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0163 'Care Groups' (L2, p123-128). sec_0164 has no children. Next sibling sec_0165 'Viewing the My Care Group Window' starts on p125 below the symbol table.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start: heading #/texts/1957 is at the bottom of p123, as declared. The p124 figure texts and the p125 symbol table #/tables/55 follow it. End: the table ends above the heading 'Viewing the My Care Group Window' (sec_0165), so page_end=125 is right and the text below that heading is not absorbed.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/Managing Patients/Care Groups/Understanding the Care Group Overview Bar'. On the page the heading 'Understanding the Care Group Overview Bar' sits under 'Care Groups', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0164 appears once, p123-125. Sibling sec_0165 starts later on p125, so there is no overlap. The 52 nodes are the two intro paragraphs, p124 figure labels and the p125 table. No gap seen. I saw p124 only through its images.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'Understanding the Care Group Overview Bar' is found on p123, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'Understanding the Care Group Overview Bar' points to p123, and the heading is at the top or inside p123, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p125 is 113, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p123, equal to page_start 123. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/55 on p125 has a header and 4 rows. Header 'Care Group Symbols (used in the Care Group overview bar and the My Care Group window)' matches. The 4 texts match in order: 'This is a telemetry bed', 'This bed is on a wireless network', 'This bed is on a wired network', 'This is a paired bed, with a bedside monitor and a telemetry transmitter assigned.' The first-column cells are empty because they hold icons.",
+   "notes": "Text is right. The missing icons are graded under 5.5-filters_discarding to avoid counting the same cause twice.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "FAIL",
+   "severity": "Low",
+   "evidence": "The 4 symbol icons in the first column of the p125 table (telemetry, wireless, wired, paired bed) are not in images.json. The table cells are empty, so the link between each icon and its meaning is lost. The text of each meaning is kept in the table.",
+   "notes": "Low: small icons dropped, but their meaning is stated in the table text. Probably the icons are inside table cells and are filtered as small images. img_0055 and img_0056 on p124 are kept.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0055 (1024x33, p124) is the bed bar strip and img_0056 (272x460, p124) shows the four symbol sets. Both show real Care Group symbols, not decoration. No rule, logo or header bar was kept.",
+   "notes": "",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0164",
+   "page_sampled": 125,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "img_0055 and img_0056 are on p124 inside sec_0164 and are mapped to it. img_0057 (the My Care Group window, p125) is mapped to sec_0165 and sits under the heading 'Viewing the My Care Group Window', so that is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.4-hierarchy_level",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "On p135 'ECG Leads Monitored' is a small bold heading, like 'Changing Lead Sets', under the bigger 'About ECG Leads'. hierarchy_level=3 under L2 sec_0186 matches.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.4-parent_child",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "parent_section_id is sec_0186 'About ECG Leads' (L2, p135). sec_0187 has no children. Next sibling sec_0188 'Changing Lead Sets' is on the same page below the table.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.4-page_start_end",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Start and end are both p135. Heading #/texts/2254 and table #/tables/56 are between the paragraph of 'About ECG Leads' (sec_0186) and the heading 'Changing Lead Sets' (sec_0188). The section has only these 2 nodes and no other content is inside.",
+   "notes": "Running headers and folios inside the section are page boilerplate, not content from other sections.",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.4-hierarchy_path",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "hierarchy_path is '/ECG, Arrhythmia, ST and QT Monitoring/About ECG Leads/ECG Leads Monitored'. On the page the heading 'ECG Leads Monitored' sits under 'About ECG Leads', so the order of names is right.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.4-gaps_duplicates",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "sec_0187 appears once on p135. Neighbours sec_0186 and sec_0188 are on the same page, but their text is above and below. The table sits under the right heading, so nothing is missing or repeated.",
+   "notes": "",
+   "confidence": 0.88
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.4-flagged_for_review",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "flagged_for_review is false and verification_score is 100. The heading 'ECG Leads Monitored' is found on p135, the declared start page. No sign of doubt.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.4-structural_source",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "structural_source is 'toc'. The embedded bookmark for 'ECG Leads Monitored' points to p135, and the heading is at the top or inside p135, so the TOC source is supported.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.6-numbering_scheme",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "numbering_scheme is 'arabic'. The printed folio on p135 is 123, an arabic number. No roman folios appear in this section.",
+   "notes": "",
+   "confidence": 0.9
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.6-offset_applied",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "offset_applied is 0. The heading is on physical p135, equal to page_start 135. The printed folio is 12 lower than the physical page because of front pages, but bookmarks use physical numbers.",
+   "notes": "Offset 0 is consistent for physical pages.",
+   "confidence": 0.85
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.6-table_content",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "Table #/tables/56 on p135 has a header and 5 rows of 3 columns. I checked all 15 cells. Example: 'a 5-electrode set | I, II, III, aVR, aVL, aVF, V and MCL | RA and LL' and 'an EASI 5-electrode set | I, II, III, aVR, aVL, aVF, V1, V2, V3, V4, V5, V6 | I and A'. Each lead list and each Resp pair is under the right set.",
+   "notes": "No merged or shifted cell. Cell text fix (BUG-008) works here.",
+   "confidence": 0.95
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.5-filters_discarding",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is listed for sec_0187. The part of p135 owned by this section has only a heading and a table, so no figure was dropped.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.5-filters_passing_noise",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is kept for sec_0187, so no decorative element passed the filter.",
+   "notes": "",
+   "confidence": 0.92
+  },
+  {
+   "section_id": "sec_0187",
+   "page_sampled": 135,
+   "checklist_ref": "5.5-image_section_mapping",
+   "result": "PASS",
+   "severity": "",
+   "evidence": "No image is mapped to sec_0187 and p135 has no figure in this section.",
+   "notes": "",
+   "confidence": 0.92
+  }
+ ]
+}

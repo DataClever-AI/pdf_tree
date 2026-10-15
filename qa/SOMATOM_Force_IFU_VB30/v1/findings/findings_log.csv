@@ -1,0 +1,758 @@
+manual_id,section_id,page_sampled,checklist_ref,result,severity,evidence,notes
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.4-hierarchy_level,PASS,,"hierarchy_level=1, path=/Legend — Legend is a genuine root-level heading in the PDF (p2), matches.",
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.4-parent_child,PASS,,"parent_section_id=null, child_sections=[] — Legend has no parent or real subsections in the PDF.",
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.4-page_start_end,FAIL,Critical,"page_start=2 is correct (Legend content starts there). page_end=9 is wrong: real Legend content ends at p3 (WARNING box). Pages 4-9 are the manual's actual 'Table of contents' (page header literally reads 'Table of contents', content is the TOC listing) — 6 pages of unrelated content wrongly absorbed into the Legend section.","Root cause: run.log shows 'toc_classification: 2/953 bookmarks excluded (index, table_of_contents)' — the PDF has its own 'Table of Contents' bookmark, which toc_classification correctly excludes as front-matter noise, but its page range then collapses into the preceding kept section (Legend) instead of being bounded/set aside. This is the same failure family as the known 'back-matter silently absorbed past the last bookmark' pattern (workflow §7), but happening at front-matter via an *excluded* bookmark rather than an absent one. New variant — flag for Task 2.3 as related-but-distinct root cause, not a duplicate of the back-matter pattern."
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.4-hierarchy_path,PASS,,"hierarchy_path=/Legend, correct root path.",
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.4-gaps_duplicates,PASS,,"Section appears exactly once, matches the PDF's own TOC entry for Legend (unnumbered, before '1 Introduction').",
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.4-flagged_for_review,PASS,,"flagged_for_review=false, verification_score=100 — not flagged.","Notable: the pipeline's own verification did NOT catch the page_end defect above (title-near-page match for 'Legend' at p2 succeeds, which is enough to pass verification even though the boundary is wrong 6 pages later). Verification checks the start anchor, not the end boundary — worth noting for Task 2.4/consolidation as a detection gap, not just a data defect."
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.4-structural_source,PASS,,"Document-level structural_source=toc (Fast path, real embedded TOC used, not synthetic).",
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.6-numbering_scheme,PASS,,"numbering_scheme=arabic at document level; Legend itself is unnumbered front-matter, which is expected/correct — no numbering transition issue at this boundary.",
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.6-offset_applied,PASS,,"offset_applied=0. Printed page footers on p2/p3 read '2'/'3', matching resolved page numbers exactly — no offset needed, none applied.",
+SOMATOM_Force_IFU_VB30,sec_0001,2,5.6-table_content,PASS,,"Table nodes (p2 symbol-legend table, p4-9 TOC tables) all contain real markdown-style grid text, not an empty '[Table RxC]' placeholder.","Content itself is well-extracted; the defect is that the p4-9 tables belong to a different (excluded) section, not that they're empty — see 5.4-page_start_end."
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.4-hierarchy_level,PASS,,"hierarchy_level=2, path matches '2.1 General safety information' heading on p11 (bookmarks.json: level matches nesting under 'Safety information').",
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.4-parent_child,FAIL,Critical,"sec_0005's semantic_nodes include the WARNING/CAUTION legend table and its lead-in paragraph ('WARNING and CAUTION are highlighted...') that appear on p11 BEFORE the '2.1 General safety information' heading — i.e. this is chapter-level content belonging to the parent (sec_0004 'Safety information', the chapter root, whose own Contents/intro should stay separate), swept into the first child section instead.","Recurrence of the known 'Chapter/appendix-opening Contents-box misplacement' pattern from workflow §7, generalized: it's not just a Contents box, any parent-level lead-in content on the page shared with the first child's heading gets swept into that first child. Same root cause (chapter root + first-child heading share a physical page), same Critical severity — dedupe with the DOC-0136477A occurrences in Task 2.3, note the broader trigger condition."
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.4-page_start_end,PASS,,page_start=11 (heading '2.1 General safety information' on p11) and page_end=27 (next section '2.2 Safety information on working with patient data' starts p28 per TOC) are both correct as boundaries.,
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.4-hierarchy_path,PASS,,/Safety information/General safety information — correct.,
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.4-gaps_duplicates,PASS,,"Appears exactly once, matches PDF TOC entry '2.1 General safety information p11'.",
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.4-flagged_for_review,PASS,,"flagged_for_review=false, verification_score=100 — not flagged. Verification anchors on the heading text match only, so it doesn't catch the content-sweep or image-mismapping defects below (detection gap, same as noted for sec_0001).",
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.4-structural_source,PASS,,Document-level structural_source=toc (Fast path).,
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.6-numbering_scheme,PASS,,"'2.1' correctly resolves to hierarchy_level=2, consistent with siblings.",
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.6-offset_applied,PASS,,"offset_applied=0; printed footer on p11/p12 reads '11'/'12', matching page_no exactly.",
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.6-table_content,PASS,,"Table node on p11 (WARNING/CAUTION legend) has real 2-row markdown grid content, not an empty placeholder.","Row text itself is corrupted (see recurring font-substitution defect noted for sec_0001: 'WARNING'→':$51,1*', 'CAUTION'→'&$87,21'), but that's a text-fidelity issue, not a placeholder/empty-grid issue, so this specific check still passes."
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.5-filters_discarding,FAIL,Medium,"p16 shows 5 distinct photos in the PDF ('At the front of the gantry' x2, 'At the rear of the gantry' x2, 'At the control box' x1), but images_v1.json contains only 3 entries for page_no=16 (dims 1150x477, 1150x474, 555x444) — the 'At the rear of the gantry' pair (2 images) is missing entirely from the export.","Possible cause: near-duplicate/overlapping embedded image xrefs across the front/rear photo pairs triggering an unintended de-dup, or a filter threshold discarding them. Needs pipeline-side investigation, not just a QA note."
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.5-filters_passing_noise,PASS,,"No decorative icons/logos observed incorrectly passing the image filter on p11-p27 (WARNING/CAUTION/info badges are vector/text, not raster, so correctly excluded).",
+SOMATOM_Force_IFU_VB30,sec_0005,11,5.5-image_section_mapping,FAIL,Medium,"All 3 extracted p16 images (including the 555x444 one, dimensionally consistent with the single 'At the control box' photo, not a 'front of gantry' photo) are attributed to sec_0019 'At the front of the gantry'. Its siblings sec_0020 'At the rear of the gantry' and sec_0021 'At the control box' — both also on p16 — got zero images.","Textbook recurrence of the known 'Sibling image/table mismapping on shared pages' pattern (workflow §7) — 3 siblings share p16, all images collapsed onto the first one. Dedupe with prior occurrences in Task 2.3."
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.4-hierarchy_level,PASS,,"level=3, path /Safety information/General safety information/During scanning — matches '2.1.11 During scanning' heading on p18.",
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.4-parent_child,PASS,,parent_section_id=sec_0005 (General safety information) — correct.,
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.4-page_start_end,PASS,,"page_start=page_end=18 — section content (heading + CAUTION box + 3 bullets) is entirely on p18, next heading '2.1.12 Working at the console' also starts p18 but that's expected (short section, page shared with next).",
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.4-gaps_duplicates,PASS,,"Appears once, matches TOC.",
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.4-flagged_for_review,PASS,,"Not flagged, correctly so — content matches exactly.",
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.6-numbering_scheme,PASS,,'2.1.11' correctly resolves to level 3.,
+SOMATOM_Force_IFU_VB30,sec_0024,18,5.6-offset_applied,PASS,,"offset_applied=0, footer '18' matches page_no 18.",
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.4-hierarchy_level,PASS,,"level=5, matches bookmarks.json (level-5 entry nested under level-4 'Equipment modifications', p24-25 region) — verified against raw bookmark levels, not just the visible marginal-heading indentation.",
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.4-parent_child,PASS,,parent_section_id=sec_0044 'Equipment modifications' (level 4) — correct per raw bookmark nesting (level 5 'Equipment of other manufacturers' immediately follows two other level-5 siblings under the same level-4 parent).,
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.4-page_start_end,PASS,,"page_start=page_end=25 — the real 'Equipment of other manufacturers' heading and its intro paragraph are on p25, matching bookmarks.json (level 5, page_no 25).",
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.4-hierarchy_path,PASS,,Path matches bookmark nesting.,
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.4-gaps_duplicates,PASS,,Section appears once in the tree.,
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.4-flagged_for_review,FAIL,Critical,"flagged_for_review=false / verification_score=100, i.e. NOT flagged, despite a severe content defect: sec_0047's only semantic_node has page_no=121 and text 'Do not obstruct the view to the patient, so that the isocenter can be' — completely unrelated content from a different chapter (p121 belongs to sec_0209 'syngo Acquisition Workplace', under 'System description'), not the real p25 'Equipment of other manufacturers' text. The real p25 paragraph ('If you are planning to install equipment of other manufacturers, you must obtain information...') instead ended up attached to sec_0035 'Protective measures' (declared page_start=page_end=23) — note the injected node's own page_no (25) doesn't even fall inside sec_0035's declared page range (23-23), a mechanically-detectable inconsistency the pipeline's own verification should be able to catch but doesn't.","New defect type, more severe than the known §7 patterns: this is not adjacent-sibling mismapping on a shared page, but a cross-chapter node swap between sections ~96 pages apart (p25 vs p121), with the correct content landing on an unrelated section 2 pages before it (p23) instead. Root cause likely a semantic_order/indexing bug in section_matcher, not a page-boundary issue. High-value candidate for Task 2.3 as a new named defect ('cross-chapter node mismatch') — flag for engineering, this corrupts RAG-chunking correctness (title and content totally unrelated) more severely than a boundary defect."
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.4-structural_source,PASS,,toc / Fast path (document level).,
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.6-numbering_scheme,PASS,,"'Equipment of other manufacturers' is an unnumbered marginal heading (consistent with its siblings 'Limitation of liability', 'Certificate of conformity...') — no numbering scheme applies, no transition issue.",
+SOMATOM_Force_IFU_VB30,sec_0047,25,5.6-offset_applied,PASS,,"offset_applied=0; the section's own boundary page (25, from bookmarks) matches the printed page footer. (The stray node's page_no=121 is a content-mapping bug, not an offset/page-resolution bug — resolve_toc_pages correctly resolved p25 for this bookmark.)",
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.4-hierarchy_level,PASS,,"level=2, heading '2.3 Safety information on patient transport and positioning' confirmed on p32.",
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.4-parent_child,PASS,,parent=sec_0004 'Safety information' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.4-page_start_end,FAIL,Critical,"Boundary itself is right (p32 heading confirmed; next section '2.4' correctly starts p52). But the section's own semantic_nodes are wrong: node_count=1, and that single node has page_no=122 ('Monitor (syngo Acquisition Workplace) Description of the monitor') — completely unrelated content from the 'syngo Acquisition Workplace' chapter, ~90 pages away. The section's real intro text (p32: 'For safe and secure patient transport and patient positioning, observe the following sections depending on your workflow.') is entirely missing from the tree.","Same root-cause family as the sec_0035 'Protective measures' content-stream desync documented for this manual (semantic_order range 336-2556 swallowed by sec_0035 on p23, corrupting downstream attribution for dozens of sections). Do not count as a new independent bug in Task 2.3 — dedupe under that root cause."
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.4-gaps_duplicates,PASS,,"Appears once, matches TOC '2.3' entry.",
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.4-flagged_for_review,FAIL,Critical,"Not flagged (verification_score=100) despite the content-desync defect above — verification anchors on heading match only, doesn't catch that semantic_nodes content is wrong.",Same detection-gap note as sec_0001/sec_0047.
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.6-numbering_scheme,PASS,,'2.3' resolves correctly to level 2.,
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.6-offset_applied,PASS,,"offset_applied=0, footer p32 matches page_no 32.",
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.5-filters_discarding,PASS,,"Spot-checked p32-51 visually; photos/diagrams present (p42 hand/head-holder photo, p50-51 contusion-point diagrams) all appear captured — no obvious relevant-diagram loss in this range beyond the p16 case already logged under sec_0005.",
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.5-filters_passing_noise,PASS,,"Small triangular warning icons (collision/crush hazard pictograms, pp34-51) are vector/text-based, not raster — correctly excluded, no icon noise observed passing.",
+SOMATOM_Force_IFU_VB30,sec_0058,32,5.5-image_section_mapping,FAIL,Medium,"The two p46 'Total weight label' images (60kg mono-cart, 68kg dual-cart) visually belong to 'Monitor cart' content (heading on p45), which continues onto the top of p46 before 'Monitor ceiling system' begins further down p46 — but sec_0083 'Monitor cart' is declared page_start=page_end=45 only (doesn't extend to p46), so both images fall through to sibling sec_0084 'Monitor ceiling system' (p46-46) instead, per deepest-section-on-page assignment. See sec_0084 findings for detail.","Root cause is sec_0083's own page_end being one page short of its true content boundary (46, not 45) — a boundary defect on a non-sampled section that cascades into a sampled sibling's image mapping. Related to, but mechanically distinct from, the p16 sibling-collapse case (that one was multiple images ALL going to one sibling among 3+; this one is a single sibling's own boundary being off by one page)."
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.4-hierarchy_level,PASS,,"level=4, 'Positioning aids' marginal heading confirmed on p38, nested under 'Accessories' (sec_0067).",
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.4-parent_child,PASS,,parent=sec_0067 'Accessories' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.4-page_start_end,FAIL,Critical,"Boundary correct (p38 heading confirmed: 'Positioning aids — Observe the safety information on positioning aids supplied with your system...'). But node_count=1 with page_no=122, unrelated content, same as sec_0058 — the real p38 intro text is missing from the tree.","Same root-cause family as sec_0035 content-stream desync — dedupe in Task 2.3, do not count as new."
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.4-flagged_for_review,FAIL,Critical,Not flagged despite the content-desync defect — same detection gap as other sections in this family.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings ('Patient transport (CARE TransX)' etc.) — no transition issue.",
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.6-offset_applied,PASS,,"offset_applied=0, footer p38 matches page_no 38.",
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.5-filters_discarding,PASS,,p42 photo (hand + head-holder) captured; no other raster diagrams observed missing in p38-44 beyond what's already logged.,
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.5-filters_passing_noise,PASS,,"Collision/max-load triangle pictograms (pp38-44) are vector/text, correctly excluded.",
+SOMATOM_Force_IFU_VB30,sec_0073,39,5.5-image_section_mapping,PASS,,"The one image in range (p42, 989x318) is correctly attributed to sec_0076 'Head-arm support' — verified sec_0076's own page_start=42 matches, and the photo visually belongs to that subsection ('Movable parts are, for example, patient bedding, straps, cables, or tubes' + hand/head-holder diagram directly under 'Head-arm support').",
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.4-hierarchy_level,PASS,,"level=5, 'Monitor ceiling system' marginal heading confirmed on p46, nested under 'Furniture' (sec_0082, level 4).",
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.4-parent_child,PASS,,parent=sec_0082 'Furniture' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.4-page_start_end,FAIL,Critical,"Boundary correct (p46 heading confirmed). node_count=1 with page_no=123, unrelated stray content ('The minimum distances do not apply to the monitors mounted on the monitor cart or the ceiling-mounted support') — coincidentally topically adjacent (also about monitor mounting) but from a different chapter/page (p123, 'syngo Acquisition Workplace'), not this section's real p46 text ('Observe the following safety information when using the monitor ceiling system.' + 3 WARNING/CAUTION boxes).",Same root-cause family as sec_0035 content-stream desync — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.4-flagged_for_review,FAIL,Critical,Not flagged despite the content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings.",
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.6-offset_applied,PASS,,"offset_applied=0, footer p46 matches page_no 46.",
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.5-filters_discarding,PASS,,"Both weight-label graphics on p46 are captured (see mapping issue below), no evidence of discarding.",
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.5-filters_passing_noise,PASS,,No icon/logo noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0084,46,5.5-image_section_mapping,FAIL,Medium,"Both images attributed to sec_0084 (704x355 each, the '60 kg total weight' and '68 kg total weight' labels) visually belong to sibling 'Monitor cart' (sec_0083, heading on p45) — they appear at the TOP of p46, before the 'Monitor ceiling system' heading further down the same page. sec_0083 is declared page_start=page_end=45 (doesn't extend to p46), so these images fall through to sec_0084 instead under deepest-section-on-page assignment.",Root cause: sec_0083's page_end is one page short of its true content boundary. Related to the known 'sibling mismapping on shared pages' family (§7) but caused by an upstream boundary error on the donor section rather than a tie-break failure between equally-valid siblings — worth distinguishing in Task 2.3 as a boundary-driven variant.
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.4-hierarchy_level,PASS,,"level=2, heading '2.4 Safety information on patients with implanted devices' confirmed on p52.",
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.4-parent_child,PASS,,parent=sec_0004 'Safety information' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.4-page_start_end,FAIL,Critical,"Boundary correct (p52 heading confirmed, single-page section, next '2.5' starts p52 too actually — both '2.4' and '2.5 Safety information on performing an examination' appear on p52, section is legitimately 1 page). node_count=1 with page_no=123 (unrelated stray content), the real p52 text ('Observe the following safety information when examining patients with implanted devices.' + WARNING/CAUTION boxes) is missing.",content-stream desync family (sec_0035 root cause) — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.6-numbering_scheme,PASS,,'2.4' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0093,52,5.6-offset_applied,PASS,,"offset_applied=0, footer p52 matches page_no 52.",
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.4-hierarchy_level,PASS,,"level=3, heading '2.5.6 Additional information on contrast examinations' confirmed on p58.",
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.4-parent_child,PASS,,"parent=sec_0096 (Safety information on performing an examination, '2.5') — correct nesting.",
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.4-page_start_end,FAIL,Critical,"Boundary correct (p58-59, next '2.5.7 Additional information on Turbo Flash Spiral Cardiac' starts p60). node_count=1, page_no=124 stray content, real p58-59 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.6-numbering_scheme,PASS,,'2.5.6' resolves correctly to level 3.,
+SOMATOM_Force_IFU_VB30,sec_0102,59,5.6-offset_applied,PASS,,"offset_applied=0, footer p58 matches page_no 58.",
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.4-hierarchy_level,PASS,,"level=3, heading '2.8.4 Modifications in medical images' confirmed on p66.",
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.4-parent_child,PASS,,"parent=sec_0111 ('Safety information on basic image review', '2.8') — correct nesting.",
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.4-page_start_end,FAIL,Critical,"Boundary correct (p66, matches TOC '2.8.4...66'). node_count=1, page_no=125 stray content, real p66 text ('Mix-up of patients due to changed image data!...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.6-numbering_scheme,PASS,,'2.8.4' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0118,66,5.6-offset_applied,PASS,,"offset_applied=0, footer p66 matches page_no 66.",
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.4-hierarchy_level,PASS,,"level=3, heading '2.10.2 Exporting data' confirmed on p73.",
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.4-parent_child,PASS,,parent='Safety information on storing and archiving' (2.10) — correct.,
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.4-page_start_end,FAIL,Critical,"Boundary correct (p73-75, next '2.10.3 Transferring data' starts p76). node_count=1, page_no=125 stray content, real text missing.",content-stream desync family (sec_0035 root cause) — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.6-numbering_scheme,PASS,,'2.10.2' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0135,73,5.6-offset_applied,PASS,,"offset_applied=0, footer p73 matches page_no 73.",
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.4-hierarchy_level,PASS,,"level=3, heading '2.11.2 Fly Through' confirmed on p80.",
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.4-parent_child,PASS,,parent='Safety information on postprocessing applications' (2.11) — correct.,
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.4-page_start_end,FAIL,Critical,"Boundary correct (p80, next '2.11.3 Dental' also starts p80 — legitimately shares the page). node_count=1, page_no=125 stray content, real text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.6-numbering_scheme,PASS,,'2.11.2' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0139,80,5.6-offset_applied,PASS,,"offset_applied=0, footer p80 matches page_no 80.",
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.4-hierarchy_level,PASS,,"level=2, heading '2.14 Safety information on shutting down' confirmed on p86.",
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.4-parent_child,PASS,,parent=sec_0004 'Safety information' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.4-page_start_end,PASS,,"p86-87 correct — this is the last section of chapter 2 (chapter 3 'System description' begins p88), content genuinely ends p87 (last CAUTION box, bottom of page).","Best-preserved of this batch: node_count=2, one stray (p126, from the desync family) but one node correctly at p87 — content recovery is partial here rather than total, unlike the fully-starved single-node sections seen elsewhere."
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.4-gaps_duplicates,PASS,,"Appears once; also correctly captured as the mandatory last-chapter-boundary sample per Task 1.3's 'last_section' rule intent (not literally the doc's last section, but last of chapter 2).",
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.4-flagged_for_review,FAIL,Medium,"Not flagged, but node_count=2 includes 1 stray node (p126) alongside 1 real node (p87) — partial content-desync contamination not caught by verification.",Lower severity than the fully-starved cases (some real content survives here) but still part of the same desync family — dedupe accordingly.
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.6-numbering_scheme,PASS,,'2.14' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.6-offset_applied,PASS,,"offset_applied=0, footer p86/87 matches page_no.",
+SOMATOM_Force_IFU_VB30,sec_0149,87,5.6-table_content,PASS,,"Node has real, non-empty text content (not an empty '[Table RxC]' placeholder).","node_type='table' is misclassified for this node — its canonical_text is actually a CAUTION warning box ('Switch user, shut down, logoff or restart without saving data! Possible loss of unsaved changes...'), matching the real p87 CAUTION box, not a genuine row/column data grid. Docling classified a warning-box layout as a table. Low-severity node-typing quirk, worth noting for Task 2.3 as a distinct minor defect (table/paragraph misclassification), separate from the content-desync family."
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.4-hierarchy_level,PASS,,"level=2, heading '3.1 System overview' confirmed on p88.",
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.4-parent_child,PASS,,parent=sec_0150 'System description' (chapter root) — correct.,
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.4-page_start_end,FAIL,Critical,"Boundary correct (p88, next '3.2 Scan unit (gantry)' starts p89). node_count=1, page_no=126 stray content, real p88 text ('This section provides information about the CT system...') missing.",content-stream desync family (sec_0035 root cause) — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.6-numbering_scheme,PASS,,"'3.1' resolves correctly, chapter transition 2→3 handled correctly (this is the first section of a new chapter).",
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.6-offset_applied,PASS,,"offset_applied=0, footer p88 matches page_no 88.",
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.5-filters_discarding,PASS,,The p88 system-overview room photo is captured.,
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0151,88,5.5-image_section_mapping,PASS,,"The one image in range (p88, the system-overview diagram) is correctly attributed to sec_0151 itself — it's this section's own illustration, no deeper child section exists on p88.",
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Start key/radiation warning' confirmed on p95, nested under 'Gantry operator panel' (level 4, per bookmarks.json).",
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.4-parent_child,PASS,,parent='Gantry operator panel' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.4-page_start_end,FAIL,Critical,"Boundary correct (p95). node_count=1, page_no=126 stray content, real p95 text ('Use this key to trigger scanning...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.4-gaps_duplicates,PASS,,"Appears once — note the title 'Start key/radiation warning' legitimately recurs twice in the PDF (p95 for the classic panel, p101 for the Touch Panel variant) as two distinct marginal headings under different parents; this sampled instance (p95) is correctly the first one, no duplication defect.",
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings ('STOP key', 'Laser lightmarker', 'Gantry display').",
+SOMATOM_Force_IFU_VB30,sec_0157,95,5.6-offset_applied,PASS,,"offset_applied=0, footer p95 matches page_no 95.",
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.4-hierarchy_level,PASS,,"level=5, heading 'Touch Panel' confirmed on p102, nested under 'Gantry operator panel with Touch Panel' (level 4).",
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.4-parent_child,PASS,,"parent='Gantry operator panel with Touch Panel'; 6 children (sec_0172..sec_0178: Patient data display, Information icons display, Scan parameters display, Physiological data display, Patient table position planning display, Tools area) all verified present with correct pages 103-106 — structure is intact here despite the content-desync issue on sec_0171's own node.",
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.4-page_start_end,FAIL,Critical,"Boundary correct (p102-106, matches TOC/bookmarks). node_count=1, page_no=126 stray content, real p102 intro text ('The Touch Panel is part of the gantry operator panel...') missing.","content-stream desync family — dedupe in Task 2.3. Note this is a rare case where the section's OWN content is desynced but all 6 of its children resolved correctly with real, page-matched content — the desync appears to hit individual thin 'container-intro' nodes rather than uniformly corrupting whole subtrees."
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect on the section's own node.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings.",
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.6-offset_applied,PASS,,"offset_applied=0, footer p102 matches page_no 102.",
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.5-filters_discarding,PASS,,"All 6 screenshots/diagrams across p102-106 (Touch Panel mockup, patient-data/info-icon diagrams, ECG curve, tools-area, settings popover) are captured — no losses observed.",
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.5-filters_passing_noise,PASS,,No icon/logo noise observed passing.,
+SOMATOM_Force_IFU_VB30,sec_0171,102,5.5-image_section_mapping,PASS,,"5 of 6 images map to distinct, page-correct child sections (sec_0171 itself for p102, sec_0176 for p104, sec_0180 for p105, sec_0181 for p106). One minor note: both p103 images (Patient data display diagram + Information icons display diagram) are attributed to sec_0172 'Patient data display' rather than splitting between sec_0172 and sibling sec_0173 'Information icons display' — same page, adjacent small diagrams.","Low-severity variant of the sibling-mismapping family (§7) — only 1 of 2 images misattributed, not a full collapse. Worth noting but not escalating to Medium given the minor impact."
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Line On/Off reset button' confirmed on p109, nested under 'Connectors'.",
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.4-parent_child,PASS,,parent='Connectors' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.4-page_start_end,FAIL,Critical,"Boundary correct (p109). node_count=1, page_no=127 stray content, real p109 text ('With the Line On/Off reset button, you can disconnect...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings.",
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.6-offset_applied,PASS,,"offset_applied=0, footer p109 matches page_no 109.",
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.5-filters_discarding,PASS,,p109 connector diagram (4 numbered callouts) is captured.,
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0185,109,5.5-image_section_mapping,PASS,,"The one image in range (p109 connector panel diagram) is correctly attributed to sec_0185 itself — its own illustration, no deeper child on this page.",
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.4-hierarchy_level,PASS,,"level=6, marginal heading 'RTP adaptor connections' confirmed on p116, nested under 'Radiation Therapy Planning (RTP) table top'.",
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.4-parent_child,PASS,,parent='Radiation Therapy Planning (RTP) table top' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.4-page_start_end,FAIL,Critical,"Boundary correct (p116). node_count=1, page_no=128 stray content, real p116 text ('For a standardized patient setup, the table top provides...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.4-hierarchy_path,PASS,,"Correct, 6 levels deep matching bookmark nesting.",
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings.",
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.6-offset_applied,PASS,,"offset_applied=0, footer p116 matches page_no 116.",
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.5-filters_discarding,PASS,,"Both small diagrams on p116 (indentation/bore-hole callouts, screw-socket callout) are captured.",
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0202,116,5.5-image_section_mapping,PASS,,"Both images in range (p116) correctly attributed to sec_0202 itself — its own two diagrams, no deeper child section on this page.",
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.4-hierarchy_level,PASS,,"level=3, heading '3.5.4 Control box' confirmed on p124, nested under 'syngo Acquisition Workplace' (3.5).",
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.4-parent_child,PASS,,parent='syngo Acquisition Workplace' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.4-page_start_end,FAIL,Critical,"Boundary correct (p124-127, next section '3.6 Heat exchanger' starts p128 per TOC). node_count=1, page_no=129 stray content, real p124-127 text (control box description, operating elements list, System On/Computer On/System Off descriptions) entirely missing from the tree despite being 4 pages of substantive content.",content-stream desync family — dedupe in Task 2.3. Notably severe instance: 4 pages of real content (not just 1) reduced to a single unrelated stray node.
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.6-numbering_scheme,PASS,,'3.5.4' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.6-offset_applied,PASS,,"offset_applied=0, footer p124 matches page_no 124.",
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.5-filters_discarding,PASS,,"All 4 photos/diagrams across p125-127 (control box key layout, System On, Computer On, System Off photos) are captured.",
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0213,124,5.5-image_section_mapping,PASS,,"All 4 images in range correctly attributed to sec_0213 itself — it's a leaf section (no children) spanning p124-127, so all its own diagrams correctly land on it.",
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Equipotential bonding connector pin' confirmed on p131, nested under 'Mattress with spill protection'.",
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.4-parent_child,PASS,,parent='Mattress with spill protection' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.4-page_start_end,FAIL,Critical,"Boundary correct (p131). node_count=1, page_no=139 stray content, real p131 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.6-offset_applied,PASS,,"offset_applied=0, footer p131 matches page_no 131.",
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.5-filters_discarding,PASS,,p131 diagram (scan range/connector pin callouts) is captured.,
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0225,131,5.5-image_section_mapping,PASS,,The one image in range (p131) is correctly attributed to sec_0225 itself.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Flat cushions' confirmed on p138, nested under 'Cushions'.",
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.4-parent_child,PASS,,parent='Cushions' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.4-page_start_end,FAIL,Critical,"Boundary correct (p138). node_count=1, page_no=235 stray content — this is a much larger jump (~97 pages) than the ~1-3 page drift seen in earlier sampled sections, consistent with a second major desync event occurring somewhere between p131 and p138 (beyond just the sec_0035 event near p23).","content-stream desync family, but flag for engineering that the stray-page delta grows in discrete jumps (not a single constant offset) — evidence of multiple desync events compounding through the document, not one isolated incident."
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.6-offset_applied,PASS,,"offset_applied=0, footer p138 matches page_no 138.",
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.5-filters_discarding,PASS,,Both p138 flat-cushion photos are captured.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0244,138,5.5-image_section_mapping,PASS,,Both images in range (p138) correctly attributed to sec_0244 itself.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Trolley' confirmed on p145, nested under 'CARE TransX'.",
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.4-parent_child,PASS,,parent='CARE TransX' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.4-page_start_end,FAIL,Critical,"Boundary correct (p145). node_count=1, page_no=236 stray content (same magnitude jump as sec_0244, consistent with the same second desync event).","content-stream desync family — dedupe in Task 2.3, same second-event cluster as sec_0244."
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.6-offset_applied,PASS,,"offset_applied=0, footer p145 matches page_no 145.",
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.5-filters_discarding,PASS,,p145 trolley diagram is captured.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0257,145,5.5-image_section_mapping,PASS,,The one image in range (p145) is correctly attributed to sec_0257 itself.,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Scan ranges' confirmed on p152, nested under 'Distance enlargements' (level 3, p151) — verified against tree.json parent linkage.",
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.4-parent_child,PASS,,parent=sec_0268 'Distance enlargements' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.4-page_start_end,FAIL,Critical,"Boundary correct (p152). node_count=1, page_no=237 stray content (same magnitude jump as the sec_0244/sec_0257 cluster, consistent with the same second desync event), real p152 text ('The different distance enlargements decrease the scan ranges...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.6-offset_applied,PASS,,"offset_applied=0, footer p152 matches page_no 152.",
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.5-filters_discarding,PASS,,The p152 infusion-bottle-holder illustration is captured (see mapping issue below).,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0271,152,5.5-image_section_mapping,FAIL,Medium,"The one image attributed to sec_0271 'Scan ranges' (p152) is visually the infusion-bottle-holder line-art illustration, which belongs to sibling section sec_0272 'Infusion bottle holder' (also page_start=152, level 3, numbered '3.7.5') — 'Scan ranges' itself (level 4, unnumbered, under 'Distance enlargements') has no illustration on this page.","Sibling-mismapping family (§7): both sections share p152, but the deepest-hierarchy-level tie-break (level 4 'Scan ranges' beats level 3 'Infusion bottle holder') picks the structurally deeper section rather than the one whose content the image actually falls under — the heuristic doesn't account for vertical position on the page when siblings aren't in a parent/child relationship. Distinct variant: unlike the p16 case (3 true siblings under one parent), here the two sections aren't even parent/child of each other, just page-mates from different branches of the tree."
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.4-hierarchy_level,PASS,,"level=3, heading '3.7.7 Foot switch' confirmed on p158, nested under 'Accessories' (3.7).",
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.4-parent_child,PASS,,parent='Accessories' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.4-page_start_end,PASS,,"p158-159 — content genuinely spans both pages (heading+photo p158, continuation note p159); next section 3.8 'Heat exchanger' presumably starts p160... actually next chapter '4 System operation' starts p160 per earlier TOC, consistent with this being the last section of chapter 3.","node_count=1 with page_no=237 stray content still present (content-stream desync family, dedupe in Task 2.3), but boundary itself verified correct."
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.4-gaps_duplicates,PASS,,Appears once; also the mandatory last-section-of-chapter sample.,
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.6-numbering_scheme,PASS,,'3.7.7' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.6-offset_applied,PASS,,"offset_applied=0, footer p158 matches page_no 158.",
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.5-filters_discarding,PASS,,The p158 foot-switch photo is captured.,
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0280,159,5.5-image_section_mapping,PASS,,"The one image in range (p158) is correctly attributed to sec_0280 itself — its own illustration, no sibling ambiguity here.",
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Switching on the system' confirmed on p160, nested under 'Switching on' (4.1.1).",
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.4-parent_child,PASS,,parent='Switching on' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.4-page_start_end,FAIL,Critical,"Boundary correct (p160, first page of chapter 4). node_count=1, page_no=237 stray content (same magnitude/cluster as the sec_0244/257/271 group), real p160 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.4-structural_source,PASS,,toc / Fast path. Chapter transition 3→4 handled correctly.,
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings.",
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.6-offset_applied,PASS,,"offset_applied=0, footer p160 matches page_no 160.",
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.5-filters_discarding,PASS,,The p160 'Switching on the system' photo is captured.,
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0284,160,5.5-image_section_mapping,PASS,,The one image in range (p160) is correctly attributed to sec_0284 itself.,
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Overheating or low temperature' confirmed on p169, nested under 'Gantry temperature outside permissible range'.",
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.4-parent_child,PASS,,parent='Gantry temperature outside permissible range' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.4-page_start_end,FAIL,Critical,"Boundary correct (p169). node_count=1, page_no=238 stray content, real p169 text ('If the temperature of the gantry exceeds the permissible range, countdown starts...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0309,169,5.6-offset_applied,PASS,,"offset_applied=0, footer p169 matches page_no 169.",
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'STOP keys' confirmed on p179, nested under 'Patient table movements' (4.3.1).",
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.4-parent_child,PASS,,parent='Patient table movements' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.4-page_start_end,PASS,,p179 correct — content genuinely confined to that page (next marginal heading 'Displays' also p179).,"node_count=1 with page_no=241 stray content (content-stream desync family, dedupe in Task 2.3) — boundary itself is fine."
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0358,179,5.6-offset_applied,PASS,,"offset_applied=0, footer p179 matches page_no 179.",
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.4-hierarchy_level,PASS,,"level=3, heading '4.3.6 Changing the MPT table top' confirmed on p187, nested under 'Operation of the patient table' (4.3).",
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.4-parent_child,PASS,,parent='Operation of the patient table' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.4-page_start_end,FAIL,Critical,"Boundary correct (p187-188, section '4.3.6' genuinely runs to the end of chapter 4.3; next chapter '5 Dose management' starts p189). node_count=1, page_no=242 stray content, real p187-188 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.4-gaps_duplicates,PASS,,Appears once; also correctly the mandatory last-section-of-chapter sample for chapter 4.,
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.6-numbering_scheme,PASS,,'4.3.6' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.6-offset_applied,PASS,,"offset_applied=0, footer p187/188 matches page_no.",
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.5-filters_discarding,PASS,,p187 and p188 combined-callout illustrations are both captured.,
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0382,188,5.5-image_section_mapping,PASS,,"Verified via images_v1.json: the p187 image (paired 'Release push button' illustration) is correctly attributed to sibling sec_0381 'Moving the patient table in case of emergency or power failure' (its own section, ends p187), and the p188 image ('After exchanging the table top' illustration) is correctly attributed to sec_0382 itself. Each page's paired side-by-side diagrams are a single combined raster (not 2 separate images), which is why counts look low relative to the visible callout numbers — not a defect.",
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.4-hierarchy_level,PASS,,"level=3, heading '5.1.1 Dose Notification' confirmed on p189, first section of chapter 5, nested under 'Dose optimization features' (5.1).",
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.4-parent_child,PASS,,parent='Dose optimization features' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.4-page_start_end,FAIL,Critical,"Boundary correct (p189, next '5.1.2 Dose Alert' starts same page but that's expected — short section). node_count=1, page_no=242 stray content, real p189 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.4-structural_source,PASS,,toc / Fast path. Chapter transition 4→5 handled correctly.,
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.6-numbering_scheme,PASS,,'5.1.1' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0385,189,5.6-offset_applied,PASS,,"offset_applied=0, footer p189 matches page_no 189.",
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.4-hierarchy_level,PASS,,"level=3, heading '5.1.8 Neuro BestContrast' confirmed on p196, nested under 'Dose optimization features' (5.1).",
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.4-parent_child,PASS,,parent='Dose optimization features' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.4-page_start_end,FAIL,Critical,"Boundary correct (p196). node_count=1, page_no=242 stray content, real p196 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.6-numbering_scheme,PASS,,'5.1.8' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.6-offset_applied,PASS,,"offset_applied=0, footer p196 matches page_no 196.",
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.5-filters_discarding,PASS,,The p196 SAFIRE/ADMIRE circular diagram is captured (see mapping issue below).,
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0396,196,5.5-image_section_mapping,FAIL,Medium,"The one image attributed to sec_0396 'Neuro BestContrast' (p196, 490x590) is visually the SAFIRE/ADMIRE 'raw data / image data / image correction' circular diagram, which belongs to the PRECEDING sibling section sec_0395 '5.1.7 SAFIRE/ADMIRE' — its diagram sits at the top of p196, above where the 'Neuro BestContrast' heading begins further down the same page. sec_0395 is declared page_start=page_end=195 only (doesn't extend to p196), so the image falls through to sec_0396 instead.",Boundary-driven sibling-mismapping variant (same family as the sec_0083/sec_0084 'Monitor cart'/'Monitor ceiling system' case in this manual) — a section's page_end is one page short of where its content visually continues.
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'CARE Profile' confirmed on p204, nested under 'Checking the examination configuration parameters'.",
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.4-parent_child,PASS,,parent='Checking the examination configuration parameters' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.4-page_start_end,FAIL,Critical,"Boundary correct (p204-205, the 'CARE Profile with topogram' table spans both pages before 'If more than one range is selected...' continues on p206 under the same run-in, but the next distinct marginal heading 'Configuring the display of the CARE Profile' starts p206). node_count=1, page_no=243 stray content, real p204-205 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.6-numbering_scheme,PASS,,"Unnumbered marginal heading, consistent with siblings.",
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.6-offset_applied,PASS,,"offset_applied=0, footer p204/205 matches page_no.",
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.5-filters_discarding,PASS,,All 5 topogram screenshot images across p204-205 are captured.,
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0411,204,5.5-image_section_mapping,PASS,,"All 5 images in range verified via images_v1.json — all correctly attributed to sec_0411 itself, matching their visual placement under the 'CARE Profile with topogram' table.",
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Activating CARE kV' confirmed on p212, nested under 'CARE kV settings'.",
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.4-parent_child,PASS,,parent='CARE kV settings' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.4-page_start_end,FAIL,Critical,"Boundary correct (p212). node_count=1, page_no=243 stray content, real p212 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0427,212,5.6-offset_applied,PASS,,"offset_applied=0, footer p212 matches page_no 212.",
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Using FAST Adjust (optional) and FAST Scan Assistant' confirmed on p219, nested under 'Handling parameter conflicts'.",
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.4-parent_child,PASS,,parent='Handling parameter conflicts' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.4-page_start_end,FAIL,Critical,"Boundary correct (p219). node_count=1, page_no=244 stray content, real p219 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0447,219,5.6-offset_applied,PASS,,"offset_applied=0, footer p219 matches page_no 219.",
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Adapting the dose to the patient size' confirmed on p226, nested under '5.3.2 Checking the examination configuration parameters'.",
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.4-parent_child,PASS,,parent='Checking the examination configuration parameters' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.4-page_start_end,FAIL,Critical,"Boundary correct (p226). node_count=1, page_no=244 stray content, real p226 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0458,226,5.6-offset_applied,PASS,,"offset_applied=0, footer p226 matches page_no 226.",
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Setting kV manually' confirmed on p234, nested under 'Using CARE Dose4D and CARE kV'.",
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.4-parent_child,PASS,,parent='Using CARE Dose4D and CARE kV' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.4-page_start_end,FAIL,Critical,"Boundary correct (p234, last page of chapter 5 — chapter 6 'Examination' starts p235 per TOC). node_count=1, page_no=245 stray content, real p234 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.4-gaps_duplicates,PASS,,Appears once; also the mandatory last-section-of-chapter sample for chapter 5.,
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0489,234,5.6-offset_applied,PASS,,"offset_applied=0, footer p234 matches page_no 234.",
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.4-hierarchy_level,PASS,,"level=2, heading '6.1 Examination procedure overview' confirmed on p235, first section of chapter 6.",
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.4-parent_child,PASS,,parent=sec_0490 'Examination' (chapter root) — correct.,
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.4-page_start_end,PASS,,"page_start=235 correct. page_end=237 is defensible: the section's own 2 workflow tables span p235-236 (continuation table finishes top of p236), and its first child subsection '6.1.1 Registering the patient...' begins further down p236 — normal parent/child page-sharing pattern seen throughout this manual, not a boundary defect.",
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.4-gaps_duplicates,PASS,,"Appears once; also the mandatory first-section-of-chapter sample for chapter 6 (the largest chapter, 23.2% share).",
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.4-flagged_for_review,FAIL,Critical,Not flagged despite 1 of 3 nodes being a content-desync stray (page_no=245) — the pipeline's own verification doesn't catch partial contamination when 2/3 nodes are otherwise correct.,content-stream desync family for the stray node — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.4-structural_source,PASS,,toc / Fast path. Chapter transition 5→6 handled correctly.,
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.6-numbering_scheme,PASS,,"'6.1' resolves correctly, chapter transition handled.",
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.6-offset_applied,PASS,,"offset_applied=0, footer p235 matches page_no 235.",
+SOMATOM_Force_IFU_VB30,sec_0491,235,5.6-table_content,PASS,,"Both table nodes (p235) have real markdown grid content matching the visible 'Workflow using the gantry operator panel with Touch Panel' (9-row) and 'Workflow using the gantry operator panel of the predecessor' (2-row, continues p236) tables — not empty placeholders.",
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Assigning an Emergency protocol' confirmed on p242, nested under 'Modifying scan protocols'.",
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.4-parent_child,PASS,,parent='Modifying scan protocols' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.4-page_start_end,FAIL,Critical,"Boundary correct (p242). node_count=1, page_no=246 stray content, real p242 text ('You can set one scan protocol as the Emergency protocol...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0511,242,5.6-offset_applied,PASS,,"offset_applied=0, footer p242 matches page_no 242.",
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Modifying Auto tasking parameters' confirmed on p248, nested under 'Scan Protocol Assistant'.",
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.4-parent_child,PASS,,parent='Scan Protocol Assistant' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.4-page_start_end,FAIL,Critical,"Boundary (p248) is correct and, unusually, this section is NOT part of the content-stream desync family (page_no of its node matches its own page exactly). But the single captured node is just the heading text itself duplicated as a 'paragraph' node ('Modifying Auto tasking parameters') — ALL of the section's real body content (a 9-item bullet list: Auto transfer 1/2/3, Auto viewing, Auto filming, Auto Recon, Auto postprocessing, Auto Reference Lines, 'every', Body part examined; plus a 3-item numbered procedure) is completely absent from the tree.","NEW defect type, distinct from the content-stream desync family documented elsewhere in this manual: here the page/section attribution is entirely correct, but real body content (bullet lists / numbered steps) was dropped during extraction rather than misplaced. Worth a separate Task 2.3 bucket — 'body content extraction gap' — since the root cause (likely a docling list/step block not being captured as semantic_nodes) is mechanically different from the boundary-index desync seen elsewhere."
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.4-flagged_for_review,FAIL,High,"Not flagged despite the content-loss defect above — flagged_for_review=false, verification_score=100.",'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0518,248,5.6-offset_applied,PASS,,"offset_applied=0, footer p248 matches page_no 248.",
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Importing from teamplay Protocols' confirmed on p255, nested under 'Scan Protocol Assistant'.",
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.4-parent_child,PASS,,parent='Scan Protocol Assistant' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.4-page_start_end,FAIL,Critical,"Boundary correct (p255), and page attribution itself is fine (not part of the desync family). But the only captured node is the heading text alone ('Importing from teamplay Protocols') — the real body content (2 bullets, teamplay-icon note, then a 6-step numbered procedure: click Import from teamplay > step 2 > select protocols > Import > step 3 > End) is entirely missing.","'Body content extraction gap' family — same as sec_0518. This is now a confirmed RECURRING pattern (3rd instance in this manual: sec_0518, sec_0531, sec_0546), not a one-off. Flag for Task 2.3/2.4 as a named recurring defect distinct from the content-stream desync family: sections whose node page_no matches their own declared page ('clean' by the automated page-range check) can still be missing all their real body text, retaining only the heading. The automated page-range check alone is NOT sufficient to certify content completeness."
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.4-flagged_for_review,FAIL,High,"Not flagged despite the content-loss defect — flagged_for_review=false, verification_score=100.",'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0531,255,5.6-offset_applied,PASS,,"offset_applied=0, footer p255 matches page_no 255.",
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Activating a password protection' confirmed on p262, nested under 'Scan Protocol Assistant'.",
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.4-parent_child,PASS,,parent='Scan Protocol Assistant' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.4-page_start_end,FAIL,Critical,Boundary correct (p262). Same 'body content extraction gap' defect as sec_0518/sec_0531: only the heading text was captured as the node; the real intro paragraph ('You can activate a password protection to allow only authorized persons...') and the 8-step numbered procedure are entirely missing.,3rd confirmed instance of the recurring 'body content extraction gap' family in this manual — dedupe with sec_0518/sec_0531 in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.4-flagged_for_review,FAIL,High,Not flagged despite the content-loss defect.,'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0546,262,5.6-offset_applied,PASS,,"offset_applied=0, footer p262 matches page_no 262.",
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Appending or replacing a scan protocol' confirmed on p268, nested under 'Calling up the Patient Model Dialog'.",
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.4-parent_child,PASS,,parent='Calling up the Patient Model Dialog' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.4-page_start_end,FAIL,Critical,"page_start=268 correct, but page_end=268 is wrong on two fronts: (1) this section's own genuine trailing content ('4 Mark the relevant name in the list of the scan protocols') is on p269, before '6.3.3 Using automatic functions' begins — page_end should be 269. (2) The section's FIRST 18 nodes (2 repeated CAUTION boxes 'Wrong entry of patient position'/'Wrong labeling of the sides', plus steps 1-4 'Click Select or change exam icon / Click Change patient position icon / Select the new patient position / Click OK') do NOT belong to 'Appending or replacing a scan protocol' at all — they are the real p268 continuation of the PRECEDING sibling section sec_0554 'Changing the patient position', which is itself under-bounded (declared page_start=page_end=267, missing its own p268 continuation).","Two intertwined defects: (a) sec_0554's short page_end causes its own trailing content to spill into this section — same 'sibling content sweep via short page_end' family as the sec_0083/sec_0084 and sec_0395/sec_0396 image-boundary cases in this manual, but here with 18 nodes of real TEXT content, not just images — a more severe instance. (b) sec_0555's own page_end is separately one page short of its true content end. Flag both for Task 2.3 — related but distinct sub-issues under the same root-cause family (page_end boundaries computed one page too early at section transitions)."
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.4-gaps_duplicates,PASS,,"Section appears once, but see page_start_end for the content-boundary contamination.",
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.4-flagged_for_review,FAIL,Critical,"Not flagged despite substantial content misattribution — flagged_for_review=false, verification_score=100. Verification anchors on the heading match at p268, blind to the fact that most of the captured content belongs to the previous section.",Sibling content-sweep + page_end boundary defect (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; related to but distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0555,268,5.6-offset_applied,PASS,,"offset_applied=0, footer p268 matches page_no 268.",
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.4-hierarchy_level,PASS,,"level=6, marginal heading 'Application class Virtual Unenhanced and FAST DE Results in Dual Energy reconstructions' confirmed on p275, nested under 'Application classes'.",
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.4-parent_child,PASS,,parent='Application classes' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.4-page_start_end,FAIL,Critical,"Boundary correct (p275), page attribution not part of the desync family. But only the heading text was captured — the real body content ('Observe the following limitations:' + 6 bullet items about VNC/CT-value limitations) is entirely missing.","4th confirmed instance of the recurring 'body content extraction gap' family in this manual (with sec_0518, sec_0531, sec_0546) — dedupe in Task 2.3."
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.4-hierarchy_path,PASS,,"Correct, 6 levels deep.",
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.4-flagged_for_review,FAIL,High,Not flagged despite the content-loss defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0565,275,5.6-offset_applied,PASS,,"offset_applied=0, footer p275 matches page_no 275.",
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Positioning the arm supports' confirmed on p282, nested under 'Positioning the mattress'.",
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.4-parent_child,PASS,,parent=sec_0586 'Positioning the mattress' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.4-page_start_end,FAIL,Critical,"Boundary correct (p282). node_count=1, page_no=297 stray content, real p282 text ('The arm supports are placed under the patient...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.6-offset_applied,PASS,,"offset_applied=0, footer p282 matches page_no 282.",
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.5-filters_discarding,PASS,,"All 3 photos on p282 (mattress-in-holder, 2x arm-support positioning) are captured.",
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0591,282,5.5-image_section_mapping,FAIL,Medium,"All 3 images on p282 are attributed to sec_0591 'Positioning the arm supports', but the first one (mattress-in-storage-holder photo, top of page) visually belongs to sibling sec_0586 'Positioning the mattress' (heading and bullet directly above it) — sec_0586 also declares page_end=282, so both siblings share the page and the tie-break picked sec_0591 for all 3. Only the 2 lower photos (patient with arm supports, steps 1-5) genuinely belong to sec_0591.","Sibling-mismapping family (§7) — same shared-page collapse pattern as the p16 (3-way) and p46 (Monitor cart/ceiling) cases, here 1 of 3 images misattributed rather than a full collapse."
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Setting the patient orientation' confirmed on p288, nested under 'Moving the patient to the scan start position'.",
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.4-parent_child,PASS,,parent='Moving the patient to the scan start position' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.4-page_start_end,FAIL,Critical,"Boundary correct (p288). node_count=1, page_no=349 stray content, real p288 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0604,288,5.6-offset_applied,PASS,,"offset_applied=0, footer p288 matches page_no 288.",
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Planning the scan ranges' confirmed on p295, nested under 'Using the 3D camera'.",
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.4-parent_child,PASS,,parent='Using the 3D camera' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.4-page_start_end,FAIL,Critical,"Boundary correct (p295-296). node_count=1, page_no=349 stray content — note the canonical_text is literally just '349' (a bare page-footer digit, not even real sentence content), real p295-296 text missing.","content-stream desync family — dedupe in Task 2.3. Worth noting for engineering: this stray node being a bare footer number (not a real content sentence) suggests the desync sometimes grabs page-footer artifacts rather than body text, which may help root-cause the indexing bug."
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.6-offset_applied,PASS,,"offset_applied=0, footer p295 matches page_no 295.",
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.5-filters_discarding,PASS,,The p296 Touch Panel screenshot (scan range diagram) is captured.,
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0617,295,5.5-image_section_mapping,PASS,,The one image in range (p296) is correctly attributed to sec_0617 itself — its own diagram illustrating the topogram scan range UI.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Positioning the patient for radiotherapy without automated zeroing' confirmed on p302, nested under 'Radiotherapy functions'.",
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.4-parent_child,PASS,,parent='Radiotherapy functions' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.4-page_start_end,FAIL,Critical,"Boundary correct (p302). node_count=1, page_no=350 stray content, real p302 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.6-offset_applied,PASS,,"offset_applied=0, footer p302 matches page_no 302.",
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.5-filters_discarding,PASS,,The p302 patient-model RT-positioning diagram is captured.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0625,302,5.5-image_section_mapping,PASS,,The one image in range (p302) is correctly attributed to sec_0625 itself.,
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Starting the topogram scan' confirmed on p309, nested under 'Acquiring a Topogram'.",
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.4-parent_child,PASS,,parent='Acquiring a Topogram' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.4-page_start_end,FAIL,Critical,"Boundary correct (p309). node_count=1, page_no=351 stray content, real p309 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0636,309,5.6-offset_applied,PASS,,"offset_applied=0, footer p309 matches page_no 309.",
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Checking parameter settings' confirmed on p315, nested under '6.6.5 Acquiring a Sequence'.",
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.4-parent_child,PASS,,parent='Acquiring a Sequence' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.4-page_start_end,FAIL,Critical,"Boundary correct (p315). node_count=1, page_no=352 stray content, real p315 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.6-offset_applied,PASS,,"offset_applied=0, footer p315 matches page_no 315.",
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.5-filters_discarding,PASS,,The p315 parameter-card screenshot is captured.,
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0645,315,5.5-image_section_mapping,PASS,,The one image in range (p315) is correctly attributed to sec_0645 itself.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Performing acquisition' confirmed on p322, nested under 'Acquiring an Adaptive 4D spiral'.",
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.4-parent_child,PASS,,parent='Acquiring an Adaptive 4D spiral' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.4-page_start_end,FAIL,Critical,"Boundary correct (p322). node_count=1, page_no=353 stray content, real p322 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.6-offset_applied,PASS,,"offset_applied=0, footer p322 matches page_no 322.",
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.5-filters_discarding,PASS,,The p322 3-panel screenshot (chronicle/topogram/CT slice) is captured as a single combined image.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0656,322,5.5-image_section_mapping,PASS,,"The one image in range (p322, 1517x476 — a wide combined raster of the 3 visual panels) is correctly attributed to sec_0656 itself.",
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'State of Reconstruction' confirmed on p329, nested under 'Starting reconstruction'.",
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.4-parent_child,PASS,,parent='Starting reconstruction' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.4-page_start_end,FAIL,Medium,"Boundary correct (p329). 1 of 2 nodes is a content-desync stray (page_no=353), but the other node (the real recon-status-icon table, matching the visible 10-row icon/meaning table exactly) IS correctly captured with real markdown content — partial contamination rather than total loss.","content-stream desync family, partial-contamination variant (like sec_0491, sec_0149) — dedupe in Task 2.3. Lower severity than the fully-starved single-node cases since real content is present alongside the stray."
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.4-flagged_for_review,FAIL,Medium,Not flagged despite partial content-desync contamination.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.6-offset_applied,PASS,,"offset_applied=0, footer p329 matches page_no 329.",
+SOMATOM_Force_IFU_VB30,sec_0673,329,5.6-table_content,PASS,,"The table node has real markdown grid content (10 rows, icon-status pairs) matching the visible table exactly — not an empty placeholder.",
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Selecting a metal implant' confirmed on p335, nested under 'Performing a reconstruction with reduced metal artifacts (iMAR)'.",
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.4-parent_child,PASS,,parent='Performing a reconstruction with reduced metal artifacts (iMAR)' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.4-page_start_end,FAIL,Critical,"Boundary correct (p335). node_count=1, page_no=354 stray content, real p335 text (numbered steps 1-4, iMAR label list) missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0685,335,5.6-offset_applied,PASS,,"offset_applied=0, footer p335 matches page_no 335.",
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.4-hierarchy_level,PASS,,"level=3, heading '6.7.11 Optimizing the image display' confirmed on p340, nested under 'Reconstruction' (6.7). Last section of chapter 6 (chapter 7 'Enhanced examination' starts p343).",
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.4-parent_child,PASS,,parent='Reconstruction' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.4-page_start_end,FAIL,Critical,"Boundary correct (p340-342, matches chapter-end boundary). node_count=1, page_no=354 stray content, real p340-342 text (image series requirements + 12-step procedure) missing.",content-stream desync family — dedupe in Task 2.3. Also the mandatory last-section-of-chapter sample for chapter 6.
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.6-numbering_scheme,PASS,,'6.7.11' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.6-offset_applied,PASS,,"offset_applied=0, footer p340 matches page_no 340.",
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.5-filters_discarding,FAIL,High,"This section's 12-step procedure references 8 distinct UI reference icons shown as small screenshots on p340-341 (Free Mode, Default Orientation, Hide Reference Lines, MPR Thick, MIP Thin, Set FoV Segment, Set Reference Segment, Preview Image) — each directly illustrates the button a numbered step tells the reader to click. NONE of these 8 are present in images_v1.json for p340-342; only 1 unrelated image survived (see mapping issue below).","These are not decorative icons (like the WARNING/CAUTION badges correctly excluded elsewhere) — they are the specific, non-redundant visual reference for each procedure step, so their absence is a genuine content loss, not correct decorative filtering. Likely filtered by the min-pixel-dimension or area-fraction threshold given their small on-page size. Worth flagging to engineering as a case where the size filter is too aggressive for small-but-meaningful UI icon references — distinct from the correctly-working decorative-icon filtering seen elsewhere in this manual."
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.5-filters_passing_noise,PASS,,No decorative logo/badge noise observed passing.,
+SOMATOM_Force_IFU_VB30,sec_0695,342,5.5-image_section_mapping,FAIL,Medium,"The one image that did survive (p340, 378x164) is attributed to sec_0695, but visually it is the 'DE Composition' slider-bar diagram belonging to the PRECEDING section (the '(4) Vascular' / composition-factor content at the top of p340, before the '6.7.11 Optimizing the image display' heading begins) — not this section's own content.","Boundary-driven sibling-mismapping variant (same family as sec_0083/sec_0084, sec_0395/sec_0396) — the preceding section's page_end is evidently one page short of its true content end."
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.4-hierarchy_level,PASS,,"level=3, heading '7.1.1 Activating Bolus Tracking' confirmed on p343, first section of chapter 7, nested under 'CARE Bolus CT' (7.1).",
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.4-parent_child,PASS,,parent='CARE Bolus CT' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.4-page_start_end,FAIL,Critical,"Boundary correct (p343). node_count=1, page_no=355 stray content, real p343 text missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.4-structural_source,PASS,,toc / Fast path. Chapter transition 6→7 handled correctly.,
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.6-numbering_scheme,PASS,,'7.1.1' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0698,343,5.6-offset_applied,PASS,,"offset_applied=0, footer p343 matches page_no 343.",
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.4-hierarchy_level,PASS,,"level=3, heading '7.2.1 Activating the coupled mode' confirmed on p350, nested under 'CARE Contrast CT' (7.2).",
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.4-parent_child,PASS,,parent='CARE Contrast CT' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.4-page_start_end,FAIL,Critical,"Boundary correct (p350-352, next marginal heading 'Setting the coupled mode' begins p352). node_count=1, page_no=355 stray content — real content missing includes 2 icon-meaning tables and a 2-page Start/Stop behavior table (p351-352).",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.6-numbering_scheme,PASS,,'7.2.1' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0710,350,5.6-offset_applied,PASS,,"offset_applied=0, footer p350 matches page_no 350.",
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.4-hierarchy_level,PASS,,"level=3, heading '7.2.4 Canceling a scan in coupled mode' confirmed on p357, nested under 'CARE Contrast CT' (7.2).",
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.4-parent_child,PASS,,parent='CARE Contrast CT' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.4-page_start_end,FAIL,Low,"This is a genuinely well-preserved section: all 24 nodes are real, page-matched content (2 CAUTION boxes p357, then legitimate trailing content on p358: 'If the injection is canceled...', 'Press the STOP key...', 'Radiation and the injection...') — NOT part of the content-stream desync family, and NOT missing body content. However, page_end is declared as 357 only, even though 6 of its own nodes are correctly captured with page_no=358 (real trailing content that continues right up to where '7.2.5 Saving a contrast protocol' begins). The page_end field itself is one page short of the section's true content extent.","Same 'page_end metadata one page short of true content' sub-pattern seen in sec_0555 — here it doesn't cause any content misattribution (unlike sec_0555, where the short boundary let a sibling's content spill over), just an inaccurate page_end value. Low severity since content integrity itself is intact; still worth fixing for correct citation/page-range metadata."
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.4-gaps_duplicates,PASS,,"Appears once, no duplication.",
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.4-flagged_for_review,PASS,,"Not flagged, correctly so — despite the page_end metadata quirk, this section's content is accurate and complete.",
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.6-numbering_scheme,PASS,,'7.2.4' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0717,357,5.6-offset_applied,PASS,,"offset_applied=0, footer p357/358 matches page_no.",
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Using MinDose' confirmed on p364, nested under 'Acquiring an ECG-Gated Spiral'.",
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.4-parent_child,PASS,,parent='Acquiring an ECG-Gated Spiral' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.4-page_start_end,PASS,,"p364 correct — this section is well-preserved: 25 of 26 nodes are real, page-matched content (2 CAUTION boxes + full procedure) exactly matching the visible page. The 1 mismatched node (page_no=365, text 'Enhanced examination') is a running chapter-title header artifact, not a content-desync stray or a misattributed block — trivial, not worth escalating.","Content-fidelity contrast case: unlike most sampled sections in this manual, this one is essentially intact. Cite in Task 2.4 as a counter-example when estimating the true prevalence of the desync defect (it's frequent but not universal)."
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.4-flagged_for_review,PASS,,"Not flagged, correctly so — content is accurate.",
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0728,364,5.6-offset_applied,PASS,,"offset_applied=0, footer p364 matches page_no 364.",
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Turbo Flash Spiral Chest Pain scan range' confirmed on p371, nested under 'Turbo Flash Spiral Cardiac/Chest Pain'.",
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.4-parent_child,PASS,,parent=sec_0741 'Turbo Flash Spiral Cardiac/Chest Pain' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.4-page_start_end,FAIL,Medium,"This section's own real content (from its heading onward: 'For the chest pain scan protocols...' through the recon-job paragraph) is correctly captured. However its FIRST few nodes are a CAUTION box ('Turbo Flash Spiral Cardiac: The usable scan field is smaller...') that appears ABOVE this section's heading on p371 — that content structurally belongs to the parent, sec_0741 'Turbo Flash Spiral Cardiac/Chest Pain', whose own intro content shares the page with this first child heading.","Recurrence of the known 'chapter/parent-opening content swept into first child' pattern (§7), here one nesting level deeper (parent → first child rather than chapter-root → first section). Dedupe with the DOC-0136477A occurrences and the sec_0005 recurrence already logged in this manual."
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.4-flagged_for_review,FAIL,Medium,Not flagged despite the parent-content-sweep issue above.,"Parent-opening content swept into first child, recurrence of workflow §7 pattern (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family."
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.6-offset_applied,PASS,,"offset_applied=0, footer p371 matches page_no 371.",
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.5-filters_discarding,PASS,,Both topogram images on p371 are captured.,
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0746,371,5.5-image_section_mapping,FAIL,Medium,"Both images on p371 are attributed to sec_0746, but the first one (828x340, illustrating the CAUTION box above the heading) visually belongs to parent sec_0741, not this child section — same root cause as the text-content sweep noted above.",Same recurrence as the 5.4-page_start_end finding — one root cause manifesting in both text and image attribution.
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Selecting phases for Multiphase reconstruction' confirmed on p378, nested under 'Reconstructing'.",
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.4-parent_child,PASS,,parent='Reconstructing' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.4-page_start_end,PASS,,"p378 correct — well-preserved section, 16 of 17 nodes are real page-matched content matching the visible page exactly. The 1 mismatched node (page_no=379, 'Enhanced examination') is a trivial running-header artifact, not a content defect.","Another content-fidelity contrast case (like sec_0728) — worth noting the desync/content-loss defects, while widespread, are not universal across all sampled sections."
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.4-flagged_for_review,PASS,,"Not flagged, correctly so.",
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.6-offset_applied,PASS,,"offset_applied=0, footer p378 matches page_no 378.",
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.5-filters_discarding,PASS,,"The large ECG/phase-selection screenshot is captured. Two small reference icons above the heading (Preview Series, Multiphase) are absent, consistent with the icon-filtering behavior noted for sec_0695 (p340-341) — likely the same size-threshold cause, lower stakes here since these icons are less critical to the immediate procedure than the sec_0695 case.",
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0758,378,5.5-image_section_mapping,PASS,,"The one image in range (p378, 799x406, the big ECG/phase-selection screenshot) is correctly attributed to sec_0758 itself.",
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Restoring the zoom factor' confirmed on p386, nested under 'Using 2D tools'.",
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.4-parent_child,PASS,,parent='Using 2D tools' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.4-page_start_end,FAIL,Critical,"Boundary correct (p386). node_count=1, page_no=463 stray content ('Force / Force Velo | Instructions for Use...' footer boilerplate), real p386 text ('Click the Home Zoom/Pan icon.') missing.","content-stream desync family — dedupe in Task 2.3. Notable: page_no=463 corresponds to the document's Index section (per TOC), consistent with the hypothesis that the desync's content-stream eventually resumes near the very end of the document for sections sampled around this point."
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0780,386,5.6-offset_applied,PASS,,"offset_applied=0, footer p386 matches page_no 386.",
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.4-hierarchy_level,PASS,,"level=6, marginal heading 'Scrolling through the image stack' confirmed on p393, nested under 'Operating the syngo software' (level 5).",
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.4-parent_child,PASS,,parent='Operating the syngo software' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.4-page_start_end,FAIL,Critical,"Boundary correct (p393). node_count=1, page_no=466 stray content ('gantry temperature 169' — an Index-page entry), real p393 text missing.",content-stream desync family — dedupe in Task 2.3. Same Index-region stray source as sec_0780/sec_0835.
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.6-offset_applied,PASS,,"offset_applied=0, footer p393 matches page_no 393.",
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.5-filters_discarding,PASS,,The p393 table/mouse-joystick diagram is captured.,
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0807,393,5.5-image_section_mapping,FAIL,Medium,"The one image on p393 (1150x669, the table-joystick/mouse-joystick device photo) is attributed to sec_0807, but it visually illustrates the ancestor sections ('Using i-Control' / 'Operating the system using i-Control'), not specifically 'Scrolling through the image stack' — sec_0807 is simply the first (deepest, level 6) of 4 sibling sections sharing p393, and won the tie-break for an image that belongs several levels higher in the hierarchy.","Variant of the deepest-wins tie-break issue already logged for sec_0271/sec_0591 — here the mismatch spans multiple hierarchy levels (grandparent-level diagram swept to a great-grandchild), not just one level."
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.4-hierarchy_level,PASS,,"level=6, marginal heading 'Scrolling through the image stack' (2nd occurrence, i-Control variant) confirmed on p400, nested under 'Operating the syngo software'.",
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.4-parent_child,PASS,,parent='Operating the syngo software' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.4-page_start_end,FAIL,Critical,"Boundary correct (p400). node_count=1, page_no=466 stray content ('switching on 160' — an Index-page entry), real p400 text missing.","content-stream desync family — dedupe in Task 2.3, same Index-region cluster as sec_0780/sec_0807."
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.4-gaps_duplicates,PASS,,"Appears once — confirmed this is legitimately a DIFFERENT section instance from sec_0807 (same title, different i-Control panel variant/parent chain), not a duplicate.",
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0835,400,5.6-offset_applied,PASS,,"offset_applied=0, footer p400 matches page_no 400.",
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.4-hierarchy_level,PASS,,"level=3, heading '7.4.13 Defining the image order' confirmed on p407, nested under 'Adaptive 3D Intervention' (7.4).",
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.4-parent_child,PASS,,parent='Adaptive 3D Intervention' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.4-page_start_end,FAIL,Medium,"Boundary correct (p407). 1 of 2 nodes is a content-desync stray (page_no=466, Index-region text), but the other node is the real 3-column/2-row 'Patient orientation' table, correctly captured with real markdown content matching the visible page.","content-stream desync family, partial-contamination variant (like sec_0673, sec_0491) — dedupe in Task 2.3."
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.4-flagged_for_review,FAIL,Medium,Not flagged despite partial content-desync contamination.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.6-numbering_scheme,PASS,,'7.4.13' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.6-offset_applied,PASS,,"offset_applied=0, footer p407 matches page_no 407.",
+SOMATOM_Force_IFU_VB30,sec_0854,407,5.6-table_content,PASS,,The table node has real markdown grid content ('Patient orientation | Monitor left of the gantry | Monitor right of the gantry' + 2 data rows) matching the visible table exactly.,
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.4-hierarchy_level,PASS,,"level=5, marginal heading 'Activating free mode for MPR projections' confirmed on p414, nested under 'Using 3D tools'.",
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.4-parent_child,PASS,,parent='Using 3D tools' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.4-page_start_end,FAIL,Critical,"Boundary correct (p414). node_count=1, page_no=466 stray content (Index-region text), real p414 text ('Click the Free Mode icon...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.," ADDITIONALLY: p414 shows 6 UI reference icons (Free Mode, Unlock Reference Lines, Default Orientation, Hide Reference Lines, VRT Rotation, VRT Gallery), none present in images_v1.json — same over-aggressive icon-filtering defect logged for sec_0695/sec_0758 (no 5.5 rows were pre-generated for this section since images_in_range was 0, so recording here instead)."
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0874,414,5.6-offset_applied,PASS,,"offset_applied=0, footer p414 matches page_no 414.",
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Defining a transfer destination' confirmed on p421, nested under 'Saving Key Images'.",
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.4-parent_child,PASS,,parent='Saving Key Images' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.4-page_start_end,FAIL,Critical,"Boundary correct (p421). node_count=1, page_no=466 stray content (Index-region text), real p421 text ('You can define a transfer destination for the key images...') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.4-flagged_for_review,FAIL,Critical,Not flagged despite content-desync defect.,"content-stream desync family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3, do not count as a separate defect."
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0890,421,5.6-offset_applied,PASS,,"offset_applied=0, footer p421 matches page_no 421.",
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.4-hierarchy_level,PASS,,"level=2, heading '9.1 Accessories for quality measurement' confirmed on p424, nested under 'Quality assurance' (chapter 9 root). Chapter transition 8→9 handled correctly.",
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.4-parent_child,PASS,,parent=sec_0898 'Quality assurance' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.4-page_start_end,FAIL,Critical,"Boundary correct (p424-430, matches all its children's combined range). But node_count=0 — completely empty. The real p424 intro text ('You require the set of phantoms for the quality measurement...' + 3 bulleted sub-lists 'Accessories for daily quality measurement' / 'for the monthly constancy test' / 'for the Low Contrast test') is entirely missing, not even reduced to a stray node — the section has NO content at all.","Most severe instance yet of the 'body content extraction gap' family (worse than sec_0518/sec_0531/sec_0546/sec_0565, which at least retained the heading as a stray node) — here the section is 100% empty despite substantial real content on its own page. Flag as the clearest example for Task 2.3/2.4 when illustrating this defect family's severity range."
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.4-gaps_duplicates,PASS,,Appears once; also correctly the mandatory first-section-of-chapter sample for chapter 9.,
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.4-flagged_for_review,FAIL,Critical,"Not flagged despite being completely empty of content — flagged_for_review=false, verification_score=100. This is arguably the most concerning detection-gap instance: a section with ZERO real content still passes verification because that check only anchors on the heading's presence/page-match, never on whether any body content exists at all.",'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.6-numbering_scheme,PASS,,'9.1' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.6-offset_applied,PASS,,"offset_applied=0, footer p424 matches page_no 424.",
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.5-filters_discarding,PASS,,"All images within sec_0899's page range (p424-430) are correctly captured and attributed to the appropriate deepest child sections (sec_0900, sec_0902 x2, sec_0903, sec_0906 x2, sec_0909, sec_0911) — verified via images_v1.json, none orphaned.",
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0899,424,5.5-image_section_mapping,PASS,,None of the 8 images in this page range are misattributed to sec_0899 itself — each correctly lands on the specific deepest child section whose content it illustrates (verified by cross-referencing images_v1.json section_ids against each child's own page_start).,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Using the long phantom holder' confirmed on p428, nested under '9.1.4 Mounting the phantoms to the patient table'.",
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.4-parent_child,PASS,,parent=sec_0905 'Mounting the phantoms to the patient table' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.4-page_start_end,FAIL,Critical,"Boundary correct (p428). node_count=1, page_no=467 stray content (canonical_text='Manufacturer', from the document's very back matter), real p428 text ('Attach the long phantom holder... Start the quality measurement.') missing.",content-stream desync family — dedupe in Task 2.3.
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.4-flagged_for_review,FAIL,Critical,"sec_0906 itself not flagged, but it was correctly INCLUDED in the sample specifically because its sibling sec_0908 (an adjacent 4th-level section on the same page, titled literally '9.1.5.1 ' — an empty/numeric-only bookmark title with no real heading text) WAS flagged_for_review=true (verification_score=71.4, below the 85.0 threshold) — confirmed via direct inspection of sec_0908. This is a rare case where the pipeline's own verification worked as intended, catching a genuine anomaly (a malformed/empty bookmark in the source PDF, not obviously a pipeline bug) and correctly triggering the Task 1.3 mandatory-sampling rule for flagged sections.","Positive finding: contrasts with the many false-negative flagged_for_review cases logged elsewhere in this manual — worth citing in Task 2.4 as evidence the verification mechanism does work for the failure mode it was designed to catch (low title-match confidence), just not for the content-desync or content-loss failure modes documented throughout this manual."
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.6-offset_applied,PASS,,"offset_applied=0, footer p428 matches page_no 428.",
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.5-filters_discarding,PASS,,Both images on p428 attributable to sec_0906's area (the long-phantom-holder diagram) are captured.,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0906,428,5.5-image_section_mapping,PASS,,"Both images (1150x920 phantom-holder diagram, 368x145 smaller companion graphic) are correctly attributed to sec_0906.",
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.4-hierarchy_level,PASS,,"level=3, heading '9.2.1 Performing quality measurements' confirmed on p431, nested under '9.2 Daily quality measurements'.",
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.4-parent_child,PASS,,"parent='Daily quality measurements' — correct, no children (leaf).",
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.4-page_start_end,FAIL,Critical,"Boundary correct (p431-434). node_count=0 — completely empty, despite substantial real content (CAUTION box, 7-step procedure, 6 screenshots) spanning all 4 pages.","Same total-content-loss severity as sec_0899. Notably, all 6 images on p431-434 ARE correctly attributed to sec_0914 (verified via images_v1.json) — the image pipeline worked fine even though the text pipeline produced zero nodes, confirming the 'body content extraction gap' defect is specific to TEXT node capture, independent of image capture."
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.4-flagged_for_review,FAIL,Critical,"Not flagged despite zero text content — flagged_for_review=false, verification_score=100.",'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.6-numbering_scheme,PASS,,'9.2.1' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.6-offset_applied,PASS,,"offset_applied=0, footer p431 matches page_no 431.",
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.5-filters_discarding,PASS,,"All 6 screenshots across p431-434 are captured (Daily Quality Check dialogs, slice-phantom CT image, homogeneity ROI image, noise image, results dialog).",
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0914,431,5.5-image_section_mapping,PASS,,"All 6 images correctly attributed to sec_0914 itself (leaf section, no ambiguity).",
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Starting the IEC constancy test' confirmed on p438, nested under 'Performing the constancy test'.",
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.4-parent_child,PASS,,parent='Performing the constancy test' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.4-page_start_end,FAIL,Critical,"Boundary correct (p438). node_count=0 — completely empty, despite substantial real content (7-step procedure + 2 notes) on the page.","Body-content-extraction-gap family, total-loss variant (like sec_0899, sec_0914) — dedupe in Task 2.3."
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.4-flagged_for_review,FAIL,Critical,Not flagged despite zero text content.,'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0918,438,5.6-offset_applied,PASS,,"offset_applied=0, footer p438 matches page_no 438.",
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.4-hierarchy_level,PASS,,"level=3, heading '9.3.9 Performing Image Inspection' confirmed on p446, nested under 'Constancy test' (9.3).",
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.4-parent_child,PASS,,parent=sec_0915 'Constancy test' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.4-page_start_end,FAIL,Critical,"Boundary correct (p446). node_count=0 — completely empty, despite real content (intro paragraph + 2 checkmark prerequisites) on the page.","Body-content-extraction-gap family, total-loss variant — dedupe in Task 2.3."
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.4-flagged_for_review,FAIL,Critical,Not flagged despite zero text content.,'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.6-numbering_scheme,PASS,,'9.3.9' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.6-offset_applied,PASS,,"offset_applied=0, footer p446 matches page_no 446.",
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.5-filters_discarding,PASS,,"Both images on p446 (noise-result thumbnail, results table screenshot) are captured.",
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0927,446,5.5-image_section_mapping,FAIL,Medium,"Both images attributed to sec_0927 visually belong to content ABOVE the '9.3.9 Performing Image Inspection' heading on p446 (the noise-measurement result image and the System A/B results table) — that content is the tail of the parent section sec_0915 'Constancy test', not sec_0927's own content.","Recurrence of the known 'parent-opening content swept into first child' pattern (§7), here at the p446 chapter-subsection boundary — same family as sec_0005, sec_0746."
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.4-hierarchy_level,PASS,,"level=3, heading '9.4.1 Starting the test' confirmed on p452, nested under '9.4 Low contrast test'.",
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.4-parent_child,PASS,,parent='Low contrast test' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.4-page_start_end,FAIL,Critical,"Boundary correct (p452-453). node_count=0 — completely empty, despite substantial real content (6-step procedure, 3 screenshots) across both pages.","Body-content-extraction-gap family, total-loss variant — dedupe in Task 2.3 (with sec_0899, sec_0914, sec_0918, sec_0927)."
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.4-flagged_for_review,FAIL,Critical,Not flagged despite zero text content.,'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.6-numbering_scheme,PASS,,'9.4.1' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.6-offset_applied,PASS,,"offset_applied=0, footer p452 matches page_no 452.",
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.5-filters_discarding,PASS,,"All screenshots on p452-453 (MTF chart, low-contrast phantom image) are captured.",
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.5-filters_passing_noise,PASS,,"No icon noise observed (small 'Go' button screenshots correctly filtered, consistent with pattern elsewhere).",
+SOMATOM_Force_IFU_VB30,sec_0938,453,5.5-image_section_mapping,PASS,,The p453 images are correctly attributed to sec_0938 itself.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.4-hierarchy_level,PASS,,"level=4, marginal heading 'Biannually testing the luminance homogeneity' confirmed on p460, nested under '9.6.4 Performing the biannual visual tests of the monitor'.",
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.4-parent_child,PASS,,parent='Performing the biannual visual tests of the monitor' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.4-page_start_end,FAIL,Critical,"Boundary correct (p460). node_count=0 — completely empty, despite real content (3-step procedure, screenshot, 2 notes) on the page.","Body-content-extraction-gap family, total-loss variant — dedupe in Task 2.3."
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.4-gaps_duplicates,PASS,,Appears once.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.4-flagged_for_review,FAIL,Critical,Not flagged despite zero text content.,'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.6-numbering_scheme,PASS,,Unnumbered marginal heading.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.6-offset_applied,PASS,,"offset_applied=0, footer p460 matches page_no 460.",
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.5-filters_discarding,PASS,,The p460 TG18-UN80 test-image screenshot is captured.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0949,460,5.5-image_section_mapping,PASS,,The one image on p460 is correctly attributed to sec_0949 itself.,
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.4-hierarchy_level,PASS,,"level=3, heading '9.6.5 Performing the biannual metrological tests' confirmed on p461, nested under 'Constancy test of the monitor'.",
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.4-parent_child,PASS,,parent='Constancy test of the monitor' — correct.,
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.4-page_start_end,FAIL,Critical,"page_start=461 is correct, but page_end=467 is severely wrong. This section's own real content (5-step procedure + 2 deviation-handling notes) ends at the TOP of p462 — everything from there through the end of the PDF is unrelated back matter: p463-466 is the document's 'Index' (its own distinct, unbookmarked section, page header literally reads 'Index' not '9 Quality assurance'), and p467 is the back-cover/manufacturer-info page ('Siemens Healthineers Headquarters', 'Manufacturer', publication details) — none of it belongs to 'Performing the biannual metrological tests'. node_count=0 (this section is also part of the body-content-extraction-gap family for its own real p461-462 text), compounding the boundary defect.","TEXTBOOK CONFIRMATION of the known Critical pattern from workflow §7 ('Back-matter silently absorbed past the last bookmark') — this manual has NO bookmark entries for its Index or back-cover pages, so page_end for the last bookmarked section (this one) defaulted to total_pages (467) with no bound, silently sweeping in 5 pages of unrelated back matter. This is exactly why Task 1.3 mandates sampling the document's last section — confirmed here as predicted. High-priority dedupe target for Task 2.3/2.4: same root cause as the DOC-0136477A pilot occurrences."
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.4-hierarchy_path,PASS,,Correct.,
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.4-gaps_duplicates,PASS,,"Appears once as a bookmark, but its declared page range now improperly also covers the Index and back-cover content, which have no bookmark entries of their own at all — a coverage gap for that back matter, not just a boundary error.",
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.4-flagged_for_review,FAIL,Critical,"Not flagged despite both defects (zero text content AND a 5-page back-matter absorption) — flagged_for_review=false, verification_score=100.",'Body content extraction gap' family (see this section's 5.4-page_start_end row for full evidence) — dedupe in Task 2.3; distinct from the content-stream desync family.
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.4-structural_source,PASS,,toc / Fast path.,
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.6-numbering_scheme,PASS,,'9.6.5' resolves correctly.,
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.6-offset_applied,PASS,,"offset_applied=0, footer p461 matches page_no 461.",
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.5-filters_discarding,PASS,,No images specific to this section's own content are missing.,
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.5-filters_passing_noise,PASS,,No icon noise observed.,
+SOMATOM_Force_IFU_VB30,sec_0951,467,5.5-image_section_mapping,PASS,,Verified via images_v1.json: the p461 test-image screenshot is correctly attributed to the PRECEDING sibling sec_0950 'Biannually testing the color effect and equality' (not swept into sec_0951) — image mapping itself is unaffected by the page_end/back-matter defect described above.,
+SOMATOM_Force_IFU_VB30,DOCUMENT-LEVEL,,5.6-sanity_report,PASS,,"Pipeline completed successfully (did not abort) — run.log shows all 10 pipeline stages completed, validation ran to completion with status FAIL (Coverage/Precision), not a hard abort. bookmark_sanity check passed with no hard failures.","N/A in the sense that there was no abort to record a cause for — sanity_report has nothing to flag here. This document-level check is about pipeline-abort traceability, not about the Coverage/Precision content defects documented throughout this manual's findings."
