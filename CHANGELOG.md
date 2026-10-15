@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/DataClever-AI/pdf_tree/compare/v0.1.2...v0.2.0) (2026-10-15)
+
+
+### Features
+
+* **qa:** integrate bug mitigations and the confidence index re-measurement (code) ([#9](https://github.com/DataClever-AI/pdf_tree/issues/9)) ([36c7268](https://github.com/DataClever-AI/pdf_tree/commit/36c7268f18a8485ca71bb504a106db2c702c23a0))
+
 ## [0.1.2](https://github.com/DataClever-AI/pdf_tree/compare/v0.1.1...v0.1.2) (2026-08-26)
 
 
